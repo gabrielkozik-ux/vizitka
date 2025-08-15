@@ -26,8 +26,7 @@
             line-height: 1.6;
             color: var(--text-color);
             background-color: var(--white);
-            /* === KROK 1: Přidáno odsazení pro tělo stránky === */
-            /* Toto odsazení zajistí, že obsah nezačne hned nahoře pod fixní lištou, ale až pod ní. */
+            /* Odsazení obsahu, aby ho nepřekrývala fixní lišta */
             padding-top: 60px; 
         }
 
@@ -43,12 +42,12 @@
             padding: 15px 0;
             border-bottom: 1px solid var(--light-gray);
             text-align: center;
-            /* === KROK 2: Klíčová změna pro ukotvení lišty === */
-            position: fixed; /* Změněno na 'fixed', aby lišta zůstala na místě */
-            top: 0;          /* Ukotvení na horní okraj obrazovky */
+            /* Klíčové vlastnosti pro fixní pozici */
+            position: fixed; /* Zafixuje prvek na místě vůči oknu prohlížeče */
+            top: 0;          /* Umístí ho na horní okraj */
             left: 0;
-            width: 100%;     /* Lišta bude přes celou šířku */
-            z-index: 1000;   /* Zajistí, že lišta bude vždy navrchu */
+            width: 100%;     /* Roztáhne ho přes celou šířku */
+            z-index: 1000;   /* Zajistí, že bude vždy navrchu ostatních prvků */
             box-sizing: border-box;
         }
 
@@ -91,8 +90,7 @@
         /* --- Sekce --- */
         section {
             padding: 60px 20px;
-            /* === KROK 3: Odsazení pro kotvy === */
-            /* Když kliknete na odkaz v menu, stránka odroluje tak, aby začátek sekce nebyl skrytý pod lištou. */
+            /* Odsazení pro kotvy, aby po prokliku nebyl nadpis schovaný pod lištou */
             scroll-margin-top: 60px;
         }
 

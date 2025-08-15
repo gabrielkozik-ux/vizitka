@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mgr. Gabriel Kožík - Advokát & AI Stratég</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+        :root {
+            --primary-color: #0a2342;
+            --secondary-color: #2ca58d;
+            --text-color: #333;
+            --light-gray: #f4f4f4;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--white);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* --- Header / Hero Sekce --- */
+        .hero {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            font-weight: 300;
+            margin-top: 10px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* --- Sekce --- */
+        section {
+            padding: 60px 20px;
+        }
+
+        section:nth-child(even) {
+            background-color: var(--light-gray);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: 300;
+            max-width: 700px;
+            margin: -20px auto 40px auto;
+        }
+
+        /* --- Problem Sekce --- */
+        #problem {
+            text-align: center;
+            font-size: 1.3em;
+            font-weight: 300;
+            color: var(--primary-color);
+        }
+
+        /* --- Moje Mise Sekce --- */
+        #mission {
+            text-align: center;
+        }
+        
+        #mission blockquote {
+            font-size: 1.5em;
+            font-style: italic;
+            max-width: 800px;
+            margin: 0 auto;
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 20px;
+        }
+
+        /* --- Služby (Piliře) --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .service-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--secondary-color);
+        }
+
+        .service-card h3 {
+            font-size: 1.8em;
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+        
+        .service-card h4 {
+            color: var(--secondary-color);
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        .service-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .service-card li {
+            padding-left: 1.5em;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .service-card li::before {
+            content: '✓';
+            color: var(--secondary-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        /* --- O Mně Sekce --- */
+        #about p {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* --- Důvěryhodnost --- */
+        .trust-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            filter: grayscale(100%);
+            opacity: 0.7;
+        }
+        .trust-logos p {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 15px 25px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+        }
+
+        /* --- CTA (Výzva k akci) --- */
+        #cta {
+            text-align: center;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        
+        .cta-button:hover {
+            background-color: #238c76;
+            transform: translateY(-2px);
+        }
+        
+        .cta-button.secondary {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+        
+        .cta-button.secondary:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 40px 20px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .footer-grid h4 {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .footer-grid p, .footer-grid a {
+            margin: 0;
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+        
+        .footer-grid a:hover {
+            color: var(--white);
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.8em;
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* --- Responzivita --- */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            .hero p {
+                font-size: 1.2em;
+            }
+            .section-title {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Právo pro budoucnost. Růst díky AI.</h1>
+            <p>Jsem advokát a AI stratég. Pomáhám podnikatelům inovovat rychleji a bezpečněji.</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="problem">
+            <div class="container">
+                <p>Jste zahlceni operativou? Hledáte nový směr pro růst svého byznysu? Brzdí vás právní rizika v inovacích?</p>
+            </div>
+        </section>
+
+        <section id="mission">
+            <div class="container">
+                <h2 class="section-title">Moje mise</h2>
+                <blockquote>Mým posláním je, aby podnikatelé díky AI nejen zrychlili svou práci, ale také objevili zcela nové obchodní příležitosti.</blockquote>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="container">
+                <h2 class="section-title">Jak vám mohu pomoci</h2>
+                <div class="services-grid">
+                    
+                    <div class="service-card">
+                        <h3>Pilíř 1: AI pro růst podnikání</h3>
+                        <p>Jako váš průvodce světem umělé inteligence vám ukážu, jak prakticky a efektivně využít AI pro vaše cíle.</p>
+                        <h4>Akcelerace & Efektivita</h4>
+                        <ul>
+                            <li>Automatizace rutinních úkolů</li>
+                            <li>Optimalizace interních procesů</li>
+                            <li>Zefektivnění administrativy a provozu</li>
+                        </ul>
+                        <h4>Inovace & Příležitosti</h4>
+                        <ul>
+                            <li>Identifikace nových obchodních modelů</li>
+                            <li>Personalizace zákaznické zkušenosti</li>
+                            <li>Analýza trhu a predikce trendů</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>Pilíř 2: Právní služby pro budoucnost</h3>
+                        <p>Poskytuji specializované právní poradenství, které chrání vaše inovace a podporuje zdravý růst.</p>
+                        <h4>Specializace</h4>
+                        <ul>
+                            <li><strong>E-commerce:</strong> Právní jistota pro vaše online podnikání.</li>
+                            <li><strong>Duševní vlastnictví:</strong> Ochrana vaší značky, softwaru a kreativních děl.</li>
+                            <li><strong>Obchodní právo:</strong> Struktura smluv, které minimalizují rizika.</li>
+                            <li><strong>Korporátní právo:</strong> Průvodce založením a správou technologických firem a startupů.</li>
+                            <li><strong>Pracovní právo:</strong> Nastavení pravidel pro využití AI na pracovišti.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="about">
+            <div class="container">
+                <h2 class="section-title">O mně: Spojení dvou světů</h2>
+                <p>
+                    Moje profesní cesta je logickým propojením dvou vášní: precizního světa práva a dynamického světa technologií. Jako advokát specializovaný na obchodní a technologické právo jsem vždy stál na straně inovátorů. Postupně jsem si uvědomil, že skutečná konkurenční výhoda nevzniká jen právní ochranou, ale aktivním využíváním technologií. Proto jsem se ponořil do oblasti umělé inteligence, abych svým klientům mohl nabídnout nejen jistotu, ale i katalyzátor pro jejich růst.
+                </p>
+            </div>
+        </section>
+
+        <section id="trust">
+            <div class="container">
+                <h2 class="section-title">Důvěryhodnost a afilace</h2>
+                <div class="trust-logos">
+                    <p>Česká advokátní komora</p>
+                    <p>Smart Network</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="cta">
+            <div class="container">
+                <h2 class="section-title">Spojme se</h2>
+                <p class="section-subtitle">Ať už potřebujete vyřešit komplexní právní problém, nebo chcete objevit potenciál AI pro vaše podnikání, jsem tu pro vás.</p>
+                <div class="cta-buttons">
+                    <a href="mailto:kozik@iustoria.cz?subject=Poptávka%20právní%20konzultace" class="cta-button">Objednat právní konzultaci</a>
+                    <a href="mailto:kozik@iustoria.cz?subject=Poptávka%20AI%20workshopu" class="cta-button secondary">Poptat AI workshop</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h4>Mgr. Gabriel Kožík</h4>
+                <p>Advokát & AI Stratég</p>
+            </div>
+            <div>
+                <h4>Kontakt</h4>
+                <p>E-mail: <a href="mailto:kozik@iustoria.cz">kozik@iustoria.cz</a></p>
+                <p>Telefon: <a href="tel:+420720265713">+420 720 265 713</a></p>
+                <p>Datová schránka: eygwp2c</p>
+            </div>
+            <div>
+                <h4>Kancelář</h4>
+                <p>IUSTORIA, advokátní kancelář, s.r.o.</p>
+                <p>Slovákova 279/11, 602 00 Brno</p>
+                <p><a href="http://www.iustoria.cz" target="_blank">www.iustoria.cz</a></p>
+            </div>
+            <div>
+                <h4>Oficiální údaje</h4>
+                <p>ČAK: 19320</p>
+                <p>IČO (fyzická osoba): 05187559</p>
+                <p>Partner / Společník IUSTORIA, s.r.o.</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Mgr. Gabriel Kožík. Všechna práva vyhrazena.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

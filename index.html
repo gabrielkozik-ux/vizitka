@@ -26,6 +26,7 @@
             line-height: 1.6;
             color: var(--text-color);
             background-color: var(--white);
+            padding-top: 65px; /* Odsazení pro fixní navigaci */
         }
 
         .container {
@@ -40,9 +41,12 @@
             padding: 15px 0;
             border-bottom: 1px solid var(--light-gray);
             text-align: center;
-            position: sticky;
+            position: fixed; /* Změněno na fixed pro ukotvení */
             top: 0;
+            left: 0;
+            width: 100%;
             z-index: 1000;
+            box-sizing: border-box;
         }
 
         .main-nav a {
@@ -84,6 +88,7 @@
         /* --- Sekce --- */
         section {
             padding: 60px 20px;
+            scroll-margin-top: 65px; /* Odsazení pro kotvy, aby je nepřekryla navigace */
         }
 
         section:nth-child(even) {

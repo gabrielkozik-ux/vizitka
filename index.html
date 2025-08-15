@@ -14,6 +14,10 @@
             --light-gray: #f4f4f4;
             --white: #ffffff;
         }
+        
+        html {
+            scroll-behavior: smooth;
+        }
 
         body {
             font-family: 'Roboto', sans-serif;
@@ -28,6 +32,30 @@
             max-width: 1100px;
             margin: 0 auto;
             padding: 20px;
+        }
+
+        /* --- Navigace --- */
+        .main-nav {
+            background-color: var(--white);
+            padding: 15px 0;
+            border-bottom: 1px solid var(--light-gray);
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .main-nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 20px;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        .main-nav a:hover {
+            color: var(--secondary-color);
         }
 
         /* --- Header / Hero Sekce --- */
@@ -166,7 +194,7 @@
         }
 
         /* --- CTA (Výzva k akci) --- */
-        #cta {
+        #propojit {
             text-align: center;
         }
 
@@ -254,10 +282,22 @@
             .section-title {
                 font-size: 2em;
             }
+            .main-nav a {
+                margin: 0 10px;
+                font-size: 1em;
+            }
         }
     </style>
 </head>
 <body>
+
+    <nav class="main-nav">
+        <div class="container">
+            <a href="#about">O mně</a>
+            <a href="#services">Jak vám mohu pomoci</a>
+            <a href="#propojit">Kontaktujte mě</a>
+        </div>
+    </nav>
 
     <header class="hero">
         <div class="container">
@@ -328,13 +368,14 @@
             </div>
         </section>
         
-        <section id="cta">
+        <section id="propojit">
             <div class="container">
-                <h2 class="section-title">Spojme se</h2>
+                <h2 class="section-title">Pojďme se propojit</h2>
                 <p class="section-subtitle">Ať už potřebujete vyřešit komplexní právní problém, nebo chcete objevit potenciál AI pro vaše podnikání, jsem tu pro vás.</p>
                 <div class="cta-buttons">
-                    <a href="mailto:kozik@iustoria.cz?subject=Poptávka%20právní%20konzultace" class="cta-button">Objednat právní konzultaci</a>
-                    <a href="mailto:kozik@iustoria.cz?subject=Poptávka%20AI%20workshopu" class="cta-button secondary">Poptat AI workshop</a>
+                    <a href="mailto:kozik@iustoria.cz" class="cta-button">Napište mi</a>
+                    <a href="tel:+420720265713" class="cta-button secondary">Zavolejte mi</a>
+                    <a href="https://www.linkedin.com/in/gabriel-kozik/" target="_blank" class="cta-button">LinkedIn</a>
                 </div>
             </div>
         </section>

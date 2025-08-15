@@ -151,22 +151,18 @@
             margin: 0 auto;
             text-align: center;
         }
-
-        /* --- Důvěryhodnost --- */
-        .trust-logos {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 50px;
-            filter: grayscale(100%);
-            opacity: 0.7;
+        
+        .about-container {
+            text-align: center;
         }
-        .trust-logos p {
-            font-size: 1.5em;
-            font-weight: bold;
-            padding: 15px 25px;
-            border: 2px solid #ccc;
-            border-radius: 8px;
+
+        .about-photo-circle {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 30px auto;
+            display: block;
         }
 
         /* --- CTA (Výzva k akci) --- */
@@ -323,7 +319,8 @@
         </section>
         
         <section id="about">
-            <div class="container">
+            <div class="container about-container">
+                <img src="profilova-fotka.jpg" alt="Portrét Mgr. Gabriela Kožíka" class="about-photo-circle">
                 <h2 class="section-title">O mně: Spojení dvou světů</h2>
                 <p>
                     Moje profesní cesta je logickým propojením dvou vášní: precizního světa práva a dynamického světa technologií. Jako advokát specializovaný na obchodní a technologické právo jsem vždy stál na straně inovátorů. Postupně jsem si uvědomil, že skutečná konkurenční výhoda nevzniká jen právní ochranou, ale aktivním využíváním technologií. Proto jsem se ponořil do oblasti umělé inteligence, abych svým klientům mohl nabídnout nejen jistotu, ale i katalyzátor pro jejich růst.

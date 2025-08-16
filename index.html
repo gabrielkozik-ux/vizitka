@@ -71,10 +71,17 @@
             margin: 0 15px;
             font-size: 1.1em;
             transition: color 0.3s ease;
+            border-radius: 3px; /* Přidáno pro lepší vizualizaci focus stavu */
         }
 
         .nav-links a:hover {
             color: var(--secondary-color);
+        }
+
+        /* Vylepšení přístupnosti: Viditelný focus stav */
+        a:focus, .cta-button:focus {
+            outline: 3px solid var(--secondary-color);
+            outline-offset: 2px;
         }
 
         .hamburger {
@@ -82,6 +89,13 @@
             cursor: pointer;
             flex-direction: column;
             gap: 5px;
+            padding: 5px; /* Zvětšení klikací plochy */
+            border-radius: 3px;
+        }
+        
+        .hamburger:focus {
+             outline: 3px solid var(--secondary-color);
+             outline-offset: 2px;
         }
 
         .hamburger .bar {
@@ -120,11 +134,25 @@
             text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
         }
 
-        /* --- Ostatní sekce (zůstávají stejné) --- */
+        /* --- Ostatní sekce --- */
         section { padding: 60px 20px; scroll-margin-top: 70px; }
         section:nth-child(even) { background-color: var(--light-gray); }
         .section-title { text-align: center; font-size: 2.5em; margin-bottom: 40px; color: var(--primary-color); }
         .section-subtitle { text-align: center; font-size: 1.2em; font-weight: 300; max-width: 700px; margin: -20px auto 40px auto; }
+        
+        /* Skrytý nadpis pro přístupnost a SEO */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+        
         #problem { text-align: center; font-size: 1.3em; font-weight: 300; color: var(--primary-color); }
         #mission { text-align: center; }
         #mission blockquote { font-size: 1.5em; font-style: italic; max-width: 800px; margin: 0 auto; border-left: 5px solid var(--secondary-color); padding-left: 20px; }
@@ -158,9 +186,10 @@
         footer { background-color: var(--primary-color); color: var(--white); padding: 40px 20px; }
         .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1100px; margin: 0 auto; }
         .footer-grid h4 { color: var(--secondary-color); margin-bottom: 10px; }
-        .footer-grid p, .footer-grid a { margin: 0; color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9em; }
-        .footer-grid a:hover { color: var(--white); }
-        .copyright { text-align: center; margin-top: 40px; font-size: 0.8em; color: rgba(255,255,255,0.6); }
+        /* Zvýšení kontrastu v patičce */
+        .footer-grid p, .footer-grid a { margin: 0; color: var(--white); text-decoration: none; font-size: 0.9em; }
+        .footer-grid a:hover { text-decoration: underline; }
+        .copyright { text-align: center; margin-top: 40px; font-size: 0.8em; color: rgba(255,255,255,0.7); } /* Kontrast mírně zvýšen */
 
         /* --- Responzivita --- */
         @media (max-width: 768px) {
@@ -209,7 +238,7 @@
 
     <nav class="main-nav">
         <a href="#" class="nav-logo">Mgr. Gabriel Kožík</a>
-        <div class="hamburger">
+        <div class="hamburger" tabindex="0" role="button" aria-label="Otevřít menu">
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
@@ -232,6 +261,7 @@
     <main>
         <section id="problem">
             <div class="container">
+                <h2 class="sr-only">Klíčové problémy podnikatelů</h2>
                 <p>Jste zahlceni operativou? Hledáte nový směr pro růst svého byznysu? Brzdí vás právní rizika v inovacích?</p>
             </div>
         </section>
@@ -283,7 +313,7 @@
         
         <section id="about">
             <div class="container about-container">
-                <img src="profilova-fotka.jpg" alt="Portrét Mgr. Gabriela Kožíka" class="about-photo-circle">
+                <img src="profilova-fotka.jpg" alt="Portrét Mgr. Gabriela Kožíka" class="about-photo-circle" loading="lazy">
                 <h2 class="section-title">O mně: Spojení dvou světů</h2>
                 <p>
                     Moje profesní cesta je logickým propojením dvou vášní: precizního světa práva a dynamického světa technologií. Jako advokát specializovaný na obchodní a technologické právo jsem vždy stál na straně inovátorů. Postupně jsem si uvědomil, že skutečná konkurenční výhoda nevzniká jen právní ochranou, ale aktivním využíváním technologií. Proto jsem se ponořil do oblasti umělé inteligence, abych svým klientům mohl nabídnout nejen jistotu, ale i katalyzátor pro jejich růst.
@@ -297,19 +327,19 @@
                 <div class="projects-grid">
                     <div class="project-item">
                         <a href="http://www.iustoria.cz" target="_blank" rel="noopener noreferrer">
-                            <img src="logo-iustoria_white.png" alt="Logo IUSTORIA, advokátní kancelář">
+                            <img src="logo-iustoria_white.png" alt="Logo IUSTORIA, advokátní kancelář" loading="lazy">
                         </a>
                         <p>Zakládající partner advokátní kanceláře</p>
                     </div>
                     <div class="project-item">
                         <a href="https://www.pod-palavou.cz/klubova-setkani" target="_blank" rel="noopener noreferrer">
-                            <img src="logo-palava-horizons.png" alt="Logo Pálava Horizons">
+                            <img src="logo-palava-horizons.png" alt="Logo Pálava Horizons" loading="lazy">
                         </a>
                         <p>Zakládající společník Pálava Horizons</p>
                     </div>
                     <div class="project-item">
                         <a href="https://www.facebook.com/profile.php?id=61561146905712" target="_blank" rel="noopener noreferrer">
-                            <img src="logo-bforb-tisnov.jpg" alt="Logo BforB Tišnov">
+                            <img src="logo-bforb-tisnov.png" alt="Logo BforB Tišnov" loading="lazy">
                         </a>
                         <p>Moderátor networkingového klubu</p>
                     </div>
@@ -322,7 +352,7 @@
                 <h2 class="section-title">Aktuální workshop</h2>
                 <div class="workshop-container">
                     <a href="https://www.smsticket.cz/vstupenky/58981-gemini-a-dalsi-nastroje-od-google-prakticky-efektivne-advokatni-kancelar-iustoria-brno" target="_blank" rel="noopener noreferrer">
-                        <img src="workshop-ai-google.jpg" alt="Pozvánka na workshop Gemini | NotebookLM | Google AI Studio">
+                        <img src="workshop-ai-google.jpg" alt="Pozvánka na workshop Gemini | NotebookLM | Google AI Studio" loading="lazy">
                     </a>
                 </div>
             </div>
@@ -375,14 +405,25 @@
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
 
-        hamburger.addEventListener('click', () => {
+        function toggleMenu() {
             navLinks.classList.toggle('active');
+        }
+
+        hamburger.addEventListener('click', toggleMenu);
+        
+        // Umožnit otevření menu i klávesou Enter
+        hamburger.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                toggleMenu();
+            }
         });
 
         // Zavřít menu po kliknutí na odkaz
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                }
             });
         });
     </script>

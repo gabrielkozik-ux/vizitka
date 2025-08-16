@@ -202,6 +202,57 @@
         .social-icon svg { width: 30px; height: 30px; }
         .social-icon:hover { color: var(--secondary-color); transform: translateY(-3px); }
 
+        /* === STYLY PRO NOVOU SEKCI AKCÍ === */
+        .events-list {
+            list-style: none;
+            padding: 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .events-list li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 0;
+            border-bottom: 1px solid #ddd;
+            flex-wrap: wrap; /* Pro lepší zobrazení na mobilu */
+            gap: 15px;
+        }
+
+        .events-list li:last-child {
+            border-bottom: none;
+        }
+
+        .event-date {
+            font-weight: bold;
+            color: var(--secondary-color);
+            font-size: 1.1em;
+            flex-shrink: 0;
+            width: 100px; /* Pevná šířka pro zarovnání */
+        }
+
+        .event-details {
+            flex-grow: 1;
+        }
+
+        .event-details h4 {
+            margin: 0 0 5px 0;
+            font-size: 1.2em;
+            color: var(--primary-color);
+        }
+
+        .event-details p {
+            margin: 0;
+            color: var(--text-color);
+            font-size: 0.95em;
+        }
+
+        .event-button {
+            padding: 8px 18px; /* Menší tlačítko než hlavní CTA */
+            font-size: 0.9em;
+            flex-shrink: 0;
+        }
 
         /* --- Responzivita --- */
         @media (max-width: 768px) {
@@ -245,6 +296,26 @@
             }
             .footer-grid { text-align: center; }
             .social-icons-container { justify-content: center; }
+        }
+
+        /* Úprava pro mobilní zařízení - sekce akcí */
+        @media (max-width: 600px) {
+            .events-list li {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            .event-date {
+                width: auto;
+                background-color: var(--light-gray);
+                padding: 5px 10px;
+                border-radius: 4px;
+                font-size: 1em;
+            }
+            .event-button {
+                width: 100%;
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -371,7 +442,37 @@
                     </div>
                 </div>
             </div>
-        </section>
+            
+            <div class="container" style="padding-top: 40px; border-top: 1px solid #e0e0e0; margin-top: 60px;">
+                <h3 class="section-subtitle" style="font-size: 1.8em; font-weight: 700; color: var(--primary-color); margin-bottom: 30px;">Kde se můžeme potkat</h3>
+                <ul class="events-list">
+                    <li>
+                        <div class="event-date">19. 8. 2025</div>
+                        <div class="event-details">
+                            <h4>Networkingová snídaně Pod Pálavou</h4>
+                            <p>Krčma a hotel U Císařské cesty, Branišovice</p>
+                        </div>
+                        <a href="https://www.happenee.com/events/networking-pod-palavou-11" target="_blank" rel="noopener noreferrer" class="cta-button event-button">Více informací</a>
+                    </li>
+                    <li>
+                        <div class="event-date">20. 8. 2025</div>
+                        <div class="event-details">
+                            <h4>Networkingové setkání Klubu Podnikavců Kuřim</h4>
+                            <p>Místo bude upřesněno</p>
+                        </div>
+                        <a href="https://klubpodnikavcu.cz/akce/sraz-podnikavcu-kurim-2" target="_blank" rel="noopener noreferrer" class="cta-button event-button">Více informací</a>
+                    </li>
+                    <li>
+                        <div class="event-date">4. 9. 2025</div>
+                        <div class="event-details">
+                            <h4>Networkingová grilovačka BforB Tišnov</h4>
+                            <p>Café u Palce, Tišnov</p>
+                        </div>
+                        <a href="https://www.facebook.com/profile.php?id=61561146905712" target="_blank" rel="noopener noreferrer" class="cta-button event-button">Více informací</a>
+                    </li>
+                </ul>
+            </div>
+            </section>
 
         <section id="workshop">
             <div class="container">

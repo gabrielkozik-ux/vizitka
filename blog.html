@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Mgr. Gabriel Kožík</title>
+    <meta name="description" content="Články a postřehy o právu, umělé inteligenci a růstu podnikání.">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0a2342;
+            --secondary-color: #2ca58d;
+            --text-color: #333;
+            --light-gray: #f4f4f4;
+            --white: #ffffff;
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--white);
+            padding-top: 70px;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+        .main-nav { background-color: var(--white); padding: 15px 20px; border-bottom: 1px solid var(--light-gray); position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; box-sizing: border-box; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { font-weight: bold; color: var(--primary-color); text-decoration: none; font-size: 1.2em; }
+        .nav-links { display: flex; align-items: center; }
+        .nav-links a { color: var(--primary-color); text-decoration: none; font-weight: bold; margin: 0 15px; font-size: 1.1em; transition: color 0.3s ease; }
+        .nav-links a:hover { color: var(--secondary-color); }
+        .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+        .hamburger .bar { width: 25px; height: 3px; background-color: var(--primary-color); }
+        .page-header { background-color: var(--light-gray); padding: 50px 20px; text-align: center; }
+        .page-header h1 { font-size: 3em; color: var(--primary-color); margin: 0; }
+        .blog-list { padding: 60px 20px; }
+        .article-card {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+            background: var(--white);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: box-shadow 0.3s ease;
+        }
+        .article-card:hover { box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+        .article-image { flex: 0 0 300px; }
+        .article-image img { width: 100%; height: 100%; object-fit: cover; }
+        .article-content { padding: 30px; }
+        .article-content h2 { margin-top: 0; font-size: 1.8em; }
+        .article-content h2 a { text-decoration: none; color: var(--primary-color); }
+        .article-content h2 a:hover { color: var(--secondary-color); }
+        .article-meta { font-size: 0.9em; color: #777; margin-bottom: 15px; }
+        .article-excerpt { margin-bottom: 20px; }
+        .read-more-btn { display: inline-block; background-color: var(--secondary-color); color: var(--white); padding: 10px 20px; text-decoration: none; font-weight: bold; border-radius: 5px; transition: background-color 0.3s ease; }
+        .read-more-btn:hover { background-color: #238c76; }
+        footer { background-color: var(--primary-color); color: var(--white); padding: 40px 20px; text-align: center; }
+        .copyright { margin-top: 20px; font-size: 0.8em; }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            .article-card { flex-direction: column; }
+            .article-image { flex-basis: auto; height: 200px; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <a href="index.html" class="nav-logo">Mgr. Gabriel Kožík</a>
+         <div class="nav-links">
+            <a href="index.html#about">O mně</a>
+            <a href="index.html#services">Jak vám mohu pomoci</a>
+            <a href="index.html#aktivity">Projekty</a>
+            <a href="blog.html">Blog</a>
+            <a href="index.html#propojit">Kontaktujte mě</a>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Můj blog</h1>
+            <p>Postřehy ze světa AI, práva a podnikání</p>
+        </div>
+    </header>
+
+    <main class="blog-list">
+        <div class="container">
+            <article class="article-card">
+                <div class="article-image">
+                    <img src="big-data.jpg" alt="Abstraktní vizualizace dat a umělé inteligence">
+                </div>
+                <div class="article-content">
+                    <p class="article-meta">Publikováno: 16. srpna 2025</p>
+                    <h2><a href="clanek-ai-v-byznysu.html">AI v byznysu: 4 cesty, kudy nevědomky unikají vaše firemní data</a></h2>
+                    <p class="article-excerpt">Využívání AI nástrojů se stalo běžnou součástí firemní praxe. Mnozí si však neuvědomují rizika spojená s ochranou citlivých dat. Pojďme se podívat na čtyři nejčastější scénáře, jak může docházet k únikům, a jak jim předejít.</p>
+                    <a href="clanek-ai-v-byznysu.html" class="read-more-btn">Přečíst celý článek</a>
+                </div>
+            </article>
+
+            </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="copyright">&copy; 2025 Mgr. Gabriel Kožík. Všechna práva vyhrazena.</p>
+        </div>
+    </footer>
+</body>
+</html>

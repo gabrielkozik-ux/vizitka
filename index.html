@@ -233,6 +233,27 @@
             color: var(--text-color);
             margin-top: 0;
         }
+
+        /* --- Workshop Sekce --- */
+        .workshop-container a {
+            display: inline-block;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .workshop-container a:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+        }
+
+        .workshop-container img {
+            max-width: 100%;
+            max-width: 700px; /* Omezení maximální šířky pozvánky */
+            height: auto;
+            display: block;
+        }
         
         /* --- CTA (Výzva k akci) --- */
         #propojit {
@@ -415,7 +436,7 @@
                 <div class="projects-grid">
                     <div class="project-item">
                         <a href="http://www.iustoria.cz" target="_blank" rel="noopener noreferrer">
-                            <img src="logo-iustoria_white.gif" alt="Logo IUSTORIA, advokátní kancelář">
+                            <img src="logo-iustoria.gif" alt="Logo IUSTORIA, advokátní kancelář">
                         </a>
                         <p>Zakládající partner advokátní kanceláře</p>
                     </div>
@@ -427,10 +448,21 @@
                     </div>
                     <div class="project-item">
                         <a href="https://www.facebook.com/profile.php?id=61561146905712" target="_blank" rel="noopener noreferrer">
-                            <img src="BforB tisnov.jpg" alt="Logo BforB Tišnov">
+                            <img src="logo-bforb-tisnov.jpg" alt="Logo BforB Tišnov">
                         </a>
                         <p>Moderátor networkingového klubu</p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="workshop">
+            <div class="container">
+                <h2 class="section-title">Aktuální workshop</h2>
+                <div class="workshop-container">
+                    <a href="https://www.smsticket.cz/vstupenky/58981-gemini-a-dalsi-nastroje-od-google-prakticky-efektivne-advokatni-kancelar-iustoria-brno" target="_blank" rel="noopener noreferrer">
+                        <img src="workshop-ai-google.jpg" alt="Pozvánka na workshop Gemini | NotebookLM | Google AI Studio">
+                    </a>
                 </div>
             </div>
         </section>

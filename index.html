@@ -26,7 +26,6 @@
             line-height: 1.6;
             color: var(--text-color);
             background-color: var(--white);
-            /* Odsazení obsahu, aby ho nepřekrývala fixní lišta */
             padding-top: 60px; 
         }
 
@@ -42,12 +41,11 @@
             padding: 15px 0;
             border-bottom: 1px solid var(--light-gray);
             text-align: center;
-            /* Klíčové vlastnosti pro fixní pozici */
-            position: fixed; /* Zafixuje prvek na místě vůči oknu prohlížeče */
-            top: 0;          /* Umístí ho na horní okraj */
+            position: fixed;
+            top: 0;
             left: 0;
-            width: 100%;     /* Roztáhne ho přes celou šířku */
-            z-index: 1000;   /* Zajistí, že bude vždy navrchu ostatních prvků */
+            width: 100%;
+            z-index: 1000;
             box-sizing: border-box;
         }
 
@@ -90,7 +88,6 @@
         /* --- Sekce --- */
         section {
             padding: 60px 20px;
-            /* Odsazení pro kotvy, aby po prokliku nebyl nadpis schovaný pod lištou */
             scroll-margin-top: 60px;
         }
 
@@ -200,6 +197,73 @@
             margin: 0 auto 30px auto;
             display: block;
         }
+        
+        /* --- Projekty a aktivity --- */
+        #aktivity {
+            background-color: var(--light-gray);
+        }
+
+        .projects-grid {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 50px;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+        
+        .project-item {
+            flex-basis: 250px;
+        }
+
+        .project-item img {
+            max-width: 100%;
+            height: 70px;
+            object-fit: contain;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+        
+        .project-item a:hover img {
+            transform: scale(1.05);
+        }
+        
+        .project-item .logo-iustoria {
+            filter: invert(1);
+        }
+
+        .project-item p {
+            font-size: 1em;
+            color: var(--text-color);
+            margin-top: 0;
+        }
+        
+        .project-item .text-logo-link {
+            display: block;
+            height: 70px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            margin-bottom: 15px;
+            border: 2px solid var(--primary-color);
+            border-radius: 5px;
+        }
+
+        .project-item .text-logo-link h4 {
+            margin: 0;
+            color: var(--primary-color);
+            font-size: 1.4em;
+            transition: color 0.3s ease;
+        }
+
+        .project-item .text-logo-link:hover {
+             background-color: var(--primary-color);
+        }
+        .project-item .text-logo-link:hover h4 {
+            color: var(--white);
+        }
+
 
         /* --- CTA (Výzva k akci) --- */
         #propojit {
@@ -373,6 +437,32 @@
                 <p>
                     Moje profesní cesta je logickým propojením dvou vášní: precizního světa práva a dynamického světa technologií. Jako advokát specializovaný na obchodní a technologické právo jsem vždy stál na straně inovátorů. Postupně jsem si uvědomil, že skutečná konkurenční výhoda nevzniká jen právní ochranou, ale aktivním využíváním technologií. Proto jsem se ponořil do oblasti umělé inteligence, abych svým klientům mohl nabídnout nejen jistotu, ale i katalyzátor pro jejich růst.
                 </p>
+            </div>
+        </section>
+        
+        <section id="aktivity">
+            <div class="container">
+                <h2 class="section-title">Moje projekty a aktivity</h2>
+                <div class="projects-grid">
+                    <div class="project-item">
+                        <a href="http://www.iustoria.cz" target="_blank" rel="noopener noreferrer">
+                            <img src="logo-iustoria.png" alt="Logo IUSTORIA, advokátní kancelář" class="logo-iustoria">
+                        </a>
+                        <p>Zakládající partner advokátní kanceláře</p>
+                    </div>
+                    <div class="project-item">
+                        <a href="https://www.pod-palavou.cz/klubova-setkani" target="_blank" rel="noopener noreferrer">
+                            <img src="logo-palava-horizons.jpg" alt="Logo Pálava Horizons">
+                        </a>
+                        <p>Zakládající společník Pálava Horizons</p>
+                    </div>
+                    <div class="project-item">
+                        <a href="https://www.facebook.com/profile.php?id=61561146905712" target="_blank" rel="noopener noreferrer" class="text-logo-link">
+                           <img src="logo-bforb-tisnov.jpg" alt="Logo BforB Tišnov">
+                        </a>
+                        <p>Moderátor networkingového klubu</p>
+                    </div>
+                </div>
             </div>
         </section>
         

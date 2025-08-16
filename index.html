@@ -64,7 +64,11 @@
 
         /* --- Header / Hero Sekce --- */
         .hero {
-            background-color: var(--primary-color);
+            /* Původní barva pozadí nahrazena obrázkem */
+            background-image: linear-gradient(rgba(10, 35, 66, 0.6), rgba(10, 35, 66, 0.6)), url('Gemini_Generated_Image.png');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
             color: var(--white);
             padding: 100px 20px;
             text-align: center;
@@ -74,6 +78,7 @@
             font-size: 3.5em; 
             margin: 0;
             font-weight: 700;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Přidán stín pro lepší čitelnost */
         }
 
         .hero p {
@@ -83,6 +88,7 @@
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
+            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8); /* Přidán stín pro lepší čitelnost */
         }
 
         /* --- Sekce --- */

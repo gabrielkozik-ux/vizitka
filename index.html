@@ -190,12 +190,16 @@
         #about p { max-width: 800px; margin: 0 auto; text-align: center; }
         .about-container { text-align: center; }
         .about-photo-circle { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; margin: 0 auto 30px auto; display: block; }
+        
+        /* === STYLY PRO SEKCI PROJEKTŮ === */
         #aktivity { background-color: var(--light-gray); }
+        .projects-layout { display: flex; flex-direction: column; align-items: center; gap: 30px; }
         .projects-grid { display: flex; justify-content: center; align-items: flex-start; gap: 50px; flex-wrap: wrap; text-align: center; }
         .project-item { flex-basis: 250px; }
         .project-item img { max-width: 100%; height: 100px; object-fit: contain; margin-bottom: 15px; transition: transform 0.3s ease; }
         .project-item a:hover img { transform: scale(1.05); }
         .project-item p { font-size: 1em; color: var(--text-color); margin-top: 0; }
+        
         #workshop { padding-top: 20px; background-color: var(--light-gray); }
         .workshop-container { text-align: center; }
         .workshop-container a { display: inline-block; transition: transform 0.3s ease, box-shadow 0.3s ease; border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
@@ -233,8 +237,7 @@
 
         .events-list li {
             display: flex;
-            align-items: center;
-            /* justify-content: space-between; <-- ODSTRANĚNO */
+            align-items: flex-start; /* ZMĚNA: Zarovnání nahoru */
             padding: 20px 0;
             border-bottom: 1px solid #ddd;
             flex-wrap: wrap; /* Pro lepší zobrazení na mobilu */
@@ -251,6 +254,7 @@
             font-size: 1.1em;
             flex-shrink: 0;
             width: 100px; /* Pevná šířka pro zarovnání */
+            padding-top: 2px; /* Malé doladění pozice */
         }
 
         .event-details {
@@ -273,7 +277,7 @@
             padding: 8px 18px; /* Menší tlačítko než hlavní CTA */
             font-size: 0.9em;
             flex-shrink: 0;
-            margin-left: auto; /* <-- PŘIDÁNO */
+            margin-left: auto; 
         }
 
         /* --- Responzivita --- */
@@ -462,30 +466,40 @@
         <section id="aktivity">
             <div class="container">
                 <h2 class="section-title">Moje projekty a aktivity</h2>
-                <div class="projects-grid">
-                    <div class="project-item">
-                        <a href="http://www.iustoria.cz" target="_blank" rel="noopener noreferrer">
-                            <img src="logo-iustoria_white.png" alt="Logo IUSTORIA, advokátní kancelář" loading="lazy">
-                        </a>
-                        <p>Zakládající partner advokátní kanceláře</p>
+                <div class="projects-layout">
+                    <div class="projects-grid">
+                        <div class="project-item">
+                            <a href="http://www.iustoria.cz" target="_blank" rel="noopener noreferrer">
+                                <img src="logo-iustoria_white.png" alt="Logo IUSTORIA, advokátní kancelář" loading="lazy">
+                            </a>
+                            <p>Zakládající partner advokátní kanceláře</p>
+                        </div>
+                        <div class="project-item">
+                            <a href="https://www.pod-palavou.cz/klubova-setkani" target="_blank" rel="noopener noreferrer">
+                                <img src="logo-palava-horizons.png" alt="Logo Pálava Horizons" loading="lazy">
+                            </a>
+                            <p>Zakládající společník Pálava Horizons</p>
+                        </div>
                     </div>
-                    <div class="project-item">
-                        <a href="https://www.pod-palavou.cz/klubova-setkani" target="_blank" rel="noopener noreferrer">
-                            <img src="logo-palava-horizons.png" alt="Logo Pálava Horizons" loading="lazy">
-                        </a>
-                        <p>Zakládající společník Pálava Horizons</p>
-                    </div>
-                    <div class="project-item">
-                        <a href="https://www.facebook.com/profile.php?id=61561146905712" target="_blank" rel="noopener noreferrer">
-                            <img src="logo-bforb-tisnov.jpg" alt="Logo BforB Tišnov" loading="lazy">
-                        </a>
-                        <p>Moderátor networkingového klubu</p>
-                    </div>
-                    <div class="project-item">
-                        <a href="https://klubpodnikavcu.cz/srazy-podnikavcu" target="_blank" rel="noopener noreferrer">
-                            <img src="logo-podnikavci.png" alt="Logo Klub Podnikavců" loading="lazy" style="filter: invert(1);">
-                        </a>
-                        <p>Člen Klubu podnikavců Tišnov</p>
+                    <div class="projects-grid">
+                        <div class="project-item">
+                            <a href="https://www.facebook.com/profile.php?id=61561146905712" target="_blank" rel="noopener noreferrer">
+                                <img src="logo-bforb-tisnov.jpg" alt="Logo BforB Tišnov" loading="lazy">
+                            </a>
+                            <p>Moderátor networkingového klubu</p>
+                        </div>
+                        <div class="project-item">
+                            <a href="https://klubpodnikavcu.cz/srazy-podnikavcu" target="_blank" rel="noopener noreferrer">
+                                <img src="logo-podnikavci.png" alt="Logo Klub Podnikavců" loading="lazy" style="filter: invert(1);">
+                            </a>
+                            <p>Člen Klubu podnikavců Tišnov</p>
+                        </div>
+                        <div class="project-item">
+                            <a href="https://www.smart-network.cz/" target="_blank" rel="noopener noreferrer">
+                                <img src="smart_network.png" alt="Logo Smart Network" loading="lazy" style="filter: invert(1);">
+                            </a>
+                            <p>Člen klubu Smart Network</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -496,7 +510,7 @@
                     <li>
                         <div class="event-date">2. 9. 2025</div>
                         <div class="event-details">
-                            <h4>Networkingová snídaně Pod Pálavou - AI Workshop od Gabriela</h4>
+                            <h4>Networkingová snídaně Pod Pálavou - AI Workshop</h4>
                             <p>Krčma a hotel U Císařské cesty, Branišovice</p>
                         </div>
                         <a href="https://www.happenee.com/events/networking-pod-palavou-12" target="_blank" rel="noopener noreferrer" class="cta-button event-button">Více informací</a>
@@ -520,7 +534,7 @@
                      <li>
                         <div class="event-date">9. 10. 2025</div>
                         <div class="event-details">
-                            <h4>Týden inovací - seminář o AI compliace pro B2B</h4>
+                            <h4>Týden inovací - seminář o AI complianci pro B2B</h4>
                             <p>ČSOB Kampus Praha</p>
                         </div>
                         <a href="https://www.innovationweek.ai/cs" target="_blank" rel="noopener noreferrer" class="cta-button event-button">Více informací</a>

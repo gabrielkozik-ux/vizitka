@@ -86,24 +86,72 @@
             color: var(--secondary-color);
         }
 
+        /* --- Dropdown pro jazyky --- */
         .lang-switcher {
+            position: relative;
             margin-left: 20px;
-            font-weight: bold;
-        }
-        
-        .lang-switcher a {
-            color: var(--text-color);
-            text-decoration: none;
-            padding: 5px;
-        }
-        
-        .lang-switcher a.active {
-            color: var(--secondary-color);
-            text-decoration: underline;
         }
 
+        .lang-button {
+            background-color: transparent;
+            border: none;
+            color: var(--text-color);
+            font-weight: bold;
+            font-size: 1em;
+            cursor: pointer;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .lang-button .arrow {
+            border: solid var(--text-color);
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(45deg);
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .lang-button.active .arrow {
+             transform: rotate(-135deg);
+        }
+
+        .lang-dropdown {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 100%;
+            background-color: var(--white);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border-radius: 5px;
+            overflow: hidden;
+            min-width: 100px;
+            z-index: 1001;
+        }
+
+        .lang-dropdown a {
+            color: var(--text-color);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .lang-dropdown a:hover {
+            background-color: var(--light-gray);
+        }
+        
+        .lang-dropdown a.active {
+            color: var(--secondary-color);
+            background-color: #e8f6f3;
+        }
+
+
         /* Vylepšení přístupnosti: Viditelný focus stav */
-        a:focus, .cta-button:focus, .social-icon:focus {
+        a:focus, .cta-button:focus, .social-icon:focus, .lang-button:focus {
             outline: 3px solid var(--secondary-color);
             outline-offset: 2px;
         }
@@ -313,6 +361,20 @@
                  text-align: center;
                  width: 100%;
                  margin-left: 0;
+                 position: static; /* Změna pozice pro mobilní menu */
+            }
+
+            .lang-dropdown {
+                position: static; /* Změna pro mobilní menu */
+                box-shadow: none;
+                border-top: 1px solid var(--light-gray);
+                display: block; /* V mobilním menu je vždy viditelné */
+                background-color: var(--light-gray);
+            }
+
+            .lang-button {
+                justify-content: center;
+                width: 100%;
             }
             
             .hamburger {
@@ -387,7 +449,15 @@
                 <a href="#propojit">Kontaktujte mě</a>
             </div>
             <div class="lang-switcher">
-                <a href="index.html" class="active">CZ</a> | <a href="index_en.html">EN</a> | <a href="index_hu.html">HU</a>
+                <button class="lang-button" aria-haspopup="true" aria-expanded="false">
+                    CZ
+                    <span class="arrow"></span>
+                </button>
+                <div class="lang-dropdown">
+                    <a href="index.html" class="active">CZ</a>
+                    <a href="index_en.html">EN</a>
+                    <a href="index_hu.html">HU</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -538,7 +608,7 @@
                             <div class="event-date">19. 9. 2025</div>
                             <div class="event-details">
                                 <h4>Workshop na AI nástroje od Google</h4>
-                                <p>IUSTORIA, AK, Slovákova 279, Brno</p>
+                                <p>IUSTORIA, Slovákova 279, Brno</p>
                             </div>
                             <span class="cta-button event-button" style="background-color: #aaa; cursor: not-allowed;">Již brzy</span>
                         </li>
@@ -616,30 +686,55 @@
     </footer>
     
     <script>
+        // --- Hamburger Menu ---
         const hamburger = document.querySelector('.hamburger');
         const navLinksContainer = document.querySelector('.nav-links-container');
 
         function toggleMenu() {
+            const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+            hamburger.setAttribute('aria-expanded', !isExpanded);
             navLinksContainer.classList.toggle('active');
         }
 
         hamburger.addEventListener('click', toggleMenu);
-        
-        // Umožnit otevření menu i klávesou Enter
         hamburger.addEventListener('keydown', (e) => {
             if (e.key === 'Enter') {
                 toggleMenu();
             }
         });
 
-        // Zavřít menu po kliknutí na odkaz
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 if (navLinksContainer.classList.contains('active')) {
                     navLinksContainer.classList.remove('active');
+                    hamburger.setAttribute('aria-expanded', 'false');
                 }
             });
         });
+
+        // --- Language Switcher Dropdown ---
+        const langButton = document.querySelector('.lang-button');
+        const langDropdown = document.querySelector('.lang-dropdown');
+
+        function toggleLangDropdown() {
+             const isExpanded = langButton.getAttribute('aria-expanded') === 'true';
+             langButton.setAttribute('aria-expanded', !isExpanded);
+             langButton.classList.toggle('active');
+             langDropdown.style.display = langDropdown.style.display === 'block' ? 'none' : 'block';
+        }
+
+        langButton.addEventListener('click', (e) => {
+            e.stopPropagation(); // Zabráníme, aby se hned zavřelo kvůli listeneru na window
+            toggleLangDropdown();
+        });
+
+        // Zavřít dropdown při kliknutí kamkoliv jinam
+        window.addEventListener('click', (e) => {
+            if (!langButton.contains(e.target) && langDropdown.style.display === 'block') {
+                toggleLangDropdown();
+            }
+        });
+
     </script>
 
 </body>

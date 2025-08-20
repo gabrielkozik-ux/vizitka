@@ -223,7 +223,7 @@
         .social-icon svg { width: 30px; height: 30px; }
         .social-icon:hover { color: var(--secondary-color); transform: translateY(-3px); }
 
-        /* === STYLY PRO NOVOU SEKCI AKCÍ === */
+        /* === STYLY PRO SEKCI AKCÍ === */
         .events-list {
             list-style: none;
             padding: 0;
@@ -234,7 +234,7 @@
         .events-list li {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            /* justify-content: space-between; <-- ODSTRANĚNO */
             padding: 20px 0;
             border-bottom: 1px solid #ddd;
             flex-wrap: wrap; /* Pro lepší zobrazení na mobilu */
@@ -273,6 +273,7 @@
             padding: 8px 18px; /* Menší tlačítko než hlavní CTA */
             font-size: 0.9em;
             flex-shrink: 0;
+            margin-left: auto; /* <-- PŘIDÁNO */
         }
 
         /* --- Responzivita --- */
@@ -348,6 +349,7 @@
             .event-button {
                 width: 100%;
                 text-align: center;
+                margin-left: 0; /* Vynulování pro mobilní zobrazení */
             }
         }
     </style>

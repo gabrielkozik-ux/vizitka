@@ -86,24 +86,72 @@
             color: var(--secondary-color);
         }
 
+        /* --- Dropdown pro jazyky --- */
         .lang-switcher {
+            position: relative;
             margin-left: 20px;
+        }
+
+        .lang-button {
+            background-color: transparent;
+            border: none;
+            color: var(--text-color);
+            font-weight: bold;
+            font-size: 1em;
+            cursor: pointer;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            line-height: 1; /* Přidáno pro lepší vertikální centrování */
+        }
+
+        .lang-button .arrow {
+            border: solid var(--text-color);
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(45deg);
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .lang-button.active .arrow {
+             transform: rotate(-135deg);
+        }
+
+        .lang-dropdown {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 100%;
+            background-color: var(--white);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border-radius: 5px;
+            overflow: hidden;
+            min-width: 100px;
+            z-index: 1001;
+        }
+
+        .lang-dropdown a {
+            color: var(--text-color);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
             font-weight: bold;
         }
-        
-        .lang-switcher a {
-            color: var(--text-color);
-            text-decoration: none;
-            padding: 5px;
+
+        .lang-dropdown a:hover {
+            background-color: var(--light-gray);
         }
         
-        .lang-switcher a.active {
+        .lang-dropdown a.active {
             color: var(--secondary-color);
-            text-decoration: underline;
+            background-color: #e8f6f3;
         }
 
         /* Vylepšení přístupnosti: Viditelný focus stav */
-        a:focus, .cta-button:focus, .social-icon:focus {
+        a:focus, .cta-button:focus, .social-icon:focus, .lang-button:focus {
             outline: 3px solid var(--secondary-color);
             outline-offset: 2px;
         }
@@ -177,7 +225,6 @@
             border-width: 0;
         }
         
-        #problem { text-align: center; font-size: 1.3em; font-weight: 300; color: var(--primary-color); }
         #mission { text-align: center; }
         #mission blockquote { font-size: 1.5em; font-style: italic; max-width: 800px; margin: 0 auto; border-left: 5px solid var(--secondary-color); padding-left: 20px; }
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
@@ -190,12 +237,16 @@
         #about p { max-width: 800px; margin: 0 auto; text-align: center; }
         .about-container { text-align: center; }
         .about-photo-circle { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; margin: 0 auto 30px auto; display: block; }
+        
+        /* === STYLY PRO SEKCI PROJEKTŮ === */
         #aktivity { background-color: var(--light-gray); }
+        .projects-layout { display: flex; flex-direction: column; align-items: center; gap: 30px; }
         .projects-grid { display: flex; justify-content: center; align-items: flex-start; gap: 50px; flex-wrap: wrap; text-align: center; }
         .project-item { flex-basis: 250px; }
         .project-item img { max-width: 100%; height: 100px; object-fit: contain; margin-bottom: 15px; transition: transform 0.3s ease; }
         .project-item a:hover img { transform: scale(1.05); }
         .project-item p { font-size: 1em; color: var(--text-color); margin-top: 0; }
+        
         #workshop { padding-top: 20px; background-color: var(--light-gray); }
         .workshop-container { text-align: center; }
         .workshop-container a { display: inline-block; transition: transform 0.3s ease, box-shadow 0.3s ease; border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
@@ -223,7 +274,7 @@
         .social-icon svg { width: 30px; height: 30px; }
         .social-icon:hover { color: var(--secondary-color); transform: translateY(-3px); }
 
-        /* === STYLY PRO NOVOU SEKCI AKCÍ === */
+        /* === STYLY PRO SEKCI AKCÍ === */
         .events-list {
             list-style: none;
             padding: 0;
@@ -233,8 +284,7 @@
 
         .events-list li {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
+            align-items: flex-start; /* Zarovnání nahoru */
             padding: 20px 0;
             border-bottom: 1px solid #ddd;
             flex-wrap: wrap; /* Pro lepší zobrazení na mobilu */
@@ -251,6 +301,7 @@
             font-size: 1.1em;
             flex-shrink: 0;
             width: 100px; /* Pevná šířka pro zarovnání */
+            padding-top: 2px; /* Malé doladění pozice */
         }
 
         .event-details {
@@ -273,6 +324,7 @@
             padding: 8px 18px; /* Menší tlačítko než hlavní CTA */
             font-size: 0.9em;
             flex-shrink: 0;
+            margin-left: auto; 
         }
 
         /* --- Responzivita --- */
@@ -309,6 +361,20 @@
                  text-align: center;
                  width: 100%;
                  margin-left: 0;
+                 position: static; /* Změna pozice pro mobilní menu */
+            }
+
+            .lang-dropdown {
+                position: static; /* Změna pro mobilní menu */
+                box-shadow: none;
+                border-top: 1px solid var(--light-gray);
+                display: block; /* V mobilním menu je vždy viditelné */
+                background-color: var(--light-gray);
+            }
+
+            .lang-button {
+                justify-content: center;
+                width: 100%;
             }
             
             .hamburger {
@@ -348,6 +414,7 @@
             .event-button {
                 width: 100%;
                 text-align: center;
+                margin-left: 0; /* Vynulování pro mobilní zobrazení */
             }
         }
     </style>
@@ -362,7 +429,7 @@
         <path fill="currentColor" d="M12 2.04c-5.5 0-10 4.49-10 10.02 0 5 3.66 9.15 8.44 9.9v-7.02h-2.54v-2.89h2.54V9.84c0-2.51 1.49-3.9 3.8-3.9 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.89h-2.33v7.02c4.78-.75 8.44-4.9 8.44-9.9C22 6.53 17.5 2.04 12 2.04z"/>
       </symbol>
       <symbol id="icon-youtube" viewBox="0 0 24 24">
-        <path fill="currentColor" d="M10 15l5.2-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 5.1-.27 1.3-.9 2.05-1.88 2.32-.47.13-1.1.22-1.9.28-.8.07-1.49.1-2.09.1L15 20c-2.19 0-3.8-.16-5.1-.44-1.3-.27-2.05-.9-2.32-1.88-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L7 12c0-2.19.16-3.8.44-5.1.27-1.3.9-2.05 1.88-2.32.47-.13 1.1-.22-1.9-.28.8-.07 1.49-.1 2.09-.1L12 4c2.19 0 3.8.16 5.1.44 1.3.27 2.05.9 2.32 1.88.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09l.69.83z"/>
+        <path fill="currentColor" d="M10 15l5.2-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 5.1-.27 1.3-.9 2.05-1.88 2.32-.47.13-1.1.22-1.9.28-.8.07-1.49.1-2.09.1L15 20c-2.19 0-3.8-.16-5.1-.44-1.3-.27-2.05-.9-2.32-1.88-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L7 12c0-2.19.16-3.8.44-5.1.27-1.3.9-2.05 1.88-2.32.47-.13 1.1.22-1.9-.28.8-.07 1.49-.1 2.09-.1L12 4c2.19 0 3.8.16 5.1.44 1.3.27 2.05.9 2.32 1.88.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09l.69.83z"/>
       </symbol>
     </svg>
 
@@ -378,10 +445,19 @@
                 <a href="#about">Rólam</a>
                 <a href="#services">Hogyan segíthetek</a>
                 <a href="#aktivity">Projektek</a>
+                <a href="#">Blog</a> <!-- Placeholder for blog link -->
                 <a href="#propojit">Kapcsolat</a>
             </div>
             <div class="lang-switcher">
-                <a href="index.html">CZ</a> | <a href="index_en.html">EN</a> | <a href="index_hu.html" class="active">HU</a>
+                <button class="lang-button" aria-haspopup="true" aria-expanded="false">
+                    HU
+                    <span class="arrow"></span>
+                </button>
+                <div class="lang-dropdown">
+                    <a href="index.html">CZ</a>
+                    <a href="index_en.html">EN</a>
+                    <a href="index_hu.html" class="active">HU</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -389,22 +465,15 @@
     <header class="hero">
         <div class="container">
             <h1>Jövőbemutató jog. Növekedés az MI segítségével.</h1>
-            <p>Ügyvéd és MI stratéga vagyok. Segítek a vállalkozóknak gyorsabban és biztonságosabban innoválni.</p>
+            <p>Ügyvéd és MI stratéga vagyok.<br>Segítek a cégeknek az MI megfelelőségben az EU 2024/1689 számú rendeletével összhangban.<br>Segítek a vállalkozóknak gyorsabban és biztonságosabban innoválni.</p>
         </div>
     </header>
 
     <main>
-        <section id="problem">
-            <div class="container">
-                <h2 class="sr-only">Vállalkozók kulcsproblémái</h2>
-                <p>Túlterheltek a mindennapi teendők? Új irányt keres a vállalkozása növekedéséhez? A jogi kockázatok gátolják az innovációban?</p>
-            </div>
-        </section>
-
         <section id="mission">
             <div class="container">
                 <h2 class="section-title">Küldetésem</h2>
-                <blockquote>Küldetésem, hogy a vállalkozók az MI segítségével ne csak felgyorsítsák a munkájukat, hanem teljesen új üzleti lehetőségeket is felfedezzenek.</blockquote>
+                <blockquote>Küldetésem, hogy az MI megfelelőséget szabályozási akadályból stratégiai előnnyé alakítsam, amely lehetővé teszi a vállalatok számára a biztonságos és hatékony innovációt.</blockquote>
             </div>
         </section>
 
@@ -414,31 +483,32 @@
                 <div class="services-grid">
                     
                     <div class="service-card">
-                        <h3>1. pillér: MI a vállalkozás növekedéséért</h3>
-                        <p>Mint az Ön kalauza a mesterséges intelligencia világában, megmutatom, hogyan használhatja praktikusan, hatékonyan és biztonságosan az MI-t a céljai eléréséhez.</p>
-                        <h4>Gyorsítás & Hatékonyság</h4>
+                        <h3>1. pillér: MI Megfelelőség és Irányítás</h3>
+                        <p>Segítek a vállalatoknak az MI biztonságos és az európai jogszabályoknak (AI Act) megfelelő bevezetésében. Célom, hogy a szabályozási kötelezettségeket versenyelőnnyé alakítsam.</p>
+                        <h4>Stratégia és implementáció</h4>
                         <ul>
-                            <li>Rutin feladatok automatizálása</li>
-                            <li>Belső folyamatok optimalizálása</li>
-                            <li>Adminisztráció és működés hatékonyabbá tétele</li>
+                            <li>Kockázat- és hatáselemzés (FRIA)</li>
+                            <li>Belső folyamatok és irányelvek beállítása</li>
+                            <li>Munkavállalók és a menedzsment képzése</li>
                         </ul>
-                        <h4>Innováció & Lehetőségek</h4>
+                        <h4>Jogi és technikai biztonság</h4>
                         <ul>
-                            <li>Új üzleti modellek azonosítása</li>
-                            <li>Ügyfélélmény személyre szabása</li>
-                            <li>Piacelemzés és trend-előrejelzés</li>
+                            <li>Felkészítés az AI Act szerinti tanúsításra</li>
+                            <li>A GDPR-nek és más előírásoknak való megfelelés biztosítása</li>
+                            <li>Kötelezettségek nyomon követése és jelentése</li>
                         </ul>
                     </div>
 
                     <div class="service-card">
-                        <h3>2. pillér: Jogi szolgáltatások a jövőért</h3>
+                        <h3>2. pillér: Jogi szolgáltatások B2B számára</h3>
                         <p>Speciális jogi tanácsadást nyújtok, amely védi az innovációit és támogatja az egészséges növekedést.</p>
                         <h4>Szakterületek</h4>
                         <ul>
                             <li><strong>E-kereskedelem:</strong> Jogi biztonság az online vállalkozásához.</li>
                             <li><strong>Szellemi tulajdon:</strong> Márkájának, szoftverének és kreatív alkotásainak védelme.</li>
-                            <li><strong>Kereskedelmi jog:</strong> Szerződések struktúrája, amelyek minimalizálják a kockázatokat.</li>
-                            <li><strong>Társasági jog:</strong> Útmutató cégek és startupok alapításához és irányításához.</li>
+                            <li><strong>Kereskedelmi jog:</strong> Érthető szerződések, amelyek minimalizálják a kockázatokat.</li>
+                            <li><strong>Társasági jog:</strong> Cégalapítás és vállalati ügyek, felvásárlások és elidegenítések.</li>
+                            <li><strong>Versenjog:</strong> Jogok védelme és érvényesítése versenykörnyezetben.</li>
                             <li><strong>Munkajog:</strong> Szabályok felállítása az MI munkahelyi használatára.</li>
                         </ul>
                     </div>
@@ -459,62 +529,91 @@
         <section id="aktivity">
             <div class="container">
                 <h2 class="section-title">Projektjeim és tevékenységeim</h2>
-                <div class="projects-grid">
-                    <div class="project-item">
-                        <a href="http://www.iustoria.cz" target="_blank" rel="noopener noreferrer">
-                            <img src="logo-iustoria_white.png" alt="IUSTORIA ügyvédi iroda logója" loading="lazy">
-                        </a>
-                        <p>Alapító partner egy ügyvédi irodában</p>
-                    </div>
-                    <div class="project-item">
-                        <a href="https://www.pod-palavou.cz/klubova-setkani" target="_blank" rel="noopener noreferrer">
-                            <img src="logo-palava-horizons.png" alt="Pálava Horizons logója" loading="lazy">
-                        </a>
-                        <p>A Pálava Horizons alapító tagja</p>
-                    </div>
-                    <div class="project-item">
-                        <a href="https://www.facebook.com/profile.php?id=61561146905712" target="_blank" rel="noopener noreferrer">
-                            <img src="logo-bforb-tisnov.jpg" alt="BforB Tišnov logója" loading="lazy">
-                        </a>
-                        <p>Networking klub moderátora</p>
-                    </div>
-                    <div class="project-item">
-                        <a href="https://klubpodnikavcu.cz/srazy-podnikavcu" target="_blank" rel="noopener noreferrer">
-                            <img src="logo-podnikavci.png" alt="Klub Podnikavců logója" loading="lazy" style="filter: invert(1);">
-                        </a>
-                        <p>A Tišnovi Vállalkozói Klub tagja</p>
+                <div class="projects-layout">
+                    <div class="projects-grid">
+                        <div class="project-item">
+                            <a href="http://www.iustoria.cz" target="_blank" rel="noopener noreferrer">
+                                <img src="logo-iustoria_white.png" alt="IUSTORIA ügyvédi iroda logója" loading="lazy">
+                            </a>
+                            <p>Alapító partner egy ügyvédi irodában</p>
+                        </div>
+                        <div class="project-item">
+                            <a href="https://www.pod-palavou.cz/klubova-setkani" target="_blank" rel="noopener noreferrer">
+                                <img src="logo-palava-horizons.png" alt="Pálava Horizons logója" loading="lazy">
+                            </a>
+                            <p>A Pálava Horizons alapító tagja</p>
+                        </div>
+                        <div class="project-item">
+                            <a href="https://www.facebook.com/profile.php?id=61561146905712" target="_blank" rel="noopener noreferrer">
+                                <img src="logo-bforb-tisnov.jpg" alt="BforB Tišnov logója" loading="lazy">
+                            </a>
+                            <p>Networking klub moderátora</p>
+                        </div>
+                        <div class="project-item">
+                            <a href="https://klubpodnikavcu.cz/srazy-podnikavcu" target="_blank" rel="noopener noreferrer">
+                                <img src="logo-podnikavci.png" alt="Klub Podnikavců logója" loading="lazy" style="filter: invert(1);">
+                            </a>
+                            <p>A Tišnovi Vállalkozói Klub tagja</p>
+                        </div>
+                        <div class="project-item">
+                            <a href="https://www.smart-network.cz/" target="_blank" rel="noopener noreferrer">
+                                <img src="smart_network.png" alt="Logo Smart Network" loading="lazy">
+                            </a>
+                            <p>A Smart Network klub tagja</p>
+                        </div>
                     </div>
                 </div>
             </div>
             
             <div class="container" style="padding-top: 40px; border-top: 1px solid #e0e0e0; margin-top: 60px;">
-                <h3 class="section-subtitle" style="font-size: 1.8em; font-weight: 700; color: var(--primary-color); margin-bottom: 30px;">Hol találkozhatunk</h3>
+                <h3 class="section-subtitle" style="font-size: 1.8em; font-weight: 700; color: var(--primary-color); margin-bottom: 15px;">Hol találkozhatunk</h3>
                 <ul class="events-list">
                     <li>
-                        <div class="event-date">2025. aug. 19.</div>
+                        <div class="event-date">Szept. 2.</div>
                         <div class="event-details">
-                            <h4>Pod Pálavou networking reggeli</h4>
+                            <h4>Pod Pálavou networking reggeli - MI Workshop</h4>
                             <p>Krčma a hotel U Císařské cesty, Branišovice</p>
                         </div>
-                        <a href="https://www.happenee.com/events/networking-pod-palavou-11" target="_blank" rel="noopener noreferrer" class="cta-button event-button">Több információ</a>
+                        <a href="https://www.happenee.com/events/networking-pod-palavou-12" target="_blank" rel="noopener noreferrer" class="cta-button event-button">Több info</a>
                     </li>
                     <li>
-                        <div class="event-date">2025. aug. 20.</div>
-                        <div class="event-details">
-                            <h4>Kuřimi Vállalkozói Klub networking találkozója</h4>
-                            <p>Lesní bar "Na Našem", Kuřim</p>
-                        </div>
-                        <a href="https://klubpodnikavcu.cz/akce/sraz-podnikavcu-kurim-2" target="_blank" rel="noopener noreferrer" class="cta-button event-button">Több információ</a>
-                    </li>
-                    <li>
-                        <div class="event-date">2025. szept. 4.</div>
+                        <div class="event-date">Szept. 4.</div>
                         <div class="event-details">
                             <h4>BforB Tišnov networking grillparti</h4>
                             <p>Café u Palce, Tišnov</p>
                         </div>
-                        <a href="https://www.facebook.com/profile.php?id=61561146905712" target="_blank" rel="noopener noreferrer" class="cta-button event-button">Több információ</a>
+                        <a href="https://www.facebook.com/profile.php?id=61561146905712" target="_blank" rel="noopener noreferrer" class="cta-button event-button">Több info</a>
+                    </li>
+                    <li>
+                        <div class="event-date">Szept. 16.</div>
+                        <div class="event-details">
+                            <h4>A Tišnovi Vállalkozói Klub networking találkozója</h4>
+                            <p>Café u Palce, Tišnov</p>
+                        </div>
+                        <a href="https://klubpodnikavcu.cz/akce/sraz-podnikavcu-tisnov-25" target="_blank" rel="noopener noreferrer" class="cta-button event-button">Több info</a>
+                    </li>
+                     <li>
+                        <div class="event-date">Okt. 9.</div>
+                        <div class="event-details">
+                            <h4>Innovációs Hét - szeminárium az MI megfelelőségről B2B számára</h4>
+                            <p>ČSOB Campus Prague</p>
+                        </div>
+                        <a href="https://www.innovationweek.ai/cs" target="_blank" rel="noopener noreferrer" class="cta-button event-button">Több info</a>
                     </li>
                 </ul>
+                    <div style="margin-top: 40px; padding-top: 30px; border-top: 1px dashed #ccc;">
+                    <h3 class="section-subtitle" style="font-size: 1.8em; font-weight: 700; color: var(--primary-color); margin-bottom: 15px;">Hamarosan</h3>
+                    <ul class="events-list">
+                         <li style="border-bottom: none;">
+                            <div class="event-date">Szept. 19.</div>
+                            <div class="event-details">
+                                <h4>Workshop a Google MI eszközeiről</h4>
+                                <p>IUSTORIA, Slovákova 279, Brno</p>
+                            </div>
+                            <span class="cta-button event-button" style="background-color: #aaa; cursor: not-allowed;">Hamarosan</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
             </section>
 
@@ -587,32 +686,56 @@
     </footer>
     
     <script>
+        // --- Hamburger Menu ---
         const hamburger = document.querySelector('.hamburger');
         const navLinksContainer = document.querySelector('.nav-links-container');
 
         function toggleMenu() {
+            const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+            hamburger.setAttribute('aria-expanded', !isExpanded);
             navLinksContainer.classList.toggle('active');
         }
 
         hamburger.addEventListener('click', toggleMenu);
-        
-        // Umožnit otevření menu i klávesou Enter
         hamburger.addEventListener('keydown', (e) => {
             if (e.key === 'Enter') {
                 toggleMenu();
             }
         });
 
-        // Zavřít menu po kliknutí na odkaz
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 if (navLinksContainer.classList.contains('active')) {
                     navLinksContainer.classList.remove('active');
+                    hamburger.setAttribute('aria-expanded', 'false');
                 }
             });
         });
+
+        // --- Language Switcher Dropdown ---
+        const langButton = document.querySelector('.lang-button');
+        const langDropdown = document.querySelector('.lang-dropdown');
+
+        function toggleLangDropdown() {
+             const isExpanded = langButton.getAttribute('aria-expanded') === 'true';
+             langButton.setAttribute('aria-expanded', !isExpanded);
+             langButton.classList.toggle('active');
+             langDropdown.style.display = langDropdown.style.display === 'block' ? 'none' : 'block';
+        }
+
+        langButton.addEventListener('click', (e) => {
+            e.stopPropagation(); // Zabráníme, aby se hned zavřelo kvůli listeneru na window
+            toggleLangDropdown();
+        });
+
+        // Zavřít dropdown při kliknutí kamkoliv jinam
+        window.addEventListener('click', (e) => {
+            if (!langButton.contains(e.target) && langDropdown.style.display === 'block') {
+                toggleLangDropdown();
+            }
+        });
+
     </script>
 
 </body>
-
 </html>

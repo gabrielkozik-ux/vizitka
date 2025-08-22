@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI v byznysu: 4 cesty úniku dat | Mgr. Gabriel Kožík</title>
+    <meta name="description" content="Zjistěte, jaké jsou 4 hlavní cesty, kterými mohou unikat vaše firemní data při používání AI, a jak se proti tomu chránit.">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0a2342;
+            --secondary-color: #2ca58d;
+            --text-color: #333;
+            --light-gray: #f4f4f4;
+            --white: #ffffff;
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--white);
+            padding-top: 70px;
+        }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        .main-nav { background-color: var(--white); padding: 15px 20px; border-bottom: 1px solid var(--light-gray); position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; box-sizing: border-box; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { font-weight: bold; color: var(--primary-color); text-decoration: none; font-size: 1.2em; }
+        .nav-links { display: flex; align-items: center; }
+        .nav-links a { color: var(--primary-color); text-decoration: none; font-weight: bold; margin: 0 15px; font-size: 1.1em; transition: color 0.3s ease; }
+        .nav-links a:hover { color: var(--secondary-color); }
+        .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+        .hamburger .bar { width: 25px; height: 3px; background-color: var(--primary-color); }
+
+        .article-header {
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        .article-header h1 {
+            font-size: 2.8em;
+            color: var(--primary-color);
+            margin: 0 0 10px 0;
+        }
+        .article-meta {
+            font-size: 0.9em;
+            color: #777;
+        }
+        .article-content {
+            padding: 40px 0;
+        }
+        .article-content p, .article-content li {
+            font-size: 1.1em;
+            line-height: 1.7;
+        }
+        .article-content h2 {
+            font-size: 1.8em;
+            color: var(--primary-color);
+            margin-top: 40px;
+        }
+        .article-content blockquote {
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 20px;
+            font-style: italic;
+            margin: 20px 0;
+            font-size: 1.2em;
+        }
+        .article-image-main {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .back-to-blog {
+            display: inline-block;
+            margin-top: 40px;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer { background-color: var(--primary-color); color: var(--white); padding: 40px 20px; text-align: center; }
+        .copyright { margin-top: 20px; font-size: 0.8em; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            .article-header h1 { font-size: 2.2em; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <a href="index.html" class="nav-logo">Mgr. Gabriel Kožík</a>
+        <div class="nav-links">
+            <a href="index.html#about">O mně</a>
+            <a href="index.html#services">Jak vám mohu pomoci</a>
+            <a href="index.html#aktivity">Projekty</a>
+            <a href="blog.html">Blog</a>
+            <a href="index.html#propojit">Kontaktujte mě</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <article class="article-content">
+                <header class="article-header">
+                    <h1>AI v byznysu: 4 cesty, kudy nevědomky unikají vaše firemní data</h1>
+                    <p class="article-meta">Publikováno: 16. srpna 2025 | Autor: Mgr. Gabriel Kožík</p>
+                </header>
+                
+                <img src="big-data.jpg" alt="Abstraktní vizualizace dat a umělé inteligence" class="article-image-main">
+                
+                <p><strong>Využívání AI se stává standardem, ale s ním rostou i rizika. Mnoho firem si neuvědomuje, že při interakci s AI nástroji mohou nevědomky odhalovat citlivá firemní data. Pojďme se podívat na 4 hlavní cesty, kudy data unikají, a jak tomu zabránit.</strong></p>
+
+                <h2>1. Veřejné a volně dostupné jazykové modely (LLM)</h2>
+                <p>Nástroje jako ChatGPT, Copilot nebo Gemini jsou skvělými pomocníky. Problém nastává, když do nich zaměstnanci vkládají citlivé informace – části smluv, interní strategie, osobní údaje klientů. Tato data se mohou stát součástí trénovacích dat modelu a být teoreticky dostupná třetím stranám.</p>
+                <blockquote>Řešení: Vytvořte jasná interní pravidla pro používání veřejných AI nástrojů. Zakažte vkládání jakýchkoliv citlivých firemních nebo osobních údajů.</blockquote>
+
+                <h2>2. Nástroje pro práci s dokumenty s vlastní AI</h2>
+                <p>Aplikace jako Notion, ale i samotné Google dokumenty, integrují AI funkce pro shrnutí nebo analýzu obsahu. Je klíčové vědět, jak tyto nástroje nakládají s vašimi daty. Zpracovávají je lokálně, nebo posílají na externí servery? Podmínky užití jsou zde zásadní.</p>
+                <blockquote>Řešení: Důkladně prověřte podmínky ochrany soukromí u každého nástroje. Preferujte ty, které data zpracovávají na straně klienta nebo garantují jejich nezneužití.</blockquote>
+
+                <h2>3. Neopatrné sdílení personalizovaných AI nástrojů</h2>
+                <p>Mnoho platforem umožňuje vytvořit si vlastního "agenta" nebo "bota" natrénovaného na vašich datech. Může jít o interní databázi, know-how nebo klientská data. Neopatrným sdílením odkazu na takového bota můžete nevědomky poskytnout přístup k citlivým informacím komukoliv na internetu.</p>
+                <blockquote>Řešení: Nastavte striktní pravidla pro přístup k interním AI nástrojům. Přístup by měli mít pouze autorizovaní zaměstnanci.</blockquote>
+                
+                <h2>4. Metadata a skryté informace v souborech</h2>
+                <p>Při nahrávání souborů (např. pro analýzu v AI nástroji) často zapomínáme, že dokumenty, obrázky nebo PDF soubory obsahují skrytá metadata – autora, čas vytvoření, GPS souřadnice a další. Tyto informace mohou odhalit více, než zamýšlíte.</p>
+                <blockquote>Řešení: Před nahráváním souborů do externích systémů odstraňte metadata pomocí specializovaných nástrojů. Zvažte, zda je nahrání celého souboru skutečně nutné.</blockquote>
+
+                <h2>Závěr</h2>
+                <p>Klíčem k bezpečnému využívání AI je prevence a vzdělávání. Je nezbytné mít ve firmě jasně nastavená pravidla a pravidelně školit zaměstnance o rizicích. Nejde o to AI zakázat, ale naučit se ji používat chytře a bezpečně.</p>
+                
+                <a href="blog.html" class="back-to-blog">← Zpět na přehled článků</a>
+            </article>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p class="copyright">&copy; 2025 Mgr. Gabriel Kožík. Všechna práva vyhrazena.</p>
+        </div>
+    </footer>
+</body>
+</html>

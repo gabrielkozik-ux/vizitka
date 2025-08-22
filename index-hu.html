@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ügyvéd & MI Stratéga a Vállalkozás Növekedéséért | Mgr. Gabriel Kožík</title>
+    <meta name="description" content="Ügyvéd és MI stratéga vagyok. Segítek a vállalkozóknak és cégeknek biztonságosabban innoválni és gyorsabban növekedni a mesterséges intelligencia hatékony használatának és a szilárd jogi háttérnek köszönhetően.">
+    
+    <!-- Language version links for SEO -->
+    <link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/index.html" />
+    <link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/index-en.html" />
+    <link rel="alternate" hreflang="hu" href="https://www.gabrielkozik.com/index-hu.html" />
+    <link rel="alternate" hreflang="x-default" href="https://www.gabrielkozik.com/index.html" />
+
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+        :root {
+            --primary-color: #0a2342;
+            --secondary-color: #2ca58d;
+            --text-color: #333;
+            --light-gray: #f4f4f4;
+            --white: #ffffff;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--white);
+            padding-top: 70px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .main-nav {
+            background-color: var(--white);
+            padding: 15px 20px;
+            border-bottom: 1px solid var(--light-gray);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo {
+             font-weight: bold;
+             color: var(--primary-color);
+             text-decoration: none;
+             font-size: 1.2em;
+        }
+
+        .nav-links-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+            border-radius: 3px;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .lang-switcher {
+            position: relative;
+            margin-left: 20px;
+        }
+
+        .lang-button {
+            background-color: transparent;
+            border: none;
+            color: var(--text-color);
+            font-weight: bold;
+            font-size: 1em;
+            cursor: pointer;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            line-height: 1;
+        }
+
+        .lang-button .arrow {
+            border: solid var(--text-color);
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 2px;
+            transform: rotate(45deg);
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .lang-button.active .arrow {
+             transform: rotate(-135deg);
+        }
+
+        .lang-dropdown {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 100%;
+            background-color: var(--white);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border-radius: 5px;
+            overflow: hidden;
+            min-width: 100px;
+            z-index: 1001;
+        }
+
+        .lang-dropdown a {
+            color: var(--text-color);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .lang-dropdown a:hover {
+            background-color: var(--light-gray);
+        }
+        
+        .lang-dropdown a.active {
+            color: var(--secondary-color);
+            background-color: #e8f6f3;
+        }
+
+        a:focus, .cta-button:focus, .social-icon:focus, .lang-button:focus {
+            outline: 3px solid var(--secondary-color);
+            outline-offset: 2px;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 5px;
+            padding: 5px;
+            border-radius: 3px;
+        }
+        
+        .hamburger:focus {
+             outline: 3px solid var(--secondary-color);
+             outline-offset: 2px;
+        }
+
+        .hamburger .bar {
+            width: 25px;
+            height: 3px;
+            background-color: var(--primary-color);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .hero {
+            background-image: linear-gradient(rgba(10, 35, 66, 0.6), rgba(10, 35, 66, 0.6)), url('assets/images/uvodni-obrazek.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            color: var(--white);
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5em; 
+            margin: 0;
+            font-weight: 700;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            font-weight: 300;
+            margin-top: 10px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
+        }
+
+        section { padding: 60px 20px; scroll-margin-top: 70px; }
+        section:nth-child(even) { background-color: var(--light-gray); }
+        .section-title { text-align: center; font-size: 2.5em; margin-bottom: 40px; color: var(--primary-color); }
+        .section-subtitle { text-align: center; font-size: 1.2em; font-weight: 300; max-width: 700px; margin: -20px auto 40px auto; }
+        
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+        
+        #mission { text-align: center; }
+        #mission blockquote { font-size: 1.5em; font-style: italic; max-width: 800px; margin: 0 auto; border-left: 5px solid var(--secondary-color); padding-left: 20px; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .service-card { background: var(--white); padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid var(--secondary-color); }
+        .service-card h3 { font-size: 1.8em; color: var(--primary-color); margin-top: 0; }
+        .service-card h4 { color: var(--secondary-color); font-size: 1.1em; margin-bottom: 15px; }
+        .service-card ul { list-style: none; padding: 0; }
+        .service-card li { padding-left: 1.5em; margin-bottom: 10px; position: relative; }
+        .service-card li::before { content: '✓'; color: var(--secondary-color); position: absolute; left: 0; font-weight: bold; }
+        #about p { max-width: 800px; margin: 0 auto; text-align: center; }
+        .about-container { text-align: center; }
+        .about-photo-circle { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; margin: 0 auto 30px auto; display: block; }
+        
+        #aktivity { background-color: var(--light-gray); }
+        .projects-layout { display: flex; flex-direction: column; align-items: center; gap: 30px; }
+        .projects-grid { display: flex; justify-content: center; align-items: flex-start; gap: 50px; flex-wrap: wrap; text-align: center; }
+        .project-item { flex-basis: 250px; }
+        .project-item img { max-width: 100%; height: 100px; object-fit: contain; margin-bottom: 15px; transition: transform 0.3s ease; }
+        .project-item a:hover img { transform: scale(1.05); }
+        .project-item p { font-size: 1em; color: var(--text-color); margin-top: 0; }
+        
+        #workshop { padding-top: 20px; background-color: var(--light-gray); }
+        .workshop-container { text-align: center; }
+        .workshop-container a { display: inline-block; transition: transform 0.3s ease, box-shadow 0.3s ease; border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+        .workshop-container a:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.12); }
+        .workshop-container img { max-width: 100%; height: auto; display: block; }
+        
+        #propojit { text-align: center; }
+        .cta-container { display: flex; flex-direction: column; align-items: center; gap: 20px; }
+        .cta-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .cta-button { display: inline-block; background-color: var(--secondary-color); color: var(--white); padding: 15px 30px; text-decoration: none; font-size: 1.1em; font-weight: bold; border-radius: 5px; transition: background-color 0.3s ease, transform 0.2s ease; }
+        .cta-button:hover { background-color: #238c76; transform: translateY(-2px); }
+        .cta-button.secondary { background-color: transparent; color: var(--primary-color); border: 2px solid var(--primary-color); }
+        .cta-button.secondary:hover { background-color: var(--primary-color); color: var(--white); }
+        .booking-text { font-size: 1.1em; color: var(--text-color); margin: 0; }
+        
+        footer { background-color: var(--primary-color); color: var(--white); padding: 40px 20px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1100px; margin: 0 auto; }
+        .footer-grid h4 { color: var(--secondary-color); margin-bottom: 10px; }
+        .footer-grid p, .footer-grid a { margin: 0; color: var(--white); text-decoration: none; font-size: 0.9em; }
+        .footer-grid a:hover { text-decoration: underline; }
+        .copyright { text-align: center; margin-top: 40px; font-size: 0.8em; color: rgba(255,255,255,0.7); }
+        
+        .social-icons-container { display: flex; justify-content: flex-start; gap: 15px; margin-top: 15px; }
+        .social-icon { color: var(--white); text-decoration: none; transition: color 0.3s ease, transform 0.2s ease; display: inline-block; }
+        .social-icon svg { width: 30px; height: 30px; }
+        .social-icon:hover { color: var(--secondary-color); transform: translateY(-3px); }
+
+        .events-list {
+            list-style: none;
+            padding: 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .events-list li {
+            display: flex;
+            align-items: flex-start;
+            padding: 20px 0;
+            border-bottom: 1px solid #ddd;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .events-list li:last-child {
+            border-bottom: none;
+        }
+
+        .event-date {
+            font-weight: bold;
+            color: var(--secondary-color);
+            font-size: 1.1em;
+            flex-shrink: 0;
+            width: 100px;
+            padding-top: 2px;
+        }
+
+        .event-details {
+            flex-grow: 1;
+        }
+
+        .event-details h4 {
+            margin: 0 0 5px 0;
+            font-size: 1.2em;
+            color: var(--primary-color);
+        }
+
+        .event-details p {
+            margin: 0;
+            color: var(--text-color);
+            font-size: 0.95em;
+        }
+
+        .event-button {
+            padding: 8px 18px;
+            font-size: 0.9em;
+            flex-shrink: 0;
+            margin-left: auto; 
+        }
+
+        @media (max-width: 768px) {
+            .nav-links-container {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                background-color: white;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            }
+            
+            .nav-links-container.active {
+                display: flex;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .nav-links a {
+                padding: 15px;
+                text-align: center;
+                width: 100%;
+                border-bottom: 1px solid var(--light-gray);
+            }
+            
+             .lang-switcher {
+                 padding: 15px;
+                 text-align: center;
+                 width: 100%;
+                 margin-left: 0;
+                 position: static;
+            }
+
+            .lang-dropdown {
+                position: static;
+                box-shadow: none;
+                border-top: 1px solid var(--light-gray);
+                display: block;
+                background-color: var(--light-gray);
+            }
+
+            .lang-button {
+                justify-content: center;
+                width: 100%;
+            }
+            
+            .hamburger {
+                display: flex;
+            }
+
+            .hero {
+                padding: 60px 20px;
+            }
+            .hero h1 {
+                font-size: 2.2em;
+            }
+            .hero p {
+                font-size: 1.1em;
+            }
+            .section-title {
+                font-size: 2em;
+            }
+            .footer-grid { text-align: center; }
+            .social-icons-container { justify-content: center; }
+        }
+
+        @media (max-width: 600px) {
+            .events-list li {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            .event-date {
+                width: auto;
+                background-color: var(--light-gray);
+                padding: 5px 10px;
+                border-radius: 4px;
+                font-size: 1em;
+            }
+            .event-button {
+                width: 100%;
+                text-align: center;
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <svg width="0" height="0" style="position:absolute">
+      <symbol id="icon-linkedin" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11H9.3v9.09h3.58v-4.54c0-.77.25-1.21 1.25-1.21.97 0 1.25.44 1.25 1.21v4.54h3.57zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68zm1.78 9.94V9.6h-3.57v9.09h3.57z"/>
+      </symbol>
+      <symbol id="icon-facebook" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M12 2.04c-5.5 0-10 4.49-10 10.02 0 5 3.66 9.15 8.44 9.9v-7.02h-2.54v-2.89h2.54V9.84c0-2.51 1.49-3.9 3.8-3.9 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.89h-2.33v7.02c4.78-.75 8.44-4.9 8.44-9.9C22 6.53 17.5 2.04 12 2.04z"/>
+      </symbol>
+      <symbol id="icon-youtube" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M10 15l5.2-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 5.1-.27 1.3-.9 2.05-1.88 2.32-.47.13-1.1.22-1.9.28-.8.07-1.49.1-2.09.1L15 20c-2.19 0-3.8-.16-5.1-.44-1.3-.27-2.05-.9-2.32-1.88-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L7 12c0-2.19.16-3.8.44-5.1.27-1.3.9-2.05 1.88-2.32.47-.13 1.1.22-1.9-.28.8-.07 1.49-.1 2.09-.1L12 4c2.19 0 3.8.16 5.1.44 1.3.27 2.05.9 2.32 1.88.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09l.69.83z"/>
+      </symbol>
+    </svg>
+
+    <nav class="main-nav">
+        <a href="#" class="nav-logo">Mgr. Gabriel Kožík</a>
+        <div class="hamburger" tabindex="0" role="button" aria-label="Menü megnyitása">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="nav-links-container">
+            <div class="nav-links">
+                <a href="#about">Rólam</a>
+                <a href="#services">Hogyan segíthetek</a>
+                <a href="#aktivity">Projektek</a>
+                <a href="#">Blog</a>
+                <a href="#propojit">Kapcsolat</a>
+            </div>
+            <div class="lang-switcher">
+                <button class="lang-button" aria-haspopup="true" aria-expanded="false">
+                    HU
+                    <span class="arrow"></span>
+                </button>
+                <div class="lang-dropdown">
+                    <a href="index.html">CZ</a>
+                    <a href="index-en.html">EN</a>
+                    <a href="index-hu.html" class="active">HU</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Jövőbemutató jog. Növekedés az MI segítségével.</h1>
+            <p>Ügyvéd és MI stratéga vagyok.<br>Segítek a cégeknek az MI megfelelőségben az EU 2024/1689 számú rendeletével összhangban.<br>Segítek a vállalkozóknak gyorsabban és biztonságosabban innoválni.</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="mission">
+            <div class="container">
+                <h2 class="section-title">Küldetésem</h2>
+                <blockquote>Küldetésem, hogy az MI megfelelőséget szabályozási akadályból stratégiai előnnyé alakítsam, amely lehetővé teszi a vállalatok számára a biztonságos és hatékony innovációt.</blockquote>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="container">
+                <h2 class="section-title">Hogyan segíthetek</h2>
+                <div class="services-grid">
+                    
+                    <div class="service-card">
+                        <h3>1. pillér: MI Megfelelőség és Irányítás</h3>
+                        <p>Segítek a vállalatoknak az MI biztonságos és az európai jogszabályoknak (AI Act) megfelelő bevezetésében. Célom, hogy a szabályozási kötelezettségeket versenyelőnnyé alakítsam.</p>
+                        <h4>Stratégia és implementáció</h4>
+                        <ul>
+                            <li>Kockázat- és hatáselemzés (FRIA)</li>
+                            <li>Belső folyamatok és irányelvek beállítása</li>
+                            <li>Munkavállalók és a menedzsment képzése</li>
+                        </ul>
+                        <h4>Jogi és technikai biztonság</h4>
+                        <ul>
+                            <li>Felkészítés az AI Act szerinti tanúsításra</li>
+                            <li>A GDPR-nek és más előírásoknak való megfelelés biztosítása</li>
+                            <li>Kötelezettségek nyomon követése és jelentése</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>2. pillér: Jogi szolgáltatások B2B számára</h3>
+                        <p>Speciális jogi tanácsadást nyújtok, amely védi az innovációit és támogatja az egészséges növekedést.</p>
+                        <h4>Szakterületek</h4>
+                        <ul>
+                            <li><strong>E-kereskedelem:</strong> Jogi biztonság az online vállalkozásához.</li>
+                            <li><strong>Szellemi tulajdon:</strong> Márkájának, szoftverének és kreatív alkotásainak védelme.</li>
+                            <li><strong>Kereskedelmi jog:</strong> Érthető szerződések, amelyek minimalizálják a kockázatokat.</li>
+                            <li><strong>Társasági jog:</strong> Cégalapítás és vállalati ügyek, felvásárlások és elidegenítések.</li>
+                            <li><strong>Versenjog:</strong> Jogok védelme és érvényesítése versenykörnyezetben.</li>
+                            <li><strong>Munkajog:</strong> Szabályok felállítása az MI munkahelyi használatára.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="about">
+            <div class="container about-container">
+                <img src="assets/images/profilova-fotka.jpg" alt="Mgr. Gabriel Kožík portréja" class="about-photo-circle" loading="lazy">
+                <h2 class="section-title">Rólam: Két világ találkozása</h2>
+                <p>
+                    Szakmai utam két szenvedély logikus összekapcsolódása: a jog precíz világa és a technológia dinamikus világa. A kereskedelmi és technológiai jogra szakosodott ügyvédként mindig az innovátorok oldalán álltam. Fokozatosan rájöttem, hogy a valódi versenyelőny nemcsak a jogi védelemből, hanem a technológia aktív használatából fakad. Ezért mélyedtem el a mesterséges intelligencia területén, hogy ügyfeleimnek ne csak biztonságot, hanem növekedésük katalizátorát is kínálhassam.
+                </p>
+            </div>
+        </section>
+        
+        <section id="aktivity">
+            <div class="container">
+                <h2 class="section-title">Projektjeim és tevékenységeim</h2>
+                <div class="projects-layout">
+                    <div class="projects-grid">
+                        <div class="project-item">
+                            <a href="http://www.iustoria.cz" target="_blank" rel="noopener noreferrer">
+                                <img src="assets/images/logos/logo-iustoria_white.png" alt="IUSTORIA ügyvédi iroda logója" loading="lazy">
+                            </a>
+                            <p>Alapító partner egy ügyvédi irodában</p>
+                        </div>
+                        <div class="project-item">
+                            <a href="https://www.pod-palavou.cz/klubova-setkani" target="_blank" rel="noopener noreferrer">
+                                <img src="assets/images/logos/logo-palava-horizons.png" alt="Pálava Horizons logója" loading="lazy">
+                            </a>
+                            <p>A Pálava Horizons alapító tagja</p>
+                        </div>
+                        <div class="project-item">
+                            <a href="https://www.facebook.com/profile.php?id=61561146905712" target="_blank" rel="noopener noreferrer">
+                                <img src="assets/images/logos/logo-bforb-tisnov.jpg" alt="BforB Tišnov logója" loading="lazy">
+                            </a>
+                            <p>Networking klub moderátora</p>
+                        </div>
+                        <div class="project-item">
+                            <a href="https://klubpodnikavcu.cz/srazy-podnikavcu" target="_blank" rel="noopener noreferrer">
+                                <img src="assets/images/logos/logo-podnikavci.png" alt="Klub Podnikavců logója" loading="lazy" style="filter: invert(1);">
+                            </a>
+                            <p>A Tišnovi Vállalkozói Klub tagja</p>
+                        </div>
+                        <div class="project-item">
+                            <a href="https://www.smart-network.cz/" target="_blank" rel="noopener noreferrer">
+                                <img src="assets/images/logos/logo-smart-network.png" alt="Logo Smart Network" loading="lazy">
+                            </a>
+                            <p>A Smart Network klub tagja</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container" style="padding-top: 40px; border-top: 1px solid #e0e0e0; margin-top: 60px;">
+                <h3 class="section-subtitle" style="font-size: 1.8em; font-weight: 700; color: var(--primary-color); margin-bottom: 15px;">Hol találkozhatunk</h3>
+                <ul class="events-list">
+                    <li>
+                        <div class="event-date">Szept. 2.</div>
+                        <div class="event-details">
+                            <h4>Pod Pálavou networking reggeli - MI Workshop</h4>
+                            <p>Krčma a hotel U Císařské cesty, Branišovice</p>
+                        </div>
+                        <a href="https://www.happenee.com/events/networking-pod-palavou-12" target="_blank" rel="noopener noreferrer" class="cta-button event-button">Több info</a>
+                    </li>
+                    <li>
+                        <div class="event-date">Szept. 4.</div>
+                        <div class="event-details">
+                            <h4>BforB Tišnov networking grillparti</h4>
+                            <p>Café u Palce, Tišnov</p>
+                        </div>
+                        <a href="https://www.facebook.com/profile.php?id=61561146905712" target="_blank" rel="noopener noreferrer" class="cta-button event-button">Több info</a>
+                    </li>
+                    <li>
+                        <div class="event-date">Szept. 16.</div>
+                        <div class="event-details">
+                            <h4>A Tišnovi Vállalkozói Klub networking találkozója</h4>
+                            <p>Café u Palce, Tišnov</p>
+                        </div>
+                        <a href="https://klubpodnikavcu.cz/akce/sraz-podnikavcu-tisnov-25" target="_blank" rel="noopener noreferrer" class="cta-button event-button">Több info</a>
+                    </li>
+                     <li>
+                        <div class="event-date">Okt. 9.</div>
+                        <div class="event-details">
+                            <h4>Innovációs Hét - szeminárium az MI megfelelőségről B2B számára</h4>
+                            <p>ČSOB Campus Prague</p>
+                        </div>
+                        <a href="https://www.innovationweek.ai/cs" target="_blank" rel="noopener noreferrer" class="cta-button event-button">Több info</a>
+                    </li>
+                </ul>
+                    <div style="margin-top: 40px; padding-top: 30px; border-top: 1px dashed #ccc;">
+                    <h3 class="section-subtitle" style="font-size: 1.8em; font-weight: 700; color: var(--primary-color); margin-bottom: 15px;">Hamarosan</h3>
+                    <ul class="events-list">
+                         <li style="border-bottom: none;">
+                            <div class="event-date">Szept. 19.</div>
+                            <div class="event-details">
+                                <h4>Workshop a Google MI eszközeiről</h4>
+                                <p>IUSTORIA, Slovákova 279, Brno</p>
+                            </div>
+                            <span class="cta-button event-button" style="background-color: #aaa; cursor: not-allowed;">Hamarosan</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </section>
+
+        <section id="workshop">
+            <div class="container">
+                <h2 class="section-title">Aktuális workshop</h2>
+                <div class="workshop-container">
+                    <a href="https://www.smsticket.cz/vstupenky/58981-gemini-a-dalsi-nastroje-od-google-prakticky-efektivne-advokatni-kancelar-iustoria-brno" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/images/workshop-ai-google.jpg" alt="Meghívó a Gemini | NotebookLM | Google AI Studio workshopra" loading="lazy">
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="propojit">
+            <div class="container">
+                <h2 class="section-title">Lépjünk kapcsolatba</h2>
+                <p class="section-subtitle">Akár egy összetett jogi problémát kell megoldania, akár fel szeretné fedezni az MI-ben rejlő lehetőségeket a vállalkozása számára, itt vagyok Önnek.</p>
+                <div class="cta-container">
+                    <div class="cta-buttons">
+                        <a href="mailto:kozik@iustoria.cz" class="cta-button">Írjon nekem</a>
+                        <a href="tel:+420720265713" class="cta-button secondary">Hívjon fel</a>
+                    </div>
+                    <p class="booking-text">vagy foglaljon online hívást</p>
+                    <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/kozik-iustoria/30min', text: 'Időpontfoglalás', color: '#2ca58d', textColor: '#ffffff', branding: true});return false;" class="cta-button">Időpontfoglalás - Calendly</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h4>Mgr. Gabriel Kožík</h4>
+                <p>Ügyvéd & MI Stratéga</p>
+                <div class="social-icons-container">
+                    <a href="https://www.linkedin.com/in/gabriel-kozik/" target="_blank" class="social-icon" aria-label="LinkedIn profil">
+                        <svg><use xlink:href="#icon-linkedin"></use></svg>
+                    </a>
+                    <a href="https://www.facebook.com/somslovak" target="_blank" class="social-icon" aria-label="Facebook profil">
+                        <svg><use xlink:href="#icon-facebook"></use></svg>
+                    </a>
+                    <a href="https://www.youtube.com/@gabriel-kozik" target="_blank" class="social-icon" aria-label="YouTube csatorna">
+                        <svg><use xlink:href="#icon-youtube"></use></svg>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4>Kapcsolat</h4>
+                <p>E-mail: <a href="mailto:kozik@iustoria.cz">kozik@iustoria.cz</a></p>
+                <p>Telefon: <a href="tel:+420720265713">+420 720 265 713</a></p>
+                <p>Adatfiók: eygwp2c</p>
+            </div>
+            <div>
+                <h4>Iroda</h4>
+                <p>IUSTORIA, advokátní kancelář, s.r.o.</p>
+                <p>Slovákova 279/11, 602 00 Brno</p>
+                <p><a href="http://www.iustoria.cz" target="_blank">www.iustoria.cz</a></p>
+            </div>
+            <div>
+                <h4>Ügyvédi Kamarai Nyilvántartás</h4>
+                <p>Nyilv. sz.: 19320</p>
+                <p>Vállalkozói azonosító: 05187559</p>
+                <p>Kft. tag</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Mgr. Gabriel Kožík. Minden jog fenntartva.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // --- Hamburger Menu ---
+        const hamburger = document.querySelector('.hamburger');
+        const navLinksContainer = document.querySelector('.nav-links-container');
+
+        function toggleMenu() {
+            const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+            hamburger.setAttribute('aria-expanded', !isExpanded);
+            navLinksContainer.classList.toggle('active');
+        }
+
+        hamburger.addEventListener('click', toggleMenu);
+        hamburger.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                toggleMenu();
+            }
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinksContainer.classList.contains('active')) {
+                    navLinksContainer.classList.remove('active');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+
+        // --- Language Switcher Dropdown ---
+        const langButton = document.querySelector('.lang-button');
+        const langDropdown = document.querySelector('.lang-dropdown');
+
+        function toggleLangDropdown() {
+             const isExpanded = langButton.getAttribute('aria-expanded') === 'true';
+             langButton.setAttribute('aria-expanded', !isExpanded);
+             langButton.classList.toggle('active');
+             langDropdown.style.display = langDropdown.style.display === 'block' ? 'none' : 'block';
+        }
+
+        langButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleLangDropdown();
+        });
+
+        window.addEventListener('click', (e) => {
+            if (!langButton.contains(e.target) && langDropdown.style.display === 'block') {
+                toggleLangDropdown();
+            }
+        });
+
+    </script>
+    <script defer src="/_vercel/analytics/script.js"></script>
+</body>
+</html>

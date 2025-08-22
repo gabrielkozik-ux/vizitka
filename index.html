@@ -6,8 +6,18 @@
     <title>Advokát & AI Stratég pro Růst Podnikání | Mgr. Gabriel Kožík</title>
     <meta name="description" content="Jsem advokát a AI stratég. Pomáhám podnikatelům a firmám inovovat bezpečněji a růst rychleji díky efektivnímu využití AI a pevnému právnímu zázemí.">
     
+    <!-- Odkazy na jazykové verze pro SEO -->
+    <link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/index.html" />
+    <link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/index-en.html" />
+    <link rel="alternate" hreflang="hu" href="https://www.gabrielkozik.com/index-hu.html" />
+    <link rel="alternate" hreflang="x-default" href="https://www.gabrielkozik.com/index.html" />
+
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    
+    <!-- Zde by v budoucnu mohl být odkaz na CSS soubor -->
+    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
@@ -30,7 +40,7 @@
             line-height: 1.6;
             color: var(--text-color);
             background-color: var(--white);
-            padding-top: 70px; /* Zvětšená horní mezera pro pevné menu */
+            padding-top: 70px;
         }
 
         .container {
@@ -39,10 +49,9 @@
             padding: 20px;
         }
 
-        /* --- Navigace --- */
         .main-nav {
             background-color: var(--white);
-            padding: 15px 20px; /* Přidán padding do stran */
+            padding: 15px 20px;
             border-bottom: 1px solid var(--light-gray);
             position: fixed;
             top: 0;
@@ -79,14 +88,13 @@
             margin: 0 15px;
             font-size: 1.1em;
             transition: color 0.3s ease;
-            border-radius: 3px; /* Přidáno pro lepší vizualizaci focus stavu */
+            border-radius: 3px;
         }
 
         .nav-links a:hover {
             color: var(--secondary-color);
         }
 
-        /* --- Dropdown pro jazyky --- */
         .lang-switcher {
             position: relative;
             margin-left: 20px;
@@ -102,7 +110,7 @@
             padding: 5px;
             display: flex;
             align-items: center;
-            line-height: 1; /* Přidáno pro lepší vertikální centrování */
+            line-height: 1;
         }
 
         .lang-button .arrow {
@@ -150,19 +158,17 @@
             background-color: #e8f6f3;
         }
 
-
-        /* Vylepšení přístupnosti: Viditelný focus stav */
         a:focus, .cta-button:focus, .social-icon:focus, .lang-button:focus {
             outline: 3px solid var(--secondary-color);
             outline-offset: 2px;
         }
 
         .hamburger {
-            display: none; /* Skryto na desktopu */
+            display: none;
             cursor: pointer;
             flex-direction: column;
             gap: 5px;
-            padding: 5px; /* Zvětšení klikací plochy */
+            padding: 5px;
             border-radius: 3px;
         }
         
@@ -178,10 +184,8 @@
             transition: all 0.3s ease-in-out;
         }
 
-
-        /* --- Header / Hero Sekce --- */
         .hero {
-            background-image: linear-gradient(rgba(10, 35, 66, 0.6), rgba(10, 35, 66, 0.6)), url('Gemini_Generated_Image.png');
+            background-image: linear-gradient(rgba(10, 35, 66, 0.6), rgba(10, 35, 66, 0.6)), url('assets/images/uvodni-obrazek.jpg');
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
@@ -207,13 +211,11 @@
             text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
         }
 
-        /* --- Ostatní sekce --- */
         section { padding: 60px 20px; scroll-margin-top: 70px; }
         section:nth-child(even) { background-color: var(--light-gray); }
         .section-title { text-align: center; font-size: 2.5em; margin-bottom: 40px; color: var(--primary-color); }
         .section-subtitle { text-align: center; font-size: 1.2em; font-weight: 300; max-width: 700px; margin: -20px auto 40px auto; }
         
-        /* Skrytý nadpis pro přístupnost a SEO */
         .sr-only {
             position: absolute;
             width: 1px;
@@ -239,7 +241,6 @@
         .about-container { text-align: center; }
         .about-photo-circle { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; margin: 0 auto 30px auto; display: block; }
         
-        /* === STYLY PRO SEKCI PROJEKTŮ === */
         #aktivity { background-color: var(--light-gray); }
         .projects-layout { display: flex; flex-direction: column; align-items: center; gap: 30px; }
         .projects-grid { display: flex; justify-content: center; align-items: flex-start; gap: 50px; flex-wrap: wrap; text-align: center; }
@@ -275,7 +276,6 @@
         .social-icon svg { width: 30px; height: 30px; }
         .social-icon:hover { color: var(--secondary-color); transform: translateY(-3px); }
 
-        /* === STYLY PRO SEKCI AKCÍ === */
         .events-list {
             list-style: none;
             padding: 0;
@@ -285,10 +285,10 @@
 
         .events-list li {
             display: flex;
-            align-items: flex-start; /* Zarovnání nahoru */
+            align-items: flex-start;
             padding: 20px 0;
             border-bottom: 1px solid #ddd;
-            flex-wrap: wrap; /* Pro lepší zobrazení na mobilu */
+            flex-wrap: wrap;
             gap: 15px;
         }
 
@@ -301,8 +301,8 @@
             color: var(--secondary-color);
             font-size: 1.1em;
             flex-shrink: 0;
-            width: 100px; /* Pevná šířka pro zarovnání */
-            padding-top: 2px; /* Malé doladění pozice */
+            width: 100px;
+            padding-top: 2px;
         }
 
         .event-details {
@@ -322,16 +322,15 @@
         }
 
         .event-button {
-            padding: 8px 18px; /* Menší tlačítko než hlavní CTA */
+            padding: 8px 18px;
             font-size: 0.9em;
             flex-shrink: 0;
             margin-left: auto; 
         }
 
-        /* --- Responzivita --- */
         @media (max-width: 768px) {
             .nav-links-container {
-                display: none; /* Skryjeme původní menu */
+                display: none;
                 flex-direction: column;
                 width: 100%;
                 position: absolute;
@@ -342,7 +341,7 @@
             }
             
             .nav-links-container.active {
-                display: flex; /* Zobrazíme menu po kliknutí */
+                display: flex;
             }
 
             .nav-links {
@@ -362,14 +361,14 @@
                  text-align: center;
                  width: 100%;
                  margin-left: 0;
-                 position: static; /* Změna pozice pro mobilní menu */
+                 position: static;
             }
 
             .lang-dropdown {
-                position: static; /* Změna pro mobilní menu */
+                position: static;
                 box-shadow: none;
                 border-top: 1px solid var(--light-gray);
-                display: block; /* V mobilním menu je vždy viditelné */
+                display: block;
                 background-color: var(--light-gray);
             }
 
@@ -379,17 +378,17 @@
             }
             
             .hamburger {
-                display: flex; /* Zobrazíme hamburger ikonu */
+                display: flex;
             }
 
             .hero {
-                padding: 60px 20px; /* Menší odsazení na mobilu */
+                padding: 60px 20px;
             }
             .hero h1 {
-                font-size: 2.2em; /* Menší nadpis na mobilu */
+                font-size: 2.2em;
             }
             .hero p {
-                font-size: 1.1em; /* Menší podnadpis na mobilu */
+                font-size: 1.1em;
             }
             .section-title {
                 font-size: 2em;
@@ -398,7 +397,6 @@
             .social-icons-container { justify-content: center; }
         }
 
-        /* Úprava pro mobilní zařízení - sekce akcí */
         @media (max-width: 600px) {
             .events-list li {
                 flex-direction: column;
@@ -415,7 +413,7 @@
             .event-button {
                 width: 100%;
                 text-align: center;
-                margin-left: 0; /* Vynulování pro mobilní zobrazení */
+                margin-left: 0;
             }
         }
     </style>
@@ -456,8 +454,8 @@
                 </button>
                 <div class="lang-dropdown">
                     <a href="index.html" class="active">CZ</a>
-                    <a href="index_en.html">EN</a>
-                    <a href="index_hu.html">HU</a>
+                    <a href="index-en.html">EN</a>
+                    <a href="index-hu.html">HU</a>
                 </div>
             </div>
         </div>
@@ -519,7 +517,7 @@
         
         <section id="about">
             <div class="container about-container">
-                <img src="profilova-fotka.jpg" alt="Portrét Mgr. Gabriela Kožíka" class="about-photo-circle" loading="lazy">
+                <img src="assets/images/profilova-fotka.jpg" alt="Portrét Mgr. Gabriela Kožíka" class="about-photo-circle" loading="lazy">
                 <h2 class="section-title">O mně: Spojení dvou světů</h2>
                 <p>
                     Moje profesní cesta je logickým propojením dvou vášní: precizního světa práva a dynamického světa technologií. Jako advokát specializovaný na obchodní a technologické právo jsem vždy stál na straně inovátorů. Postupně jsem si uvědomil, že skutečná konkurenční výhoda nevzniká jen právní ochranou, ale aktivním využíváním technologií. Proto jsem se ponořil do oblasti umělé inteligence, abych svým klientům mohl nabídnout nejen jistotu, ale i katalyzátor pro jejich růst.
@@ -534,31 +532,31 @@
                     <div class="projects-grid">
                         <div class="project-item">
                             <a href="http://www.iustoria.cz" target="_blank" rel="noopener noreferrer">
-                                <img src="logo-iustoria_white.png" alt="Logo IUSTORIA, advokátní kancelář" loading="lazy">
+                                <img src="assets/images/logos/logo-iustoria_white.png" alt="Logo IUSTORIA, advokátní kancelář" loading="lazy">
                             </a>
                             <p>Zakládající partner advokátní kanceláře</p>
                         </div>
                         <div class="project-item">
                             <a href="https://www.pod-palavou.cz/klubova-setkani" target="_blank" rel="noopener noreferrer">
-                                <img src="logo-palava-horizons.png" alt="Logo Pálava Horizons" loading="lazy">
+                                <img src="assets/images/logos/logo-palava-horizons.png" alt="Logo Pálava Horizons" loading="lazy">
                             </a>
                             <p>Zakládající společník Pálava Horizons</p>
                         </div>
                         <div class="project-item">
                             <a href="https://www.facebook.com/profile.php?id=61561146905712" target="_blank" rel="noopener noreferrer">
-                                <img src="logo-bforb-tisnov.jpg" alt="Logo BforB Tišnov" loading="lazy">
+                                <img src="assets/images/logos/logo-bforb-tisnov.jpg" alt="Logo BforB Tišnov" loading="lazy">
                             </a>
                             <p>Moderátor networkingového klubu</p>
                         </div>
                         <div class="project-item">
                             <a href="https://klubpodnikavcu.cz/srazy-podnikavcu" target="_blank" rel="noopener noreferrer">
-                                <img src="logo-podnikavci.png" alt="Logo Klub Podnikavců" loading="lazy" style="filter: invert(1);">
+                                <img src="assets/images/logos/logo-podnikavci.png" alt="Logo Klub Podnikavců" loading="lazy" style="filter: invert(1);">
                             </a>
                             <p>Člen Klubu podnikavců Tišnov</p>
                         </div>
                         <div class="project-item">
                             <a href="https://www.smart-network.cz/" target="_blank" rel="noopener noreferrer">
-                                <img src="smart_network.png" alt="Logo Smart Network" loading="lazy">
+                                <img src="assets/images/logos/logo-smart-network.png" alt="Logo Smart Network" loading="lazy">
                             </a>
                             <p>Člen klubu Smart Network</p>
                         </div>
@@ -623,7 +621,7 @@
                 <h2 class="section-title">Aktuální workshop</h2>
                 <div class="workshop-container">
                     <a href="https://www.smsticket.cz/vstupenky/58981-gemini-a-dalsi-nastroje-od-google-prakticky-efektivne-advokatni-kancelar-iustoria-brno" target="_blank" rel="noopener noreferrer">
-                        <img src="workshop-ai-google.jpg" alt="Pozvánka na workshop Gemini | NotebookLM | Google AI Studio" loading="lazy">
+                        <img src="assets/images/workshop-ai-google.jpg" alt="Pozvánka na workshop Gemini | NotebookLM | Google AI Studio" loading="lazy">
                     </a>
                 </div>
             </div>
@@ -686,6 +684,8 @@
         </div>
     </footer>
     
+    <!-- Zde by v budoucnu mohl být odkaz na JS soubor -->
+    <!-- <script src="assets/js/script.js"></script> -->
     <script>
         // --- Hamburger Menu ---
         const hamburger = document.querySelector('.hamburger');
@@ -725,11 +725,10 @@
         }
 
         langButton.addEventListener('click', (e) => {
-            e.stopPropagation(); // Zabráníme, aby se hned zavřelo kvůli listeneru na window
+            e.stopPropagation();
             toggleLangDropdown();
         });
 
-        // Zavřít dropdown při kliknutí kamkoliv jinam
         window.addEventListener('click', (e) => {
             if (!langButton.contains(e.target) && langDropdown.style.display === 'block') {
                 toggleLangDropdown();
@@ -737,6 +736,6 @@
         });
 
     </script>
-        <script defer src="/_vercel/insights/script.js"></script>
+    <script src="/_vercel/insights/script.js"></script>
 </body>
 </html>

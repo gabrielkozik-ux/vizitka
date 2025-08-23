@@ -31,11 +31,8 @@
         .nav-links { display: flex; align-items: center; }
         .nav-links a { color: var(--primary-color); text-decoration: none; font-weight: bold; margin: 0 15px; font-size: 1.1em; transition: color 0.3s ease; }
         .nav-links a:hover { color: var(--secondary-color); }
-        .lang-switcher { margin-left: 20px; font-weight: bold; }
-        .lang-switcher a { color: var(--text-color); text-decoration: none; padding: 5px; }
-        .lang-switcher a.active { color: var(--secondary-color); text-decoration: underline; }
-        .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
-        .hamburger .bar { width: 25px; height: 3px; background-color: var(--primary-color); }
+        .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 5px; border-radius: 3px; }
+        .hamburger .bar { width: 25px; height: 3px; background-color: var(--primary-color); transition: all 0.3s ease-in-out; }
         .page-header { background-color: var(--light-gray); padding: 50px 20px; text-align: center; }
         .page-header h1 { font-size: 3em; color: var(--primary-color); margin: 0; }
         .blog-list { padding: 60px 20px; }
@@ -62,8 +59,21 @@
         .read-more-btn:hover { background-color: #238c76; }
         footer { background-color: var(--primary-color); color: var(--white); padding: 40px 20px; text-align: center; }
         .copyright { margin-top: 20px; font-size: 0.8em; }
+        
         @media (max-width: 768px) {
-            .nav-links-container { display: none; }
+            .nav-links-container {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                background-color: white;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            }
+            .nav-links-container.active { display: flex; }
+            .nav-links { flex-direction: column; width: 100%; }
+            .nav-links a { padding: 15px; text-align: center; width: 100%; border-bottom: 1px solid var(--light-gray); }
             .hamburger { display: flex; }
             .article-card { flex-direction: column; }
             .article-image { flex-basis: auto; height: 200px; }
@@ -73,13 +83,17 @@
 <body>
     <nav class="main-nav">
         <a href="index-en.html" class="nav-logo">Mgr. Gabriel Kožík</a>
-         <div class="nav-links-container">
+        <div class="hamburger" tabindex="0" role="button" aria-label="Open menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="nav-links-container">
             <div class="nav-links">
                 <a href="index-en.html">Main Page</a>
                 <a href="blog-en.html">Blog</a>
                 <a href="index-en.html#connect">Contact Me</a>
             </div>
-            
         </div>
     </nav>
 
@@ -92,8 +106,6 @@
 
     <main class="blog-list">
         <div class="container">
-
-            <!-- NEW WORKSHOP ARTICLE -->
             <article class="article-card">
                 <div class="article-image">
                     <img src="assets/images/blog/reportaz-workshop-srpen-2025/workshop22-8.jpg" alt="Participants of the AI workshop in Brno" loading="lazy">
@@ -105,8 +117,6 @@
                     <a href="blog/reportaz-workshop-srpen-2025/reportaz-workshop-srpen-2025-en.html" class="read-more-btn">Read the full article</a>
                 </div>
             </article>
-
-            <!-- ORIGINAL ARTICLE -->
             <article class="article-card">
                 <div class="article-image">
                     <img src="assets/images/blog/ai-v-byznysu-4-cesty/ai-v-byznysu-4-cesty.jpg" alt="Abstract visualization of data and artificial intelligence" loading="lazy">
@@ -118,8 +128,7 @@
                     <a href="blog/ai-v-byznysu/ai-v-byznysu-4-cesty-en.html" class="read-more-btn">Read the full article</a>
                 </div>
             </article>
-
-            </div>
+        </div>
     </main>
 
     <footer>
@@ -127,6 +136,33 @@
             <p class="copyright">&copy; 2025 Mgr. Gabriel Kožík. All rights reserved.</p>
         </div>
     </footer>
+    
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinksContainer = document.querySelector('.nav-links-container');
+
+        function toggleMenu() {
+            const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+            hamburger.setAttribute('aria-expanded', !isExpanded);
+            navLinksContainer.classList.toggle('active');
+        }
+
+        hamburger.addEventListener('click', toggleMenu);
+        hamburger.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                toggleMenu();
+            }
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinksContainer.classList.contains('active')) {
+                    navLinksContainer.classList.remove('active');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+    </script>
     <script src="/_vercel/insights/script.js"></script>
 </body>
 </html>

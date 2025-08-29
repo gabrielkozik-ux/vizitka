@@ -341,17 +341,6 @@
             }
         });
     </script>
-    <script>
-      window.va = window.va || function () { (window.va.q = window.va.q || []).push(arguments); };
-    </script>
-    <script defer src="/_vercel/analytics/script.js"></script>
-    <script>
-        // Zavolá inject funkci po načtení stránky
-        window.onload = function() {
-            if (window.va) {
-                window.va('inject');
-            }
-        };
-    </script>
+    <script src="/_vercel/insights/script.js"></script>
 </body>
 </html>

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advokát & AI Stratég pro Růst Podnikání | Mgr. Gabriel Kožík</title>
-    <meta name="description" content="Jsem advokát a AI stratég. Pomáhám podnikatelům a firmám inovovat bezpečněji a růst rychleji díky efektivnímu využití AI a pevnému právnímu zázemí.">
+    <title>Avocat & Stratège IA pour la Croissance des Entreprises | Mgr. Gabriel Kožík</title>
+    <meta name="description" content="Je suis avocat et stratège en IA. J'aide les entrepreneurs et les entreprises à innover de manière plus sûre et à croître plus rapidement grâce à une utilisation efficace de l'IA et à une solide base juridique.">
     <link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/index.html" />
     <link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/index-en.html" />
     <link rel="alternate" hreflang="hu" href="https://www.gabrielkozik.com/index-hu.html" />
@@ -36,6 +36,18 @@
         .calendar-button { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; background-color: var(--secondary-color); color: var(--white); border-radius: 5px; transition: all 0.3s ease; border: none; box-sizing: border-box; }
         .calendar-button:hover { background-color: #238c76; transform: translateY(-2px); }
         .calendar-button svg { width: 24px; height: 24px; }
+        .service-card-fr {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,.05);
+            border-top: 4px solid #3355A0; /* French blue */
+        }
+        .service-card-fr h3 {
+            color: #3355A0;
+            font-size: 1.8em;
+            margin-top: 0;
+        }
     </style>
 </head>
 <body>
@@ -43,36 +55,36 @@
     <svg width="0" height="0" style="position:absolute">
       <symbol id="icon-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11H9.3v9.09h3.58v-4.54c0-.77.25-1.21 1.25-1.21.97 0 1.25.44 1.25 1.21v4.54h3.57zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68zm1.78 9.94V9.6h-3.57v9.09h3.57z"/></symbol>
       <symbol id="icon-facebook" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.04c-5.5 0-10 4.49-10 10.02 0 5 3.66 9.15 8.44 9.9v-7.02h-2.54v-2.89h2.54V9.84c0-2.51 1.49-3.9 3.8-3.9 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.89h-2.33v7.02c4.78-.75 8.44-4.9 8.44-9.9C22 6.53 17.5 2.04 12 2.04z"/></symbol>
-      <symbol id="icon-youtube" viewBox="0 0 24 24"><path fill="currentColor" d="M10 15l5.2-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 5.1-.27 1.3-.9 2.05-1.88 2.32-.47.13-1.1.22-1.9.28-.8.07-1.49.1-2.09.1L15 20c-2.19 0-3.8-.16-5.1-.44-1.3-.27-2.05-.9-2.32-1.88-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L7 12c0-2.19.16-3.8.44-5.1.27-1.3.9-2.05 1.88-2.32.47-.13 1.1.22-1.9-.28.8-.07 1.49-.1 2.09-.1L12 4c2.19 0 3.8.16 5.1.44 1.3.27 2.05.9 2.32 1.88.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09l.69.83z"/></symbol>
+      <symbol id="icon-youtube" viewBox="0 0 24 24"><path fill="currentColor" d="M10 15l5.2-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 5.1-.27 1.3-.9 2.05-1.88 2.32-.47.13-1.1.22-1.9.28-.8.07-1.49.1-2.09.1L15 20c-2.19 0-3.8-.16-5.1-.44-1.3-.27-2.05-.9-2.32-1.88-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L7 12c0-2.19.16-3.8.44-5.1.27-1.3.9-2.05 1.88-2.32.A47.13 1.1.22-1.9-.28.8-.07 1.49-.1 2.09-.1L12 4c2.19 0 3.8.16 5.1.44 1.3.27 2.05.9 2.32 1.88.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09l.69.83z"/></symbol>
     </svg>
 
     <nav class="main-nav">
         <a href="#" class="nav-logo">Mgr. Gabriel Kožík</a>
-        <div class="hamburger" tabindex="0" role="button" aria-label="Otevřít menu">
+        <div class="hamburger" tabindex="0" role="button" aria-label="Ouvrir le menu">
             <div class="bar"></div><div class="bar"></div><div class="bar"></div>
         </div>
         <div class="nav-links-container">
             <div class="nav-links">
-                <a href="#about">O mně</a>
-                <a href="#services">Jak vám mohu pomoci</a>
+                <a href="#about">À propos de moi</a>
+                <a href="#services">Comment puis-je aider</a>
                 <div class="lang-switcher" style="margin-left: 0;">
-                    <button class="lang-button projekty-button" aria-haspopup="true" aria-expanded="false">Projekty <span class="arrow"></span></button>
+                    <button class="lang-button projekty-button" aria-haspopup="true" aria-expanded="false">Projets <span class="arrow"></span></button>
                     <div class="lang-dropdown projekty-dropdown" style="min-width: 220px;">
-                        <a href="#aktivity">Moje aktivity</a>
-                        <a href="#kde-se-potkat">Kde se můžeme potkat</a>
-                        <a href="#workshop">Aktuální AI workshop</a>
+                        <a href="#aktivity">Mes activités</a>
+                        <a href="#kde-se-potkat">Où nous rencontrer</a>
+                        <a href="#workshop">Atelier IA actuel</a>
                     </div>
                 </div>
                 <a href="blog.html">Blog</a>
-                <a href="#propojit">Kontaktujte mě</a>
+                <a href="#propojit">Contactez-moi</a>
             </div>
             <div class="lang-switcher">
-                <button class="lang-button lang-switcher-button" aria-haspopup="true" aria-expanded="false">CZ <span class="arrow"></span></button>
+                <button class="lang-button lang-switcher-button" aria-haspopup="true" aria-expanded="false">FR <span class="arrow"></span></button>
                 <div class="lang-dropdown lang-switcher-dropdown">
-                    <a href="index.html" class="active">CZ</a>
+                    <a href="index.html">CZ</a>
                     <a href="index-en.html">EN</a>
                     <a href="index-hu.html">HU</a>
-                    <a href="index-fr.html">FR</a>
+                    <a href="index-fr.html" class="active">FR</a>
                 </div>
             </div>
         </div>
@@ -80,96 +92,104 @@
 
     <header class="hero">
         <div class="container">
-            <h1>Právo pro budoucnost. Růst díky AI.</h1>
-            <p>Jsem advokát a AI stratég.<br>Pomáhám firmám s AI compliance v souladu s EU nařízením č. 2024/1689.<br>Pomáhám podnikatelům inovovat rychleji a bezpečněji.</p>
+            <h1>Le droit pour l'avenir. La croissance grâce à l'IA.</h1>
+            <p>Je suis avocat et stratège en IA.<br>J'aide les entreprises avec la conformité IA en accord avec le règlement UE n°2024/1689.<br>J'aide les entrepreneurs à innover plus rapidement et en toute sécurité.</p>
         </div>
     </header>
 
     <main>
         <section id="mission">
             <div class="container">
-                <h2 class="section-title">Moje mise</h2>
-                <blockquote>Mým posláním je transformovat AI compliance z regulatorní překážky na strategickou výhodu, která firmám umožňuje inovovat bezpečně a efektivně.</blockquote>
+                <h2 class="section-title">Ma mission</h2>
+                <blockquote>Ma mission est de transformer la conformité à l'IA d'un obstacle réglementaire en un avantage stratégique qui permet aux entreprises d'innover de manière sûre et efficace.</blockquote>
             </div>
         </section>
 
         <section id="services">
             <div class="container">
-                <h2 class="section-title">Jak vám mohu pomoci</h2>
+                <h2 class="section-title">Comment puis-je vous aider</h2>
                 <div class="services-grid">
                     <div class="service-card">
-                        <h3>Pilíř 1: AI Compliance & Governance</h3>
-                        <p>Pomáhám firmám zavést AI bezpečně a v souladu s evropskou legislativou (AI Act). Mým cílem je přeměnit regulatorní povinnosti na vaši konkurenční výhodu.</p>
-                        <h4>Strategie & implementace</h4>
+                        <h3>Pilier 1 : Conformité & Gouvernance IA</h3>
+                        <p>J'aide les entreprises à mettre en œuvre l'IA en toute sécurité et en conformité avec la législation européenne (AI Act). Mon objectif est de transformer les obligations réglementaires en votre avantage concurrentiel.</p>
+                        <h4>Stratégie & mise en œuvre</h4>
                         <ul>
-                            <li>Analýza rizik a dopadů (FRIA)</li>
-                            <li>Nastavení interních procesů a směrnic</li>
-                            <li>Školení zaměstnanců a managementu</li>
+                            <li>Analyse des risques et des impacts (FRIA)</li>
+                            <li>Mise en place de processus et de directives internes</li>
+                            <li>Formation des employés et du management</li>
                         </ul>
-                        <h4>Právní & technická jistota</h4>
+                        <h4>Sécurité juridique & technique</h4>
                         <ul>
-                            <li>Příprava na certifikaci dle AI Act</li>
-                            <li>Zajištění souladu s GDPR a dalšími předpisy</li>
-                            <li>Monitoring a reporting povinností</li>
+                            <li>Préparation à la certification selon l'AI Act</li>
+                            <li>Assurance de la conformité avec le RGPD et autres réglementations</li>
+                            <li>Suivi et reporting des obligations</li>
                         </ul>
                     </div>
                     <div class="service-card">
-                        <h3>Pilíř 2: Právní služby pro B2B</h3>
-                        <p>Poskytuji specializované právní poradenství, které chrání vaše inovace a podporuje zdravý růst.</p>
-                        <h4>Specializace</h4>
+                        <h3>Pilier 2 : Services juridiques pour B2B</h3>
+                        <p>Je fournis des conseils juridiques spécialisés qui protègent vos innovations et soutiennent une croissance saine.</p>
+                        <h4>Spécialisation</h4>
                         <ul>
-                            <li><strong>E-commerce:</strong> Právní jistota pro vaše online podnikání.</li>
-                            <li><strong>Duševní vlastnictví:</strong> Ochrana vaší značky, softwaru a kreativních děl.</li>
-                            <li><strong>Obchodní právo:</strong> Srozumitelné smlouvy, které minimalizují rizika.</li>
-                            <li><strong>Korporátní právo:</strong> Zakládání firem a korporátní agenda, akvizice a divestice.</li>
-                            <li><strong>Hospodářská soutěž:</strong> Ochrana a vymáhání práv v konkurenčním prostředí.</li>
-                            <li><strong>Pracovní právo:</strong> Nastavení pravidel pro využití AI na pracovišti.</li>
+                            <li><strong>E-commerce :</strong> Sécurité juridique pour votre commerce en ligne.</li>
+                            <li><strong>Propriété intellectuelle :</strong> Protection de votre marque, de vos logiciels et de vos œuvres créatives.</li>
+                            <li><strong>Droit commercial :</strong> Des contrats clairs qui minimisent les risques.</li>
+                            <li><strong>Droit des sociétés :</strong> Création d'entreprises et agenda d'entreprise, fusions et acquisitions.</li>
+                            <li><strong>Concurrence :</strong> Protection et application des droits dans un environnement concurrentiel.</li>
+                            <li><strong>Droit du travail :</strong> Définition des règles pour l'utilisation de l'IA sur le lieu de travail.</li>
                         </ul>
                     </div>
+                </div>
+                <div class="service-card-fr" style="margin-top: 40px;">
+                    <h3>Pilier 3 : Services juridiques pour les francophones</h3>
+                    <p>En tant que cabinet d'avocats, nous assistons les citoyens français et francophones dans la défense, l'exercice et le respect de leurs droits en droit privé et public. Nous intervenons principalement en matière de permis de séjour et de permis de travail, ainsi qu'en matière de délits et de droit pénal.</p>
+                    <p>Ce domaine est géré par notre avocat francophone <strong>Mgr. Jan Vytřísal</strong>, associé fondateur du cabinet, et la stagiaire juridique <strong>Nikola Schwarzová</strong>, tous deux diplômés du Lycée Matyáš Lerch à Brno avec une spécialisation en langue française.</p>
+                    <p>Si vous avez besoin de consulter une affaire juridique, vous pouvez contacter :<br>
+                    <strong>Tél :</strong> <a href="tel:+420777366857">+420 777 366 857</a> (Jan Vytřísal)<br>
+                    <strong>E-mail :</strong> <a href="mailto:vytrisal@iustoria.cz">vytrisal@iustoria.cz</a></p>
                 </div>
             </div>
         </section>
         
         <section id="about">
             <div class="container about-container">
-                <img src="assets/images/profilova-fotka.jpg" alt="Portrét Mgr. Gabriela Kožíka" class="about-photo-circle" loading="lazy">
-                <h2 class="section-title">O mně: Spojení dvou světů</h2>
-                <p>Moje profesní cesta je logickým propojením dvou vášní: precizního světa práva a dynamického světa technologií. Jako advokát specializovaný na obchodní a technologické právo jsem vždy stál na straně inovátorů. Postupně jsem si uvědomil, že skutečná konkurenční výhoda nevzniká jen právní ochranou, ale aktivním využíváním technologií. Proto jsem se ponořil do oblasti umělé inteligence, abych svým klientům mohl nabídnout nejen jistotu, ale i katalyzátor pro jejich růst.</p>
+                <img src="assets/images/profilova-fotka.jpg" alt="Portrait de Mgr. Gabriel Kožík" class="about-photo-circle" loading="lazy">
+                <h2 class="section-title">À propos de moi : L'union de deux mondes</h2>
+                <p>Mon parcours professionnel est le lien logique entre deux passions : le monde précis du droit et le monde dynamique de la technologie. En tant qu'avocat spécialisé en droit commercial et technologique, j'ai toujours été du côté des innovateurs. Progressivement, j'ai réalisé que le véritable avantage concurrentiel ne vient pas seulement de la protection juridique, mais de l'utilisation active des technologies. C'est pourquoi je me suis plongé dans le domaine de l'intelligence artificielle, afin d'offrir à mes clients non seulement la sécurité, mais aussi un catalyseur pour leur croissance.</p>
             </div>
         </section>
         
         <section id="aktivity">
             <div class="container">
-                <h2 class="section-title">Moje projekty a aktivity</h2>
+                <h2 class="section-title">Mes projets et activités</h2>
                 <div class="projects-layout">
                     <div class="projects-grid">
-                        <div class="project-item"><a href="http://www.iustoria.cz" target="_blank" rel="noopener noreferrer"><img src="assets/images/logos/logo-iustoria_white.png" alt="Logo IUSTORIA, advokátní kancelář" loading="lazy"></a><p>Zakládající partner advokátní kanceláře</p></div>
-                        <div class="project-item"><a href="https://www.pod-palavou.cz/klubova-setkani" target="_blank" rel="noopener noreferrer"><img src="assets/images/logos/logo-palava-horizons.png" alt="Logo Pálava Horizons" loading="lazy"></a><p>Zakládající společník Pálava Horizons</p></div>
-                        <div class="project-item"><a href="https://www.facebook.com/profile.php?id=61561146905712" target="_blank" rel="noopener noreferrer"><img src="assets/images/logos/logo-bforb-tisnov.jpg" alt="Logo BforB Tišnov" loading="lazy"></a><p>Moderátor networkingového klubu</p></div>
-                        <div class="project-item"><a href="https://klubpodnikavcu.cz/srazy-podnikavcu" target="_blank" rel="noopener noreferrer"><img src="assets/images/logos/logo-podnikavci.png" alt="Logo Klub Podnikavců" loading="lazy" style="filter:invert(1)"></a><p>Člen Klubu podnikavců Tišnov</p></div>
-                        <div class="project-item"><a href="https://www.smart-network.cz/" target="_blank" rel="noopener noreferrer"><img src="assets/images/logos/logo-smart-network.png" alt="Logo Smart Network" loading="lazy"></a><p>Člen klubu Smart Network</p></div>
+                        <div class="project-item"><a href="http://www.iustoria.cz" target="_blank" rel="noopener noreferrer"><img src="assets/images/logos/logo-iustoria_white.png" alt="Logo IUSTORIA, cabinet d'avocats" loading="lazy"></a><p>Associé fondateur d'un cabinet d'avocats</p></div>
+                        <div class="project-item"><a href="https://www.pod-palavou.cz/klubova-setkani" target="_blank" rel="noopener noreferrer"><img src="assets/images/logos/logo-palava-horizons.png" alt="Logo Pálava Horizons" loading="lazy"></a><p>Associé fondateur de Pálava Horizons</p></div>
+                        <div class="project-item"><a href="https://www.facebook.com/profile.php?id=61561146905712" target="_blank" rel="noopener noreferrer"><img src="assets/images/logos/logo-bforb-tisnov.jpg" alt="Logo BforB Tišnov" loading="lazy"></a><p>Modérateur d'un club de networking</p></div>
+                        <div class="project-item"><a href="https://klubpodnikavcu.cz/srazy-podnikavcu" target="_blank" rel="noopener noreferrer"><img src="assets/images/logos/logo-podnikavci.png" alt="Logo Klub Podnikavců" loading="lazy" style="filter:invert(1)"></a><p>Membre du Club des entrepreneurs de Tišnov</p></div>
+                        <div class="project-item"><a href="https://www.smart-network.cz/" target="_blank" rel="noopener noreferrer"><img src="assets/images/logos/logo-smart-network.png" alt="Logo Smart Network" loading="lazy"></a><p>Membre du club Smart Network</p></div>
                     </div>
                 </div>
             </div>
             
             <div id="kde-se-potkat" class="container" style="padding-top: 40px; border-top: 1px solid #e0e0e0; margin-top: 60px;">
-                <h2 class="section-title" style="font-size: 2.2em; margin-bottom: 20px;">Kde se můžeme potkat</h2>
+                 <h2 class="section-title" style="font-size: 2.2em; margin-bottom: 20px;">Où nous pouvons nous rencontrer</h2>
             
                 <div id="mastermind-akce" style="margin-bottom: 50px;">
-                    <h3 class="section-subtitle" style="font-size: 1.8em; font-weight: 700; color: var(--primary-color); margin-bottom: 15px; text-align: center;">Mastermind akce</h3>
+                    <h3 class="section-subtitle" style="font-size: 1.8em; font-weight: 700; color: var(--primary-color); margin-bottom: 15px; text-align: center;">Événements Mastermind</h3>
                     <ul class="events-list">
                         <li>
                             <div class="event-date-time">
-                                <span class="date">11. 9. 2025</span>
+                                <span class="date">11 sept. 2025</span>
                                 <span class="time">16:00 - 20:30</span>
                             </div>
                             <div class="event-details-new">
-                                <h4>Firemní kultura: Večer s Alveno</h4>
+                                <h4>Culture d'entreprise : Soirée avec Alveno</h4>
                                 <p>Alveno, Purkyňova 99, Brno</p>
                             </div>
                             <div class="event-actions">
-                                <a href="blog/firemni-kultura-alveno/firemni-kultura-alveno.html" class="cta-button event-button">Více info</a>
-                                <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Firemn%C3%AD%20kultura%3A%20Ve%C4%8Der%20s%20Alveno&dates=20250911T140000Z/20250911T183000Z&details=V%C3%ADce%20informac%C3%AD%20o%20akci%3A%20https%3A//www.gabrielkozik.com/blog/firemni-kultura-alveno/firemni-kultura-alveno.html&location=Alveno%2C%20Purky%C5%88ova%2099%2C%20Brno" target="_blank" class="calendar-button" aria-label="Přidat do kalendáře">
+                                <a href="blog/firemni-kultura-alveno/firemni-kultura-alveno-fr.html" class="cta-button event-button">Plus d'infos</a>
+                                <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Culture%20d'entreprise%20%3A%20Soir%C3%A9e%20avec%20Alveno&dates=20250911T140000Z/20250911T183000Z&details=Plus%20d'informations%20sur%20l'%C3%A9v%C3%A9nement%20%3A%20https%3A//www.gabrielkozik.com/blog/firemni-kultura-alveno/firemni-kultura-alveno-fr.html&location=Alveno%2C%20Purky%C5%88ova%2099%2C%20Brno" target="_blank" class="calendar-button" aria-label="Ajouter au calendrier">
                                     <svg><use xlink:href="#icon-calendar"></use></svg>
                                 </a>
                             </div>
@@ -178,100 +198,52 @@
                 </div>
             
                 <div id="networking-akce" style="margin-bottom: 50px;">
-                    <h3 class="section-subtitle" style="font-size: 1.8em; font-weight: 700; color: var(--primary-color); margin-bottom: 15px; text-align: center;">Networking a vzdělávací akce</h3>
+                    <h3 class="section-subtitle" style="font-size: 1.8em; font-weight: 700; color: var(--primary-color); margin-bottom: 15px; text-align: center;">Événements de networking et de formation</h3>
                     <ul class="events-list">
                         <li>
                             <div class="event-date-time">
-                                <span class="date">4. 9. 2025</span>
+                                <span class="date">4 sept. 2025</span>
                                 <span class="time">16:00 - 22:00</span>
                             </div>
                             <div class="event-details-new">
-                                <h4>Networkingová grilovačka BforB Tišnov</h4>
+                                <h4>Barbecue de networking BforB Tišnov</h4>
                                 <p>Café u Palce, Tišnov</p>
                             </div>
                             <div class="event-actions">
-                                <a href="https://www.facebook.com/profile.php?id=61561146905712" target="_blank" rel="noopener noreferrer" class="cta-button event-button">Více info</a>
-                                <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Networkingov%C3%A1%20grilova%C4%8Dka%20BforB%20Ti%C5%A1nov&dates=20250904T160000Z/20250904T190000Z&details=V%C3%ADce%20informac%C3%AD%20na%3A%20https%3A//www.facebook.com/profile.php?id%3D61561146905712&location=Caf%C3%A9%20u%20Palce%2C%20Ti%C5%A1nov" target="_blank" class="calendar-button" aria-label="Přidat do kalendáře">
+                                <a href="https://www.facebook.com/profile.php?id=61561146905712" target="_blank" rel="noopener noreferrer" class="cta-button event-button">Plus d'infos</a>
+                                <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Barbecue%20de%20networking%20BforB%20Ti%C5%A1nov&dates=20250904T160000Z/20250904T190000Z&details=Plus%20d'infos%20sur%20%3A%20https%3A//www.facebook.com/profile.php?id%3D61561146905712&location=Caf%C3%A9%20u%20Palce%2C%20Ti%C5%A1nov" target="_blank" class="calendar-button" aria-label="Ajouter au calendrier">
                                     <svg><use xlink:href="#icon-calendar"></use></svg>
                                 </a>
                             </div>
                         </li>
-                        <li>
+                         <li>
                             <div class="event-date-time">
-                                <span class="date">16. 9. 2025</span>
-                                <span class="time">09:00 - 12:00</span>
-                            </div>
-                            <div class="event-details-new">
-                                <h4>Networkingová snídaně Pod Pálavou</h4>
-                                <p>Krčma a hotel U Císařské cesty, Branišovice</p>
-                            </div>
-                            <div class="event-actions">
-                                <a href="#" class="cta-button event-button">Více info</a>
-                                 <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Networkingov%C3%A1%20sn%C3%ADdan%C4%9B%20Pod%20P%C3%A1lavou&dates=20250916T070000Z/20250916T100000Z&details=Informace%20o%20registraci%20budou%20dopln%C4%9Bny.&location=Kr%C4%8Dma%20a%20hotel%20U%20C%C3%ADsa%C5%99sk%C3%A9%20cesty%2C%20Brani%C5%A1ovice" target="_blank" class="calendar-button" aria-label="Přidat do kalendáře">
-                                    <svg><use xlink:href="#icon-calendar"></use></svg>
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                             <div class="event-date-time">
-                                <span class="date">16. 9. 2025</span>
+                                <span class="date">16 sept. 2025</span>
                                 <span class="time">17:30 - 19:30</span>
                             </div>
                              <div class="event-details-new">
-                                <h4>Networkingové setkání Klubu Podnikavců Tišnov</h4>
+                                <h4>Rencontre de networking du Club des Entrepreneurs de Tišnov</h4>
                                 <p>Café u Palce, Tišnov</p>
                             </div>
                              <div class="event-actions">
-                                <a href="https://klubpodnikavcu.cz/akce/sraz-podnikavcu-tisnov-25" target="_blank" rel="noopener noreferrer" class="cta-button event-button">Více info</a>
-                                 <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Networkingov%C3%A9%20setk%C3%A1n%C3%AD%20Klubu%20Podnikavc%C5%AF%20Ti%C5%A1nov&dates=20250916T160000Z/20250916T180000Z&details=V%C3%ADce%20informac%C3%AD%20na%3A%20https%3A//klubpodnikavcu.cz/akce/sraz-podnikavcu-tisnov-25&location=Caf%C3%A9%20u%20Palce%2C%20Ti%C5%A1nov" target="_blank" class="calendar-button" aria-label="Přidat do kalendáře">
+                                <a href="https://klubpodnikavcu.cz/akce/sraz-podnikavcu-tisnov-25" target="_blank" rel="noopener noreferrer" class="cta-button event-button">Plus d'infos</a>
+                                 <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Rencontre%20de%20networking%20du%20Club%20des%20Entrepreneurs%20de%20Ti%C5%A1nov&dates=20250916T160000Z/20250916T180000Z&details=Plus%20d'infos%20sur%20%3A%20https%3A//klubpodnikavcu.cz/akce/sraz-podnikavcu-tisnov-25&location=Caf%C3%A9%20u%20Palce%2C%20Ti%C5%A1nov" target="_blank" class="calendar-button" aria-label="Ajouter au calendrier">
                                     <svg><use xlink:href="#icon-calendar"></use></svg>
                                 </a>
                             </div>
                         </li>
                         <li>
                             <div class="event-date-time">
-                                <span class="date">17. 9. 2025</span>
-                                <span class="time">17:30 - 19:30</span>
-                            </div>
-                            <div class="event-details-new">
-                                <h4>Networkingové setkání Klubu Podnikavců Kuřim</h4>
-                                <p>MěKS, Kuřim</p>
-                            </div>
-                            <div class="event-actions">
-                                <a href="https://klubpodnikavcu.cz/akce/sraz-podnikavcu-kurim-3" target="_blank" rel="noopener noreferrer" class="cta-button event-button">Více info</a>
-                                <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Networkingov%C3%A9%20setk%C3%A1n%C3%AD%20Klubu%20Podnikavc%C5%AF%20Ku%C5%99im&dates=20250917T153000Z/20250917T173000Z&details=V%C3%ADce%20informac%C3%AD%20na%3A%20https%3A//klubpodnikavcu.cz/akce/sraz-podnikavcu-kurim-3&location=M%C4%9BKS%2C%20Ku%C5%99im" target="_blank" class="calendar-button" aria-label="Přidat do kalendáře">
-                                    <svg><use xlink:href="#icon-calendar"></use></svg>
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="event-date-time">
-                                <span class="date">19. 9. 2025</span>
-                                <span class="time">17:30 - 19:30</span>
-                            </div>
-                            <div class="event-details-new">
-                                <h4>Networkingový narozeninový večírek Smart Network</h4>
-                                <p>ABZAC centrum, Brno</p>
-                            </div>
-                            <div class="event-actions">
-                                <a href="https://www.smart-network.cz/akce/networkingovy-vecirek-patek-19092025-brno-oslava-12-narozenin" target="_blank" rel="noopener noreferrer" class="cta-button event-button">Více info</a>
-                                <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Networkingov%C3%BD%20narozeninov%C3%BD%20ve%C4%8D%C3%ADrek%20Smart%20Network&dates=20250919T153000Z/20250919T173000Z&details=V%C3%ADce%20informac%C3%AD%20na%3A%20https%3A//www.smart-network.cz/akce/networkingovy-vecirek-patek-19092025-brno-oslava-12-narozenin&location=ABZAC%20centrum%2C%20Brno" target="_blank" class="calendar-button" aria-label="Přidat do kalendáře">
-                                    <svg><use xlink:href="#icon-calendar"></use></svg>
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="event-date-time">
-                                <span class="date">9. 10. 2025</span>
+                                <span class="date">9 oct. 2025</span>
                                 <span class="time">09:00 - 17:00</span>
                             </div>
                             <div class="event-details-new">
-                                <h4>Týden inovací - seminář o AI complianci pro B2B</h4>
-                                <p>ČSOB Kampus Praha</p>
+                                <h4>Semaine de l'innovation - séminaire sur la conformité de l'IA pour le B2B</h4>
+                                <p>ČSOB Campus Prague</p>
                             </div>
                             <div class="event-actions">
-                                <a href="https://www.innovationweek.ai/cs" target="_blank" rel="noopener noreferrer" class="cta-button event-button">Více info</a>
-                                <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=T%C3%BDden%20inovac%C3%AD%20-%20semin%C3%A1%C5%99%20o%20AI%20complianci%20pro%20B2B&dates=20251009T070000Z/20251009T150000Z&details=V%C3%ADce%20informac%C3%AD%20na%3A%20https%3A//www.innovationweek.ai/cs&location=%C4%8CSOB%20Kampus%20Praha" target="_blank" class="calendar-button" aria-label="Přidat do kalendáře">
+                                <a href="https://www.innovationweek.ai/cs" target="_blank" rel="noopener noreferrer" class="cta-button event-button">Plus d'infos</a>
+                                <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Semaine%20de%20l'innovation%20-%20s%C3%A9minaire%20sur%20la%20conformit%C3%A9%20de%20l'IA%20pour%20le%20B2B&dates=20251009T070000Z/20251009T150000Z&details=Plus%20d'infos%20sur%20%3A%20https%3A//www.innovationweek.ai/cs&location=%C4%8CSOB%20Campus%20Prague" target="_blank" class="calendar-button" aria-label="Ajouter au calendrier">
                                     <svg><use xlink:href="#icon-calendar"></use></svg>
                                 </a>
                             </div>
@@ -280,20 +252,20 @@
                 </div>
             
                 <div id="pripravuji" style="padding-top: 30px; border-top: 1px dashed #ccc;">
-                    <h3 class="section-subtitle" style="font-size: 1.8em; font-weight: 700; color: var(--primary-color); margin-bottom: 15px; text-align: center;">Aktuální workshop</h3>
+                    <h3 class="section-subtitle" style="font-size: 1.8em; font-weight: 700; color: var(--primary-color); margin-bottom: 15px; text-align: center;">Atelier actuel</h3>
                     <ul class="events-list">
                         <li>
                             <div class="event-date-time">
-                                <span class="date">19. 9. 2025</span>
+                                <span class="date">19 sept. 2025</span>
                                 <span class="time">09:00 - 15:00</span>
                             </div>
                             <div class="event-details-new">
-                                <h4>Workshop na AI nástroje od Google</h4>
+                                <h4>Atelier sur les outils IA de Google</h4>
                                 <p>IUSTORIA, Slovákova 279, Brno</p>
                             </div>
                             <div class="event-actions">
-                                <a href="https://app.influon.cz/o/podpalavou/aUVXNjBJbzg3Z2JJVFpYamlKUWpTOUJXV1ZubmJEa0FTbFJMU0EyS0xCbFY0cEdRanBwU1V0ZGt1OUZsSTY5Rg==" target="_blank" rel="noopener noreferrer" class="cta-button event-button">Registrovat se</a>
-                                <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Workshop%20na%20AI%20n%C3%A1stroje%20od%20Google&dates=20250919T070000Z/20250919T130000Z&details=V%C3%ADce%20informac%C3%AD%20a%20registrace%20zde%3A%20https%3A//app.influon.cz/o/podpalavou/aUVXNjBJbzg3Z2JJVFpYamlKUWpTOUJXV1ZubmJEa0FTbFJMU0EyS0xCbFY0cEdRanBwU1V0ZGt1OUZsSTY5Rg%3D%3D&location=IUSTORIA%2C%20Slov%C3%A1kova%20279%2C%20Brno" target="_blank" class="calendar-button" aria-label="Přidat do kalendáře">
+                                <a href="https://app.influon.cz/o/podpalavou/aUVXNjBJbzg3Z2JJVFpYamlKUWpTOUJXV1ZubmJEa0FTbFJMU0EyS0xCbFY0cEdRanBwU1V0ZGt1OUZsSTY5Rg==" target="_blank" rel="noopener noreferrer" class="cta-button event-button">S'inscrire</a>
+                                <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Atelier%20sur%20les%20outils%20IA%20de%20Google&dates=20250919T070000Z/20250919T130000Z&details=Plus%20d'informations%20et%20inscription%20ici%20%3A%20https%3A//app.influon.cz/o/podpalavou/aUVXNjBJbzg3Z2JJVFpYamlKUWpTOUJXV1ZubmJEa0FTbFJMU0EyS0xCbFY0cEdRanBwU1V0ZGt1OUZsSTY5Rg%3D%3D&location=IUSTORIA%2C%20Slov%C3%A1kova%20279%2C%20Brno" target="_blank" class="calendar-button" aria-label="Ajouter au calendrier">
                                     <svg><use xlink:href="#icon-calendar"></use></svg>
                                 </a>
                             </div>
@@ -305,24 +277,24 @@
 
         <section id="workshop">
             <div class="container">
-                <h2 class="section-title">Aktuální workshop</h2>
+                <h2 class="section-title">Atelier actuel</h2>
                 <div class="workshop-container">
-                    <a href="https://app.influon.cz/o/podpalavou/aUVXNjBJbzg3Z2JJVFpYamlKUWpTOUJXV1ZubmJEa0FTbFJMU0EyS0xCbFY0cEdRanBwU1V0ZGt1OUZsSTY5Rg==" target="_blank" rel="noopener noreferrer"><img src="assets/images/workshop-ai-google.jpg" alt="Pozvánka na workshop Gemini | NotebookLM | Google AI Studio" loading="lazy"></a>
+                    <a href="https://app.influon.cz/o/podpalavou/aUVXNjBJbzg3Z2JJVFpYamlKUWpTOUJXV1ZubmJEa0FTbFJMU0EyS0xCbFY0cEdRanBwU1V0ZGt1OUZsSTY5Rg==" target="_blank" rel="noopener noreferrer"><img src="assets/images/workshop-ai-google.jpg" alt="Invitation à l'atelier Gemini | NotebookLM | Google AI Studio" loading="lazy"></a>
                 </div>
             </div>
         </section>
         
         <section id="propojit">
             <div class="container">
-                <h2 class="section-title">Pojďme se propojit</h2>
-                <p class="section-subtitle">Ať už potřebujete vyřešit komplexní právní problém, nebo chcete objevit potenciál AI pro vaše podnikání, jsem tu pro vás.</p>
+                <h2 class="section-title">Connectons-nous</h2>
+                <p class="section-subtitle">Que vous ayez besoin de résoudre un problème juridique complexe ou que vous souhaitiez découvrir le potentiel de l'IA pour votre entreprise, je suis là pour vous.</p>
                 <div class="cta-container">
                     <div class="cta-buttons">
-                        <a href="mailto:kozik@iustoria.cz" class="cta-button">Napište mi</a>
-                        <a href="tel:+420720265713" class="cta-button secondary">Zavolejte mi</a>
+                        <a href="mailto:kozik@iustoria.cz" class="cta-button">Envoyez-moi un e-mail</a>
+                        <a href="tel:+420720265713" class="cta-button secondary">Appelez-moi</a>
                     </div>
-                    <p class="booking-text">nebo si rezervujte online call</p>
-                    <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/kozik-iustoria/30min', text: 'Naplánovat online schůzku', color: '#2ca58d', textColor: '#ffffff', branding: true});return false;" class="cta-button">Naplánovat schůzku - Calendly</a>
+                    <p class="booking-text">ou réservez un appel en ligne</p>
+                    <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/kozik-iustoria/30min', text: 'Planifier une réunion en ligne', color: '#2ca58d', textColor: '#ffffff', branding: true});return false;" class="cta-button">Planifier une réunion - Calendly</a>
                 </div>
             </div>
         </section>
@@ -332,18 +304,18 @@
         <div class="footer-grid">
             <div>
                 <h4>Mgr. Gabriel Kožík</h4>
-                <p>Advokát & AI Stratég</p>
+                <p>Avocat & Stratège IA</p>
                 <div class="social-icons-container">
-                    <a href="https://www.linkedin.com/in/gabriel-kozik/" target="_blank" class="social-icon" aria-label="LinkedIn profil"><svg><use xlink:href="#icon-linkedin"></use></svg></a>
-                    <a href="https://www.facebook.com/somslovak" target="_blank" class="social-icon" aria-label="Facebook profil"><svg><use xlink:href="#icon-facebook"></use></svg></a>
-                    <a href="https://www.youtube.com/@gabriel-kozik" target="_blank" class="social-icon" aria-label="YouTube kanál"><svg><use xlink:href="#icon-youtube"></use></svg></a>
+                    <a href="https://www.linkedin.com/in/gabriel-kozik/" target="_blank" class="social-icon" aria-label="Profil LinkedIn"><svg><use xlink:href="#icon-linkedin"></use></svg></a>
+                    <a href="https://www.facebook.com/somslovak" target="_blank" class="social-icon" aria-label="Profil Facebook"><svg><use xlink:href="#icon-facebook"></use></svg></a>
+                    <a href="https://www.youtube.com/@gabriel-kozik" target="_blank" class="social-icon" aria-label="Chaîne YouTube"><svg><use xlink:href="#icon-youtube"></use></svg></a>
                 </div>
             </div>
-            <div><h4>Kontakt</h4><p>E-mail: <a href="mailto:kozik@iustoria.cz">kozik@iustoria.cz</a></p><p>Telefon: <a href="tel:+420720265713">+420 720 265 713</a></p><p>Datová schránka: eygwp2c</p></div>
-            <div><h4>Kancelář</h4><p>IUSTORIA, advokátní kancelář, s.r.o.</p><p>Slovákova 279/11, 602 00 Brno</p><p><a href="http://www.iustoria.cz" target="_blank">www.iustoria.cz</a></p></div>
-            <div><h4>Zápis v ČAK</h4><p>ev. č.: 19320</p><p>IČO (fyzická osoba): 05187559</p><p>společník s.r.o.</p></div>
+            <div><h4>Contact</h4><p>E-mail: <a href="mailto:kozik@iustoria.cz">kozik@iustoria.cz</a></p><p>Téléphone: <a href="tel:+420720265713">+420 720 265 713</a></p><p>Boîte de données: eygwp2c</p></div>
+            <div><h4>Bureau</h4><p>IUSTORIA, cabinet d'avocats, s.r.o.</p><p>Slovákova 279/11, 602 00 Brno</p><p><a href="http://www.iustoria.cz" target="_blank">www.iustoria.cz</a></p></div>
+            <div><h4>Inscription à l'Ordre des Avocats</h4><p>n° d'enr.: 19320</p><p>IČO (personne physique): 05187559</p><p>associé de s.r.o.</p></div>
         </div>
-        <div class="copyright"><p>&copy; 2025 Mgr. Gabriel Kožík. Všechna práva vyhrazena.</p></div>
+        <div class="copyright"><p>&copy; 2025 Mgr. Gabriel Kožík. Tous droits réservés.</p></div>
     </footer>
     
     <script>
@@ -357,7 +329,6 @@
         hamburger.addEventListener('click', toggleMenu);
         hamburger.addEventListener('keydown', e => { if (e.key === 'Enter') { toggleMenu(); } });
         
-        // Close mobile menu when a link is clicked
         document.querySelectorAll('.nav-links a, .projekty-dropdown a').forEach(link => {
             link.addEventListener('click', () => {
                 if (navLinksContainer.classList.contains('active')) {
@@ -367,7 +338,6 @@
             });
         });
 
-        // Language Dropdown
         const langButton = document.querySelector('.lang-switcher-button');
         const langDropdown = document.querySelector('.lang-switcher-dropdown');
         function toggleLangDropdown() {
@@ -378,7 +348,6 @@
         }
         langButton.addEventListener('click', e => { e.stopPropagation(); toggleLangDropdown(); });
         
-        // Projekty Dropdown
         const projektyButton = document.querySelector('.projekty-button');
         const projektyDropdown = document.querySelector('.projekty-dropdown');
         function toggleProjektyDropdown() {
@@ -389,7 +358,6 @@
         }
         projektyButton.addEventListener('click', e => { e.stopPropagation(); toggleProjektyDropdown(); });
 
-        // Close dropdowns when clicking outside
         window.addEventListener('click', e => {
             if (navLinksContainer.classList.contains('active') && !navLinksContainer.contains(e.target) && !hamburger.contains(e.target)) {
                 navLinksContainer.classList.remove('active');

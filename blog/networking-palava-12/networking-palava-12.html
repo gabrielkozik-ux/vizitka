@@ -232,7 +232,7 @@
         <div class="container">
             <article class="article-content">
                 <header class="article-header">
-                    <h1>Ohlédnutí za 12. setkáním Pod Pálavou: Tvoříme se navzájem</h1>
+                    <h1>Ohlédnutí za 12. setkáním klubu Pod Pálavou</h1>
                     <p class="article-meta">Publikováno: 3. září 2025 | Autor: Mgr. Gabriel Kožík</p>
                 </header>
                 
@@ -367,6 +367,19 @@
                 changeImage(1);
             }
         }
+
+        // Add keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (modal.style.display === "block") {
+                if (e.key === "ArrowLeft") {
+                    changeImage(-1);
+                } else if (e.key === "ArrowRight") {
+                    changeImage(1);
+                } else if (e.key === "Escape") {
+                    modal.style.display = "none";
+                }
+            }
+        });
     });
     </script>
     <script>

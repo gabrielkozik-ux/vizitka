@@ -125,6 +125,63 @@
         .calendar-button:hover {
             background-color: #dcdcdc;
         }
+        
+        /* Photo Gallery Styles */
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .gallery-thumbnail {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .gallery-thumbnail:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Modal (Lightbox) Styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 2000; /* Sit on top */
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.85);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90vh;
+            border-radius: 8px;
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+        }
 
     </style>
      <svg width="0" height="0" style="position:absolute">
@@ -147,7 +204,7 @@
         <div class="container">
             <article class="article-content">
                 <header class="article-header">
-                    <h1>Ohlédnutí za 12. setkáním klubu Pod Pálavou</h1>
+                    <h1>Ohlédnutí za 12. setkáním Pod Pálavou: Tvoříme se navzájem</h1>
                     <p class="article-meta">Publikováno: 3. září 2025 | Autor: Mgr. Gabriel Kožík</p>
                 </header>
                 
@@ -157,17 +214,30 @@
                 
                 <p>Tato myšlenka je podle ní základem skutečného networkingu. Nejde jen o předávání vizitek, ale o vzájemnou inspiraci v detailech – v tom, jak pracujeme, jak se prezentujeme nebo jak si děláme radost ze života. Právě tato ochota být si navzájem příkladem dává naší komunitě skutečnou hodnotu.</p>
 
-                <img src="../../assets/images/blog/networking-palava-12/4.jpg" alt="Gabriel Kožík mluví k účastníkům setkání Pod Pálavou" class="article-image-main" loading="lazy">
+                <img src="../../assets/images/blog/networking-palava-12/5.jpg" alt="Gabriel Kožík prezentuje na setkání Pod Pálavou" class="article-image-main" loading="lazy">
                 
                 <p>V duchu tohoto dialogu se neslo celé dopoledne. Veronika postupně dala slovo klíčovým členům, aby představili pilíře klubu. <a href="https://businessexcellence.cz/" target="_blank">Jiří Juránek</a> promluvil o naší misi a vizi, Gabriel Kožík představil etický kodex a <a href="https://www.kesat.cz/" target="_blank">Pavel Herman</a> se zamyslel nad propojením byznysu a přátelství. Prostor samozřejmě dostal každý z nás, abychom představili své firmy a projekty.</p>
 
                 <p>Místo klasických přednášek jsme se tentokrát ponořili do praktického workshopu. Gabriel Kožík nás provedl světem AI nástrojů a jejich reálným využitím v podnikání. O budoucí směřování se postaral <a href="https://habrtech.cz/" target="_blank">Tomáš Hampl</a>, který nás nalákal na atraktivní technologická vylepšení, která nás čekají na podzim.</p>
 
-                <img src="../../assets/images/blog/networking-palava-12/1.jpg" alt="Účastníci networkingu pozorně naslouchají" class="article-image-main" loading="lazy">
-
                 <p>Na závěr jsme si jako vždy dali slovo podruhé. Zpětnou vazbu formou Talk and Reflect vedl <a href="https://radekosicka.cz/" target="_blank">Radek Osička</a>, ale o tom, jak proběhla, si povíme zase příště. Děkujeme všem za dopoledne plné skvělých myšlenek a nových spojení.</p>
                 
                 <p>Na fotografiích od <a href="https://jirka-urban.cz/" target="_blank">Jirky Urbana</a> si můžete opět připomenout včerejší klubovou atmosféru.</p>
+
+                <div class="photo-gallery">
+                    <img src="../../assets/images/blog/networking-palava-12/1.jpg" alt="Fotka 1 z setkání Pod Pálavou" class="gallery-thumbnail">
+                    <img src="../../assets/images/blog/networking-palava-12/2.jpg" alt="Fotka 2 z setkání Pod Pálavou" class="gallery-thumbnail">
+                    <img src="../../assets/images/blog/networking-palava-12/3.jpg" alt="Fotka 3 z setkání Pod Pálavou" class="gallery-thumbnail">
+                    <img src="../../assets/images/blog/networking-palava-12/4.jpg" alt="Fotka 4 z setkání Pod Pálavou" class="gallery-thumbnail">
+                    <img src="../../assets/images/blog/networking-palava-12/5.jpg" alt="Fotka 5 z setkání Pod Pálavou" class="gallery-thumbnail">
+                    <img src="../../assets/images/blog/networking-palava-12/6.jpg" alt="Fotka 6 z setkání Pod Pálavou" class="gallery-thumbnail">
+                </div>
+
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                </div>
+
 
                 <div class="cta-section">
                     <h4>Přidejte se k nám příště!</h4>
@@ -198,6 +268,34 @@
             <p class="copyright">&copy; 2025 Mgr. Gabriel Kožík. Všechna práva vyhrazena.</p>
         </div>
     </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var modal = document.getElementById('myModal');
+        var modalImg = document.getElementById("img01");
+        var thumbnails = document.getElementsByClassName('gallery-thumbnail');
+        var span = document.getElementsByClassName("close")[0];
+
+        for (let i = 0; i < thumbnails.length; i++) {
+            thumbnails[i].onclick = function(){
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            }
+        }
+
+        if(span) {
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+        }
+
+        modal.onclick = function(event) {
+            // Check if the clicked element is the modal background itself, not the image
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+      });
+    </script>
     <script>
       window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>

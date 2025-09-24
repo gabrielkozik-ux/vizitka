@@ -24,12 +24,18 @@
             line-height: 1.7;
             color: var(--text-color);
             background-color: var(--white);
+			padding-top: 70px;
         }
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
         }
+		.main-nav{background-color:var(--white);padding:15px 20px;border-bottom:1px solid var(--light-gray);position:fixed;top:0;left:0;width:100%;z-index:1000;box-sizing:border-box;display:flex;justify-content:space-between;align-items:center}
+		.nav-logo{font-weight:700;color:var(--primary-color);text-decoration:none;font-size:1.2em}
+		.nav-links{display:flex;align-items:center}
+		.nav-links a{color:var(--primary-color);text-decoration:none;font-weight:700;margin:0 15px;font-size:1.1em;transition:color .3s ease}
+		.nav-links a:hover{color:var(--secondary-color)}
         .article-header {
             padding: 40px 20px;
             text-align: center;
@@ -128,6 +134,7 @@
         .copyright {
             font-size: 0.9em;
         }
+		.back-to-blog{display:inline-block;margin-top:40px;color:var(--secondary-color);text-decoration:none;font-weight:700}
 
         @media (max-width: 768px) {
             .article-header h1 {
@@ -137,6 +144,14 @@
     </style>
 </head>
 <body>
+    <nav class="main-nav">
+        <a href="../../index-en.html" class="nav-logo">Mgr. Gabriel Kožík</a>
+        <div class="nav-links">
+            <a href="../../index-en.html">Main Page</a>
+            <a href="../../blog-en.html">Blog</a>
+            <a href="../../index-en.html#connect">Contact Me</a>
+        </div>
+    </nav>
     <main>
         <div class="container">
             <article class="article-content">
@@ -147,7 +162,7 @@
 
                 <p>Artificial intelligence is no longer science fiction, but an everyday tool that helps companies innovate, automate, and grow. With great power, however, comes responsibility – and now, new rules. The European Union has introduced the world's first comprehensive regulation on artificial intelligence, known as the <strong>AI Act</strong>. What does this mean for you as an entrepreneur? It's not about slowing down innovation, but about setting clear boundaries for trustworthy and safe AI.</p>
                 
-                <img src="prezentace-ai.jpg" alt="Symbolic representation of law and artificial intelligence" class="article-image-main">
+                <img src="../../assets/images/blog/ai-act-byznys/prezentace-ai.jpg" alt="Symbolic representation of law and artificial intelligence" class="article-image-main">
 
                 <h2>The Main Principle: It's All About Risk</h2>
                 <p>The AI Act doesn't burden everyone equally. It introduces a smart, risk-based approach. Simply put, the greater the potential impact an AI system can have, the stricter the rules that apply to it. Systems are divided into four categories:</p>
@@ -184,6 +199,7 @@
                 <p>In the Czech Republic, the Ministry of Industry and Trade (MPO) in cooperation with the Czech Telecommunication Office (ČTÚ) will primarily oversee compliance with the rules. For companies that want to innovate, so-called regulatory sandboxes will also be available.</p>
                 
                 <p>For detailed information, you can review the full text of the <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689" target="_blank" rel="noopener noreferrer">EU Regulation No. 2024/1689 on Artificial Intelligence</a> or read the official <a href="https://eur-lex.europa.eu/EN/legal-content/summary/rules-for-trustworthy-artificial-intelligence-in-the-eu.html" target="_blank" rel="noopener noreferrer">summary of the AI Act on the EUR-Lex website</a>.</p>
+				<a href="../../blog-en.html" class="back-to-blog">← Back to all articles</a>
             </article>
         </div>
     </main>

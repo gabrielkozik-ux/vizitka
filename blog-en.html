@@ -27,7 +27,22 @@
         }
         .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
         .main-nav { background-color: var(--white); padding: 15px 20px; border-bottom: 1px solid var(--light-gray); position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; box-sizing: border-box; display: flex; justify-content: space-between; align-items: center; }
-        .nav-logo { font-weight: bold; color: var(--primary-color); text-decoration: none; font-size: 1.2em; }
+        .nav-logo { 
+            font-weight: bold; 
+            color: var(--primary-color); 
+            text-decoration: none; 
+            font-size: 1.2em; 
+            display: flex; 
+            align-items: center; 
+            gap: 12px; 
+        }
+        .nav-photo { 
+            width: 40px; 
+            height: 40px; 
+            border-radius: 50%; 
+            object-fit: cover; 
+            border: 2px solid var(--light-gray); 
+        }
         .nav-links-container { display: flex; align-items: center; }
         .nav-links { display: flex; align-items: center; }
         .nav-links a { color: var(--primary-color); text-decoration: none; font-weight: bold; margin: 0 15px; font-size: 1.1em; transition: color 0.3s ease; }
@@ -151,7 +166,10 @@
 </head>
 <body>
     <nav class="main-nav">
-        <a href="index-en.html" class="nav-logo">Mgr. Gabriel Kožík</a>
+        <a href="index-en.html" class="nav-logo">
+            <img src="assets/images/profilova-fotka.jpg" alt="Gabriel Kožík profile photo" class="nav-photo">
+            <span>Mgr. Gabriel Kožík</span>
+        </a>
         <div class="hamburger" tabindex="0" role="button" aria-label="Open menu">
             <div class="bar"></div>
             <div class="bar"></div>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportáž z AI workshopu (18. 7. 2025) | Mgr. Gabriel Kožík</title>
+    <meta name="description" content="Ohlédnutí za historicky prvním workshopem zaměřeným na praktické využití AI nástrojů od Google. Podívejte se, jaká byla atmosféra a co jsme probírali.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0a2342;
+            --secondary-color: #2ca58d;
+            --text-color: #333;
+            --light-gray: #f4f4f4;
+            --white: #ffffff;
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--white);
+            padding-top: 70px;
+        }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        .main-nav { background-color: var(--white); padding: 15px 20px; border-bottom: 1px solid var(--light-gray); position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; box-sizing: border-box; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { font-weight: bold; color: var(--primary-color); text-decoration: none; font-size: 1.2em; }
+        .nav-links { display: flex; align-items: center; }
+        .nav-links a { color: var(--primary-color); text-decoration: none; font-weight: bold; margin: 0 15px; font-size: 1.1em; transition: color 0.3s ease; }
+        .nav-links a:hover { color: var(--secondary-color); }
+        .hamburger { display: none; } /* Zjednodušení pro šablonu článku */
+
+        .article-header {
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        .article-header h1 {
+            font-size: 2.8em;
+            color: var(--primary-color);
+            margin: 0 0 10px 0;
+        }
+        .article-meta {
+            font-size: 0.9em;
+            color: #777;
+        }
+        .article-content {
+            padding: 40px 0;
+        }
+        .article-content p, .article-content li {
+            font-size: 1.1em;
+            line-height: 1.7;
+        }
+        .article-content h2 {
+            font-size: 1.8em;
+            color: var(--primary-color);
+            margin-top: 40px;
+        }
+        .article-content blockquote {
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 20px;
+            font-style: italic;
+            margin: 20px 0;
+            font-size: 1.2em;
+            background-color: #f9f9f9;
+            padding: 15px 20px;
+            border-radius: 0 5px 5px 0;
+        }
+        .article-image-main {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px 0 30px 0;
+        }
+        .cta-button { display: inline-block; background-color: var(--secondary-color); color: var(--white); padding: 10px 20px; text-decoration: none; font-weight: bold; border-radius: 5px; transition: background-color 0.3s ease; margin-top: 20px; }
+        .cta-button:hover { background-color: #238c76; }
+        .back-to-blog {
+            display: inline-block;
+            margin-top: 40px;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 177.77%; /* Pro poměr stran 9:16 (Reels) */
+            height: 0;
+            overflow: hidden;
+            max-width: 320px; /* Typická šířka pro mobilní video */
+            margin: 30px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        footer { background-color: var(--primary-color); color: var(--white); padding: 40px 20px; text-align: center; }
+        .copyright { margin-top: 20px; font-size: 0.8em; }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <a href="../../index.html" class="nav-logo">Mgr. Gabriel Kožík</a>
+        <div class="nav-links">
+            <a href="../../index.html">Úvodní stránka</a>
+            <a href="../../blog.html">Blog</a>
+            <a href="../../index.html#propojit">Kontaktujte mě</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <article class="article-content">
+                <header class="article-header">
+                    <h1>První AI workshop odstartoval! Skvělá parta a spousta objevů</h1>
+                    <p class="article-meta">Publikováno: 19. července 2025 | Autor: Mgr. Gabriel Kožík</p>
+                </header>
+                
+                <p>V pátek 18. července proběhl v mé brněnské kanceláři historicky první workshop zaměřený na praktické využití AI nástrojů od Google. Sešla se naprosto skvělá parta podnikatelů a freelancerů a atmosféra byla od začátku nabitá zvědavostí a chutí objevovat. Cílem bylo demystifikovat umělou inteligenci a ukázat si, jak nám může v reálném životě šetřit čas, peníze a nervy.</p>
+
+                <img src="../../assets/images/blog/reportaz-workshop-cervenec-2025/workshop18-7.jpg" alt="Účastníci prvního AI workshopu v Brně" class="article-image-main" loading="lazy">
+                
+                <h2>Co jsme se naučili?</h2>
+                <p>Prošli jsme si naprosté základy a ukázali si největší rozdíly mezi jednotlivými nástroji. Hlavní myšlenkou bylo pochopit, že AI není magie, ale silný pomocník, se kterým je třeba se naučit komunikovat.</p>
+                <ul>
+                    <li><strong>Co je a co není AI:</strong> Vysvětlili jsme si rozdíl mezi AI jako kreativním asistentem a běžným vyhledávačem. Rozebrali jsme, proč AI občas "halucinuje" a jak je důležité ověřovat fakta.</li>
+                    <li><strong>Gemini v praxi:</strong> Vyzkoušeli jsme si, jak s pomocí Gemini vytvořit obsah na sociální sítě, napsat e-mail nebo analyzovat jednoduchý text.</li>
+                    <li><strong>NotebookLM jako znalostní báze:</strong> Ukázali jsme si, jak si vytvořit vlastní soukromou databázi z dokumentů, smluv nebo podcastů, která vám odpoví přesně a bez výmyslů.</li>
+                    <li><strong>Bezpečnost na prvním místě:</strong> Zmínili jsme i rizika a ukázali si, proč nikdy nevkládat citlivá firemní data do veřejných verzí AI nástrojů.</li>
+                </ul>
+                
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/e1234567890" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <blockquote>Největší radost jsem měl z toho, když účastníkům došlo, že AI není jen pro "ajťáky". Když viděli, že si během pár minut dokáží připravit příspěvek, který by jim jinak trval hodinu, bylo to k nezaplacení.</blockquote>
+
+                <h2>Co bude dál?</h2>
+                <p>Obrovský zájem a pozitivní ohlasy mě utvrdily v tom, že tato série workshopů má smysl. První vlaštovka se povedla a já už teď připravuji pokračování.</p>
+                <p><strong>Nestihli jste to? Další termín se chystá už 22. srpna 2025.</strong> Pokud chcete zjistit, jak vám AI může usnadnit život, nenechte si ho ujít.</p>
+                
+                <a href="../reportaz-workshop-srpen-2025/reportaz-workshop-srpen-2025.html" class="cta-button">Chci se podívat na další workshop</a>
+
+                <a href="../../blog.html" class="back-to-blog">← Zpět na přehled článků</a>
+            </article>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p class="copyright">&copy; 2025 Mgr. Gabriel Kožík. Všechna práva vyhrazena.</p>
+        </div>
+    </footer>
+    <script src="/_vercel/insights/script.js"></script>
+</body>
+</html>
+```eof

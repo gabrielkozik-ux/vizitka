@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report from the AI Workshop (September 19, 2025) | Mgr. Gabriel Kožík</title>
+    <meta name="description" content="A look back at the workshop on September 19, where we delved into advanced techniques with Gemini, NotebookLM, and Google AI Studio.">
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0a2342;
+            --secondary-color: #2ca58d;
+            --text-color: #333;
+            --light-gray: #f4f4f4;
+            --white: #ffffff;
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--white);
+            padding-top: 70px;
+        }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        .main-nav { background-color: var(--white); padding: 15px 20px; border-bottom: 1px solid var(--light-gray); position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; box-sizing: border-box; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { font-weight: bold; color: var(--primary-color); text-decoration: none; font-size: 1.2em; }
+        .nav-links { display: flex; align-items: center; }
+        .nav-links a { color: var(--primary-color); text-decoration: none; font-weight: bold; margin: 0 15px; font-size: 1.1em; transition: color 0.3s ease; }
+        .nav-links a:hover { color: var(--secondary-color); }
+        .hamburger { display: none; }
+
+        .article-header {
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        .article-header h1 {
+            font-size: 2.8em;
+            color: var(--primary-color);
+            margin: 0 0 10px 0;
+        }
+        .article-meta {
+            font-size: 0.9em;
+            color: #777;
+        }
+        .article-content {
+            padding: 40px 0;
+        }
+        .article-content p, .article-content li {
+            font-size: 1.1em;
+            line-height: 1.7;
+        }
+        .article-content h2 {
+            font-size: 1.8em;
+            color: var(--primary-color);
+            margin-top: 40px;
+        }
+        .article-content blockquote {
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 20px;
+            font-style: italic;
+            margin: 20px 0;
+            font-size: 1.2em;
+            background-color: #f9f9f9;
+            padding: 15px 20px;
+            border-radius: 0 5px 5px 0;
+        }
+        .article-image-main {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px 0 30px 0;
+        }
+        .cta-button { display: inline-block; background-color: var(--secondary-color); color: var(--white); padding: 10px 20px; text-decoration: none; font-weight: bold; border-radius: 5px; transition: background-color 0.3s ease; margin-top: 20px; }
+        .cta-button:hover { background-color: #238c76; }
+        .back-to-blog {
+            display: inline-block;
+            margin-top: 40px;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer { background-color: var(--primary-color); color: var(--white); padding: 40px 20px; text-align: center; }
+        .copyright { margin-top: 20px; font-size: 0.8em; }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <a href="../../index-en.html" class="nav-logo">Mgr. Gabriel Kožík</a>
+        <div class="nav-links">
+            <a href="../../index-en.html">Main Page</a>
+            <a href="../../blog-en.html">Blog</a>
+            <a href="../../index-en.html#connect">Contact Me</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <article class="article-content">
+                <header class="article-header">
+                    <h1>A Deep Dive into AI: Report from the September Workshop</h1>
+                    <p class="article-meta">Published: September 20, 2025 | Author: Mgr. Gabriel Kožík</p>
+                </header>
+                
+                <p>On Friday, September 19, a great all-female group – Tereza, Kristýna, Martina, and Anna – gathered again to dive into the world of Google's AI tools. The goal was to build on the basics and explore more advanced techniques that push the boundaries of efficiency and creativity.</p>
+
+                <img src="../../assets/images/blog/reportaz-workshop-zari-2025/workshop19-9.jpg" alt="Participants of the September AI workshop in Brno" class="article-image-main" loading="lazy">
+                
+                <h2>From Basics to Advanced Strategies</h2>
+                <p>This time, we built on the fundamentals and went much deeper. The participants got to try out how to:</p>
+                <ul>
+                    <li>Explore <strong>advanced prompting techniques in Gemini</strong> to get more accurate and creative results.</li>
+                    <li><strong>Create and immediately host simple web pages</strong> with the help of AI, opening the door to rapid idea prototyping.</li>
+                    <li>Analyze <strong>NotebookLM</strong> in detail and its power for building a private, citable knowledge base. No more "hallucinations," only verified facts from your own sources.</li>
+                    <li>Introduce <strong>Google AI Studio</strong> as a new tool and its possibilities for working with data in real-time, for example, for live stream analysis.</li>
+                </ul>
+
+                <blockquote>I see the biggest shift when participants stop seeing AI as a "smarter Google" and start using it as a thinking partner. The September group was absolutely fantastic in this regard.</blockquote>
+
+                <h2>What's Next?</h2>
+                <p>The great energy and targeted questions confirmed that we are on the right track, and I will continue with the workshop series.</p>
+                <p><strong>Missed it? No problem! I am preparing the next date for October 2025.</strong> If you're interested, let me know so you don't miss out on a spot!</p>
+                
+                <a href="../../index-en.html#connect" class="cta-button">Notify me about the next date</a>
+
+                <a href="../../blog-en.html" class="back-to-blog">← Back to all articles</a>
+            </article>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p class="copyright">&copy; 2025 Mgr. Gabriel Kožík. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="/_vercel/insights/script.js"></script>
+</body>
+</html>

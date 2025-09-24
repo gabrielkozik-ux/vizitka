@@ -69,6 +69,63 @@
         .article-excerpt { margin-bottom: 20px; }
         .read-more-btn { display: inline-block; background-color: var(--secondary-color); color: var(--white); padding: 10px 20px; text-decoration: none; font-weight: bold; border-radius: 5px; transition: background-color 0.3s ease; }
         .read-more-btn:hover { background-color: #238c76; }
+        
+        /* Filter Styles */
+        .filter-container {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .filter-btn {
+            background-color: var(--light-gray);
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1em;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .filter-btn:hover {
+            background-color: #ddd;
+        }
+        .filter-btn.active {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* Pagination Styles */
+        .pagination-container {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--light-gray);
+        }
+        .pagination-container a {
+            color: var(--primary-color);
+            padding: 10px 18px;
+            text-decoration: none;
+            transition: background-color .3s, color .3s;
+            border: 1px solid #ddd;
+            margin: 0 4px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .pagination-container a.active {
+            background-color: var(--secondary-color);
+            color: white;
+            border-color: var(--secondary-color);
+            cursor: default;
+        }
+        .pagination-container a:hover:not(.active):not(.disabled) {
+            background-color: #f0f0f0;
+        }
+        .pagination-container a.disabled {
+            color: #ccc;
+            pointer-events: none;
+            border-color: #ccc;
+        }
+
         footer { background-color: var(--primary-color); color: var(--white); padding: 40px 20px; text-align: center; }
         .copyright { margin-top: 20px; font-size: 0.8em; }
         
@@ -118,59 +175,67 @@
 
     <main class="blog-list">
         <div class="container">
-            <article class="article-card">
-                <div class="article-image">
-                    <img src="assets/images/blog/firemni-kultura-alveno/firemni-kultura-alveno.jpg" alt="Invitation to an evening with Alveno about corporate culture" loading="lazy">
-                </div>
-                <div class="article-content">
-                    <p class="article-meta">Published: August 23, 2025 (Event Invitation)</p>
-                    <h2><a href="blog/firemni-kultura-alveno/firemni-kultura-alveno-en.html">Corporate Culture: An Evening with Alveno</a></h2>
-                    <p class="article-excerpt">We invite you to an exclusive event for business owners, C-level executives, and established entrepreneurs focused on building corporate culture as a strategic advantage. Panel discussions, workshops, and top-level networking await you.</p>
-                    <a href="blog/firemni-kultura-alveno/firemni-kultura-alveno-en.html" class="read-more-btn">Learn More & Register</a>
-                </div>
-            </article>
-            <article class="article-card">
-                <div class="article-image">
-                    <img src="assets/images/blog/reportaz-workshop-srpen-2025/workshop22-8.jpg" alt="Participants of the AI workshop in Brno" loading="lazy">
-                </div>
-                <div class="article-content">
-                    <p class="article-meta">Published: August 22, 2025</p>
-                    <h2><a href="blog/reportaz-workshop-srpen-2025/reportaz-workshop-srpen-2025-en.html">Another AI Workshop is a Wrap! See What We Covered</a></h2>
-                    <p class="article-excerpt">A look back at a successful workshop focused on the practical use of AI tools. Great atmosphere, lots of "aha" moments, and practical demonstrations of how artificial intelligence can genuinely save time and boost creativity.</p>
-                    <a href="blog/reportaz-workshop-srpen-2025/reportaz-workshop-srpen-2025-en.html" class="read-more-btn">Read the full article</a>
-                </div>
-            </article>
-            <article class="article-card">
-                <div class="article-image">
-                    <img src="assets/images/blog/reportaz-workshop-cervenec-2025/workshop18-7.jpg" alt="Participants of the first AI workshop in Brno" loading="lazy">
-                </div>
-                <div class="article-content">
-                    <p class="article-meta">Published: July 19, 2025</p>
-                    <h2><a href="blog/reportaz-workshop-cervenec-2025/reportaz-workshop-cervenec-2025-en.html">The First AI Workshop Kicked Off! A Great Group and Lots of Discoveries</a></h2>
-                    <p class="article-excerpt">A look back at the very first workshop focused on the practical use of AI tools. Great atmosphere, demystifying AI, and first steps with Gemini and NotebookLM.</p>
-                    <a href="blog/reportaz-workshop-cervenec-2025/reportaz-workshop-cervenec-2025-en.html" class="read-more-btn">Read the full article</a>
-                </div>
-            </article>
-            <article class="article-card">
-                <div class="article-image">
-                    <img src="assets/images/blog/ai-v-byznysu-4-cesty/ai-v-byznysu-4-cesty.jpg" alt="Abstract visualization of data and artificial intelligence" loading="lazy">
-                </div>
-                <div class="article-content">
-                    <h2><a href="blog/ai-v-byznysu/ai-v-byznysu-4-cesty-en.html">AI in Business: 4 Ways Your Company Data Is Leaking Unknowingly</a></h2>
-                    <p class="article-excerpt">Using AI tools has become a common part of business practice. However, many are unaware of the risks associated with protecting sensitive data. Let's look at the four most common scenarios where leaks can occur and how to prevent them.</p>
-                    <a href="blog/ai-v-byznysu/ai-v-byznysu-4-cesty-en.html" class="read-more-btn">Read the full article</a>
-                </div>
-            </article>
-            <article class="article-card">
-    <div class="article-image">
-        <img src="assets/images/blog/ai-act-byznys/prezentace-ai.jpg" alt="Symbolic representation of law and artificial intelligence" loading="lazy">
-    </div>
-    <div class="article-content">
-        <h2><a href="blog/ai-act-byznys/ai-act-byznys-en.html">AI Regulation in Business: Are You Ready for the AI Act?</a></h2>
-        <p class="article-excerpt">Artificial intelligence is no longer sci-fi, but an everyday tool that helps companies innovate, automate, and grow. With great power comes great responsibility – and now, new rules.</p>
-        <a href="blog/ai-act-byznys/ai-act-byznys-en.html" class="read-more-btn">Read the full article</a>
-    </div>
-</article>
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="expert">Expert Articles</button>
+                <button class="filter-btn" data-filter="report">Event Reports</button>
+            </div>
+            <div id="articles-container">
+                <article class="article-card" data-category="report">
+                    <div class="article-image">
+                        <img src="assets/images/blog/firemni-kultura-alveno/firemni-kultura-alveno.jpg" alt="Invitation to an evening with Alveno about corporate culture" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <p class="article-meta">Published: August 23, 2025 (Event Invitation)</p>
+                        <h2><a href="blog/firemni-kultura-alveno/firemni-kultura-alveno-en.html">Corporate Culture: An Evening with Alveno</a></h2>
+                        <p class="article-excerpt">We invite you to an exclusive event for business owners, C-level executives, and established entrepreneurs focused on building corporate culture as a strategic advantage. Panel discussions, workshops, and top-level networking await you.</p>
+                        <a href="blog/firemni-kultura-alveno/firemni-kultura-alveno-en.html" class="read-more-btn">Learn More & Register</a>
+                    </div>
+                </article>
+                <article class="article-card" data-category="report">
+                    <div class="article-image">
+                        <img src="assets/images/blog/reportaz-workshop-srpen-2025/workshop22-8.jpg" alt="Participants of the AI workshop in Brno" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <p class="article-meta">Published: August 22, 2025</p>
+                        <h2><a href="blog/reportaz-workshop-srpen-2025/reportaz-workshop-srpen-2025-en.html">Another AI Workshop is a Wrap! See What We Covered</a></h2>
+                        <p class="article-excerpt">A look back at a successful workshop focused on the practical use of AI tools. Great atmosphere, lots of "aha" moments, and practical demonstrations of how artificial intelligence can genuinely save time and boost creativity.</p>
+                        <a href="blog/reportaz-workshop-srpen-2025/reportaz-workshop-srpen-2025-en.html" class="read-more-btn">Read the full article</a>
+                    </div>
+                </article>
+                <article class="article-card" data-category="report">
+                    <div class="article-image">
+                        <img src="assets/images/blog/reportaz-workshop-cervenec-2025/workshop18-7.jpg" alt="Participants of the first AI workshop in Brno" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <p class="article-meta">Published: July 19, 2025</p>
+                        <h2><a href="blog/reportaz-workshop-cervenec-2025/reportaz-workshop-cervenec-2025-en.html">The First AI Workshop Kicked Off! A Great Group and Lots of Discoveries</a></h2>
+                        <p class="article-excerpt">A look back at the very first workshop focused on the practical use of AI tools. Great atmosphere, demystifying AI, and first steps with Gemini and NotebookLM.</p>
+                        <a href="blog/reportaz-workshop-cervenec-2025/reportaz-workshop-cervenec-2025-en.html" class="read-more-btn">Read the full article</a>
+                    </div>
+                </article>
+                <article class="article-card" data-category="expert">
+                    <div class="article-image">
+                        <img src="assets/images/blog/ai-v-byznysu-4-cesty/ai-v-byznysu-4-cesty.jpg" alt="Abstract visualization of data and artificial intelligence" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <h2><a href="blog/ai-v-byznysu/ai-v-byznysu-4-cesty-en.html">AI in Business: 4 Ways Your Company Data Is Leaking Unknowingly</a></h2>
+                        <p class="article-excerpt">Using AI tools has become a common part of business practice. However, many are unaware of the risks associated with protecting sensitive data. Let's look at the four most common scenarios where leaks can occur and how to prevent them.</p>
+                        <a href="blog/ai-v-byznysu/ai-v-byznysu-4-cesty-en.html" class="read-more-btn">Read the full article</a>
+                    </div>
+                </article>
+                <article class="article-card" data-category="expert">
+                    <div class="article-image">
+                        <img src="assets/images/blog/ai-act-byznys/prezentace-ai.jpg" alt="Symbolic representation of law and artificial intelligence" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <h2><a href="blog/ai-act-byznys/ai-act-byznys-en.html">AI Regulation in Business: Are You Ready for the AI Act?</a></h2>
+                        <p class="article-excerpt">Artificial intelligence is no longer sci-fi, but an everyday tool that helps companies innovate, automate, and grow. With great power comes great responsibility – and now, new rules.</p>
+                        <a href="blog/ai-act-byznys/ai-act-byznys-en.html" class="read-more-btn">Read the full article</a>
+                    </div>
+                </article>
+            </div>
+            <div class="pagination-container"></div>
         </div>
     </main>
 
@@ -181,6 +246,7 @@
     </footer>
     
     <script>
+        // Hamburger menu logic
         const hamburger = document.querySelector('.hamburger');
         const navLinksContainer = document.querySelector('.nav-links-container');
 
@@ -204,6 +270,112 @@
                     hamburger.setAttribute('aria-expanded', 'false');
                 }
             });
+        });
+        
+        // Filter and Pagination logic
+        document.addEventListener('DOMContentLoaded', function () {
+            const articlesContainer = document.getElementById('articles-container');
+            const allArticles = Array.from(articlesContainer.getElementsByClassName('article-card'));
+            const paginationContainer = document.querySelector('.pagination-container');
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            
+            const articlesPerPage = 4;
+            let currentFilter = 'all';
+            
+            function getFilteredArticles() {
+                if (currentFilter === 'all') {
+                    return allArticles;
+                }
+                return allArticles.filter(article => article.dataset.category === currentFilter);
+            }
+
+            function displayPage(page, articles) {
+                const startIndex = (page - 1) * articlesPerPage;
+                const endIndex = startIndex + articlesPerPage;
+
+                // First, hide all articles, then show only the relevant ones
+                allArticles.forEach(article => article.style.display = 'none');
+                
+                const articlesToShow = articles.slice(startIndex, endIndex);
+                articlesToShow.forEach(article => {
+                    article.style.display = 'flex';
+                     // For smaller screens, we need to adjust display property
+                    if (window.innerWidth <= 768) {
+                        article.style.display = 'flex'; // It's flex on mobile too, but direction is column
+                    }
+                });
+                
+                setupPaginationButtons(page, articles);
+                window.scrollTo(0, 0);
+            }
+
+            function setupPaginationButtons(currentPage, articles) {
+                paginationContainer.innerHTML = '';
+                const totalPages = Math.ceil(articles.length / articlesPerPage);
+
+                 if (totalPages <= 1) {
+                    paginationContainer.style.display = 'none';
+                    return;
+                }
+                paginationContainer.style.display = 'block';
+
+                // Previous button
+                const prevButton = document.createElement('a');
+                prevButton.href = '#';
+                prevButton.innerHTML = '&laquo; Previous';
+                if (currentPage === 1) {
+                    prevButton.classList.add('disabled');
+                }
+                prevButton.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (currentPage > 1) {
+                        displayPage(currentPage - 1, articles);
+                    }
+                });
+                paginationContainer.appendChild(prevButton);
+
+                // Page number buttons
+                for (let i = 1; i <= totalPages; i++) {
+                    const pageButton = document.createElement('a');
+                    pageButton.href = '#';
+                    pageButton.innerText = i;
+                    if (i === currentPage) {
+                        pageButton.classList.add('active');
+                    }
+                    pageButton.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        displayPage(i, articles);
+                    });
+                    paginationContainer.appendChild(pageButton);
+                }
+
+                // Next button
+                const nextButton = document.createElement('a');
+                nextButton.href = '#';
+                nextButton.innerHTML = 'Next &raquo;';
+                if (currentPage === totalPages) {
+                    nextButton.classList.add('disabled');
+                }
+                nextButton.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (currentPage < totalPages) {
+                        displayPage(currentPage + 1, articles);
+                    }
+                });
+                paginationContainer.appendChild(nextButton);
+            }
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    currentFilter = this.dataset.filter;
+                    displayPage(1, getFilteredArticles());
+                });
+            });
+
+            // Initial setup
+            displayPage(1, getFilteredArticles());
         });
     </script>
     <script>

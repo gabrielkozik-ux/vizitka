@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regulace AI v byznysu: Jste připraveni na AI Act?</title>
+    <meta name="description" content="Stručný průvodce novou evropskou regulací AI (AI Act) pro české podnikatele. Zjistěte, co pro vás znamená a jaké jsou vaše klíčové povinnosti.">
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/ai-act-byznys/ai-act-byznys.html" />
+    <link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/ai-act-byznys/ai-act-byznys-en.html" />
+    <link rel="alternate" hreflang="x-default" href="https://www.gabrielkozik.com/blog/ai-act-byznys/ai-act-byznys.html" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0a2342;
+            --secondary-color: #2ca58d;
+            --text-color: #333;
+            --light-gray: #f4f4f4;
+            --white: #ffffff;
+            --border-radius: 8px;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: var(--white);
+ 			padding-top: 70px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+		.main-nav{background-color:var(--white);padding:15px 20px;border-bottom:1px solid var(--light-gray);position:fixed;top:0;left:0;width:100%;z-index:1000;box-sizing:border-box;display:flex;justify-content:space-between;align-items:center}
+		.nav-logo{font-weight:700;color:var(--primary-color);text-decoration:none;font-size:1.2em}
+		.nav-links{display:flex;align-items:center}
+		.nav-links a{color:var(--primary-color);text-decoration:none;font-weight:700;margin:0 15px;font-size:1.1em;transition:color .3s ease}
+		.nav-links a:hover{color:var(--secondary-color)}
+        .article-header {
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--light-gray);
+            margin-bottom: 30px;
+        }
+        .article-header h1 {
+            font-size: 2.8em;
+            color: var(--primary-color);
+            margin: 0 0 10px 0;
+            line-height: 1.2;
+        }
+        .article-header .subtitle {
+            font-size: 1.2em;
+            color: #666;
+            font-weight: 300;
+        }
+        .article-content {
+            padding: 0 10px;
+        }
+        .article-content p, .article-content li {
+            font-size: 1.1em;
+        }
+        .article-content a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+        .article-content a:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+        .article-content h2 {
+            font-size: 2em;
+            color: var(--primary-color);
+            margin-top: 50px;
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 10px;
+        }
+        .article-content h3 {
+            font-size: 1.5em;
+            color: var(--primary-color);
+            margin-top: 30px;
+        }
+        .article-content blockquote {
+            border-left: 5px solid var(--secondary-color);
+            padding: 15px 25px;
+            font-style: italic;
+            margin: 30px 0;
+            font-size: 1.2em;
+            background-color: var(--light-gray);
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+        .article-image-main {
+            width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
+            margin: 10px 0 40px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        li {
+            padding-left: 1.5em;
+            position: relative;
+            margin-bottom: 10px;
+        }
+        li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+        .important-box {
+            background-color: #e8f6f3;
+            border: 2px solid var(--secondary-color);
+            padding: 20px;
+            margin: 40px 0;
+            border-radius: var(--border-radius);
+        }
+        .important-box h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+        .copyright {
+            font-size: 0.9em;
+        }
+		.back-to-blog{display:inline-block;margin-top:40px;color:var(--secondary-color);text-decoration:none;font-weight:700}
+
+        @media (max-width: 768px) {
+            .article-header h1 {
+                font-size: 2.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <a href="../../index.html" class="nav-logo">Mgr. Gabriel Kožík</a>
+        <div class="nav-links">
+            <a href="../../index.html">Úvodní stránka</a>
+            <a href="../../blog.html">Blog</a>
+            <a href="../../index.html#propojit">Kontaktujte mě</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <article class="article-content">
+                <header class="article-header">
+                    <h1>Regulace AI v byznysu: Jste připraveni na AI Act?</h1>
+                    <p class="subtitle">Stručný průvodce pro české podnikatele</p>
+                </header>
+
+                <p>Umělá inteligence už není sci-fi, ale každodenní nástroj, který pomáhá firmám inovovat, automatizovat a růst. S velkou mocí ale přichází i odpovědnost – a teď i nová pravidla. Evropská unie zavedla první komplexní regulaci umělé inteligence na světě, známou jako <strong>AI Act</strong>. Co to pro vás jako podnikatele v Česku znamená? Nejde o brzdu inovací, ale o nastavení jasných mantinelů pro důvěryhodnou a bezpečnou AI.</p>
+                
+                <img src="../../assets/images/blog/ai-act-byznys/prezentace-ai.jpg" alt="Symbolické znázornění práva a umělé inteligence" class="article-image-main" loading="lazy">
+
+                <h2>Hlavní princip: Vše se točí kolem rizika</h2>
+                <p>AI Act nezatěžuje všechny stejně. Zavádí chytrý přístup založený na míře rizika. Jednoduše řečeno, čím větší potenciální dopad může AI mít, tím přísnější pravidla pro ni platí. Systémy se dělí do čtyř kategorií:</p>
+                
+                <h3>1. Zakázané AI (Nepřijatelné riziko)</h3>
+                <p>Sem patří praktiky, které jsou v přímém rozporu s hodnotami EU. Například systémy pro sociální skórování občanů, podprahová manipulace nebo cílené zneužívání zranitelných skupin. Tyto systémy je zakázáno vyvíjet, používat i uvádět na trh.</p>
+
+                <h3>2. Vysoce rizikové AI</h3>
+                <p>Týká se to hlavně citlivých oblastí, jako je personalistika (AI pro nábor a hodnocení zaměstnanců), hodnocení úvěruschopnosti, kritická infrastruktura nebo zdravotnictví. Pokud takový systém nasazujete, máte řadu povinností, jako je zajištění lidského dohledu, monitoringu a vedení záznamů.</p>
+
+                <h3>3. AI s omezeným rizikem</h3>
+                <p>Zde spadá většina nástrojů, které dnes firmy běžně používají – od chatbotů po generátory obsahu. Hlavním a zásadním požadavkem je <strong>transparentnost</strong>.</p>
+
+                <h3>4. AI s minimálním rizikem</h3>
+                <p>Spamové filtry, AI ve videohrách, jednoduché systémy doporučení... zde AI Act žádné nové povinnosti nestanovuje. Většina vašich současných nástrojů pravděpodobně spadá sem.</p>
+                
+                <h2>Co to znamená pro vaši firmu v praxi?</h2>
+                <p>Pro většinu podnikatelů, kteří AI využívají pro marketing, komunikaci nebo interní procesy, plynou z AI Actu hlavně dvě klíčové povinnosti, které se týkají systémů s omezeným rizikem:</p>
+                <ul>
+                    <li><strong>Buďte transparentní:</strong> Pokud máte na webu chatbota, musíte uživatele srozumitelně informovat, že komunikují s umělou inteligencí.</li>
+                    <li><strong>Označujte AI obsah:</strong> Vytváříte marketingové texty, obrázky nebo videa pomocí AI? Musíte je označit tak, aby bylo zřejmé, že obsah byl uměle vygenerován nebo upraven. To platí dvojnásob pro takzvané "deepfakes".</li>
+                </ul>
+
+                <blockquote>I když používáte nástroj od třetí strany, jako zavádějící subjekt (deployer) nesete odpovědnost za jeho správné a bezpečné použití. Proto je klíčové prověřovat dodavatele a pečlivě číst smluvní podmínky.</blockquote>
+                
+                <div class="important-box">
+                    <h3>Nezapomínejte na staré známé</h3>
+                    <p>AI Act funguje vedle stávající legislativy. Stále musíte důsledně dodržovat <strong>GDPR</strong>, pokud AI zpracovává osobní údaje, a dávat si pozor na <strong>autorské právo</strong>. Výtvor čistě od AI pravděpodobně nebude chráněn autorským právem, a tak ho může kdokoli zkopírovat.</p>
+                </div>
+
+                <h2>Závěr: Nebojte se, ale připravte se</h2>
+                <p>Regulace AI není strašák, ale příležitost, jak budovat důvěru u zákazníků a partnerů. Proaktivní přístup se vám vyplatí. Začněte tím, že si zmapujete, kde a jak AI ve firmě používáte, proškolíte zaměstnance o základních rizicích a nastavíte si jednoduchá interní pravidla pro transparentnost.</p>
+
+                <p>V České republice bude na dodržování pravidel dohlížet hlavně Ministerstvo průmyslu a obchodu (MPO) ve spolupráci s Českým telekomunikačním úřadem (ČTÚ). Pro firmy, které chtějí inovovat, budou k dispozici i tzv. regulatorní sandboxy.</p>
+                
+                <p>Pro detailní informace si můžete projít plné znění <a href="https://eur-lex.europa.eu/legal-content/CS/TXT/HTML/?uri=OJ:L_202401689" target="_blank" rel="noopener noreferrer">Nařízení EU č. 2024/1689 o umělé inteligenci</a> nebo si přečíst oficiální <a href="https://eur-lex.europa.eu/CS/legal-content/summary/rules-for-trustworthy-artificial-intelligence-in-the-eu.html" target="_blank" rel="noopener noreferrer">sumarizace tohoto AI act na stránkách eur-lex</a>.</p>
+             <a href="../../blog.html" class="back-to-blog">← Zpět na přehled článků</a>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="copyright">&copy; 2025 Mgr. Gabriel Kožík. Všechna práva vyhrazena.</p>
+        </div>
+    </footer>
+</body>
+</html>

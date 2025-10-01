@@ -3,453 +3,518 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advokát & AI Stratég pro Růst Podnikání | Mgr. Gabriel Kožík</title>
-    <meta name="description" content="Jsem advokát a AI stratég. Pomáhám podnikatelům a firmám inovovat bezpečněji a růst rychleji díky efektivnímu využití AI a pevnému právnímu zázemí.">
-    
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <title>Průvodce nastavením Google AI | AI Workshop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        :root {
+            --primary-color: #0a2342;
+            --secondary-color: #2ca58d;
+            --text-color: #333;
+            --light-gray: #f4f4f4;
+            --white: #ffffff;
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--white);
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+        .landing-nav {
+            background-color: var(--white);
+            padding: 15px 20px;
+            border-bottom: 1px solid var(--light-gray);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .landing-nav-title {
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 1.3em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .landing-nav-title img {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .nav-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 20px;
+            transition: color 0.3s ease;
+        }
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+        /* --- Přidaný styl pro tlačítko --- */
+        .nav-links a.cta-nav-button {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 8px 16px;
+            border-radius: 6px;
+        }
+        .nav-links a.cta-nav-button:hover {
+            background-color: #238c76;
+            color: var(--white);
+        }
+        /* --- Konec přidaného stylu --- */
+        .hero-small {
+            background-image: linear-gradient(rgba(10, 35, 66, 0.6), rgba(10, 35, 66, 0.6)), url(uvodni-obrazek.jpg);
+            background-size: cover;
+            background-position: 50%;
+            background-repeat: no-repeat;
+            color: var(--white);
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .hero-small h1 {
+            font-size: 2.8em;
+            margin: 0 0 10px 0;
+            font-weight: 700;
+        }
+        .hero-small p {
+            font-size: 1.3em;
+            font-weight: 300;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        section { padding: 60px 20px; }
+        section:nth-child(even) { background-color: var(--light-gray); }
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: 300;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            color: var(--text-color);
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .comparison-table th, .comparison-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .comparison-table thead {
+            background-color: var(--primary-color);
+            color: var(--white);
+            font-weight: 700;
+        }
+        .comparison-table tbody tr:nth-child(even) {
+            background-color: var(--light-gray);
+        }
+        .comparison-table tbody tr:hover {
+            background-color: #e9e9e9;
+        }
+        .comparison-table .icon-check { color: var(--secondary-color); font-weight: bold; }
+        .comparison-table .icon-cross { color: #d9534f; font-weight: bold; }
+        
+        .recommendation-box {
+            background: var(--light-gray);
+            border-left: 5px solid var(--secondary-color);
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .feature-item {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--secondary-color);
+        }
+        .feature-item h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+         .feature-item a {
+            color: var(--secondary-color);
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .feature-item a:hover {
+            text-decoration: underline;
+        }
+        
+        .accordion-item {
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        .accordion-button {
+            width: 100%;
+            background: var(--white);
+            border: none;
+            padding: 20px;
+            text-align: left;
+            font-size: 1.2em;
+            font-weight: 700;
+            color: var(--primary-color);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        .accordion-button:hover {
+            background-color: var(--light-gray);
+        }
+        .accordion-button .arrow {
+            transition: transform 0.3s ease;
+            font-size: 1.5em;
+        }
+        .accordion-button[aria-expanded="true"] .arrow {
+            transform: rotate(180deg);
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+            padding: 0 20px;
+        }
+        .accordion-content-inner {
+            padding: 20px 0;
+            border-top: 1px solid var(--light-gray);
+        }
+        .accordion-content-inner ul {
+            padding-left: 20px;
+        }
+        .accordion-content-inner a {
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
 
-    <link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/index.html" />
-    <link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/index-en.html" />
-    <link rel="alternate" hreflang="hu" href="https://www.gabrielkozik.com/index-hu.html" />
-    <link rel="alternate" hreflang="fr" href="https://www.gabrielkozik.com/index-fr.html" />
-    <link rel="alternate" hreflang="x-default" href="https://www.gabrielkozik.com/index.html" />
-    
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-    
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
-        *, *::before, *::after {
-            box-sizing: border-box;
+        .faq-item {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--secondary-color);
+            margin-bottom: 15px;
         }
-        :root{--primary-color:#0a2342;--secondary-color:#2ca58d;--text-color:#333;--light-gray:#f4f4f4;--white:#fff}html{scroll-behavior:smooth}body{font-family:'Roboto',sans-serif;margin:0;padding:0;line-height:1.6;color:var(--text-color);background-color:var(--white);padding-top:70px}.container{max-width:1100px;margin:0 auto;padding:20px}.main-nav{background-color:var(--white);padding:10px 20px;border-bottom:1px solid var(--light-gray);position:fixed;top:0;left:0;width:100%;z-index:1000;box-sizing:border-box;display:flex;justify-content:space-between;align-items:center}.nav-logo{font-weight:700;color:var(--primary-color);text-decoration:none;font-size:1.2em;display:flex;align-items:center;gap:12px}.nav-photo{width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid var(--light-gray)}.nav-links-container{display:flex;align-items:center}.nav-links{display:flex;align-items:center}.nav-links a{color:var(--primary-color);text-decoration:none;font-weight:700;margin:0 15px;font-size:1.1em;transition:color .3s ease;border-radius:3px}.nav-links a:hover{color:#238c76}.lang-switcher{position:relative;margin-left:20px}.lang-button{background-color:transparent;border:none;color:var(--primary-color);font-weight:700;font-size:1.1em;cursor:pointer;padding:5px;display:flex;align-items:center;line-height:1;font-family:'Roboto',sans-serif;margin:0 15px}.lang-button .arrow{border:solid var(--primary-color);border-width:0 2px 2px 0;display:inline-block;padding:2px;transform:rotate(45deg);margin-left:8px;transition:transform .3s ease}.lang-button.active .arrow{transform:rotate(-135deg)}.lang-dropdown{display:none;position:absolute;right:0;top:100%;background-color:var(--white);box-shadow:0 4px 10px rgba(0,0,0,.1);border-radius:5px;overflow:hidden;min-width:100px;z-index:1001}.lang-dropdown a{color:var(--text-color);padding:12px 16px;text-decoration:none;display:block;text-align:left;font-weight:700;width:100%}.lang-dropdown a:hover{background-color:var(--light-gray)}.lang-dropdown a.active{color:var(--secondary-color);background-color:#e8f6f3}a:focus,.cta-button:focus,.lang-button:focus,.social-icon:focus{outline:3px solid var(--secondary-color);outline-offset:2px}.hamburger{display:none;cursor:pointer;flex-direction:column;gap:5px;padding:5px;border-radius:3px}.hamburger:focus{outline:3px solid var(--secondary-color);outline-offset:2px}.hamburger .bar{width:25px;height:3px;background-color:var(--primary-color);transition:all .3s ease-in-out}.hero{background-image:linear-gradient(rgba(10,35,66,.6),rgba(10,35,66,.6)),url(assets/images/uvodni-obrazek.jpg);background-size:cover;background-position:50%;background-repeat:no-repeat;color:var(--white);padding:100px 20px;text-align:center}.hero h1{font-size:3.5em;margin:0;font-weight:700;text-shadow:2px 2px 8px rgba(0,0,0,.7)}.hero p{font-size:1.5em;font-weight:300;margin-top:10px;max-width:800px;margin-left:auto;margin-right:auto;text-shadow:1px 1px 6px rgba(0,0,0,.8)}section{padding:60px 20px;scroll-margin-top:70px}section:nth-child(2n){background-color:var(--light-gray)}.section-title{text-align:center;font-size:2.8em;margin-bottom:40px;color:var(--primary-color);font-weight:700}.section-subtitle{text-align:center;font-size:1.2em;font-weight:300;max-width:700px;margin:-20px auto 40px}#mission{text-align:center}#mission blockquote{font-size:1.5em;font-style:italic;max-width:800px;margin:0 auto;border-left:5px solid var(--secondary-color);padding-left:20px}.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px}.service-card{background:var(--white);padding:30px;border-radius:8px;box-shadow:0 4px 15px rgba(0,0,0,.05);border-top:4px solid var(--secondary-color)}.service-card h3{font-size:1.8em;color:var(--primary-color);margin-top:0}.service-card h4{color:var(--secondary-color);font-size:1.1em;margin-bottom:15px}.service-card ul{list-style:none;padding:0}.service-card li{padding-left:1.5em;margin-bottom:10px;position:relative}.service-card li:before{content:"✓";color:var(--secondary-color);position:absolute;left:0;font-weight:700}#about p{max-width:800px;margin:0 auto;text-align:center}.about-container{text-align:center}.about-photo-circle{width:200px;height:200px;border-radius:50%;object-fit:cover;margin:0 auto 30px;display:block}#aktivity{background-color:var(--light-gray)}.projects-layout{display:flex;flex-direction:column;align-items:center;gap:30px}.projects-grid{display:flex;justify-content:center;align-items:flex-start;gap:50px;flex-wrap:wrap;text-align:center}.project-item{flex-basis:250px}.project-item img{max-width:100%;height:100px;object-fit:contain;margin-bottom:15px;transition:transform .3s ease}.project-item a:hover img{transform:scale(1.05)}.project-item p{font-size:1em;color:var(--text-color);margin-top:0}#workshop{padding-top:20px;background-color:var(--light-gray)}.workshop-container{text-align:center}.workshop-container a{display:inline-block;transition:transform .3s ease,box-shadow .3s ease;border-radius:8px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,.08)}.workshop-container a:hover{transform:translateY(-5px);box-shadow:0 10px 20px rgba(0,0,0,.12)}.workshop-container img{max-width:100%;height:auto;display:block}#propojit{text-align:center}.cta-container{display:flex;flex-direction:column;align-items:center;gap:20px}.cta-buttons{display:flex;justify-content:center;gap:20px;flex-wrap:wrap}.cta-button{display:inline-block;background-color:var(--secondary-color);color:var(--white);padding:15px 30px;text-decoration:none;font-size:1.1em;font-weight:700;border-radius:5px;transition:background-color .3s ease,transform .2s ease}.cta-button:hover{background-color:#238c76;transform:translateY(-2px)}.cta-button.secondary{background-color:transparent;color:var(--primary-color);border:2px solid var(--primary-color)}.cta-button.secondary:hover{background-color:var(--primary-color);color:var(--white)}.booking-text{font-size:1.1em;color:var(--text-color);margin:0}footer{background-color:var(--primary-color);color:var(--white);padding:40px 20px}.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;max-width:1100px;margin:0 auto}.footer-grid h4{color:var(--secondary-color);margin-bottom:10px}.footer-grid a,.footer-grid p{margin:0;color:var(--white);text-decoration:none;font-size:.9em}.footer-grid a:hover{text-decoration:underline}.copyright{text-align:center;margin-top:40px;font-size:.8em;color:rgba(255,255,255,.7)}.social-icons-container{display:flex;justify-content:flex-start;gap:15px;margin-top:15px}.social-icon{color:var(--white);text-decoration:none;transition:color .3s ease,transform .2s ease;display:inline-block}.social-icon svg{width:30px;height:30px}.social-icon:hover{color:var(--secondary-color);transform:translateY(-3px)}
-        .events-list{list-style:none;padding:0;max-width:800px;margin:40px auto 0;display:flex;flex-direction:column;gap:15px}.events-list li{display:flex;align-items:center;padding:20px;border:1px solid #e0e0e0;border-radius:8px;background-color:var(--white);gap:20px;flex-wrap:nowrap;transition:box-shadow .3s ease}.events-list li:hover{box-shadow:0 4px 15px rgba(0,0,0,.08)}.event-date-time{flex:0 0 110px;border-right:1px solid #e0e0e0;padding-right:20px;display:flex;flex-direction:column;justify-content:center;align-self:stretch;text-align:left}.event-date-time .date{font-weight:700;color:var(--primary-color);font-size:1.1em;margin-bottom:4px}.event-date-time .time{font-size:.95em;color:var(--text-color)}.event-details-new{flex-grow:1;text-align:left}.event-details-new h4{margin:0 0 5px;font-size:1.2em;color:var(--primary-color)}.event-details-new p{margin:0;color:var(--text-color);font-size:.95em}
-        .event-button{padding:8px 18px;font-size:.9em;flex-shrink:0;box-sizing:border-box;height:42px;display:inline-flex;align-items:center;justify-content:center;}
-        @media (max-width:768px){.nav-links-container{display:none;flex-direction:column;width:100%;position:absolute;top:60px;left:0;background-color:#fff;box-shadow:0 4px 10px rgba(0,0,0,.1)}.nav-links-container.active{display:flex}.nav-links{flex-direction:column;width:100%}.nav-links a{padding:15px;text-align:center;width:100%;border-bottom:1px solid var(--light-gray)}.lang-switcher{padding:15px;text-align:center;width:100%;margin-left:0;position:static}.lang-dropdown{display:none;position:static;box-shadow:none;border-top:1px solid var(--light-gray);background-color:var(--light-gray)}.lang-button{justify-content:center;width:100%}.hamburger{display:flex}.hero{padding:60px 20px}.hero h1{font-size:2.2em}.hero p{font-size:1.1em}.section-title{font-size:2.2em}.footer-grid{text-align:center}.social-icons-container{justify-content:center}}
-        @media (max-width:600px){
-            .events-list li{flex-direction:column;align-items:flex-start;gap:15px}.event-date-time{border-right:none;border-bottom:1px solid #e0e0e0;padding-right:0;padding-bottom:15px;width:100%;flex:0 0 auto;align-self:auto}.event-actions{margin-left:0;width:100%;justify-content:flex-start}
-            .calendar-button svg{width:28px;height:28px}
+        .faq-item h3 {
+            margin-top: 0;
+            color: var(--primary-color);
         }
-    </style>
-    <svg width="0" height="0" style="position:absolute">
-      <symbol id="icon-calendar" viewBox="0 0 24 24">
-        <path fill="currentColor" d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1m-1 11h-5v5h5v-5Z"/>
-      </symbol>
-    </svg>
-    <style>
-        .event-actions { display: flex; gap: 10px; margin-left: auto; align-items: center; flex-shrink: 0; }
-        .calendar-button { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; background-color: var(--secondary-color); color: var(--white); border-radius: 5px; transition: all 0.3s ease; border: none; box-sizing: border-box; }
-        .calendar-button:hover { background-color: #238c76; transform: translateY(-2px); }
-        .calendar-button svg { width: 24px; height: 24px; }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 18px 40px;
+            text-decoration: none;
+            font-size: 1.3em;
+            font-weight: 700;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            border: none;
+            cursor: pointer;
+        }
+        .cta-button:hover {
+            background-color: #238c76;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .back-link-section {
+            padding: 40px 20px;
+            background-color: var(--white);
+            text-align: center;
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: rgba(255, 255, 255, 0.8);
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .footer-content a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+        .footer-content a:hover {
+            text-decoration: underline;
+        }
+        .footer-content p {
+            margin: 10px 0;
+        }
+        .copyright {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        @media (max-width: 768px) {
+            .hero-small h1 { font-size: 2.2em; }
+            .hero-small p { font-size: 1.1em; }
+            .section-title { font-size: 2em; }
+            .comparison-table { display: block; overflow-x: auto; }
+            .landing-nav-title span { display: none; }
+        }
     </style>
 </head>
 <body>
 
-    <svg width="0" height="0" style="position:absolute">
-      <symbol id="icon-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11H9.3v9.09h3.58v-4.54c0-.77.25-1.21 1.25-1.21.97 0 1.25.44 1.25 1.21v4.54h3.57zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68zm1.78 9.94V9.6h-3.57v9.09h3.57z"/></symbol>
-      <symbol id="icon-facebook" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.04c-5.5 0-10 4.49-10 10.02 0 5 3.66 9.15 8.44 9.9v-7.02h-2.54v-2.89h2.54V9.84c0-2.51 1.49-3.9 3.8-3.9 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.89h-2.33v7.02c4.78-.75 8.44-4.9 8.44-9.9C22 6.53 17.5 2.04 12 2.04z"/></symbol>
-      <symbol id="icon-youtube" viewBox="0 0 24 24"><path fill="currentColor" d="M10 15l5.2-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 5.1-.27 1.3-.9 2.05-1.88 2.32-.47.13-1.1.22-1.9.28-.8.07-1.49.1-2.09.1L15 20c-2.19 0-3.8-.16-5.1-.44-1.3-.27-2.05-.9-2.32-1.88-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L7 12c0-2.19.16-3.8.44-5.1.27-1.3.9-2.05 1.88-2.32.47-.13 1.1.22-1.9-.28.8-.07 1.49-.1 2.09-.1L12 4c2.19 0 3.8.16 5.1.44 1.3.27 2.05.9 2.32 1.88.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09l.69.83z"/></symbol>
-    </svg>
-
-    <nav class="main-nav">
-        <a href="#" class="nav-logo">
-            <img src="assets/images/profilova-fotka.jpg" alt="Profilová fotka Gabriel Kožík" class="nav-photo">
-            <span>Mgr. Gabriel Kožík</span>
+    <nav class="landing-nav">
+        <a href="index.html" class="landing-nav-title">
+            <img src="ai-ico.png" alt="smart-head" class="nav-photo">
+            <span>AI workshop v Brně</span>
         </a>
-        <div class="hamburger" tabindex="0" role="button" aria-label="Otevřít menu">
-            <div class="bar"></div><div class="bar"></div><div class="bar"></div>
-        </div>
-        <div class="nav-links-container">
-            <div class="nav-links">
-                <a href="#aktivity">Moje projekty</a>
-                <a href="#kde-se-potkat">Networking a akce</a>
-                <a href="blog.html">Blog</a>
-                <a href="#propojit">Kontaktujte mě</a>
-            </div>
-            <div class="lang-switcher">
-                <button class="lang-button lang-switcher-button" aria-haspopup="true" aria-expanded="false">CZ <span class="arrow"></span></button>
-                <div class="lang-dropdown lang-switcher-dropdown">
-                    <a href="index.html" class="active">CZ</a>
-                    <a href="index-en.html">EN</a>
-                    <a href="index-hu.html">HU</a>
-                    <a href="index-fr.html">FR</a>
-                </div>
-            </div>
+        <div class="nav-links">
+            <a href="#comparison">Srovnání</a>
+            <a href="#guide">Návod</a>
+            <a href="#faq">FAQ</a>
+            <a href="index.html" class="cta-nav-button">Zpět na workshop</a>
         </div>
     </nav>
 
-    <header class="hero">
+    <header class="hero-small">
         <div class="container">
-            <h1>Právo pro budoucnost. Růst díky AI.</h1>
-            <p>Jsem advokát a AI stratég.<br>Pomáhám firmám s AI compliance v souladu s EU nařízením č. 2024/1689.<br>Pomáhám podnikatelům inovovat rychleji a bezpečněji.</p>
+            <h1>Průvodce nastavením Google AI</h1>
+            <p>Pochopte rozdíly mezi licencemi a nastavte si ty správné nástroje.</p>
         </div>
     </header>
 
     <main>
-        <section id="mission">
+        <section id="comparison">
             <div class="container">
-                <h2 class="section-title">Moje mise</h2>
-                <blockquote>Mým posláním je transformovat AI compliance z regulatorní překážky na strategickou výhodu, která firmám umožňuje inovovat bezpečně a efektivně.</blockquote>
+                <h2 class="section-title">Osobní vs. Firemní licence</h2>
+                <p class="section-subtitle">Základní volba stojí mezi řešením pro jednotlivce (Google One AI Premium) a řešením pro firmy (Google Workspace s doplňkem Gemini). Každé je navrženo pro jiné potřeby, zejména co se týče bezpečnosti dat a správy.</p>
+                <div style="overflow-x:auto;">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Funkce</th>
+                                <th>Google One AI Premium (Osobní)</th>
+                                <th>Google Workspace + Gemini (Firemní)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Cílový uživatel</strong></td>
+                                <td>Jednotlivci, studenti, rodiny</td>
+                                <td>Firmy, týmy, freelanceři, organizace</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Cena (orientační)</strong></td>
+                                <td>550 Kč / měsíc</td>
+                                <td>od 340 Kč / uživatel / měsíc</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Zabezpečení dat</strong></td>
+                                <td>Možnost vypnout trénování = ztráta historie vláken</td>
+                                <td class="icon-check">Data se nepoužívají pro trénování modelů ani při zachování historie vláken</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Správa uživatelů</strong></td>
+                                <td class="icon-cross">✗ Není</td>
+                                <td class="icon-check">✓ Plná kontrola přes Admin Console</td>
+                            </tr>
+                             <tr>
+                                <td><strong>AI v Gmail, Docs, Sheets...</strong></td>
+                                <td class="icon-check">✓ Ano</td>
+                                <td class="icon-check">✓ Ano</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Propojení s YouTube, Maps</strong></td>
+                                <td class="icon-check">✓ Ano, plná integrace</td>
+                                <td class="icon-cross">✗ Není dostupné z důvodu ochrany dat</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Pokročilá automatizace (Flows)</strong></td>
+                                <td class="icon-cross">✗ Není plánováno</td>
+                                <td class="icon-check">✓ Chystaná funkce pro automatizaci procesů</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Doporučeno pro</strong></td>
+                                <td>Osobní a studijní projekty</td>
+                                <td>Jakékoliv pracovní využití s důrazem na bezpečnost</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
 
-        <section id="services">
+        <section id="recommendation">
             <div class="container">
-                <h2 class="section-title">Jak vám mohu pomoci</h2>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <h3>Pilíř 1: AI Compliance & Governance</h3>
-                        <p>Pomáhám firmám zavést AI bezpečně a v souladu s evropskou legislativou (AI Act). Mým cílem je přeměnit regulatorní povinnosti na vaši konkurenční výhodu.</p>
-                        <h4>Strategie & implementace</h4>
-                        <ul>
-                            <li>Analýza rizik a dopadů (FRIA)</li>
-                            <li>Nastavení interních procesů a směrnic</li>
-                            <li>Školení zaměstnanců a managementu</li>
-                        </ul>
-                        <h4>Právní & technická jistota</h4>
-                        <ul>
-                            <li>Příprava na certifikaci dle AI Act</li>
-                            <li>Zajištění souladu s GDPR a dalšími předpisy</li>
-                            <li>Monitoring a reporting povinností</li>
-                        </ul>
+                 <h2 class="section-title">Doporučení pro firemní účely</h2>
+                 <p class="section-subtitle">Pro jakékoliv pracovní využití, ať už jste freelancer nebo součást velkého týmu, jednoznačně doporučujeme licenci <strong>Google Workspace</strong>.</p>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h3>Klíčová výhoda: Bezpečnost</h3>
+                        <p>Vaše konverzace s AI a data, která do nástrojů vkládáte (např. v Google Docs), se nikdy nepoužívají k trénování obecných modelů Google. Zůstávají striktně v rámci vaší organizace.</p>
                     </div>
-                    <div class="service-card">
-                        <h3>Pilíř 2: Právní služby pro B2B</h3>
-                        <p>Poskytuji specializované právní poradenství, které chrání vaše inovace a podporuje zdravý růst.</p>
-                        <h4>Specializace</h4>
-                        <ul>
-                            <li><strong>E-commerce:</strong> Právní jistota pro vaše online podnikání.</li>
-                            <li><strong>Duševní vlastnictví:</strong> Ochrana vaší značky, softwaru a kreativních děl.</li>
-                            <li><strong>Obchodní právo:</strong> Srozumitelné smlouvy, které minimalizují rizika.</li>
-                            <li><strong>Korporátní právo:</strong> Zakládání firem a korporátní agenda, akvizice a divestice.</li>
-                            <li><strong>Hospodářská soutěž:</strong> Ochrana a vymáhání práv v konkurenčním prostředí.</li>
-                            <li><strong>Pracovní právo:</strong> Nastavení pravidel pro využití AI na pracovišti.</li>
-                        </ul>
+                    <div class="feature-item">
+                        <h3>Klíčová výhoda: Kontrola</h3>
+                        <p>Jako administrátor máte plnou kontrolu nad tím, kteří uživatelé mají k AI funkcím přístup. Můžete spravovat licence, sledovat využití a nastavovat pravidla pro celou organizaci.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Budoucnost: Automatizace</h3>
+                        <p>Google chystá nástroj <strong>Workspace Flows</strong> pro automatizaci úkolů napříč aplikacemi. S firemní licencí budete připraveni tuto funkci využít a posunout efektivitu na novou úroveň. <a href="https://sites.google.com/view/workspace-flows/about" target="_blank">Více info zde.</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="guide">
+             <div class="container">
+                <h2 class="section-title">Návod: Jak si zařídit Workspace a Gemini</h2>
+                <p class="section-subtitle">Proces se skládá ze dvou hlavních kroků. Nejprve založíte účet Google Workspace (doporučujeme plán <strong>Business Standard</strong>) a poté k němu aktivujete doplněk Gemini.</p>
+
+                <div id="accordion-container">
+                    <div class="accordion-item">
+                        <button class="accordion-button" aria-expanded="false">
+                            Krok 1: Co budete potřebovat k registraci?
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-content-inner">
+                                <ul>
+                                    <li><strong>Vlastní doména</strong> (např. <code>mojefirma.cz</code>). Pokud ji nemáte, Google vám pomůže ji zakoupit během registrace.</li>
+                                    <li><strong>Platební karta</strong> (kreditní nebo debetní) pro úhradu měsíčních poplatků.</li>
+                                    <li><strong>Kontaktní údaje</strong> pro administrátora účtu.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-button" aria-expanded="false">
+                            Krok 2: Registrace Google Workspace Business Standard
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                             <div class="accordion-content-inner">
+                                <ol>
+                                    <li>Přejděte na <a href="https://workspace.google.com/pricing.html" target="_blank">oficiální stránku s ceníkem Google Workspace</a>.</li>
+                                    <li>U plánu <strong>Business Standard</strong> klikněte na tlačítko "Začít".</li>
+                                    <li>Postupně vyplňte informace o vaší firmě a doméně.</li>
+                                    <li>Vytvořte si svůj první administrátorský účet a heslo.</li>
+                                    <li>Zadejte platební údaje a dokončete registraci.</li>
+                                    <li>Po dokončení budete přesměrováni do <strong>Admin Console</strong>, kde budete muset ověřit vlastnictví domény dle instrukcí.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-button" aria-expanded="false">
+                           Krok 3: Aktivace doplňku Gemini for Workspace
+                           <span class="arrow">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                           <div class="accordion-content-inner">
+                               <p>Jakmile máte Workspace účet aktivní, můžete přidat Gemini.</p>
+                               <ol>
+                                   <li>Přihlaste se do <a href="https://admin.google.com" target="_blank">Admin Console</a>.</li>
+                                   <li>V menu přejděte do <strong>Fakturace > Získat další služby</strong>.</li>
+                                   <li>Najděte <strong>"Gemini for Google Workspace"</strong> a klikněte na ni.</li>
+                                   <li>Po dokončení se AI funkce zpřístupní vybraným uživatelům.</li>
+                                </ol>
+                           </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         
-        <section id="about">
-            <div class="container about-container">
-                <img src="assets/images/profilova-fotka.jpg" alt="Portrét Mgr. Gabriela Kožíka" class="about-photo-circle" loading="lazy">
-                <h2 class="section-title">O mně: Spojení dvou světů</h2>
-                <p>Moje profesní cesta je logickým propojením dvou vášní: precizního světa práva a dynamického světa technologií. Jako advokát specializovaný na obchodní a technologické právo jsem vždy stál na straně inovátorů. Postupně jsem si uvědomil, že skutečná konkurenční výhoda nevzniká jen právní ochranou, ale aktivním využíváním technologií. Proto jsem se ponořil do oblasti umělé inteligence, abych svým klientům mohl nabídnout nejen jistotu, ale i katalyzátor pro jejich růst.</p>
-            </div>
-        </section>
-
-        <section id="aktivity">
+        <section id="faq">
             <div class="container">
-                <h2 class="section-title">Moje projekty a aktivity</h2>
-                <div class="projects-layout">
-                    <div class="projects-grid">
-                        <div class="project-item"><a href="http://www.iustoria.cz" target="_blank" rel="noopener noreferrer"><img src="assets/images/logos/logo-iustoria_white.png" alt="Logo IUSTORIA, advokátní kancelář" loading="lazy"></a><p>Zakládající partner advokátní kanceláře</p></div>
-                        <div class="project-item"><a href="https://www.pod-palavou.cz/klubova-setkani" target="_blank" rel="noopener noreferrer"><img src="assets/images/logos/logo-palava-horizons.png" alt="Logo Pálava Horizons" loading="lazy"></a><p>Zakládající společník Pálava Horizons</p></div>
-                        <div class="project-item"><a href="https://www.facebook.com/profile.php?id=61561146905712" target="_blank" rel="noopener noreferrer"><img src="assets/images/logos/logo-bforb-tisnov.jpg" alt="Logo BforB Tišnov" loading="lazy"></a><p>Moderátor networkingového klubu</p></div>
-                        <div class="project-item"><a href="https://klubpodnikavcu.cz/srazy-podnikavcu" target="_blank" rel="noopener noreferrer"><img src="assets/images/logos/logo-podnikavci.png" alt="Logo Klub Podnikavců" loading="lazy"></a><p>Člen Klubu podnikavců Tišnov</p></div>
-                        <div class="project-item"><a href="https://www.smart-network.cz/" target="_blank" rel="noopener noreferrer"><img src="assets/images/logos/logo-smart-network.png" alt="Logo Smart Network" loading="lazy"></a><p>Člen klubu Smart Network</p></div>
-                    </div>
+                <h2 class="section-title">Často kladené otázky (FAQ)</h2>
+                <div class="faq-item">
+                    <h3>Proč nemůžu v pracovním Gemini plánovat trasy v Mapách?</h3>
+                    <p>Firemní verze Gemini je z důvodu maximální ochrany soukromí izolovaná od vašich osobních dat z aplikací jako Mapy, YouTube nebo Lety. Tím je zajištěno, že vaše osobní aktivity zůstanou oddělené od pracovních dat.</p>
                 </div>
-            </div>
-        </section>
-            
-        <section id="kde-se-potkat">
-    <div class="container">
-        <h2 class="section-title">Kde se můžeme potkat</h2>
-
-        <div id="zari-akce" style="margin-bottom: 50px;">
-             <details>
-                <summary style="font-size: 1.8em; font-weight: 700; color: var(--primary-color); margin-bottom: 25px; text-align: center; cursor: pointer;">
-                    Proběhlé akce v září
-                </summary>
-                <ul class="events-list" style="opacity: 0.7; margin-top: 25px;">
-                    <li>
-                        <div class="event-date-time">
-                            <span class="date">4. 9. 2025</span>
-                            <span class="time">16:00 - 22:00</span>
-                        </div>
-                        <div class="event-details-new">
-                            <h4>Networkingová grilovačka BforB Tišnov</h4>
-                            <p>Café u Palce, Tišnov</p>
-                        </div>
-                        <div class="event-actions">
-                            <a href="https://www.facebook.com/profile.php?id=61561146905712" target="_blank" rel="noopener noreferrer" class="cta-button event-button">Více info</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="event-date-time">
-                            <span class="date">11. 9. 2025</span>
-                            <span class="time">16:00 - 20:30</span>
-                        </div>
-                        <div class="event-details-new">
-                            <h4>Firemní kultura: Večer s Alveno</h4>
-                            <p>Alveno, Purkyňova 99, Brno</p>
-                        </div>
-                        <div class="event-actions">
-                            <a href="blog/firemni-kultura-alveno/firemni-kultura-alveno.html" class="cta-button event-button">Více info</a>
-                        </div>
-                    </li>
-                     <li>
-                        <div class="event-date-time">
-                            <span class="date">16. 9. 2025</span>
-                            <span class="time">09:00 - 12:00</span>
-                        </div>
-                        <div class="event-details-new">
-                            <h4>Networkingová snídaně Pod Pálavou</h4>
-                            <p>Krčma a hotel U Císařské cesty, Branišovice</p>
-                        </div>
-                        <div class="event-actions">
-                            <a href="#" class="cta-button event-button">Více info</a>
-                        </div>
-                    </li>
-                    <li>
-                         <div class="event-date-time">
-                            <span class="date">16. 9. 2025</span>
-                            <span class="time">17:30 - 19:30</span>
-                        </div>
-                         <div class="event-details-new">
-                            <h4>Networkingové setkání Klubu Podnikavců Tišnov</h4>
-                            <p>Café u Palce, Tišnov</p>
-                        </div>
-                         <div class="event-actions">
-                            <a href="https://klubpodnikavcu.cz/akce/sraz-podnikavcu-tisnov-25" target="_blank" rel="noopener noreferrer" class="cta-button event-button">Více info</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="event-date-time">
-                            <span class="date">17. 9. 2025</span>
-                            <span class="time">17:30 - 19:30</span>
-                        </div>
-                        <div class="event-details-new">
-                            <h4>Networkingové setkání Klubu Podnikavců Kuřim</h4>
-                            <p>MěKS, Kuřim</p>
-                        </div>
-                        <div class="event-actions">
-                            <a href="https://klubpodnikavcu.cz/akce/sraz-podnikavcu-kurim-3" target="_blank" rel="noopener noreferrer" class="cta-button event-button">Více info</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="event-date-time">
-                            <span class="date">19. 9. 2025</span>
-                            <span class="time">17:30 - 19:30</span>
-                        </div>
-                        <div class="event-details-new">
-                            <h4>Networkingový narozeninový večírek Smart Network</h4>
-                            <p>ABZAC centrum, Brno</p>
-                        </div>
-                        <div class="event-actions">
-                            <a href="https://www.smart-network.cz/akce/networkingovy-vecirek-patek-19092025-brno-oslava-12-narozenin" target="_blank" rel="noopener noreferrer" class="cta-button event-button">Více info</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="event-date-time">
-                            <span class="date">30. 9. 2025</span>
-                            <span class="time">09:00 - 12:00</span>
-                        </div>
-                        <div class="event-details-new">
-                            <h4>Klubové setkání Pod Pálavou</h4>
-                            <p>Krčma a hotel U Císařské cesty, Branišovice</p>
-                        </div>
-                        <div class="event-actions">
-                            <a href="https://www.linkedin.com/posts/podpalavou_zav%C5%99eli-jsme-o%C4%8Di-abychom-l%C3%A9pe-vid%C4%9Bli-na%C5%A1e-activity-7378752837750595584-48-t?utm_source=share&utm_medium=member_desktop&rcm=ACoAABC9QW0BkBczBmulu3cp1DqYsgQytOXmgUc" target="_blank" rel="noopener noreferrer" class="cta-button event-button">Více info</a>
-                        </div>
-                    </li>
-                </ul>
-            </details>
-        </div>
-
-        <div id="rijnove-akce" style="margin-bottom: 50px;">
-            <h3 class="section-subtitle" style="font-size: 1.8em; font-weight: 700; color: var(--primary-color); margin-bottom: 15px; text-align: center;">Říjnové akce</h3>
-            <ul class="events-list">
-                <li>
-                    <div class="event-date-time">
-                        <span class="date">2. 10. 2025</span>
-                        <span class="time">16:00 - 20:00</span>
-                    </div>
-                    <div class="event-details-new">
-                        <h4>BforB setkání v Tišnově</h4>
-                        <p>Lascala café, Klášterská 357, Tišnov</p>
-                    </div>
-                    <div class="event-actions">
-                        <a href="https://www.facebook.com/profile.php?id=61561146905712" target="_blank" rel="noopener noreferrer" class="cta-button event-button">Více info</a>
-                        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=BforB%20setk%C3%A1n%C3%AD%20v%20Ti%C5%A1nov%C4%9B&dates=20251002T140000Z/20251002T180000Z&details=V%C3%ADce%20informac%C3%AD%20na%3A%20https%3A//www.facebook.com/profile.php%3Fid%3D61561146905712&location=Lascala%20caf%C3%A9%2C%20Kl%C3%A1%C5%A1tersk%C3%A1%20357%2C%20666%2001%20Ti%C5%A1nov" target="_blank" class="calendar-button" aria-label="Přidat do kalendáře událost: BforB setkání v Tišnově">
-                            <svg><use xlink:href="#icon-calendar"></use></svg>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div class="event-date-time">
-                        <span class="date">9. 10. 2025</span>
-                        <span class="time">09:00 - 17:00</span>
-                    </div>
-                    <div class="event-details-new">
-                        <h4>Týden inovací - seminář o AI complianci pro B2B</h4>
-                        <p>ČSOB Kampus Praha</p>
-                    </div>
-                    <div class="event-actions">
-                        <a href="https://www.innovationweek.ai/cs" target="_blank" rel="noopener noreferrer" class="cta-button event-button">Více info</a>
-                        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=T%C3%BDden%20inovac%C3%AD%20-%20semin%C3%A1%C5%99%20o%20AI%20complianci%20pro%20B2B&dates=20251009T070000Z/20251009T150000Z&details=V%C3%ADce%20informac%C3%AD%20na%3A%20https%3A//www.innovationweek.ai/cs&location=%C4%8CSOB%20Kampus%20Praha" target="_blank" class="calendar-button" aria-label="Přidat do kalendáře událost: Týden inovací - seminář o AI complianci pro B2B">
-                            <svg><use xlink:href="#icon-calendar"></use></svg>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div class="event-date-time">
-                        <span class="date">14. 10. 2025</span>
-                        <span class="time">09:00 - 12:00</span>
-                    </div>
-                    <div class="event-details-new">
-                        <h4>Klubové setkání Pod Pálavou</h4>
-                        <p>Krčma a hotel U Císařské cesty, Branišovice</p>
-                    </div>
-                    <div class="event-actions">
-                        <a href="#" class="cta-button event-button" style="background-color: grey; cursor: not-allowed;" disabled>Více info</a>
-                        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Klubov%C3%A9%20setk%C3%A1n%C3%AD%20Pod%20P%C3%A1lavou&dates=20251014T070000Z/20251014T100000Z&details=Informace%20o%20registraci%20budou%20dopln%C4%9Bny.&location=Kr%C4%8Dma%20a%20hotel%20U%20C%C3%ADsa%C5%99sk%C3%A9%20cesty%2C%20Brani%C5%A1ovice" target="_blank" class="calendar-button" aria-label="Přidat do kalendáře událost: Klubové setkání Pod Pálavou">
-                            <svg><use xlink:href="#icon-calendar"></use></svg>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div class="event-date-time">
-                        <span class="date">15. 10. 2025</span>
-                        <span class="time">17:30 - 19:30</span>
-                    </div>
-                    <div class="event-details-new">
-                        <h4>Klubové setkání Podnikavců Kuřim: Marketing</h4>
-                        <p>MěKS, Kuřim</p>
-                    </div>
-                    <div class="event-actions">
-                        <a href="https://klubpodnikavcu.cz/akce/sraz-podnikavcu-kurim-4" target="_blank" rel="noopener noreferrer" class="cta-button event-button">Více info</a>
-                        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Klubov%C3%A9%20setk%C3%A1n%C3%AD%20Podnikavc%C5%AF%20Ku%C5%99im%3A%20Marketing&dates=20251015T153000Z/20251015T173000Z&details=V%C3%ADce%20informac%C3%AD%20na%3A%20https%3A//klubpodnikavcu.cz/akce/sraz-podnikavcu-kurim-4&location=M%C4%9BKS%2C%20Ku%C5%99im" target="_blank" class="calendar-button" aria-label="Přidat do kalendáře událost: Klubové setkání Podnikavců Kuřim">
-                            <svg><use xlink:href="#icon-calendar"></use></svg>
-                        </a>
-                    </div>
-                </li>
-                 <li>
-                    <div class="event-date-time">
-                        <span class="date">16. 10. 2025</span>
-                        <span class="time">16:00 - 20:00</span>
-                    </div>
-                    <div class="event-details-new">
-                        <h4>Benefiční networking "Vidět svět jinak"</h4>
-                        <p>RHK Brno, Výstaviště 569/3</p>
-                    </div>
-                    <div class="event-actions">
-                        <a href="https://happenee.com/events/beneficni-vecer-videt-svet-jinak" target="_blank" rel="noopener noreferrer" class="cta-button event-button">Více info</a>
-                        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Benefi%C4%8Dn%C3%AD%20networking%20%22Vid%C4%9Bt%20sv%C4%9Bt%20jinak%22&dates=20251016T140000Z/20251016T180000Z&details=V%C3%ADce%20informac%C3%AD%20a%20registrace%20na%3A%20https%3A//happenee.com/events/beneficni-vecer-videt-svet-jinak&location=RHK%20Brno%2C%20V%C3%BDstavi%C5%A1t%C4%9B%20569/3%2C%20Brno" target="_blank" class="calendar-button" aria-label="Přidat do kalendáře událost: Benefiční networking 'Vidět svět jinak'">
-                            <svg><use xlink:href="#icon-calendar"></use></svg>
-                        </a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-        <section id="" style="background-color: var(--light-gray);">
-            <div class="container">
-                <h2 class="section-title">Aktuální AI workshop</h2>
-                <ul class="events-list">
-                    <li>
-                        <div class="event-date-time">
-                            <span class="date">10. 10. 2025</span>
-                            <span class="time">09:00 - 15:00</span>
-                        </div>
-                        <div class="event-details-new">
-                            <h4>Workshop na AI nástroje od Google</h4>
-                            <p>IUSTORIA, Slovákova 279, Brno</p>
-                        </div>
-                        <div class="event-actions">
-                            <a href="https://app.influon.cz/o/podpalavou/aUVXNjBJbzg3Z2JJVFpYamlKUWpTN0lXVnZPZndEYmtUd3EwUE5ZSjdzMHZ1NXFFaTRSRUljdkovZlBEWnh2cQ==" target="_blank" rel="noopener noreferrer" class="cta-button event-button">Registrovat se</a>
-                            <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Workshop%20na%20AI%20n%C3%A1stroje%20od%20Google&dates=20251010T070000Z/20251010T130000Z&details=V%C3%ADce%20informac%C3%AD%20a%20registrace%20zde%3A%20https%3A//app.influon.cz/o/podpalavou/aUVXNjBJbzg3Z2JJVFpYamlKUWpTN0lXVnZPZndEYmtUd3EwUE5ZSjdzMHZ1NXFFaTRSRUljdkovZlBEWnh2cQ%3D%3D&location=IUSTORIA%2C%20Slov%C3%A1kova%20279%2C%20Brno" target="_blank" class="calendar-button" aria-label="Přidat do kalendáře událost: Workshop na AI nástroje od Google">
-                                <svg><use xlink:href="#icon-calendar"></use></svg>
-                            </a>
-                        </div>
-                    </li>
-                </ul>
-                <div class="workshop-container" style="margin-top: 40px;">
-                    <a href="https://app.influon.cz/o/podpalavou/aUVXNjBJbzg3Z2JJVFpYamlKUWpTN0lXVnZPZndEYmtUd3EwUE5ZSjdzMHZ1NXFFaTRSRUljdkovZlBEWnh2cQ==" target="_blank" rel="noopener noreferrer"><img src="assets/images/workshop-ai-google.jpg" alt="Pozvánka na workshop Gemini | NotebookLM | Google AI Studio" loading="lazy"></a>
+                <div class="faq-item">
+                    <h3>Je Workspace opravdu bezpečnější než můj osobní Gmail?</h3>
+                    <p>Ano. S Google Workspace máte smluvní záruky, že vaše data nebudou použita pro reklamní účely ani pro trénování AI modelů. Navíc máte k dispozici pokročilé nástroje pro správu a zabezpečení.</p>
                 </div>
-            </div>
-        </section>
-        
-        <section id="propojit">
-            <div class="container">
-                <h2 class="section-title">Pojďme se propojit</h2>
-                <p class="section-subtitle">Ať už potřebujete vyřešit komplexní právní problém, nebo chcete objevit potenciál AI pro vaše podnikání, jsem tu pro vás.</p>
-                <div class="cta-container">
-                    <div class="cta-buttons">
-                        <a href="mailto:kozik@iustoria.cz" class="cta-button">Napište mi</a>
-                        <a href="tel:+420720265713" class="cta-button secondary">+420 720 265 713</a>
-                    </div>
-                    <p class="booking-text">nebo si rezervujte online call</p>
-                    <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/kozik-iustoria/30min', text: 'Naplánovat online schůzku', color: '#2ca58d', textColor: '#ffffff', branding: true});return false;" class="cta-button">Naplánovat schůzku - Calendly</a>
-                </div>
-            </div>
-        </section>
+         </section>
     </main>
+    
+    <section class="back-link-section">
+        <div class="container">
+             <a href="index.html" class="cta-button">Zpět na hlavní stránku workshopu</a>
+        </div>
+    </section>
 
     <footer>
-        <div class="footer-grid">
-            <div>
-                <h4>Mgr. Gabriel Kožík</h4>
-                <p>Advokát & AI Stratég</p>
-                <div class="social-icons-container">
-                    <a href="https://www.linkedin.com/in/gabriel-kozik/" target="_blank" class="social-icon" aria-label="LinkedIn profil"><svg><use xlink:href="#icon-linkedin"></use></svg></a>
-                    <a href="https://www.facebook.com/somslovak" target="_blank" class="social-icon" aria-label="Facebook profil"><svg><use xlink:href="#icon-facebook"></use></svg></a>
-                    <a href="https://www.youtube.com/@gabriel-kozik" target="_blank" class="social-icon" aria-label="YouTube kanál"><svg><use xlink:href="#icon-youtube"></use></svg></a>
-                </div>
-            </div>
-            <div><h4>Kontakt</h4><p>E-mail: <a href="mailto:kozik@iustoria.cz">kozik@iustoria.cz</a></p><p>Telefon: <a href="tel:+420720265713">+420 720 265 713</a></p><p>Datová schránka: eygwp2c</p></div>
-            <div><h4>Kancelář</h4><p>IUSTORIA, advokátní kancelář, s.r.o.</p><p>Slovákova 279/11, 602 00 Brno</p><p><a href="http://www.iustoria.cz" target="_blank">www.iustoria.cz</a></p></div>
-            <div><h4>Zápis v ČAK</h4><p>ev. č.: 19320</p><p>IČO (fyzická osoba): 05187559</p><p>společník s.r.o.</p></div>
+        <div class="footer-content">
+            <p><strong>Mgr. Gabriel Kožík</strong> | <a href="mailto:kozik@iustoria.cz">kozik@iustoria.cz</a> | <a href="tel:+420720265713">+420 720 265 713</a></p>
         </div>
-        <div class="copyright"><p>&copy; 2025 Mgr. Gabriel Kožík. Všechna práva vyhrazena.</p></div>
+        <div class="copyright">
+            <p>&copy; 2025 Mgr. Gabriel Kožík. Všechna práva vyhrazena.</p>
+        </div>
     </footer>
-    
-    <script>
-        const hamburger = document.querySelector('.hamburger');
-        const navLinksContainer = document.querySelector('.nav-links-container');
-        function toggleMenu() {
-            const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
-            hamburger.setAttribute('aria-expanded', !isExpanded);
-            navLinksContainer.classList.toggle('active');
-        }
-        hamburger.addEventListener('click', toggleMenu);
-        hamburger.addEventListener('keydown', e => { if (e.key === 'Enter') { toggleMenu(); } });
-        
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth <= 768 && navLinksContainer.classList.contains('active')) {
-                    navLinksContainer.classList.remove('active');
-                    hamburger.setAttribute('aria-expanded', 'false');
-                }
-            });
-        });
 
-        const langButton = document.querySelector('.lang-switcher-button');
-        const langDropdown = document.querySelector('.lang-switcher-dropdown');
-        function toggleLangDropdown() {
-             const isExpanded = langButton.getAttribute('aria-expanded') === 'true';
-             langButton.setAttribute('aria-expanded', !isExpanded);
-             langButton.classList.toggle('active');
-             langDropdown.style.display = langDropdown.style.display === 'block' ? 'none' : 'block';
-        }
-        langButton.addEventListener('click', e => { e.stopPropagation(); toggleLangDropdown(); });
-        
-        window.addEventListener('click', e => {
-            if (navLinksContainer.classList.contains('active') && !navLinksContainer.contains(e.target) && !hamburger.contains(e.target)) {
-                navLinksContainer.classList.remove('active');
-                hamburger.setAttribute('aria-expanded', 'false');
-            }
-            if (langButton.classList.contains('active') && !langButton.parentElement.contains(e.target)) {
-                toggleLangDropdown();
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const accordionContainer = document.getElementById('accordion-container');
+            if (accordionContainer) {
+                accordionContainer.addEventListener('click', (event) => {
+                    const button = event.target.closest('.accordion-button');
+                    if (!button) return;
+                    
+                    const content = button.nextElementSibling;
+                    const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+                    // Zavřít všechny ostatní
+                    const allButtons = accordionContainer.querySelectorAll('.accordion-button');
+                    allButtons.forEach(btn => {
+                        if (btn !== button) {
+                            btn.setAttribute('aria-expanded', 'false');
+                            btn.nextElementSibling.style.maxHeight = '0px';
+                        }
+                    });
+
+                    // Otevřít/zavřít kliknutý
+                    button.setAttribute('aria-expanded', !isExpanded);
+                    if (!isExpanded) {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                    } else {
+                        content.style.maxHeight = '0px';
+                    }
+                });
             }
         });
     </script>
-    <script>
-      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-    </script>
-    <script src="/_vercel/insights/script.js"></script>
 </body>
 </html>

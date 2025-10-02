@@ -22,13 +22,10 @@
         *, *::before, *::after {
             box-sizing: border-box;
         }
-        :root{--primary-color:#0a2342;--secondary-color:#2ca58d;--text-color:#333;--light-gray:#f4f4f4;--white:#fff}html{scroll-behavior:smooth}body{font-family:'Roboto',sans-serif;margin:0;padding:0;line-height:1.6;color:var(--text-color);background-color:var(--white);padding-top:70px}.container{max-width:1100px;margin:0 auto;padding:20px}.main-nav{background-color:var(--white);padding:10px 20px;border-bottom:1px solid var(--light-gray);position:fixed;top:0;left:0;width:100%;z-index:1000;box-sizing:border-box;display:flex;justify-content:space-between;align-items:center}
-        .nav-logo{font-weight:700;color:var(--primary-color);text-decoration:none;font-size:1.2em;display:flex;align-items:center;gap:12px}
-        .nav-photo{width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid var(--light-gray)}
-        .nav-links-container{display:flex;align-items:center}.nav-links{display:flex;align-items:center}.nav-links a{color:var(--primary-color);text-decoration:none;font-weight:700;margin:0 15px;font-size:1.1em;transition:color .3s ease;border-radius:3px}.nav-links a:hover{color:#238c76}.lang-switcher{position:relative;margin-left:20px}.lang-button{background-color:transparent;border:none;color:var(--primary-color);font-weight:700;font-size:1.1em;cursor:pointer;padding:5px;display:flex;align-items:center;line-height:1;font-family:'Roboto',sans-serif;margin:0 15px}.lang-button .arrow{border:solid var(--primary-color);border-width:0 2px 2px 0;display:inline-block;padding:2px;transform:rotate(45deg);margin-left:8px;transition:transform .3s ease}.lang-button.active .arrow{transform:rotate(-135deg)}.lang-dropdown{display:none;position:absolute;right:0;top:100%;background-color:var(--white);box-shadow:0 4px 10px rgba(0,0,0,.1);border-radius:5px;overflow:hidden;min-width:100px;z-index:1001}.lang-dropdown a{color:var(--text-color);padding:12px 16px;text-decoration:none;display:block;text-align:left;font-weight:700;width:100%}.lang-dropdown a:hover{background-color:var(--light-gray)}.lang-dropdown a.active{color:var(--secondary-color);background-color:#e8f6f3}a:focus,.cta-button:focus,.lang-button:focus,.social-icon:focus{outline:3px solid var(--secondary-color);outline-offset:2px}.hamburger{display:none;cursor:pointer;flex-direction:column;gap:5px;padding:5px;border-radius:3px}.hamburger:focus{outline:3px solid var(--secondary-color);outline-offset:2px}.hamburger .bar{width:25px;height:3px;background-color:var(--primary-color);transition:all .3s ease-in-out}.hero{background-image:linear-gradient(rgba(10,35,66,.6),rgba(10,35,66,.6)),url(assets/images/uvodni-obrazek.jpg);background-size:cover;background-position:50%;background-repeat:no-repeat;color:var(--white);padding:100px 20px;text-align:center}.hero h1{font-size:3.5em;margin:0;font-weight:700;text-shadow:2px 2px 8px rgba(0,0,0,.7)}.hero p{font-size:1.5em;font-weight:300;margin-top:10px;max-width:800px;margin-left:auto;margin-right:auto;text-shadow:1px 1px 6px rgba(0,0,0,.8)}section{padding:60px 20px;scroll-margin-top:70px}section:nth-child(2n){background-color:var(--light-gray)}.section-title{text-align:center;font-size:2.8em;margin-bottom:40px;color:var(--primary-color);font-weight:700}.section-subtitle{text-align:center;font-size:1.2em;font-weight:300;max-width:700px;margin:-20px auto 40px}#mission{text-align:center}#mission blockquote{font-size:1.5em;font-style:italic;max-width:800px;margin:0 auto;border-left:5px solid var(--secondary-color);padding-left:20px}.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px}.service-card{background:var(--white);padding:30px;border-radius:8px;box-shadow:0 4px 15px rgba(0,0,0,.05);border-top:4px solid var(--secondary-color)}.service-card h3{font-size:1.8em;color:var(--primary-color);margin-top:0}.service-card h4{color:var(--secondary-color);font-size:1.1em;margin-bottom:15px}.service-card ul{list-style:none;padding:0}.service-card li{padding-left:1.5em;margin-bottom:10px;position:relative}.service-card li:before{content:"✓";color:var(--secondary-color);position:absolute;left:0;font-weight:700}#about p{max-width:800px;margin:0 auto;text-align:center}.about-container{text-align:center}.about-photo-circle{width:200px;height:200px;border-radius:50%;object-fit:cover;margin:0 auto 30px;display:block}#activities{background-color:var(--light-gray)}.projects-layout{display:flex;flex-direction:column;align-items:center;gap:30px}.projects-grid{display:flex;justify-content:center;align-items:flex-start;gap:50px;flex-wrap:wrap;text-align:center}.project-item{flex-basis:250px}.project-item img{max-width:100%;height:100px;object-fit:contain;margin-bottom:15px;transition:transform .3s ease}.project-item a:hover img{transform:scale(1.05)}.project-item p{font-size:1em;color:var(--text-color);margin-top:0}#workshop{padding-top:20px;background-color:var(--light-gray)}.workshop-container{text-align:center}.workshop-container a{display:inline-block;transition:transform .3s ease,box-shadow .3s ease;border-radius:8px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,.08)}.workshop-container a:hover{transform:translateY(-5px);box-shadow:0 10px 20px rgba(0,0,0,.12)}.workshop-container img{max-width:100%;height:auto;display:block}#connect{text-align:center}.cta-container{display:flex;flex-direction:column;align-items:center;gap:20px}.cta-buttons{display:flex;justify-content:center;gap:20px;flex-wrap:wrap}.cta-button{display:inline-block;background-color:var(--secondary-color);color:var(--white);padding:15px 30px;text-decoration:none;font-size:1.1em;font-weight:700;border-radius:5px;transition:background-color .3s ease,transform .2s ease}.cta-button:hover{background-color:#238c76;transform:translateY(-2px)}.cta-button.secondary{background-color:transparent;color:var(--primary-color);border:2px solid var(--primary-color)}.cta-button.secondary:hover{background-color:var(--primary-color);color:var(--white)}.booking-text{font-size:1.1em;color:var(--text-color);margin:0}footer{background-color:var(--primary-color);color:var(--white);padding:40px 20px}.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;max-width:1100px;margin:0 auto}.footer-grid h4{color:var(--secondary-color);margin-bottom:10px}.footer-grid a,.footer-grid p{margin:0;color:var(--white);text-decoration:none;font-size:.9em}.footer-grid a:hover{text-decoration:underline}.copyright{text-align:center;margin-top:40px;font-size:.8em;color:rgba(255,255,255,.7)}.social-icons-container{display:flex;justify-content:flex-start;gap:15px;margin-top:15px}.social-icon{color:var(--white);text-decoration:none;transition:color .3s ease,transform .2s ease;display:inline-block}.social-icon svg{width:30px;height:30px}.social-icon:hover{color:var(--secondary-color);transform:translateY(-3px)}
+        :root{--primary-color:#0a2342;--secondary-color:#2ca58d;--text-color:#333;--light-gray:#f4f4f4;--white:#fff}html{scroll-behavior:smooth}body{font-family:'Roboto',sans-serif;margin:0;padding:0;line-height:1.6;color:var(--text-color);background-color:var(--white);padding-top:70px}.container{max-width:1100px;margin:0 auto;padding:20px}.main-nav{background-color:var(--white);padding:10px 20px;border-bottom:1px solid var(--light-gray);position:fixed;top:0;left:0;width:100%;z-index:1000;box-sizing:border-box;display:flex;justify-content:space-between;align-items:center}.nav-logo{font-weight:700;color:var(--primary-color);text-decoration:none;font-size:1.2em;display:flex;align-items:center;gap:12px}.nav-photo{width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid var(--light-gray)}.nav-links-container{display:flex;align-items:center}.nav-links{display:flex;align-items:center}.nav-links a{color:var(--primary-color);text-decoration:none;font-weight:700;margin:0 15px;font-size:1.1em;transition:color .3s ease;border-radius:3px}.nav-links a:hover{color:#238c76}.lang-switcher{position:relative;margin-left:20px}.lang-button{background-color:transparent;border:none;color:var(--primary-color);font-weight:700;font-size:1.1em;cursor:pointer;padding:5px;display:flex;align-items:center;line-height:1;font-family:'Roboto',sans-serif;margin:0 15px}.lang-button .arrow{border:solid var(--primary-color);border-width:0 2px 2px 0;display:inline-block;padding:2px;transform:rotate(45deg);margin-left:8px;transition:transform .3s ease}.lang-button.active .arrow{transform:rotate(-135deg)}.lang-dropdown{display:none;position:absolute;right:0;top:100%;background-color:var(--white);box-shadow:0 4px 10px rgba(0,0,0,.1);border-radius:5px;overflow:hidden;min-width:100px;z-index:1001}.lang-dropdown a{color:var(--text-color);padding:12px 16px;text-decoration:none;display:block;text-align:left;font-weight:700;width:100%}.lang-dropdown a:hover{background-color:var(--light-gray)}.lang-dropdown a.active{color:var(--secondary-color);background-color:#e8f6f3}a:focus,.cta-button:focus,.lang-button:focus,.social-icon:focus{outline:3px solid var(--secondary-color);outline-offset:2px}.hamburger{display:none;cursor:pointer;flex-direction:column;gap:5px;padding:5px;border-radius:3px}.hamburger:focus{outline:3px solid var(--secondary-color);outline-offset:2px}.hamburger .bar{width:25px;height:3px;background-color:var(--primary-color);transition:all .3s ease-in-out}.hero{background-image:linear-gradient(rgba(10,35,66,.6),rgba(10,35,66,.6)),url(assets/images/uvodni-obrazek.jpg);background-size:cover;background-position:50%;background-repeat:no-repeat;color:var(--white);padding:100px 20px;text-align:center}.hero h1{font-size:3.5em;margin:0;font-weight:700;text-shadow:2px 2px 8px rgba(0,0,0,.7)}.hero p{font-size:1.5em;font-weight:300;margin-top:10px;max-width:800px;margin-left:auto;margin-right:auto;text-shadow:1px 1px 6px rgba(0,0,0,.8)}section{padding:60px 20px;scroll-margin-top:70px}section:nth-child(2n){background-color:var(--light-gray)}.section-title{text-align:center;font-size:2.8em;margin-bottom:40px;color:var(--primary-color);font-weight:700}.section-subtitle{text-align:center;font-size:1.2em;font-weight:300;max-width:700px;margin:-20px auto 40px}#mission{text-align:center}#mission blockquote{font-size:1.5em;font-style:italic;max-width:800px;margin:0 auto;border-left:5px solid var(--secondary-color);padding-left:20px}.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px}.service-card{background:var(--white);padding:30px;border-radius:8px;box-shadow:0 4px 15px rgba(0,0,0,.05);border-top:4px solid var(--secondary-color)}.service-card h3{font-size:1.8em;color:var(--primary-color);margin-top:0}.service-card h4{color:var(--secondary-color);font-size:1.1em;margin-bottom:15px}.service-card ul{list-style:none;padding:0}.service-card li{padding-left:1.5em;margin-bottom:10px;position:relative}.service-card li:before{content:"✓";color:var(--secondary-color);position:absolute;left:0;font-weight:700}#about p{max-width:800px;margin:0 auto;text-align:center}.about-container{text-align:center}.about-photo-circle{width:200px;height:200px;border-radius:50%;object-fit:cover;margin:0 auto 30px;display:block}#activities{background-color:var(--light-gray)}.projects-layout{display:flex;flex-direction:column;align-items:center;gap:30px}.projects-grid{display:flex;justify-content:center;align-items:flex-start;gap:50px;flex-wrap:wrap;text-align:center}.project-item{flex-basis:250px}.project-item img{max-width:100%;height:100px;object-fit:contain;margin-bottom:15px;transition:transform .3s ease}.project-item a:hover img{transform:scale(1.05)}.project-item p{font-size:1em;color:var(--text-color);margin-top:0}#workshop{padding-top:20px;background-color:var(--light-gray)}.workshop-container{text-align:center}.workshop-container a{display:inline-block;transition:transform .3s ease,box-shadow .3s ease;border-radius:8px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,.08)}.workshop-container a:hover{transform:translateY(-5px);box-shadow:0 10px 20px rgba(0,0,0,.12)}.workshop-container img{max-width:100%;height:auto;display:block}#connect{text-align:center}.cta-container{display:flex;flex-direction:column;align-items:center;gap:20px}.cta-buttons{display:flex;justify-content:center;gap:20px;flex-wrap:wrap}.cta-button{display:inline-block;background-color:var(--secondary-color);color:var(--white);padding:15px 30px;text-decoration:none;font-size:1.1em;font-weight:700;border-radius:5px;transition:background-color .3s ease,transform .2s ease}.cta-button:hover{background-color:#238c76;transform:translateY(-2px)}.cta-button.secondary{background-color:transparent;color:var(--primary-color);border:2px solid var(--primary-color)}.cta-button.secondary:hover{background-color:var(--primary-color);color:var(--white)}.booking-text{font-size:1.1em;color:var(--text-color);margin:0}footer{background-color:var(--primary-color);color:var(--white);padding:40px 20px}.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;max-width:1100px;margin:0 auto}.footer-grid h4{color:var(--secondary-color);margin-bottom:10px}.footer-grid a,.footer-grid p{margin:0;color:var(--white);text-decoration:none;font-size:.9em}.footer-grid a:hover{text-decoration:underline}.copyright{text-align:center;margin-top:40px;font-size:.8em;color:rgba(255,255,255,.7)}.social-icons-container{display:flex;justify-content:flex-start;gap:15px;margin-top:15px}.social-icon{color:var(--white);text-decoration:none;transition:color .3s ease,transform .2s ease;display:inline-block}.social-icon img{width:30px;height:30px;border-radius:4px;}.social-icon:hover{color:var(--secondary-color);transform:translateY(-3px)}
         .events-list{list-style:none;padding:0;max-width:800px;margin:40px auto 0;display:flex;flex-direction:column;gap:15px}.events-list li{display:flex;align-items:center;padding:20px;border:1px solid #e0e0e0;border-radius:8px;background-color:var(--white);gap:20px;flex-wrap:nowrap;transition:box-shadow .3s ease}.events-list li:hover{box-shadow:0 4px 15px rgba(0,0,0,.08)}.event-date-time{flex:0 0 110px;border-right:1px solid #e0e0e0;padding-right:20px;display:flex;flex-direction:column;justify-content:center;align-self:stretch;text-align:left}.event-date-time .date{font-weight:700;color:var(--primary-color);font-size:1.1em;margin-bottom:4px}.event-date-time .time{font-size:.95em;color:var(--text-color)}.event-details-new{flex-grow:1;text-align:left}.event-details-new h4{margin:0 0 5px;font-size:1.2em;color:var(--primary-color)}.event-details-new p{margin:0;color:var(--text-color);font-size:.95em}
         .event-button{padding:8px 18px;font-size:.9em;flex-shrink:0;box-sizing:border-box;height:42px;display:inline-flex;align-items:center;justify-content:center;}
-        @media (max-width:768px){.nav-links-container{display:none;flex-direction:column;width:100%;position:absolute;top:70px;left:0;background-color:#fff;box-shadow:0 4px 10px rgba(0,0,0,.1)}.nav-links-container.active{display:flex}.nav-links{flex-direction:column;width:100%}.nav-links a{padding:15px;text-align:center;width:100%;border-bottom:1px solid var(--light-gray)}.lang-switcher{padding:15px;text-align:center;width:100%;margin-left:0;position:static}.lang-dropdown{display:none;position:static;box-shadow:none;border-top:1px solid var(--light-gray);background-color:var(--light-gray)}.lang-button{justify-content:center;width:100%}.hamburger{display:flex}.hero{padding:60px 20px}.hero h1{font-size:2.2em}.hero p{font-size:1.1em}.section-title{font-size:2em}.footer-grid{text-align:center}.social-icons-container{justify-content:center}}
+        @media (max-width:768px){.nav-links-container{display:none;flex-direction:column;width:100%;position:absolute;top:60px;left:0;background-color:#fff;box-shadow:0 4px 10px rgba(0,0,0,.1)}.nav-links-container.active{display:flex}.nav-links{flex-direction:column;width:100%}.nav-links a{padding:15px;text-align:center;width:100%;border-bottom:1px solid var(--light-gray)}.lang-switcher{padding:15px;text-align:center;width:100%;margin-left:0;position:static}.lang-dropdown{display:none;position:static;box-shadow:none;border-top:1px solid var(--light-gray);background-color:var(--light-gray)}.lang-button{justify-content:center;width:100%}.hamburger{display:flex}.hero{padding:60px 20px}.hero h1{font-size:2.2em}.hero p{font-size:1.1em}.section-title{font-size:2.2em}.footer-grid{text-align:center}.social-icons-container{justify-content:center}}
         @media (max-width:600px){
             .events-list li{flex-direction:column;align-items:flex-start;gap:15px}.event-date-time{border-right:none;border-bottom:1px solid #e0e0e0;padding-right:0;padding-bottom:15px;width:100%;flex:0 0 auto;align-self:auto}.event-actions{margin-left:0;width:100%;justify-content:flex-start}
             .calendar-button svg{width:28px;height:28px}
@@ -48,8 +45,6 @@
 </head>
 <body>
 
-    <svg width="0" height="0" style="position:absolute"><symbol id="icon-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11H9.3v9.09h3.58v-4.54c0-.77.25-1.21 1.25-1.21.97 0 1.25.44 1.25 1.21v4.54h3.57zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68zm1.78 9.94V9.6h-3.57v9.09h3.57z"/></symbol><symbol id="icon-facebook" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.04c-5.5 0-10 4.49-10 10.02 0 5 3.66 9.15 8.44 9.9v-7.02h-2.54v-2.89h2.54V9.84c0-2.51 1.49-3.9 3.8-3.9 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.89h-2.33v7.02c4.78-.75 8.44-4.9 8.44-9.9C22 6.53 17.5 2.04 12 2.04z"/></symbol><symbol id="icon-youtube" viewBox="0 0 24 24"><path fill="currentColor" d="M10 15l5.2-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 5.1-.27 1.3-.9 2.05-1.88 2.32-.47.13-1.1.22-1.9.28-.8.07-1.49.1-2.09.1L15 20c-2.19 0-3.8-.16-5.1-.44-1.3-.27-2.05-.9-2.32-1.88-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L7 12c0-2.19.16-3.8.44-5.1.27-1.3.9-2.05 1.88-2.32.47-.13 1.1.22-1.9-.28.8-.07 1.49-.1 2.09-.1L12 4c2.19 0 3.8.16 5.1.44 1.3.27 2.05.9 2.32 1.88.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09l.69.83z"/></symbol></svg>
-
     <nav class="main-nav">
         <a href="index-en.html" class="nav-logo">
             <img src="assets/images/profilova-fotka.jpg" alt="Gabriel Kožík profile photo" class="nav-photo">
@@ -60,7 +55,7 @@
         </div>
         <div class="nav-links-container">
             <div class="nav-links">
-                <a href="#activities">Projects & Activities</a>
+                <a href="#activities">My Projects</a>
                 <a href="#where-to-meet">Networking & Events</a>
                 <a href="blog-en.html">Blog</a>
                 <a href="#connect">Contact Me</a>
@@ -156,98 +151,108 @@
     <div class="container">
         <h2 class="section-title">Where We Can Meet</h2>
 
-        <div id="events-sep" style="margin-bottom: 50px;">
-            <h3 class="section-subtitle" style="font-size: 1.8em; font-weight: 700; color: var(--primary-color); margin-bottom: 25px; text-align: center;">Events in September</h3>
-            
-            <ul class="events-list" style="opacity: 0.7;">
-                <li>
-                    <div class="event-date-time">
-                        <span class="date">Sep 4, 2025</span>
-                        <span class="time">4:00 PM - 10:00 PM</span>
-                    </div>
-                    <div class="event-details-new">
-                        <h4>Networking barbecue BforB Tišnov</h4>
-                        <p>Café u Palce, Tišnov</p>
-                    </div>
-                    <div class="event-actions">
-                        <a href="https://www.facebook.com/profile.php?id=61561146905712" target="_blank" rel="noopener noreferrer" class="cta-button event-button">More info</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="event-date-time">
-                        <span class="date">Sep 11, 2025</span>
-                        <span class="time">4:00 PM - 8:30 PM</span>
-                    </div>
-                    <div class="event-details-new">
-                        <h4>Corporate Culture: An Evening with Alveno</h4>
-                        <p>Alveno, Purkyňova 99, Brno</p>
-                    </div>
-                    <div class="event-actions">
-                        <a href="blog/firemni-kultura-alveno/firemni-kultura-alveno-en.html" class="cta-button event-button">More info</a>
-                    </div>
-                </li>
-                <li>
-                     <div class="event-date-time">
-                        <span class="date">Sep 16, 2025</span>
-                        <span class="time">5:30 PM - 7:30 PM</span>
-                    </div>
-                     <div class="event-details-new">
-                        <h4>Networking meeting of the Entrepreneurs Club Tišnov</h4>
-                        <p>Café u Palce, Tišnov</p>
-                    </div>
-                     <div class="event-actions">
-                        <a href="https://klubpodnikavcu.cz/akce/sraz-podnikavcu-tisnov-25" target="_blank" rel="noopener noreferrer" class="cta-button event-button">More info</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="event-date-time">
-                        <span class="date">Sep 17, 2025</span>
-                        <span class="time">5:30 PM - 7:30 PM</span>
-                    </div>
-                    <div class="event-details-new">
-                        <h4>Networking meeting of the Entrepreneurs Club Kuřim</h4>
-                        <p>MěKS, Kuřim</p>
-                    </div>
-                    <div class="event-actions">
-                        <a href="https://klubpodnikavcu.cz/akce/sraz-podnikavcu-kurim-3" target="_blank" rel="noopener noreferrer" class="cta-button event-button">More info</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="event-date-time">
-                        <span class="date">Sep 19, 2025</span>
-                        <span class="time">5:30 PM - 7:30 PM</span>
-                    </div>
-                    <div class="event-details-new">
-                        <h4>Smart Network birthday networking party</h4>
-                        <p>ABZAC centrum, Brno</p>
-                    </div>
-                    <div class="event-actions">
-                        <a href="https://www.smart-network.cz/akce/networkingovy-vecirek-patek-19092025-brno-oslava-12-narozenin" target="_blank" rel="noopener noreferrer" class="cta-button event-button">More info</a>
-                    </div>
-                </li>
-            </ul>
-            
-             <ul class="events-list">
-                <li>
-                    <div class="event-date-time">
-                        <span class="date">Sep 30, 2025</span>
-                        <span class="time">9:00 AM - 12:00 PM</span>
-                    </div>
-                    <div class="event-details-new">
-                        <h4>Pod Pálavou Club Meeting</h4>
-                        <p>Krčma a hotel U Císařské cesty, Branišovice</p>
-                    </div>
-                    <div class="event-actions">
-                        <a href="https://www.happenee.com/?page=confirm&action=index&hash=lmqApnOzz7bCnaGN4Nus6NrHoqecqsM%3D&lang=cs" target="_blank" rel="noopener noreferrer" class="cta-button event-button">More info</a>
-                        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Pod%20P%C3%A1lavou%20Club%20Meeting&dates=20250930T070000Z/20250930T100000Z&details=More%20info%20and%20registration%3A%20https%3A//www.happenee.com/%3Fpage%3Dconfirm%26action%3Dindex%26hash%3DlmqApnOzz7bCnaGN4Nus6NrHoqecqsM%253D%26lang%3Dcs&location=Kr%C4%8Dma%20a%20hotel%20U%20C%C3%ADsa%C5%99sk%C3%A9%20cesty%2C%20Brani%C5%A1ovice" target="_blank" class="calendar-button" aria-label="Add to calendar">
-                            <svg><use xlink:href="#icon-calendar"></use></svg>
-                        </a>
-                    </div>
-                </li>
-            </ul>
+        <div id="september-events" style="margin-bottom: 50px;">
+             <details>
+                <summary style="font-size: 1.8em; font-weight: 700; color: var(--primary-color); margin-bottom: 25px; text-align: center; cursor: pointer;">
+                    Past Events in September
+                </summary>
+                <ul class="events-list" style="opacity: 0.7; margin-top: 25px;">
+                    <li>
+                        <div class="event-date-time">
+                            <span class="date">Sep 4, 2025</span>
+                            <span class="time">4:00 PM - 10:00 PM</span>
+                        </div>
+                        <div class="event-details-new">
+                            <h4>Networking BBQ BforB Tišnov</h4>
+                            <p>Café u Palce, Tišnov</p>
+                        </div>
+                        <div class="event-actions">
+                            <a href="https://www.facebook.com/profile.php?id=61561146905712" target="_blank" rel="noopener noreferrer" class="cta-button event-button">More info</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="event-date-time">
+                            <span class="date">Sep 11, 2025</span>
+                            <span class="time">4:00 PM - 8:30 PM</span>
+                        </div>
+                        <div class="event-details-new">
+                            <h4>Company Culture: An Evening with Alveno</h4>
+                            <p>Alveno, Purkyňova 99, Brno</p>
+                        </div>
+                        <div class="event-actions">
+                            <a href="blog/firemni-kultura-alveno/firemni-kultura-alveno-en.html" class="cta-button event-button">More info</a>
+                        </div>
+                    </li>
+                     <li>
+                        <div class="event-date-time">
+                            <span class="date">Sep 16, 2025</span>
+                            <span class="time">9:00 AM - 12:00 PM</span>
+                        </div>
+                        <div class="event-details-new">
+                            <h4>Networking Breakfast Pod Pálavou</h4>
+                            <p>Krčma a hotel U Císařské cesty, Branišovice</p>
+                        </div>
+                        <div class="event-actions">
+                            <a href="#" class="cta-button event-button">More info</a>
+                        </div>
+                    </li>
+                    <li>
+                         <div class="event-date-time">
+                            <span class="date">Sep 16, 2025</span>
+                            <span class="time">5:30 PM - 7:30 PM</span>
+                        </div>
+                         <div class="event-details-new">
+                            <h4>Networking Meeting of Entrepreneurs Club Tišnov</h4>
+                            <p>Café u Palce, Tišnov</p>
+                        </div>
+                         <div class="event-actions">
+                            <a href="https://klubpodnikavcu.cz/akce/sraz-podnikavcu-tisnov-25" target="_blank" rel="noopener noreferrer" class="cta-button event-button">More info</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="event-date-time">
+                            <span class="date">Sep 17, 2025</span>
+                            <span class="time">5:30 PM - 7:30 PM</span>
+                        </div>
+                        <div class="event-details-new">
+                            <h4>Networking Meeting of Entrepreneurs Club Kuřim</h4>
+                            <p>MěKS, Kuřim</p>
+                        </div>
+                        <div class="event-actions">
+                            <a href="https://klubpodnikavcu.cz/akce/sraz-podnikavcu-kurim-3" target="_blank" rel="noopener noreferrer" class="cta-button event-button">More info</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="event-date-time">
+                            <span class="date">Sep 19, 2025</span>
+                            <span class="time">5:30 PM - 7:30 PM</span>
+                        </div>
+                        <div class="event-details-new">
+                            <h4>Smart Network Birthday Networking Party</h4>
+                            <p>ABZAC centrum, Brno</p>
+                        </div>
+                        <div class="event-actions">
+                            <a href="https://www.smart-network.cz/akce/networkingovy-vecirek-patek-19092025-brno-oslava-12-narozenin" target="_blank" rel="noopener noreferrer" class="cta-button event-button">More info</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="event-date-time">
+                            <span class="date">Sep 30, 2025</span>
+                            <span class="time">9:00 AM - 12:00 PM</span>
+                        </div>
+                        <div class="event-details-new">
+                            <h4>Pod Pálavou Club Meeting</h4>
+                            <p>Krčma a hotel U Císařské cesty, Branišovice</p>
+                        </div>
+                        <div class="event-actions">
+                            <a href="https://www.linkedin.com/posts/podpalavou_zav%C5%99eli-jsme-o%C4%8Di-abychom-l%C3%A9pe-vid%C4%9Bli-na%C5%A1e-activity-7378752837750595584-48-t?utm_source=share&utm_medium=member_desktop&rcm=ACoAABC9QW0BkBczBmulu3cp1DqYsgQytOXmgUc" target="_blank" rel="noopener noreferrer" class="cta-button event-button">More info</a>
+                        </div>
+                    </li>
+                </ul>
+            </details>
         </div>
 
-        <div id="events-oct" style="margin-bottom: 50px;">
+        <div id="october-events" style="margin-bottom: 50px;">
             <h3 class="section-subtitle" style="font-size: 1.8em; font-weight: 700; color: var(--primary-color); margin-bottom: 15px; text-align: center;">October Events</h3>
             <ul class="events-list">
                 <li>
@@ -261,7 +266,7 @@
                     </div>
                     <div class="event-actions">
                         <a href="https://www.facebook.com/profile.php?id=61561146905712" target="_blank" rel="noopener noreferrer" class="cta-button event-button">More info</a>
-                        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=BforB%20Meeting%20in%20Ti%C5%A1nov&dates=20251002T140000Z/20251002T180000Z&details=More%20info%20at%3A%20https%3A//www.facebook.com/profile.php%3Fid%3D61561146905712&location=Lascala%20caf%C3%A9%2C%20Kl%C3%A1%C5%A1tersk%C3%A1%20357%2C%20666%2001%20Ti%C5%A1nov" target="_blank" class="calendar-button" aria-label="Add to calendar">
+                        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=BforB%20Meeting%20in%20Ti%C5%A1nov&dates=20251002T140000Z/20251002T180000Z&details=More%20info%20at%3A%20https%3A//www.facebook.com/profile.php%3Fid%3D61561146905712&location=Lascala%20caf%C3%A9%2C%20Kl%C3%A1%C5%A1tersk%C3%A1%20357%2C%20666%2001%20Ti%C5%A1nov" target="_blank" class="calendar-button" aria-label="Add to calendar: BforB Meeting in Tišnov">
                             <svg><use xlink:href="#icon-calendar"></use></svg>
                         </a>
                     </div>
@@ -272,12 +277,12 @@
                         <span class="time">9:00 AM - 5:00 PM</span>
                     </div>
                     <div class="event-details-new">
-                        <h4>Innovation Week - seminar on AI compliance for B2B</h4>
+                        <h4>Innovation Week - AI Compliance for B2B Seminar</h4>
                         <p>ČSOB Campus Prague</p>
                     </div>
                     <div class="event-actions">
                         <a href="https://www.innovationweek.ai/en" target="_blank" rel="noopener noreferrer" class="cta-button event-button">More info</a>
-                        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Innovation%20Week%20-%20seminar%20on%20AI%20compliance%20for%20B2B&dates=20251009T070000Z/20251009T150000Z&details=More%20info%20at%3A%20https%3A//www.innovationweek.ai/en&location=%C4%8CSOB%20Campus%20Prague" target="_blank" class="calendar-button" aria-label="Add to calendar">
+                        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Innovation%20Week%20-%20AI%20Compliance%20for%20B2B%20Seminar&dates=20251009T070000Z/20251009T150000Z&details=For%20more%20information%2C%20visit%3A%20https%3A//www.innovationweek.ai/en&location=%C4%8CSOB%20Campus%20Prague" target="_blank" class="calendar-button" aria-label="Add to calendar: Innovation Week - AI Compliance for B2B Seminar">
                             <svg><use xlink:href="#icon-calendar"></use></svg>
                         </a>
                     </div>
@@ -293,7 +298,7 @@
                     </div>
                     <div class="event-actions">
                         <a href="#" class="cta-button event-button" style="background-color: grey; cursor: not-allowed;" disabled>More info</a>
-                        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Pod%20P%C3%A1lavou%20Club%20Meeting&dates=20251014T070000Z/20251014T100000Z&details=Registration%20information%20to%20be%20added.&location=Kr%C4%8Dma%20a%20hotel%20U%20C%C3%ADsa%C5%99sk%C3%A9%20cesty%2C%20Brani%C5%A1ovice" target="_blank" class="calendar-button" aria-label="Add to calendar">
+                        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Pod%20P%C3%A1lavou%20Club%20Meeting&dates=20251014T070000Z/20251014T100000Z&details=Registration%20information%20will%20be%20provided%20soon.&location=Kr%C4%8Dma%20a%20hotel%20U%20C%C3%ADsa%C5%99sk%C3%A9%20cesty%2C%20Brani%C5%A1ovice" target="_blank" class="calendar-button" aria-label="Add to calendar: Pod Pálavou Club Meeting">
                             <svg><use xlink:href="#icon-calendar"></use></svg>
                         </a>
                     </div>
@@ -309,7 +314,55 @@
                     </div>
                     <div class="event-actions">
                         <a href="https://klubpodnikavcu.cz/akce/sraz-podnikavcu-kurim-4" target="_blank" rel="noopener noreferrer" class="cta-button event-button">More info</a>
-                        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Entrepreneurs%20Club%20Ku%C5%99im%20Meeting%3A%20Marketing&dates=20251015T153000Z/20251015T173000Z&details=More%20info%20at%3A%20https%3A//klubpodnikavcu.cz/akce/sraz-podnikavcu-kurim-4&location=M%C4%9BKS%2C%20Ku%C5%99im" target="_blank" class="calendar-button" aria-label="Add to calendar">
+                        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Entrepreneurs%20Club%20Ku%C5%99im%20Meeting%3A%20Marketing&dates=20251015T153000Z/20251015T173000Z&details=For%20more%20information%2C%20visit%3A%20https%3A//klubpodnikavcu.cz/akce/sraz-podnikavcu-kurim-4&location=M%C4%9BKS%2C%20Ku%C5%99im" target="_blank" class="calendar-button" aria-label="Add to calendar: Entrepreneurs Club Kuřim Meeting: Marketing">
+                            <svg><use xlink:href="#icon-calendar"></use></svg>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="event-date-time">
+                        <span class="date">Oct 16, 2025</span>
+                        <span class="time">12:00 PM - 3:00 PM</span>
+                    </div>
+                    <div class="event-details-new">
+                        <h4>B2B Networking Lunch Smart Network</h4>
+                        <p>Design hotel Noem Arch, Brno</p>
+                    </div>
+                    <div class="event-actions">
+                        <a href="https://www.smart-network.cz/akce/b2b-networkingovy-obed-ctvrtek-16102025-brno-design-hotel-noem-arch" target="_blank" rel="noopener noreferrer" class="cta-button event-button">More info</a>
+                        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=B2B%20Networking%20Lunch%20Smart%20Network&dates=20251016T100000Z/20251016T130000Z&details=For%20more%20information%20and%20registration%2C%20visit%3A%20https%3A//www.smart-network.cz/akce/b2b-networkingovy-obed-ctvrtek-16102025-brno-design-hotel-noem-arch&location=Design%20hotel%20Noem%20Arch%2C%20Brno" target="_blank" class="calendar-button" aria-label="Add to calendar: B2B Networking Lunch Smart Network">
+                            <svg><use xlink:href="#icon-calendar"></use></svg>
+                        </a>
+                    </div>
+                </li>
+                 <li>
+                    <div class="event-date-time">
+                        <span class="date">Oct 16, 2025</span>
+                        <span class="time">4:00 PM - 8:00 PM</span>
+                    </div>
+                    <div class="event-details-new">
+                        <h4>Charity Networking "Seeing the World Differently"</h4>
+                        <p>RHK Brno, Výstaviště 569/3</p>
+                    </div>
+                    <div class="event-actions">
+                        <a href="https://happenee.com/events/beneficni-vecer-videt-svet-jinak" target="_blank" rel="noopener noreferrer" class="cta-button event-button">More info</a>
+                        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Charity%20Networking%20%22Seeing%20the%20World%20Differently%22&dates=20251016T140000Z/20251016T180000Z&details=For%20more%20information%20and%20registration%2C%20visit%3A%20https%3A//happenee.com/events/beneficni-vecer-videt-svet-jinak&location=RHK%20Brno%2C%20V%C3%BDstavi%C5%A1t%C4%9B%20569/3%2C%20Brno" target="_blank" class="calendar-button" aria-label="Add to calendar: Charity Networking 'Seeing the World Differently'">
+                            <svg><use xlink:href="#icon-calendar"></use></svg>
+                        </a>
+                    </div>
+                </li>
+                 <li>
+                    <div class="event-date-time">
+                        <span class="date">Oct 30, 2025</span>
+                        <span class="time">9:00 AM - 12:00 PM</span>
+                    </div>
+                    <div class="event-details-new">
+                        <h4>Informal Meeting Pod Pálavou: Club's Direction</h4>
+                        <p>Krčma a hotel U Císařské cesty, Branišovice</p>
+                    </div>
+                    <div class="event-actions">
+                        <a href="#" class="cta-button event-button" style="background-color: grey; cursor: not-allowed;" disabled>More info</a>
+                        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Informal%20Meeting%20Pod%20P%C3%A1lavou%3A%20Club%27s%20Direction&dates=20251030T070000Z/20251030T100000Z&details=Informal%20meeting%20for%20members%20and%20guests%20who%20actively%20follow%20us.%20The%20topic%20will%20be%20expectations%20for%20the%20club%27s%20management%20regarding%20future%20direction%2C%20planned%20events%2C%20etc.%20Registration%20information%20will%20be%20provided.&location=Kr%C4%8Dma%20a%20hotel%20U%20C%C3%ADsa%C5%99sk%C3%A9%20cesty%2C%20Brani%C5%A1ovice" target="_blank" class="calendar-button" aria-label="Add to calendar: Informal Meeting Pod Pálavou">
                             <svg><use xlink:href="#icon-calendar"></use></svg>
                         </a>
                     </div>
@@ -334,7 +387,7 @@
                         </div>
                         <div class="event-actions">
                             <a href="https://app.influon.cz/o/podpalavou/aUVXNjBJbzg3Z2JJVFpYamlKUWpTN0lXVnZPZndEYmtUd3EwUE5ZSjdzMHZ1NXFFaTRSRUljdkovZlBEWnh2cQ==" target="_blank" rel="noopener noreferrer" class="cta-button event-button">Register</a>
-                            <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Workshop%20on%20AI%20tools%20from%20Google&dates=20251010T070000Z/20251010T130000Z&details=For%20more%20information%20and%20registration%20see%3A%20https%3A//app.influon.cz/o/podpalavou/aUVXNjBJbzg3Z2JJVFpYamlKUWpTN0lXVnZPZndEYmtUd3EwUE5ZSjdzMHZ1NXFFaTRSRUljdkovZlBEWnh2cQ%3D%3D&location=IUSTORIA%2C%20Slov%C3%A1kova%20279%2C%20Brno" target="_blank" class="calendar-button" aria-label="Add to calendar">
+                            <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Workshop%20on%20AI%20tools%20from%20Google&dates=20251010T070000Z/20251010T130000Z&details=For%20more%20information%20and%20registration%20see%3A%20https%3A//app.influon.cz/o/podpalavou/aUVXNjBJbzg3Z2JJVFpYamlKUWpTN0lXVnZPZndEYmtUd3EwUE5ZSjdzMHZ1NXFFaTRSRUljdkovZlBEWnh2cQ%3D%3D&location=IUSTORIA%2C%20Slov%C3%A1kova%20279%2C%20Brno" target="_blank" class="calendar-button" aria-label="Add to calendar: Workshop on AI tools from Google">
                                 <svg><use xlink:href="#icon-calendar"></use></svg>
                             </a>
                         </div>
@@ -368,9 +421,10 @@
                 <h4>Mgr. Gabriel Kožík</h4>
                 <p>Lawyer & AI Strategist</p>
                 <div class="social-icons-container">
-                    <a href="https://www.linkedin.com/in/gabriel-kozik/" target="_blank" class="social-icon" aria-label="LinkedIn profile"><svg><use xlink:href="#icon-linkedin"></use></svg></a>
-                    <a href="https://www.facebook.com/somslovak" target="_blank" class="social-icon" aria-label="Facebook profile"><svg><use xlink:href="#icon-facebook"></use></svg></a>
-                    <a href="https://www.youtube.com/@gabriel-kozik" target="_blank" class="social-icon" aria-label="YouTube channel"><svg><use xlink:href="#icon-youtube"></use></svg></a>
+                    <a href="https://www.linkedin.com/in/gabriel-kozik/" target="_blank" class="social-icon" aria-label="LinkedIn profile"><img src="assets/images/linkedin.png" alt="LinkedIn icon"></a>
+                    <a href="https://www.facebook.com/somslovak" target="_blank" class="social-icon" aria-label="Facebook profile"><img src="assets/images/facebook.png" alt="Facebook icon"></a>
+                    <a href="https://www.instagram.com/kozik_gabriel/" target="_blank" class="social-icon" aria-label="Instagram profile"><img src="assets/images/instagram.png" alt="Instagram icon"></a>
+                    <a href="https://www.youtube.com/@gabriel-kozik" target="_blank" class="social-icon" aria-label="YouTube channel"><img src="assets/images/youtube.png" alt="YouTube icon"></a>
                 </div>
             </div>
             <div><h4>Contact</h4><p>Email: <a href="mailto:kozik@iustoria.cz">kozik@iustoria.cz</a></p><p>Phone: <a href="tel:+420720265713">+420 720 265 713</a></p><p>Data Box: eygwp2c</p></div>
@@ -390,9 +444,10 @@
         }
         hamburger.addEventListener('click', toggleMenu);
         hamburger.addEventListener('keydown', e => { if (e.key === 'Enter') { toggleMenu(); } });
+        
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
-                if (navLinksContainer.classList.contains('active')) {
+                if (window.innerWidth <= 768 && navLinksContainer.classList.contains('active')) {
                     navLinksContainer.classList.remove('active');
                     hamburger.setAttribute('aria-expanded', 'false');
                 }

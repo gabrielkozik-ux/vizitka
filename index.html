@@ -475,19 +475,41 @@
         </section>
         
         <section id="propojit">
-            <div class="container">
-                <h2 class="section-title">Pojďme se propojit</h2>
-                <p class="section-subtitle">Ať už potřebujete vyřešit komplexní právní problém, nebo chcete objevit potenciál AI pro vaše podnikání, jsem tu pro vás.</p>
-                <div class="cta-container">
-                    <div class="cta-buttons">
-                        <a href="mailto:kozik@iustoria.cz" class="cta-button">Napište mi</a>
-                        <a href="tel:+420720265713" class="cta-button secondary">+420 720 265 713</a>
-                    </div>
-                    <p class="booking-text">nebo si rezervujte online call</p>
-                    <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/kozik-iustoria/30min', text: 'Naplánovat online schůzku', color: '#2ca58d', textColor: '#ffffff', branding: true});return false;" class="cta-button">Naplánovat schůzku - Calendly</a>
-                </div>
+    <div class="container">
+        <h2 class="section-title">Pojďme se propojit</h2>
+        <p class="section-subtitle">Ať už potřebujete vyřešit komplexní právní problém, nebo chcete objevit potenciál AI pro vaše podnikání, jsem tu pro vás.</p>
+
+        <div class="cta-container" style="margin-bottom: 40px;">
+            <div class="cta-buttons">
+                <a href="mailto:kozik@iustoria.cz" class="cta-button">Napište mi e-mail</a>
+                <a href="tel:+420720265713" class="cta-button secondary">+420 720 265 713</a>
             </div>
-        </section>
+            <p class="booking-text">nebo si rezervujte online call</p>
+            <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/kozik-iustoria/30min', text: 'Naplánovat online schůzku', color: '#2ca58d', textColor: '#ffffff', branding: true});return false;" class="cta-button">Naplánovat schůzku - Calendly</a>
+        </div>
+
+        <div class="form-container" style="max-width: 600px; margin: 40px auto 0; text-align: left;">
+             <p class="section-subtitle" style="text-align: center; margin-bottom: 20px;">Nebo mi zanechte rychlou zprávu:</p>
+            <form action="https://formspree.io/f/manplpzq" method="POST">
+                <div style="margin-bottom: 15px;">
+                    <label for="name" style="display: block; margin-bottom: 5px; font-weight: bold; color: var(--primary-color);">Jméno</label>
+                    <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 1em;">
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <label for="email" style="display: block; margin-bottom: 5px; font-weight: bold; color: var(--primary-color);">E-mail</label>
+                    <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 1em;">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label for="message" style="display: block; margin-bottom: 5px; font-weight: bold; color: var(--primary-color);">Vaše zpráva</label>
+                    <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 1em;"></textarea>
+                </div>
+                <div style="text-align: center;">
+                    <button type="submit" class="cta-button">Odeslat zprávu</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
     </main>
 
     <footer>

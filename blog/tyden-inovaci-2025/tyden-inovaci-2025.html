@@ -66,6 +66,27 @@
             transform: scale(1.03);
             box-shadow: 0 8px 25px rgba(0,0,0,0.15);
         }
+
+        /* --- NOVĚ PŘIDANÝ STYL PRO RESPONZIVNÍ VIDEO --- */
+        .video-responsive-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 poměr stran (315 / 560 = 0.5625) */
+            height: 0;
+            overflow: hidden;
+            margin: 40px 0; /* Odsazení jako u galerie */
+            border-radius: 8px; /* Zaoblení jako u galerie */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Stín jako u galerie */
+        }
+        .video-responsive-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        /* --- KONEC NOVÉHO STYLU --- */
+
     </style>
 </head>
 <body>
@@ -105,6 +126,9 @@
                 <li><strong>Odpovědnost a data:</strong> Zdůraznili jsme, že odpovědnost za použití AI nese vždy firma, která ji nasadila. To klade obrovský důraz na výběr prověřených dodavatelů a ochranu citlivých dat v souladu s GDPR.</li>
             </ul>
 
+            <div class="video-responsive-wrapper">
+                <iframe src="https://www.youtube.com/embed/UuBlqsQJFKo?si=TeDtlLT-fvvlDpKM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
             <div class="photo-gallery">
                  <div class="gallery-item">
                     <img src="../../assets/images/blog/tyden-inovaci-2025/obrazek-info.png" alt="Informace o přednášce o AI Act" loading="lazy">
@@ -131,4 +155,3 @@
     <script src="/_vercel/insights/script.js"></script>
 </body>
 </html>
-

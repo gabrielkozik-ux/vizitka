@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Káva, vize a skvělé jídlo: Reportáž z BforB setkání v Laskala Café Tišnov | Mgr. Gabriel Kožík</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <meta name="description" content="Ohlédnutí za listopadovou snídaní BforB Tišnov v nově otevřené kavárně Laskala. Skvělá atmosféra, 7 hostů a plány na propojení podnikatelů a města.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0a2342;
+            --secondary-color: #2ca58d;
+            --text-color: #333;
+            --light-gray: #f4f4f4;
+            --white: #ffffff;
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--white);
+            padding-top: 70px;
+        }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        .main-nav { background-color: var(--white); padding: 15px 20px; border-bottom: 1px solid var(--light-gray); position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; box-sizing: border-box; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { font-weight: bold; color: var(--primary-color); text-decoration: none; font-size: 1.2em; }
+        .nav-links { display: flex; align-items: center; }
+        .nav-links a { color: var(--primary-color); text-decoration: none; font-weight: bold; margin: 0 15px; font-size: 1.1em; transition: color 0.3s ease; }
+        .nav-links a:hover { color: var(--secondary-color); }
+        .hamburger { display: none; }
+
+        .article-header {
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        .article-header h1 {
+            font-size: 2.8em;
+            color: var(--primary-color);
+            margin: 0 0 10px 0;
+        }
+        .article-meta {
+            font-size: 0.9em;
+            color: #777;
+        }
+        .article-content {
+            padding: 40px 0;
+        }
+        .article-content p, .article-content li {
+            font-size: 1.1em;
+            line-height: 1.7;
+        }
+        .article-content h2 {
+            font-size: 1.8em;
+            color: var(--primary-color);
+            margin-top: 40px;
+        }
+        .article-content blockquote {
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 20px;
+            font-style: italic;
+            margin: 20px 0;
+            font-size: 1.2em;
+            background-color: #f9f9f9;
+            padding: 15px 20px;
+            border-radius: 0 5px 5px 0;
+        }
+        .article-image-main {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px 0 30px 0;
+        }
+        .back-to-blog {
+            display: inline-block;
+            margin-top: 40px;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        footer { background-color: var(--primary-color); color: var(--white); padding: 40px 20px; text-align: center; }
+        .copyright { margin-top: 20px; font-size: 0.8em; }
+        
+        /* Photo Gallery Styles */
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        .gallery-thumbnail {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .gallery-thumbnail:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Modal (Lightbox) Styles */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 2000; 
+            padding-top: 20px; 
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.85);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            box-sizing: border-box;
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90vh;
+            border-radius: 8px;
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            transition: 0.3s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev {
+            left: 0;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <a href="../../index.html" class="nav-logo">Mgr. Gabriel Kožík</a>
+        <div class="nav-links">
+            <a href="../../index.html">Úvodní stránka</a>
+            <a href="../../blog.html">Blog</a>
+            <a href="../../index.html#propojit">Kontaktujte mě</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <article class="article-content">
+                <header class="article-header">
+                    <h1>Káva, vize a skvělé jídlo: Reportáž z BforB setkání v Laskala Café Tišnov</h1>
+                    <p class="article-meta">Publikováno: 7. listopadu 2025 | Autor: Mgr. Gabriel Kožík</p>
+                </header>
+                
+                <p>Ve čtvrtek 6. listopadu 2025 se tišnovský networkingový klub <strong>Business for Breakfast</strong> sešel na své pravidelné snídani, tentokrát v mimořádném prostředí. Hostila nás totiž čerstvě znovuotevřená kavárna <a href="https://www.laskalacafe.cz/" target="_blank" rel="noopener noreferrer">Laskala Café</a> v Tišnově, která se okamžitě stala srdcem našeho setkání.</p>
+                <p>Atmosféra byla od samého rána neuvěřitelně přátelská a inspirativní. Majitelka kavárny, Jitka Jirků, a její tým pro nás připravily naprosto báječné jídlo, které jen podtrhlo celkový dojem. Káva voněla, diskuse proudily a mezi členy a <strong>7 novými hosty</strong> vznikala další zajímavá propojení a rodila se nekonečná inspirace.</p>
+
+                <img src="../../assets/images/blog/bforb-listopad-2025/3.jpg" alt="Gabriel Kožík prezentuje na BforB snídani v Laskala Café Tišnov" class="article-image-main" loading="lazy">
+                
+                <h2>Nejen snídaně, ale i vize do budoucna</h2>
+                <p>Toto setkání ale nebylo jen o ranním networkingu. Po oficiální části jsme se s členy klubu sešli na "byznys setkání", kde jsme řešili další rozvoj a směřování naší tišnovské skupiny. Hlavním tématem byla příprava <strong>velké novoroční networkingové párty</strong>.</p>
+
+                <blockquote>Naší vizí je uspořádat párty 8. ledna 2026 a propojit na ní nejen místní podnikatele, ale i zástupce města Tišnov a sousední Kuřimi. Chceme vytvořit silnou B2B komunitu v celém regionu.</blockquote>
+                
+                <h2>Propojení s MAS a rozvoj regionu</h2>
+                <p>Důležitou součástí plánované akce bude také představení možností, které podnikatelům nabízí <a href="https://www.masbranavysociny.cz/" target="_blank" rel="noopener noreferrer">MAS Brána Vysočiny</a>. Chceme ukázat, jaké konkrétní dotační a podpůrné programy mohou firmy využít pro svůj růst. Naším cílem je aktivně zapojit i podnikatele z Kuřimi a vytvořit tak silný B2B komunitní projekt, který přesahuje hranice jednoho města.</p>
+                <p>Listopadové setkání v Laskale tak nebylo jen dalším v řadě, ale skutečným restartem s novou energií a jasnými plány. Děkujeme Jitce Jirků za skvělé zázemí a všem hostům i členům za inspirativní dopoledne!</p>
+
+                <div class="photo-gallery" id="gallery">
+                    </div>
+
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                    <a class="prev">&#10094;</a>
+                    <a class="next">&#10095;</a>
+                </div>
+
+                <a href="../../blog.html" class="back-to-blog">← Zpět na přehled článků</a>
+            </article>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p class="copyright">&copy; 2025 Mgr. Gabriel Kožík. Všechna práva vyhrazena.</p>
+        </div>
+    </footer>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const gallery = document.getElementById('gallery');
+        const totalImages = 7; // Počet fotek, které jsi nahrál (1.jpg až 7.jpg)
+        const imagePath = '../../assets/images/blog/bforb-listopad-2025/';
+
+        // Dynamicky vytvoříme galerii
+        for (let i = 1; i <= totalImages; i++) {
+            const img = document.createElement('img');
+            img.src = `${imagePath}${i}.jpg`;
+            img.alt = `Fotka ${i} ze snídaně BforB v Laskala Café Tišnov`;
+            img.classList.add('gallery-thumbnail');
+            img.loading = 'lazy';
+            gallery.appendChild(img);
+        }
+
+        // Funkcionalita Lightboxu (modalu)
+        const modal = document.getElementById('myModal');
+        const modalImg = document.getElementById("img01");
+        const span = document.getElementsByClassName("close")[0];
+        const prev = document.querySelector('.prev');
+        const next = document.querySelector('.next');
+
+        const galleryImages = document.querySelectorAll('.gallery-thumbnail');
+        let currentIndex;
+
+        function openModalWithImage(index) {
+            if (modal && modalImg) {
+                modal.style.display = "block";
+                modalImg.src = galleryImages[index].src;
+                currentIndex = index;
+            }
+        }
+
+        function changeImage(direction) {
+            currentIndex += direction;
+            if (currentIndex >= galleryImages.length) {
+                currentIndex = 0; // Přejde na první obrázek
+            }
+            if (currentIndex < 0) {
+                currentIndex = galleryImages.length - 1; // Přejde na poslední
+            }
+            modalImg.src = galleryImages[currentIndex].src;
+        }
+
+        galleryImages.forEach((img, index) => {
+            img.onclick = function() {
+                openModalWithImage(index);
+            }
+        });
+        
+        if(span) {
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+        }
+
+        if(modal) {
+            modal.onclick = function(event) {
+                // Zavře modal při kliknutí na pozadí (mimo obrázek a šipky)
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        }
+
+        if(prev) {
+            prev.onclick = function(e) {
+                e.stopPropagation(); // Zabrání zavření modalu
+                changeImage(-1);
+            }
+        }
+
+        if(next) {
+            next.onclick = function(e) {
+                e.stopPropagation(); // Zabrání zavření modalu
+                changeImage(1);
+            }
+        }
+
+        // Ovládání klávesnicí
+        document.addEventListener('keydown', function(e) {
+            if (modal && modal.style.display === "block") {
+                if (e.key === "ArrowLeft") {
+                    changeImage(-1);
+                } else if (e.key === "ArrowRight") {
+                    changeImage(1);
+                } else if (e.key === "Escape") {
+                    modal.style.display = "none";
+                }
+            }
+        });
+    });
+    </script>
+    <script src="/_vercel/insights/script.js"></script>
+</body>
+</html>

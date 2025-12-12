@@ -203,13 +203,21 @@ section:nth-child(2n) {
    4. HERO SECTION
    ========================================= */
 .hero {
-    /* Cesta upravena pro strukturu assets/css/style.css -> o úroveň výš do images */
-    background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.7)), url('assets/images/uvodni-obrazek.jpg');
+    /* Ujisti se, že cesta k obrázku odpovídá tvé struktře složek! */
+    background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.6)), url('assets/images/uvodni-obrazek.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Parallax efekt */
     color: var(--white);
-    padding: 140px 20px 100px;
+    
+    /* ZMĚNA: Nastavení výšky a centrování */
+    min-height: 85vh; /* Zabere 85% výšky obrazovky */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertikální centrování */
+    align-items: center; /* Horizontální centrování */
+    
+    padding: 0 20px; /* Padding stačí menší, flexbox to vyřeší */
     text-align: center;
 }
 
@@ -354,19 +362,40 @@ section:nth-child(2n) {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 40px;
-    align-items: start;
+    /* ZMĚNA: Smazáno align-items: start, aby se karty natáhly */
 }
 
 .service-card {
     background: var(--white);
     padding: 40px;
     border-radius: 16px;
-    /* Glass / Tech border efekt */
     border: 1px solid rgba(226, 232, 240, 0.8);
     box-shadow: 0 10px 30px -10px rgba(0,0,0,0.05);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    
+    /* ZMĚNA: Zajistí, že karta využije celou výšku, kterou jí grid nabídne */
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+}
+
+/* Asymetrie (posun každé druhé karty) - ponecháme, vypadá to moderně, 
+   ale upravíme hover, aby při natažené výšce nezlobil */
+@media (min-width: 768px) {
+    .service-card:nth-child(even) {
+        transform: translateY(30px);
+    }
+    .service-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 20px 40px -10px rgba(14, 165, 233, 0.15);
+        border-color: var(--secondary-color);
+        z-index: 2; /* Aby při zvětšení překrývala ostatní */
+    }
+    .service-card:nth-child(even):hover {
+        transform: translateY(20px) scale(1.02); /* Respektuje posun */
+    }
 }
 
 /* Barevný proužek nahoře */
@@ -814,20 +843,64 @@ section:nth-child(2n) {
     border-color: var(--secondary-color);
 }
 
+/* --- Parallax Separator (předěl s obrázkem) --- */
+.parallax-separator {
+    /* Použijeme stejný obrázek jako v hlavičce */
+    background-image: url('assets/images/uvodni-obrazek.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+    height: 400px; /* Výška průhledu */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 80px 0; /* Odstup od okolí */
+}
+
+/* Ztmavující vrstva přes obrázek, aby byl text čitelný */
+.parallax-separator::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.6); /* Tmavě modrý filtr */
+}
+
+.parallax-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--white);
+    padding: 20px;
+}
+
+.parallax-content h2 {
+    color: var(--white);
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
 /* Footer */
 footer {
     background-color: var(--primary-color);
     color: var(--white);
     padding: 80px 20px 40px;
-    margin-top: 60px;
+    margin-top: 100px; /* Větší odstup od obsahu */
 }
 
 .footer-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
+    /* ZMĚNA: Lepší responzivita pro sloupce */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 50px;
     max-width: 1100px;
     margin: 0 auto;
+    text-align: left; /* Zarovnání textu doleva */
 }
 
 .footer-grid h4 {
@@ -856,14 +929,18 @@ footer {
 }
 
 .social-icon img {
-    width: 24px;
-    height: 24px;
-    filter: invert(1) opacity(0.7); /* Bílé ikony */
+    width: 28px;
+    height: 28px;
+    /* ZMĚNA: Místo invert použijeme grayscale a jas pro neaktivní stav */
+    filter: grayscale(100%) brightness(200%); 
+    opacity: 0.6;
     transition: all 0.3s ease;
 }
 
 .social-icon:hover img {
-    filter: none; /* Originální barvy při hoveru */
+    /* Při najetí plná barva a plná viditelnost */
+    filter: grayscale(0%) brightness(100%);
+    opacity: 1;
     transform: scale(1.2);
 }
 

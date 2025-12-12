@@ -6,8 +6,8 @@
 
 :root {
     /* Nová "Tech" paleta barev */
-    --primary-color: #0f172a;   /* Hluboká tmavě modrá (nahrazuje starou #0a2342) */
-    --secondary-color: #0ea5e9; /* Svítivá elektrická modrá (nahrazuje starou #2ca58d) */
+    --primary-color: #0f172a;   /* Hluboká tmavě modrá */
+    --secondary-color: #0ea5e9; /* Svítivá elektrická modrá */
     --accent-color: #6366f1;    /* Fialová pro akcenty a gradienty */
     
     --text-color: #334155;      /* Moderní tmavě šedá pro lepší čitelnost */
@@ -28,7 +28,7 @@ html {
 }
 
 body {
-    font-family: 'Inter', sans-serif; /* Čistší a modernější než Roboto */
+    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.7;
@@ -39,7 +39,7 @@ body {
 
 h1, h2, h3, h4, h5, h6, .nav-logo {
     font-family: 'Space Grotesk', sans-serif;
-    letter-spacing: -0.03em; /* Moderní "tight" vzhled */
+    letter-spacing: -0.03em;
     color: var(--primary-color);
 }
 
@@ -73,7 +73,7 @@ section:nth-child(2n) {
    ========================================= */
 .main-nav {
     background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px); /* Efekt matného skla */
+    backdrop-filter: blur(10px);
     padding: 15px 20px;
     border-bottom: 1px solid rgba(0,0,0,0.05);
     position: fixed;
@@ -119,7 +119,6 @@ section:nth-child(2n) {
     color: var(--secondary-color);
 }
 
-/* Hamburger Menu */
 .hamburger {
     display: none;
     cursor: pointer;
@@ -136,7 +135,6 @@ section:nth-child(2n) {
     border-radius: 2px;
 }
 
-/* Language Switcher */
 .lang-switcher {
     position: relative;
     margin-left: 20px;
@@ -200,24 +198,25 @@ section:nth-child(2n) {
 }
 
 /* =========================================
-   4. HERO SECTION
+   4. HERO SECTION (Úvodní obrázek)
    ========================================= */
 .hero {
-    /* Ujisti se, že cesta k obrázku odpovídá tvé struktře složek! */
-    background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.6)), url('assets/images/uvodni-obrazek.jpg');
+    /* Cesta: vyskočit z css složky (..) -> do images */
+    background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.6)), url('../images/uvodni-obrazek.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Parallax efekt */
     color: var(--white);
     
-    /* ZMĚNA: Nastavení výšky a centrování */
-    min-height: 70vh; /* Zabere 85% výšky obrazovky */
+    /* Výška snížena na 60% obrazovky dle zadání */
+    min-height: 60vh; 
+    
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Vertikální centrování */
-    align-items: center; /* Horizontální centrování */
+    justify-content: center;
+    align-items: center;
     
-    padding: 0 20px; /* Padding stačí menší, flexbox to vyřeší */
+    padding: 0 20px;
     text-align: center;
 }
 
@@ -225,11 +224,7 @@ section:nth-child(2n) {
     font-size: 3.5em;
     margin: 0 0 20px 0;
     color: var(--white);
-    /* Jemný textový stín pro lepší čitelnost */
     text-shadow: 0 2px 10px rgba(0,0,0,0.3);
-    /* Pro hero nadpis zrušíme gradient textu, aby byl čitelný na tmavém pozadí */
-    background: none; 
-    -webkit-text-fill-color: initial;
 }
 
 .hero p {
@@ -240,7 +235,6 @@ section:nth-child(2n) {
     opacity: 0.9;
 }
 
-/* Page Header (pro blog a podstránky) */
 .page-header { 
     background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('../images/uvodni-obrazek.jpg');
     background-size: cover;
@@ -262,15 +256,13 @@ section:nth-child(2n) {
 }
 
 /* =========================================
-   5. COMMON COMPONENTS & HEADINGS
+   5. COMMON COMPONENTS
    ========================================= */
 .section-title {
     text-align: center;
     font-size: 2.8em;
     margin-bottom: 40px;
     font-weight: 700;
-    
-    /* Moderní gradient na nadpisech sekcí */
     background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -285,7 +277,6 @@ section:nth-child(2n) {
     margin: -20px auto 50px;
 }
 
-/* Tlačítka (CTA) */
 .cta-button {
     display: inline-block;
     background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
@@ -293,7 +284,7 @@ section:nth-child(2n) {
     padding: 14px 32px;
     text-decoration: none;
     font-weight: 700;
-    border-radius: 50px; /* Pill shape */
+    border-radius: 50px;
     box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
     border: none;
     text-transform: uppercase;
@@ -322,7 +313,7 @@ section:nth-child(2n) {
 }
 
 /* =========================================
-   6. SECTIONS (Mission, About, Services)
+   6. SECTIONS CONTENT
    ========================================= */
 #mission blockquote {
     font-size: 1.6em;
@@ -357,12 +348,12 @@ section:nth-child(2n) {
     font-size: 1.1em;
 }
 
-/* Services Grid s Asymetrií a Glassmorphismem */
+/* --- PILÍŘE (Services) --- */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 40px;
-    /* ZMĚNA: Smazáno align-items: start, aby se karty natáhly */
+    /* Karty se natáhnou na stejnou výšku */
 }
 
 .service-card {
@@ -374,31 +365,11 @@ section:nth-child(2n) {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-    
-    /* ZMĚNA: Zajistí, že karta využije celou výšku, kterou jí grid nabídne */
-    height: 100%; 
+    height: 100%; /* Plná výška v rámci gridu */
     display: flex;
     flex-direction: column;
 }
 
-/* Asymetrie (posun každé druhé karty) - ponecháme, vypadá to moderně, 
-   ale upravíme hover, aby při natažené výšce nezlobil */
-@media (min-width: 768px) {
-    .service-card:nth-child(even) {
-        transform: translateY(30px);
-    }
-    .service-card:hover {
-        transform: translateY(-10px) scale(1.02);
-        box-shadow: 0 20px 40px -10px rgba(14, 165, 233, 0.15);
-        border-color: var(--secondary-color);
-        z-index: 2; /* Aby při zvětšení překrývala ostatní */
-    }
-    .service-card:nth-child(even):hover {
-        transform: translateY(20px) scale(1.02); /* Respektuje posun */
-    }
-}
-
-/* Barevný proužek nahoře */
 .service-card::before {
     content: '';
     position: absolute;
@@ -421,6 +392,7 @@ section:nth-child(2n) {
     margin-bottom: 15px;
     text-transform: uppercase;
     letter-spacing: 1px;
+    margin-top: auto; /* Tlačí nadpis sekce dolů, pokud je obsah nahoře krátký */
 }
 
 .service-card ul {
@@ -443,27 +415,56 @@ section:nth-child(2n) {
     font-weight: 700;
 }
 
-/* Efekt asymetrie na desktopu */
+/* Hover efekt pro karty */
 @media (min-width: 768px) {
-    .service-card:nth-child(even) {
-        transform: translateY(30px);
-    }
-    
     .service-card:hover {
-        transform: translateY(-10px) scale(1.02); /* Větší zdvih při najetí */
+        transform: translateY(-10px) scale(1.02);
         box-shadow: 0 20px 40px -10px rgba(14, 165, 233, 0.15);
         border-color: var(--secondary-color);
-    }
-    
-    /* Musíme upravit hover pro sudé karty, aby neskákaly divně */
-    .service-card:nth-child(even):hover {
-        transform: translateY(20px) scale(1.02);
+        z-index: 2;
     }
 }
 
-/* =========================================
-   7. PROJECTS & WORKSHOPS
-   ========================================= */
+/* --- PARALLAX SEPARATOR (Nová sekce) --- */
+.parallax-separator {
+    background-image: url('../images/uvodni-obrazek.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 80px 0;
+}
+
+.parallax-separator::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.6);
+}
+
+.parallax-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--white);
+    padding: 20px;
+}
+
+.parallax-content h2 {
+    color: var(--white);
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+/* --- PROJECTS & WORKSHOPS --- */
 .projects-grid {
     display: flex;
     justify-content: center;
@@ -482,13 +483,13 @@ section:nth-child(2n) {
     height: 80px;
     object-fit: contain;
     margin-bottom: 15px;
-    filter: grayscale(100%); /* Černobílé loga v základu */
+    filter: grayscale(100%);
     opacity: 0.7;
     transition: all 0.3s ease;
 }
 
 .project-item:hover img {
-    filter: grayscale(0%); /* Barva při najetí */
+    filter: grayscale(0%);
     opacity: 1;
     transform: scale(1.1);
 }
@@ -517,9 +518,7 @@ section:nth-child(2n) {
     display: block;
 }
 
-/* =========================================
-   8. EVENTS LIST (Kde se potkat)
-   ========================================= */
+/* --- EVENTS --- */
 .events-list {
     list-style: none;
     padding: 0;
@@ -622,9 +621,7 @@ section:nth-child(2n) {
     fill: currentColor;
 }
 
-/* =========================================
-   9. BLOG (List & Detail)
-   ========================================= */
+/* --- BLOG LIST & DETAIL --- */
 .blog-list {
     padding: 60px 20px;
 }
@@ -660,7 +657,7 @@ section:nth-child(2n) {
 
 .article-card {
     display: flex;
-    gap: 0; /* Obrázek se dotýká obsahu */
+    gap: 0;
     margin-bottom: 40px;
     background: var(--white);
     border-radius: 16px;
@@ -736,7 +733,6 @@ section:nth-child(2n) {
     margin-left: 10px;
 }
 
-/* Blog Detail Styles */
 .article-detail-content {
     max-width: 800px;
     margin: 0 auto;
@@ -766,7 +762,6 @@ section:nth-child(2n) {
     box-shadow: 0 10px 40px rgba(0,0,0,0.1);
 }
 
-/* Pagination */
 .pagination-container {
     text-align: center;
     margin-top: 60px;
@@ -797,7 +792,7 @@ section:nth-child(2n) {
 }
 
 /* =========================================
-   10. CONTACT FORM & FOOTER
+   10. CONTACT & FOOTER
    ========================================= */
 .cta-container {
     text-align: center;
@@ -843,64 +838,19 @@ section:nth-child(2n) {
     border-color: var(--secondary-color);
 }
 
-/* --- Parallax Separator (předěl s obrázkem) --- */
-.parallax-separator {
-    /* Použijeme stejný obrázek jako v hlavičce */
-    background-image: url('assets/images/uvodni-obrazek.jpg'); 
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    
-    height: 400px; /* Výška průhledu */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin: 80px 0; /* Odstup od okolí */
-}
-
-/* Ztmavující vrstva přes obrázek, aby byl text čitelný */
-.parallax-separator::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(15, 23, 42, 0.6); /* Tmavě modrý filtr */
-}
-
-.parallax-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    color: var(--white);
-    padding: 20px;
-}
-
-.parallax-content h2 {
-    color: var(--white);
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    text-shadow: 0 4px 10px rgba(0,0,0,0.5);
-}
-
-/* Footer */
 footer {
     background-color: var(--primary-color);
     color: var(--white);
     padding: 80px 20px 40px;
-    margin-top: 100px; /* Větší odstup od obsahu */
+    margin-top: 100px;
 }
 
 .footer-grid {
     display: grid;
-    /* ZMĚNA: Lepší responzivita pro sloupce */
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 50px;
     max-width: 1100px;
     margin: 0 auto;
-    text-align: left; /* Zarovnání textu doleva */
 }
 
 .footer-grid h4 {
@@ -931,15 +881,15 @@ footer {
 .social-icon img {
     width: 28px;
     height: 28px;
-    /* ZMĚNA: Místo invert použijeme grayscale a jas pro neaktivní stav */
-    filter: grayscale(100%) brightness(200%); 
-    opacity: 0.6;
+    /* Bílá ikona s poloviční průhledností */
+    filter: brightness(0) invert(1);
+    opacity: 0.5;
     transition: all 0.3s ease;
 }
 
 .social-icon:hover img {
-    /* Při najetí plná barva a plná viditelnost */
-    filter: grayscale(0%) brightness(100%);
+    /* Plná viditelnost a originální barvy */
+    filter: none;
     opacity: 1;
     transform: scale(1.2);
 }
@@ -954,10 +904,9 @@ footer {
 }
 
 /* =========================================
-   11. RESPONSIVE ADJUSTMENTS
+   11. RESPONSIVE
    ========================================= */
 @media (max-width: 768px) {
-    /* Mobilní navigace */
     .nav-links-container {
         display: none;
         flex-direction: column;
@@ -994,12 +943,13 @@ footer {
         display: flex;
     }
     
-    /* Typografie na mobilu */
     h1 { font-size: 2.5em !important; }
-    .hero { padding: 100px 20px 60px; }
+    .hero { 
+        padding: 100px 20px 60px; 
+        min-height: auto; /* Na mobilu výšku nefixujeme */
+    }
     .hero p { font-size: 1.1em; }
     
-    /* Blog karty na mobilu */
     .article-card {
         flex-direction: column;
     }
@@ -1008,7 +958,6 @@ footer {
         flex: 0 0 200px;
     }
     
-    /* Events list na mobilu */
     .events-list li {
         flex-direction: column;
         align-items: flex-start;

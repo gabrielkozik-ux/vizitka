@@ -201,14 +201,14 @@ section:nth-child(2n) {
    4. HERO SECTION (Úvodní obrázek)
    ========================================= */
 .hero {
-    /* Cesta: vyskočit z css složky (..) -> do images */
-    background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.6)), url('assets/images/uvodni-obrazek.jpg');
+    /* Upravená cesta k obrázku */
+    background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.6)), url('../../assets/images/uvodni-obrazek.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Parallax efekt */
     color: var(--white);
     
-    /* Výška snížena na 60% obrazovky dle zadání */
+    /* Změna výšky na 60vh pro efekt "filmového pásu" */
     min-height: 60vh; 
     
     display: flex;
@@ -221,22 +221,23 @@ section:nth-child(2n) {
 }
 
 .hero h1 {
-    font-size: 3.5em;
+    font-size: 3.8em; /* Mírně zvětšeno */
     margin: 0 0 20px 0;
     color: var(--white);
     text-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 
 .hero p {
-    font-size: 1.4em;
+    font-size: 1.6em; /* Zvětšeno pro lepší čitelnost */
     font-weight: 300;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
-    opacity: 0.9;
+    opacity: 0.95;
+    line-height: 1.5;
 }
 
 .page-header { 
-    background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('assets/images/uvodni-obrazek.jpg');
+    background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('../../assets/images/uvodni-obrazek.jpg');
     background-size: cover;
     background-position: center;
     padding: 80px 20px; 
@@ -427,7 +428,7 @@ section:nth-child(2n) {
 
 /* --- PARALLAX SEPARATOR (Nová sekce) --- */
 .parallax-separator {
-    background-image: url('assets/images/uvodni-obrazek.jpg'); 
+    background-image: url('../../assets/images/uvodni-obrazek.jpg'); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -527,6 +528,16 @@ section:nth-child(2n) {
     display: flex;
     flex-direction: column;
     gap: 15px;
+}
+
+/* Odstranění margin-bottom u kontejnerů s archivy, aby zmizela mezera */
+#listopad-akce, #prosinec-akce, #archiv-akci {
+    margin-bottom: 20px !important; /* Zmenšeno z 50px */
+}
+
+/* Speciální úprava pro sekci nad workshopem, aby tam nebyla díra */
+#archiv-akci {
+     margin-bottom: 0 !important;
 }
 
 .events-list li {
@@ -881,16 +892,13 @@ footer {
 .social-icon img {
     width: 28px;
     height: 28px;
-    /* Bílá ikona s poloviční průhledností */
-    filter: brightness(0) invert(1);
-    opacity: 0.5;
+    /* Původní barvy ikon bez úprav, plná viditelnost */
+    filter: none;
+    opacity: 1;
     transition: all 0.3s ease;
 }
 
 .social-icon:hover img {
-    /* Plná viditelnost a originální barvy */
-    filter: none;
-    opacity: 1;
     transform: scale(1.2);
 }
 

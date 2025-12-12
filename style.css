@@ -211,7 +211,7 @@ section:nth-child(2n) {
     color: var(--white);
     
     /* ZMĚNA: Nastavení výšky a centrování */
-    min-height: 85vh; /* Zabere 85% výšky obrazovky */
+    min-height: 70vh; /* Zabere 85% výšky obrazovky */
     display: flex;
     flex-direction: column;
     justify-content: center; /* Vertikální centrování */

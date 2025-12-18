@@ -43,6 +43,12 @@ a {
 
 a:hover { color: var(--accent-color); }
 
+/* Reset pro figure, aby nedělal neplechu v blogu */
+figure {
+    margin: 0;
+    padding: 0;
+}
+
 .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -779,13 +785,6 @@ footer {
     background-color: var(--white);
 }
 
-/* Pokud chceš, aby články měly trochu "odsazený" vzhled na šedém pozadí (volitelné) */
-/*
-body.blog-article {
-    background-color: var(--light-gray);
-}
-*/
-
 /* Odkaz zpět */
 .back-link {
     display: inline-block;
@@ -856,14 +855,16 @@ body.blog-article {
     margin-bottom: 0.5em;
 }
 
-/* Obrázky v textu */
+/* Obrázky v textu - sjednocení s textem */
 .article-container img {
+    width: 100%; /* Roztáhne se na šířku textu (kontejneru) */
     max-width: 100%;
     height: auto;
     border-radius: var(--border-radius);
     margin: 2rem 0;
     box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     display: block;
+    object-fit: cover; /* Aby se obrázek nedeformoval */
 }
 
 /* Citace / Zvýraznění */

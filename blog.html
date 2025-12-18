@@ -12,234 +12,399 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     
-    <!-- Calendly widget -->
+    <!-- Calendly widget pro patičku/navigaci -->
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 </head>
 <body>
 
-    <!-- NAVIGACE -->
+    <!-- NAVIGACE (Stejná jako index.html) -->
     <nav class="main-nav">
         <a href="index.html" class="nav-logo">
             <img src="assets/images/profilova-fotka.jpg" alt="Profilová fotka Gabriel Kožík" class="nav-photo">
             <span>Mgr. Gabriel Kožík</span>
         </a>
-        <div class="nav-links">
-            <a href="index.html">Domů</a>
-            <a href="index.html#sluzby">Služby</a>
-            <a href="index.html#o-mne">O mně</a>
-            <a href="blog.html" class="active">Blog</a>
-            <a href="index.html#kontakt" class="btn-contact">Kontakt</a>
+        <div class="hamburger" tabindex="0" role="button" aria-label="Otevřít menu">
+            <div class="bar"></div><div class="bar"></div><div class="bar"></div>
         </div>
-        <div class="hamburger-menu">
-            <span></span>
-            <span></span>
-            <span></span>
+        <div class="nav-links-container">
+            <div class="nav-links">
+                <a href="index.html">Úvodní stránka</a>
+                <a href="blog.html" style="color: var(--secondary-color);">Blog</a>
+                <a href="index.html#propojit">Kontaktujte mě</a>
+            </div>
+            <div class="lang-switcher">
+                <button class="lang-button lang-switcher-button" aria-haspopup="true" aria-expanded="false">CZ <span class="arrow"></span></button>
+                <div class="lang-dropdown lang-switcher-dropdown">
+                    <a href="blog.html" class="active">CZ</a>
+                    <a href="blog-en.html">EN</a>
+                    <!-- FR a HU zatím nemají blog, odkazujeme na index -->
+                    <a href="index-fr.html">FR</a>
+                    <a href="index-hu.html">HU</a>
+                </div>
+            </div>
         </div>
     </nav>
 
-    <!-- ZÁHLAVÍ STRÁNKY -->
+    <!-- HERO SEKCE PRO BLOG -->
     <header class="page-header">
-        <h1>Blog & Aktuality</h1>
-        <p>Postřehy ze světa práva, AI a networkingu</p>
+        <div class="container">
+            <h1>Můj blog</h1>
+            <p>Postřehy ze světa AI, práva a podnikání</p>
+        </div>
     </header>
 
-    <!-- HLAVNÍ KONTEJNER BLOGU -->
-    <div class="blog-container">
-        
-        <!-- HLAVNÍ OBSAH -->
-        <main class="blog-main">
-            <!-- Filtry kategorií -->
+    <main class="blog-list">
+        <div class="container">
+            <!-- FILTRY -->
             <div class="filter-container">
-                <button class="filter-btn active" data-filter="all">Vše</button>
-                <button class="filter-btn" data-filter="pravo">Právo & Byznys</button>
-                <button class="filter-btn" data-filter="ai">AI & Technologie</button>
-                <button class="filter-btn" data-filter="networking">Networking</button>
-                <button class="filter-btn" data-filter="akce">Reportáže z akcí</button>
+                <button class="filter-btn active" data-filter="vsechny">Všechny</button>
+                <button class="filter-btn" data-filter="odborne">Odborné články</button>
+                <button class="filter-btn" data-filter="reportaz">Reportáže z akcí</button>
             </div>
 
-            <!-- Kontejner pro články (Grid) -->
-            <div id="blog-articles-container" class="blog-grid">
-                <!-- Články se načítají dynamicky přes JavaScript -->
-                <div class="loader" style="text-align: center; width: 100%; grid-column: 1/-1; padding: 40px;">
-                    Načítám články...
-                </div>
+            <!-- SEZNAM ČLÁNKŮ -->
+            <div id="articles-container">
+                <article class="article-card" data-category="reportaz">
+                    <div class="article-image">
+                        <img src="assets/images/blog/bforb-listopad-2025/3.jpg" alt="Účastníci na networkingové snídani BforB v Tišnově" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <p class="article-meta">Publikováno: 7. listopadu 2025</p>
+                        <h2><a href="blog/bforb-listopad-2025/bforb-listopad-2025.html">Káva, vize a skvělé jídlo: Reportáž z BforB setkání v Laskala Café Tišnov</a></h2>
+                        <p class="article-excerpt">Ohlédnutí za listopadovou snídaní BforB Tišnov v nově otevřené kavárně Laskala. Skvělá atmosféra, 7 hostů a plány na propojení podnikatelů a města.</p>
+                        <a href="blog/bforb-listopad-2025/bforb-listopad-2025.html" class="read-more-btn">Přečíst celý článek</a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="reportaz">
+                    <div class="article-image">
+                        <img src="assets/images/blog/podnikavci-kurim-rijen/3.jpg" alt="Účastníci na networkingové akci Klubu Podnikavců v Kuřimi" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <p class="article-meta">Publikováno: 17. října 2025</p>
+                        <h2><a href="blog/podnikavci-kurim-rijen/podnikavci-kurim-rijen.html">Marketing pro Gen Z a Inovace v Povlečení: Reportáž z Klubu Podnikavců v Kuřimi</a></h2>
+                        <p class="article-excerpt">Ohlédnutí za říjnovým setkáním Klubu Podnikavců v Kuřimi, kde se řešil obsahový marketing pro mladou generaci a představil se inovativní projekt neshrnujícího se povlečení.</p>
+                        <a href="blog/podnikavci-kurim-rijen/podnikavci-kurim-rijen.html" class="read-more-btn">Přečíst celý článek</a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="reportaz">
+                    <div class="article-image">
+                        <img src="assets/images/blog/tyden-inovaci-2025/1.jpg" alt="Gabriel Kožík na Týdnu inovací 2025" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <p class="article-meta">Publikováno: 15. října 2025</p>
+                        <h2><a href="blog/tyden-inovaci-2025/tyden-inovaci-2025.html">AI Act v praxi: Ohlédnutí za Týdnem inovací 2025</a></h2>
+                        <p class="article-excerpt">Minulý týden se Praha opět stala epicentrem technologického dění. Podívejte se na ohlédnutí za mou přednáškou o AI Actu a postřehy z největší inovační akce ve střední Evropě.</p>
+                        <a href="blog/tyden-inovaci-2025/tyden-inovaci-2025.html" class="read-more-btn">Přečíst celý článek</a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="reportaz">
+                    <div class="article-image">
+                        <img src="assets/images/blog/networking-palava-14/7.jpg" alt="Účastníci 14. setkání Klubu Pod Pálavou" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <p class="article-meta">Publikováno: 8. října 2025</p>
+                        <h2><a href="blog/networking-palava-14/networking-palava-14.html">Otestujte své smysly na maximum! Reportáž ze 14. setkání Klubu Pod Pálavou</a></h2>
+                        <p class="article-excerpt">Ohlédnutí za 14. setkáním Klubu Pod Pálavou, kde jsme testovali naše smysly na maximum a zkoušeli si kooperativní židličkovanou.</p>
+                        <a href="blog/networking-palava-14/networking-palava-14.html" class="read-more-btn">Přečíst celý článek</a>
+                    </div>
+                </article>
+
+                 <article class="article-card" data-category="odborne">
+                    <div class="article-image">
+                        <img src="assets/images/blog/prevod-podilu-sro-nz/nz-podil.png" alt="Notářský zápis a převod podílu v s.r.o." loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <h2><a href="blog/prevod-podilu-sro-nz/prevod-podilu-sro-nz.html">Převod podílu v s.r.o. a notářský zápis: Mýty a fakta</a></h2>
+                        <p class="article-excerpt">Analýza, zda je pro souhlas valné hromady s převodem podílu nutný notářský zápis. Klíčová soudní rozhodnutí a praktické dopady pro s.r.o.</p>
+                        <a href="blog/prevod-podilu-sro-nz/prevod-podilu-sro-nz.html" class="read-more-btn">Přečíst celý článek</a>
+                    </div>
+                </article>
+
+                 <article class="article-card" data-category="odborne">
+                    <div class="article-image">
+                        <img src="https://placehold.co/300x250/0a2342/ffffff?text=AI+Agenti" alt="Symbolické znázornění autonomních AI agentů" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <h2><a href="blog/ai-agenti-nova-era-byznysu/ai-agenti-nova-era-byznysu.html">AI Agenti: Hrozba, nebo největší byznysová příležitost od dob internetu?</a></h2>
+                        <p class="article-excerpt">Analýza nástupu AI agentů. Zjistěte, jak transformují trh práce, jaké přinášejí příležitosti a jak se bránit kritickým bezpečnostním rizikům jako je Prompt Injection.</p>
+                        <a href="blog/ai-agenti-nova-era-byznysu/ai-agenti-nova-era-byznysu.html" class="read-more-btn">Přečíst celý článek</a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="odborne">
+                    <div class="article-image">
+                        <img src="assets/images/blog/advokati-a-ai/llm-advokacie.jpg" alt="Advokát na křižovatce mezi tradičním a moderním právem s AI" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <h2><a href="blog/advokati-a-ai/advokati-a-ai.html">Advokacie na křižovatce: Hrozba nebo příležitost?</a></h2>
+                        <p class="article-excerpt">Analýza dopadů umělé inteligence na právní profesi v České republice. Představuje AI pro advokáty existenční hrozbu, nebo bezprecedentní příležitost k transformaci a růstu?</p>
+                        <a href="blog/advokati-a-ai/advokati-a-ai.html" class="read-more-btn">Přečíst celý článek</a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="odborne">
+                    <div class="article-image">
+                        <img src="assets/images/blog/novela-hlaseni-zamestnancu-2025/hlaseni-zamestnancu-2025.png" alt="Infografika srovnávající starý a nový způsob ohlašování zaměstnanců." loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <p class="article-meta">Publikováno: 6. října 2025</p>
+                        <h2><a href="blog/novela-hlaseni-zamestnancu-2025/novela-hlaseni-zamestnancu-2025.html">Konec tolerance: Novela od 1. 10. 2025 zpřísňuje pravidla pro zaměstnávání cizinců</a></h2>
+                        <p class="article-excerpt">Dosud benevolentní pravidla pro ohlašování cizinců končí. Novela zákona o zaměstnanosti ruší možnost zpětného nahlášení a zavádí pojem "nehlášená práce", za kterou hrozí likvidační pokuty.</p>
+                        <a href="blog/novela-hlaseni-zamestnancu-2025/novela-hlaseni-zamestnancu-2025.html" class="read-more-btn">Přečíst celý článek</a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="reportaz">
+                    <div class="article-image">
+                        <img src="assets/images/blog/reportaz-bforb-tisnov-rijen-2025/tisnov-02-10.jpg" alt="Členové klubu BforB Tišnov u hořícího krbu v penzionu Laskala" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <p class="article-meta">Publikováno: 3. října 2025</p>
+                        <h2><a href="blog/reportaz-bforb-tisnov-rijen-2025/reportaz-bforb-tisnov-rijen-2025.html">Méně vizitek, více upřímnosti: Tišnovský BforB klub zažehl novou éru</a></h2>
+                        <p class="article-excerpt">Ohlédnutí za netradičním setkáním členů BforB Tišnov v penzionu Laskala, kde se místo vizitek sdílely vize, očekávání a upřímnost.</p>
+                        <a href="blog/reportaz-bforb-tisnov-rijen-2025/reportaz-bforb-tisnov-rijen-2025.html" class="read-more-btn">Přečíst celý článek</a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="reportaz">
+                    <div class="article-image">
+                        <img src="assets/images/blog/reportaz-workshop-zari-2025/workshop19-9.jpg" alt="Účastnice zářijového AI workshopu v Brně" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <p class="article-meta">Publikováno: 20. září 2025</p>
+                        <h2><a href="blog/reportaz-workshop-zari-2025/reportaz-workshop-zari-2025.html">Hluboký ponor do AI: Reportáž ze zářijového workshopu</a></h2>
+                        <p class="article-excerpt">Ohlédnutí za workshopem z 19. září, kde jsme se ponořili do pokročilých technik s Gemini, NotebookLM a Google AI Studiem. Skvělá dámská sestava a spousta praktických ukázek.</p>
+                        <a href="blog/reportaz-workshop-zari-2025/reportaz-workshop-zari-2025.html" class="read-more-btn">Přečíst celý článek</a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="reportaz">
+                    <div class="article-image">
+                        <img src="assets/images/blog/firemni-kultura-alveno-reportaz/2.jpg" alt="Účastníci na akci Firemní kultura: Večer s Alveno" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <p class="article-meta">Publikováno: 12. září 2025</p>
+                        <h2><a href="blog/firemni-kultura-alveno-reportaz/firemni-kultura-alveno-reportaz.html">Když se spojí výjimeční lidé: Reportáž z večera s Alveno</a></h2>
+                        <p class="article-excerpt">Ohlédnutí za naším prvním B2B setkáním 'Firemní kultura: Večer s Alveno', které propojilo desítky inspirativních osobností a otevřelo klíčová témata dnešní doby.</p>
+                        <a href="blog/firemni-kultura-alveno-reportaz/firemni-kultura-alveno-reportaz.html" class="read-more-btn">Přečíst celý článek</a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="reportaz">
+                    <div class="article-image">
+                        <img src="assets/images/blog/networking-palava-12/2.jpg" alt="Účastníci networkingového setkání Pod Pálavou" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <p class="article-meta">Publikováno: 3. září 2025</p>
+                        <h2><a href="blog/networking-palava-12/networking-palava-12.html">Ohlédnutí za 12. setkáním klubu Pod Pálavou</a></h2>
+                        <p class="article-excerpt">Reportáž z 12. networkingového setkání klubu Pod Pálavou. Skvělá atmosféra, inspirativní myšlenky a praktický workshop o využití AI v byznysu. Podívejte se, jaké to bylo a kdy se můžete přidat příště.</p>
+                        <a href="blog/networking-palava-12/networking-palava-12.html" class="read-more-btn">Přečíst celý článek</a>
+                    </div>
+                </article>
+
+                 <article class="article-card" data-category="reportaz">
+                    <div class="article-image">
+                        <img src="assets/images/blog/firemni-kultura-alveno/firemni-kultura-alveno.jpg" alt="Pozvánka na večer s Alveno o firemní kultuře" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <p class="article-meta">Publikováno: 23. srpna 2025 (Pozvánka na akci)</p>
+                        <h2><a href="blog/firemni-kultura-alveno/firemni-kultura-alveno.html">Firemní kultura: Večer s Alveno</a></h2>
+                        <p class="article-excerpt">Zveme vás na exkluzivní setkání pro majitele firem, C-level manažery a etablované podnikatele zaměřené na budování firemní kultury jako strategické výhody. Čekají vás panelové diskuze, workshopy a networking na té nejvyšší úrovni.</p>
+                        <a href="blog/firemni-kultura-alveno/firemni-kultura-alveno.html" class="read-more-btn">Zjistit více a registrovat se</a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="reportaz">
+                    <div class="article-image">
+                        <img src="assets/images/blog/reportaz-workshop-srpen-2025/workshop22-8.jpg" alt="Účastníci AI workshopu v Brně" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <p class="article-meta">Publikováno: 22. srpna 2025</p>
+                        <h2><a href="blog/reportaz-workshop-srpen-2025/reportaz-workshop-srpen-2025.html">Další AI workshop je za námi! Podívejte se, co jsme probírali</a></h2>
+                        <p class="article-excerpt">Ohlédnutí za úspěšným workshopem zaměřeným na praktické využití AI nástrojů. Skvělá atmosféra, spousta "aha" momentů a praktické ukázky, jak umělá inteligence může reálně šetřit čas a podpořit kreativitu.</p>
+                        <a href="blog/reportaz-workshop-srpen-2025/reportaz-workshop-srpen-2025.html" class="read-more-btn">Přečíst celý článek</a>
+                    </div>
+                </article>
+
+                 <article class="article-card" data-category="reportaz">
+                    <div class="article-image">
+                        <img src="assets/images/blog/reportaz-workshop-cervenec-2025/workshop18-7.jpg" alt="Účastníci prvního AI workshopu v Brně" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <p class="article-meta">Publikováno: 19. července 2025</p>
+                        <h2><a href="blog/reportaz-workshop-cervenec-2025/reportaz-workshop-cervenec-2025.html">První AI workshop odstartoval! Skvělá parta a spousta objevů</a></h2>
+                        <p class="article-excerpt">Ohlédnutí za historicky prvním workshopem zaměřeným na praktické využití AI nástrojů. Skvělá atmosféra, demystifikace AI a první kroky s Gemini a NotebookLM.</p>
+                        <a href="blog/reportaz-workshop-cervenec-2025/reportaz-workshop-cervenec-2025.html" class="read-more-btn">Přečíst celý článek</a>
+                    </div>
+                </article>
+
+                 <article class="article-card" data-category="reportaz">
+                    <div class="article-image">
+                        <img src="assets/images/blog/cs-tech-summit-2025/1.jpg" alt="Přednáška na Česko-slovenském technologickém summitu" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <p class="article-meta">Publikováno: 5. června 2025</p>
+                        <h2><a href="/blog/cs-tech-summit-2025/cs-tech-summit-2025.html">Právo a technologie v srdci Moravy: Reportáž z CS-Tech Summitu</a></h2>
+                        <p class="article-excerpt">Ohlédnutí za mou přednáškou na téma "Regulace AI v ČR" na Česko-slovenském technologickém summitu na Zámku Mikulov a za inspirativní atmosférou celé akce.</p>
+                        <a href="/blog/cs-tech-summit-2025/cs-tech-summit-2025.html" class="read-more-btn">Přečíst celý článek</a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="odborne">
+                    <div class="article-image">
+                        <img src="assets/images/blog/ai-v-byznysu-4-cesty/ai-v-byznysu-4-cesty.jpg" alt="Abstraktní vizualizace dat a umělé inteligence" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <h2><a href="blog/ai-v-byznysu/ai-v-byznysu-4-cesty.html">AI v byznysu: 4 cesty, kudy nevědomky unikají vaše firemní data</a></h2>
+                        <p class="article-excerpt">Využívání AI nástrojů se stalo běžnou součástí firemní praxe. Mnozí si však neuvědomují rizika spojená s ochranou citlivých dat. Pojďme se podívat na čtyři nejčastější scénáře, jak může docházet k únikům, a jak jim předejít.</p>
+                        <a href="blog/ai-v-byznysu/ai-v-byznysu-4-cesty.html" class="read-more-btn">Přečíst celý článek</a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="odborne">
+                    <div class="article-image">
+                        <img src="assets/images/blog/ai-act-byznys/prezentace-ai.jpg" alt="Symbolické znázornění práva a umělé inteligence" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <h2><a href="blog/ai-act-byznys/ai-act-byznys.html">Regulace AI v byznysu: Jste připraveni na AI Act?</a></h2>
+                        <p class="article-excerpt">Umělá inteligence už není sci-fi, ale každodenní nástroj, který pomáhá firmám inovovat, automatizovat a růst. S velkou mocí ale přichází i odpovědnost – a teď i nová pravidla.</p>
+                        <a href="blog/ai-act-byznys/ai-act-byznys.html" class="read-more-btn">Přečíst celý článek</a>
+                    </div>
+                </article>
             </div>
-
-            <!-- Paginace -->
-            <div class="pagination" id="pagination-container">
-                <!-- Generováno JS -->
-            </div>
-        </main>
-
-        <!-- SIDEBAR -->
-        <aside class="blog-sidebar">
-            <div class="widget">
-                <h3>O autorovi</h3>
-                <p>Jsem advokát, networker a AI nadšenec. Pomáhám firmám růst bezpečně a efektivně.</p>
-                <a href="index.html#o-mne" style="color: #0056b3; font-weight: bold; text-decoration: none;">Více o mně &rarr;</a>
-            </div>
-
-            <div class="widget">
-                <h3>Hledat</h3>
-                <input type="text" id="search-input" placeholder="Hledat v článcích..." style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
-            </div>
-
-            <div class="widget">
-                <h3>Nejčtenější témata</h3>
-                <ul>
-                    <li><a href="#" class="filter-link" data-filter="ai">Umělá inteligence ve firmách</a></li>
-                    <li><a href="#" class="filter-link" data-filter="pravo">Právní novinky 2025</a></li>
-                    <li><a href="#" class="filter-link" data-filter="networking">Jak efektivně networkovat</a></li>
-                </ul>
-            </div>
-        </aside>
-
-    </div>
-
-    <!-- NOVÁ PATIČKA (Konzistentní s index.html) -->
-    <footer class="main-footer">
-        <div class="footer-container">
-            <!-- Sloupec 1: Info -->
-            <div class="footer-col">
-                <h4>Mgr. Gabriel Kožík</h4>
-                <p>Advokát, Networker, AI Expert.</p>
-                <p>Propojuji svět práva s moderními technologiemi a lidským přístupem. Pomáhám firmám i jednotlivcům růst.</p>
-            </div>
-
-            <!-- Sloupec 2: Odkazy -->
-            <div class="footer-col">
-                <h4>Rychlé odkazy</h4>
-                <ul class="footer-links">
-                    <li><a href="index.html">Úvod</a></li>
-                    <li><a href="index.html#sluzby">Služby</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="index.html#kontakt">Kontakt</a></li>
-                    <li><a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/gabrielkozik'});return false;">Rezervovat konzultaci</a></li>
-                </ul>
-            </div>
-
-            <!-- Sloupec 3: Kontakt a Social -->
-            <div class="footer-col">
-                <h4>Kontakt</h4>
-                <p><strong>Email:</strong> gabriel@kozik.cz</p> <!-- Placeholder, doplň reálný -->
-                <p><strong>Lokality:</strong> Tišnov, Brno & Online</p>
-                
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/gabrielkozik/" target="_blank" class="social-icon">
-                        <img src="assets/images/linkedin.png" alt="LinkedIn">
-                    </a>
-                    <a href="https://www.facebook.com/" target="_blank" class="social-icon">
-                        <img src="assets/images/facebook.png" alt="Facebook">
-                    </a>
-                    <a href="https://www.instagram.com/" target="_blank" class="social-icon">
-                        <img src="assets/images/instagram.png" alt="Instagram">
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2025 Mgr. Gabriel Kožík. Všechna práva vyhrazena.</p>
-        </div>
-    </footer>
-
-    <!-- SKRIPTY -->
-    <script src="assets/js/blog-data.js"></script>
-    <script>
-        // Logika pro blog (filtrování, paginace)
-        document.addEventListener('DOMContentLoaded', function() {
-            const articlesContainer = document.getElementById('blog-articles-container');
-            const paginationContainer = document.getElementById('pagination-container');
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            const sidebarLinks = document.querySelectorAll('.filter-link');
-            const searchInput = document.getElementById('search-input');
             
-            const itemsPerPage = 6;
-            let currentPage = 1;
-            let currentFilter = 'all';
-            let searchQuery = '';
+            <div class="pagination-container"></div>
+        </div>
+    </main>
 
-            // Funkce pro získání filtrovaných článků
+    <!-- PATIČKA (Stejná jako index.html) -->
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h4>Mgr. Gabriel Kožík</h4>
+                <p>Advokát & AI Stratég</p>
+                <div class="social-icons-container">
+                    <a href="https://www.linkedin.com/in/gabriel-kozik/" target="_blank" class="social-icon" aria-label="LinkedIn profil"><img src="assets/images/linkedin.png" alt="LinkedIn ikona"></a>
+                    <a href="https://www.facebook.com/somslovak" target="_blank" class="social-icon" aria-label="Facebook profil"><img src="assets/images/facebook.png" alt="Facebook ikona"></a>
+                    <a href="https://www.instagram.com/kozik_gabriel/" target="_blank" class="social-icon" aria-label="Instagram profil"><img src="assets/images/instagram.png" alt="Instagram ikona"></a>
+                    <a href="https://www.youtube.com/@gabriel-kozik" target="_blank" class="social-icon" aria-label="YouTube kanál"><img src="assets/images/youtube.png" alt="YouTube ikona"></a>
+                </div>
+            </div>
+            <div><h4>Kontakt</h4><p>E-mail: <a href="mailto:kozik@iustoria.cz">kozik@iustoria.cz</a></p><p>Telefon: <a href="tel:+420720265713">+420 720 265 713</a></p><p>Datová schránka: eygwp2c</p></div>
+            <div><h4>Kancelář</h4><p>IUSTORIA, advokátní kancelář, s.r.o.</p><p>Slovákova 279/11, 602 00 Brno</p><p><a href="http://www.iustoria.cz" target="_blank">www.iustoria.cz</a></p></div>
+            <div><h4>Zápis v ČAK</h4><p>ev. č.: 19320</p><p>IČO (fyzická osoba): 05187559</p><p>společník s.r.o.</p></div>
+        </div>
+        <div class="copyright"><p>&copy; 2025 Mgr. Gabriel Kožík. Všechna práva vyhrazena.</p></div>
+    </footer>
+    
+    <!-- SKRIPTY PRO NAVIGACI A FILTROVÁNÍ -->
+    <script>
+        // Logika pro Hamburger menu
+        const hamburger = document.querySelector('.hamburger');
+        const navLinksContainer = document.querySelector('.nav-links-container');
+
+        function toggleMenu() {
+            const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+            hamburger.setAttribute('aria-expanded', !isExpanded);
+            navLinksContainer.classList.toggle('active');
+        }
+
+        hamburger.addEventListener('click', toggleMenu);
+        hamburger.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                toggleMenu();
+            }
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinksContainer.classList.contains('active')) {
+                    navLinksContainer.classList.remove('active');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+
+        // Logika pro přepínač jazyků
+        const langButton = document.querySelector('.lang-switcher-button');
+        const langDropdown = document.querySelector('.lang-switcher-dropdown');
+        function toggleLangDropdown() {
+             const isExpanded = langButton.getAttribute('aria-expanded') === 'true';
+             langButton.setAttribute('aria-expanded', !isExpanded);
+             langButton.classList.toggle('active');
+             langDropdown.style.display = langDropdown.style.display === 'block' ? 'none' : 'block';
+        }
+        langButton.addEventListener('click', e => { e.stopPropagation(); toggleLangDropdown(); });
+        
+        window.addEventListener('click', e => {
+            if (navLinksContainer.classList.contains('active') && !navLinksContainer.contains(e.target) && !hamburger.contains(e.target)) {
+                navLinksContainer.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+            }
+            if (langButton.classList.contains('active') && !langButton.parentElement.contains(e.target)) {
+                toggleLangDropdown();
+            }
+        });
+
+        // Logika pro filtrování a stránkování blogu
+        document.addEventListener('DOMContentLoaded', function () {
+            const articlesContainer = document.getElementById('articles-container');
+            const allArticles = Array.from(articlesContainer.getElementsByClassName('article-card'));
+            const paginationContainer = document.querySelector('.pagination-container');
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            
+            const articlesPerPage = 6; // Zobrazujeme více článků, když je stránka širší
+            let currentFilter = 'vsechny';
+            
             function getFilteredArticles() {
-                // blogArticles je definováno v blog-data.js
-                if (typeof blogArticles === 'undefined') return [];
-
-                return blogArticles.filter(article => {
-                    const matchesCategory = currentFilter === 'all' || article.category === currentFilter;
-                    const matchesSearch = article.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                                          article.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
-                    return matchesCategory && matchesSearch;
-                });
+                if (currentFilter === 'vsechny') {
+                    return allArticles;
+                }
+                return allArticles.filter(article => article.dataset.category === currentFilter);
             }
 
-            // Zobrazení článků
             function displayPage(page, articles) {
-                currentPage = page;
-                articlesContainer.innerHTML = '';
-                
-                const start = (page - 1) * itemsPerPage;
-                const end = start + itemsPerPage;
-                const paginatedItems = articles.slice(start, end);
+                const startIndex = (page - 1) * articlesPerPage;
+                const endIndex = startIndex + articlesPerPage;
 
-                if (paginatedItems.length === 0) {
-                    articlesContainer.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: #777;">Nebyly nalezeny žádné články odpovídající zadání.</p>';
+                // Nejdříve skryjeme vše
+                allArticles.forEach(article => article.style.display = 'none');
+                
+                const articlesToShow = articles.slice(startIndex, endIndex);
+                articlesToShow.forEach(article => {
+                    article.style.display = 'flex'; // Používáme flex z CSS
+                });
+                
+                setupPaginationButtons(page, articles);
+                window.scrollTo(0, 0);
+            }
+
+            function setupPaginationButtons(currentPage, articles) {
+                paginationContainer.innerHTML = '';
+                const totalPages = Math.ceil(articles.length / articlesPerPage);
+
+                 if (totalPages <= 1) {
+                    paginationContainer.style.display = 'none';
                     return;
                 }
-
-                paginatedItems.forEach(article => {
-                    const articleCard = document.createElement('article');
-                    articleCard.className = 'blog-card';
-                    
-                    // Fallback obrázek
-                    const imgUrl = article.image || 'assets/images/uvodni-obrazek.jpg';
-                    
-                    articleCard.innerHTML = `
-                        <div class="blog-card-img" style="background: url('${imgUrl}') center/cover no-repeat;"></div>
-                        <div class="blog-card-content">
-                            <div class="blog-card-meta">
-                                <span class="date">${article.date}</span>
-                                <span class="category" style="color: #0056b3; font-weight: 500;">${getCategoryName(article.category)}</span>
-                            </div>
-                            <h2 class="blog-card-title"><a href="${article.link}">${article.title}</a></h2>
-                            <p class="blog-card-excerpt">${article.excerpt}</p>
-                            <div class="blog-card-footer">
-                                <a href="${article.link}" class="read-more">Číst více &rarr;</a>
-                            </div>
-                        </div>
-                    `;
-                    articlesContainer.appendChild(articleCard);
-                });
-
-                renderPagination(articles.length);
-            }
-
-            // Pomocná funkce pro hezčí názvy kategorií
-            function getCategoryName(catSlug) {
-                const names = {
-                    'pravo': 'Právo',
-                    'ai': 'AI & Tech',
-                    'networking': 'Networking',
-                    'akce': 'Reportáž'
-                };
-                return names[catSlug] || catSlug;
-            }
-
-            // Vykreslení paginace
-            function renderPagination(totalItems) {
-                paginationContainer.innerHTML = '';
-                const totalPages = Math.ceil(totalItems / itemsPerPage);
-
-                if (totalPages <= 1) return;
+                paginationContainer.style.display = 'block';
 
                 // Tlačítko Předchozí
                 const prevButton = document.createElement('a');
                 prevButton.href = '#';
                 prevButton.innerHTML = '&laquo; Předchozí';
-                if (currentPage === 1) prevButton.classList.add('disabled');
+                if (currentPage === 1) {
+                    prevButton.classList.add('disabled');
+                }
                 prevButton.addEventListener('click', (e) => {
                     e.preventDefault();
-                    if (currentPage > 1) displayPage(currentPage - 1, getFilteredArticles());
+                    if (currentPage > 1) {
+                        displayPage(currentPage - 1, articles);
+                    }
                 });
                 paginationContainer.appendChild(prevButton);
 
@@ -248,11 +413,12 @@
                     const pageButton = document.createElement('a');
                     pageButton.href = '#';
                     pageButton.innerText = i;
-                    if (i === currentPage) pageButton.classList.add('active');
-                    
+                    if (i === currentPage) {
+                        pageButton.classList.add('active');
+                    }
                     pageButton.addEventListener('click', (e) => {
                         e.preventDefault();
-                        displayPage(i, getFilteredArticles());
+                        displayPage(i, articles);
                     });
                     paginationContainer.appendChild(pageButton);
                 }
@@ -261,50 +427,31 @@
                 const nextButton = document.createElement('a');
                 nextButton.href = '#';
                 nextButton.innerHTML = 'Další &raquo;';
-                if (currentPage === totalPages) nextButton.classList.add('disabled');
+                if (currentPage === totalPages) {
+                    nextButton.classList.add('disabled');
+                }
                 nextButton.addEventListener('click', (e) => {
                     e.preventDefault();
-                    if (currentPage < totalPages) displayPage(currentPage + 1, getFilteredArticles());
+                    if (currentPage < totalPages) {
+                        displayPage(currentPage + 1, articles);
+                    }
                 });
                 paginationContainer.appendChild(nextButton);
             }
             
-            // Eventy pro filtrovací tlačítka
             filterButtons.forEach(button => {
                 button.addEventListener('click', function() {
                     filterButtons.forEach(btn => btn.classList.remove('active'));
                     this.classList.add('active');
                     currentFilter = this.dataset.filter;
-                    currentPage = 1;
                     displayPage(1, getFilteredArticles());
                 });
             });
 
-            // Eventy pro odkazy v sidebaru (pokud existují)
-            sidebarLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    // Najít odpovídající tlačítko filtru a aktivovat ho
-                    const filterValue = this.dataset.filter;
-                    const targetBtn = document.querySelector(`.filter-btn[data-filter="${filterValue}"]`);
-                    if(targetBtn) targetBtn.click();
-                });
-            });
-
-            // Vyhledávání
-            if(searchInput) {
-                searchInput.addEventListener('input', (e) => {
-                    searchQuery = e.target.value;
-                    currentPage = 1;
-                    displayPage(1, getFilteredArticles());
-                });
-            }
-
-            // Počáteční načtení - malý timeout, aby se stihl načíst blog-data.js
-            setTimeout(() => {
-                displayPage(1, getFilteredArticles());
-            }, 100);
+            // Počáteční načtení
+            displayPage(1, getFilteredArticles());
         });
     </script>
+    <script src="/_vercel/insights/script.js"></script>
 </body>
 </html>

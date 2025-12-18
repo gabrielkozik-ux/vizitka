@@ -857,15 +857,15 @@ footer {
 
 /* Obrázky v textu - sjednocení s textem */
 .article-container img {
-    display: block;        /* Zamezí řádkovému chování, obrázek bude blok */
-    width: 100%;           /* Roztáhne se přesně na šířku kontejneru */
-    max-width: 100%;       /* Pojistka proti přetečení */
-    height: auto;          /* Automaticky dopočítá výšku pro zachování poměru */
+    display: block !important;     /* Vynutit blokové zobrazení */
+    width: 100% !important;        /* Vynutit šířku na 100% kontejneru */
+    max-width: 100% !important;    /* Vynutit maximální šířku, aby nepřetekl */
+    height: auto !important;       /* Vynutit automatickou výšku (zachování poměru stran) */
     border-radius: var(--border-radius);
     margin: 2rem 0;
     box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-    object-fit: cover;     /* Zajistí, že se obrázek nedeformuje */
-    box-sizing: border-box; /* Započítá padding a border do šířky */
+    object-fit: cover;     
+    box-sizing: border-box; 
 }
 
 /* Citace / Zvýraznění */

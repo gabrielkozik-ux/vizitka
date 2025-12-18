@@ -3,161 +3,308 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | Gabriel Kozík</title>
+    <title>Blog | Mgr. Gabriel Kožík</title>
+    <meta name="description" content="Články a postřehy o právu, umělé inteligenci a růstu podnikání.">
+    
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    
+    <!-- EXTERNÍ CSS -->
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Calendly widget -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 </head>
 <body>
 
     <!-- NAVIGACE -->
     <nav class="main-nav">
         <a href="index.html" class="nav-logo">
-            <img src="assets/images/profilova-fotka.jpg" alt="Gabriel Kozík" class="nav-photo">
-            Gabriel Kozík
+            <img src="assets/images/profilova-fotka.jpg" alt="Profilová fotka Gabriel Kožík" class="nav-photo">
+            <span>Mgr. Gabriel Kožík</span>
         </a>
-        <div class="hamburger" onclick="toggleMenu()">
-            <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+        <div class="nav-links">
+            <a href="index.html">Domů</a>
+            <a href="index.html#sluzby">Služby</a>
+            <a href="index.html#o-mne">O mně</a>
+            <a href="blog.html" class="active">Blog</a>
+            <a href="index.html#kontakt" class="btn-contact">Kontakt</a>
         </div>
-        <div class="nav-links-container">
-            <div class="nav-links">
-                <a href="index.html#sluzby">Služby</a>
-                <a href="index.html#kde-se-potkat">Akce</a>
-                <a href="blog.html" class="active">Blog</a> <!-- Active class -->
-                <a href="index.html#kontakt">Kontakt</a>
-            </div>
-            <div class="lang-switcher">
-                <button class="lang-button" onclick="toggleLangMenu()">CS <span class="arrow"></span></button>
-                <div class="lang-dropdown" id="langDropdown">
-                    <a href="blog-en.html">EN</a>
-                </div>
-            </div>
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </nav>
 
-    <div class="page-header">
-        <h1>Blog & Novinky</h1>
+    <!-- ZÁHLAVÍ STRÁNKY -->
+    <header class="page-header">
+        <h1>Blog & Aktuality</h1>
         <p>Postřehy ze světa práva, AI a networkingu</p>
+    </header>
+
+    <!-- HLAVNÍ KONTEJNER BLOGU -->
+    <div class="blog-container">
+        
+        <!-- HLAVNÍ OBSAH -->
+        <main class="blog-main">
+            <!-- Filtry kategorií -->
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">Vše</button>
+                <button class="filter-btn" data-filter="pravo">Právo & Byznys</button>
+                <button class="filter-btn" data-filter="ai">AI & Technologie</button>
+                <button class="filter-btn" data-filter="networking">Networking</button>
+                <button class="filter-btn" data-filter="akce">Reportáže z akcí</button>
+            </div>
+
+            <!-- Kontejner pro články (Grid) -->
+            <div id="blog-articles-container" class="blog-grid">
+                <!-- Články se načítají dynamicky přes JavaScript -->
+                <div class="loader" style="text-align: center; width: 100%; grid-column: 1/-1; padding: 40px;">
+                    Načítám články...
+                </div>
+            </div>
+
+            <!-- Paginace -->
+            <div class="pagination" id="pagination-container">
+                <!-- Generováno JS -->
+            </div>
+        </main>
+
+        <!-- SIDEBAR -->
+        <aside class="blog-sidebar">
+            <div class="widget">
+                <h3>O autorovi</h3>
+                <p>Jsem advokát, networker a AI nadšenec. Pomáhám firmám růst bezpečně a efektivně.</p>
+                <a href="index.html#o-mne" style="color: #0056b3; font-weight: bold; text-decoration: none;">Více o mně &rarr;</a>
+            </div>
+
+            <div class="widget">
+                <h3>Hledat</h3>
+                <input type="text" id="search-input" placeholder="Hledat v článcích..." style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+            </div>
+
+            <div class="widget">
+                <h3>Nejčtenější témata</h3>
+                <ul>
+                    <li><a href="#" class="filter-link" data-filter="ai">Umělá inteligence ve firmách</a></li>
+                    <li><a href="#" class="filter-link" data-filter="pravo">Právní novinky 2025</a></li>
+                    <li><a href="#" class="filter-link" data-filter="networking">Jak efektivně networkovat</a></li>
+                </ul>
+            </div>
+        </aside>
+
     </div>
 
-    <!-- FILTRACE -->
-    <section class="blog-list">
-        <div class="container">
-            <div class="filter-container">
-                <button class="filter-btn active" onclick="filterArticles('all')">Vše</button>
-                <button class="filter-btn" onclick="filterArticles('pravo')">Právo</button>
-                <button class="filter-btn" onclick="filterArticles('ai')">AI & Inovace</button>
-                <button class="filter-btn" onclick="filterArticles('networking')">Networking</button>
+    <!-- NOVÁ PATIČKA (Konzistentní s index.html) -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <!-- Sloupec 1: Info -->
+            <div class="footer-col">
+                <h4>Mgr. Gabriel Kožík</h4>
+                <p>Advokát, Networker, AI Expert.</p>
+                <p>Propojuji svět práva s moderními technologiemi a lidským přístupem. Pomáhám firmám i jednotlivcům růst.</p>
             </div>
 
-            <!-- ZDE SE BUDOU GENEROVAT ČLÁNKY JAVASCRIPTEM -->
-            <div id="articles-container">
-                <!-- Loading state -->
-                <p style="text-align:center; color:#888;">Načítám články...</p>
+            <!-- Sloupec 2: Odkazy -->
+            <div class="footer-col">
+                <h4>Rychlé odkazy</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Úvod</a></li>
+                    <li><a href="index.html#sluzby">Služby</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="index.html#kontakt">Kontakt</a></li>
+                    <li><a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/gabrielkozik'});return false;">Rezervovat konzultaci</a></li>
+                </ul>
             </div>
 
-            <!-- Paginace (zatím statická, v budoucnu možno oživit) -->
-            <div class="pagination-container">
-                <a href="#" class="disabled">&laquo; Předchozí</a>
-                <a href="#" class="active">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">Další &raquo;</a>
+            <!-- Sloupec 3: Kontakt a Social -->
+            <div class="footer-col">
+                <h4>Kontakt</h4>
+                <p><strong>Email:</strong> gabriel@kozik.cz</p> <!-- Placeholder, doplň reálný -->
+                <p><strong>Lokality:</strong> Tišnov, Brno & Online</p>
+                
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/gabrielkozik/" target="_blank" class="social-icon">
+                        <img src="assets/images/linkedin.png" alt="LinkedIn">
+                    </a>
+                    <a href="https://www.facebook.com/" target="_blank" class="social-icon">
+                        <img src="assets/images/facebook.png" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" class="social-icon">
+                        <img src="assets/images/instagram.png" alt="Instagram">
+                    </a>
+                </div>
             </div>
         </div>
-    </section>
 
-    <!-- PATIČKA -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h4>Kontakt</h4>
-                    <p><strong>JUDr. Gabriel Kozík</strong></p>
-                    <p><a href="mailto:gabriel@iustoria.cz">gabriel@iustoria.cz</a></p>
-                </div>
-                <div class="footer-col">
-                    <h4>Sledujte mě</h4>
-                    <div class="social-icons-container">
-                        <a href="#" class="social-icon"><img src="assets/images/linkedin.png" alt="LinkedIn"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">&copy; 2025 Gabriel Kozík.</div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Mgr. Gabriel Kožík. Všechna práva vyhrazena.</p>
         </div>
     </footer>
 
     <!-- SKRIPTY -->
-    <script src="assets/js/blog-data.js"></script> <!-- Načtení dat -->
-    
+    <script src="assets/js/blog-data.js"></script>
     <script>
-        // === LOGIKA PRO GENEROVÁNÍ BLOGU ===
-        
-        const container = document.getElementById('articles-container');
-        const currentLang = 'cs'; // Pro anglickou verzi změň na 'en'
+        // Logika pro blog (filtrování, paginace)
+        document.addEventListener('DOMContentLoaded', function() {
+            const articlesContainer = document.getElementById('blog-articles-container');
+            const paginationContainer = document.getElementById('pagination-container');
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const sidebarLinks = document.querySelectorAll('.filter-link');
+            const searchInput = document.getElementById('search-input');
+            
+            const itemsPerPage = 6;
+            let currentPage = 1;
+            let currentFilter = 'all';
+            let searchQuery = '';
 
-        function renderArticles(filter = 'all') {
-            container.innerHTML = ''; // Vyčistit kontejner
+            // Funkce pro získání filtrovaných článků
+            function getFilteredArticles() {
+                // blogArticles je definováno v blog-data.js
+                if (typeof blogArticles === 'undefined') return [];
 
-            // Filtrování
-            const filteredData = filter === 'all' 
-                ? blogArticles 
-                : blogArticles.filter(article => article.categories.includes(filter));
-
-            // Generování HTML pro každý článek
-            if (filteredData.length === 0) {
-                container.innerHTML = '<p style="text-align:center">V této kategorii zatím nejsou žádné články.</p>';
-                return;
+                return blogArticles.filter(article => {
+                    const matchesCategory = currentFilter === 'all' || article.category === currentFilter;
+                    const matchesSearch = article.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                                          article.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
+                    return matchesCategory && matchesSearch;
+                });
             }
 
-            filteredData.forEach(article => {
-                // Vybereme správný jazyk
-                const content = article[currentLang];
+            // Zobrazení článků
+            function displayPage(page, articles) {
+                currentPage = page;
+                articlesContainer.innerHTML = '';
                 
-                // Vytvoření HTML struktury karty
-                const cardHTML = `
-                    <article class="article-card fade-in">
-                        <div class="article-image">
-                            <a href="${content.link}">
-                                <img src="${article.image}" alt="${content.title}" loading="lazy">
-                            </a>
-                        </div>
-                        <div class="article-content">
-                            <div class="article-meta">
-                                ${article.date} • ${content.categoryLabel}
+                const start = (page - 1) * itemsPerPage;
+                const end = start + itemsPerPage;
+                const paginatedItems = articles.slice(start, end);
+
+                if (paginatedItems.length === 0) {
+                    articlesContainer.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: #777;">Nebyly nalezeny žádné články odpovídající zadání.</p>';
+                    return;
+                }
+
+                paginatedItems.forEach(article => {
+                    const articleCard = document.createElement('article');
+                    articleCard.className = 'blog-card';
+                    
+                    // Fallback obrázek
+                    const imgUrl = article.image || 'assets/images/uvodni-obrazek.jpg';
+                    
+                    articleCard.innerHTML = `
+                        <div class="blog-card-img" style="background: url('${imgUrl}') center/cover no-repeat;"></div>
+                        <div class="blog-card-content">
+                            <div class="blog-card-meta">
+                                <span class="date">${article.date}</span>
+                                <span class="category" style="color: #0056b3; font-weight: 500;">${getCategoryName(article.category)}</span>
                             </div>
-                            <h2>
-                                <a href="${content.link}">${content.title}</a>
-                            </h2>
-                            <p>${content.perex}</p>
-                            <a href="${content.link}" class="read-more-btn">
-                                ${currentLang === 'cs' ? 'Číst více' : 'Read more'}
-                            </a>
+                            <h2 class="blog-card-title"><a href="${article.link}">${article.title}</a></h2>
+                            <p class="blog-card-excerpt">${article.excerpt}</p>
+                            <div class="blog-card-footer">
+                                <a href="${article.link}" class="read-more">Číst více &rarr;</a>
+                            </div>
                         </div>
-                    </article>
-                `;
-                container.insertAdjacentHTML('beforeend', cardHTML);
-            });
-        }
+                    `;
+                    articlesContainer.appendChild(articleCard);
+                });
 
-        // Funkce pro ovládání filtrů
-        function filterArticles(category) {
-            // Přepnutí active třídy na tlačítkách
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            event.target.classList.add('active'); // 'event' je dostupný z onclicku
+                renderPagination(articles.length);
+            }
+
+            // Pomocná funkce pro hezčí názvy kategorií
+            function getCategoryName(catSlug) {
+                const names = {
+                    'pravo': 'Právo',
+                    'ai': 'AI & Tech',
+                    'networking': 'Networking',
+                    'akce': 'Reportáž'
+                };
+                return names[catSlug] || catSlug;
+            }
+
+            // Vykreslení paginace
+            function renderPagination(totalItems) {
+                paginationContainer.innerHTML = '';
+                const totalPages = Math.ceil(totalItems / itemsPerPage);
+
+                if (totalPages <= 1) return;
+
+                // Tlačítko Předchozí
+                const prevButton = document.createElement('a');
+                prevButton.href = '#';
+                prevButton.innerHTML = '&laquo; Předchozí';
+                if (currentPage === 1) prevButton.classList.add('disabled');
+                prevButton.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (currentPage > 1) displayPage(currentPage - 1, getFilteredArticles());
+                });
+                paginationContainer.appendChild(prevButton);
+
+                // Čísla stránek
+                for (let i = 1; i <= totalPages; i++) {
+                    const pageButton = document.createElement('a');
+                    pageButton.href = '#';
+                    pageButton.innerText = i;
+                    if (i === currentPage) pageButton.classList.add('active');
+                    
+                    pageButton.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        displayPage(i, getFilteredArticles());
+                    });
+                    paginationContainer.appendChild(pageButton);
+                }
+
+                // Tlačítko Další
+                const nextButton = document.createElement('a');
+                nextButton.href = '#';
+                nextButton.innerHTML = 'Další &raquo;';
+                if (currentPage === totalPages) nextButton.classList.add('disabled');
+                nextButton.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (currentPage < totalPages) displayPage(currentPage + 1, getFilteredArticles());
+                });
+                paginationContainer.appendChild(nextButton);
+            }
             
-            renderArticles(category);
-        }
+            // Eventy pro filtrovací tlačítka
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    currentFilter = this.dataset.filter;
+                    currentPage = 1;
+                    displayPage(1, getFilteredArticles());
+                });
+            });
 
-        // Spustit při načtení stránky
-        document.addEventListener('DOMContentLoaded', () => {
-            renderArticles('all');
+            // Eventy pro odkazy v sidebaru (pokud existují)
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    // Najít odpovídající tlačítko filtru a aktivovat ho
+                    const filterValue = this.dataset.filter;
+                    const targetBtn = document.querySelector(`.filter-btn[data-filter="${filterValue}"]`);
+                    if(targetBtn) targetBtn.click();
+                });
+            });
+
+            // Vyhledávání
+            if(searchInput) {
+                searchInput.addEventListener('input', (e) => {
+                    searchQuery = e.target.value;
+                    currentPage = 1;
+                    displayPage(1, getFilteredArticles());
+                });
+            }
+
+            // Počáteční načtení - malý timeout, aby se stihl načíst blog-data.js
+            setTimeout(() => {
+                displayPage(1, getFilteredArticles());
+            }, 100);
         });
-
-        // Toggle menu (zachováno z původního webu)
-        function toggleMenu() {
-            document.querySelector('.nav-links-container').classList.toggle('active');
-        }
     </script>
 </body>
 </html>

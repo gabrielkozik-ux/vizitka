@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportáž z Týdne inovací 2025 | Mgr. Gabriel Kožík</title>
+    <meta name="description" content="Ohlédnutí za mou přednáškou 'AI Act v praxi' na Týdnu inovací 2025 v Praze. Postřehy z největší inovační události ve střední Evropě.">
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0a2342;
+            --secondary-color: #2ca58d;
+            --text-color: #333;
+            --light-gray: #f4f4f4;
+            --white: #ffffff;
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--white);
+            padding-top: 70px;
+        }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        .main-nav { background-color: var(--white); padding: 15px 20px; border-bottom: 1px solid var(--light-gray); position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; box-sizing: border-box; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { font-weight: bold; color: var(--primary-color); text-decoration: none; font-size: 1.2em; }
+        .nav-links { display: flex; align-items: center; }
+        .nav-links a { color: var(--primary-color); text-decoration: none; font-weight: bold; margin: 0 15px; font-size: 1.1em; transition: color 0.3s ease; }
+        .nav-links a:hover { color: var(--secondary-color); }
+        .article-header { padding: 40px 20px; text-align: center; border-bottom: 1px solid var(--light-gray); }
+        .event-logo-container {
+            margin-bottom: 25px;
+        }
+        .event-logo {
+            max-width: 250px;
+            height: auto;
+        }
+        .article-header h1 { font-size: 2.8em; color: var(--primary-color); margin: 0 0 10px 0; }
+        .article-meta { font-size: 0.9em; color: #777; }
+        .article-content { padding: 40px 0; }
+        .article-content p, .article-content li { font-size: 1.1em; line-height: 1.7; }
+        .article-content h2 { font-size: 1.8em; color: var(--primary-color); margin-top: 40px; border-bottom: 2px solid var(--secondary-color); padding-bottom: 5px; }
+        .article-content blockquote { border-left: 4px solid var(--secondary-color); padding-left: 20px; font-style: italic; margin: 20px 0; font-size: 1.2em; background-color: #f9f9f9; padding: 15px 20px; border-radius: 0 5px 5px 0; }
+        .back-to-blog { display: inline-block; margin-top: 40px; color: var(--secondary-color); text-decoration: none; font-weight: bold; }
+        footer { background-color: var(--primary-color); color: var(--white); padding: 40px 20px; text-align: center; }
+        .copyright { margin-top: 20px; font-size: 0.8em; }
+        
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 40px 0;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery-item img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        /* --- NOVĚ PŘIDANÝ STYL PRO RESPONZIVNÍ VIDEO --- */
+        .video-responsive-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 poměr stran (315 / 560 = 0.5625) */
+            height: 0;
+            overflow: hidden;
+            margin: 40px 0; /* Odsazení jako u galerie */
+            border-radius: 8px; /* Zaoblení jako u galerie */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Stín jako u galerie */
+        }
+        .video-responsive-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        /* --- KONEC NOVÉHO STYLU --- */
+
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <a href="../../index.html" class="nav-logo">Mgr. Gabriel Kožík</a>
+        <div class="nav-links">
+            <a href="../../index.html">Úvodní stránka</a>
+            <a href="../../blog.html">Blog</a>
+            <a href="../../index.html#propojit">Kontaktujte mě</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <article class="article-content">
+            <header class="article-header">
+                <div class="event-logo-container">
+                    <img src="../../assets/images/blog/tyden-inovaci-2025/IW-2025-black.png" alt="Logo Innovation Week 2025" class="event-logo">
+                </div>
+                <h1>AI Act v praxi: Ohlédnutí za Týdnem inovací 2025</h1>
+                <p class="article-meta">Publikováno: 15. října 2025 | Autor: Mgr. Gabriel Kožík</p>
+            </header>
+            
+            <p>Minulý týden, ve dnech 9. a 10. října, se Praha opět stala epicentrem technologického dění ve střední Evropě. V moderních prostorách ČSOB Kampusu proběhl jubilejní ročník <strong>Týdne inovací</strong> a já jsem byl hrdý, že naše advokátní kancelář IUSTORIA mohla být u toho jako partner akce. Byla to neuvěřitelná smršť nápadů, vizí a inspirativních setkání.</p>
+
+            <div class="photo-gallery">
+                <div class="gallery-item">
+                    <img src="../../assets/images/blog/tyden-inovaci-2025/1.jpg" alt="Gabriel Kožík u prezentační obrazovky s názvem přednášky" loading="lazy">
+                </div>
+            </div>
+
+            <h2>Regulace, která není strašákem, ale příležitostí</h2>
+            <p>Měl jsem tu čest vystoupit se seminářem na téma <strong>"AI Act v praxi: Co musí vědět každá česká firma"</strong>. Cílem bylo demystifikovat nové evropské nařízení o umělé inteligenci a ukázat, že se nejedná o byrokratickou brzdu, ale o promyšlený rámec pro bezpečné a důvěryhodné inovace. Probrali jsme si klíčové body, které rezonovaly s publikem složeným z podnikatelů a manažerů:</p>
+            
+            <ul>
+                <li><strong>Přístup založený na riziku:</strong> Vysvětlili jsme si, že AI Act nezatěžuje všechny firmy stejně. Největší povinnosti dopadají na vysoce rizikové systémy, zatímco pro většinu běžných AI nástrojů (jako jsou chatboti nebo generátory obsahu) je klíčová hlavně transparentnost.</li>
+                <li><strong>Praktické dopady:</strong> Na příkladech jsme si ukázali, co znamená povinnost informovat uživatele, že interagují s AI, nebo jak správně označovat marketingový obsah vytvořený umělou inteligencí.</li>
+                <li><strong>Odpovědnost a data:</strong> Zdůraznili jsme, že odpovědnost za použití AI nese vždy firma, která ji nasadila. To klade obrovský důraz na výběr prověřených dodavatelů a ochranu citlivých dat v souladu s GDPR.</li>
+            </ul>
+
+            <div class="video-responsive-wrapper">
+                <iframe src="https://www.youtube.com/embed/UuBlqsQJFKo?si=TeDtlLT-fvvlDpKM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="photo-gallery">
+                 <div class="gallery-item">
+                    <img src="../../assets/images/blog/tyden-inovaci-2025/obrazek-info.png" alt="Informace o přednášce o AI Act" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="../../assets/images/blog/tyden-inovaci-2025/gabriel-kozik.jpg" alt="Gabriel Kožík" loading="lazy">
+                </div>
+            </div>
+            
+            <h2>Energie, která pohání budoucnost</h2>
+            <p>Celá akce byla nabitá pozitivní energií. Z každého rohu kampusu byl cítit pulz inovací – lidé se potkávali, sdíleli nápady a domlouvali nové spolupráce. Týden inovací znovu potvrdil, proč je klíčovou událostí pro každého, kdo chce nejen sledovat trendy, ale aktivně tvořit budoucnost českého byznysu.</p>
+            <p>Děkuji organizátorům za skvělou práci a všem, kteří se zastavili na mém semináři. Už teď se těším na další ročník a na to, jak se myšlenky z letošního setkání promění v reálné projekty.</p>
+
+
+            <a href="../../blog.html" class="back-to-blog">← Zpět na přehled článků</a>
+        </article>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p class="copyright">&copy; 2025 Mgr. Gabriel Kožík. Všechna práva vyhrazena.</p>
+        </div>
+    </footer>
+    <script src="/_vercel/insights/script.js"></script>
+</body>
+</html>

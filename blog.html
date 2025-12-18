@@ -5,185 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog | Mgr. Gabriel Kožík</title>
     <meta name="description" content="Články a postřehy o právu, umělé inteligenci a růstu podnikání.">
+    
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    
+    <!-- EXTERNÍ CSS -->
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #0a2342;
-            --secondary-color: #2ca58d;
-            --text-color: #333;
-            --light-gray: #f4f4f4;
-            --white: #ffffff;
-        }
-        html { scroll-behavior: smooth; }
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--white);
-            padding-top: 70px;
-        }
-        .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
-        .main-nav { background-color: var(--white); padding: 15px 20px; border-bottom: 1px solid var(--light-gray); position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; box-sizing: border-box; display: flex; justify-content: space-between; align-items: center; }
-        .nav-logo { 
-            font-weight: bold; 
-            color: var(--primary-color); 
-            text-decoration: none; 
-            font-size: 1.2em; 
-            display: flex; 
-            align-items: center; 
-            gap: 12px; 
-        }
-        .nav-photo { 
-            width: 40px; 
-            height: 40px; 
-            border-radius: 50%; 
-            object-fit: cover; 
-            border: 2px solid var(--light-gray); 
-        }
-        .nav-links-container { display: flex; align-items: center; }
-        .nav-links { display: flex; align-items: center; }
-        .nav-links a { color: var(--primary-color); text-decoration: none; font-weight: bold; margin: 0 15px; font-size: 1.1em; transition: color 0.3s ease; }
-        .nav-links a:hover { color: var(--secondary-color); }
-        .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 5px; border-radius: 3px; }
-        .hamburger .bar { width: 25px; height: 3px; background-color: var(--primary-color); transition: all 0.3s ease-in-out; }
-        .page-header { 
-            background-image: linear-gradient(rgba(10,35,66,.6),rgba(10,35,66,.6)),url(assets/images/uvodni-obrazek.jpg);
-            background-size: cover;
-            background-position: center;
-            padding: 50px 20px; 
-            text-align: center; 
-            color: var(--white);
-        }
-        .page-header h1 { font-size: 3em; color: var(--white); margin: 0; text-shadow: 2px 2px 8px rgba(0,0,0,.7); }
-        .page-header p {
-            color: var(--white);
-            text-shadow: 1px 1px 6px rgba(0,0,0,.8);
-        }
-        .blog-list { padding: 60px 20px; }
-        .article-card {
-            display: flex;
-            gap: 30px;
-            margin-bottom: 40px;
-            background: var(--white);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border-radius: 8px;
-            overflow: hidden;
-            transition: box-shadow 0.3s ease;
-        }
-        .article-card:hover { box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
-        .article-image { flex: 0 0 300px; }
-        .article-image img { width: 100%; height: 100%; object-fit: cover; }
-        .article-content { padding: 30px; }
-        .article-content h2 { margin-top: 0; font-size: 1.8em; }
-        .article-content h2 a { text-decoration: none; color: var(--primary-color); }
-        .article-content h2 a:hover { color: var(--secondary-color); }
-        .article-meta { font-size: 0.9em; color: #777; margin-bottom: 15px; }
-        .article-excerpt { margin-bottom: 20px; }
-        .read-more-btn { display: inline-block; background-color: var(--secondary-color); color: var(--white); padding: 10px 20px; text-decoration: none; font-weight: bold; border-radius: 5px; transition: background-color 0.3s ease; }
-        .read-more-btn:hover { background-color: #238c76; }
-        
-        /* Filter Styles */
-        .filter-container {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        .filter-btn {
-            background-color: var(--light-gray);
-            border: none;
-            padding: 10px 20px;
-            margin: 0 5px;
-            cursor: pointer;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 1em;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .filter-btn:hover {
-            background-color: #ddd;
-        }
-        .filter-btn.active {
-            background-color: var(--primary-color);
-            color: var(--white);
-        }
-
-        /* Pagination Styles */
-        .pagination-container {
-            text-align: center;
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid var(--light-gray);
-        }
-        .pagination-container a {
-            color: var(--primary-color);
-            padding: 10px 18px;
-            text-decoration: none;
-            transition: background-color .3s, color .3s;
-            border: 1px solid #ddd;
-            margin: 0 4px;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-        .pagination-container a.active {
-            background-color: var(--secondary-color);
-            color: white;
-            border-color: var(--secondary-color);
-            cursor: default;
-        }
-        .pagination-container a:hover:not(.active):not(.disabled) {
-            background-color: #f0f0f0;
-        }
-        .pagination-container a.disabled {
-            color: #ccc;
-            pointer-events: none;
-            border-color: #ccc;
-        }
-
-        footer { background-color: var(--primary-color); color: var(--white); padding: 40px 20px; text-align: center; }
-        .copyright { margin-top: 20px; font-size: 0.8em; }
-        
-        @media (max-width: 768px) {
-            .nav-links-container {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-                position: absolute;
-                top: 70px;
-                left: 0;
-                background-color: white;
-                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            }
-            .nav-links-container.active { display: flex; }
-            .nav-links { flex-direction: column; width: 100%; }
-            .nav-links a { padding: 15px; text-align: center; width: 100%; border-bottom: 1px solid var(--light-gray); }
-            .hamburger { display: flex; }
-            .article-card { flex-direction: column; }
-            .article-image { flex-basis: auto; height: 200px; }
-        }
-    </style>
+    
+    <!-- Calendly widget pro patičku/navigaci -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 </head>
 <body>
+
+    <!-- NAVIGACE (Stejná jako index.html) -->
     <nav class="main-nav">
         <a href="index.html" class="nav-logo">
             <img src="assets/images/profilova-fotka.jpg" alt="Profilová fotka Gabriel Kožík" class="nav-photo">
             <span>Mgr. Gabriel Kožík</span>
         </a>
         <div class="hamburger" tabindex="0" role="button" aria-label="Otevřít menu">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+            <div class="bar"></div><div class="bar"></div><div class="bar"></div>
         </div>
         <div class="nav-links-container">
             <div class="nav-links">
                 <a href="index.html">Úvodní stránka</a>
-                <a href="blog.html">Blog</a>
+                <a href="blog.html" style="color: var(--secondary-color);">Blog</a>
                 <a href="index.html#propojit">Kontaktujte mě</a>
+            </div>
+            <div class="lang-switcher">
+                <button class="lang-button lang-switcher-button" aria-haspopup="true" aria-expanded="false">CZ <span class="arrow"></span></button>
+                <div class="lang-dropdown lang-switcher-dropdown">
+                    <a href="blog.html" class="active">CZ</a>
+                    <a href="blog-en.html">EN</a>
+                    <!-- FR a HU zatím nemají blog, odkazujeme na index -->
+                    <a href="index-fr.html">FR</a>
+                    <a href="index-hu.html">HU</a>
+                </div>
             </div>
         </div>
     </nav>
 
+    <!-- HERO SEKCE PRO BLOG -->
     <header class="page-header">
         <div class="container">
             <h1>Můj blog</h1>
@@ -193,12 +56,85 @@
 
     <main class="blog-list">
         <div class="container">
+            <!-- FILTRY -->
             <div class="filter-container">
                 <button class="filter-btn active" data-filter="vsechny">Všechny</button>
                 <button class="filter-btn" data-filter="odborne">Odborné články</button>
                 <button class="filter-btn" data-filter="reportaz">Reportáže z akcí</button>
             </div>
+
+            <!-- SEZNAM ČLÁNKŮ -->
             <div id="articles-container">
+                <article class="article-card" data-category="reportaz">
+                    <div class="article-image">
+                        <img src="assets/images/blog/bforb-listopad-2025/3.jpg" alt="Účastníci na networkingové snídani BforB v Tišnově" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <p class="article-meta">Publikováno: 7. listopadu 2025</p>
+                        <h2><a href="blog/bforb-listopad-2025/bforb-listopad-2025.html">Káva, vize a skvělé jídlo: Reportáž z BforB setkání v Laskala Café Tišnov</a></h2>
+                        <p class="article-excerpt">Ohlédnutí za listopadovou snídaní BforB Tišnov v nově otevřené kavárně Laskala. Skvělá atmosféra, 7 hostů a plány na propojení podnikatelů a města.</p>
+                        <a href="blog/bforb-listopad-2025/bforb-listopad-2025.html" class="read-more-btn">Přečíst celý článek</a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="reportaz">
+                    <div class="article-image">
+                        <img src="assets/images/blog/podnikavci-kurim-rijen/3.jpg" alt="Účastníci na networkingové akci Klubu Podnikavců v Kuřimi" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <p class="article-meta">Publikováno: 17. října 2025</p>
+                        <h2><a href="blog/podnikavci-kurim-rijen/podnikavci-kurim-rijen.html">Marketing pro Gen Z a Inovace v Povlečení: Reportáž z Klubu Podnikavců v Kuřimi</a></h2>
+                        <p class="article-excerpt">Ohlédnutí za říjnovým setkáním Klubu Podnikavců v Kuřimi, kde se řešil obsahový marketing pro mladou generaci a představil se inovativní projekt neshrnujícího se povlečení.</p>
+                        <a href="blog/podnikavci-kurim-rijen/podnikavci-kurim-rijen.html" class="read-more-btn">Přečíst celý článek</a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="reportaz">
+                    <div class="article-image">
+                        <img src="assets/images/blog/tyden-inovaci-2025/1.jpg" alt="Gabriel Kožík na Týdnu inovací 2025" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <p class="article-meta">Publikováno: 15. října 2025</p>
+                        <h2><a href="blog/tyden-inovaci-2025/tyden-inovaci-2025.html">AI Act v praxi: Ohlédnutí za Týdnem inovací 2025</a></h2>
+                        <p class="article-excerpt">Minulý týden se Praha opět stala epicentrem technologického dění. Podívejte se na ohlédnutí za mou přednáškou o AI Actu a postřehy z největší inovační akce ve střední Evropě.</p>
+                        <a href="blog/tyden-inovaci-2025/tyden-inovaci-2025.html" class="read-more-btn">Přečíst celý článek</a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="reportaz">
+                    <div class="article-image">
+                        <img src="assets/images/blog/networking-palava-14/7.jpg" alt="Účastníci 14. setkání Klubu Pod Pálavou" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <p class="article-meta">Publikováno: 8. října 2025</p>
+                        <h2><a href="blog/networking-palava-14/networking-palava-14.html">Otestujte své smysly na maximum! Reportáž ze 14. setkání Klubu Pod Pálavou</a></h2>
+                        <p class="article-excerpt">Ohlédnutí za 14. setkáním Klubu Pod Pálavou, kde jsme testovali naše smysly na maximum a zkoušeli si kooperativní židličkovanou.</p>
+                        <a href="blog/networking-palava-14/networking-palava-14.html" class="read-more-btn">Přečíst celý článek</a>
+                    </div>
+                </article>
+
+                 <article class="article-card" data-category="odborne">
+                    <div class="article-image">
+                        <img src="assets/images/blog/prevod-podilu-sro-nz/nz-podil.png" alt="Notářský zápis a převod podílu v s.r.o." loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <h2><a href="blog/prevod-podilu-sro-nz/prevod-podilu-sro-nz.html">Převod podílu v s.r.o. a notářský zápis: Mýty a fakta</a></h2>
+                        <p class="article-excerpt">Analýza, zda je pro souhlas valné hromady s převodem podílu nutný notářský zápis. Klíčová soudní rozhodnutí a praktické dopady pro s.r.o.</p>
+                        <a href="blog/prevod-podilu-sro-nz/prevod-podilu-sro-nz.html" class="read-more-btn">Přečíst celý článek</a>
+                    </div>
+                </article>
+
+                 <article class="article-card" data-category="odborne">
+                    <div class="article-image">
+                        <img src="https://placehold.co/300x250/0a2342/ffffff?text=AI+Agenti" alt="Symbolické znázornění autonomních AI agentů" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <h2><a href="blog/ai-agenti-nova-era-byznysu/ai-agenti-nova-era-byznysu.html">AI Agenti: Hrozba, nebo největší byznysová příležitost od dob internetu?</a></h2>
+                        <p class="article-excerpt">Analýza nástupu AI agentů. Zjistěte, jak transformují trh práce, jaké přinášejí příležitosti a jak se bránit kritickým bezpečnostním rizikům jako je Prompt Injection.</p>
+                        <a href="blog/ai-agenti-nova-era-byznysu/ai-agenti-nova-era-byznysu.html" class="read-more-btn">Přečíst celý článek</a>
+                    </div>
+                </article>
+
                 <article class="article-card" data-category="odborne">
                     <div class="article-image">
                         <img src="assets/images/blog/advokati-a-ai/llm-advokacie.jpg" alt="Advokát na křižovatce mezi tradičním a moderním právem s AI" loading="lazy">
@@ -209,6 +145,7 @@
                         <a href="blog/advokati-a-ai/advokati-a-ai.html" class="read-more-btn">Přečíst celý článek</a>
                     </div>
                 </article>
+
                 <article class="article-card" data-category="odborne">
                     <div class="article-image">
                         <img src="assets/images/blog/novela-hlaseni-zamestnancu-2025/hlaseni-zamestnancu-2025.png" alt="Infografika srovnávající starý a nový způsob ohlašování zaměstnanců." loading="lazy">
@@ -220,6 +157,7 @@
                         <a href="blog/novela-hlaseni-zamestnancu-2025/novela-hlaseni-zamestnancu-2025.html" class="read-more-btn">Přečíst celý článek</a>
                     </div>
                 </article>
+
                 <article class="article-card" data-category="reportaz">
                     <div class="article-image">
                         <img src="assets/images/blog/reportaz-bforb-tisnov-rijen-2025/tisnov-02-10.jpg" alt="Členové klubu BforB Tišnov u hořícího krbu v penzionu Laskala" loading="lazy">
@@ -231,6 +169,7 @@
                         <a href="blog/reportaz-bforb-tisnov-rijen-2025/reportaz-bforb-tisnov-rijen-2025.html" class="read-more-btn">Přečíst celý článek</a>
                     </div>
                 </article>
+
                 <article class="article-card" data-category="reportaz">
                     <div class="article-image">
                         <img src="assets/images/blog/reportaz-workshop-zari-2025/workshop19-9.jpg" alt="Účastnice zářijového AI workshopu v Brně" loading="lazy">
@@ -242,6 +181,19 @@
                         <a href="blog/reportaz-workshop-zari-2025/reportaz-workshop-zari-2025.html" class="read-more-btn">Přečíst celý článek</a>
                     </div>
                 </article>
+
+                <article class="article-card" data-category="reportaz">
+                    <div class="article-image">
+                        <img src="assets/images/blog/firemni-kultura-alveno-reportaz/2.jpg" alt="Účastníci na akci Firemní kultura: Večer s Alveno" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <p class="article-meta">Publikováno: 12. září 2025</p>
+                        <h2><a href="blog/firemni-kultura-alveno-reportaz/firemni-kultura-alveno-reportaz.html">Když se spojí výjimeční lidé: Reportáž z večera s Alveno</a></h2>
+                        <p class="article-excerpt">Ohlédnutí za naším prvním B2B setkáním 'Firemní kultura: Večer s Alveno', které propojilo desítky inspirativních osobností a otevřelo klíčová témata dnešní doby.</p>
+                        <a href="blog/firemni-kultura-alveno-reportaz/firemni-kultura-alveno-reportaz.html" class="read-more-btn">Přečíst celý článek</a>
+                    </div>
+                </article>
+
                 <article class="article-card" data-category="reportaz">
                     <div class="article-image">
                         <img src="assets/images/blog/networking-palava-12/2.jpg" alt="Účastníci networkingového setkání Pod Pálavou" loading="lazy">
@@ -253,6 +205,7 @@
                         <a href="blog/networking-palava-12/networking-palava-12.html" class="read-more-btn">Přečíst celý článek</a>
                     </div>
                 </article>
+
                  <article class="article-card" data-category="reportaz">
                     <div class="article-image">
                         <img src="assets/images/blog/firemni-kultura-alveno/firemni-kultura-alveno.jpg" alt="Pozvánka na večer s Alveno o firemní kultuře" loading="lazy">
@@ -264,6 +217,7 @@
                         <a href="blog/firemni-kultura-alveno/firemni-kultura-alveno.html" class="read-more-btn">Zjistit více a registrovat se</a>
                     </div>
                 </article>
+
                 <article class="article-card" data-category="reportaz">
                     <div class="article-image">
                         <img src="assets/images/blog/reportaz-workshop-srpen-2025/workshop22-8.jpg" alt="Účastníci AI workshopu v Brně" loading="lazy">
@@ -275,6 +229,7 @@
                         <a href="blog/reportaz-workshop-srpen-2025/reportaz-workshop-srpen-2025.html" class="read-more-btn">Přečíst celý článek</a>
                     </div>
                 </article>
+
                  <article class="article-card" data-category="reportaz">
                     <div class="article-image">
                         <img src="assets/images/blog/reportaz-workshop-cervenec-2025/workshop18-7.jpg" alt="Účastníci prvního AI workshopu v Brně" loading="lazy">
@@ -286,6 +241,19 @@
                         <a href="blog/reportaz-workshop-cervenec-2025/reportaz-workshop-cervenec-2025.html" class="read-more-btn">Přečíst celý článek</a>
                     </div>
                 </article>
+
+                 <article class="article-card" data-category="reportaz">
+                    <div class="article-image">
+                        <img src="assets/images/blog/cs-tech-summit-2025/1.jpg" alt="Přednáška na Česko-slovenském technologickém summitu" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <p class="article-meta">Publikováno: 5. června 2025</p>
+                        <h2><a href="/blog/cs-tech-summit-2025/cs-tech-summit-2025.html">Právo a technologie v srdci Moravy: Reportáž z CS-Tech Summitu</a></h2>
+                        <p class="article-excerpt">Ohlédnutí za mou přednáškou na téma "Regulace AI v ČR" na Česko-slovenském technologickém summitu na Zámku Mikulov a za inspirativní atmosférou celé akce.</p>
+                        <a href="/blog/cs-tech-summit-2025/cs-tech-summit-2025.html" class="read-more-btn">Přečíst celý článek</a>
+                    </div>
+                </article>
+
                 <article class="article-card" data-category="odborne">
                     <div class="article-image">
                         <img src="assets/images/blog/ai-v-byznysu-4-cesty/ai-v-byznysu-4-cesty.jpg" alt="Abstraktní vizualizace dat a umělé inteligence" loading="lazy">
@@ -296,6 +264,7 @@
                         <a href="blog/ai-v-byznysu/ai-v-byznysu-4-cesty.html" class="read-more-btn">Přečíst celý článek</a>
                     </div>
                 </article>
+
                 <article class="article-card" data-category="odborne">
                     <div class="article-image">
                         <img src="assets/images/blog/ai-act-byznys/prezentace-ai.jpg" alt="Symbolické znázornění práva a umělé inteligence" loading="lazy">
@@ -307,18 +276,34 @@
                     </div>
                 </article>
             </div>
+            
             <div class="pagination-container"></div>
         </div>
     </main>
 
+    <!-- PATIČKA (Stejná jako index.html) -->
     <footer>
-        <div class="container">
-            <p class="copyright">&copy; 2025 Mgr. Gabriel Kožík. Všechna práva vyhrazena.</p>
+        <div class="footer-grid">
+            <div>
+                <h4>Mgr. Gabriel Kožík</h4>
+                <p>Advokát & AI Stratég</p>
+                <div class="social-icons-container">
+                    <a href="https://www.linkedin.com/in/gabriel-kozik/" target="_blank" class="social-icon" aria-label="LinkedIn profil"><img src="assets/images/linkedin.png" alt="LinkedIn ikona"></a>
+                    <a href="https://www.facebook.com/somslovak" target="_blank" class="social-icon" aria-label="Facebook profil"><img src="assets/images/facebook.png" alt="Facebook ikona"></a>
+                    <a href="https://www.instagram.com/kozik_gabriel/" target="_blank" class="social-icon" aria-label="Instagram profil"><img src="assets/images/instagram.png" alt="Instagram ikona"></a>
+                    <a href="https://www.youtube.com/@gabriel-kozik" target="_blank" class="social-icon" aria-label="YouTube kanál"><img src="assets/images/youtube.png" alt="YouTube ikona"></a>
+                </div>
+            </div>
+            <div><h4>Kontakt</h4><p>E-mail: <a href="mailto:kozik@iustoria.cz">kozik@iustoria.cz</a></p><p>Telefon: <a href="tel:+420720265713">+420 720 265 713</a></p><p>Datová schránka: eygwp2c</p></div>
+            <div><h4>Kancelář</h4><p>IUSTORIA, advokátní kancelář, s.r.o.</p><p>Slovákova 279/11, 602 00 Brno</p><p><a href="http://www.iustoria.cz" target="_blank">www.iustoria.cz</a></p></div>
+            <div><h4>Zápis v ČAK</h4><p>ev. č.: 19320</p><p>IČO (fyzická osoba): 05187559</p><p>společník s.r.o.</p></div>
         </div>
+        <div class="copyright"><p>&copy; 2025 Mgr. Gabriel Kožík. Všechna práva vyhrazena.</p></div>
     </footer>
     
+    <!-- SKRIPTY PRO NAVIGACI A FILTROVÁNÍ -->
     <script>
-        // Hamburger menu logic
+        // Logika pro Hamburger menu
         const hamburger = document.querySelector('.hamburger');
         const navLinksContainer = document.querySelector('.nav-links-container');
 
@@ -344,14 +329,35 @@
             });
         });
 
-        // Filter and Pagination logic
+        // Logika pro přepínač jazyků
+        const langButton = document.querySelector('.lang-switcher-button');
+        const langDropdown = document.querySelector('.lang-switcher-dropdown');
+        function toggleLangDropdown() {
+             const isExpanded = langButton.getAttribute('aria-expanded') === 'true';
+             langButton.setAttribute('aria-expanded', !isExpanded);
+             langButton.classList.toggle('active');
+             langDropdown.style.display = langDropdown.style.display === 'block' ? 'none' : 'block';
+        }
+        langButton.addEventListener('click', e => { e.stopPropagation(); toggleLangDropdown(); });
+        
+        window.addEventListener('click', e => {
+            if (navLinksContainer.classList.contains('active') && !navLinksContainer.contains(e.target) && !hamburger.contains(e.target)) {
+                navLinksContainer.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+            }
+            if (langButton.classList.contains('active') && !langButton.parentElement.contains(e.target)) {
+                toggleLangDropdown();
+            }
+        });
+
+        // Logika pro filtrování a stránkování blogu
         document.addEventListener('DOMContentLoaded', function () {
             const articlesContainer = document.getElementById('articles-container');
             const allArticles = Array.from(articlesContainer.getElementsByClassName('article-card'));
             const paginationContainer = document.querySelector('.pagination-container');
             const filterButtons = document.querySelectorAll('.filter-btn');
             
-            const articlesPerPage = 4;
+            const articlesPerPage = 6; // Zobrazujeme více článků, když je stránka širší
             let currentFilter = 'vsechny';
             
             function getFilteredArticles() {
@@ -365,16 +371,12 @@
                 const startIndex = (page - 1) * articlesPerPage;
                 const endIndex = startIndex + articlesPerPage;
 
-                // First, hide all articles, then show only the relevant ones
+                // Nejdříve skryjeme vše
                 allArticles.forEach(article => article.style.display = 'none');
                 
                 const articlesToShow = articles.slice(startIndex, endIndex);
                 articlesToShow.forEach(article => {
-                    article.style.display = 'flex';
-                     // For smaller screens, we need to adjust display property
-                    if (window.innerWidth <= 768) {
-                        article.style.display = 'flex'; // It's flex on mobile too, but direction is column
-                    }
+                    article.style.display = 'flex'; // Používáme flex z CSS
                 });
                 
                 setupPaginationButtons(page, articles);
@@ -391,7 +393,7 @@
                 }
                 paginationContainer.style.display = 'block';
 
-                // Previous button
+                // Tlačítko Předchozí
                 const prevButton = document.createElement('a');
                 prevButton.href = '#';
                 prevButton.innerHTML = '&laquo; Předchozí';
@@ -406,7 +408,7 @@
                 });
                 paginationContainer.appendChild(prevButton);
 
-                // Page number buttons
+                // Čísla stránek
                 for (let i = 1; i <= totalPages; i++) {
                     const pageButton = document.createElement('a');
                     pageButton.href = '#';
@@ -421,7 +423,7 @@
                     paginationContainer.appendChild(pageButton);
                 }
 
-                // Next button
+                // Tlačítko Další
                 const nextButton = document.createElement('a');
                 nextButton.href = '#';
                 nextButton.innerHTML = 'Další &raquo;';
@@ -446,14 +448,10 @@
                 });
             });
 
-            // Initial setup
+            // Počáteční načtení
             displayPage(1, getFilteredArticles());
         });
     </script>
-    <script>
-      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-    </script>
     <script src="/_vercel/insights/script.js"></script>
 </body>
-
 </html>

@@ -1,0 +1,768 @@
+/* =========================================
+   1. IMPORT FONTS & VARIABLES
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@300;400;600&display=swap');
+
+:root {
+    --primary-color: #0f172a;
+    --secondary-color: #0ea5e9;
+    --accent-color: #6366f1;
+    --text-color: #334155;
+    --light-gray: #f8fafc;
+    --white: #ffffff;
+    --border-radius: 8px;
+}
+
+/* =========================================
+   2. GLOBAL RESET & TYPOGRAPHY
+   ========================================= */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: var(--white);
+    padding-top: 70px;
+}
+
+h1, h2, h3, h4, h5, h6, .nav-logo {
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: -0.03em;
+    color: var(--primary-color);
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover { color: var(--accent-color); }
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    padding: 80px 20px;
+    scroll-margin-top: 70px;
+}
+
+section:nth-child(2n) {
+    background-color: var(--light-gray);
+}
+
+/* =========================================
+   3. NAVIGATION
+   ========================================= */
+.main-nav {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-weight: 700;
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--primary-color);
+}
+
+.nav-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--light-gray);
+}
+
+.nav-links-container {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--primary-color);
+    font-weight: 700; /* Tučnější */
+    margin: 0 15px;
+    font-size: 1.15em; /* ZVĚTŠENO písmo v menu */
+}
+
+.nav-links a:hover { color: var(--secondary-color); }
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary-color);
+    transition: all 0.3s ease-in-out;
+    border-radius: 2px;
+}
+
+.lang-switcher { position: relative; margin-left: 20px; }
+.lang-button {
+    background: transparent;
+    border: none;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1.1em;
+    cursor: pointer;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+}
+.lang-button .arrow {
+    border: solid var(--primary-color);
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-left: 8px;
+    transform: rotate(45deg);
+    transition: transform 0.3s;
+}
+.lang-button.active .arrow { transform: rotate(-135deg); }
+.lang-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: var(--white);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    min-width: 100px;
+    z-index: 1001;
+    margin-top: 10px;
+}
+.lang-dropdown a {
+    padding: 10px 20px;
+    display: block;
+    color: var(--text-color);
+    font-weight: 600;
+}
+.lang-dropdown a:hover {
+    background-color: var(--light-gray);
+    color: var(--secondary-color);
+}
+.lang-dropdown a.active {
+    color: var(--secondary-color);
+    background-color: #f0f9ff;
+}
+
+/* =========================================
+   4. HERO SECTION
+   ========================================= */
+.hero {
+    /* Cesta upravena: ze složky css (..) do assets, pak do images */
+    background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.6)), url('assets/images/uvodni-obrazek.jpg');
+    background-size: cover;
+    background-position: center 200%;
+    background-attachment: fixed;
+    color: var(--white);
+    
+    /* ZMĚNA: Výška snížena na 50% pro efekt užšího pásu */
+    min-height: 50vh; 
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.8em;
+    margin: 0 0 20px 0;
+    color: var(--white);
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.hero p {
+    font-size: 1.6em;
+    font-weight: 300;
+    max-width: 900px;
+    margin: 0 auto;
+    opacity: 0.95;
+    line-height: 1.5;
+}
+
+.page-header { 
+    background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('assets/images/uvodni-obrazek.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px; 
+    text-align: center; 
+    color: var(--white);
+}
+.page-header h1 { 
+    font-size: 3em; 
+    color: var(--white); 
+    margin: 0; 
+    text-shadow: 2px 2px 8px rgba(0,0,0,.5); 
+}
+.page-header p { color: var(--white); font-size: 1.2em; opacity: 0.9; }
+
+/* =========================================
+   5. COMMON COMPONENTS
+   ========================================= */
+.section-title {
+    text-align: center;
+    font-size: 2.8em;
+    margin-bottom: 40px;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.2em;
+    color: #64748b;
+    max-width: 700px;
+    margin: -20px auto 50px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+    color: var(--white);
+    padding: 14px 32px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+    border: none;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.5);
+    color: var(--white);
+}
+.cta-button.secondary {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    box-shadow: none;
+}
+.cta-button.secondary:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+/* =========================================
+   6. SECTIONS CONTENT
+   ========================================= */
+#mission blockquote {
+    font-size: 1.6em;
+    font-style: italic;
+    max-width: 900px;
+    margin: 0 auto;
+    border-left: 5px solid var(--secondary-color);
+    padding: 20px 40px;
+    background: var(--light-gray);
+    border-radius: 0 10px 10px 0;
+    color: var(--primary-color);
+}
+
+.about-photo-circle {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 30px;
+    display: block;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border: 4px solid var(--white);
+}
+.about-container { text-align: center; }
+.about-container p { max-width: 800px; margin: 0 auto; font-size: 1.1em; }
+
+/* --- SLUŽBY --- */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+.service-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: 0 10px 30px -10px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+}
+.service-card h3 { font-size: 1.8em; margin-top: 0; margin-bottom: 20px; }
+.service-card h4 {
+    color: var(--accent-color);
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: auto;
+}
+.service-card ul { list-style: none; padding: 0; }
+.service-card li {
+    padding-left: 1.8em;
+    margin-bottom: 12px;
+    position: relative;
+    color: #475569;
+}
+.service-card li::before {
+    content: "✓";
+    color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+}
+@media (min-width: 768px) {
+    .service-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 20px 40px -10px rgba(14, 165, 233, 0.15);
+        border-color: var(--secondary-color);
+        z-index: 2;
+    }
+}
+
+/* --- PARALLAX SEPARATOR --- */
+.parallax-separator {
+    background-image: url('assets/images/uvodni-obrazek.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 80px 0;
+}
+.parallax-separator::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.6);
+}
+.parallax-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--white);
+    padding: 20px;
+}
+.parallax-content h2 {
+    color: var(--white);
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+/* --- PROJECTS & WORKSHOPS --- */
+.projects-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.project-item { flex: 0 1 200px; transition: transform 0.3s ease; }
+.project-item img {
+    max-width: 100%;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+.project-item:hover img { filter: grayscale(0%); opacity: 1; transform: scale(1.1); }
+.workshop-container { text-align: center; margin-top: 40px; }
+.workshop-container a {
+    display: inline-block;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+.workshop-container a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+.workshop-container img { max-width: 100%; height: auto; display: block; }
+
+/* --- EVENTS & SPACING FIX --- */
+/* ZMĚNA: Odstranění mezery mezi sekcemi */
+#kde-se-potkat {
+    padding-bottom: 20px; /* Původně 80px */
+}
+/* Cílíme na sekci, která následuje hned po #kde-se-potkat (což je Workshop) */
+#kde-se-potkat + section {
+    padding-top: 20px; /* Původně 80px */
+    background-color: var(--light-gray); /* Pro jistotu, aby barva seděla */
+}
+
+/* Archiv akcí - odstranění velkého marginu */
+#archiv-akci, #listopad-akce, #prosinec-akce {
+    margin-bottom: 20px !important;
+}
+
+/* Seznam událostí */
+.events-list {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.events-list li {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background-color: var(--white);
+    gap: 20px;
+    transition: all 0.3s ease;
+}
+.events-list li:hover {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-color: var(--secondary-color);
+    transform: translateX(5px);
+}
+.event-date-time {
+    flex: 0 0 110px;
+    border-right: 2px solid var(--light-gray);
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.event-date-time .date {
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: 1.1em;
+    font-family: 'Space Grotesk', sans-serif;
+}
+.event-date-time .time { font-size: 0.9em; color: #64748b; }
+.event-details-new { flex-grow: 1; }
+.event-details-new h4 { margin: 0 0 5px; font-size: 1.2em; color: var(--primary-color); }
+.event-details-new p { margin: 0; color: var(--text-color); font-size: 0.95em; }
+.event-actions { display: flex; gap: 10px; align-items: center; }
+.event-button {
+    height: 40px;
+    padding: 0 20px;
+    font-size: 0.9em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.calendar-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--light-gray);
+    color: var(--primary-color);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+.calendar-button:hover { background-color: var(--primary-color); color: var(--white); }
+.calendar-button svg { width: 20px; height: 20px; fill: currentColor; }
+
+/* --- BLOG --- */
+.blog-list { padding: 60px 20px; }
+.filter-container { text-align: center; margin-bottom: 50px; }
+.filter-btn {
+    background-color: var(--white);
+    border: 1px solid #e2e8f0;
+    padding: 10px 25px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 50px;
+    font-weight: 600;
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease;
+}
+.filter-btn:hover { border-color: var(--secondary-color); color: var(--secondary-color); }
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+.article-card {
+    display: flex;
+    gap: 0;
+    margin-bottom: 40px;
+    background: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border: 1px solid #f1f5f9;
+}
+.article-image { flex: 0 0 350px; position: relative; overflow: hidden; }
+.article-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.article-card:hover .article-image img { transform: scale(1.05); }
+.article-content { padding: 40px; flex: 1; }
+.article-content h2 { margin-top: 0; font-size: 1.8em; line-height: 1.3; }
+.article-content h2 a { color: var(--primary-color); }
+.article-content h2 a:hover { color: var(--secondary-color); }
+.article-meta {
+    font-size: 0.9em;
+    color: #94a3b8;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+.read-more-btn {
+    display: inline-block;
+    color: var(--secondary-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    position: relative;
+}
+.read-more-btn::after { content: '→'; margin-left: 5px; transition: margin-left 0.3s ease; }
+.read-more-btn:hover::after { margin-left: 10px; }
+.article-detail-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: var(--white);
+}
+.article-detail-content p, .article-detail-content li {
+    font-size: 1.15em;
+    line-height: 1.8;
+    color: #334155;
+}
+.article-detail-content h2 {
+    font-size: 2em;
+    margin-top: 60px;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+.article-image-main {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 30px 0;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+.pagination-container {
+    text-align: center;
+    margin-top: 60px;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 30px;
+}
+.pagination-container a {
+    display: inline-block;
+    padding: 10px 18px;
+    margin: 0 5px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: var(--text-color);
+    background: var(--white);
+    border: 1px solid #e2e8f0;
+}
+.pagination-container a.active, .pagination-container a:hover:not(.disabled) {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+.pagination-container a.disabled { color: #cbd5e1; cursor: default; }
+
+/* =========================================
+   10. CONTACT FORM & FOOTER
+   ========================================= */
+.cta-container { text-align: center; margin-bottom: 50px; }
+.booking-text { font-size: 1.1em; color: var(--text-color); margin: 20px 0 10px; font-style: italic; opacity: 0.8; }
+.form-container {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+    max-width: 600px;
+    margin: 0 auto;
+}
+.form-container label { font-weight: 600; color: var(--primary-color); display: block; margin-bottom: 8px; }
+.form-container input, .form-container textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+.form-container input:focus, .form-container textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 80px 20px 40px;
+    margin-top: 100px;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.footer-grid h4 {
+    color: var(--white);
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    border-bottom: 2px solid var(--secondary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+.footer-grid p, .footer-grid a {
+    color: #94a3b8;
+    font-size: 0.95em;
+    margin-bottom: 10px;
+}
+.footer-grid a:hover { color: var(--secondary-color); }
+
+/* --- SOCIÁLNÍ SÍTĚ (Plné barvy) --- */
+.social-icons-container {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+.social-icon img {
+    width: 28px;
+    height: 28px;
+    /* ZMĚNA: Žádný filtr, plná barva a viditelnost */
+    filter: none;
+    opacity: 1;
+    transition: transform 0.3s ease;
+}
+.social-icon:hover img {
+    transform: scale(1.2);
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: #64748b;
+    font-size: 0.85em;
+}
+
+/* =========================================
+   11. RESPONSIVE
+   ========================================= */
+@media (max-width: 768px) {
+    .nav-links-container {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: var(--white);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        padding: 20px 0;
+    }
+    .nav-links-container.active { display: flex; }
+    .nav-links { flex-direction: column; width: 100%; }
+    .nav-links a {
+        padding: 15px;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid var(--light-gray);
+    }
+    .lang-switcher { margin: 20px auto; }
+    .hamburger { display: flex; }
+    
+    h1 { font-size: 2.5em !important; }
+    .hero { 
+        padding: 100px 20px 60px; 
+        min-height: auto; /* Na mobilu výšku nefixujeme */
+    }
+    .hero p { font-size: 1.1em; }
+    
+    .article-card { flex-direction: column; }
+    .article-image { flex: 0 0 200px; }
+    
+    .events-list li { flex-direction: column; align-items: flex-start; }
+    .event-date-time {
+        border-right: none;
+        border-bottom: 1px solid var(--light-gray);
+        padding-bottom: 10px;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .event-actions { width: 100%; justify-content: flex-start; }
+    
+    .footer-grid { text-align: center; }
+    .social-icons-container { justify-content: center; }
+}

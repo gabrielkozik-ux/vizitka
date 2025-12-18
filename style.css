@@ -26,9 +26,10 @@ body {
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Space Grotesk', sans-serif; /* Fallback, pokud není načten v HTML */
+    font-family: 'Space Grotesk', sans-serif; /* Fallback */
     color: var(--primary-color);
     margin-bottom: 1rem;
+    line-height: 1.2;
 }
 
 a {
@@ -195,12 +196,12 @@ img {
 
 /* --- HERO SEKCE (HP) --- */
 .hero {
-    height: 60vh; /* Změna z 100vh nebo 50vh na něco mezi */
+    height: 60vh;
     min-height: 500px;
     background-image: linear-gradient(rgba(10, 35, 66, 0.8), rgba(10, 35, 66, 0.6)), url('assets/images/uvodni-obrazek.jpg');
     background-size: cover;
-    background-position: center 50%; /* Úprava pozice dle požadavku */
-    background-attachment: scroll; /* Vypnuto fixed pro lepší kontrolu */
+    background-position: center 200%; /* Specifické nastavení pro váhy */
+    background-attachment: scroll;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -260,6 +261,21 @@ section {
     color: #666;
 }
 
+/* --- MISE --- */
+#mission blockquote {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: var(--primary-color);
+    font-style: italic;
+    border: none; /* Reset stylu z blogu */
+    background: none; /* Reset stylu z blogu */
+    padding: 0;
+}
+
 /* --- SERVICE CARDS --- */
 .services-grid {
     display: grid;
@@ -268,7 +284,7 @@ section {
     margin-top: 40px;
 }
 
-.service-card {
+.service-card, .service-card-fr {
     background: var(--white);
     padding: 40px;
     border-radius: 16px;
@@ -277,6 +293,11 @@ section {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
+}
+
+.service-card-fr {
+    margin-top: 40px;
+    border-top: 4px solid #3355A0; /* French blue */
 }
 
 .service-card::before {
@@ -289,7 +310,11 @@ section {
     background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
 }
 
-.service-card:hover {
+.service-card-fr::before {
+    display: none; /* Přepisujeme gradient pro FR kartu */
+}
+
+.service-card:hover, .service-card-fr:hover {
     transform: translateY(-5px);
     box-shadow: 0 20px 40px -12px rgba(0,0,0,0.1);
 }
@@ -298,6 +323,10 @@ section {
     font-size: 1.5rem;
     margin-bottom: 15px;
     color: var(--primary-color);
+}
+
+.service-card-fr h3 {
+    color: #3355A0;
 }
 
 .service-card ul {
@@ -331,7 +360,7 @@ section {
 
 /* --- PARALLAX SEPARATOR --- */
 .parallax-separator {
-    background-image: url('assets/images/uvodni-obrazek.jpg'); /* Nebo jiný obrázek */
+    background-image: url('assets/images/uvodni-obrazek.jpg');
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -363,7 +392,7 @@ section {
     margin-bottom: 30px;
 }
 
-/* --- CTA BUTTONS --- */
+/* --- CTA BUTTONS & ACTIONS --- */
 .cta-button {
     display: inline-block;
     background-color: var(--secondary-color);
@@ -374,6 +403,7 @@ section {
     transition: var(--transition);
     border: 2px solid var(--secondary-color);
     cursor: pointer;
+    text-align: center;
 }
 
 .cta-button:hover {
@@ -389,6 +419,67 @@ section {
 .cta-button.secondary:hover {
     background-color: var(--secondary-color);
     color: var(--white);
+}
+
+/* Kontejnery pro tlačítka (Sekce Kontakt) */
+.cta-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.booking-text {
+    margin: 15px 0;
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+    display: block;
+}
+
+/* --- FORMULÁŘ --- */
+.form-container {
+    max-width: 600px;
+    margin: 40px auto 0;
+    text-align: left;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.form-container div {
+    margin-bottom: 15px;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.form-container input,
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.form-container input:focus,
+.form-container textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 2px rgba(44, 165, 141, 0.2);
 }
 
 /* --- PROJECTS & LOGOS --- */
@@ -429,7 +520,7 @@ section {
     color: #666;
 }
 
-/* --- EVENTS LIST --- */
+/* --- EVENTS & WORKSHOPS --- */
 .events-list {
     max-width: 800px;
     margin: 0 auto;
@@ -481,6 +572,31 @@ section {
 .event-details-new p {
     color: #666;
     font-size: 0.95rem;
+}
+
+.event-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Workshop kontejner (obrázek dole) */
+.workshop-container {
+    margin-top: 40px;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.workshop-container img {
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.workshop-container a:hover img {
+    transform: scale(1.02);
 }
 
 /* --- BLOG LIST (Grid) --- */
@@ -603,8 +719,6 @@ section {
 }
 
 /* --- BLOG DETAIL PAGE (STYLY PRO JEDNOTLIVÉ ČLÁNKY) --- */
-/* Tyto třídy přidej do style.css pro správné zobrazení článků */
-
 .blog-post-detail {
     background-color: var(--white);
     min-height: 60vh;
@@ -658,8 +772,8 @@ section {
     font-size: 1.1rem;
     line-height: 1.8;
     color: #333;
-    max-width: 800px; /* Optimální šířka pro čtení */
-    margin: 0 auto; /* Centrování obsahu */
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .article-content-body p {
@@ -686,12 +800,12 @@ section {
 
 .article-content-body li {
     margin-bottom: 10px;
-    list-style-type: disc; /* Pro jistotu */
+    list-style-type: disc;
 }
 
+/* Blockquote v článku - specifický styl */
 .article-content-body blockquote {
     border-left: 4px solid var(--secondary-color);
-    padding-left: 20px;
     margin: 30px 0;
     font-style: italic;
     color: #555;
@@ -727,11 +841,7 @@ section {
 }
 
 .cta-box .cta-buttons {
-    justify-content: center;
     margin-top: 25px;
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
 }
 
 /* --- FOOTER --- */
@@ -780,7 +890,7 @@ footer {
 .social-icon img {
     width: 24px;
     height: 24px;
-    filter: invert(1); /* Bílé ikony */
+    filter: invert(1);
     opacity: 0.8;
     transition: var(--transition);
 }
@@ -814,7 +924,7 @@ footer {
         padding: 20px;
         box-shadow: var(--shadow);
         border-top: 1px solid #eee;
-        display: none; /* Skryté defaultně */
+        display: none;
     }
 
     .nav-links-container.active {
@@ -847,5 +957,11 @@ footer {
         padding-right: 0;
         padding-bottom: 15px;
         width: 100%;
+    }
+
+    .event-actions {
+        width: 100%;
+        justify-content: center;
+        margin-top: 15px;
     }
 }

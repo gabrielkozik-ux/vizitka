@@ -774,118 +774,137 @@ footer {
 }
 
 /* =========================================
-   12. BLOG DETAIL STYLES (Novinky - detail)
+   12. BLOG DETAIL STYLES (Podle tvého vzoru)
    ========================================= */
 
-/* Kontejner pro samotný článek - zajišťuje čitelnost (max šířka textu) */
+/* Wrapper pro celý článek (nahrazuje .container ve tvém příkladu) */
 .article-container {
     max-width: 800px;
-    margin: 40px auto; /* 40px od vrchu/spodu, auto pro horizontální střed */
-    padding: 0 20px; /* Padding pro mobily */
+    margin: 0 auto;
+    padding: 20px;
     background-color: var(--white);
+}
+
+/* Hlavička článku (nadpis a meta) */
+.article-header {
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--light-gray);
+    margin-bottom: 30px;
+}
+
+.article-header h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.8em;
+    color: var(--primary-color);
+    margin: 0 0 10px 0;
+    line-height: 1.2;
+}
+
+.article-meta {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9em;
+    color: #94a3b8; /* Použití tvé šedé */
+}
+
+/* Obsah článku */
+.article-content {
+    padding: 20px 0;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+}
+
+.article-content p, 
+.article-content li {
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin-bottom: 1.5em;
+}
+
+.article-content h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.8em;
+    color: var(--primary-color);
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.article-content h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.4em;
+    color: var(--primary-color);
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* HLAVNÍ OBRÁZEK (a pojistka pro ostatní obrázky v obsahu) */
+.article-image-main,
+.article-content img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    margin: 20px 0 30px 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    object-fit: cover;
+}
+
+/* Citace */
+.article-content blockquote {
+    border-left: 4px solid var(--secondary-color);
+    margin: 20px 0;
+    padding: 15px 20px;
+    font-style: italic;
+    font-size: 1.2em;
+    background-color: var(--light-gray);
+    border-radius: 0 5px 5px 0;
+    color: #475569;
+}
+
+/* Sekce zdrojů */
+.sources-section {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid var(--light-gray);
+    font-size: 0.9em;
+    color: #64748b;
+}
+
+.sources-section ol {
+    padding-left: 20px;
+}
+
+.sources-section li {
+    margin-bottom: 10px;
+}
+
+.sources-section a {
+    color: var(--secondary-color);
+    word-break: break-all;
+}
+
+.sources-section sup {
+    font-size: 0.75em;
+    vertical-align: super;
+    margin-left: 2px;
 }
 
 /* Odkaz zpět */
 .back-link {
     display: inline-block;
-    margin-bottom: 2rem;
-    font-weight: 600;
+    margin-top: 40px;
     color: var(--secondary-color);
-    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
 }
-.back-link:hover {
-    text-decoration: underline;
-}
-
-/* Nadpis článku */
-.article-container h1 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 0.5em;
-    line-height: 1.2;
-}
-
-/* Metadata (datum, autor) */
-.article-meta {
-    font-size: 0.95em;
-    color: #94a3b8;
-    margin-bottom: 2rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #e2e8f0;
-    font-family: 'Inter', sans-serif;
-}
-
-/* Typografie uvnitř článku */
-.article-container p {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.125rem; /* 18px - moderní standard pro čitelnost */
-    line-height: 1.8;
-    color: var(--text-color);
-    margin-bottom: 1.5em;
-}
-
-/* Nadpisy H2, H3 v článku */
-.article-container h2 {
-    font-size: 1.8rem;
-    margin-top: 2.5rem;
-    margin-bottom: 1rem;
-    color: var(--primary-color);
-    border-left: 4px solid var(--accent-color);
-    padding-left: 15px;
-}
-
-.article-container h3 {
-    font-size: 1.4rem;
-    margin-top: 2rem;
-    margin-bottom: 0.8rem;
-    color: var(--text-color);
-}
-
-/* Seznamy */
-.article-container ul, .article-container ol {
-    margin-bottom: 1.5em;
-    padding-left: 1.5em;
-    font-family: 'Inter', sans-serif;
-    font-size: 1.125rem;
-    color: var(--text-color);
-}
-
-.article-container li {
-    margin-bottom: 0.5em;
-}
-
-/* Obrázky v textu - sjednocení s textem */
-.article-container img {
-    display: block !important;     /* Vynutit blokové zobrazení */
-    width: 100% !important;        /* Vynutit šířku na 100% kontejneru */
-    max-width: 100% !important;    /* Vynutit maximální šířku, aby nepřetekl */
-    height: auto !important;       /* Vynutit automatickou výšku (zachování poměru stran) */
-    border-radius: var(--border-radius);
-    margin: 2rem 0;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-    object-fit: cover;     
-    box-sizing: border-box; 
-}
-
-/* Citace / Zvýraznění */
-.article-container blockquote {
-    border-left: 4px solid var(--secondary-color);
-    margin: 2rem 0;
-    padding: 1.5rem;
-    font-style: italic;
-    font-size: 1.2rem;
-    color: #475569;
-    background: #f8fafc; /* Světle šedé pozadí */
-    border-radius: 0 8px 8px 0;
-}
+.back-link:hover { text-decoration: underline; }
 
 /* Responzivita pro článek */
 @media (max-width: 768px) {
-    .article-container h1 {
-        font-size: 2rem !important;
-    }
-    .article-container p, .article-container li {
-        font-size: 1rem;
+    .article-header h1 {
+        font-size: 2.2em !important;
     }
 }

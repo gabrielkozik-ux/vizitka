@@ -3,215 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advokáti a AI: Hrozba, příležitost? | Mgr. Gabriel Kožík</title>
-    <meta name="description" content="Analýza dopadů umělé inteligence na právní profesi v České republice. Představuje AI pro advokáty existenční hrozbu, nebo bezprecedentní příležitost?">
-
+    <title>Advokacie na křižovatce: Hrozba nebo příležitost? | Blog Mgr. Gabriel Kožík</title>
+    <meta name="description" content="Analýza dopadů umělé inteligence na právní profesi v ČR. Představuje AI pro advokáty existenční hrozbu, nebo bezprecedentní příležitost k transformaci?">
+    
     <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #0a2342;
-            --secondary-color: #2ca58d;
-            --text-color: #333;
-            --light-gray: #f4f4f4;
-            --white: #ffffff;
-        }
-        html { scroll-behavior: smooth; }
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--white);
-            padding-top: 70px;
-        }
-        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
-        .main-nav { background-color: var(--white); padding: 15px 20px; border-bottom: 1px solid var(--light-gray); position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; box-sizing: border-box; display: flex; justify-content: space-between; align-items: center; }
-        .nav-logo { font-weight: bold; color: var(--primary-color); text-decoration: none; font-size: 1.2em; }
-        .nav-links { display: flex; align-items: center; }
-        .nav-links a { color: var(--primary-color); text-decoration: none; font-weight: bold; margin: 0 15px; font-size: 1.1em; transition: color 0.3s ease; }
-        .nav-links a:hover { color: var(--secondary-color); }
-        .hamburger { display: none; } /* Zjednodušení pro šablonu článku */
-
-        .article-header {
-            padding: 40px 20px;
-            text-align: center;
-            border-bottom: 1px solid var(--light-gray);
-        }
-        .article-header h1 {
-            font-size: 2.8em;
-            color: var(--primary-color);
-            margin: 0 0 10px 0;
-        }
-        .article-meta {
-            font-size: 0.9em;
-            color: #777;
-        }
-        .article-content {
-            padding: 40px 0;
-        }
-        .article-content p, .article-content li {
-            font-size: 1.1em;
-            line-height: 1.7;
-        }
-        .article-content h2 {
-            font-size: 1.8em;
-            color: var(--primary-color);
-            margin-top: 40px;
-        }
-        .article-content h3 {
-            font-size: 1.4em;
-            color: var(--primary-color);
-            margin-top: 30px;
-        }
-        .article-content blockquote {
-            border-left: 4px solid var(--secondary-color);
-            padding-left: 20px;
-            font-style: italic;
-            margin: 20px 0;
-            font-size: 1.2em;
-            background-color: #f9f9f9;
-            padding: 15px 20px;
-            border-radius: 0 5px 5px 0;
-        }
-        .article-image-main {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin: 20px 0 30px 0;
-        }
-        .back-to-blog {
-            display: inline-block;
-            margin-top: 40px;
-            color: var(--secondary-color);
-            text-decoration: none;
-            font-weight: bold;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 30px;
-            font-size: 0.9em;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
-        th {
-            background-color: var(--primary-color);
-            color: var(--white);
-        }
-        tr:nth-child(even) {
-            background-color: var(--light-gray);
-        }
-        footer { background-color: var(--primary-color); color: var(--white); padding: 40px 20px; text-align: center; }
-        .copyright { margin-top: 20px; font-size: 0.8em; }
-    </style>
+    
+    <!-- Odkaz na centrální CSS (o 2 úrovně výš) -->
+    <link rel="stylesheet" href="../../style.css">
+    
+    <!-- Fonty a externí skripty -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 </head>
 <body>
+
+    <!-- NAVIGACE -->
     <nav class="main-nav">
-        <a href="../../index.html" class="nav-logo">Mgr. Gabriel Kožík</a>
-        <div class="nav-links">
-            <a href="../../index.html">Úvodní stránka</a>
-            <a href="../../blog.html">Blog</a>
-            <a href="../../index.html#propojit">Kontaktujte mě</a>
+        <a href="../../index.html" class="nav-logo">
+            <img src="../../assets/images/profilova-fotka.jpg" alt="Gabriel Kožík" class="nav-photo">
+            <span>Mgr. Gabriel Kožík</span>
+        </a>
+        <div class="hamburger" tabindex="0" role="button" aria-label="Otevřít menu">
+            <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+        </div>
+        <div class="nav-links-container">
+            <div class="nav-links">
+                <a href="../../index.html">Úvod</a>
+                <a href="../../blog.html" style="color: var(--secondary-color);">Blog</a>
+                <a href="../../index.html#connect">Kontakt</a>
+            </div>
+            <div class="lang-switcher">
+                <button class="lang-button lang-switcher-button">CZ <span class="arrow"></span></button>
+                <div class="lang-dropdown lang-switcher-dropdown">
+                    <a href="#" class="active">CZ</a>
+                    <a href="index-en.html">EN</a> <!-- Odkaz na anglickou verzi ve stejné složce -->
+                    <a href="../../index-fr.html">FR</a>
+                    <a href="../../index-hu.html">HU</a>
+                </div>
+            </div>
         </div>
     </nav>
 
-    <main>
-        <div class="container">
-            <article class="article-content">
+    <!-- HLAVNÍ OBSAH -->
+    <main class="blog-post-detail">
+        <div class="container" style="padding-top: 40px; padding-bottom: 60px;">
+            
+            <!-- Tlačítko Zpět -->
+            <a href="../../blog.html" class="back-link">&larr; Zpět na seznam článků</a>
+
+            <article>
+                <!-- Hlavička článku -->
                 <header class="article-header">
                     <h1>Advokacie na křižovatce: Hrozba nebo příležitost?</h1>
-                    <p class="article-meta">Autor: Mgr. Gabriel Kožík</p>
+                    <p class="article-meta">Publikováno: 20. července 2025 &bull; Kategorie: Odborné články</p>
                 </header>
 
-                <p>Umělá inteligence (AI) generující sofistikované texty či jiné formy výstupů mnohdy nerozeznatelné od lidské tvorby přestala být tématem vědeckofantastické literatury a stala se hmatatelnou realitou, která proniká do všech oblastí profesního života. Tradičně konzervativní obor, jakým je advokacie, není výjimkou. Jsou advokáti v ohrožení? Cílem tohoto příspěvku není nabídnout jednoduchou odpověď, ale rozebrat, zda tento technologický posun představuje pro české advokáty existenční hrozbu, nebo spíše bezprecedentní příležitost k transformaci a růstu. Pro zjednodušení budu v textu pracovat s pojmem AI ve smyslu generativních jazykových modelů jako ChatGPT nebo Gemini.</p>
-                
-                <img src="../../assets/images/blog/advokati-a-ai/llm-advokacie.jpg" alt="Advokát stojící na křižovatce mezi tradičním právem a moderní technologií umělé inteligence." class="article-image-main" loading="lazy">
+                <!-- Hlavní obrázek (lokální cesta) -->
+                <div class="article-featured-image">
+                    <img src="uvodni-obrazek.jpg" alt="Advokát na křižovatce mezi tradičním a moderním právem s AI">
+                </div>
 
-                <h2>Dichotomie AI v advokacii: Hrozba vs příležitost</h2>
-                <p>Pochopení dopadu této technologie na právní praxi vyžaduje uznání její fundamentální duality. Nejedná se o jednoznačně pozitivní či negativní technologii; její vliv je determinován způsobem, jakým je využívána, a mírou kritického myšlení, s jakou jsou její výstupy přijímány.</p>
+                <!-- Tělo článku -->
+                <div class="article-content-body">
+                    <p class="perex">
+                        Umělá inteligence (AI) přestala být tématem vědeckofantastické literatury a stala se hmatatelnou realitou, která proniká do všech oblastí profesního života. Tradičně konzervativní obor, jakým je advokacie, není výjimkou. Nástup pokročilých jazykových modelů vyvolává zásadní otázku: Jsou advokáti v ohrožení?
+                    </p>
 
-                <h3>AI jako akcelerátor efektivity a kvality: Argumenty PRO</h3>
-                <p>Hlavním argumentem pro využívání nástrojů AI v advokacii a dalších právních službách je její schopnost dramaticky zvýšit efektivitu a uvolnit lidský potenciál pro úkoly vyžadující vyšší kognitivní schopnosti.</p>
-                <ul>
-                    <li><strong>Automatizace rutinních úkolů:</strong> Právní rešerše, analýza judikatury, revize smluv či generování prvních návrhů dokumentů.</li>
-                    <li><strong>Zvýšení produktivity:</strong> Uvolnění kapacity pro práci s vyšší přidanou hodnotou – strategii, vyjednávání a komunikaci s klientem.</li>
-                    <li><strong>Zvýšení kvality a prediktivní analýza:</strong> Odhalování nekonzistencí, snižování rizika chyb a predikce výsledků sporů na základě dat.</li>
-                </ul>
+                    <h2>Nová realita české advokacie</h2>
+                    <p>
+                        Nástup pokročilých jazykových modelů a specializovaných právních softwarů vyvolává zásadní otázku, která rezonuje v advokátních kancelářích po celé České republice. Tento článek si klade za cíl poskytnout vyváženou analýzu tohoto fenoménu. Cílem není podat jednoduchou odpověď, ale rozebrat, zda tento technologický posun představuje pro české advokáty existenční hrozbu, nebo spíše bezprecedentní příležitost k transformaci a růstu.
+                    </p>
 
-                <h3>Rizika a etické výzvy: Argumenty PROTI</h3>
-                <p>Nekritické přijetí AI je spojeno se závažnými riziky, která mohou ohrozit nejen jednotlivé případy, ale i integritu celé profese.</p>
-                <ul>
-                    <li><strong>Faktická nespolehlivost a "halucinace":</strong> AI si může vymýšlet fakta, citovat neexistující judikáty nebo odkazovat na zrušené zákony, byť je v této oblasti za poslední roky znát citelný posun k lepšímu.</li>
-                    <li><strong>Nedostatek kontextuálního a emočního chápání:</strong> AI postrádá lidský úsudek, empatii a schopnost chápat jemné nuance mezilidských vztahů, a to navzdory proklamacím poskytovatelů.</li>
-                    <li><strong>Ohrožení profesních povinností:</strong> Vkládání citlivých informací je v přímém rozporu s povinností mlčenlivosti. Plnou odpovědnost za poskytování právních služeb navíc vždy nese advokát, nikoli software.</li>
-                </ul>
-                <blockquote>AI nenahradí člověka. Ale lidé, kteří ji používají, nahradí ty, kteří ji nepoužívají.</blockquote>
+                    <h2>Dichotomie umělé inteligence: Nástroj versus hrozba</h2>
+                    <p>
+                        Pochopení dopadu AI na právní praxi vyžaduje uznání její fundamentální duality. Nejedná se o jednoznačně pozitivní či negativní technologii; její vliv je determinován způsobem, jakým je využívána, a mírou kritického myšlení, s jakou jsou její výstupy přijímány. Představuje tak současně mocný nástroj pro akceleraci efektivity a zdroj nových, dosud nevídaných rizik.
+                    </p>
 
-                <h2>Praktické dopady AI na výkon advokacie v České republice</h2>
-                <p>Většina českých a slovenských advokátních kanceláří již AI v nějaké formě využívá. Na trhu se objevují specializované nástroje, které mění každodenní práci i strukturu právního trhu.</p>
-                <ul>
-                    <li><strong>Ohrožení juniorních pozic:</strong> Automatizace nejcitelněji dopadá na úkoly praktikantů, koncipientů, ba dokonce i juniorních advokátů.</li>
-                    <li><strong>Posílení role seniorních právníků:</strong> Role seniorů se posouvá k supervizi, strategickému plánování a finální kontrole výstupů AI.</li>
-                    <li><strong>Změna obchodních modelů:</strong> Tlak na efektivitu nutí kanceláře přecházet od hodinové sazby k ceně za projekt nebo odměně založené na přidané hodnotě.</li>
-                </ul>
+                    <h3>AI jako akcelerátor efektivity a kvality: Argumenty PRO</h3>
+                    <p>
+                        Hlavním argumentem pro zavedení AI do advokacie je její schopnost dramaticky zvýšit efektivitu a uvolnit lidský potenciál pro úkoly vyžadující vyšší kognitivní schopnosti.
+                    </p>
+                    <ul>
+                        <li><strong>Právní rešerše a analýza:</strong> Moderní AI nástroje dokáží v řádu sekund prohledat tisíce dokumentů. Specializované platformy využívající sémantické vyhledávání rozumí kontextu dotazu a dokáží identifikovat relevantní precedenty s rychlostí, která je pro člověka nedosažitelná.</li>
+                        <li><strong>Revize smluv:</strong> AI systémy jsou schopny automaticky analyzovat rozsáhlé smluvní dokumenty, identifikovat klíčové klauzule a potenciální rizika. To výrazně zkracuje čas potřebný pro due diligence.</li>
+                        <li><strong>Generování dokumentů:</strong> Na základě zadaných parametrů může AI vytvářet první návrhy standardizovaných smluv či žalobních podání, které následně právník pouze finalizuje.</li>
+                    </ul>
 
-                <h2>Regulatorní a etický rámec v ČR</h2>
-                <p>Česká advokátní komora (ČAK) vydala stanovisko, které zdůrazňuje, že AI je pouze nástroj a plnou odpovědnost nese vždy advokát. Absolutní prioritu má povinnost mlčenlivosti. Na evropské úrovni pak přichází <strong>Akt o umělé inteligenci (AI Act)</strong>, který zavádí rizikově orientovaný přístup. Většina nástrojů v advokacii spadne do kategorie s minimálním rizikem, kde bude klíčová povinnost transparentnosti. S ohledem na vysoce odbornou práci je však zásadně doporučováno implementovat navrhované přístupy jako je human-in-the-loop nebo řízení vstupů/výstupů.</p>
+                    <h3>Rizika a etické výzvy: Argumenty PROTI</h3>
+                    <p>
+                        Navzdory zjevným přínosům je nekritické přijetí AI spojeno se závažnými riziky, která mohou ohrozit nejen jednotlivé případy, ale i integritu celé profese.
+                    </p>
+                    <p>
+                        <strong>Faktická nespolehlivost a „halucinace“:</strong> Generativní AI modely jsou známé svou tendencí „halucinovat“ – tedy vymýšlet si fakta, která znějí věrohodně, ale nejsou pravdivá. V právním kontextu to znamená generování citací neexistujících soudních rozhodnutí nebo formulování smyšlených právních argumentů.
+                    </p>
+                    <p>
+                        <strong>Nedostatek kontextuálního a emočního chápání:</strong> Právo je hluboce lidská disciplína. AI postrádá lidský úsudek, empatii a schopnost chápat jemné nuance mezilidských vztahů či morální dilemata, která jsou často jádrem sporu.
+                    </p>
+                    <blockquote>
+                        "Technologie slouží jako nástroj, ale plnou profesní, etickou a právní odpovědnost za poskytnutou radu nese vždy a pouze advokát."
+                    </blockquote>
 
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Riziko</th>
-                            <th>Popis rizika v kontextu advokacie</th>
-                            <th>Mitigační strategie a doporučené postupy</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Faktické chyby a "halucinace"</strong></td>
-                            <td>Generování nesprávných právních informací, citací neexistujících judikátů.</td>
-                            <td>Nikdy nekopírovat bez ověření; používat specializované právní nástroje; implementovat dvoufázovou kontrolu.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Porušení advokátní mlčenlivosti</strong></td>
-                            <td>Vkládání citlivých klientských dat do AI modelů.</td>
-                            <td>Zákaz používání AI pro klientská data; využívat enterprise licence a on-premise řešení; anonymizace dat.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Ztráta kritických dovedností</strong></td>
-                            <td>Nadměrná závislost na AI může vést k atrofii analytických a rešeršních schopností.</td>
-                            <td>Vzdělávat právníky, aby AI chápali jako asistenta, ne náhradu; změna vzdělávacího modelu.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Právní a etická odpovědnost</strong></td>
-                            <td>Nejasnosti ohledně odpovědnosti za chybu AI. Dle stavovských předpisů je to však vždy advokát.</td>
-                            <td>Jasné interní směrnice; ověření pojištění profesní odpovědnosti; dokumentace a auditní stopa.</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h2>Závěr: Jak se adaptovat a prosperovat?</h2>
-                <p>Pasivní vyčkávání není udržitelnou strategií. Budoucnost advokacie spočívá v modelu "kentaura" – symbióze lidské intuice a strategického myšlení, která řídí obrovskou výpočetní sílu AI. Úspěšný advokát budoucnosti nebude ten, kdo se snaží AI porazit, ale ten, kdo se ji naučí nejlépe "osedlat".</p>
-                <ul>
-                    <li><strong>Pro jednotlivce:</strong> Proaktivně se vzdělávat, rozvíjet "lidské" dovednosti (kritické myšlení, empatie) a budovat osobní značku.</li>
-                    <li><strong>Pro kanceláře:</strong> Vypracovat AI strategii, investovat do bezpečných technologií a školení, a revidovat obchodní model.</li>
-                    <li><strong>Pro vzdělávací instituce:</strong> Modernizovat osnovy a zařadit do výuky právní technologie a práci s daty.</li>
-                </ul>
-
-                <a href="../../blog.html" class="back-to-blog">← Zpět na přehled článků</a>
+                    <h2>Závěr: Evoluce, ne revoluce</h2>
+                    <p>
+                        Diskuze se nevyhnutelně posouvá od zjednodušující otázky, zda AI nahradí právníky, k mnohem podstatnějšímu zkoumání, které konkrétní úkoly právníků AI převezme a jak tato změna přetvoří samotnou roli advokáta. Automatizace se týká především rutinních a datově náročných činností, což nám dává příležitost vrátit se k podstatě advokacie – strategickému poradenství a lidskému přístupu.
+                    </p>
+                </div>
             </article>
+
+            <!-- CTA BOX -->
+            <div class="cta-box">
+                <h3>Zajímá vás využití AI v právní praxi?</h3>
+                <p>Rád s vámi proberu možnosti implementace AI do vaší kanceláře nebo firmy.</p>
+                <div class="cta-buttons">
+                    <a href="mailto:kozik@iustoria.cz" class="cta-button">Napsat e-mail</a>
+                    <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/kozik-iustoria/30min', text: 'Sjednat konzultaci', color: '#2ca58d', textColor: '#ffffff', branding: true});return false;" class="cta-button secondary">Rezervovat online schůzku</a>
+                </div>
+            </div>
+
         </div>
     </main>
-    
+
+    <!-- PATIČKA -->
     <footer>
-        <div class="container">
-            <p class="copyright">&copy; 2025 Mgr. Gabriel Kožík. Všechna práva vyhrazena.</p>
+        <div class="footer-grid">
+            <div>
+                <h4>Mgr. Gabriel Kožík</h4>
+                <p>Advokát & AI Stratég</p>
+                <div class="social-icons-container">
+                    <a href="https://www.linkedin.com/in/gabriel-kozik/" target="_blank" class="social-icon" aria-label="LinkedIn profil"><img src="../../assets/images/linkedin.png" alt="LinkedIn ikona"></a>
+                    <a href="https://www.facebook.com/somslovak" target="_blank" class="social-icon" aria-label="Facebook profil"><img src="../../assets/images/facebook.png" alt="Facebook ikona"></a>
+                    <a href="https://www.instagram.com/kozik_gabriel/" target="_blank" class="social-icon" aria-label="Instagram profil"><img src="../../assets/images/instagram.png" alt="Instagram ikona"></a>
+                    <a href="https://www.youtube.com/@gabriel-kozik" target="_blank" class="social-icon" aria-label="YouTube kanál"><img src="../../assets/images/youtube.png" alt="YouTube ikona"></a>
+                </div>
+            </div>
+            <div><h4>Kontakt</h4><p>E-mail: <a href="mailto:kozik@iustoria.cz">kozik@iustoria.cz</a></p><p>Telefon: <a href="tel:+420720265713">+420 720 265 713</a></p><p>Datová schránka: eygwp2c</p></div>
+            <div><h4>Kancelář</h4><p>IUSTORIA, advokátní kancelář, s.r.o.</p><p>Slovákova 279/11, 602 00 Brno</p><p><a href="http://www.iustoria.cz" target="_blank">www.iustoria.cz</a></p></div>
+            <div><h4>Zápis v ČAK</h4><p>ev. č.: 19320</p><p>IČO: 05187559</p><p>společník s.r.o.</p></div>
         </div>
+        <div class="copyright"><p>&copy; 2025 Mgr. Gabriel Kožík. Všechna práva vyhrazena.</p></div>
     </footer>
+
+    <!-- SKRIPTY -->
+    <script>
+        // Hamburger menu
+        const hamburger = document.querySelector('.hamburger');
+        const navLinksContainer = document.querySelector('.nav-links-container');
+        function toggleMenu() {
+            const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+            hamburger.setAttribute('aria-expanded', !isExpanded);
+            navLinksContainer.classList.toggle('active');
+        }
+        hamburger.addEventListener('click', toggleMenu);
+        hamburger.addEventListener('keydown', e => { if(e.key === 'Enter') toggleMenu(); });
+
+        // Přepínač jazyků
+        const langButton = document.querySelector('.lang-switcher-button');
+        const langDropdown = document.querySelector('.lang-switcher-dropdown');
+        langButton.addEventListener('click', e => { 
+            e.stopPropagation(); 
+            langDropdown.style.display = langDropdown.style.display === 'block' ? 'none' : 'block';
+        });
+        window.addEventListener('click', e => {
+            if (!langButton.parentElement.contains(e.target)) langDropdown.style.display = 'none';
+        });
+    </script>
+    <script src="/_vercel/insights/script.js"></script>
 </body>
 </html>

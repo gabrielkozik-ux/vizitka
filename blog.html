@@ -357,7 +357,7 @@
             const paginationContainer = document.querySelector('.pagination-container');
             const filterButtons = document.querySelectorAll('.filter-btn');
             
-            const articlesPerPage = 6; // Zobrazujeme více článků, když je stránka širší
+            const articlesPerPage = 6; 
             let currentFilter = 'vsechny';
             
             function getFilteredArticles() {
@@ -371,23 +371,30 @@
     const startIndex = (page - 1) * articlesPerPage;
     const endIndex = startIndex + articlesPerPage;
 
-    // Nejdříve skryjeme vše
-    allArticles.forEach(article => article.style.display = 'none');
-    
-    const articlesToShow = articles.slice(startIndex, endIndex);
-    articlesToShow.forEach(article => {
-        article.style.display = 'flex';
-    });
-    
-    setupPaginationButtons(page, articles);
+                // Nejdříve skryjeme vše
+                allArticles.forEach(article => article.style.display = 'none');
+                
+                const articlesToShow = articles.slice(startIndex, endIndex);
+                articlesToShow.forEach(article => {
+                    article.style.display = 'flex'; 
+                });
+                
+                setupPaginationButtons(page, articles);
 
-    // Místo window.scrollTo(0, 0) použijeme toto:
-    const filterSection = document.querySelector('.filter-container');
-    if (filterSection) {
-        // scrollIntoView zajistí hladký posun na sekci filtrů
-        filterSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-}
+                // Inteligentní scroll pod fixní navigaci
+                const filterSection = document.querySelector('.filter-container');
+                const navBar = document.querySelector('.main-nav');
+                
+                if (filterSection && navBar) {
+                    const navHeight = navBar.offsetHeight;
+                    const filterPosition = filterSection.getBoundingClientRect().top + window.pageYOffset;
+                    
+                    window.scrollTo({
+                        top: filterPosition - navHeight - 20,
+                        behavior: 'smooth'
+                    });
+                }
+            }
 
             function setupPaginationButtons(currentPage, articles) {
                 paginationContainer.innerHTML = '';

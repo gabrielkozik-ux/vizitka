@@ -368,23 +368,26 @@
             }
 
             function displayPage(page, articles) {
-                const startIndex = (page - 1) * articlesPerPage;
-                const endIndex = startIndex + articlesPerPage;
+    const startIndex = (page - 1) * articlesPerPage;
+    const endIndex = startIndex + articlesPerPage;
 
-                // Nejdříve skryjeme vše
-                allArticles.forEach(article => article.style.display = 'none');
-                
-                const articlesToShow = articles.slice(startIndex, endIndex);
-                articlesToShow.forEach(article => {
-                    article.style.display = 'flex'; // Používáme flex z CSS
-                });
-                
-                setupPaginationButtons(page, articles);
-                const filterSection = document.querySelector('.filter-container');
+    // Nejdříve skryjeme vše
+    allArticles.forEach(article => article.style.display = 'none');
+    
+    const articlesToShow = articles.slice(startIndex, endIndex);
+    articlesToShow.forEach(article => {
+        article.style.display = 'flex';
+    });
+    
+    setupPaginationButtons(page, articles);
+
+    // Místo window.scrollTo(0, 0) použijeme toto:
+    const filterSection = document.querySelector('.filter-container');
     if (filterSection) {
         // scrollIntoView zajistí hladký posun na sekci filtrů
         filterSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
+    }
+}
 
             function setupPaginationButtons(currentPage, articles) {
                 paginationContainer.innerHTML = '';

@@ -549,7 +549,7 @@ section:nth-child(2n) {
 }
 .article-card {
     display: flex;
-    gap: 0;
+    gap: 30px;
     margin-bottom: 40px;
     background: var(--white);
     border-radius: 16px;

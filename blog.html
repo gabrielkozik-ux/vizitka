@@ -380,7 +380,10 @@
                 });
                 
                 setupPaginationButtons(page, articles);
-                window.scrollTo(0, 0);
+                const filterSection = document.querySelector('.filter-container');
+    if (filterSection) {
+        // scrollIntoView zajistí hladký posun na sekci filtrů
+        filterSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
 
             function setupPaginationButtons(currentPage, articles) {

@@ -840,6 +840,14 @@ footer {
     margin-bottom: 15px;
 }
 
+.article-content .perex {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: var(--primary-color);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
 /* HLAVNÍ OBRÁZEK (a pojistka pro ostatní obrázky v obsahu) */
 .article-image-main,
 .article-content img {

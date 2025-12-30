@@ -43,6 +43,12 @@ a {
 
 a:hover { color: var(--accent-color); }
 
+/* Reset pro figure, aby nedělal neplechu v blogu */
+figure {
+    margin: 0;
+    padding: 0;
+}
+
 .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -180,7 +186,7 @@ section:nth-child(2n) {
     /* Cesta upravena: ze složky css (..) do assets, pak do images */
     background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.6)), url('assets/images/uvodni-obrazek.jpg');
     background-size: cover;
-    background-position: center 200%;
+    background-position: center 140%;
     background-attachment: fixed;
     color: var(--white);
     
@@ -543,7 +549,7 @@ section:nth-child(2n) {
 }
 .article-card {
     display: flex;
-    gap: 0;
+    gap: 30px;
     margin-bottom: 40px;
     background: var(--white);
     border-radius: 16px;
@@ -560,7 +566,7 @@ section:nth-child(2n) {
     transition: transform 0.5s ease;
 }
 .article-card:hover .article-image img { transform: scale(1.05); }
-.article-content { padding: 40px; flex: 1; }
+.article-content { padding: 30px 40px 30px 10px; /* Horní, pravý, dolní, levý */; flex: 1; }
 .article-content h2 { margin-top: 0; font-size: 1.8em; line-height: 1.3; }
 .article-content h2 a { color: var(--primary-color); }
 .article-content h2 a:hover { color: var(--secondary-color); }
@@ -765,4 +771,148 @@ footer {
     
     .footer-grid { text-align: center; }
     .social-icons-container { justify-content: center; }
+}
+
+/* =========================================
+   12. BLOG DETAIL STYLES (Podle tvého vzoru)
+   ========================================= */
+
+/* Wrapper pro celý článek (nahrazuje .container ve tvém příkladu) */
+.article-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--white);
+}
+
+/* Hlavička článku (nadpis a meta) */
+.article-header {
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--light-gray);
+    margin-bottom: 30px;
+}
+
+.article-header h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.8em;
+    color: var(--primary-color);
+    margin: 0 0 10px 0;
+    line-height: 1.2;
+}
+
+.article-meta {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9em;
+    color: #94a3b8; /* Použití tvé šedé */
+}
+
+/* Obsah článku */
+.article-content {
+    padding: 20px 0;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+}
+
+.article-content p, 
+.article-content li {
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin-bottom: 1.5em;
+}
+
+.article-content h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.8em;
+    color: var(--primary-color);
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.article-content h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.4em;
+    color: var(--primary-color);
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.article-content .perex {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: var(--primary-color);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* HLAVNÍ OBRÁZEK (a pojistka pro ostatní obrázky v obsahu) */
+.article-image-main,
+.article-content img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    margin: 20px 0 30px 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    object-fit: cover;
+}
+
+/* Citace */
+.article-content blockquote {
+    border-left: 4px solid var(--secondary-color);
+    margin: 20px 0;
+    padding: 15px 20px;
+    font-style: italic;
+    font-size: 1.2em;
+    background-color: var(--light-gray);
+    border-radius: 0 5px 5px 0;
+    color: #475569;
+}
+
+/* Sekce zdrojů */
+.sources-section {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid var(--light-gray);
+    font-size: 0.9em;
+    color: #64748b;
+}
+
+.sources-section ol {
+    padding-left: 20px;
+}
+
+.sources-section li {
+    margin-bottom: 10px;
+}
+
+.sources-section a {
+    color: var(--secondary-color);
+    word-break: break-all;
+}
+
+.sources-section sup {
+    font-size: 0.75em;
+    vertical-align: super;
+    margin-left: 2px;
+}
+
+/* Odkaz zpět */
+.back-link {
+    display: inline-block;
+    margin-top: 40px;
+    color: var(--secondary-color);
+    font-weight: 700;
+    text-decoration: none;
+}
+.back-link:hover { text-decoration: underline; }
+
+/* Responzivita pro článek */
+@media (max-width: 768px) {
+    .article-header h1 {
+        font-size: 2.2em !important;
+    }
 }

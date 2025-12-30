@@ -186,7 +186,7 @@ section:nth-child(2n) {
     /* Cesta upravena: ze složky css (..) do assets, pak do images */
     background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.6)), url('assets/images/uvodni-obrazek.jpg');
     background-size: cover;
-    background-position: center 180%;
+    background-position: center 140%;
     background-attachment: fixed;
     color: var(--white);
     

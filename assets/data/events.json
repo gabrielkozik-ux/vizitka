@@ -1,0 +1,326 @@
+[
+  {
+    "date": "2026-01-06",
+    "time": "09:00 - 12:00",
+    "title": {
+      "cs": "Snídaně klubu Pod Pálavou",
+      "en": "Business Breakfast Pod Pálavou"
+    },
+    "place": "Krčma a hotel U Císařské cesty, Branišovice",
+    "link": "https://app.influon.cz/o/podpalavou/eEpOZTRkTDZ4VEo0NWoyUGNXMDJVR1JkaUcvd3V0a3MrZ3RnWXVHNGF5az0=",
+    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=Sn%C3%ADdan%C4%9B+klubu+Pod+P%C3%A1lavou&dates=20260106T080000Z/20260106T110000Z&details=Registrace+zde%3A+https%3A%2F%2Fapp.influon.cz%2Fo%2Fpodpalavou%2FeEpOZTRkTDZ4VEo0NWoyUGNXMDJVR1JkaUcvd3V0a3MrZ3RnWXVHNGF5az0%3D&location=Kr%C4%8Dma+a+hotel+U+C%C3%ADsa%C5%99sk%C3%A9+cesty%2C+Brani%C5%A1ovice",
+    "isSoldOut": false
+  },
+  {
+    "date": "2026-01-08",
+    "time": "16:00 - 20:00",
+    "title": {
+      "cs": "Novoroční večírek BforB",
+      "en": "New Year's Party BforB"
+    },
+    "place": "Místo bude upřesněno",
+    "link": "https://www.facebook.com/bforbtisnov/",
+    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=Novoro%C4%8Dn%C3%AD+ve%C4%8D%C3%ADrek+BforB&dates=20260108T150000Z/20260108T190000Z&details=V%C3%ADce+informac%C3%AD+na%3A+https%3A%2F%2Fwww.facebook.com%2Fbforbtisnov%2F&location=Bude+up%C5%99esn%C4%9Bno",
+    "isSoldOut": false
+  },
+  {
+    "date": "2026-01-13",
+    "time": "17:30 - 19:30",
+    "title": {
+      "cs": "Klubové setkání podnikavců Tišnov",
+      "en": "Entrepreneurs Club Meeting Tišnov"
+    },
+    "place": "Laskala Café, Klášterská 357, Tišnov",
+    "link": "https://klubpodnikavcu.cz/akce/sraz-podnikavcu-tisnov-27",
+    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=Klubov%C3%A9+setk%C3%A1n%C3%AD+podnikavc%C5%AF+Ti%C5%A1nov&dates=20260113T163000Z/20260113T183000Z&details=Registrace+zde%3A+https%3A%2F%2Fklubpodnikavcu.cz%2Fakce%2Fsraz-podnikavcu-tisnov-27&location=Laskala+Caf%C3%A9%2C+Kl%C3%A1%C5%A1tersk%C3%A1+357%2C+Ti%C5%A1nov",
+    "isSoldOut": false
+  },
+  {
+    "date": "2026-01-20",
+    "time": "09:00 - 12:00",
+    "title": {
+      "cs": "Snídaně klubu Pod Pálavou",
+      "en": "Business Breakfast Pod Pálavou"
+    },
+    "place": "Krčma a hotel U Císařské cesty, Branišovice",
+    "link": "https://app.influon.cz/o/podpalavou/eEpOZTRkTDZ4VEo0NWoyUGNXMDJVR1JkaUcvd3V0a3MrZ3RnWXVHNGF5az0=",
+    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=Sn%C3%ADdan%C4%9B+klubu+Pod+P%C3%A1lavou&dates=20260120T080000Z/20260120T110000Z&details=Registrace+zde%3A+https%3A%2F%2Fapp.influon.cz%2Fo%2Fpodpalavou%2FeEpOZTRkTDZ4VEo0NWoyUGNXMDJVR1JkaUcvd3V0a3MrZ3RnWXVHNGF5az0%3D&location=Kr%C4%8Dma+a+hotel+U+C%C3%ADsa%C5%99sk%C3%A9+cesty%2C+Brani%C5%A1ovice",
+    "isSoldOut": false
+  },
+  {
+    "date": "2026-01-21",
+    "time": "17:30 - 19:30",
+    "title": {
+      "cs": "Klubové setkání podnikavců Kuřim",
+      "en": "Entrepreneurs Club Meeting Kuřim"
+    },
+    "place": "MěKS, Kuřim",
+    "link": "https://klubpodnikavcu.cz/akce/sraz-podnikavcu-kurim-7",
+    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=Klubov%C3%A9+setk%C3%A1n%C3%AD+podnikavc%C5%AF+Ku%C5%99im&dates=20260121T163000Z/20260121T183000Z&details=Registrace+zde%3A+https%3A%2F%2Fklubpodnikavcu.cz%2Fakce%2Fsraz-podnikavcu-kurim-7&location=M%C4%9BKS%2C+Ku%C5%99im",
+    "isSoldOut": false
+  },
+  {
+    "date": "2025-12-04",
+    "time": "08:30 - 11:30",
+    "title": {
+      "cs": "BforB setkání v Tišnově",
+      "en": "BforB Meeting Tišnov"
+    },
+    "place": "Laskala Café, Klášterská 357, Tišnov",
+    "link": "#",
+    "calendarLink": "",
+    "isSoldOut": true
+  },
+  {
+    "date": "2025-12-09",
+    "time": "09:00 - 12:00",
+    "title": {
+      "cs": "Klubové setkání Pod Pálavou",
+      "en": "Business Club Meeting Pod Pálavou"
+    },
+    "place": "Krčma a hotel U Císařské cesty, Branišovice",
+    "link": "https://app.influon.cz/o/podpalavou/eEpOZTRkTDZ4VEo0NWoyUGNXMDJVQjV0aE5sYkIxemp0UHcwQmw1cW9qYz0=",
+    "calendarLink": "",
+    "isSoldOut": false
+  },
+  {
+    "date": "2025-12-17",
+    "time": "17:30 - 19:30",
+    "title": {
+      "cs": "Klubové setkání podnikavců v Kuřimi",
+      "en": "Entrepreneurs Club Meeting Kuřim"
+    },
+    "place": "MěKS, Kuřim",
+    "link": "https://klubpodnikavcu.cz/akce/sraz-podnikavcu-kurim-7",
+    "calendarLink": "",
+    "isSoldOut": false
+  },
+  {
+    "date": "2025-11-06",
+    "time": "08:30 - 11:30",
+    "title": {
+      "cs": "BforB setkání v Tišnově",
+      "en": "BforB Meeting Tišnov"
+    },
+    "place": "Laskala Café, Klášterská 357, Tišnov",
+    "link": "https://www.facebook.com/profile.php?id=61561146905712",
+    "calendarLink": "",
+    "isSoldOut": false
+  },
+  {
+    "date": "2025-11-11",
+    "time": "09:00 - 12:00",
+    "title": {
+      "cs": "Klubové setkání Pod Pálavou",
+      "en": "Business Club Meeting Pod Pálavou"
+    },
+    "place": "Krčma a hotel U Císařské cesty, Branišovice",
+    "link": "https://app.influon.cz/o/podpalavou/eEpOZTRkTDZ4VEo0NWoyUGNXMDJVQjV0aE5sYkIxemp0UHcwQmw1cW9qYz0=",
+    "calendarLink": "",
+    "isSoldOut": false
+  },
+  {
+    "date": "2025-11-12",
+    "time": "17:30 - 19:30",
+    "title": {
+      "cs": "Klubové setkání podnikavců v Kuřimi",
+      "en": "Entrepreneurs Club Meeting Kuřim"
+    },
+    "place": "MěKS, Kuřim",
+    "link": "https://klubpodnikavcu.cz/akce/sraz-podnikavcu-kurim-6",
+    "calendarLink": "",
+    "isSoldOut": false
+  },
+  {
+    "date": "2025-11-18",
+    "time": "17:30 - 19:30",
+    "title": {
+      "cs": "Klubové setkání podnikavců v Tišnově",
+      "en": "Entrepreneurs Club Meeting Tišnov"
+    },
+    "place": "Jazzový sál pod kinem, Tišnov",
+    "link": "https://klubpodnikavcu.cz/akce/sraz-podnikavcu-tisnov-26",
+    "calendarLink": "",
+    "isSoldOut": false
+  },
+  {
+    "date": "2025-11-25",
+    "time": "09:00 - 12:00",
+    "title": {
+      "cs": "Klubové setkání Pod Pálavou",
+      "en": "Business Club Meeting Pod Pálavou"
+    },
+    "place": "Krčma a hotel U Císařské cesty, Branišovice",
+    "link": "https://app.influon.cz/o/podpalavou/eEpOZTRkTDZ4VEo0NWoyUGNXMDJVQjV0aE5sYkIxemp0UHcwQmw1cW9qYz0=",
+    "calendarLink": "",
+    "isSoldOut": false
+  },
+  {
+    "date": "2025-11-26",
+    "time": "12:00 - 15:00",
+    "title": {
+      "cs": "B2B Networkingový oběd Smart Network",
+      "en": "B2B Networking Lunch Smart Network"
+    },
+    "place": "Design hotel Noem Arch, Brno",
+    "link": "https://www.smart-network.cz/akce/b2b-networkingovy-obed-streda-26112025-brno-design-hotel-noem-arch",
+    "calendarLink": "",
+    "isSoldOut": false
+  },
+  {
+    "date": "2025-10-02",
+    "time": "16:00 - 20:00",
+    "title": {
+      "cs": "BforB setkání v Tišnově",
+      "en": "BforB Meeting Tišnov"
+    },
+    "place": "Lascala café, Klášterská 357, Tišnov",
+    "link": "https://www.facebook.com/profile.php?id=61561146905712",
+    "calendarLink": "",
+    "isSoldOut": false
+  },
+  {
+    "date": "2025-10-09",
+    "time": "09:00 - 17:00",
+    "title": {
+      "cs": "Týden inovací - seminář o AI complianci pro B2B",
+      "en": "Innovation Week - AI Compliance for B2B"
+    },
+    "place": "ČSOB Kampus Praha",
+    "link": "https://www.innovationweek.ai/cs",
+    "calendarLink": "",
+    "isSoldOut": false
+  },
+  {
+    "date": "2025-10-14",
+    "time": "09:00 - 12:00",
+    "title": {
+      "cs": "Klubové setkání Pod Pálavou",
+      "en": "Business Club Meeting Pod Pálavou"
+    },
+    "place": "Krčma a hotel U Císařské cesty, Branišovice",
+    "link": "https://app.influon.cz/o/podpalavou/eEpOZTRkTDZ4VEo0NWoyUGNXMDJVQjV0aE5sYkIxemp0UHcwQmw1cW9qYz0=",
+    "calendarLink": "",
+    "isSoldOut": false
+  },
+  {
+    "date": "2025-10-15",
+    "time": "17:30 - 19:30",
+    "title": {
+      "cs": "Klubové setkání Podnikavců Kuřim: Marketing",
+      "en": "Entrepreneurs Club Kuřim: Marketing"
+    },
+    "place": "MěKS, Kuřim",
+    "link": "https://klubpodnikavcu.cz/akce/sraz-podnikavcu-kurim-4",
+    "calendarLink": "",
+    "isSoldOut": false
+  },
+  {
+    "date": "2025-10-16",
+    "time": "12:00 - 15:00",
+    "title": {
+      "cs": "B2B Networkingový oběd Smart Network",
+      "en": "B2B Networking Lunch Smart Network"
+    },
+    "place": "Design hotel Noem Arch, Brno",
+    "link": "https://www.smart-network.cz/akce/b2b-networkingovy-obed-ctvrtek-16102025-brno-design-hotel-noem-arch",
+    "calendarLink": "",
+    "isSoldOut": false
+  },
+  {
+    "date": "2025-10-30",
+    "time": "09:00 - 12:00",
+    "title": {
+      "cs": "Neformální setkání Pod Pálavou: Směřování klubu",
+      "en": "Informal Meeting Pod Pálavou: Club Direction"
+    },
+    "place": "Krčma a hotel U Císařské cesty, Branišovice",
+    "link": "#",
+    "calendarLink": "",
+    "isSoldOut": true
+  },
+  {
+    "date": "2025-09-04",
+    "time": "16:00 - 22:00",
+    "title": {
+      "cs": "Networkingová grilovačka BforB Tišnov",
+      "en": "Networking BBQ BforB Tišnov"
+    },
+    "place": "Café u Palce, Tišnov",
+    "link": "https://www.facebook.com/profile.php?id=61561146905712",
+    "calendarLink": "",
+    "isSoldOut": false
+  },
+  {
+    "date": "2025-09-11",
+    "time": "16:00 - 20:30",
+    "title": {
+      "cs": "Firemní kultura: Večer s Alveno",
+      "en": "Corporate Culture: Evening with Alveno"
+    },
+    "place": "Alveno, Purkyňova 99, Brno",
+    "link": "blog/firemni-kultura-alveno/firemni-kultura-alveno.html",
+    "calendarLink": "",
+    "isSoldOut": false
+  },
+  {
+    "date": "2025-09-16",
+    "time": "09:00 - 12:00",
+    "title": {
+      "cs": "Networkingová snídaně Pod Pálavou",
+      "en": "Networking Breakfast Pod Pálavou"
+    },
+    "place": "Krčma a hotel U Císařské cesty, Branišovice",
+    "link": "#",
+    "calendarLink": "",
+    "isSoldOut": false
+  },
+  {
+    "date": "2025-09-16",
+    "time": "17:30 - 19:30",
+    "title": {
+      "cs": "Networkingové setkání Klubu Podnikavců Tišnov",
+      "en": "Networking Meeting Entrepreneurs Club Tišnov"
+    },
+    "place": "Jazzový sál pod kinem, Tišnov",
+    "link": "https://klubpodnikavcu.cz/akce/sraz-podnikavcu-tisnov-25",
+    "calendarLink": "",
+    "isSoldOut": false
+  },
+  {
+    "date": "2025-09-17",
+    "time": "17:30 - 19:30",
+    "title": {
+      "cs": "Networkingové setkání Klubu Podnikavců Kuřim",
+      "en": "Networking Meeting Entrepreneurs Club Kuřim"
+    },
+    "place": "MěKS, Kuřim",
+    "link": "https://klubpodnikavcu.cz/akce/sraz-podnikavcu-kurim-3",
+    "calendarLink": "",
+    "isSoldOut": false
+  },
+  {
+    "date": "2025-09-19",
+    "time": "17:30 - 19:30",
+    "title": {
+      "cs": "Networkingový narozeninový večírek Smart Network",
+      "en": "Networking Birthday Party Smart Network"
+    },
+    "place": "ABZAC centrum, Brno",
+    "link": "https://www.smart-network.cz/akce/networkingovy-vecirek-patek-19092025-brno-oslava-12-narozenin",
+    "calendarLink": "",
+    "isSoldOut": false
+  },
+  {
+    "date": "2025-09-30",
+    "time": "09:00 - 12:00",
+    "title": {
+      "cs": "Klubové setkání Pod Pálavou",
+      "en": "Business Club Meeting Pod Pálavou"
+    },
+    "place": "Krčma a hotel U Císařské cesty, Branišovice",
+    "link": "https://www.linkedin.com/posts/podpalavou_zav%C5%99eli-jsme-o%C4%8Di-abychom-l%C3%A9pe-vid%C4%9Bli-na%C5%A1e-activity-7378752837750595584-48-t?utm_source=share&utm_medium=member_desktop&rcm=ACoAABC9QW0BkBczBmulu3cp1DqYsgQytOXmgUc",
+    "calendarLink": "",
+    "isSoldOut": false
+  }
+]

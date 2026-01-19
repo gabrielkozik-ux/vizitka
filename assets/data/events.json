@@ -1,5 +1,65 @@
 [
   {
+    "date": "2026-02-25",
+    "time": "12:00 - 15:00",
+    "title": {
+      "cs": "B2B Networkingový oběd Smart Network",
+      "en": "B2B Networking Lunch Smart Network"
+    },
+    "place": "Design hotel Noem Arch, Brno",
+    "link": "https://www.smart-network.cz/akce/b2b-networkingovy-obed-streda-25022026-brno-design-hotel-noem-arch",
+    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=B2B+Networkingov%C3%BD+ob%C4%9Bd+Smart+Network&dates=20260225T110000Z/20260225T140000Z&details=Registrace+zde%3A+https%3A%2F%2Fwww.smart-network.cz%2Fakce%2Fb2b-networkingovy-obed-streda-25022026-brno-design-hotel-noem-arch&location=Design+hotel+Noem+Arch%2C+Brno",
+    "isSoldOut": false
+  },
+  {
+    "date": "2026-02-17",
+    "time": "09:00 - 12:00",
+    "title": {
+      "cs": "Networking Pod Pálavou #4: Růstové myšlení",
+      "en": "Networking Pod Pálavou #4: Growth Mindset"
+    },
+    "place": "Krčma a hotel U Císařské cesty, Branišovice",
+    "link": "https://app.influon.cz/o/podpalavou/eEpOZTRkTDZ4VEo0NWoyUGNXMDJVR1JkaUcvd3V0a3MrZ3RnWXVHNGF5az0=",
+    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=Networking+Pod+P%C3%A1lavou+%234%3A+R%C5%AFstov%C3%A9+my%C5%A1len%C3%AD&dates=20260217T080000Z/20260217T110000Z&details=T%C3%A9ma%3A+R%C5%AFstov%C3%A9+my%C5%A1len%C3%AD+a+odpov%C4%9Bdnost.+Registrace%3A+https%3A%2F%2Fapp.influon.cz%2Fo%2Fpodpalavou%2FeEpOZTRkTDZ4VEo0NWoyUGNXMDJVR1JkaUcvd3V0a3MrZ3RnWXVHNGF5az0%3D&location=Kr%C4%8Dma+a+hotel+U+C%C3%ADsa%C5%99sk%C3%A9+cesty%2C+Brani%C5%A1ovice",
+    "isSoldOut": false
+  },
+  {
+    "date": "2026-02-10",
+    "time": "17:30 - 19:30",
+    "title": {
+      "cs": "Klubové setkání podnikavců Tišnov: Tvorba videí",
+      "en": "Entrepreneurs Club Meeting Tišnov: Video Creation"
+    },
+    "place": "Tišnov (místo bude upřesněno)",
+    "link": "https://klubpodnikavcu.cz/akce/sraz-podnikavcu-tisnov-28",
+    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=Klubov%C3%A9+setk%C3%A1n%C3%AD+podnikavc%C5%AF+Ti%C5%A1nov&dates=20260210T163000Z/20260210T183000Z&details=T%C3%A9ma%3A+Tvorba+vide%C3%AD+na+soci%C3%A1ln%C3%AD+s%C3%ADt%C4%9B.+Registrace%3A+https%3A%2F%2Fklubpodnikavcu.cz%2Fakce%2Fsraz-podnikavcu-tisnov-28&location=Ti%C5%A1nov",
+    "isSoldOut": false
+  },
+  {
+    "date": "2026-02-05",
+    "time": "08:30 - 11:30",
+    "title": {
+      "cs": "BforB setkání v Tišnově",
+      "en": "BforB Meeting Tišnov"
+    },
+    "place": "Merryna bar Tišnov",
+    "link": "#",
+    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=BforB+setk%C3%A1n%C3%AD+v+Ti%C5%A1nov%C4%9B&dates=20260205T073000Z/20260205T103000Z&location=Merryna+bar+Ti%C5%A1nov",
+    "isSoldOut": false
+  },
+  {
+    "date": "2026-02-03",
+    "time": "09:00 - 12:00",
+    "title": {
+      "cs": "Networking Pod Pálavou #3: Podnikání napříč generacemi",
+      "en": "Networking Pod Pálavou #3: Business Across Generations"
+    },
+    "place": "Krčma a hotel U Císařské cesty, Branišovice",
+    "link": "https://app.influon.cz/o/podpalavou/eEpOZTRkTDZ4VEo0NWoyUGNXMDJVR1JkaUcvd3V0a3MrZ3RnWXVHNGF5az0=",
+    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=Networking+Pod+P%C3%A1lavou+%233%3A+Podnik%C3%A1n%C3%AD+nap%C5%99%C3%AD%C4%8D+generacemi&dates=20260203T080000Z/20260203T110000Z&details=Registrace%3A+https%3A%2F%2Fapp.influon.cz%2Fo%2Fpodpalavou%2FeEpOZTRkTDZ4VEo0NWoyUGNXMDJVR1JkaUcvd3V0a3MrZ3RnWXVHNGF5az0%3D&location=Kr%C4%8Dma+a+hotel+U+C%C3%ADsa%C5%99sk%C3%A9+cesty%2C+Brani%C5%A1ovice",
+    "isSoldOut": false
+  },
+  {
     "date": "2026-01-06",
     "time": "09:00 - 12:00",
     "title": {

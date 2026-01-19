@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Káva, vize a skvělé jídlo: Reportáž z BforB setkání v Laskala Café Tišnov | Mgr. Gabriel Kožík</title>
-    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
     <meta name="description" content="Ohlédnutí za listopadovou snídaní BforB Tišnov v nově otevřené kavárně Laskala. Skvělá atmosféra, 7 hostů a plány na propojení podnikatelů a města.">
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../style.css">
-    <!-- 2. LOKÁLNÍ STYLY (Pouze pro galerii a lightbox v tomto článku) -->
-     <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
     <nav class="main-nav">
@@ -48,13 +46,16 @@
 
                 <p>Pokud byste chtěli navnímat, jak probíhají i další naše akce, skvělou ochutnávku a další fotky najdete na <a href="https://www.facebook.com/profile.php?id=61561146905712" target="_blank" rel="noopener noreferrer">Facebook profilu BforB Tišnov</a>. A níže je malá galerie přímo z tohoto vydařeného rána:</p>
 
-                <div class="photo-gallery" id="gallery">
-                    <!-- Obrázky budou dynamicky vloženy zde -->
-                </div>
+                <div id="gallery" 
+                     class="gallery-grid" 
+                     data-path="../../assets/images/blog/bforb-listopad-2025/" 
+                     data-count="7"
+                     data-alt-prefix="Snídaně BforB Laskala - fotka">
+                     </div>
 
                 <div id="myModal" class="modal">
                     <span class="close">&times;</span>
-                    <img class="modal-content" id="img01">
+                    <img class="modal-content" id="img01" alt="Zvětšená fotografie">
                     <a class="prev">&#10094;</a>
                     <a class="next">&#10095;</a>
                 </div>
@@ -69,100 +70,8 @@
             <p class="copyright">&copy; 2025 Mgr. Gabriel Kožík. Všechna práva vyhrazena.</p>
         </div>
     </footer>
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const gallery = document.getElementById('gallery');
-        const totalImages = 7; // Počet fotek, které jsi nahrál (1.jpg až 7.jpg)
-        const imagePath = '../../assets/images/blog/bforb-listopad-2025/';
 
-        // Dynamicky vytvoříme galerii
-        for (let i = 1; i <= totalImages; i++) {
-            const img = document.createElement('img');
-            img.src = `${imagePath}${i}.jpg`;
-            img.alt = `Fotka ${i} ze snídaně BforB v Laskala Café Tišnov`;
-            img.classList.add('gallery-thumbnail');
-            img.loading = 'lazy';
-            gallery.appendChild(img);
-        }
-
-        // Funkcionalita Lightboxu (modalu)
-        const modal = document.getElementById('myModal');
-        const modalImg = document.getElementById("img01");
-        const span = document.getElementsByClassName("close")[0];
-        const prev = document.querySelector('.prev');
-        const next = document.querySelector('.next');
-
-        const galleryImages = document.querySelectorAll('.gallery-thumbnail');
-        let currentIndex;
-
-        function openModalWithImage(index) {
-            if (modal && modalImg) {
-                modal.style.display = "block";
-                modalImg.src = galleryImages[index].src;
-                currentIndex = index;
-            }
-        }
-
-        function changeImage(direction) {
-            currentIndex += direction;
-            if (currentIndex >= galleryImages.length) {
-                currentIndex = 0; // Přejde na první obrázek
-            }
-            if (currentIndex < 0) {
-                currentIndex = galleryImages.length - 1; // Přejde na poslední
-            }
-            modalImg.src = galleryImages[currentIndex].src;
-        }
-
-        galleryImages.forEach((img, index) => {
-            img.onclick = function() {
-                openModalWithImage(index);
-            }
-        });
-        
-        if(span) {
-            span.onclick = function() {
-                modal.style.display = "none";
-            }
-        }
-
-        if(modal) {
-            modal.onclick = function(event) {
-                // Zavře modal při kliknutí na pozadí (mimo obrázek a šipky)
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            }
-        }
-
-        if(prev) {
-            prev.onclick = function(e) {
-                e.stopPropagation(); // Zabrání zavření modalu
-                changeImage(-1);
-            }
-        }
-
-        if(next) {
-            next.onclick = function(e) {
-                e.stopPropagation(); // Zabrání zavření modalu
-                changeImage(1);
-            }
-        }
-
-        // Ovládání klávesnicí
-        document.addEventListener('keydown', function(e) {
-            if (modal && modal.style.display === "block") {
-                if (e.key === "ArrowLeft") {
-                    changeImage(-1);
-                } else if (e.key === "ArrowRight") {
-                    changeImage(1);
-                } else if (e.key === "Escape") {
-                    modal.style.display = "none";
-                }
-            }
-        });
-    });
-    </script>
+    <script src="../../assets/js/gallery.js"></script>
     <script src="/_vercel/insights/script.js"></script>
 </body>
 </html>

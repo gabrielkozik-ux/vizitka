@@ -8,175 +8,7 @@
     <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #0a2342;
-            --secondary-color: #2ca58d;
-            --text-color: #333;
-            --light-gray: #f4f4f4;
-            --white: #ffffff;
-        }
-        html { scroll-behavior: smooth; }
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--white);
-            padding-top: 70px;
-        }
-        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
-        .main-nav { background-color: var(--white); padding: 15px 20px; border-bottom: 1px solid var(--light-gray); position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; box-sizing: border-box; display: flex; justify-content: space-between; align-items: center; }
-        .nav-logo { font-weight: bold; color: var(--primary-color); text-decoration: none; font-size: 1.2em; }
-        .nav-links { display: flex; align-items: center; }
-        .nav-links a { color: var(--primary-color); text-decoration: none; font-weight: bold; margin: 0 15px; font-size: 1.1em; transition: color 0.3s ease; }
-        .nav-links a:hover { color: var(--secondary-color); }
-        .hamburger { display: none; }
-
-        .article-header {
-            padding: 40px 20px;
-            text-align: center;
-            border-bottom: 1px solid var(--light-gray);
-        }
-        .article-header h1 {
-            font-size: 2.8em;
-            color: var(--primary-color);
-            margin: 0 0 10px 0;
-        }
-        .article-meta {
-            font-size: 0.9em;
-            color: #777;
-        }
-        .article-content {
-            padding: 40px 0;
-        }
-        .article-content p, .article-content li {
-            font-size: 1.1em;
-            line-height: 1.7;
-        }
-        .article-content h2 {
-            font-size: 1.8em;
-            color: var(--primary-color);
-            margin-top: 40px;
-        }
-        .article-content blockquote {
-            border-left: 4px solid var(--secondary-color);
-            padding-left: 20px;
-            font-style: italic;
-            margin: 20px 0;
-            font-size: 1.2em;
-            background-color: #f9f9f9;
-            padding: 15px 20px;
-            border-radius: 0 5px 5px 0;
-        }
-        .cta-button { display: inline-block; background-color: var(--secondary-color); color: var(--white); padding: 12px 24px; text-decoration: none; font-weight: bold; border-radius: 5px; transition: background-color 0.3s ease; margin-top: 10px; text-align: center; }
-        .cta-button:hover { background-color: #238c76; }
-        .back-to-blog {
-            display: inline-block;
-            margin-top: 40px;
-            color: var(--secondary-color);
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .cta-section {
-            background-color: var(--light-gray);
-            padding: 30px;
-            border-radius: 8px;
-            margin-top: 40px;
-            text-align: center;
-        }
-        .cta-section h4 {
-            margin-top: 0;
-            font-size: 1.5em;
-            color: var(--primary-color);
-        }
-        footer { background-color: var(--primary-color); color: var(--white); padding: 40px 20px; text-align: center; }
-        .copyright { margin-top: 20px; font-size: 0.8em; }
-        
-        .photo-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 10px;
-            margin-top: 30px;
-            margin-bottom: 30px;
-        }
-        .gallery-thumbnail {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-        }
-        .gallery-thumbnail:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-
-        .modal {
-            display: none; 
-            position: fixed; 
-            z-index: 2000; 
-            padding-top: 20px; 
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.85);
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-            box-sizing: border-box;
-        }
-        .modal-content {
-            margin: auto;
-            display: block;
-            max-width: 90%;
-            max-height: 90vh;
-            border-radius: 8px;
-        }
-        .close {
-            position: absolute;
-            top: 15px;
-            right: 35px;
-            color: #f1f1f1;
-            font-size: 40px;
-            font-weight: bold;
-            transition: 0.3s;
-            cursor: pointer;
-        }
-        .close:hover,
-        .close:focus {
-            color: #bbb;
-            text-decoration: none;
-        }
-
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -50px;
-            color: white;
-            font-weight: bold;
-            font-size: 24px;
-            transition: 0.3s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-            -webkit-user-select: none;
-        }
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-        .prev {
-            left: 0;
-        }
-        .prev:hover, .next:hover {
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-    </style>
+    <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
     <nav class="main-nav">
@@ -207,13 +39,16 @@
                 <p>Obrovské díky patří všem hostům, řečníkům a partnerům za neopakovatelnou atmosféru. Děkujeme <strong>Michalu Hochmanovi</strong> a <strong>Renátě Balíkové</strong> za infúzi cenných rad a sdílených zkušeností.</p>
                 <p>A poděkování patří také <strong>Pavlu Šumpíkovi</strong> a celé firmě Alveno za úžasné zázemí a spoluorganizaci. Byl to večer plný inspirace, která nás nabíjí energií pokračovat v tom, co děláme. A v neposlední řadě děkujeme <strong>Jirkovi Urbanovi</strong> za skvělé fotky a reportáže.</p>
                 
-                <div class="photo-gallery" id="gallery">
-                    <!-- Obrázky budou dynamicky vloženy zde -->
-                </div>
+                <div id="gallery" 
+                     class="gallery-grid" 
+                     data-path="../../assets/images/blog/firemni-kultura-alveno-reportaz/" 
+                     data-count="9"
+                     data-alt-prefix="Firemní kultura Alveno - fotka">
+                     </div>
 
                 <div id="myModal" class="modal">
                     <span class="close">&times;</span>
-                    <img class="modal-content" id="img01">
+                    <img class="modal-content" id="img01" alt="Zvětšená fotografie">
                     <a class="prev">&#10094;</a>
                     <a class="next">&#10095;</a>
                 </div>
@@ -235,95 +70,6 @@
             <p class="copyright">&copy; 2025 Mgr. Gabriel Kožík. Všechna práva vyhrazena.</p>
         </div>
     </footer>
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const gallery = document.getElementById('gallery');
-        const totalImages = 9; // Předpokládám 9 fotek (1.jpg až 9.jpg)
-        const imagePath = '../../assets/images/blog/firemni-kultura-alveno-reportaz/';
-
-        for (let i = 1; i <= totalImages; i++) {
-            const img = document.createElement('img');
-            img.src = `${imagePath}${i}.jpg`;
-            img.alt = `Fotografie ${i} z akce Firemní kultura: Večer s Alveno`;
-            img.classList.add('gallery-thumbnail');
-            img.loading = 'lazy';
-            gallery.appendChild(img);
-        }
-
-        const modal = document.getElementById('myModal');
-        const modalImg = document.getElementById("img01");
-        const span = document.getElementsByClassName("close")[0];
-        const prev = document.querySelector('.prev');
-        const next = document.querySelector('.next');
-
-        const galleryImages = document.querySelectorAll('.gallery-thumbnail');
-        let currentIndex;
-
-        function openModalWithImage(index) {
-            if (modal && modalImg) {
-                modal.style.display = "block";
-                modalImg.src = galleryImages[index].src;
-                currentIndex = index;
-            }
-        }
-
-        function changeImage(direction) {
-            currentIndex += direction;
-            if (currentIndex >= galleryImages.length) {
-                currentIndex = 0;
-            }
-            if (currentIndex < 0) {
-                currentIndex = galleryImages.length - 1;
-            }
-            modalImg.src = galleryImages[currentIndex].src;
-        }
-
-        galleryImages.forEach((img, index) => {
-            img.onclick = function() {
-                openModalWithImage(index);
-            }
-        });
-        
-        if(span) {
-            span.onclick = function() {
-                modal.style.display = "none";
-            }
-        }
-
-        if(modal) {
-            modal.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            }
-        }
-
-        if(prev) {
-            prev.onclick = function(e) {
-                e.stopPropagation();
-                changeImage(-1);
-            }
-        }
-
-        if(next) {
-            next.onclick = function(e) {
-                e.stopPropagation();
-                changeImage(1);
-            }
-        }
-
-        document.addEventListener('keydown', function(e) {
-            if (modal && modal.style.display === "block") {
-                if (e.key === "ArrowLeft") {
-                    changeImage(-1);
-                } else if (e.key === "ArrowRight") {
-                    changeImage(1);
-                } else if (e.key === "Escape") {
-                    modal.style.display = "none";
-                }
-            }
-        });
-    });
-    </script>
+    <script src="../../assets/js/gallery.js"></script>
 </body>
 </html>

@@ -1,0 +1,324 @@
+[
+    {
+        "id": "ai-act-pro-zaneprazdnene",
+        "date": "2026-01-15",
+        "category": "expert",
+        "image": "assets/images/blog/2025/ai-act-byznys/prezentace-ai.jpg",
+        "cs": {
+            "title": "AI act pro zaneprázdněné: Co musíte vědět v 5 minutách",
+            "excerpt": "Cíl: Rychlý a srozumitelný přehled pro manažery a majitele firem. Obsah: Co je AI Act, proč vznikl, koho se týká a jaký je jeho hlavní princip.",
+            "link": "blog/2026/ai-act-pro-zaneprazdnene/ai-act-pro-zaneprazdnene.html"
+        },
+        "en": {
+            "title": "AI Act for Busy People: What You Need to Know in 5 Minutes",
+            "excerpt": "A quick and understandable overview of the AI Act for managers and business owners. What it is, who it applies to, and its main risk-based principle.",
+            "link": "blog/2026/ai-act-pro-zaneprazdnene/ai-act-pro-zaneprazdnene-en.html"
+        }
+    },
+    {
+        "id": "slovnik-pojmu-ai-act",
+        "date": "2025-12-09",
+        "category": "expert",
+        "image": "https://placehold.co/800x400/0a2342/ffffff?text=AI+Act+Slovník",
+        "image_en": "https://placehold.co/800x400/0a2342/ffffff?text=AI+Act+Glossary",
+        "cs": {
+            "title": "Slovník pojmů AI Actu: Mluvíte jazykem regulátorů?",
+            "excerpt": "Klíčové pojmy AI Actu vysvětleny: Co je systém AI, poskytovatel, zavádějící subjekt či rizikové kategorie. Nezbytný slovník pro firmy a manažery.",
+            "link": "blog/2025/slovnik-pojmu-ai-act/slovnik-pojmu-ai-act.html"
+        },
+        "en": {
+            "title": "AI Act Glossary: Do You Speak the Regulator's Language?",
+            "excerpt": "Key AI Act terms explained: What is an AI system, provider, deployer, or risk category. An essential glossary for companies and managers.",
+            "link": "blog/2025/slovnik-pojmu-ai-act/slovnik-pojmu-ai-act-en.html"
+        }
+    },
+    {
+        "id": "bforb-listopad-2025",
+        "date": "2025-11-07",
+        "category": "report",
+        "image": "assets/images/blog/2025/bforb-listopad-2025/3.jpg",
+        "cs": {
+            "title": "Káva, vize a skvělé jídlo: Reportáž z BforB setkání v Laskala Café Tišnov",
+            "excerpt": "Ohlédnutí za listopadovou snídaní BforB Tišnov v nově otevřené kavárně Laskala. Skvělá atmosféra, 7 hostů a plány na propojení podnikatelů a města.",
+            "link": "blog/2025/bforb-listopad-2025/bforb-listopad-2025.html"
+        },
+        "en": {
+            "title": "Coffee, Visions, and Great Food: Report from the BforB Meeting at Laskala Café Tišnov",
+            "excerpt": "A look back at the November BforB Tišnov breakfast at the newly reopened Laskala Café. Great atmosphere, 7 guests, and plans to connect entrepreneurs and the city.",
+            "link": "blog/2025/bforb-listopad-2025/bforb-listopad-2025-en.html"
+        }
+    },
+    {
+        "id": "podnikavci-kurim-rijen",
+        "date": "2025-10-17",
+        "category": "report",
+        "image": "assets/images/blog/2025/podnikavci-kurim-rijen/3.jpg",
+        "cs": {
+            "title": "Marketing pro Gen Z a Inovace v Povlečení: Reportáž z Klubu Podnikavců v Kuřimi",
+            "excerpt": "Ohlédnutí za říjnovým setkáním Klubu Podnikavců v Kuřimi, kde se řešil obsahový marketing pro mladou generaci a představil se inovativní projekt neshrnujícího se povlečení.",
+            "link": "blog/2025/podnikavci-kurim-rijen/podnikavci-kurim-rijen.html"
+        },
+        "en": {
+            "title": "Marketing for Gen Z and Innovation in Bed Linen: Report from the Entrepreneurs Club in Kuřim",
+            "excerpt": "A look back at the October meeting of the Entrepreneurs Club in Kuřim, where content marketing for the young generation was discussed and an innovative project of non-bunching bed linen was introduced.",
+            "link": "blog/2025/podnikavci-kurim-rijen/podnikavci-kurim-rijen-en.html"
+        }
+    },
+    {
+        "id": "tyden-inovaci-2025",
+        "date": "2025-10-15",
+        "category": "report",
+        "image": "assets/images/blog/2025/tyden-inovaci-2025/1.jpg",
+        "cs": {
+            "title": "AI Act v praxi: Ohlédnutí za Týdnem inovací 2025",
+            "excerpt": "Minulý týden se Praha opět stala epicentrem technologického dění. Podívejte se na ohlédnutí za mou přednáškou o AI Actu a postřehy z největší inovační akce ve střední Evropě.",
+            "link": "blog/2025/tyden-inovaci-2025/tyden-inovaci-2025.html"
+        },
+        "en": {
+            "title": "AI Act in Practice: A Look Back at Innovation Week 2025",
+            "excerpt": "Last week, Prague once again became the epicenter of the tech scene. Take a look back at my talk on the AI Act and insights from the largest innovation event in Central Europe.",
+            "link": "blog/2025/tyden-inovaci-2025/tyden-inovaci-2025-en.html"
+        }
+    },
+    {
+        "id": "networking-palava-14",
+        "date": "2025-10-08",
+        "category": "report",
+        "image": "assets/images/blog/2025/networking-palava-14/7.jpg",
+        "cs": {
+            "title": "Otestujte své smysly na maximum! Reportáž ze 14. setkání Klubu Pod Pálavou",
+            "excerpt": "Ohlédnutí za 14. setkáním Klubu Pod Pálavou, kde jsme testovali naše smysly na maximum a zkoušeli si kooperativní židličkovanou.",
+            "link": "blog/2025/networking-palava-14/networking-palava-14.html"
+        },
+        "en": {
+            "title": "Test Your Senses to the Max! Report from the 14th Meeting of the Pod Pálavou Club",
+            "excerpt": "A look back at the 14th meeting of the Pod Pálavou Club, where we tested our senses to the max and tried cooperative musical chairs.",
+            "link": "blog/2025/networking-palava-14/networking-palava-14-en.html"
+        }
+    },
+    {
+        "id": "novela-hlaseni-zamestnancu-2025",
+        "date": "2025-10-06",
+        "category": "expert",
+        "image": "assets/images/blog/2025/novela-hlaseni-zamestnancu-2025/hlaseni-zamestnancu-2025.png",
+        "cs": {
+            "title": "Konec tolerance: Novela zákona zpřísňuje zaměstnávání cizinců od 1. 10. 2025",
+            "excerpt": "Dosavadní benevolence v hlášení cizinců končí. Novela zákona o zaměstnanosti ruší možnost zpětného hlášení a zavádí fikci „nelegální práce“ s likvidačními pokutami.",
+            "link": "blog/2025/novela-hlaseni-zamestnancu-2025/hlaseni-zamestnancu-2025.html"
+        },
+        "en": {
+            "title": "End of Tolerance: New Law Tightens Rules for Employing Foreigners from Oct 1, 2025",
+            "excerpt": "The previously lenient rules for reporting foreign nationals are ending. The amendment to the Employment Act abolishes retroactive reporting and introduces 'undeclared work,' with crippling fines for non-compliance.",
+            "link": "blog/2025/novela-hlaseni-zamestnancu-2025/novela-hlaseni-zamestnancu-2025-en.html"
+        }
+    },
+    {
+        "id": "reportaz-bforb-tisnov-rijen-2025",
+        "date": "2025-10-03",
+        "category": "report",
+        "image": "assets/images/blog/2025/reportaz-bforb-tisnov-rijen-2025/tisnov-02-10.jpg",
+        "cs": {
+            "title": "Méně vizitek, více upřímnosti: Klub BforB Tišnov naskočil na novou vlnu",
+            "excerpt": "Reportáž z netradičního setkání členů BforB Tišnov v penzionu Laskala, kde se místo vizitek sdílely vize, očekávání a upřímnost.",
+            "link": "blog/2025/reportaz-bforb-tisnov-rijen-2025/reportaz-bforb-tisnov-rijen-2025.html"
+        },
+        "en": {
+            "title": "Fewer Business Cards, More Sincerity: The BforB Tišnov Club Ignites a New Era",
+            "excerpt": "A look back at an unconventional meeting of the BforB Tišnov members at the Laskala pension, where visions, expectations, and sincerity were shared instead of business cards.",
+            "link": "blog/2025/reportaz-bforb-tisnov-rijen-2025/reportaz-bforb-tisnov-rijen-2025-en.html"
+        }
+    },
+    {
+        "id": "prevod-podilu-sro-nz",
+        "date": "2025-10-01",
+        "category": "expert",
+        "image": "assets/images/blog/2025/prevod-podilu-sro-nz/nz-podil.png",
+        "cs": {
+            "title": "Převod podílu v s.r.o. a notářský zápis: Mýty a fakta",
+            "excerpt": "Analýza, zda je pro souhlas valné hromady s převodem podílu nutný notářský zápis. Klíčová soudní rozhodnutí a praktické dopady pro s.r.o.",
+            "link": "blog/2025/prevod-podilu-sro-nz/prevod-podilu-sro-nz.html"
+        },
+        "en": {
+            "title": "Transfer of a Share in an LLC and a Notarial Deed: Myths and Facts",
+            "excerpt": "An analysis of whether a notarial deed is necessary for the general meeting's consent to the transfer of a share. Key court decisions and practical implications for LLCs.",
+            "link": "blog/2025/prevod-podilu-sro-nz/prevod-podilu-sro-nz-en.html"
+        }
+    },
+    {
+        "id": "ai-agenti-nova-era-byznysu",
+        "date": "2025-09-25",
+        "category": "expert",
+        "image": "https://placehold.co/300x250/0a2342/ffffff?text=AI+Agenti",
+        "image_en": "https://placehold.co/300x250/0a2342/ffffff?text=AI+Agents",
+        "cs": {
+            "title": "AI Agenti: Hrozba, nebo největší byznysová příležitost od dob internetu?",
+            "excerpt": "Analýza nástupu AI agentů. Zjistěte, jak transformují trh práce, jaké přinášejí příležitosti a jak se bránit kritickým bezpečnostním rizikům jako je Prompt Injection.",
+            "link": "blog/2025/ai-agenti-nova-era-byznysu/ai-agenti-nova-era-byznysu.html"
+        },
+        "en": {
+            "title": "AI Agents: A Threat, or the Biggest Business Opportunity Since the Internet?",
+            "excerpt": "An analysis of the rise of AI agents. Find out how they are transforming the job market, what opportunities they bring, and how to defend against critical security risks like Prompt Injection.",
+            "link": "blog/2025/ai-agenti-nova-era-byznysu/ai-agents-new-business-era.html"
+        }
+    },
+    {
+        "id": "reportaz-workshop-zari-2025",
+        "date": "2025-09-20",
+        "category": "report",
+        "image": "assets/images/blog/2025/reportaz-workshop-zari-2025/workshop19-9.jpg",
+        "cs": {
+            "title": "Ponor do hlubin AI: Reportáž ze zářijového workshopu",
+            "excerpt": "Ohlédnutí za workshopem 19.9., kde jsme se ponořili do pokročilejších technik s Gemini, NotebookLM a Google AI Studio. Skvělá ryze dámská skupina a spousta praktických ukázek.",
+            "link": "blog/2025/reportaz-workshop-zari-2025/reportaz-workshop-zari-2025.html"
+        },
+        "en": {
+            "title": "A Deep Dive into AI: Report from the September Workshop",
+            "excerpt": "A look back at the workshop on September 19, where we delved into advanced techniques with Gemini, NotebookLM, and Google AI Studio. A great all-female group and lots of practical demonstrations.",
+            "link": "blog/2025/reportaz-workshop-zari-2025/reportaz-workshop-zari-2025-en.html"
+        }
+    },
+    {
+        "id": "advokati-a-ai",
+        "date": "2025-09-15",
+        "category": "expert",
+        "image": "blog/2025/advokati-a-ai/uvodni-obrazek.jpg",
+        "cs": {
+            "title": "Advokacie na rozcestí: Hrozba, nebo příležitost?",
+            "excerpt": "Analýza dopadu umělé inteligence na výkon advokacie v ČR. Je AI pro advokáty existenčním rizikem, nebo bezprecedentní šancí na transformaci a růst?",
+            "link": "blog/2025/advokati-a-ai/advokati-a-ai.html"
+        },
+        "en": {
+            "title": "The Legal Profession at a Crossroads: Threat or Opportunity?",
+            "excerpt": "An analysis of the impact of artificial intelligence on the legal profession in the Czech Republic. Does AI pose an existential threat to lawyers, or an unprecedented opportunity for transformation and growth?",
+            "link": "blog/2025/advokati-a-ai/advokati-a-ai-en.html"
+        }
+    },
+    {
+        "id": "firemni-kultura-alveno-reportaz",
+        "date": "2025-09-12",
+        "category": "report",
+        "image": "assets/images/blog/2025/firemni-kultura-alveno-reportaz/2.jpg",
+        "cs": {
+            "title": "Když se potkají výjimeční lidé: Reportáž z večera s Alvenem",
+            "excerpt": "Ohlédnutí za naší první B2B akcí „Firemní kultura: Večer s Alvenem“, která propojila desítky inspirativních osobností a otevřela klíčová témata dnešní doby.",
+            "link": "blog/2025/firemni-kultura-alveno-reportaz/firemni-kultura-alveno-reportaz.html"
+        },
+        "en": {
+            "title": "When Exceptional People Come Together: A Report from the Evening with Alveno",
+            "excerpt": "A look back at our first B2B event 'Corporate Culture: An Evening with Alveno', which connected dozens of inspiring personalities and opened up key topics of our time.",
+            "link": "blog/2025/firemni-kultura-alveno-reportaz/firemni-kultura-alveno-reportaz-en.html"
+        }
+    },
+    {
+        "id": "networking-palava-12",
+        "date": "2025-09-03",
+        "category": "report",
+        "image": "assets/images/blog/2025/networking-palava-12/2.jpg",
+        "cs": {
+            "title": "Ohlédnutí za 12. setkáním Klubu Pod Pálavou",
+            "excerpt": "Reportáž z 12. networkingového setkání klubu Pod Pálavou. Skvělá atmosféra, inspirativní myšlenky a praktický workshop využití AI v byznysu. Podívejte se, jaké to bylo a kdy se můžete přidat příště.",
+            "link": "blog/2025/networking-palava-12/networking-palava-12.html"
+        },
+        "en": {
+            "title": "A Look Back at the 12th Meeting of the Pod Pálavou Club",
+            "excerpt": "Report from the 12th networking meeting of the Pod Pálavou club. Great atmosphere, inspiring ideas, and a practical workshop on using AI in business. See what it was like and when you can join next time.",
+            "link": "blog/2025/networking-palava-12/networking-palava-12-en.html"
+        }
+    },
+    {
+        "id": "firemni-kultura-alveno",
+        "date": "2025-08-23",
+        "category": "report",
+        "image": "assets/images/blog/2025/firemni-kultura-alveno/firemni-kultura-alveno.jpg",
+        "cs": {
+            "title": "Firemní kultura: Večer s Alvenem",
+            "excerpt": "Zveme vás na exkluzivní akci pro majitele firem, C-level management a zavedené podnikatele zaměřenou na budování firemní kultury jako strategické výhody. Čeká vás panelová diskuze, workshopy a networking na nejvyšší úrovni.",
+            "link": "blog/2025/firemni-kultura-alveno/firemni-kultura-alveno.html"
+        },
+        "en": {
+            "title": "Corporate Culture: An Evening with Alveno",
+            "excerpt": "We invite you to an exclusive event for business owners, C-level executives, and established entrepreneurs focused on building corporate culture as a strategic advantage. Panel discussions, workshops, and top-level networking await you.",
+            "link": "blog/2025/firemni-kultura-alveno/firemni-kultura-alveno-en.html"
+        }
+    },
+    {
+        "id": "reportaz-workshop-srpen-2025",
+        "date": "2025-08-22",
+        "category": "report",
+        "image": "assets/images/blog/2025/reportaz-workshop-srpen-2025/workshop22-8.jpg",
+        "cs": {
+            "title": "Další AI workshop je za námi! Podívejte se, co jsme probrali",
+            "excerpt": "Ohlédnutí za vydařeným workshopem zaměřeným na praktické využití AI nástrojů. Skvělá atmosféra, spousta aha momentů a praktické ukázky toho, jak může umělá inteligence reálně šetřit čas a posouvat kreativitu.",
+            "link": "blog/2025/reportaz-workshop-srpen-2025/reportaz-workshop-srpen-2025.html"
+        },
+        "en": {
+            "title": "Another AI Workshop is a Wrap! See What We Covered",
+            "excerpt": "A look back at a successful workshop focused on the practical use of AI tools. Great atmosphere, lots of \"aha\" moments, and practical demonstrations of how artificial intelligence can genuinely save time and boost creativity.",
+            "link": "blog/2025/reportaz-workshop-srpen-2025/reportaz-workshop-srpen-2025-en.html"
+        }
+    },
+    {
+        "id": "reportaz-workshop-cervenec-2025",
+        "date": "2025-07-19",
+        "category": "report",
+        "image": "assets/images/blog/2025/reportaz-workshop-cervenec-2025/workshop18-7.jpg",
+        "cs": {
+            "title": "První AI workshop odstartoval! Skvělá parta a spousta objevů",
+            "excerpt": "Ohlédnutí za úplně prvním workshopem zaměřeným na praktické využití AI nástrojů. Skvělá atmosféra, demystifikace AI a první kroky s Gemini a NotebookLM.",
+            "link": "blog/2025/reportaz-workshop-cervenec-2025/reportaz-workshop-cervenec-2025.html"
+        },
+        "en": {
+            "title": "The First AI Workshop Kicked Off! A Great Group and Lots of Discoveries",
+            "excerpt": "A look back at the very first workshop focused on the practical use of AI tools. Great atmosphere, demystifying AI, and first steps with Gemini and NotebookLM.",
+            "link": "blog/2025/reportaz-workshop-cervenec-2025/reportaz-workshop-cervenec-2025-en.html"
+        }
+    },
+    {
+        "id": "cs-tech-summit-2025",
+        "date": "2025-06-05",
+        "category": "report",
+        "image": "assets/images/blog/2025/cs-tech-summit-2025/1.jpg",
+        "cs": {
+            "title": "Právo a technologie v srdci Moravy: Reportáž z CS-Tech Summitu",
+            "excerpt": "Ohlédnutí za mou přednáškou na téma \"Regulace AI v ČR\" na česko-slovenském technologickém summitu na zámku v Mikulově a inspirativní atmosféře celé akce.",
+            "link": "blog/2025/cs-tech-summit-2025/cs-tech-summit-2025.html"
+        },
+        "en": {
+            "title": "Law and Technology in the Heart of Moravia: A Report from the CS-Tech Summit",
+            "excerpt": "A look back at my presentation on \"AI Regulation in the CR\" at the Czech-Slovak Technology Summit at Mikulov Castle and the inspiring atmosphere of the entire event.",
+            "link": "blog/2025/cs-tech-summit-2025/cs-tech-summit-2025-en.html"
+        }
+    },
+    {
+        "id": "ai-v-byznysu-4-cesty",
+        "date": "2025-05-01",
+        "category": "expert",
+        "image": "assets/images/blog/2025/ai-v-byznysu-4-cesty/ai-v-byznysu-4-cesty.jpg",
+        "cs": {
+            "title": "AI v byznysu: 4 cesty, kudy z vaší firmy nevědomky unikají data",
+            "excerpt": "Používání AI nástrojů se stalo běžnou součástí firemní praxe. Mnozí si však neuvědomují rizika spojená s ochranou citlivých dat. Podívejme se na čtyři nejčastější scénáře, kde může dojít k úniku, a jak se jim bránit.",
+            "link": "blog/2025/ai-v-byznysu/ai-v-byznysu-4-cesty.html"
+        },
+        "en": {
+            "title": "AI in Business: 4 Ways Your Company Data Is Leaking Unknowingly",
+            "excerpt": "Using AI tools has become a common part of business practice. However, many are unaware of the risks associated with protecting sensitive data. Let's look at the four most common scenarios where leaks can occur and how to prevent them.",
+            "link": "blog/2025/ai-v-byznysu/ai-v-byznysu-4-cesty-en.html"
+        }
+    },
+    {
+        "id": "ai-act-byznys",
+        "date": "2025-04-01",
+        "category": "expert",
+        "image": "assets/images/blog/2025/ai-act-byznys/prezentace-ai.jpg",
+        "cs": {
+            "title": "Regulace AI v byznysu: Jste připraveni na AI Act?",
+            "excerpt": "Umělá inteligence už není sci-fi, ale každodenní nástroj, který firmám pomáhá inovovat, automatizovat a růst. S velkou mocí ale přichází i velká zodpovědnost – a teď i nová pravidla.",
+            "link": "blog/2025/ai-act-byznys/ai-act-byznys.html"
+        },
+        "en": {
+            "title": "AI Regulation in Business: Are You Ready for the AI Act?",
+            "excerpt": "Artificial intelligence is no longer sci-fi, but an everyday tool that helps companies innovate, automate, and grow. With great power comes great responsibility – and now, new rules.",
+            "link": "blog/2025/ai-act-byznys/ai-act-byznys-en.html"
+        }
+    }
+]

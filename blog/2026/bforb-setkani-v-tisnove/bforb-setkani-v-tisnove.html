@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportáž: BforB setkání v Tišnově | Mgr. Gabriel Kožík</title>
+    <meta name="description" content="Reportáž z akce BforB setkání v Tišnově, která se konala 2026-02-05. Přečtěte si více a prohlédněte si fotogalerii.">
+    <link rel="icon" type="image/x-icon" href="../../../assets/images/favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../style.css">
+</head>
+
+<body>
+    <nav class="main-nav">
+        <a href="../../../index.html" class="nav-logo">Mgr. Gabriel Kožík</a>
+        <div class="nav-links">
+            <a href="../../../index.html">Úvodní stránka</a>
+            <a href="../../../blog.html">Blog</a>
+            <a href="../../../index.html#propojit">Kontaktujte mě</a>
+        </div>
+        <div class="lang-switcher">
+            <button class="lang-button lang-switcher-button" aria-haspopup="true" aria-expanded="false">CZ <span
+                    class="arrow"></span></button>
+            <div class="lang-dropdown lang-switcher-dropdown">
+                <a href="bforb-setkani-v-tisnove.html" class="active">CZ</a>
+                <a href="bforb-setkani-v-tisnove-en.html">EN</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <article class="article-content">
+                <header class="article-header">
+                    <h1>Reportáž: BforB setkání v Tišnově</h1>
+                    <p class="article-meta">Publikováno: 5. 2. 2026 | Autor: Mgr. Gabriel Kožík</p>
+                </header>
+
+                <p><em>(Zde doplňte text reportáže...)</em></p>
+                
+                <p>Dne 5. 2. 2026 jsme se sešli v <strong>Merryna bar Tišnov</strong>.</p>
+                
+                <p>Byla to skvělá akce plná inspirace a networkingu. Podívejte se na fotky níže.</p>
+
+                <!-- 
+                <img src="../../../assets/images/blog/2026/bforb-setkani-v-tisnove/1.jpg"
+                    alt="Hlavní fotka z akce" class="article-image-main" loading="lazy">
+                -->
+
+                <h2>Fotogalerie</h2>
+                <p>Níže naleznete výběr fotografií z této vydařené akce:</p>
+
+                <!-- GALLERY CONTAINER -->
+                <!-- 
+                     DŮLEŽITÉ: 
+                     1. Nahrajte fotky do složky: assets/images/blog/2026/bforb-setkani-v-tisnove/
+                     2. Pojmenujte je postupně: 1.jpg, 2.jpg, 3.jpg ...
+                     3. Nastavte data-count="" na počet fotek, které tam máte.
+                -->
+                <div id="gallery" class="gallery-grid" 
+                    data-path="../../../assets/images/blog/2026/bforb-setkani-v-tisnove/"
+                    data-count="0" 
+                    data-alt-prefix="Foto z akce BforB setkání v Tišnově">
+                    
+                    <!-- Pokud nemáte fotky, zobrazí se zpráva, že galerie je prázdná -->
+                    <p style="grid-column: 1/-1; text-align: center; color: #888;">(Fotografie připravujeme...)</p>
+                </div>
+
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01" alt="Zvětšená fotografie">
+                    <a class="prev">&#10094;</a>
+                    <a class="next">&#10095;</a>
+                </div>
+
+                <a href="../../../blog.html" class="back-to-blog">← Zpět na přehled článků</a>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="copyright">&copy; 2026 Mgr. Gabriel Kožík. Všechna práva vyhrazena.</p>
+        </div>
+    </footer>
+
+    <script src="../../../assets/js/gallery.js"></script>
+    <script>
+        // Shrnutí pro Lang Switcher (stejný jako v šabloně)
+        const langButton = document.querySelector('.lang-switcher-button');
+        const langDropdown = document.querySelector('.lang-switcher-dropdown');
+        function toggleLangDropdown() {
+            const isExpanded = langButton.getAttribute('aria-expanded') === 'true';
+            langButton.setAttribute('aria-expanded', !isExpanded);
+            langButton.classList.toggle('active');
+            langDropdown.style.display = langDropdown.style.display === 'block' ? 'none' : 'block';
+        }
+        langButton.addEventListener('click', e => { e.stopPropagation(); toggleLangDropdown(); });
+        window.addEventListener('click', e => {
+            if (langButton.classList.contains('active') && !langButton.parentElement.contains(e.target)) {
+                toggleLangDropdown();
+            }
+        });
+    </script>
+
+</body>
+</html>

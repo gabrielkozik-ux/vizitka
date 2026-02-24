@@ -1,5 +1,75 @@
 [
   {
+    "date": "2026-04-14",
+    "time": "09:00 - 12:00",
+    "title": {
+      "cs": "Networking Pod Pálavou #08: Udržitelnost lidského potenciálu",
+      "en": "Networking Pod Pálavou #08: Sustainability of Human Potential",
+      "hu": "Networking Pod Pálavou #08: Sustainability of Human Potential",
+      "fr": "Réseautage Pod Pálavou #08 : Durabilité du potentiel humain"
+    },
+    "place": "Krčma a hotel U Císařské cesty, Branišovice",
+    "link": "https://www.pod-palavou.cz/klubova-setkani",
+    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=Networking+Pod+P%C3%A1lavou+%2308%3A+Udr%C5%BEitelnost+lidsk%C3%A9ho+potenci%C3%A1lu&dates=20260414T070000Z/20260414T100000Z&details=T%C3%A9ma%3A+Udr%C5%BEitelnost+lidsk%C3%A9ho+potenci%C3%A1lu.+V%C3%ADce+info%3A+https%3A%2F%2Fwww.pod-palavou.cz%2Fklubova-setkani&location=Kr%C4%8Dma+a+hotel+U+C%C3%ADsa%C5%99sk%C3%A9+cesty%2C+Brani%C5%A1ovice",
+    "isSoldOut": false
+  },
+  {
+    "date": "2026-03-31",
+    "time": "09:00 - 12:00",
+    "title": {
+      "cs": "Networking Pod Pálavou #07: Výběr nejoblíbenějších řečníků 2025 | ocenění aktivních členů",
+      "en": "Networking Pod Pálavou #07: Top Speakers 2025 | Active Members Awards",
+      "hu": "Networking Pod Pálavou #07: Top Speakers 2025 | Active Members Awards",
+      "fr": "Réseautage Pod Pálavou #07 : Meilleurs orateurs 2025 | Récompenses des membres actifs"
+    },
+    "place": "Krčma a hotel U Císařské cesty, Branišovice",
+    "link": "https://www.pod-palavou.cz/klubova-setkani",
+    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=Networking+Pod+P%C3%A1lavou+%2307%3A+V%C3%BDb%C4%9Br+nejobl%C3%ADben%C4%9Bj%C5%A1%C3%ADch+%C5%99e%C4%8Dn%C3%ADk%C5%AF+2025&dates=20260331T070000Z/20260331T100000Z&details=V%C3%BDb%C4%9Br+nejobl%C3%ADben%C4%9Bj%C5%A1%C3%ADch+%C5%99e%C4%8Dn%C3%ADk%C5%AF+2025+%7C+ocen%C4%9Bn%C3%AD+aktivn%C3%ADch+%C4%8Dlen%C5%AF.+V%C3%ADce+info%3A+https%3A%2F%2Fwww.pod-palavou.cz%2Fklubova-setkani&location=Kr%C4%8Dma+a+hotel+U+C%C3%ADsa%C5%99sk%C3%A9+cesty%2C+Brani%C5%A1ovice",
+    "isSoldOut": false
+  },
+  {
+    "date": "2026-03-17",
+    "time": "09:00 - 12:00",
+    "title": {
+      "cs": "Networking Pod Pálavou #06: Krajina, která nás živí",
+      "en": "Networking Pod Pálavou #06: The Landscape That Feeds Us",
+      "hu": "Networking Pod Pálavou #06: The Landscape That Feeds Us",
+      "fr": "Réseautage Pod Pálavou #06 : Le paysage qui nous nourrit"
+    },
+    "place": "Krčma a hotel U Císařské cesty, Branišovice",
+    "link": "https://www.pod-palavou.cz/klubova-setkani",
+    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=Networking+Pod+P%C3%A1lavou+%2306%3A+Krajina%2C+kter%C3%A1+n%C3%A1s+%C5%BEiv%C3%AD&dates=20260317T080000Z/20260317T110000Z&details=T%C3%A9ma%3A+Krajina%2C+kter%C3%A1+n%C3%A1s+%C5%BEiv%C3%AD.+V%C3%ADce+info%3A+https%3A%2F%2Fwww.pod-palavou.cz%2Fklubova-setkani&location=Kr%C4%8Dma+a+hotel+U+C%C3%ADsa%C5%99sk%C3%A9+cesty%2C+Brani%C5%A1ovice",
+    "isSoldOut": false
+  },
+  {
+    "date": "2026-03-05",
+    "time": "08:30 - 11:30",
+    "title": {
+      "cs": "BforB setkání v Tišnově",
+      "en": "BforB Meeting Tišnov",
+      "hu": "BforB Találkozó Tišnov",
+      "fr": "Réunion BforB Tišnov"
+    },
+    "place": "Kavárna U Kina, Tišnov",
+    "link": "#",
+    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=BforB+setk%C3%A1n%C3%AD+v+Ti%C5%A1nov%C4%9B&dates=20260305T073000Z/20260305T103000Z&location=Kav%C3%A1rna+U+Kina%2C+Ti%C5%A1nov",
+    "isSoldOut": false
+  },
+  {
+    "date": "2026-03-03",
+    "time": "09:00 - 12:00",
+    "title": {
+      "cs": "Networking Pod Pálavou #05: Firmy bez slabých míst",
+      "en": "Networking Pod Pálavou #05: Companies Without Weak Spots",
+      "hu": "Networking Pod Pálavou #05: Companies Without Weak Spots",
+      "fr": "Réseautage Pod Pálavou #05 : Entreprises sans points faibles"
+    },
+    "place": "Krčma a hotel U Císařské cesty, Branišovice",
+    "link": "https://www.pod-palavou.cz/klubova-setkani",
+    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=Networking+Pod+P%C3%A1lavou+%2305%3A+Firmy+bez+slab%C3%BDch+m%C3%ADst&dates=20260303T080000Z/20260303T110000Z&details=T%C3%A9ma%3A+Firmy+bez+slab%C3%BDch+m%C3%ADst.+V%C3%ADce+info%3A+https%3A%2F%2Fwww.pod-palavou.cz%2Fklubova-setkani&location=Kr%C4%8Dma+a+hotel+U+C%C3%ADsa%C5%99sk%C3%A9+cesty%2C+Brani%C5%A1ovice",
+    "isSoldOut": false
+  },
+  {
     "date": "2026-02-25",
     "time": "12:00 - 15:00",
     "title": {

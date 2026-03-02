@@ -48,51 +48,19 @@
         }
     },
     {
-        "id": "networking-pod-palavou-3-podnikani-napric-generacemi",
-        "date": "2026-02-03",
+        "id": "reportaz-workshop-leden-2026",
+        "date": "2026-01-16",
         "category": "report",
-        "image": "assets/images/blog/2026/networking-pod-palavou-3-podnikani-napric-generacemi/1.jpg",
+        "image": "assets/images/blog/2026/reportaz-workshop-leden-2026/workshop-leden.png",
         "cs": {
-            "title": "Reportáž: Networking Pod Pálavou #3: Podnikání napříč generacemi",
-            "excerpt": "Podívejte se na reportáž a fotografie z akce Networking Pod Pálavou #3: Podnikání napříč generacemi, která proběhla 2026-02-03 v Krčma a hotel U Císařské cesty, Branišovice.",
-            "link": "blog/2026/networking-pod-palavou-3-podnikani-napric-generacemi/networking-pod-palavou-3-podnikani-napric-generacemi.html"
+            "title": "Marketing, weby a ďáblův advokát: Reportáž z lednového AI workshopu",
+            "excerpt": "Ohlédnutí za lednovým workshopem zaměřeným na AI marketing, tvorbu webových vizitek přes GitHub a Vercel, generování hudby v Suno a techniku ďáblova advokáta pro objektivní hodnocení podnikatelských nápadů.",
+            "link": "blog/2026/reportaz-workshop-leden-2026/reportaz-workshop-leden-2026.html"
         },
         "en": {
-            "title": "Report: Networking Pod Pálavou #3: Business Across Generations",
-            "excerpt": "Check out the report and photos from the Networking Pod Pálavou #3: Business Across Generations event, held on 2026-02-03 at Krčma a hotel U Císařské cesty, Branišovice.",
-            "link": "blog/2026/networking-pod-palavou-3-podnikani-napric-generacemi/networking-pod-palavou-3-podnikani-napric-generacemi-en.html"
-        }
-    },
-    {
-        "id": "klubove-setkani-podnikavcu-kurim",
-        "date": "2026-01-21",
-        "category": "report",
-        "image": "assets/images/blog/2026/klubove-setkani-podnikavcu-kurim/1.jpg",
-        "cs": {
-            "title": "Reportáž: Klubové setkání podnikavců Kuřim",
-            "excerpt": "Podívejte se na reportáž a fotografie z akce Klubové setkání podnikavců Kuřim, která proběhla 2026-01-21 v MěKS, Kuřim.",
-            "link": "blog/2026/klubove-setkani-podnikavcu-kurim/klubove-setkani-podnikavcu-kurim.html"
-        },
-        "en": {
-            "title": "Report: Entrepreneurs Club Meeting Kuřim",
-            "excerpt": "Check out the report and photos from the Entrepreneurs Club Meeting Kuřim event, held on 2026-01-21 at MěKS, Kuřim.",
-            "link": "blog/2026/klubove-setkani-podnikavcu-kurim/klubove-setkani-podnikavcu-kurim-en.html"
-        }
-    },
-    {
-        "id": "snidane-klubu-pod-palavou",
-        "date": "2026-01-20",
-        "category": "report",
-        "image": "assets/images/blog/2026/snidane-klubu-pod-palavou/1.jpg",
-        "cs": {
-            "title": "Reportáž: Snídaně klubu Pod Pálavou",
-            "excerpt": "Podívejte se na reportáž a fotografie z akce Snídaně klubu Pod Pálavou, která proběhla 2026-01-20 v Krčma a hotel U Císařské cesty, Branišovice.",
-            "link": "blog/2026/snidane-klubu-pod-palavou/snidane-klubu-pod-palavou.html"
-        },
-        "en": {
-            "title": "Report: Business Breakfast Pod Pálavou",
-            "excerpt": "Check out the report and photos from the Business Breakfast Pod Pálavou event, held on 2026-01-20 at Krčma a hotel U Císařské cesty, Branišovice.",
-            "link": "blog/2026/snidane-klubu-pod-palavou/snidane-klubu-pod-palavou-en.html"
+            "title": "Marketing, Websites & Devil's Advocate: Report from the January AI Workshop",
+            "excerpt": "A look back at the January workshop focused on AI marketing, creating free web pages via GitHub and Vercel, generating music with Suno, and the devil's advocate technique for objective business idea evaluation.",
+            "link": "blog/2026/reportaz-workshop-leden-2026/reportaz-workshop-leden-2026.html"
         }
     },
     {
@@ -109,54 +77,6 @@
             "title": "AI Act for Busy People: What You Need to Know in 5 Minutes",
             "excerpt": "A quick and understandable overview of the AI Act for managers and business owners. What it is, who it applies to, and its main risk-based principle.",
             "link": "blog/2026/ai-act-pro-zaneprazdnene/ai-act-pro-zaneprazdnene-en.html"
-        }
-    },
-    {
-        "id": "klubove-setkani-podnikavcu-tisnov",
-        "date": "2026-01-13",
-        "category": "report",
-        "image": "assets/images/blog/2026/klubove-setkani-podnikavcu-tisnov/1.jpg",
-        "cs": {
-            "title": "Reportáž: Klubové setkání podnikavců Tišnov",
-            "excerpt": "Podívejte se na reportáž a fotografie z akce Klubové setkání podnikavců Tišnov, která proběhla 2026-01-13 v Laskala Café, Klášterská 357, Tišnov.",
-            "link": "blog/2026/klubove-setkani-podnikavcu-tisnov/klubove-setkani-podnikavcu-tisnov.html"
-        },
-        "en": {
-            "title": "Report: Entrepreneurs Club Meeting Tišnov",
-            "excerpt": "Check out the report and photos from the Entrepreneurs Club Meeting Tišnov event, held on 2026-01-13 at Laskala Café, Klášterská 357, Tišnov.",
-            "link": "blog/2026/klubove-setkani-podnikavcu-tisnov/klubove-setkani-podnikavcu-tisnov-en.html"
-        }
-    },
-    {
-        "id": "novorocni-vecirek-bforb",
-        "date": "2026-01-08",
-        "category": "report",
-        "image": "assets/images/blog/2026/novorocni-vecirek-bforb/1.jpg",
-        "cs": {
-            "title": "Reportáž: Novoroční večírek BforB",
-            "excerpt": "Podívejte se na reportáž a fotografie z akce Novoroční večírek BforB, která proběhla 2026-01-08 v Místo bude upřesněno.",
-            "link": "blog/2026/novorocni-vecirek-bforb/novorocni-vecirek-bforb.html"
-        },
-        "en": {
-            "title": "Report: New Year's Party BforB",
-            "excerpt": "Check out the report and photos from the New Year's Party BforB event, held on 2026-01-08 at Místo bude upřesněno.",
-            "link": "blog/2026/novorocni-vecirek-bforb/novorocni-vecirek-bforb-en.html"
-        }
-    },
-    {
-        "id": "klubove-setkani-podnikavcu-v-kurimi",
-        "date": "2025-12-17",
-        "category": "report",
-        "image": "assets/images/blog/2025/klubove-setkani-podnikavcu-v-kurimi/1.jpg",
-        "cs": {
-            "title": "Reportáž: Klubové setkání podnikavců v Kuřimi",
-            "excerpt": "Podívejte se na reportáž a fotografie z akce Klubové setkání podnikavců v Kuřimi, která proběhla 2025-12-17 v MěKS, Kuřim.",
-            "link": "blog/2025/klubove-setkani-podnikavcu-v-kurimi/klubove-setkani-podnikavcu-v-kurimi.html"
-        },
-        "en": {
-            "title": "Report: Entrepreneurs Club Meeting Kuřim",
-            "excerpt": "Check out the report and photos from the Entrepreneurs Club Meeting Kuřim event, held on 2025-12-17 at MěKS, Kuřim.",
-            "link": "blog/2025/klubove-setkani-podnikavcu-v-kurimi/klubove-setkani-podnikavcu-v-kurimi-en.html"
         }
     },
     {
@@ -177,51 +97,19 @@
         }
     },
     {
-        "id": "klubove-setkani-pod-palavou",
-        "date": "2025-12-09",
+        "id": "reportaz-workshop-listopad-2025",
+        "date": "2025-11-21",
         "category": "report",
-        "image": "assets/images/blog/2025/klubove-setkani-pod-palavou/1.jpg",
+        "image": "assets/images/blog/2025/reportaz-workshop-listopad-2025/workshop-listopad.png",
         "cs": {
-            "title": "Reportáž: Klubové setkání Pod Pálavou",
-            "excerpt": "Podívejte se na reportáž a fotografie z akce Klubové setkání Pod Pálavou, která proběhla 2025-12-09 v Krčma a hotel U Císařské cesty, Branišovice.",
-            "link": "blog/2025/klubove-setkani-pod-palavou/klubove-setkani-pod-palavou.html"
+            "title": "Bezpečnost, prompt engineering a granty: Reportáž z listopadového AI workshopu",
+            "excerpt": "Ohlédnutí za listopadovým workshopem zaměřeným na kybernetickou bezpečnost AI, pokročilý prompt engineering s tvorbou super-asistenta a případovou studii dotačního průzkumu pro neziskovou organizaci.",
+            "link": "blog/2025/reportaz-workshop-listopad-2025/reportaz-workshop-listopad-2025.html"
         },
         "en": {
-            "title": "Report: Business Club Meeting Pod Pálavou",
-            "excerpt": "Check out the report and photos from the Business Club Meeting Pod Pálavou event, held on 2025-12-09 at Krčma a hotel U Císařské cesty, Branišovice.",
-            "link": "blog/2025/klubove-setkani-pod-palavou/klubove-setkani-pod-palavou-en.html"
-        }
-    },
-    {
-        "id": "b2b-networkingovy-obed-smart-network",
-        "date": "2025-11-26",
-        "category": "report",
-        "image": "assets/images/blog/2025/b2b-networkingovy-obed-smart-network/1.jpg",
-        "cs": {
-            "title": "Reportáž: B2B Networkingový oběd Smart Network",
-            "excerpt": "Podívejte se na reportáž a fotografie z akce B2B Networkingový oběd Smart Network, která proběhla 2025-11-26 v Design hotel Noem Arch, Brno.",
-            "link": "blog/2025/b2b-networkingovy-obed-smart-network/b2b-networkingovy-obed-smart-network.html"
-        },
-        "en": {
-            "title": "Report: B2B Networking Lunch Smart Network",
-            "excerpt": "Check out the report and photos from the B2B Networking Lunch Smart Network event, held on 2025-11-26 at Design hotel Noem Arch, Brno.",
-            "link": "blog/2025/b2b-networkingovy-obed-smart-network/b2b-networkingovy-obed-smart-network-en.html"
-        }
-    },
-    {
-        "id": "klubove-setkani-podnikavcu-v-tisnove",
-        "date": "2025-11-18",
-        "category": "report",
-        "image": "assets/images/blog/2025/klubove-setkani-podnikavcu-v-tisnove/1.jpg",
-        "cs": {
-            "title": "Reportáž: Klubové setkání podnikavců v Tišnově",
-            "excerpt": "Podívejte se na reportáž a fotografie z akce Klubové setkání podnikavců v Tišnově, která proběhla 2025-11-18 v Jazzový sál pod kinem, Tišnov.",
-            "link": "blog/2025/klubove-setkani-podnikavcu-v-tisnove/klubove-setkani-podnikavcu-v-tisnove.html"
-        },
-        "en": {
-            "title": "Report: Entrepreneurs Club Meeting Tišnov",
-            "excerpt": "Check out the report and photos from the Entrepreneurs Club Meeting Tišnov event, held on 2025-11-18 at Jazzový sál pod kinem, Tišnov.",
-            "link": "blog/2025/klubove-setkani-podnikavcu-v-tisnove/klubove-setkani-podnikavcu-v-tisnove-en.html"
+            "title": "Security, Prompt Engineering & Grants: Report from the November AI Workshop",
+            "excerpt": "A look back at the November workshop focused on AI cybersecurity, advanced prompt engineering with a super-assistant, and a grant research case study for a non-profit organization.",
+            "link": "blog/2025/reportaz-workshop-listopad-2025/reportaz-workshop-listopad-2025.html"
         }
     },
     {
@@ -254,6 +142,22 @@
             "title": "Marketing for Gen Z and Innovation in Bed Linen: Report from the Entrepreneurs Club in Kuřim",
             "excerpt": "A look back at the October meeting of the Entrepreneurs Club in Kuřim, where content marketing for the young generation was discussed and an innovative project of non-bunching bed linen was introduced.",
             "link": "blog/2025/podnikavci-kurim-rijen/podnikavci-kurim-rijen-en.html"
+        }
+    },
+    {
+        "id": "reportaz-workshop-rijen-2025",
+        "date": "2025-10-24",
+        "category": "report",
+        "image": "assets/images/blog/2025/reportaz-workshop-rijen-2025/workshop-rijen.png",
+        "cs": {
+            "title": "Automatizace, NotebookLM a vlastní AI asistenti: Reportáž z říjnového workshopu",
+            "excerpt": "Ohlédnutí za říjnovým workshopem zaměřeným na automatizaci administrativy v Google Workspace, nástroj NotebookLM pro bezpečnou práci s firemními daty, tvorbu vlastních AI asistentů Gems a generování videí z fotografií.",
+            "link": "blog/2025/reportaz-workshop-rijen-2025/reportaz-workshop-rijen-2025.html"
+        },
+        "en": {
+            "title": "Automation, NotebookLM & Custom AI Assistants: Report from the October Workshop",
+            "excerpt": "A look back at the October workshop focused on Google Workspace automation, NotebookLM for secure corporate data processing, custom AI assistants (Gems), and generating videos from photos.",
+            "link": "blog/2025/reportaz-workshop-rijen-2025/reportaz-workshop-rijen-2025.html"
         }
     },
     {

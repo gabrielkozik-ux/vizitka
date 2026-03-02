@@ -980,6 +980,14 @@ footer {
    11. RESPONSIVE
    ========================================= */
 @media (max-width: 768px) {
+    .hero {
+        background-attachment: scroll;
+    }
+
+    .parallax-separator {
+        background-attachment: scroll;
+    }
+
     .nav-links-container {
         display: none;
         flex-direction: column;
@@ -990,6 +998,7 @@ footer {
         background-color: var(--white);
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         padding: 20px 0;
+        z-index: 999;
     }
 
     .nav-links-container.active {
@@ -999,6 +1008,7 @@ footer {
     .nav-links {
         flex-direction: column;
         width: 100%;
+        align-items: center;
     }
 
     .nav-links a {
@@ -1021,13 +1031,13 @@ footer {
     }
 
     .hero {
-        padding: 100px 20px 60px;
+        padding: 80px 20px 50px;
         min-height: auto;
         /* Na mobilu výšku nefixujeme */
     }
 
     .hero p {
-        font-size: 1.1em;
+        font-size: 1em;
     }
 
     .article-card {

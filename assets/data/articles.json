@@ -6,12 +6,12 @@
         "image": "assets/images/blog/2026/networking-pod-palavou-4-rustove-mysleni/1.jpg",
         "cs": {
             "title": "Reportáž: Networking Pod Pálavou #4: Růstové myšlení",
-            "excerpt": "Podívejte se na reportáž a fotografie z akce Networking Pod Pálavou #4: Růstové myšlení, která proběhla 2026-02-17 v Krčma a hotel U Císařské cesty, Branišovice.",
+            "excerpt": "Reportáž ze 4. networkingu Pod Pálavou o růstovém myšlení, o tom, proč je důvěra nejtvrdší měna v byznysu a proč se nebát transformace po vzoru Estonska. S fotografiemi od Jiřího Urbana.",
             "link": "blog/2026/networking-pod-palavou-4-rustove-mysleni/networking-pod-palavou-4-rustove-mysleni.html"
         },
         "en": {
             "title": "Report: Networking Pod Pálavou #4: Growth Mindset",
-            "excerpt": "Check out the report and photos from the Networking Pod Pálavou #4: Growth Mindset event, held on 2026-02-17 at Krčma a hotel U Císařské cesty, Branišovice.",
+            "excerpt": "Report from the 4th Networking Pod Pálavou meeting about growth mindset, why trust is the hardest currency in business, and why we shouldn't fear transformation, following Estonia's example. With photos by Jiří Urban.",
             "link": "blog/2026/networking-pod-palavou-4-rustove-mysleni/networking-pod-palavou-4-rustove-mysleni-en.html"
         }
     },
@@ -45,6 +45,22 @@
             "title": "Report: BforB Meeting Tišnov",
             "excerpt": "Check out the report and photos from the BforB Meeting Tišnov event, held on 2026-02-05 at Merryna bar Tišnov.",
             "link": "blog/2026/bforb-setkani-v-tisnove/bforb-setkani-v-tisnove-en.html"
+        }
+    },
+    {
+        "id": "networking-pod-palavou-3-podnikani-napric-generacemi",
+        "date": "2026-02-03",
+        "category": "report",
+        "image": "assets/images/blog/2026/networking-pod-palavou-3-podnikani-napric-generacemi/1.jpg",
+        "cs": {
+            "title": "Reportáž: Networking Pod Pálavou #3: Podnikání napříč generacemi",
+            "excerpt": "Reportáž ze 3. networkingu Pod Pálavou o propojování světů Generace X a Z, islandském mindsetu „Þetta reddast“ a o tom, že networking je i pro poctivé řemeslo. S fotografiemi od Jiřího Urbana.",
+            "link": "blog/2026/networking-pod-palavou-3-podnikani-napric-generacemi/networking-pod-palavou-3-podnikani-napric-generacemi.html"
+        },
+        "en": {
+            "title": "Report: Networking Pod Pálavou #3: Business Across Generations",
+            "excerpt": "Report from the 3rd Networking Pod Pálavou meeting on connecting the worlds of Gen X and Z, the Icelandic mindset 'Þetta reddast', and how networking is for honest craftsmanship too. With photos by Jiří Urban.",
+            "link": "blog/2026/networking-pod-palavou-3-podnikani-napric-generacemi/networking-pod-palavou-3-podnikani-napric-generacemi-en.html"
         }
     },
     {

@@ -1,5 +1,47 @@
 [
   {
+    "date": "2026-03-10",
+    "time": "17:30 - 19:30",
+    "title": {
+      "cs": "Sraz podnikavců Tišnov",
+      "en": "Entrepreneurs Meeting Tišnov",
+      "hu": "Vállalkozók Találkozója Tišnov",
+      "fr": "Réunions d'entrepreneurs Tišnov"
+    },
+    "place": "Podhorácká restaurace, Lomnická 1776, Tišnov",
+    "link": "https://klubpodnikavcu.cz/akce/sraz-podnikavcu-tisnov-29",
+    "calendarLink": "",
+    "isSoldOut": false
+  },
+  {
+    "date": "2026-03-18",
+    "time": "17:30 - 19:30",
+    "title": {
+      "cs": "Sraz podnikavců Kuřim",
+      "en": "Entrepreneurs Meeting Kuřim",
+      "hu": "Vállalkozók Találkozója Kuřim",
+      "fr": "Réunions d'entrepreneurs Kuřim"
+    },
+    "place": "SKC Kuřim (modrý salonek), nám. Osvobození 902/1, Kuřim",
+    "link": "https://klubpodnikavcu.cz/akce/sraz-podnikavcu-kurim-9",
+    "calendarLink": "",
+    "isSoldOut": false
+  },
+  {
+    "date": "2026-04-02",
+    "time": "08:30 - 11:30",
+    "title": {
+      "cs": "BforB snídaně",
+      "en": "BforB Business Breakfast",
+      "hu": "BforB Üzleti Reggeli",
+      "fr": "Petit-déjeuner d'affaires BforB"
+    },
+    "place": "Detaily budou sděleny",
+    "link": "#",
+    "calendarLink": "",
+    "isSoldOut": false
+  },
+  {
     "date": "2026-04-14",
     "time": "09:00 - 12:00",
     "title": {

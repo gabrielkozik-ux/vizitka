@@ -6,6 +6,46 @@
 */
 
 const blogArticles = [
+    // --- ÚNOR 2026 ---
+    {
+        id: "networking-pod-palavou-4-rustove-mysleni",
+        date: "17. 02. 2026",
+        categories: ["networking"],
+        image: "assets/images/blog/2026/networking-pod-palavou-4-rustove-mysleni/1.jpg",
+        
+        cs: {
+            title: "Reportáž: Networking Pod Pálavou #4: Růstové myšlení",
+            perex: "Reportáž ze 4. networkingu Pod Pálavou o růstovém myšlení, o tom, proč je důvěra nejtvrdší měna v byznysu a proč se nebát transformace po vzoru Estonska. S fotografiemi od Jiřího Urbana.",
+            link: "blog/2026/networking-pod-palavou-4-rustove-mysleni/networking-pod-palavou-4-rustove-mysleni.html",
+            categoryLabel: "POD PÁLAVOU"
+        },
+        en: {
+            title: "Report: Networking Pod Pálavou #4: Growth Mindset",
+            perex: "Report from the 4th Networking Pod Pálavou meeting about growth mindset, why trust is the hardest currency in business, and why we shouldn't fear transformation. With photos by Jiří Urban.",
+            link: "blog/2026/networking-pod-palavou-4-rustove-mysleni/networking-pod-palavou-4-rustove-mysleni-en.html",
+            categoryLabel: "POD PÁLAVOU"
+        }
+    },
+    {
+        id: "networking-pod-palavou-3-podnikani-napric-generacemi",
+        date: "03. 02. 2026",
+        categories: ["networking"],
+        image: "assets/images/blog/2026/networking-pod-palavou-3-podnikani-napric-generacemi/1.jpg",
+        
+        cs: {
+            title: "Reportáž: Networking Pod Pálavou #3: Podnikání napříč generacemi",
+            perex: "Reportáž ze 3. networkingu Pod Pálavou o propojování světů Generace X a Z, islandském mindsetu „Þetta reddast“ a o tom, že networking je i pro poctivé řemeslo. S fotografiemi od Jiřího Urbana.",
+            link: "blog/2026/networking-pod-palavou-3-podnikani-napric-generacemi/networking-pod-palavou-3-podnikani-napric-generacemi.html",
+            categoryLabel: "POD PÁLAVOU"
+        },
+        en: {
+            title: "Report: Networking Pod Pálavou #3: Business Across Generations",
+            perex: "Report from the 3rd Networking Pod Pálavou meeting on connecting the worlds of Gen X and Z, the Icelandic mindset 'Þetta reddast', and how networking is for honest craftsmanship too. With photos by Jiří Urban.",
+            link: "blog/2026/networking-pod-palavou-3-podnikani-napric-generacemi/networking-pod-palavou-3-podnikani-napric-generacemi-en.html",
+            categoryLabel: "POD PÁLAVOU"
+        }
+    },
+
     // --- PROSINEC 2025 ---
     {
         id: "advokati-a-ai",

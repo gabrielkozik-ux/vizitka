@@ -230,6 +230,11 @@ section:nth-child(2n) {
     align-items: center;
     padding: 0 20px;
     text-align: center;
+    transition: background 0.5s ease-in-out;
+}
+
+.hero:hover {
+    background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.7)), url('assets/images/uvodni-obrazek.jpg');
 }
 
 .hero h1 {
@@ -305,7 +310,7 @@ section:nth-child(2n) {
     text-transform: uppercase;
     font-size: 0.9em;
     letter-spacing: 1px;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     cursor: pointer;
 }
 
@@ -325,6 +330,121 @@ section:nth-child(2n) {
 .cta-button.secondary:hover {
     background: var(--primary-color);
     color: var(--white);
+}
+
+/* --- ANIMATIONS --- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.service-card,
+.event-item,
+.article-card,
+.project-item {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* --- MOVED FROM INLINE --- */
+#upcoming-events-wrapper,
+#archiv-sekce {
+    margin-bottom: 50px;
+}
+
+#upcoming-events-list,
+#archive-events-list {
+    margin-top: 25px;
+}
+
+#archiv-sekce summary {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    text-align: center;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#archiv-sekce summary:hover {
+    color: var(--secondary-color);
+}
+
+#archive-events-list {
+    opacity: 0.7;
+}
+
+.workshop-section {
+    background-color: var(--light-gray);
+}
+
+.workshop-section .section-subtitle {
+    margin-top: -20px;
+    margin-bottom: 30px;
+}
+
+.workshop-link {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.workshop-container {
+    margin-top: 40px;
+}
+
+.cta-container {
+    margin-bottom: 40px;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 40px auto 0;
+    text-align: left;
+}
+
+.form-container .section-subtitle {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group:last-of-type {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-size: 1em;
+    font-family: inherit;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
 }
 
 /* =========================================
@@ -409,6 +529,27 @@ section:nth-child(2n) {
     margin-top: auto;
 }
 
+/* --- FRENCH SPECIFIC --- */
+.service-card-fr {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    border-top: 4px solid #3355A0;
+    /* French blue */
+    position: relative;
+    margin-top: 40px;
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+.service-card-fr h3 {
+    color: #3355A0;
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
 .service-card ul {
     list-style: none;
     padding: 0;
@@ -431,8 +572,8 @@ section:nth-child(2n) {
 
 @media (min-width: 768px) {
     .service-card:hover {
-        transform: translateY(-10px) scale(1.02);
-        box-shadow: 0 20px 40px -10px rgba(14, 165, 233, 0.15);
+        transform: translateY(-12px) scale(1.03);
+        box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.15);
         border-color: var(--secondary-color);
         z-index: 2;
     }
@@ -1371,4 +1512,20 @@ footer {
         height: 150px;
         /* Menší náhledy na mobilu */
     }
+}
+
+/* --- UTILITIES --- */
+.form-actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.active-link {
+    color: var(--secondary-color) !important;
+}
+
+.hidden-svg {
+    position: absolute;
+    width: 0;
+    height: 0;
 }

@@ -23,7 +23,7 @@
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 
-    <svg width="0" height="0" style="position:absolute">
+    <svg class="hidden-svg">
         <symbol id="icon-calendar" viewBox="0 0 24 24">
             <path fill="currentColor"
                 d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1m-1 11h-5v5h5v-5Z" />
@@ -184,18 +184,17 @@
         <section id="where-to-meet">
             <div class="container">
                 <h2 class="section-title">Where We Can Meet</h2>
-                <div id="upcoming-events-wrapper" style="margin-bottom: 50px;">
-                    <ul id="upcoming-events-list" class="events-list" style="margin-top: 25px;">
+                <div id="upcoming-events-wrapper">
+                    <ul id="upcoming-events-list" class="events-list">
                     </ul>
                 </div>
 
-                <div id="archiv-sekce" style="margin-bottom: 50px;">
+                <div id="archiv-sekce">
                     <details>
-                        <summary
-                            style="font-size: 1.5em; font-weight: 700; color: var(--primary-color); margin-bottom: 25px; text-align: center; cursor: pointer;">
+                        <summary>
                             Archive of Past Events
                         </summary>
-                        <ul id="archive-events-list" class="events-list" style="opacity: 0.7; margin-top: 25px;">
+                        <ul id="archive-events-list" class="events-list">
                         </ul>
                     </details>
                 </div>
@@ -204,12 +203,12 @@
 
         <script src="assets/js/events-loader.js"></script>
 
-        <section id="" style="background-color: var(--light-gray);">
+        <section id="workshop" class="workshop-section">
             <div class="container">
                 <h2 class="section-title">Current AI Workshop</h2>
-                <p class="section-subtitle" style="margin-top: -20px; margin-bottom: 30px;">Details about AI workshops
+                <p class="section-subtitle">Details about AI workshops
                     and dates for the coming months can be found at <a href="https://ai-workshop.cz" target="_blank"
-                        style="color: var(--secondary-color); text-decoration: underline;">ai-workshop.cz</a>.</p>
+                        class="workshop-link">ai-workshop.cz</a>.</p>
                 <ul class="events-list">
                     <li>
                         <div class="event-date-time">
@@ -227,7 +226,7 @@
                         </div>
                     </li>
                 </ul>
-                <div class="workshop-container" style="margin-top: 40px;">
+                <div class="workshop-container">
                     <a href="https://app.influon.cz/o/podpalavou/aUVXNjBJbzg3Z2JJVFpYamlKUWpTd2dpeGtxdG9Db1N5dDIvdUhSYlJTaUhrZ0dhZDc4cEl3RS9LM0s1Q3luaw=="
                         target="_blank" rel="noopener noreferrer">
                         <img src="assets/images/workshop-ai-google.jpg"
@@ -243,7 +242,7 @@
                 <p class="section-subtitle">Whether you need to solve a complex legal problem or want to discover the
                     potential of AI for your business, I am here for you.</p>
 
-                <div class="cta-container" style="margin-bottom: 40px;">
+                <div class="cta-container">
                     <div class="cta-buttons">
                         <a href="mailto:kozik@iustoria.cz" class="cta-button">Email Me</a>
                         <a href="tel:+420720265713" class="cta-button secondary">+420 720 265 713</a>
@@ -254,30 +253,22 @@
                         class="cta-button">Schedule Meeting - Calendly</a>
                 </div>
 
-                <div class="form-container" style="max-width: 600px; margin: 40px auto 0; text-align: left;">
-                    <p class="section-subtitle" style="text-align: center; margin-bottom: 20px;"><strong>or leave me a
-                            quick message</strong></p>
+                <div class="form-container">
+                    <p class="section-subtitle"><strong>or leave me a quick message</strong></p>
                     <form action="https://formspree.io/f/xblzwqjn" method="POST">
-                        <div style="margin-bottom: 15px;">
-                            <label for="name"
-                                style="display: block; margin-bottom: 5px; font-weight: bold; color: var(--primary-color);">Name</label>
-                            <input type="text" id="name" name="name" required
-                                style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 1em;">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" id="name" name="name" required class="form-input">
                         </div>
-                        <div style="margin-bottom: 15px;">
-                            <label for="email"
-                                style="display: block; margin-bottom: 5px; font-weight: bold; color: var(--primary-color);">E-mail</label>
-                            <input type="email" id="email" name="email" required
-                                style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 1em;">
+                        <div class="form-group">
+                            <label for="email" class="form-label">E-mail</label>
+                            <input type="email" id="email" name="email" required class="form-input">
                         </div>
-                        <div style="margin-bottom: 20px;">
-                            <label for="message"
-                                style="display: block; margin-bottom: 5px; font-weight: bold; color: var(--primary-color);">Your
-                                Message</label>
-                            <textarea id="message" name="message" rows="5" required
-                                style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 1em;"></textarea>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea id="message" name="message" rows="5" required class="form-textarea"></textarea>
                         </div>
-                        <div style="text-align: center;">
+                        <div class="form-actions">
                             <button type="submit" class="cta-button">Send Message</button>
                         </div>
                     </form>
@@ -326,59 +317,7 @@
         </div>
     </footer>
 
-    <script>
-        const hamburger = document.querySelector('.hamburger');
-        const navLinksContainer = document.querySelector('.nav-links-container');
-        function toggleMenu() {
-            const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
-            hamburger.setAttribute('aria-expanded', !isExpanded);
-            navLinksContainer.classList.toggle('active');
-        }
-        hamburger.addEventListener('click', toggleMenu);
-        hamburger.addEventListener('keydown', e => { if (e.key === 'Enter') { toggleMenu(); } });
-
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth <= 768 && navLinksContainer.classList.contains('active')) {
-                    navLinksContainer.classList.remove('active');
-                    hamburger.setAttribute('aria-expanded', 'false');
-                }
-            });
-        });
-
-        const langButton = document.querySelector('.lang-switcher-button');
-        const langDropdown = document.querySelector('.lang-switcher-dropdown');
-        function toggleLangDropdown() {
-            const isExpanded = langButton.getAttribute('aria-expanded') === 'true';
-            langButton.setAttribute('aria-expanded', !isExpanded);
-            langButton.classList.toggle('active');
-            langDropdown.style.display = langDropdown.style.display === 'block' ? 'none' : 'block';
-        }
-        langButton.addEventListener('click', e => { e.stopPropagation(); toggleLangDropdown(); });
-
-        window.addEventListener('click', e => {
-            if (navLinksContainer.classList.contains('active') && !navLinksContainer.contains(e.target) && !hamburger.contains(e.target)) {
-                navLinksContainer.classList.remove('active');
-                hamburger.setAttribute('aria-expanded', 'false');
-            }
-            if (langButton.classList.contains('active') && !langButton.parentElement.contains(e.target)) {
-                toggleLangDropdown();
-            }
-        });
-    </script>
-    <script>
-        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-    </script>
-
-    <script>
-        (function () {
-            var po = document.createElement('script');
-            po.async = true;
-            po.src = 'https://www.smsticket.cz/static/scripts/widgets/SaleAnchorMini.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(po, s);
-        })();
-    </script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

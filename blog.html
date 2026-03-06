@@ -34,7 +34,7 @@
         <div class="nav-links-container">
             <div class="nav-links">
                 <a href="index.html">Úvodní stránka</a>
-                <a href="blog.html" style="color: var(--secondary-color);">Blog</a>
+                <a href="blog.html" class="active-link">Blog</a>
                 <a href="index.html#propojit">Kontaktujte mě</a>
             </div>
             <div class="lang-switcher">
@@ -68,7 +68,7 @@
             <!-- SEZNAM ČLÁNKŮ -->
             <div id="articles-container">
                 <!-- Články se načítají dynamicky pomocí assets/js/blog-loader.js -->
-                <div class="loader" style="text-align: center; padding: 50px;">Načítám články...</div>
+                <div class="loader">Načítám články...</div>
             </div>
 
             <div class="pagination-container"></div>
@@ -116,55 +116,7 @@
         </div>
     </footer>
 
-    <!-- SKRIPTY PRO NAVIGACI A FILTROVÁNÍ -->
-    <script>
-        // Logika pro Hamburger menu
-        const hamburger = document.querySelector('.hamburger');
-        const navLinksContainer = document.querySelector('.nav-links-container');
-
-        function toggleMenu() {
-            const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
-            hamburger.setAttribute('aria-expanded', !isExpanded);
-            navLinksContainer.classList.toggle('active');
-        }
-
-        hamburger.addEventListener('click', toggleMenu);
-        hamburger.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter') {
-                toggleMenu();
-            }
-        });
-
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (navLinksContainer.classList.contains('active')) {
-                    navLinksContainer.classList.remove('active');
-                    hamburger.setAttribute('aria-expanded', 'false');
-                }
-            });
-        });
-
-        // Logika pro přepínač jazyků
-        const langButton = document.querySelector('.lang-switcher-button');
-        const langDropdown = document.querySelector('.lang-switcher-dropdown');
-        function toggleLangDropdown() {
-            const isExpanded = langButton.getAttribute('aria-expanded') === 'true';
-            langButton.setAttribute('aria-expanded', !isExpanded);
-            langButton.classList.toggle('active');
-            langDropdown.style.display = langDropdown.style.display === 'block' ? 'none' : 'block';
-        }
-        langButton.addEventListener('click', e => { e.stopPropagation(); toggleLangDropdown(); });
-
-        window.addEventListener('click', e => {
-            if (navLinksContainer.classList.contains('active') && !navLinksContainer.contains(e.target) && !hamburger.contains(e.target)) {
-                navLinksContainer.classList.remove('active');
-                hamburger.setAttribute('aria-expanded', 'false');
-            }
-            if (langButton.classList.contains('active') && !langButton.parentElement.contains(e.target)) {
-                toggleLangDropdown();
-            }
-        });
-    </script>
+    <script src="assets/js/main.js"></script>
     <script src="assets/js/blog-loader.js"></script>
 
 </body>

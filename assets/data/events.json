@@ -1,5 +1,33 @@
 [
   {
+    "date": "2026-04-07",
+    "time": "17:30 - 19:30",
+    "title": {
+      "cs": "Sraz podnikavců Tišnov #30",
+      "en": "Entrepreneurs Meeting Tišnov #30",
+      "hu": "Vállalkozók Találkozója Tišnov #30",
+      "fr": "Réunion des entrepreneurs Tišnov #30"
+    },
+    "place": "Podhorácká restaurace, Lomnická 1776, Tišnov",
+    "link": "https://klubpodnikavcu.cz/akce/sraz-podnikavcu-tisnov-30",
+    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=Sraz+podnikavc%C5%AF+Ti%C5%A1nov+%2330&dates=20260407T163000Z/20260407T183000Z&details=Podnik%C3%A1n%C3%AD+je+psychologick%C3%A1+discipl%C3%ADna.+V%C3%ADce+info+v+odkazu.&location=Podhor%C3%A1ck%C3%A1+restaurace%2C+Lomnick%C3%A1+1776%2C+Ti%C5%A1nov",
+    "isSoldOut": false
+  },
+  {
+    "date": "2026-03-18",
+    "time": "12:00 - 15:00",
+    "title": {
+      "cs": "B2B networkingový oběd Smart Network",
+      "en": "B2B Networking Lunch Smart Network",
+      "hu": "B2B Networking Lunch Smart Network",
+      "fr": "Déjeuner de réseautage B2B Smart Network"
+    },
+    "place": "Design Hotel Noem Arch, Cimburkova 564/9, Brno",
+    "link": "https://www.smart-network.cz/akce/b2b-networkingovy-obed-streda-18032026-brno-design-hotel-noem-arch",
+    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=B2B+networkingov%C3%BD+ob%C4%9Bd+Smart+Network&dates=20260318T110000Z/20260318T140000Z&details=Registrace+zde%3A+https%3A%2F%2Fwww.smart-network.cz%2Fakce%2Fb2b-networkingovy-obed-streda-18032026-brno-design-hotel-noem-arch&location=Design+Hotel+Noem+Arch%2C+Cimburkova+564%2F9%2C+Brno",
+    "isSoldOut": false
+  },
+  {
     "date": "2026-03-10",
     "time": "17:30 - 19:30",
     "title": {

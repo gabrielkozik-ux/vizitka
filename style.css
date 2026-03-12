@@ -490,6 +490,16 @@ section:nth-child(2n) {
     gap: 40px;
 }
 
+.services-grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+@media (min-width: 992px) {
+    .services-grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 .service-card {
     background: var(--white);
     padding: 40px;

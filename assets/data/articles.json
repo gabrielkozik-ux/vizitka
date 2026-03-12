@@ -1,5 +1,21 @@
 [
     {
+        "id": "filosofie-ai-v-advokacii",
+        "date": "2026-03-12",
+        "category": "expert",
+        "image": "https://placehold.co/800x400/0a2342/ffffff?text=Filosofie+AI+v+advokacii",
+        "cs": {
+            "title": "Filosofie AI v advokacii: Proč se nebát synergie",
+            "excerpt": "Proč by advokacie a AI měly fungovat v synergii? Moje vize spojení lidské expertízy a technologické preciznosti pro lepší výsledky klientů.",
+            "link": "blog/2026/filosofie-ai-v-advokacii/filosofie-ai-v-advokacii.html"
+        },
+        "en": {
+            "title": "AI Philosophy in Law: Why Not to Fear Synergy",
+            "excerpt": "Why should the legal profession and AI work in synergy? My vision of combining human expertise and technological precision for better client outcomes.",
+            "link": "blog/2026/filosofie-ai-v-advokacii/filosofie-ai-v-advokacii-en.html"
+        }
+    },
+    {
         "id": "networking-pod-palavou-4-rustove-mysleni",
         "date": "2026-02-17",
         "category": "report",

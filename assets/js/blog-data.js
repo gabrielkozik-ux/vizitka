@@ -6,13 +6,33 @@
 */
 
 const blogArticles = [
+    // --- BŘEZEN 2026 ---
+    {
+        id: "filosofie-ai-v-advokacii",
+        date: "12. 03. 2026",
+        categories: ["ai", "pravo"],
+        image: "https://placehold.co/800x400/0a2342/ffffff?text=Filosofie+AI+v+advokacii",
+
+        cs: {
+            title: "Filosofie AI v advokacii: Proč se nebát synergie",
+            perex: "Proč by advokacie a AI měly fungovat v synergii? Moje vize spojení lidské expertízy a technologické preciznosti pro lepší výsledky klientů.",
+            link: "blog/2026/filosofie-ai-v-advokacii/filosofie-ai-v-advokacii.html",
+            categoryLabel: "AI FILOSOFIE"
+        },
+        en: {
+            title: "AI Philosophy in Law: Why Not to Fear Synergy",
+            perex: "Why should the legal profession and AI work in synergy? My vision of combining human expertise and technological precision for better client outcomes.",
+            link: "blog/2026/filosofie-ai-v-advokacii/filosofie-ai-v-advokacii-en.html",
+            categoryLabel: "AI PHILOSOPHY"
+        }
+    },
     // --- ÚNOR 2026 ---
     {
         id: "networking-pod-palavou-4-rustove-mysleni",
         date: "17. 02. 2026",
         categories: ["networking"],
         image: "assets/images/blog/2026/networking-pod-palavou-4-rustove-mysleni/1.jpg",
-        
+
         cs: {
             title: "Reportáž: Networking Pod Pálavou #4: Růstové myšlení",
             perex: "Reportáž ze 4. networkingu Pod Pálavou o růstovém myšlení, o tom, proč je důvěra nejtvrdší měna v byznysu a proč se nebát transformace po vzoru Estonska. S fotografiemi od Jiřího Urbana.",
@@ -31,7 +51,7 @@ const blogArticles = [
         date: "03. 02. 2026",
         categories: ["networking"],
         image: "assets/images/blog/2026/networking-pod-palavou-3-podnikani-napric-generacemi/1.jpg",
-        
+
         cs: {
             title: "Reportáž: Networking Pod Pálavou #3: Podnikání napříč generacemi",
             perex: "Reportáž ze 3. networkingu Pod Pálavou o propojování světů Generace X a Z, islandském mindsetu „Þetta reddast“ a o tom, že networking je i pro poctivé řemeslo. S fotografiemi od Jiřího Urbana.",
@@ -52,7 +72,7 @@ const blogArticles = [
         date: "12. 12. 2025",
         categories: ["ai", "pravo"],
         image: "blog/advokati-a-ai/uvodni-obrazek.jpg",
-        
+
         cs: {
             title: "Advokáti a AI: Jak umělá inteligence mění právní praxi",
             perex: "Umělá inteligence již není jen sci-fi. Zjistěte, jak nástroje jako ChatGPT mění advokacii, kde šetří čas a jaká přináší rizika pro bezpečnost dat.",
@@ -73,7 +93,7 @@ const blogArticles = [
         date: "10. 11. 2025",
         categories: ["ai", "pravo"],
         image: "assets/images/blog/ai-act-byznys/prezentace-ai.jpg",
-        
+
         cs: {
             title: "AI Act: Co znamená nová regulace pro český byznys?",
             perex: "Evropská unie schválila první komplexní regulaci umělé inteligence. Na koho dopadne a jak se připravit na nová pravidla compliance?",
@@ -92,7 +112,7 @@ const blogArticles = [
         date: "05. 11. 2025",
         categories: ["networking"],
         image: "assets/images/blog/bforb-listopad-2025/1.jpg",
-        
+
         cs: {
             title: "Listopadový networking BforB Tišnov: Síla komunity",
             perex: "Reportáž z pravidelného setkání podnikatelského klubu. Jaké nové spolupráce vznikly a proč je osobní kontakt v digitální době stále nenahraditelný.",
@@ -113,7 +133,7 @@ const blogArticles = [
         date: "28. 10. 2025",
         categories: ["pravo"],
         image: "assets/images/blog/novela-hlaseni-zamestnancu-2025/hlaseni-zamestnancu-2025.png",
-        
+
         cs: {
             title: "Novela hlášení zaměstnanců 2025: Na co si dát pozor",
             perex: "Přehled důležitých změn v oznamovací povinnosti zaměstnavatelů. Jak se vyhnout pokutám a nastavit procesy ve firmě správně.",
@@ -132,7 +152,7 @@ const blogArticles = [
         date: "15. 10. 2025",
         categories: ["ai", "networking"],
         image: "assets/images/blog/tyden-inovaci-2025/1.jpg",
-        
+
         cs: {
             title: "Týden inovací 2025: Inspirace pro budoucnost",
             perex: "Jaké trendy hýbou světem technologií? Shrnutí mých dojmů z Týdne inovací a setkání s lídry v oblasti AI a digitalizace.",
@@ -151,7 +171,7 @@ const blogArticles = [
         date: "10. 10. 2025",
         categories: ["networking"],
         image: "assets/images/blog/podnikavci-kurim-rijen/1.jpg",
-        
+
         cs: {
             title: "Podnikavci Kuřim: Říjnové setkání plné energie",
             perex: "Networking není jen o výměně vizitek, ale o sdílení zkušeností. Jak proběhlo setkání podnikatelů v Kuřimi a co jsme řešili?",
@@ -170,7 +190,7 @@ const blogArticles = [
         date: "02. 10. 2025",
         categories: ["networking"],
         image: "assets/images/blog/reportaz-bforb-tisnov-rijen-2025/tisnov-02-10.jpg",
-        
+
         cs: {
             title: "Reportáž: BforB Tišnov v říjnu",
             perex: "Pravidelná snídaně tišnovského klubu. Proč se vyplatí vstávat brzy ráno kvůli byznysu a jak funguje referral marketing v praxi.",
@@ -184,14 +204,14 @@ const blogArticles = [
             categoryLabel: "NETWORKING"
         }
     },
-    
+
     // --- ZÁŘÍ 2025 ---
     {
         id: "cs-tech-summit",
         date: "25. 09. 2025",
         categories: ["ai", "networking"],
         image: "assets/images/blog/cs-tech-summit-2025/1.jpg",
-        
+
         cs: {
             title: "CS Tech Summit 2025: Budoucnost českého techu",
             perex: "Klíčové myšlenky z konference. Kyberbezpečnost, AI ve firmách a digitální transformace české ekonomiky.",
@@ -210,7 +230,7 @@ const blogArticles = [
         date: "19. 09. 2025",
         categories: ["ai", "networking"],
         image: "assets/images/blog/reportaz-workshop-zari-2025/workshop19-9.jpg",
-        
+
         cs: {
             title: "Reportáž: Zářijový AI workshop pro firmy",
             perex: "Praktická ukázka toho, jak jsme s účastníky implementovali AI nástroje do jejich každodenní agendy. Konkrétní use-cases.",
@@ -231,7 +251,7 @@ const blogArticles = [
         date: "22. 08. 2025",
         categories: ["ai", "networking"],
         image: "assets/images/blog/reportaz-workshop-srpen-2025/workshop22-8.jpg",
-        
+
         cs: {
             title: "AI Workshop srpen: Letní škola promptování",
             perex: "I v létě se vzděláváme. Srpnový workshop se zaměřil na pokročilé techniky promptování pro marketing a tvorbu obsahu.",
@@ -252,7 +272,7 @@ const blogArticles = [
         date: "18. 07. 2025",
         categories: ["ai", "networking"],
         image: "assets/images/blog/reportaz-workshop-cervenec-2025/workshop18-7.jpg",
-        
+
         cs: {
             title: "Jak proběhl červencový AI Workshop?",
             perex: "Úvod do světa generativní umělé inteligence pro začátečníky. Podívejte se na fotoreportáž z akce a zpětnou vazbu účastníků.",
@@ -273,7 +293,7 @@ const blogArticles = [
         date: "15. 06. 2025",
         categories: ["ai"],
         image: "assets/images/blog/ai-act-byznys/prezentace-ai.jpg", // Použit placeholder, zkontroluj
-        
+
         cs: {
             title: "AI Agenti: Nová éra byznysu",
             perex: "Autonomní AI agenti přicházejí. Jak se liší od běžných chatbotů a jak mohou automatizovat celé procesy ve vaší firmě?",
@@ -292,7 +312,7 @@ const blogArticles = [
         date: "01. 06. 2025",
         categories: ["pravo"],
         image: "assets/images/blog/prevod-podilu-sro-nz/nz-podil.png",
-        
+
         cs: {
             title: "Převod podílu v S.R.O.: Kdy je nutný notářský zápis?",
             perex: "Právní minimum pro společníky. Rozebíráme situace, kdy k převodu podílu potřebujete formu notářského zápisu a kdy stačí podpis.",
@@ -311,7 +331,7 @@ const blogArticles = [
         date: "20. 05. 2025",
         categories: ["ai", "byznys"], // 'byznys' mapujeme na 'networking' nebo 'ai' pro filtr? Necháme 'ai'
         image: "assets/images/blog/ai-v-byznysu-4-cesty/ai-v-byznysu-4-cesty.jpg",
-        
+
         cs: {
             title: "AI v byznysu: 4 cesty k efektivitě",
             perex: "Praktický průvodce implementací AI. Čtyři konkrétní oblasti, kde mohou malé a střední firmy začít využívat umělou inteligenci ihned.",
@@ -330,7 +350,7 @@ const blogArticles = [
         date: "10. 05. 2025",
         categories: ["networking"], // Řadím pod networking/byznys
         image: "assets/images/blog/firemni-kultura-alveno/firemni-kultura-alveno.jpg",
-        
+
         cs: {
             title: "Firemní kultura v Alveno: Inspirace pro lídry",
             perex: "Jak budovat zdravou firemní kulturu v technologické firmě? Rozhovor a postřehy z návštěvy ve společnosti Alveno.",
@@ -349,7 +369,7 @@ const blogArticles = [
         date: "14. 04. 2025", // Odhad data dle názvu
         categories: ["networking"],
         image: "assets/images/blog/networking-palava-14/1.jpg",
-        
+
         cs: {
             title: "Networking pod Pálavou #14",
             perex: "Další úspěšné setkání podnikatelů na jižní Moravě. Fotoreportáž a shrnutí atmosféry z 14. pokračování naší akce.",
@@ -368,7 +388,7 @@ const blogArticles = [
         date: "12. 02. 2025", // Odhad data dle názvu
         categories: ["networking"],
         image: "assets/images/blog/networking-palava-12/1.jpg",
-        
+
         cs: {
             title: "Networking pod Pálavou #12: Zimní edice",
             perex: "Ani v zimě byznys nespí. Jak proběhl dvanáctý networking a jaká témata rezonovala mezi účastníky?",

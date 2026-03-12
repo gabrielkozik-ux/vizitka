@@ -512,7 +512,7 @@ section:nth-child(2n) {
     height: 100%;
     display: flex;
     flex-direction: column;
-    text-align: center;
+    text-align: left;
 }
 
 .service-card::before {
@@ -529,6 +529,15 @@ section:nth-child(2n) {
     font-size: 1.8em;
     margin-top: 0;
     margin-bottom: 20px;
+    text-align: center;
+    min-height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-card>p:first-of-type {
+    min-height: 6rem;
 }
 
 .service-card h4 {
@@ -537,8 +546,7 @@ section:nth-child(2n) {
     margin-bottom: 15px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-top: auto;
-    text-align: center;
+    /* margin-top: auto; Odstraněno pro sjednocení začátku textu */
 }
 
 /* --- FRENCH SPECIFIC --- */
@@ -565,9 +573,7 @@ section:nth-child(2n) {
 .service-card ul {
     list-style: none;
     padding: 0;
-    display: inline-block;
-    text-align: left;
-    margin: 0 auto 20px;
+    margin-bottom: 20px;
 }
 
 .service-card li {

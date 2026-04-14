@@ -1,5 +1,116 @@
 [
   {
+    "date": "2026-04-15",
+    "time": "17:30 - 19:30",
+    "title": {
+      "cs": "Sraz Podnikavců Kuřim #10",
+      "en": "Entrepreneurs Meeting Kuřim #10",
+      "hu": "Vállalkozók Találkozója Kuřim #10",
+      "fr": "Réunion des entrepreneurs Kuřim #10"
+    },
+    "place": "SKC Kuřim, nám. Osvobození 902/1, Kuřim",
+    "link": "https://klubpodnikavcu.cz/akce/sraz-podnikavcu-kurim-10",
+    "calendarLink": "",
+    "isSoldOut": false
+  },
+  {
+    "date": "2026-04-28",
+    "time": "09:00 - 11:30",
+    "title": {
+      "cs": "Networking Pod Pálavou #09: Rovnováha v těle i v dialogu",
+      "en": "Networking Pod Pálavou #09: Balance in Body and Dialogue",
+      "hu": "Networking Pod Pálavou #09: Egyensúly a testben és a párbeszédben",
+      "fr": "Réseautage Pod Pálavou #09 : Équilibre du corps et du dialogue"
+    },
+    "place": "Krčma a hotel U Císařské cesty, Branišovice",
+    "link": "https://www.pod-palavou.cz/klubova-setkani",
+    "calendarLink": "",
+    "isSoldOut": false
+  },
+  {
+    "date": "2026-04-29",
+    "time": "29.4. - 3.5.2026",
+    "title": {
+      "cs": "Cross Border Dialogue",
+      "en": "Cross Border Dialogue",
+      "hu": "Cross Border Dialogue",
+      "fr": "Cross Border Dialogue"
+    },
+    "place": "Zámek Mikulov",
+    "link": "https://www.eventbrite.com/e/cross-border-dialogue-conference-day-tickets-1982001138760",
+    "calendarLink": "",
+    "isSoldOut": false
+  },
+  {
+    "date": "2026-05-07",
+    "time": "08:30 - 11:30",
+    "title": {
+      "cs": "Networking BforB Tišnov",
+      "en": "BforB Networking Tišnov",
+      "hu": "BforB Networking Tišnov",
+      "fr": "Réseautage BforB Tišnov"
+    },
+    "place": "Kavárna u Kina, Tišnov",
+    "link": "#",
+    "calendarLink": "",
+    "isSoldOut": false
+  },
+  {
+    "date": "2026-05-12",
+    "time": "09:00 - 11:30",
+    "title": {
+      "cs": "Networking Pod Pálavou #10: Vidět svět jinak",
+      "en": "Networking Pod Pálavou #10: Seeing the World Differently",
+      "hu": "Networking Pod Pálavou #10: Lássuk másképp a világot",
+      "fr": "Réseautage Pod Pálavou #10 : Voir le monde autrement"
+    },
+    "place": "Krčma a hotel U Císařské cesty, Branišovice",
+    "link": "https://www.pod-palavou.cz/klubova-setkani",
+    "calendarLink": "",
+    "isSoldOut": false
+  },
+  {
+    "date": "2026-06-09",
+    "time": "09:00 - 11:30",
+    "title": {
+      "cs": "Networking Pod Pálavou #12: Značky prověřené desítkami let",
+      "en": "Networking Pod Pálavou #12: Brands Proven by Decades",
+      "hu": "Networking Pod Pálavou #12: Évtizedek óta bizonyított márkák",
+      "fr": "Réseautage Pod Pálavou #12 : Des marques éprouvées par des décennies"
+    },
+    "place": "Krčma a hotel U Císařské cesty, Branišovice",
+    "link": "https://www.pod-palavou.cz/klubova-setkani",
+    "calendarLink": "",
+    "isSoldOut": false
+  },
+  {
+    "date": "2026-06-23",
+    "time": "09:00 - 11:30",
+    "title": {
+      "cs": "Networking Pod Pálavou #13: Začátek vítěze neurčuje",
+      "en": "Networking Pod Pálavou #13: The Beginning Doesn't Define the Winner",
+      "hu": "Networking Pod Pálavou #13: A kezdet nem határozza meg a győztest",
+      "fr": "Réseautage Pod Pálavou #13 : Le début ne définit pas le vainqueur"
+    },
+    "place": "Krčma a hotel U Císařské cesty, Branišovice",
+    "link": "https://www.pod-palavou.cz/klubova-setkani",
+    "calendarLink": "",
+    "isSoldOut": false
+  },
+  {
+    "date": "2026-07-07",
+    "time": "09:00 - 11:30",
+    "title": {
+      "cs": "Networking Pod Pálavou #14: Tvoje jméno, tvoje svoboda",
+      "en": "Networking Pod Pálavou #14: Your Name, Your Freedom",
+      "hu": "Networking Pod Pálavou #14: A te neved, a te szabadságod",
+      "fr": "Réseautage Pod Pálavou #14 : Ton nom, ta liberté"
+    },
+    "place": "Krčma a hotel U Císařské cesty, Branišovice",
+    "link": "https://www.pod-palavou.cz/klubova-setkani",
+    "calendarLink": "",
+    "isSoldOut": false
+  },
     "date": "2026-04-07",
     "time": "17:30 - 19:30",
     "title": {

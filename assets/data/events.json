@@ -71,6 +71,20 @@
   },
   {
     "date": "2026-05-26",
+    "time": "09:00 - 12:00",
+    "title": {
+      "cs": "Networking Pod Pálavou #11: Zpětná vazba nebo minové pole?",
+      "en": "Networking Pod Pálavou #11: Feedback or Minefield?",
+      "hu": "Networking Pod Pálavou #11: Visszajelzés vagy aknamező?",
+      "fr": "Réseautage Pod Pálavou #11 : Retour d'expérience ou champ de mines ?"
+    },
+    "place": "Krčma a hotel U Císařské cesty, Branišovice",
+    "link": "https://www.pod-palavou.cz/klubova-setkani",
+    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=Networking+Pod+P%C3%A1lavou+%2311%3A+Zp%C4%9Btn%C3%A1+vazba+nebo+minov%C3%A9+pole%3F&dates=20260526T070000Z/20260526T100000Z&details=T%C3%A9ma%3A+Zp%C4%9Btn%C3%A1+vazba+nebo+minov%C3%A9+pole%3F+Host%3A+Maja+Bourkov%C3%A1.+V%C3%ADce+info%3A+https%3A%2F%2Fwww.pod-palavou.cz%2Fklubova-setkani&location=Kr%C4%8Dma+a+hotel+U+C%C3%ADsa%C5%99sk%C3%A9+cesty%2C+Brani%C5%A1ovice",
+    "isSoldOut": false
+  },
+  {
+    "date": "2026-05-26",
     "time": "15:00 - 18:00",
     "title": {
       "cs": "CCT networkingová káva o třetí",

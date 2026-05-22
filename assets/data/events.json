@@ -70,6 +70,48 @@
     "isSoldOut": false
   },
   {
+    "date": "2026-05-26",
+    "time": "15:00 - 18:00",
+    "title": {
+      "cs": "CCT networkingová káva o třetí",
+      "en": "CCT Networking Coffee at Three",
+      "hu": "CCT Networking Kávé Háromkor",
+      "fr": "Café de réseautage CCT à trois heures"
+    },
+    "place": "Biegun Cafe, Brno",
+    "link": "https://cct.cz/events/30",
+    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=CCT+networkingov%C3%A1+k%C3%A1va+o+t%C5%99et%C3%AD&dates=20260526T130000Z/20260526T160000Z&details=V%C3%ADce+info+zde%3A+https%3A%2F%2Fcct.cz%2Fevents%2F30&location=Biegun+Cafe%2C+Brno",
+    "isSoldOut": false
+  },
+  {
+    "date": "2026-05-27",
+    "time": "17:30 - 19:30",
+    "title": {
+      "cs": "Sraz podnikavců Kuřim #11",
+      "en": "Entrepreneurs Meeting Kuřim #11",
+      "hu": "Vállalkozók Találkozója Kuřim #11",
+      "fr": "Réunion des entrepreneurs Kuřim #11"
+    },
+    "place": "Společenské a kulturní centrum Kuřim",
+    "link": "https://klubpodnikavcu.cz/akce/sraz-podnikavcu-kurim-11",
+    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=Sraz+podnikavc%C5%AF+Ku%C5%99im+%2311&dates=20260527T153000Z/20260527T173000Z&details=V%C3%ADce+info+zde%3A+https%3A%2F%2Fklubpodnikavcu.cz%2Fakce%2Fsraz-podnikavcu-kurim-11&location=Spole%C4%8Densk%C3%A9+a+kulturn%C3%AD+centrum+Ku%C5%99im",
+    "isSoldOut": false
+  },
+  {
+    "date": "2026-06-04",
+    "time": "08:00 - 11:00",
+    "title": {
+      "cs": "CCT networkingová snídaně",
+      "en": "CCT Networking Breakfast",
+      "hu": "CCT Networking Reggeli",
+      "fr": "Petit-déjeuner de réseautage CCT"
+    },
+    "place": "Bistro Lhotka, Ostrava",
+    "link": "https://cct.cz/events/32",
+    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=CCT+networkingov%C3%A1+sn%C3%ADdan%C4%9B&dates=20260604T060000Z/20260604T090000Z&details=V%C3%ADce+info+zde%3A+https%3A%2F%2Fcct.cz%2Fevents%2F32&location=Bistro+Lhotka%2C+Ostrava",
+    "isSoldOut": false
+  },
+  {
     "date": "2026-06-09",
     "time": "09:00 - 11:30",
     "title": {
@@ -81,6 +123,20 @@
     "place": "Krčma a hotel U Císařské cesty, Branišovice",
     "link": "https://www.pod-palavou.cz/klubova-setkani",
     "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=Networking+Pod+P%C3%A1lavou+%2312%3A+Zna%C4%8Dky+prov%C4%9B%C5%99en%C3%A9+des%C3%ADtkami+let&dates=20260609T070000Z/20260609T093000Z&details=T%C3%A9ma%3A+Zna%C4%8Dky+prov%C4%9B%C5%99en%C3%A9+des%C3%ADtkami+let.+V%C3%ADce+info%3A+https%3A%2F%2Fwww.pod-palavou.cz%2Fklubova-setkani&location=Kr%C4%8Dma+a+hotel+U+C%C3%ADsa%C5%99sk%C3%A9+cesty%2C+Brani%C5%A1ovice",
+    "isSoldOut": false
+  },
+  {
+    "date": "2026-06-16",
+    "time": "17:30 - 19:30",
+    "title": {
+      "cs": "Sraz podnikavců Tišnov #32",
+      "en": "Entrepreneurs Meeting Tišnov #32",
+      "hu": "Vállalkozók Találkozója Tišnov #32",
+      "fr": "Réunion des entrepreneurs Tišnov #32"
+    },
+    "place": "Kavárna U Kina, Mlýnská 152, Tišnov",
+    "link": "https://klubpodnikavcu.cz/akce/sraz-podnikavcu-tisnov-32",
+    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=Sraz+podnikavc%C5%AF+Ti%C5%A1nov+%2332&dates=20260616T153000Z/20260616T173000Z&details=Speci%C3%A1ln%C3%AD+program%3A+Propojen%C3%AD+s+podnikateli+v+r%C3%A1mci+klubu+BforB+Ti%C5%A1nov.+V%C3%ADce+info+zde%3A+https%3A%2F%2Fklubpodnikavcu.cz%2Fakce%2Fsraz-podnikavcu-tisnov-32&location=Kav%C3%A1rna+U+Kina%2C+Ml%C3%BDnsk%C3%A1+152%2C+Ti%C5%A1nov",
     "isSoldOut": false
   },
   {
@@ -109,6 +165,20 @@
     "place": "Krčma a hotel U Císařské cesty, Branišovice",
     "link": "https://www.pod-palavou.cz/klubova-setkani",
     "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=Networking+Pod+P%C3%A1lavou+%2314%3A+Tvoje+jm%C3%A9no%2C+tvoje+svoboda&dates=20260707T070000Z/20260707T093000Z&details=T%C3%A9ma%3A+Tvoje+jm%C3%A9no%2C+tvoje+svoboda.+V%C3%ADce+info%3A+https%3A%2F%2Fwww.pod-palavou.cz%2Fklubova-setkani&location=Kr%C4%8Dma+a+hotel+U+C%C3%ADsa%C5%99sk%C3%A9+cesty%2C+Brani%C5%A1ovice",
+    "isSoldOut": false
+  },
+  {
+    "date": "2026-10-22",
+    "time": "09:00 - 17:00",
+    "title": {
+      "cs": "3. ročník konference Nové začátky: Lidská firma v digitálním světě",
+      "en": "3rd Annual Conference New Beginnings: Human Company in the Digital World",
+      "hu": "3. Új Kezdetek Konferencia: Emberi cég a digitális világban",
+      "fr": "3e conférence annuelle Nouveaux Commencements : L'entreprise humaine dans le monde numérique"
+    },
+    "place": "Impact Hub Brno, Cyrilská 7, Brno",
+    "link": "https://novezacatky.cz/konference-2026/",
+    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=3.+ro%C4%8Dn%C3%ADk+konference+Nov%C3%A9+za%C4%8D%C3%A1tky%3A+Lidsk%C3%A1+firma+v+digit%C3%A1ln%C3%ADm+sv%C4%9Bt%C4%9B&dates=20261022T070000Z/20261022T150000Z&details=Gabriel+Ko%C5%BE%C3%ADk+vystoup%C3%AD+v+panelov%C3%A9+diskuzi+%221.+PANEL%3A+Technologick%C3%A9+mo%C5%BEnosti+vs.+lidsk%C3%A1+kapacita%22+(Veronika+Haluzov%C3%A1%2C+Gabriel+Ko%C5%BE%C3%ADk%2C+Pavel+%C5%A0ump%C3%ADk)+a+odpoledne+povede+workshop%3A+AI+n%C3%A1stroje+od+Google.+V%C3%ADce+info%3A+https%3A%2F%2Fnovezacatky.cz%2Fkonference-2026%2F&location=Impact+Hub+Brno%2C+Cyrilsk%C3%A1+7%2C+Brno",
     "isSoldOut": false
   },
   {

@@ -1,5 +1,21 @@
 [
     {
+        "id": "jak-si-jednoduse-personifikovat-gemini",
+        "date": "2026-05-22",
+        "category": "expert",
+        "image": "blog/2026/jak-si-jednoduse-personifikovat-gemini/header.png",
+        "cs": {
+            "title": "Jak si jednoduše personifikovat Gemini?",
+            "excerpt": "Velký průvodce možnostmi přizpůsobení a personifikace Google Gemini. Jak nastavit paměť, propojit aplikace přes rozšíření a importovat data z ChatGPT či Claude.",
+            "link": "blog/2026/jak-si-jednoduse-personifikovat-gemini/jak-si-jednoduse-personifikovat-gemini.html"
+        },
+        "en": {
+            "title": "How to Easily Personalize Gemini?",
+            "excerpt": "A comprehensive guide on customizing Google Gemini. Learn how to manage memory, connect Google extensions, and import your context from ChatGPT or Claude.",
+            "link": "blog/2026/jak-si-jednoduse-personifikovat-gemini/jak-si-jednoduse-personifikovat-gemini-en.html"
+        }
+    },
+    {
         "id": "filosofie-ai-v-advokacii",
         "date": "2026-03-12",
         "category": "expert",

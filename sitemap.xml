@@ -58,6 +58,20 @@
 
   <!-- 2026 blog posts -->
   <url>
+    <loc>https://www.gabrielkozik.com/blog/2026/jak-si-jednoduse-personifikovat-gemini/jak-si-jednoduse-personifikovat-gemini.html</loc>
+    <lastmod>2026-05-22</lastmod>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/jak-si-jednoduse-personifikovat-gemini/jak-si-jednoduse-personifikovat-gemini.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/jak-si-jednoduse-personifikovat-gemini/jak-si-jednoduse-personifikovat-gemini-en.html" />
+  </url>
+  <url>
+    <loc>https://www.gabrielkozik.com/blog/2026/jak-si-jednoduse-personifikovat-gemini/jak-si-jednoduse-personifikovat-gemini-en.html</loc>
+    <lastmod>2026-05-22</lastmod>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/jak-si-jednoduse-personifikovat-gemini/jak-si-jednoduse-personifikovat-gemini.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/jak-si-jednoduse-personifikovat-gemini/jak-si-jednoduse-personifikovat-gemini-en.html" />
+  </url>
+  <url>
     <loc>https://www.gabrielkozik.com/blog/2026/networking-pod-palavou-4-rustove-mysleni/networking-pod-palavou-4-rustove-mysleni.html</loc>
     <lastmod>2026-02-17</lastmod>
     <priority>0.70</priority>

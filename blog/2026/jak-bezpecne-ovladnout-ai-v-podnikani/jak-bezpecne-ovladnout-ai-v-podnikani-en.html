@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Safely Master AI in Business (Podcast) | Mgr. Gabriel Kožík</title>
+    <meta name="description"
+        content="How to integrate AI into your business safely, legally, and without data leaks? Watch the new podcast episode from law firm IUSTORIA (with English summary).">
+    <link rel="canonical" href="https://www.gabrielkozik.com/blog/2026/jak-bezpecne-ovladnout-ai-v-podnikani/jak-bezpecne-ovladnout-ai-v-podnikani-en.html" />
+    <link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/jak-bezpecne-ovladnout-ai-v-podnikani/jak-bezpecne-ovladnout-ai-v-podnikani.html" />
+    <link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/jak-bezpecne-ovladnout-ai-v-podnikani/jak-bezpecne-ovladnout-ai-v-podnikani-en.html" />
+    <link rel="alternate" hreflang="x-default" href="https://www.gabrielkozik.com/blog/2026/jak-bezpecne-ovladnout-ai-v-podnikani/jak-bezpecne-ovladnout-ai-v-podnikani.html" />
+    <link rel="icon" type="image/x-icon" href="../../../assets/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../style.css">
+</head>
+
+<body>
+    <nav class="main-nav">
+        <a href="../../../index-en.html" class="nav-logo">Mgr. Gabriel Kožík</a>
+        <div class="nav-links">
+            <a href="../../../index-en.html">Home</a>
+            <a href="../../../blog-en.html">Blog</a>
+            <a href="../../../index-en.html#propojit">Contact me</a>
+        </div>
+        <div class="lang-switcher">
+            <button class="lang-button lang-switcher-button" aria-haspopup="true" aria-expanded="false">EN <span
+                    class="arrow"></span></button>
+            <div class="lang-dropdown lang-switcher-dropdown">
+                <a href="jak-bezpecne-ovladnout-ai-v-podnikani.html">CZ</a>
+                <a href="jak-bezpecne-ovladnout-ai-v-podnikani-en.html" class="active">EN</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <article class="article-content">
+                <header class="article-header">
+                    <h1>How to Safely Master AI in Business</h1>
+                    <p class="article-meta">Published: June 3, 2026 | Author: Mgr. Gabriel Kožík</p>
+                </header>
+
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/8eWPsQ4rbao" 
+                            title="How to Safely Master AI in Business and Meet the New Laws" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+
+                <p class="perex">Integrating artificial intelligence into business processes yields a huge competitive advantage and saves time. However, if done blindly, it poses significant legal and security threats. In the new episode of our law firm's podcast, IUSTORIA, we discuss how to manage AI integration safely.</p>
+
+                <blockquote>
+                    <strong>Note:</strong> The video podcast is in Czech. An English executive summary of the key takeaways is provided below.
+                </blockquote>
+
+                <p>We discuss the practical impacts of European regulations and the necessary steps every business owner or manager should take to mitigate security risks and protect their core IP.</p>
+
+                <h2>📌 Key Takeaways & Executive Summary</h2>
+                
+                <ul>
+                    <li><strong>EU AI Act Compliance:</strong> The European AI regulation is not just for software developers; it applies to all businesses deploying AI. I explain the core concept of risk-based system categorization (prohibited, high-risk, limited) and the resulting compliance duties.</li>
+                    <li><strong>The Threat of "Shadow AI":</strong> This occurs when employees input sensitive client data, internal source code, or company trade secrets into unauthorized public AI chatbots. These inputs can be used to train public models, risking confidential data leaks.</li>
+                    <li><strong>AI Audit as the First Step:</strong> Before establishing policies, companies must conduct an audit to map out which AI tools their employees are actually using, for what purposes, and with what types of data.</li>
+                    <li><strong>Internal AI Policy:</strong> Setting up clear guidelines. Employees must know which tools are approved, what data they are permitted to input, and under what conditions.</li>
+                    <li><strong>Secure Deployment Pathways:</strong> Opting for paid corporate plans with guaranteed data privacy (enterprise licenses), utilizing API endpoints, or deploying self-hosted open-source models (such as Llama) running on company hardware (on-premise).</li>
+                </ul>
+
+                <hr style="margin: 40px 0;">
+
+                <h3>Useful Links</h3>
+                <ul>
+                    <li><a href="http://www.iustoria.cz" target="_blank" rel="noopener noreferrer">IUSTORIA Law Firm</a></li>
+                    <li><a href="https://ai-workshop.cz" target="_blank" rel="noopener noreferrer">Practical AI Workshops for Businesses</a></li>
+                </ul>
+
+                <a href="../../../blog-en.html" class="back-to-blog"> ← Back to blog index</a>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="copyright">&copy; 2026 Mgr. Gabriel Kožík. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const langButton = document.querySelector('.lang-switcher-button');
+        const langDropdown = document.querySelector('.lang-switcher-dropdown');
+        function toggleLangDropdown() {
+            const isExpanded = langButton.getAttribute('aria-expanded') === 'true';
+            langButton.setAttribute('aria-expanded', !isExpanded);
+            langButton.classList.toggle('active');
+            langDropdown.style.display = langDropdown.style.display === 'block' ? 'none' : 'block';
+        }
+        langButton.addEventListener('click', e => { e.stopPropagation(); toggleLangDropdown(); });
+        window.addEventListener('click', e => {
+            if (langButton.classList.contains('active') && !langButton.parentElement.contains(e.target)) {
+                toggleLangDropdown();
+            }
+        });
+    </script>
+</body>
+
+</html>

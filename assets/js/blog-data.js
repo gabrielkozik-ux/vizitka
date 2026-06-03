@@ -6,6 +6,26 @@
 */
 
 const blogArticles = [
+    // --- ČERVEN 2026 ---
+    {
+        id: "jak-bezpecne-ovladnout-ai-v-podnikani",
+        date: "03. 06. 2026",
+        categories: ["ai", "pravo"],
+        image: "https://img.youtube.com/vi/8eWPsQ4rbao/maxresdefault.jpg",
+
+        cs: {
+            title: "Jak bezpečně ovládnout AI v podnikání (Podcast)",
+            perex: "Jak integrovat umělou inteligenci do firmy bezpečně, legálně a bez rizika úniku dat? Sledujte novou epizodu podcastu advokátní kanceláře IUSTORIA.",
+            link: "blog/2026/jak-bezpecne-ovladnout-ai-v-podnikani/jak-bezpecne-ovladnout-ai-v-podnikani.html",
+            categoryLabel: "AI PODCAST"
+        },
+        en: {
+            title: "How to Safely Master AI in Business (Podcast)",
+            perex: "How to integrate AI into your business safely, legally, and without data leaks? Watch the new podcast episode from law firm IUSTORIA (with English summary).",
+            link: "blog/2026/jak-bezpecne-ovladnout-ai-v-podnikani/jak-bezpecne-ovladnout-ai-v-podnikani-en.html",
+            categoryLabel: "AI PODCAST"
+        }
+    },
     // --- BŘEZEN 2026 ---
     {
         id: "filosofie-ai-v-advokacii",

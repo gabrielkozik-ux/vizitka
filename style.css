@@ -1168,13 +1168,16 @@ footer {
     }
 
     .nav-links {
+        display: flex;
         flex-direction: column;
         width: 100%;
         align-items: center;
     }
 
     .nav-links a {
+        display: block;
         padding: 15px;
+        margin: 0;
         width: 100%;
         text-align: center;
         border-bottom: 1px solid var(--light-gray);

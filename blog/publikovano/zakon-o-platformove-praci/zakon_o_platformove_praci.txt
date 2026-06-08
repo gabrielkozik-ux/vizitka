@@ -1,0 +1,30 @@
+Konec pokut pro lidi a nástup algoritmů: Jak nová česká legislativa změní (nejen) platformovou práci a švarcsystém
+Digital Omnibus na EU úrovni odložil účinnost pravidel pro vysoce rizikové AI systémy na prosinec 2027.
+Česká republika nicméně patrně již od ledna 2027 bude regulovat automatizované zadávání úkolů, hodnocení, lidský dohled a další práva a povinnosti vyplývající z využití tzv. algoritmického řízení, které bude podle všech očekávání z velké části řízeno právě AI.
+Na co se tedy mají zaměstnavatelé připravit? Na koho tento "platformový zákon" a související změny dopadnou a co vše to znamená?
+Mýtus první: „Týká se to jen Uberu a Woltu“
+Když se řekne „zákon o platformové práci“, většina českých manažerů a podnikatelů mávne rukou s tím, že nerozváží jídlo ani neprovozuje taxislužbu. To je ale velký omyl. Definice digitální pracovní platformy je v návrhu zákona nastavena extrémně široce.
+Spadá pod ni jakákoli fyzická nebo právnická osoba, která poskytuje komerční službu na dálku elektronickými prostředky (web, mobilní aplikace) a organizuje práci vykonávanou jednotlivci.
+Máte lokální úklidovou firmu s aplikací? Dispečink pro řemeslníky? Portál pro externí designéry či překladatele? Pokud váš software lidi jakkoli organizuje – například jim na základě hodnocení, polohy nebo rychlosti přiděluje zakázky, určuje cenu nebo penalizuje odmítnutí – jste platformou podle tohoto zákona.
+A co víc: doprovodné změny v Zákoníku práce dopadnou na všechny zaměstnavatele v ČR, kteří k řízení lidí využívají moderní technologie, bez ohledu na to, zda jsou platformou.
+1. Když lidi neřídí manažer, ale kód (algoritmické řízení a AI)
+Pokud vaše firma spadne pod definici platformy, čekají vás povinnosti vyplývající z tzv. technologické compliance. Zákon rozlišuje automatizované monitorovací systémy (které lidi elektronicky sledují a hodnotí) a automatizované rozhodovací systémy (které samy přidělují úkoly, mění odměny či blokují účty).
+Co nově nesmíte a co naopak musíte splnit?
+Zákaz digitálního sledování. Algoritmy nesmí analyzovat psychický, emocionální či zdravotní stav pracovníků, číst jejich soukromé chaty nebo je sledovat mimo pracovní dobu.
+Human-in-the-loop. Pokud má dojít k zablokování účtu, snížení odměny nebo ukončení smlouvy, tedy zásadnímu rozhodnutí na práva a povinnosti dotčených osob, rozhodnutí nesmí učinit software. Algoritmus může rozhodnutí pouze navrhnout. Konečné slovo musí mít člověk. Zaměstnanec má navíc právo na bezodkladné písemné odůvodnění a přezkum. Vy musíte pak prokázat, jak byl rozhodovací proces nastaven.
+Konec informační asymetrie. Zaměstnanci a jejich zástupci musí přesně vědět, jaké parametry algoritmy sledují, jaká data sbírají a jak tato data ovlivňují jejich odměňování či hodnocení. Tyto informace musí dostat nejpozději první den práce.
+Právo na přenos dat. Zaměstnanec získává právo exportovat svá data o výkonu a hodnocení ve strukturovaném formátu, aby mohl snadno přejít ke konkurenční platformě.
+2. Psychosociální BOZP – nový standard pro všechny zaměstnavatele
+V tomto bodě se legislativa vztahuje i na ostatní zaměstnavatele, tedy běžnou kancelář, call centrum, sklad či výrobu.
+Novela Zákoníku práce zavádí výslovnou povinnost zaměstnavatelů vyhledávat a vyhodnocovat psychosociální a ergonomická rizika spojená s algoritmickým řízením.
+Pokud k monitoringu produktivity nebo plánování směn používáte software, musíte prokázat, že tento systém nevyvíjí na lidi nepřiměřený tlak a neohrožuje jejich duševní zdraví (např. nerealisticky generovanými časovými limity). Zavedení takových systémů budete muset navíc předem projednat se zástupci zaměstnanců.
+3. Švarcsystém aneb konec pokut pro lidi a procesní past pro zaměstnavatele
+Dosavadní souboj státu se švarcsystémem narážel i na to, že pokuta hrozila oběma stranám – zaměstnavateli i živnostníkovi. To se od ledna 2027 má změnit. Zákon zcela ruší přestupek výkonu nelegální práce pro zaměstnance. Veškeré riziko a odpovědnost se plně koncentrují u „kvazi zaměstnavatele“. To přináší dvě nová rizika pro firmy.
+Návrh platformového zákona stanovuje, že pokud inspekce práce odhalí nehlášený výkon závislé práce, nastává právní domněnka, že mezi firmou a pracovníkem existuje platný pracovní poměr.
+Pokud s pracovníkem ukončíte spolupráci a on vás zažaluje, že šlo o odvetu za to, že uplatňoval svá nová práva (např. chtěl informace o algoritmu), vy jako firma budete muset u soudu dokazovat, že tomu tak nebylo. Pro odcházející, nespokojené kontraktory se tak otevírá mimořádně silná vyjednávací pozice.
+Jak z toho ven? Tři kroky, které musíte udělat ještě letos.
+Přestože účinnost pravidel klepe na dveře až na přelomu let 2026 a 2027, přenastavení interních procesů, softwaru a smluvní dokumentace zabere měsíce. Doporučuji začít s následujícím.
+Udělejte si audit B2B vztahů. Nespoléhejte na to, co máte napsané ve smlouvě. Zákoník práce nově definuje vztah nadřízenosti a podřízenosti čistě skrze to, že práci organizujete a dohlížíte na ni v pracovní době. Projděte si faktickou realitu spolupráce s vašimi (sub)dodavateli.
+Prověřte své interní systémy. Pokud využíváte software k alokaci práce a sledování výkonu, zmapujte, jaká data sbíráte. Budete si muset zpracovat tzv. posouzení vlivu na ochranu osobních údajů a připravit podklady pro projednání se zaměstnanci.
+Zakořeňte do svých procesů "human-in-the-loop". Pokud vaše systémy již dnes řeší odměňování a výběr vhodných dodavatelů na jednotlivé práce či řeší případná ukončení spolupráce, musí být v tomto řetězci prokazatelně dosazený lidský faktor. Člověk musí mít poslední slovo.
+Zavádíte ve vaší firmě automatizované systémy, nebo chcete mít jistotu, že vaše spolupráce s OSVČ přežije rok 2027 bez likvidačních pokut a soudních sporů? Domluvte si s námi v IUSTORIA nezávaznou schůzku. Rádi projdeme Vaše nastavení a navrhneme vhodná doporučení.

@@ -58,6 +58,34 @@
 
   <!-- 2026 blog posts -->
   <url>
+    <loc>https://www.gabrielkozik.com/blog/2026/zakon-o-platformove-praci/zakon-o-platformove-praci.html</loc>
+    <lastmod>2026-06-08</lastmod>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/zakon-o-platformove-praci/zakon-o-platformove-praci.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/zakon-o-platformove-praci/zakon-o-platformove-praci-en.html" />
+  </url>
+  <url>
+    <loc>https://www.gabrielkozik.com/blog/2026/zakon-o-platformove-praci/zakon-o-platformove-praci-en.html</loc>
+    <lastmod>2026-06-08</lastmod>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/zakon-o-platformove-praci/zakon-o-platformove-praci.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/zakon-o-platformove-praci/zakon-o-platformove-praci-en.html" />
+  </url>
+  <url>
+    <loc>https://www.gabrielkozik.com/blog/2026/jak-bezpecne-ovladnout-ai-v-podnikani/jak-bezpecne-ovladnout-ai-v-podnikani.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/jak-bezpecne-ovladnout-ai-v-podnikani/jak-bezpecne-ovladnout-ai-v-podnikani.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/jak-bezpecne-ovladnout-ai-v-podnikani/jak-bezpecne-ovladnout-ai-v-podnikani-en.html" />
+  </url>
+  <url>
+    <loc>https://www.gabrielkozik.com/blog/2026/jak-bezpecne-ovladnout-ai-v-podnikani/jak-bezpecne-ovladnout-ai-v-podnikani-en.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/jak-bezpecne-ovladnout-ai-v-podnikani/jak-bezpecne-ovladnout-ai-v-podnikani.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/jak-bezpecne-ovladnout-ai-v-podnikani/jak-bezpecne-ovladnout-ai-v-podnikani-en.html" />
+  </url>
+  <url>
     <loc>https://www.gabrielkozik.com/blog/2026/jak-si-jednoduse-personifikovat-gemini/jak-si-jednoduse-personifikovat-gemini.html</loc>
     <lastmod>2026-05-22</lastmod>
     <priority>0.70</priority>

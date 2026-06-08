@@ -1,5 +1,21 @@
 [
     {
+        "id": "zakon-o-platformove-praci",
+        "date": "2026-06-08",
+        "category": "expert",
+        "image": "blog/2026/zakon-o-platformove-praci/zakon_o_platformove_praci.jpg",
+        "cs": {
+            "title": "Konec pokut pro lidi a nástup algoritmů: Jak nová legislativa změní platformovou práci a švarcsystém",
+            "excerpt": "Česká republika bude od ledna 2027 regulovat využití algoritmického řízení a švarcsystém. Zjistěte, jaké nové povinnosti a rizika to přináší zaměstnavatelům.",
+            "link": "blog/2026/zakon-o-platformove-praci/zakon-o-platformove-praci.html"
+        },
+        "en": {
+            "title": "The End of Fines for People and the Rise of Algorithms: How the New Law Will Change Platform Work and the Schwarz-system",
+            "excerpt": "From January 2027, the Czech Republic will regulate the use of algorithmic management and disguised employment. Find out what new obligations and risks this brings to employers.",
+            "link": "blog/2026/zakon-o-platformove-praci/zakon-o-platformove-praci-en.html"
+        }
+    },
+    {
         "id": "jak-bezpecne-ovladnout-ai-v-podnikani",
         "date": "2026-06-03",
         "category": "expert",

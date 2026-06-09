@@ -683,6 +683,11 @@ section:nth-child(2n) {
     font-weight: 600;
 }
 
+.project-item.secondary-core {
+    flex: 0 0 100%;
+    margin-bottom: 30px;
+}
+
 .workshop-container {
     text-align: center;
     margin-top: 40px;

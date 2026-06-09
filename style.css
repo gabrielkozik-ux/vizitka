@@ -669,6 +669,20 @@ section:nth-child(2n) {
     transform: scale(1.1);
 }
 
+.project-item.core {
+    flex: 0 0 100%;
+    margin-bottom: 30px;
+}
+
+.project-item.core img {
+    height: 120px;
+}
+
+.project-item.core p {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
 .workshop-container {
     text-align: center;
     margin-top: 40px;

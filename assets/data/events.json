@@ -70,6 +70,20 @@
     "isSoldOut": false
   },
   {
+    "date": "2026-05-19",
+    "time": "09:00 - 11:00",
+    "title": {
+      "cs": "CCT online networking",
+      "en": "CCT Online Networking",
+      "hu": "CCT Online Networking",
+      "fr": "CCT réseautage en ligne"
+    },
+    "place": "Online",
+    "link": "https://cct.cz/",
+    "calendarLink": "",
+    "isSoldOut": false
+  },
+  {
     "date": "2026-05-26",
     "time": "09:00 - 12:00",
     "title": {
@@ -87,14 +101,14 @@
     "date": "2026-05-26",
     "time": "15:00 - 18:00",
     "title": {
-      "cs": "CCT networkingová káva o třetí",
-      "en": "CCT Networking Coffee at Three",
-      "hu": "CCT Networking Kávé Háromkor",
-      "fr": "Café de réseautage CCT à trois heures"
+      "cs": "CCT káva o třetí",
+      "en": "CCT Coffee at Three",
+      "hu": "CCT Kávé Háromkor",
+      "fr": "CCT Café à trois heures"
     },
-    "place": "Biegun Cafe, Brno",
+    "place": "Biegun Cafe, Tuřanka 1519, Brno-Slatina",
     "link": "https://cct.cz/events/30",
-    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=CCT+networkingov%C3%A1+k%C3%A1va+o+t%C5%99et%C3%AD&dates=20260526T130000Z/20260526T160000Z&details=V%C3%ADce+info+zde%3A+https%3A%2F%2Fcct.cz%2Fevents%2F30&location=Biegun+Cafe%2C+Brno",
+    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=CCT+k%C3%A1va+o+t%C5%99et%C3%AD&dates=20260526T130000Z/20260526T160000Z&details=V%C3%ADce+info+zde%3A+https%3A%2F%2Fcct.cz%2Fevents%2F30&location=Biegun+Cafe%2C+Tu%C5%99anka+1519%2C+Brno-Slatina",
     "isSoldOut": false
   },
   {
@@ -113,16 +127,16 @@
   },
   {
     "date": "2026-06-04",
-    "time": "08:00 - 11:00",
+    "time": "09:00 - 12:00",
     "title": {
-      "cs": "CCT networkingová snídaně",
-      "en": "CCT Networking Breakfast",
-      "hu": "CCT Networking Reggeli",
-      "fr": "Petit-déjeuner de réseautage CCT"
+      "cs": "CCT snídaně",
+      "en": "CCT Breakfast",
+      "hu": "CCT Reggeli",
+      "fr": "CCT Petit-déjeuner"
     },
-    "place": "Bistro Lhotka, Ostrava",
+    "place": "Bistri Lhota, Petřkovická 125, Ostrava",
     "link": "https://cct.cz/events/32",
-    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=CCT+networkingov%C3%A1+sn%C3%ADdan%C4%9B&dates=20260604T060000Z/20260604T090000Z&details=V%C3%ADce+info+zde%3A+https%3A%2F%2Fcct.cz%2Fevents%2F32&location=Bistro+Lhotka%2C+Ostrava",
+    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=CCT+sn%C3%ADdan%C4%9B&dates=20260604T070000Z/20260604T100000Z&details=V%C3%ADce+info+zde%3A+https%3A%2F%2Fcct.cz%2Fevents%2F32&location=Bistri+Lhota%2C+Pet%C5%99kovick%C3%A1+125%2C+Ostrava",
     "isSoldOut": false
   },
   {
@@ -305,6 +319,20 @@
     "place": "Krčma a hotel U Císařské cesty, Branišovice",
     "link": "https://www.pod-palavou.cz/klubova-setkani",
     "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=Networking+Pod+P%C3%A1lavou+%2306%3A+Krajina%2C+kter%C3%A1+n%C3%A1s+%C5%BEiv%C3%AD&dates=20260317T080000Z/20260317T110000Z&details=T%C3%A9ma%3A+Krajina%2C+kter%C3%A1+n%C3%A1s+%C5%BEiv%C3%AD.+V%C3%ADce+info%3A+https%3A%2F%2Fwww.pod-palavou.cz%2Fklubova-setkani&location=Kr%C4%8Dma+a+hotel+U+C%C3%ADsa%C5%99sk%C3%A9+cesty%2C+Brani%C5%A1ovice",
+    "isSoldOut": false
+  },
+  {
+    "date": "2026-03-17",
+    "time": "15:00 - 18:00",
+    "title": {
+      "cs": "CCT káva o třetí",
+      "en": "CCT Coffee at Three",
+      "hu": "CCT Kávé Háromkor",
+      "fr": "CCT Café à three hours"
+    },
+    "place": "Biegun Cafe, Tuřanka 1519, Brno-Slatina",
+    "link": "https://cct.cz/",
+    "calendarLink": "",
     "isSoldOut": false
   },
   {

@@ -6,475 +6,475 @@
     <lastmod>2026-03-06</lastmod>
     <priority>1.00</priority>
     <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/index-en.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.gabrielkozik.com/index-fr.html" />
-    <xhtml:link rel="alternate" hreflang="hu" href="https://www.gabrielkozik.com/index-hu.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/index-en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.gabrielkozik.com/index-fr" />
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.gabrielkozik.com/index-hu" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gabrielkozik.com/" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/index-en.html</loc>
+    <loc>https://www.gabrielkozik.com/index-en</loc>
     <lastmod>2026-03-06</lastmod>
     <priority>0.90</priority>
     <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/index-en.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.gabrielkozik.com/index-fr.html" />
-    <xhtml:link rel="alternate" hreflang="hu" href="https://www.gabrielkozik.com/index-hu.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/index-en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.gabrielkozik.com/index-fr" />
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.gabrielkozik.com/index-hu" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gabrielkozik.com/" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/index-fr.html</loc>
+    <loc>https://www.gabrielkozik.com/index-fr</loc>
     <lastmod>2026-03-06</lastmod>
     <priority>0.90</priority>
     <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/index-en.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.gabrielkozik.com/index-fr.html" />
-    <xhtml:link rel="alternate" hreflang="hu" href="https://www.gabrielkozik.com/index-hu.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/index-en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.gabrielkozik.com/index-fr" />
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.gabrielkozik.com/index-hu" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gabrielkozik.com/" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/index-hu.html</loc>
+    <loc>https://www.gabrielkozik.com/index-hu</loc>
     <lastmod>2026-03-06</lastmod>
     <priority>0.90</priority>
     <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/index-en.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.gabrielkozik.com/index-fr.html" />
-    <xhtml:link rel="alternate" hreflang="hu" href="https://www.gabrielkozik.com/index-hu.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/index-en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.gabrielkozik.com/index-fr" />
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.gabrielkozik.com/index-hu" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gabrielkozik.com/" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog.html</loc>
+    <loc>https://www.gabrielkozik.com/blog</loc>
     <lastmod>2026-03-06</lastmod>
     <priority>0.80</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog-en.html</loc>
+    <loc>https://www.gabrielkozik.com/blog-en</loc>
     <lastmod>2026-03-06</lastmod>
     <priority>0.80</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog-en" />
   </url>
 
   <!-- 2026 blog posts -->
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2026/zakon-o-platformove-praci/zakon-o-platformove-praci.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2026/zakon-o-platformove-praci/zakon-o-platformove-praci</loc>
     <lastmod>2026-06-08</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/zakon-o-platformove-praci/zakon-o-platformove-praci.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/zakon-o-platformove-praci/zakon-o-platformove-praci-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/zakon-o-platformove-praci/zakon-o-platformove-praci" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/zakon-o-platformove-praci/zakon-o-platformove-praci-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2026/zakon-o-platformove-praci/zakon-o-platformove-praci-en.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2026/zakon-o-platformove-praci/zakon-o-platformove-praci-en</loc>
     <lastmod>2026-06-08</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/zakon-o-platformove-praci/zakon-o-platformove-praci.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/zakon-o-platformove-praci/zakon-o-platformove-praci-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/zakon-o-platformove-praci/zakon-o-platformove-praci" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/zakon-o-platformove-praci/zakon-o-platformove-praci-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2026/jak-bezpecne-ovladnout-ai-v-podnikani/jak-bezpecne-ovladnout-ai-v-podnikani.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2026/jak-bezpecne-ovladnout-ai-v-podnikani/jak-bezpecne-ovladnout-ai-v-podnikani</loc>
     <lastmod>2026-06-03</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/jak-bezpecne-ovladnout-ai-v-podnikani/jak-bezpecne-ovladnout-ai-v-podnikani.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/jak-bezpecne-ovladnout-ai-v-podnikani/jak-bezpecne-ovladnout-ai-v-podnikani-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/jak-bezpecne-ovladnout-ai-v-podnikani/jak-bezpecne-ovladnout-ai-v-podnikani" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/jak-bezpecne-ovladnout-ai-v-podnikani/jak-bezpecne-ovladnout-ai-v-podnikani-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2026/jak-bezpecne-ovladnout-ai-v-podnikani/jak-bezpecne-ovladnout-ai-v-podnikani-en.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2026/jak-bezpecne-ovladnout-ai-v-podnikani/jak-bezpecne-ovladnout-ai-v-podnikani-en</loc>
     <lastmod>2026-06-03</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/jak-bezpecne-ovladnout-ai-v-podnikani/jak-bezpecne-ovladnout-ai-v-podnikani.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/jak-bezpecne-ovladnout-ai-v-podnikani/jak-bezpecne-ovladnout-ai-v-podnikani-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/jak-bezpecne-ovladnout-ai-v-podnikani/jak-bezpecne-ovladnout-ai-v-podnikani" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/jak-bezpecne-ovladnout-ai-v-podnikani/jak-bezpecne-ovladnout-ai-v-podnikani-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2026/jak-si-jednoduse-personifikovat-gemini/jak-si-jednoduse-personifikovat-gemini.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2026/jak-si-jednoduse-personifikovat-gemini/jak-si-jednoduse-personifikovat-gemini</loc>
     <lastmod>2026-05-22</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/jak-si-jednoduse-personifikovat-gemini/jak-si-jednoduse-personifikovat-gemini.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/jak-si-jednoduse-personifikovat-gemini/jak-si-jednoduse-personifikovat-gemini-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/jak-si-jednoduse-personifikovat-gemini/jak-si-jednoduse-personifikovat-gemini" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/jak-si-jednoduse-personifikovat-gemini/jak-si-jednoduse-personifikovat-gemini-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2026/jak-si-jednoduse-personifikovat-gemini/jak-si-jednoduse-personifikovat-gemini-en.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2026/jak-si-jednoduse-personifikovat-gemini/jak-si-jednoduse-personifikovat-gemini-en</loc>
     <lastmod>2026-05-22</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/jak-si-jednoduse-personifikovat-gemini/jak-si-jednoduse-personifikovat-gemini.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/jak-si-jednoduse-personifikovat-gemini/jak-si-jednoduse-personifikovat-gemini-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/jak-si-jednoduse-personifikovat-gemini/jak-si-jednoduse-personifikovat-gemini" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/jak-si-jednoduse-personifikovat-gemini/jak-si-jednoduse-personifikovat-gemini-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2026/filosofie-ai-v-advokacii/filosofie-ai-v-advokacii.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2026/filosofie-ai-v-advokacii/filosofie-ai-v-advokacii</loc>
     <lastmod>2026-03-12</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/filosofie-ai-v-advokacii/filosofie-ai-v-advokacii.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/filosofie-ai-v-advokacii/filosofie-ai-v-advokacii-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/filosofie-ai-v-advokacii/filosofie-ai-v-advokacii" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/filosofie-ai-v-advokacii/filosofie-ai-v-advokacii-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2026/filosofie-ai-v-advokacii/filosofie-ai-v-advokacii-en.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2026/filosofie-ai-v-advokacii/filosofie-ai-v-advokacii-en</loc>
     <lastmod>2026-03-12</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/filosofie-ai-v-advokacii/filosofie-ai-v-advokacii.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/filosofie-ai-v-advokacii/filosofie-ai-v-advokacii-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/filosofie-ai-v-advokacii/filosofie-ai-v-advokacii" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/filosofie-ai-v-advokacii/filosofie-ai-v-advokacii-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2026/networking-pod-palavou-4-rustove-mysleni/networking-pod-palavou-4-rustove-mysleni.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2026/networking-pod-palavou-4-rustove-mysleni/networking-pod-palavou-4-rustove-mysleni</loc>
     <lastmod>2026-02-17</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/networking-pod-palavou-4-rustove-mysleni/networking-pod-palavou-4-rustove-mysleni.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/networking-pod-palavou-4-rustove-mysleni/networking-pod-palavou-4-rustove-mysleni-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/networking-pod-palavou-4-rustove-mysleni/networking-pod-palavou-4-rustove-mysleni" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/networking-pod-palavou-4-rustove-mysleni/networking-pod-palavou-4-rustove-mysleni-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2026/networking-pod-palavou-4-rustove-mysleni/networking-pod-palavou-4-rustove-mysleni-en.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2026/networking-pod-palavou-4-rustove-mysleni/networking-pod-palavou-4-rustove-mysleni-en</loc>
     <lastmod>2026-02-17</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/networking-pod-palavou-4-rustove-mysleni/networking-pod-palavou-4-rustove-mysleni.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/networking-pod-palavou-4-rustove-mysleni/networking-pod-palavou-4-rustove-mysleni-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/networking-pod-palavou-4-rustove-mysleni/networking-pod-palavou-4-rustove-mysleni" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/networking-pod-palavou-4-rustove-mysleni/networking-pod-palavou-4-rustove-mysleni-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2026/bforb-setkani-v-tisnove/bforb-setkani-v-tisnove.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2026/bforb-setkani-v-tisnove/bforb-setkani-v-tisnove</loc>
     <lastmod>2026-02-05</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/bforb-setkani-v-tisnove/bforb-setkani-v-tisnove.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/bforb-setkani-v-tisnove/bforb-setkani-v-tisnove-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/bforb-setkani-v-tisnove/bforb-setkani-v-tisnove" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/bforb-setkani-v-tisnove/bforb-setkani-v-tisnove-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2026/bforb-setkani-v-tisnove/bforb-setkani-v-tisnove-en.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2026/bforb-setkani-v-tisnove/bforb-setkani-v-tisnove-en</loc>
     <lastmod>2026-02-05</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/bforb-setkani-v-tisnove/bforb-setkani-v-tisnove.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/bforb-setkani-v-tisnove/bforb-setkani-v-tisnove-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/bforb-setkani-v-tisnove/bforb-setkani-v-tisnove" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/bforb-setkani-v-tisnove/bforb-setkani-v-tisnove-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2026/networking-pod-palavou-3-podnikani-napric-generacemi/networking-pod-palavou-3-podnikani-napric-generacemi.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2026/networking-pod-palavou-3-podnikani-napric-generacemi/networking-pod-palavou-3-podnikani-napric-generacemi</loc>
     <lastmod>2026-02-03</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/networking-pod-palavou-3-podnikani-napric-generacemi/networking-pod-palavou-3-podnikani-napric-generacemi.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/networking-pod-palavou-3-podnikani-napric-generacemi/networking-pod-palavou-3-podnikani-napric-generacemi-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/networking-pod-palavou-3-podnikani-napric-generacemi/networking-pod-palavou-3-podnikani-napric-generacemi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/networking-pod-palavou-3-podnikani-napric-generacemi/networking-pod-palavou-3-podnikani-napric-generacemi-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2026/networking-pod-palavou-3-podnikani-napric-generacemi/networking-pod-palavou-3-podnikani-napric-generacemi-en.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2026/networking-pod-palavou-3-podnikani-napric-generacemi/networking-pod-palavou-3-podnikani-napric-generacemi-en</loc>
     <lastmod>2026-02-03</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/networking-pod-palavou-3-podnikani-napric-generacemi/networking-pod-palavou-3-podnikani-napric-generacemi.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/networking-pod-palavou-3-podnikani-napric-generacemi/networking-pod-palavou-3-podnikani-napric-generacemi-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/networking-pod-palavou-3-podnikani-napric-generacemi/networking-pod-palavou-3-podnikani-napric-generacemi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/networking-pod-palavou-3-podnikani-napric-generacemi/networking-pod-palavou-3-podnikani-napric-generacemi-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2026/reportaz-workshop-leden-2026/reportaz-workshop-leden-2026.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2026/reportaz-workshop-leden-2026/reportaz-workshop-leden-2026</loc>
     <lastmod>2026-01-16</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/reportaz-workshop-leden-2026/reportaz-workshop-leden-2026.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/reportaz-workshop-leden-2026/reportaz-workshop-leden-2026.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/reportaz-workshop-leden-2026/reportaz-workshop-leden-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/reportaz-workshop-leden-2026/reportaz-workshop-leden-2026" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2026/reportaz-workshop-leden-2026/reportaz-workshop-leden-2026.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2026/reportaz-workshop-leden-2026/reportaz-workshop-leden-2026</loc>
     <lastmod>2026-01-16</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/reportaz-workshop-leden-2026/reportaz-workshop-leden-2026.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/reportaz-workshop-leden-2026/reportaz-workshop-leden-2026.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/reportaz-workshop-leden-2026/reportaz-workshop-leden-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/reportaz-workshop-leden-2026/reportaz-workshop-leden-2026" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2026/ai-act-pro-zaneprazdnene/ai-act-pro-zaneprazdnene.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2026/ai-act-pro-zaneprazdnene/ai-act-pro-zaneprazdnene</loc>
     <lastmod>2026-01-15</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/ai-act-pro-zaneprazdnene/ai-act-pro-zaneprazdnene.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/ai-act-pro-zaneprazdnene/ai-act-pro-zaneprazdnene-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/ai-act-pro-zaneprazdnene/ai-act-pro-zaneprazdnene" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/ai-act-pro-zaneprazdnene/ai-act-pro-zaneprazdnene-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2026/ai-act-pro-zaneprazdnene/ai-act-pro-zaneprazdnene-en.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2026/ai-act-pro-zaneprazdnene/ai-act-pro-zaneprazdnene-en</loc>
     <lastmod>2026-01-15</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/ai-act-pro-zaneprazdnene/ai-act-pro-zaneprazdnene.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/ai-act-pro-zaneprazdnene/ai-act-pro-zaneprazdnene-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2026/ai-act-pro-zaneprazdnene/ai-act-pro-zaneprazdnene" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2026/ai-act-pro-zaneprazdnene/ai-act-pro-zaneprazdnene-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/slovnik-pojmu-ai-act/slovnik-pojmu-ai-act.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/slovnik-pojmu-ai-act/slovnik-pojmu-ai-act</loc>
     <lastmod>2025-12-09</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/slovnik-pojmu-ai-act/slovnik-pojmu-ai-act.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/slovnik-pojmu-ai-act/slovnik-pojmu-ai-act-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/slovnik-pojmu-ai-act/slovnik-pojmu-ai-act" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/slovnik-pojmu-ai-act/slovnik-pojmu-ai-act-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/slovnik-pojmu-ai-act/slovnik-pojmu-ai-act-en.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/slovnik-pojmu-ai-act/slovnik-pojmu-ai-act-en</loc>
     <lastmod>2025-12-09</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/slovnik-pojmu-ai-act/slovnik-pojmu-ai-act.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/slovnik-pojmu-ai-act/slovnik-pojmu-ai-act-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/slovnik-pojmu-ai-act/slovnik-pojmu-ai-act" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/slovnik-pojmu-ai-act/slovnik-pojmu-ai-act-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/reportaz-workshop-listopad-2025/reportaz-workshop-listopad-2025.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/reportaz-workshop-listopad-2025/reportaz-workshop-listopad-2025</loc>
     <lastmod>2025-11-21</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/reportaz-workshop-listopad-2025/reportaz-workshop-listopad-2025.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/reportaz-workshop-listopad-2025/reportaz-workshop-listopad-2025.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/reportaz-workshop-listopad-2025/reportaz-workshop-listopad-2025" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/reportaz-workshop-listopad-2025/reportaz-workshop-listopad-2025" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/reportaz-workshop-listopad-2025/reportaz-workshop-listopad-2025.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/reportaz-workshop-listopad-2025/reportaz-workshop-listopad-2025</loc>
     <lastmod>2025-11-21</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/reportaz-workshop-listopad-2025/reportaz-workshop-listopad-2025.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/reportaz-workshop-listopad-2025/reportaz-workshop-listopad-2025.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/reportaz-workshop-listopad-2025/reportaz-workshop-listopad-2025" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/reportaz-workshop-listopad-2025/reportaz-workshop-listopad-2025" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/bforb-listopad-2025/bforb-listopad-2025.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/bforb-listopad-2025/bforb-listopad-2025</loc>
     <lastmod>2025-11-07</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/bforb-listopad-2025/bforb-listopad-2025.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/bforb-listopad-2025/bforb-listopad-2025-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/bforb-listopad-2025/bforb-listopad-2025" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/bforb-listopad-2025/bforb-listopad-2025-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/bforb-listopad-2025/bforb-listopad-2025-en.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/bforb-listopad-2025/bforb-listopad-2025-en</loc>
     <lastmod>2025-11-07</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/bforb-listopad-2025/bforb-listopad-2025.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/bforb-listopad-2025/bforb-listopad-2025-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/bforb-listopad-2025/bforb-listopad-2025" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/bforb-listopad-2025/bforb-listopad-2025-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/podnikavci-kurim-rijen/podnikavci-kurim-rijen.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/podnikavci-kurim-rijen/podnikavci-kurim-rijen</loc>
     <lastmod>2025-10-17</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/podnikavci-kurim-rijen/podnikavci-kurim-rijen.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/podnikavci-kurim-rijen/podnikavci-kurim-rijen-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/podnikavci-kurim-rijen/podnikavci-kurim-rijen" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/podnikavci-kurim-rijen/podnikavci-kurim-rijen-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/podnikavci-kurim-rijen/podnikavci-kurim-rijen-en.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/podnikavci-kurim-rijen/podnikavci-kurim-rijen-en</loc>
     <lastmod>2025-10-17</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/podnikavci-kurim-rijen/podnikavci-kurim-rijen.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/podnikavci-kurim-rijen/podnikavci-kurim-rijen-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/podnikavci-kurim-rijen/podnikavci-kurim-rijen" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/podnikavci-kurim-rijen/podnikavci-kurim-rijen-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/reportaz-workshop-rijen-2025/reportaz-workshop-rijen-2025.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/reportaz-workshop-rijen-2025/reportaz-workshop-rijen-2025</loc>
     <lastmod>2025-10-24</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/reportaz-workshop-rijen-2025/reportaz-workshop-rijen-2025.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/reportaz-workshop-rijen-2025/reportaz-workshop-rijen-2025.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/reportaz-workshop-rijen-2025/reportaz-workshop-rijen-2025" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/reportaz-workshop-rijen-2025/reportaz-workshop-rijen-2025" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/reportaz-workshop-rijen-2025/reportaz-workshop-rijen-2025.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/reportaz-workshop-rijen-2025/reportaz-workshop-rijen-2025</loc>
     <lastmod>2025-10-24</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/reportaz-workshop-rijen-2025/reportaz-workshop-rijen-2025.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/reportaz-workshop-rijen-2025/reportaz-workshop-rijen-2025.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/reportaz-workshop-rijen-2025/reportaz-workshop-rijen-2025" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/reportaz-workshop-rijen-2025/reportaz-workshop-rijen-2025" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/tyden-inovaci-2025/tyden-inovaci-2025.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/tyden-inovaci-2025/tyden-inovaci-2025</loc>
     <lastmod>2025-10-15</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/tyden-inovaci-2025/tyden-inovaci-2025.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/tyden-inovaci-2025/tyden-inovaci-2025-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/tyden-inovaci-2025/tyden-inovaci-2025" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/tyden-inovaci-2025/tyden-inovaci-2025-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/tyden-inovaci-2025/tyden-inovaci-2025-en.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/tyden-inovaci-2025/tyden-inovaci-2025-en</loc>
     <lastmod>2025-10-15</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/tyden-inovaci-2025/tyden-inovaci-2025.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/tyden-inovaci-2025/tyden-inovaci-2025-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/tyden-inovaci-2025/tyden-inovaci-2025" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/tyden-inovaci-2025/tyden-inovaci-2025-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/networking-palava-14/networking-palava-14.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/networking-palava-14/networking-palava-14</loc>
     <lastmod>2025-10-08</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/networking-palava-14/networking-palava-14.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/networking-palava-14/networking-palava-14-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/networking-palava-14/networking-palava-14" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/networking-palava-14/networking-palava-14-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/networking-palava-14/networking-palava-14-en.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/networking-palava-14/networking-palava-14-en</loc>
     <lastmod>2025-10-08</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/networking-palava-14/networking-palava-14.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/networking-palava-14/networking-palava-14-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/networking-palava-14/networking-palava-14" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/networking-palava-14/networking-palava-14-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/novela-hlaseni-zamestnancu-2025/hlaseni-zamestnancu-2025.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/novela-hlaseni-zamestnancu-2025/hlaseni-zamestnancu-2025</loc>
     <lastmod>2025-10-06</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/novela-hlaseni-zamestnancu-2025/hlaseni-zamestnancu-2025.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/novela-hlaseni-zamestnancu-2025/novela-hlaseni-zamestnancu-2025-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/novela-hlaseni-zamestnancu-2025/hlaseni-zamestnancu-2025" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/novela-hlaseni-zamestnancu-2025/novela-hlaseni-zamestnancu-2025-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/novela-hlaseni-zamestnancu-2025/novela-hlaseni-zamestnancu-2025-en.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/novela-hlaseni-zamestnancu-2025/novela-hlaseni-zamestnancu-2025-en</loc>
     <lastmod>2025-10-06</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/novela-hlaseni-zamestnancu-2025/hlaseni-zamestnancu-2025.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/novela-hlaseni-zamestnancu-2025/novela-hlaseni-zamestnancu-2025-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/novela-hlaseni-zamestnancu-2025/hlaseni-zamestnancu-2025" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/novela-hlaseni-zamestnancu-2025/novela-hlaseni-zamestnancu-2025-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/reportaz-bforb-tisnov-rijen-2025/reportaz-bforb-tisnov-rijen-2025.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/reportaz-bforb-tisnov-rijen-2025/reportaz-bforb-tisnov-rijen-2025</loc>
     <lastmod>2025-10-03</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/reportaz-bforb-tisnov-rijen-2025/reportaz-bforb-tisnov-rijen-2025.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/reportaz-bforb-tisnov-rijen-2025/reportaz-bforb-tisnov-rijen-2025-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/reportaz-bforb-tisnov-rijen-2025/reportaz-bforb-tisnov-rijen-2025" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/reportaz-bforb-tisnov-rijen-2025/reportaz-bforb-tisnov-rijen-2025-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/reportaz-bforb-tisnov-rijen-2025/reportaz-bforb-tisnov-rijen-2025-en.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/reportaz-bforb-tisnov-rijen-2025/reportaz-bforb-tisnov-rijen-2025-en</loc>
     <lastmod>2025-10-03</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/reportaz-bforb-tisnov-rijen-2025/reportaz-bforb-tisnov-rijen-2025.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/reportaz-bforb-tisnov-rijen-2025/reportaz-bforb-tisnov-rijen-2025-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/reportaz-bforb-tisnov-rijen-2025/reportaz-bforb-tisnov-rijen-2025" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/reportaz-bforb-tisnov-rijen-2025/reportaz-bforb-tisnov-rijen-2025-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/prevod-podilu-sro-nz/prevod-podilu-sro-nz.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/prevod-podilu-sro-nz/prevod-podilu-sro-nz</loc>
     <lastmod>2025-10-01</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/prevod-podilu-sro-nz/prevod-podilu-sro-nz.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/prevod-podilu-sro-nz/prevod-podilu-sro-nz-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/prevod-podilu-sro-nz/prevod-podilu-sro-nz" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/prevod-podilu-sro-nz/prevod-podilu-sro-nz-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/prevod-podilu-sro-nz/prevod-podilu-sro-nz-en.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/prevod-podilu-sro-nz/prevod-podilu-sro-nz-en</loc>
     <lastmod>2025-10-01</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/prevod-podilu-sro-nz/prevod-podilu-sro-nz.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/prevod-podilu-sro-nz/prevod-podilu-sro-nz-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/prevod-podilu-sro-nz/prevod-podilu-sro-nz" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/prevod-podilu-sro-nz/prevod-podilu-sro-nz-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/ai-agenti-nova-era-byznysu/ai-agenti-nova-era-byznysu.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/ai-agenti-nova-era-byznysu/ai-agenti-nova-era-byznysu</loc>
     <lastmod>2025-09-25</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/ai-agenti-nova-era-byznysu/ai-agenti-nova-era-byznysu.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/ai-agenti-nova-era-byznysu/ai-agents-new-business-era.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/ai-agenti-nova-era-byznysu/ai-agenti-nova-era-byznysu" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/ai-agenti-nova-era-byznysu/ai-agents-new-business-era" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/ai-agenti-nova-era-byznysu/ai-agents-new-business-era.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/ai-agenti-nova-era-byznysu/ai-agents-new-business-era</loc>
     <lastmod>2025-09-25</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/ai-agenti-nova-era-byznysu/ai-agenti-nova-era-byznysu.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/ai-agenti-nova-era-byznysu/ai-agents-new-business-era.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/ai-agenti-nova-era-byznysu/ai-agenti-nova-era-byznysu" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/ai-agenti-nova-era-byznysu/ai-agents-new-business-era" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/reportaz-workshop-zari-2025/reportaz-workshop-zari-2025.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/reportaz-workshop-zari-2025/reportaz-workshop-zari-2025</loc>
     <lastmod>2025-09-20</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/reportaz-workshop-zari-2025/reportaz-workshop-zari-2025.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/reportaz-workshop-zari-2025/reportaz-workshop-zari-2025-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/reportaz-workshop-zari-2025/reportaz-workshop-zari-2025" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/reportaz-workshop-zari-2025/reportaz-workshop-zari-2025-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/reportaz-workshop-zari-2025/reportaz-workshop-zari-2025-en.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/reportaz-workshop-zari-2025/reportaz-workshop-zari-2025-en</loc>
     <lastmod>2025-09-20</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/reportaz-workshop-zari-2025/reportaz-workshop-zari-2025.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/reportaz-workshop-zari-2025/reportaz-workshop-zari-2025-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/reportaz-workshop-zari-2025/reportaz-workshop-zari-2025" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/reportaz-workshop-zari-2025/reportaz-workshop-zari-2025-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/advokati-a-ai/advokati-a-ai.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/advokati-a-ai/advokati-a-ai</loc>
     <lastmod>2025-09-15</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/advokati-a-ai/advokati-a-ai.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/advokati-a-ai/advokati-a-ai-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/advokati-a-ai/advokati-a-ai" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/advokati-a-ai/advokati-a-ai-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/advokati-a-ai/advokati-a-ai-en.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/advokati-a-ai/advokati-a-ai-en</loc>
     <lastmod>2025-09-15</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/advokati-a-ai/advokati-a-ai.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/advokati-a-ai/advokati-a-ai-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/advokati-a-ai/advokati-a-ai" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/advokati-a-ai/advokati-a-ai-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/firemni-kultura-alveno-reportaz/firemni-kultura-alveno-reportaz.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/firemni-kultura-alveno-reportaz/firemni-kultura-alveno-reportaz</loc>
     <lastmod>2025-09-12</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/firemni-kultura-alveno-reportaz/firemni-kultura-alveno-reportaz.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/firemni-kultura-alveno-reportaz/firemni-kultura-alveno-reportaz-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/firemni-kultura-alveno-reportaz/firemni-kultura-alveno-reportaz" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/firemni-kultura-alveno-reportaz/firemni-kultura-alveno-reportaz-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/firemni-kultura-alveno-reportaz/firemni-kultura-alveno-reportaz-en.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/firemni-kultura-alveno-reportaz/firemni-kultura-alveno-reportaz-en</loc>
     <lastmod>2025-09-12</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/firemni-kultura-alveno-reportaz/firemni-kultura-alveno-reportaz.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/firemni-kultura-alveno-reportaz/firemni-kultura-alveno-reportaz-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/firemni-kultura-alveno-reportaz/firemni-kultura-alveno-reportaz" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/firemni-kultura-alveno-reportaz/firemni-kultura-alveno-reportaz-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/networking-palava-12/networking-palava-12.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/networking-palava-12/networking-palava-12</loc>
     <lastmod>2025-09-03</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/networking-palava-12/networking-palava-12.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/networking-palava-12/networking-palava-12-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/networking-palava-12/networking-palava-12" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/networking-palava-12/networking-palava-12-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/networking-palava-12/networking-palava-12-en.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/networking-palava-12/networking-palava-12-en</loc>
     <lastmod>2025-09-03</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/networking-palava-12/networking-palava-12.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/networking-palava-12/networking-palava-12-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/networking-palava-12/networking-palava-12" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/networking-palava-12/networking-palava-12-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/firemni-kultura-alveno/firemni-kultura-alveno.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/firemni-kultura-alveno/firemni-kultura-alveno</loc>
     <lastmod>2025-08-23</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/firemni-kultura-alveno/firemni-kultura-alveno.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/firemni-kultura-alveno/firemni-kultura-alveno-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/firemni-kultura-alveno/firemni-kultura-alveno" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/firemni-kultura-alveno/firemni-kultura-alveno-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/firemni-kultura-alveno/firemni-kultura-alveno-en.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/firemni-kultura-alveno/firemni-kultura-alveno-en</loc>
     <lastmod>2025-08-23</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/firemni-kultura-alveno/firemni-kultura-alveno.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/firemni-kultura-alveno/firemni-kultura-alveno-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/firemni-kultura-alveno/firemni-kultura-alveno" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/firemni-kultura-alveno/firemni-kultura-alveno-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/reportaz-workshop-srpen-2025/reportaz-workshop-srpen-2025.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/reportaz-workshop-srpen-2025/reportaz-workshop-srpen-2025</loc>
     <lastmod>2025-08-22</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/reportaz-workshop-srpen-2025/reportaz-workshop-srpen-2025.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/reportaz-workshop-srpen-2025/reportaz-workshop-srpen-2025-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/reportaz-workshop-srpen-2025/reportaz-workshop-srpen-2025" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/reportaz-workshop-srpen-2025/reportaz-workshop-srpen-2025-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/reportaz-workshop-srpen-2025/reportaz-workshop-srpen-2025-en.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/reportaz-workshop-srpen-2025/reportaz-workshop-srpen-2025-en</loc>
     <lastmod>2025-08-22</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/reportaz-workshop-srpen-2025/reportaz-workshop-srpen-2025.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/reportaz-workshop-srpen-2025/reportaz-workshop-srpen-2025-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/reportaz-workshop-srpen-2025/reportaz-workshop-srpen-2025" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/reportaz-workshop-srpen-2025/reportaz-workshop-srpen-2025-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/reportaz-workshop-cervenec-2025/reportaz-workshop-cervenec-2025.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/reportaz-workshop-cervenec-2025/reportaz-workshop-cervenec-2025</loc>
     <lastmod>2025-07-19</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/reportaz-workshop-cervenec-2025/reportaz-workshop-cervenec-2025.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/reportaz-workshop-cervenec-2025/reportaz-workshop-cervenec-2025-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/reportaz-workshop-cervenec-2025/reportaz-workshop-cervenec-2025" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/reportaz-workshop-cervenec-2025/reportaz-workshop-cervenec-2025-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/reportaz-workshop-cervenec-2025/reportaz-workshop-cervenec-2025-en.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/reportaz-workshop-cervenec-2025/reportaz-workshop-cervenec-2025-en</loc>
     <lastmod>2025-07-19</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/reportaz-workshop-cervenec-2025/reportaz-workshop-cervenec-2025.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/reportaz-workshop-cervenec-2025/reportaz-workshop-cervenec-2025-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/reportaz-workshop-cervenec-2025/reportaz-workshop-cervenec-2025" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/reportaz-workshop-cervenec-2025/reportaz-workshop-cervenec-2025-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/cs-tech-summit-2025/cs-tech-summit-2025.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/cs-tech-summit-2025/cs-tech-summit-2025</loc>
     <lastmod>2025-06-05</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/cs-tech-summit-2025/cs-tech-summit-2025.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/cs-tech-summit-2025/cs-tech-summit-2025-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/cs-tech-summit-2025/cs-tech-summit-2025" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/cs-tech-summit-2025/cs-tech-summit-2025-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/cs-tech-summit-2025/cs-tech-summit-2025-en.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/cs-tech-summit-2025/cs-tech-summit-2025-en</loc>
     <lastmod>2025-06-05</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/cs-tech-summit-2025/cs-tech-summit-2025.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/cs-tech-summit-2025/cs-tech-summit-2025-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/cs-tech-summit-2025/cs-tech-summit-2025" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/cs-tech-summit-2025/cs-tech-summit-2025-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/ai-v-byznysu/ai-v-byznysu-4-cesty.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/ai-v-byznysu/ai-v-byznysu-4-cesty</loc>
     <lastmod>2025-05-01</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/ai-v-byznysu/ai-v-byznysu-4-cesty.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/ai-v-byznysu/ai-v-byznysu-4-cesty-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/ai-v-byznysu/ai-v-byznysu-4-cesty" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/ai-v-byznysu/ai-v-byznysu-4-cesty-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/ai-v-byznysu/ai-v-byznysu-4-cesty-en.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/ai-v-byznysu/ai-v-byznysu-4-cesty-en</loc>
     <lastmod>2025-05-01</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/ai-v-byznysu/ai-v-byznysu-4-cesty.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/ai-v-byznysu/ai-v-byznysu-4-cesty-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/ai-v-byznysu/ai-v-byznysu-4-cesty" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/ai-v-byznysu/ai-v-byznysu-4-cesty-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/ai-act-byznys/ai-act-byznys.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/ai-act-byznys/ai-act-byznys</loc>
     <lastmod>2025-04-01</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/ai-act-byznys/ai-act-byznys.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/ai-act-byznys/ai-act-byznys-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/ai-act-byznys/ai-act-byznys" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/ai-act-byznys/ai-act-byznys-en" />
   </url>
   <url>
-    <loc>https://www.gabrielkozik.com/blog/2025/ai-act-byznys/ai-act-byznys-en.html</loc>
+    <loc>https://www.gabrielkozik.com/blog/2025/ai-act-byznys/ai-act-byznys-en</loc>
     <lastmod>2025-04-01</lastmod>
     <priority>0.70</priority>
-    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/ai-act-byznys/ai-act-byznys.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/ai-act-byznys/ai-act-byznys-en.html" />
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/blog/2025/ai-act-byznys/ai-act-byznys" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/blog/2025/ai-act-byznys/ai-act-byznys-en" />
   </url>
 </urlset>

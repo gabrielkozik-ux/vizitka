@@ -54,6 +54,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     });
 
+    let isFirstLoad = true;
+
     function displayPage(page, articles) {
         currentPage = page;
         const start = (page - 1) * articlesPerPage;
@@ -64,7 +66,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         renderPagination(articles.length, page);
 
         // Scroll to top of articles if not first load (optional, but good UX)
-        // articlesContainer.scrollIntoView({ behavior: 'smooth' });
+        if (!isFirstLoad) {
+            articlesContainer.scrollIntoView({ behavior: 'smooth' });
+        }
+        isFirstLoad = false;
     }
 
     function renderArticles(articles) {

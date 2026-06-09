@@ -47,11 +47,11 @@
 
                 <p>Imagine that your development company uses GitHub Copilot to write code for a client. Everything runs smoothly until a hidden bug appears after deploying to production. The client's e-shop crashes, and the damage goes into the millions.</p>
 
-                <p>Or another scenario: a financial advisor lets ChatGPT calculate a tax estimate, a decimal point shifts in the model, and the client makes a wrong decision based on that.</p>
+                <p>Or another scenario. A tax advisor lets ChatGPT calculate taxes, a decimal point shifts in the model, and the client sends a nonsense to the tax authority based on that in June.</p>
 
                 <p>Who pays the damages in such situations? Can you blame the technology, or transfer the liability to OpenAI or Microsoft?</p>
 
-                <p>In Czech law, the situation is relatively straightforward. Liability for damage caused by artificial intelligence is not yet regulated by any special law. Disputes are therefore resolved according to the general rules of the Civil Code and the specific contracts that the companies have concluded.</p>
+                <p>In Czech law, the situation is relatively straightforward. Liability for damage caused by artificial intelligence is not yet regulated by any special law. Disputes will therefore be resolved according to the general rules of the Civil Code and the content of specific contractual relationships.</p>
 
                 <h2>Why you can't put software code on trial</h2>
 
@@ -61,13 +61,13 @@
 
                 <h2>How the client contract looks at errors</h2>
 
-                <p>When you deliver broken code or a faulty spreadsheet, the relationship with the client is governed by contract and general civil law. Here you will run into several key areas.</p>
+                <p>When you deliver broken code or a faulty spreadsheet, the relationship with the client is governed by the contract and the Civil Code.</p>
 
                 <h3>Contractual liability for results</h3>
                 <p>Czech law stands on the principle of strict (objective) liability in contractual relationships (§ 2913 of the Civil Code). If you undertake to deliver a functional work and deliver it with a bug, you are liable for damages regardless of whether you caused the error. You can only discharge liability by referring to force majeure – i.e., an extraordinary, unpredictable, and insurmountable obstacle. The fact that the ChatGPT or Claude model happened to hallucinate is by definition not force majeure. It is an internal technological risk that you bear as a supplier.</p>
 
                 <h3>When an algorithm works for you</h3>
-                <p>For a better idea of how liability works, a loose analogy to the helper provision (§ 1935 of the Civil Code) serves well. It states that anyone who performs through another person is liable as if they performed themselves. Because AI is not a person but only a tool, this rule cannot be applied literally. The practical impact, however, is identical: if you use AI for your work, you warrant the result in the same way as if you assigned the task to a junior employee or an external subcontractor. The client does not care about the internal process of creation; they care about a flawless result.</p>
+                <p>For a better idea of how liability works, a loose analogy to the helper provision (§ 1935 of the Civil Code) serves well. This provision states that anyone who performs through another person is liable as if they performed themselves. Because AI is not a person but only a tool, this rule cannot be applied literally. The practical impact, however, is identical: if you use AI for your work, you warrant the result in the same way as if you assigned the task to a junior employee or an external subcontractor. The client does not care about the internal process of creation; they care about a flawless result.</p>
 
                 <h3>Risks of professional advice for reward</h3>
                 <p>If you act as professionals – for example, as tax advisors, analysts, developers, or designers – and provide advice or information for a reward, you are liable for its correctness (§ 2950 of the Civil Code). The law requires a professional standard or professional care from you. Blindly copying output from artificial intelligence without any human review is a clear breach of this care. If the output is not verified and causes damage, your liability is almost undeniable.</p>
@@ -77,6 +77,12 @@
                 <p>Now it might occur to you to transfer the liability to the creator of the AI system itself, i.e., to OpenAI, Microsoft, or Google. In the B2B sector, however, this is practically impossible.</p>
 
                 <p>All commercial licenses for large language models contain very strict limitation of liability clauses. Providers explicitly state that the tools are provided "as is" and do not warrant their correctness or accuracy. Any financial limits for potential compensation are also contractually capped at symbolic amounts – most often the amount of subscription fees paid for the last 12 months, or a fixed amount like $100. In business relations, these limitations are legal and fully respected by courts.</p>
+
+                <p style="text-align: center; margin: 25px 0;">
+                    <a href="https://openai.com/cs-CZ/policies/row-terms-of-use/" target="_blank" rel="noopener noreferrer">
+                        <img src="openai_tos_limitation.png" alt="Example of limitation of liability clause from OpenAI Terms of Use" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" loading="lazy">
+                    </a>
+                </p>
 
                 <h2>A nightmare called "shadow AI" in the workplace</h2>
 
@@ -100,7 +106,7 @@
 
                 <p>Liability for damage caused by AI is governed by the revised Product Liability Directive (EU) 2024/2853. It newly defines software and artificial intelligence systems as a "product". Manufacturers bear strict liability for damage to health, property, and loss of data. The original proposal for a specific AI Liability Directive was replaced by this directive and the AI Act regulation.</p>
 
-                <p>Since it is a directive, its transposition into the legal order of the Czech Republic will be necessary.</p>
+                <p>However, since it is a directive, its transposition into the legal order of the Czech Republic will be necessary.</p>
 
                 <p>According to the European directive, software will thus start to be classified as a "product", which will make it easier to enforce liability directly against its creators. In addition, the introduction of a rebuttable presumption of a causal link is expected. This will make it significantly easier for injured parties to prove errors in complex systems, where it is currently very difficult to prove exactly where the error occurred due to the complex technical nature.</p>
 
@@ -108,7 +114,15 @@
 
                 <p>Artificial intelligence is an excellent helper but a risky master. Legal liability for its outputs lies fully on the shoulders of those who use it for their business. If you want to prevent paying for algorithm errors, do not underestimate the setup of internal processes and the revision of client contracts.</p>
 
-                <a href="../../../blog-en" class="back-to-blog"> ← Back to overview of articles</a>
+                <h3 style="margin-top: 30px;">Sources and recommended reading:</h3>
+                <ul>
+                    <li>Act No. 89/2012 Coll., Civil Code (§ 1935, § 2913, § 2950)</li>
+                    <li>Act No. 262/2006 Coll., Labor Code (§ 250 et seq.)</li>
+                    <li>Proposal for a Directive of the European Parliament and of the Council on adapting non-contractual civil liability rules to artificial intelligence (AI Liability Directive)</li>
+                    <li>Artificial Intelligence Act (AI Act) – Regulation (EU) 2024/1689</li>
+                </ul>
+
+                <a href="../../../blog-en" class="back-to-blog" style="margin-top: 40px; display: inline-block;"> ← Back to overview of articles</a>
             </article>
         </div>
     </main>

@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const articlesPerPage = 9;
     let currentPage = 1;
     let currentFilteredArticles = [];
+    let isFirstLoad = true; // Declared at the top to avoid TDZ ReferenceError when displayPage runs
 
     // Translations
     const translations = {
@@ -27,8 +28,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         allArticles = data.filter(article => article[lang]);
         currentFilteredArticles = allArticles;
 
-        // Initial render
-        displayPage(1, currentFilteredArticles);
+        // Initial render (do not scroll)
+        displayPage(1, currentFilteredArticles, false);
 
     } catch (error) {
         console.error('Error loading articles:', error);
@@ -50,13 +51,12 @@ document.addEventListener('DOMContentLoaded', async () => {
             } else {
                 currentFilteredArticles = allArticles.filter(article => article.category === filterValue);
             }
-            displayPage(1, currentFilteredArticles);
+            // Do not scroll when switching filters as requested by user
+            displayPage(1, currentFilteredArticles, false);
         });
     });
 
-    let isFirstLoad = true;
-
-    function displayPage(page, articles) {
+    function displayPage(page, articles, shouldScroll = false) {
         currentPage = page;
         const start = (page - 1) * articlesPerPage;
         const end = start + articlesPerPage;
@@ -65,8 +65,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         renderArticles(paginatedArticles);
         renderPagination(articles.length, page);
 
-        // Scroll to top of articles if not first load (optional, but good UX)
-        if (!isFirstLoad) {
+        // Scroll to top of articles only if explicitly requested (e.g., pagination clicks)
+        if (!isFirstLoad && shouldScroll) {
             articlesContainer.scrollIntoView({ behavior: 'smooth' });
         }
         isFirstLoad = false;
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (page === 1) prevButton.classList.add('disabled');
         prevButton.addEventListener('click', (e) => {
             e.preventDefault();
-            if (page > 1) displayPage(page - 1, currentFilteredArticles);
+            if (page > 1) displayPage(page - 1, currentFilteredArticles, true);
         });
         paginationContainer.appendChild(prevButton);
 
@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (i === page) pageButton.classList.add('active');
             pageButton.addEventListener('click', (e) => {
                 e.preventDefault();
-                displayPage(i, currentFilteredArticles);
+                displayPage(i, currentFilteredArticles, true);
             });
             paginationContainer.appendChild(pageButton);
         }
@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (page === totalPages) nextButton.classList.add('disabled');
         nextButton.addEventListener('click', (e) => {
             e.preventDefault();
-            if (page < totalPages) displayPage(page + 1, currentFilteredArticles);
+            if (page < totalPages) displayPage(page + 1, currentFilteredArticles, true);
         });
         paginationContainer.appendChild(nextButton);
     }

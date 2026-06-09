@@ -1,5 +1,21 @@
 [
     {
+        "id": "odpovednost-za-chyby-ai",
+        "date": "2026-06-10",
+        "category": "expert",
+        "image": "blog/2026/odpovednost-za-chyby-ai/header.png",
+        "cs": {
+            "title": "Když AI udělá chybu, účet jde za vámi",
+            "excerpt": "Kdo nese právní odpovědnost za chyby, nefunkční kód nebo chybné kalkulace vytvořené umělou inteligencí? Analýza podle českého práva.",
+            "link": "blog/2026/odpovednost-za-chyby-ai/odpovednost-za-chyby-ai"
+        },
+        "en": {
+            "title": "When AI Makes a Mistake, the Bill Goes to You",
+            "excerpt": "Who bears legal liability for errors, broken code, or faulty calculations created by artificial intelligence? Analysis under Czech law.",
+            "link": "blog/2026/odpovednost-za-chyby-ai/odpovednost-za-chyby-ai-en"
+        }
+    },
+    {
         "id": "zakon-o-platformove-praci",
         "date": "2026-06-08",
         "category": "expert",

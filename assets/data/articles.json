@@ -1,5 +1,21 @@
 [
     {
+        "id": "jak-spravne-oznacovat-ai-obsah",
+        "date": "2026-06-17",
+        "category": "expert",
+        "image": "blog/2026/jak-spravne-oznacovat-ai-obsah/oznacovani-ai-obsahu.jpg",
+        "cs": {
+            "title": "Jak správně označovat AI generovaný obsah? Nový kodex Evropské komise",
+            "excerpt": "Evropská komise zveřejnila kodex správné praxe pro označování AI generovaného obsahu. Zjistěte, jak se mění pravidla a co hrozí za jejich nedodržení.",
+            "link": "blog/2026/jak-spravne-oznacovat-ai-obsah/jak-spravne-oznacovat-ai-obsah"
+        },
+        "en": {
+            "title": "How to Properly Label AI-Generated Content? The New EU Code of Practice",
+            "excerpt": "The European Commission published the final Code of Practice on labeling AI-generated content. Learn about the new recommendations and reputational risks.",
+            "link": "blog/2026/jak-spravne-oznacovat-ai-obsah/jak-spravne-oznacovat-ai-obsah-en"
+        }
+    },
+    {
         "id": "odpovednost-za-chyby-ai",
         "date": "2026-06-10",
         "category": "expert",

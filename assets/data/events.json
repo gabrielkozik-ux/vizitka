@@ -1,5 +1,75 @@
 [
   {
+    "date": "2026-07-02",
+    "time": "08:30 - 11:30",
+    "title": {
+      "cs": "Networking BforB Na Svratce (dříve BforB Tišnov)",
+      "en": "BforB Na Svratce Networking (formerly BforB Tišnov)",
+      "hu": "BforB Na Svratce Networking",
+      "fr": "Réseautage BforB Na Svratce"
+    },
+    "place": "Kavárna u Kina, Mlýnská 152, Tišnov",
+    "link": "https://www.facebook.com/profile.php?id=61561146905712",
+    "calendarLink": "",
+    "isSoldOut": false
+  },
+  {
+    "date": "2026-07-21",
+    "time": "09:00 - 11:30",
+    "title": {
+      "cs": "Networking Pod Pálavou",
+      "en": "Networking Pod Pálavou",
+      "hu": "Networking Pod Pálavou",
+      "fr": "Réseautage Pod Pálavou"
+    },
+    "place": "Krčma a hotel U Císařské cesty, Branišovice",
+    "link": "https://www.pod-palavou.cz/klubova-setkani",
+    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=Networking+Pod+P%C3%A1lavou&dates=20260721T070000Z/20260721T093000Z&details=V%C3%ADce+info%3A+https%3A%2F%2Fwww.pod-palavou.cz%2Fklubova-setkani&location=Kr%C4%8Dma+a+hotel+U+C%C3%ADsa%C5%99sk%C3%A9+cesty%2C+Brani%C5%A1ovice",
+    "isSoldOut": false
+  },
+  {
+    "date": "2026-07-21",
+    "time": "17:30 - 19:30",
+    "title": {
+      "cs": "Sraz podnikavců Tišnov",
+      "en": "Entrepreneurs Meeting Tišnov",
+      "hu": "Vállalkozók Találkozója Tišnov",
+      "fr": "Réunion des entrepreneurs Tišnov"
+    },
+    "place": "Kavárna U Kina, Mlýnská 152, Tišnov",
+    "link": "https://klubpodnikavcu.cz/srazy-podnikavcu",
+    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=Sraz+podnikavc%C5%AF+Ti%C5%A1nov&dates=20260721T153000Z/20260721T173000Z&details=V%C3%ADce+info%3A+https%3A%2F%2Fklubpodnikavcu.cz%2Fsrazy-podnikavcu&location=Kav%C3%A1rna+U+Kina%2C+Ml%C3%BDnsk%C3%A1+152%2C+Ti%C5%A1nov",
+    "isSoldOut": false
+  },
+  {
+    "date": "2026-08-18",
+    "time": "09:00 - 11:30",
+    "title": {
+      "cs": "Networking Pod Pálavou",
+      "en": "Networking Pod Pálavou",
+      "hu": "Networking Pod Pálavou",
+      "fr": "Réseautage Pod Pálavou"
+    },
+    "place": "Krčma a hotel U Císařské cesty, Branišovice",
+    "link": "https://www.pod-palavou.cz/klubova-setkani",
+    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=Networking+Pod+P%C3%A1lavou&dates=20260818T070000Z/20260818T093000Z&details=V%C3%ADce+info%3A+https%3A%2F%2Fwww.pod-palavou.cz%2Fklubova-setkani&location=Kr%C4%8Dma+a+hotel+U+C%C3%ADsa%C5%99sk%C3%A9+cesty%2C+Brani%C5%A1ovice",
+    "isSoldOut": false
+  },
+  {
+    "date": "2026-08-27",
+    "time": "17:00 - 20:00",
+    "title": {
+      "cs": "CCT mastermind v IUSTORIA: AI a právní rizika podnikání",
+      "en": "CCT Mastermind at IUSTORIA: AI and Legal Risks in Business",
+      "hu": "CCT Mastermind az IUSTORIA-nál",
+      "fr": "CCT Mastermind chez IUSTORIA"
+    },
+    "place": "IUSTORIA, advokátní kancelář, Slovákova 279/11, Brno",
+    "link": "https://cct.cz/",
+    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=CCT+mastermind+v+IUSTORIA%3A+AI+a+pr%C3%A1vn%C3%AD+rizika+podnik%C3%A1n%C3%AD&dates=20260827T150000Z/20260827T180000Z&details=P%C5%99edn%C3%A1%C5%A1ka+Gabriela+Ko%C5%BE%C3%ADka%3A+AI+a+pr%C3%A1vn%C3%AD+rizika+podnik%C3%A1n%C3%AD+%E2%80%94+%C5%A1est+m%C3%BDt%C5%AF%2C+kter%C3%A9+stoj%C3%AD+pen%C3%ADze.&location=IUSTORIA%2C+advok%C3%A1tn%C3%AD+kancel%C3%A1%C5%99%2C+Slov%C3%A1kova+279%2F11%2C+Brno",
+    "isSoldOut": false
+  },
+  {
     "date": "2026-04-15",
     "time": "17:30 - 19:30",
     "title": {

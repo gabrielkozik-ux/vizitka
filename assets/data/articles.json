@@ -16,6 +16,54 @@
         }
     },
     {
+        "id": "podcast-dohody-pres-whatsapp",
+        "date": "2026-07-14",
+        "category": "podcast",
+        "image": "https://img.youtube.com/vi/wGoZnCDUu8Q/maxresdefault.jpg",
+        "cs": {
+            "title": "Podání ruky a dohody přes WhatsApp vás mohou stát statisíce (Podcast)",
+            "excerpt": "Ústní dohoda nebo pár zpráv na WhatsAppu může být právně závazná smlouva — a taky důkazní noční můra. Nová epizoda podcastu advokátní kanceláře IUSTORIA.",
+            "link": "blog/2026/podcast-dohody-pres-whatsapp/podcast-dohody-pres-whatsapp"
+        },
+        "en": {
+            "title": "A Handshake or a WhatsApp Deal Can Cost You Hundreds of Thousands (Podcast)",
+            "excerpt": "A verbal agreement or a few WhatsApp messages can be a legally binding contract — and an evidentiary nightmare. A new IUSTORIA podcast episode (in Czech).",
+            "link": "blog/2026/podcast-dohody-pres-whatsapp/podcast-dohody-pres-whatsapp-en"
+        }
+    },
+    {
+        "id": "podcast-lzete-svemu-advokatovi",
+        "date": "2026-07-14",
+        "category": "podcast",
+        "image": "https://img.youtube.com/vi/E_Qko2kVfa8/maxresdefault.jpg",
+        "cs": {
+            "title": "Lžete svému advokátovi? Proč vás u soudu nezachrání ani ten nejlepší právník (Podcast)",
+            "excerpt": "Advokát je vázán mlčenlivostí — přesto mu klienti zamlčují klíčová fakta. Proč to u soudu vždy vyplave a jak to ničí procesní strategii. Podcast IUSTORIA.",
+            "link": "blog/2026/podcast-lzete-svemu-advokatovi/podcast-lzete-svemu-advokatovi"
+        },
+        "en": {
+            "title": "Lying to Your Lawyer? Why Even the Best Attorney Can't Save You in Court (Podcast)",
+            "excerpt": "Attorneys are bound by confidentiality — yet clients still withhold key facts. Why it always surfaces in court and how it destroys your strategy. IUSTORIA podcast (in Czech).",
+            "link": "blog/2026/podcast-lzete-svemu-advokatovi/podcast-lzete-svemu-advokatovi-en"
+        }
+    },
+    {
+        "id": "podcast-pravni-rizika-poradci-remeslnici-eshopy",
+        "date": "2026-07-14",
+        "category": "podcast",
+        "image": "https://img.youtube.com/vi/SgfZSYZlxUk/maxresdefault.jpg",
+        "cs": {
+            "title": "Právní rizika pro poradce, řemeslníky a e-shopy: Jak nastavit smlouvy a reklamace (Podcast)",
+            "excerpt": "Tři typické profese, tři sady právních rizik. Jak si poradce, řemeslník a e-shop správně nastaví smlouvy, obchodní podmínky a reklamace. Podcast IUSTORIA.",
+            "link": "blog/2026/podcast-pravni-rizika-poradci-remeslnici-eshopy/podcast-pravni-rizika-poradci-remeslnici-eshopy"
+        },
+        "en": {
+            "title": "Legal Risks for Consultants, Tradesmen and E-shops: Contracts and Complaints Done Right (Podcast)",
+            "excerpt": "Three typical professions, three sets of legal risks. How consultants, tradesmen and e-shops should set up contracts, terms and complaints. IUSTORIA podcast (in Czech).",
+            "link": "blog/2026/podcast-pravni-rizika-poradci-remeslnici-eshopy/podcast-pravni-rizika-poradci-remeslnici-eshopy-en"
+        }
+    },
+    {
         "id": "jak-spravne-oznacovat-ai-obsah",
         "date": "2026-06-17",
         "category": "expert",
@@ -66,7 +114,7 @@
     {
         "id": "jak-bezpecne-ovladnout-ai-v-podnikani",
         "date": "2026-06-03",
-        "category": "expert",
+        "category": "podcast",
         "image": "https://img.youtube.com/vi/8eWPsQ4rbao/maxresdefault.jpg",
         "cs": {
             "title": "Jak bezpečně ovládnout AI v podnikání (Podcast)",

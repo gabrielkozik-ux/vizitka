@@ -1,3 +1,13 @@
+# --- Domenove redirecty: vse na kanonicke https://www.gabrielkozik.cz ---
+https://gabrielkozik.com/* https://www.gabrielkozik.cz/:splat 301
+https://www.gabrielkozik.com/* https://www.gabrielkozik.cz/:splat 301
+https://gabrielkozik.cz/* https://www.gabrielkozik.cz/:splat 301
+
+# --- Zrusene jazykove mutace ---
+/index-hu /index-en 301
+/index-fr /index-en 301
+
+# --- Reorganizace blogu (puvodni pravidla) ---
 /blog/slovnik-pojmu-ai-act/* /blog/2025/slovnik-pojmu-ai-act/:splat 301
 /blog/reportaz-workshop-listopad-2025/* /blog/2025/reportaz-workshop-listopad-2025/:splat 301
 /blog/bforb-listopad-2025/* /blog/2025/bforb-listopad-2025/:splat 301
@@ -28,3 +38,6 @@
 /blog/networking-pod-palavou-3-podnikani-napric-generacemi/* /blog/2026/networking-pod-palavou-3-podnikani-napric-generacemi/:splat 301
 /blog/reportaz-workshop-leden-2026/* /blog/2026/reportaz-workshop-leden-2026/:splat 301
 /blog/ai-act-pro-zaneprazdnene/* /blog/2026/ai-act-pro-zaneprazdnene/:splat 301
+
+# Oprava historickeho EN slugu
+/blog/2025/ai-agenti-nova-era-byznysu/ai-agents-new-business-era /blog/2025/ai-agenti-nova-era-byznysu/ai-agenti-nova-era-byznysu-en 301

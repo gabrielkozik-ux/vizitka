@@ -19,7 +19,7 @@
         "id": "odpovednost-za-chyby-ai",
         "date": "2026-06-10",
         "category": "expert",
-        "image": "blog/2026/odpovednost-za-chyby-ai/header.png",
+        "image": "blog/2026/odpovednost-za-chyby-ai/header.jpg",
         "cs": {
             "title": "Když AI udělá chybu, účet jde za vámi",
             "excerpt": "Kdo nese právní odpovědnost za chyby, nefunkční kód nebo chybné kalkulace vytvořené umělou inteligencí? Analýza podle českého práva.",
@@ -67,7 +67,7 @@
         "id": "jak-si-jednoduse-personifikovat-gemini",
         "date": "2026-05-22",
         "category": "expert",
-        "image": "blog/2026/jak-si-jednoduse-personifikovat-gemini/header.png",
+        "image": "blog/2026/jak-si-jednoduse-personifikovat-gemini/header.jpg",
         "cs": {
             "title": "Jak si jednoduše personifikovat Gemini?",
             "excerpt": "Velký průvodce možnostmi přizpůsobení a personifikace Google Gemini. Jak nastavit paměť, propojit aplikace přes rozšíření a importovat data z ChatGPT či Claude.",
@@ -147,7 +147,7 @@
         "id": "reportaz-workshop-leden-2026",
         "date": "2026-01-16",
         "category": "report",
-        "image": "assets/images/blog/2026/reportaz-workshop-leden-2026/workshop-leden.png",
+        "image": "assets/images/blog/2026/reportaz-workshop-leden-2026/workshop-leden.jpg",
         "cs": {
             "title": "Marketing, weby a ďáblův advokát: Reportáž z lednového AI workshopu",
             "excerpt": "Ohlédnutí za lednovým workshopem zaměřeným na AI marketing, tvorbu webových vizitek přes GitHub a Vercel, generování hudby v Suno a techniku ďáblova advokáta pro objektivní hodnocení podnikatelských nápadů.",
@@ -196,7 +196,7 @@
         "id": "reportaz-workshop-listopad-2025",
         "date": "2025-11-21",
         "category": "report",
-        "image": "assets/images/blog/2025/reportaz-workshop-listopad-2025/workshop-listopad.png",
+        "image": "assets/images/blog/2025/reportaz-workshop-listopad-2025/workshop-listopad.jpg",
         "cs": {
             "title": "Bezpečnost, prompt engineering a granty: Reportáž z listopadového AI workshopu",
             "excerpt": "Ohlédnutí za listopadovým workshopem zaměřeným na kybernetickou bezpečnost AI, pokročilý prompt engineering s tvorbou super-asistenta a případovou studii dotačního průzkumu pro neziskovou organizaci.",
@@ -244,7 +244,7 @@
         "id": "reportaz-workshop-rijen-2025",
         "date": "2025-10-24",
         "category": "report",
-        "image": "assets/images/blog/2025/reportaz-workshop-rijen-2025/workshop-rijen.png",
+        "image": "assets/images/blog/2025/reportaz-workshop-rijen-2025/workshop-rijen.jpg",
         "cs": {
             "title": "Automatizace, NotebookLM a vlastní AI asistenti: Reportáž z říjnového workshopu",
             "excerpt": "Ohlédnutí za říjnovým workshopem zaměřeným na automatizaci administrativy v Google Workspace, nástroj NotebookLM pro bezpečnou práci s firemními daty, tvorbu vlastních AI asistentů Gems a generování videí z fotografií.",
@@ -292,7 +292,7 @@
         "id": "novela-hlaseni-zamestnancu-2025",
         "date": "2025-10-06",
         "category": "expert",
-        "image": "assets/images/blog/2025/novela-hlaseni-zamestnancu-2025/hlaseni-zamestnancu-2025.png",
+        "image": "assets/images/blog/2025/novela-hlaseni-zamestnancu-2025/hlaseni-zamestnancu-2025.jpg",
         "cs": {
             "title": "Konec tolerance: Novela zákona zpřísňuje zaměstnávání cizinců od 1. 10. 2025",
             "excerpt": "Dosavadní benevolence v hlášení cizinců končí. Novela zákona o zaměstnanosti ruší možnost zpětného hlášení a zavádí fikci „nelegální práce“ s likvidačními pokutami.",
@@ -324,7 +324,7 @@
         "id": "prevod-podilu-sro-nz",
         "date": "2025-10-01",
         "category": "expert",
-        "image": "assets/images/blog/2025/prevod-podilu-sro-nz/nz-podil.png",
+        "image": "assets/images/blog/2025/prevod-podilu-sro-nz/nz-podil.jpg",
         "cs": {
             "title": "Převod podílu v s.r.o. a notářský zápis: Mýty a fakta",
             "excerpt": "Analýza, zda je pro souhlas valné hromady s převodem podílu nutný notářský zápis. Klíčová soudní rozhodnutí a praktické dopady pro s.r.o.",
@@ -350,7 +350,7 @@
         "en": {
             "title": "AI Agents: A Threat, or the Biggest Business Opportunity Since the Internet?",
             "excerpt": "An analysis of the rise of AI agents. Find out how they are transforming the job market, what opportunities they bring, and how to defend against critical security risks like Prompt Injection.",
-            "link": "blog/2025/ai-agenti-nova-era-byznysu/ai-agents-new-business-era"
+            "link": "blog/2025/ai-agenti-nova-era-byznysu/ai-agenti-nova-era-byznysu-en"
         }
     },
     {

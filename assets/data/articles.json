@@ -1,5 +1,21 @@
 [
     {
+        "id": "ai-pred-soudem",
+        "date": "2026-07-15",
+        "category": "expert",
+        "image": "blog/2026/ai-pred-soudem/header.jpg",
+        "cs": {
+            "title": "AI před soudem: Pět rozhodnutí, která by měl znát každý majitel firmy",
+            "excerpt": "Chatbot slíbil zákazníkovi slevu, AI vymyslela judikaturu, firma přišla o ochranu svých vizuálů. Přehled skutečné rozhodovací praxe v oblasti AI a poučení pro české firmy.",
+            "link": "blog/2026/ai-pred-soudem/ai-pred-soudem"
+        },
+        "en": {
+            "title": "AI in Court: Five Rulings Every Business Owner Should Know",
+            "excerpt": "A chatbot promised a discount, AI invented case law, a company lost protection of its visuals. A review of real AI rulings and the lessons for businesses.",
+            "link": "blog/2026/ai-pred-soudem/ai-pred-soudem-en"
+        }
+    },
+    {
         "id": "jak-spravne-oznacovat-ai-obsah",
         "date": "2026-06-17",
         "category": "expert",

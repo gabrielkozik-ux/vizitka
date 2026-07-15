@@ -34,6 +34,20 @@
 
   <!-- 2026 blog posts -->
   <url>
+    <loc>https://www.gabrielkozik.cz/blog/2026/ai-pred-soudem/ai-pred-soudem</loc>
+    <lastmod>2026-07-15</lastmod>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.cz/blog/2026/ai-pred-soudem/ai-pred-soudem" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.cz/blog/2026/ai-pred-soudem/ai-pred-soudem-en" />
+  </url>
+  <url>
+    <loc>https://www.gabrielkozik.cz/blog/2026/ai-pred-soudem/ai-pred-soudem-en</loc>
+    <lastmod>2026-07-15</lastmod>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.cz/blog/2026/ai-pred-soudem/ai-pred-soudem" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.cz/blog/2026/ai-pred-soudem/ai-pred-soudem-en" />
+  </url>
+  <url>
     <loc>https://www.gabrielkozik.cz/blog/2026/jak-spravne-oznacovat-ai-obsah/jak-spravne-oznacovat-ai-obsah</loc>
     <lastmod>2026-06-17</lastmod>
     <priority>0.70</priority>

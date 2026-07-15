@@ -36,9 +36,9 @@
       "hu": "Vállalkozók Találkozója Tišnov",
       "fr": "Réunion des entrepreneurs Tišnov"
     },
-    "place": "Kavárna U Kina, Mlýnská 152, Tišnov",
-    "link": "https://klubpodnikavcu.cz/srazy-podnikavcu",
-    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=Sraz+podnikavc%C5%AF+Ti%C5%A1nov&dates=20260721T153000Z/20260721T173000Z&details=V%C3%ADce+info%3A+https%3A%2F%2Fklubpodnikavcu.cz%2Fsrazy-podnikavcu&location=Kav%C3%A1rna+U+Kina%2C+Ml%C3%BDnsk%C3%A1+152%2C+Ti%C5%A1nov",
+    "place": "Laskala café, Klášterská 357, Tišnov",
+    "link": "https://klubpodnikavcu.cz/akce/sraz-podnikavcu-tisnov-33",
+    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=Sraz+podnikavc%C5%AF+Ti%C5%A1nov&dates=20260721T153000Z/20260721T173000Z&details=V%C3%ADce+info%3A+https%3A%2F%2Fklubpodnikavcu.cz%2Fsrazy-podnikavcu&location=LaScala+Kafe+Tisnov",
     "isSoldOut": false
   },
   {
@@ -57,7 +57,7 @@
   },
   {
     "date": "2026-08-27",
-    "time": "17:00 - 20:00",
+    "time": "9:00 - 12:00",
     "title": {
       "cs": "CCT mastermind v IUSTORIA: AI a právní rizika podnikání",
       "en": "CCT Mastermind at IUSTORIA: AI and Legal Risks in Business",

@@ -68,3 +68,50 @@ document.addEventListener('DOMContentLoaded', () => {
         s.parentNode.insertBefore(po, s);
     })();
 });
+
+// =========================================
+// RESTART BRANDU 2026: scroll-reveal + animovane statistiky
+// =========================================
+document.addEventListener('DOMContentLoaded', () => {
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    if (revealEls.length && 'IntersectionObserver' in window && !prefersReduced) {
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('visible');
+                    io.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.15 });
+        revealEls.forEach(el => io.observe(el));
+    } else {
+        revealEls.forEach(el => el.classList.add('visible'));
+    }
+
+    // Animovane countery v trust baru
+    const counters = document.querySelectorAll('.trust-number[data-count]');
+    if (counters.length && 'IntersectionObserver' in window && !prefersReduced) {
+        const cio = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (!e.isIntersecting) return;
+                const el = e.target;
+                const target = parseInt(el.dataset.count, 10);
+                const suffix = el.dataset.suffix || '';
+                const duration = 1200;
+                const start = performance.now();
+                const tick = (now) => {
+                    const p = Math.min((now - start) / duration, 1);
+                    const eased = 1 - Math.pow(1 - p, 3);
+                    el.textContent = Math.round(eased * target) + suffix;
+                    if (p < 1) requestAnimationFrame(tick);
+                };
+                requestAnimationFrame(tick);
+                cio.unobserve(el);
+            });
+        }, { threshold: 0.6 });
+        counters.forEach(el => cio.observe(el));
+    }
+});

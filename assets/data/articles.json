@@ -16,38 +16,6 @@
         }
     },
     {
-        "id": "podcast-dohody-pres-whatsapp",
-        "date": "2026-03-02",
-        "category": "podcast",
-        "image": "https://img.youtube.com/vi/wGoZnCDUu8Q/maxresdefault.jpg",
-        "cs": {
-            "title": "Podání ruky a dohody přes WhatsApp vás mohou stát statisíce (Podcast)",
-            "excerpt": "Ústní dohoda nebo pár zpráv na WhatsAppu může být právně závazná smlouva — a taky důkazní noční můra. Nová epizoda podcastu advokátní kanceláře IUSTORIA.",
-            "link": "blog/2026/podcast-dohody-pres-whatsapp/podcast-dohody-pres-whatsapp"
-        },
-        "en": {
-            "title": "A Handshake or a WhatsApp Deal Can Cost You Hundreds of Thousands (Podcast)",
-            "excerpt": "A verbal agreement or a few WhatsApp messages can be a legally binding contract — and an evidentiary nightmare. A new IUSTORIA podcast episode (in Czech).",
-            "link": "blog/2026/podcast-dohody-pres-whatsapp/podcast-dohody-pres-whatsapp-en"
-        }
-    },
-    {
-        "id": "podcast-lzete-svemu-advokatovi",
-        "date": "2026-06-04",
-        "category": "podcast",
-        "image": "https://img.youtube.com/vi/E_Qko2kVfa8/maxresdefault.jpg",
-        "cs": {
-            "title": "Lžete svému advokátovi? Proč vás u soudu nezachrání ani ten nejlepší právník (Podcast)",
-            "excerpt": "Advokát je vázán mlčenlivostí — přesto mu klienti zamlčují klíčová fakta. Proč to u soudu vždy vyplave a jak to ničí procesní strategii. Podcast IUSTORIA.",
-            "link": "blog/2026/podcast-lzete-svemu-advokatovi/podcast-lzete-svemu-advokatovi"
-        },
-        "en": {
-            "title": "Lying to Your Lawyer? Why Even the Best Attorney Can't Save You in Court (Podcast)",
-            "excerpt": "Attorneys are bound by confidentiality — yet clients still withhold key facts. Why it always surfaces in court and how it destroys your strategy. IUSTORIA podcast (in Czech).",
-            "link": "blog/2026/podcast-lzete-svemu-advokatovi/podcast-lzete-svemu-advokatovi-en"
-        }
-    },
-    {
         "id": "podcast-pravni-rizika-poradci-remeslnici-eshopy",
         "date": "2026-07-07",
         "category": "podcast",
@@ -112,6 +80,22 @@
         }
     },
     {
+        "id": "podcast-lzete-svemu-advokatovi",
+        "date": "2026-06-04",
+        "category": "podcast",
+        "image": "https://img.youtube.com/vi/E_Qko2kVfa8/maxresdefault.jpg",
+        "cs": {
+            "title": "Lžete svému advokátovi? Proč vás u soudu nezachrání ani ten nejlepší právník (Podcast)",
+            "excerpt": "Advokát je vázán mlčenlivostí — přesto mu klienti zamlčují klíčová fakta. Proč to u soudu vždy vyplave a jak to ničí procesní strategii. Podcast IUSTORIA.",
+            "link": "blog/2026/podcast-lzete-svemu-advokatovi/podcast-lzete-svemu-advokatovi"
+        },
+        "en": {
+            "title": "Lying to Your Lawyer? Why Even the Best Attorney Can't Save You in Court (Podcast)",
+            "excerpt": "Attorneys are bound by confidentiality — yet clients still withhold key facts. Why it always surfaces in court and how it destroys your strategy. IUSTORIA podcast (in Czech).",
+            "link": "blog/2026/podcast-lzete-svemu-advokatovi/podcast-lzete-svemu-advokatovi-en"
+        }
+    },
+    {
         "id": "jak-bezpecne-ovladnout-ai-v-podnikani",
         "date": "2026-06-03",
         "category": "podcast",
@@ -157,6 +141,22 @@
             "title": "AI Philosophy in Law: Why Not to Fear Synergy",
             "excerpt": "Why should the legal profession and AI work in synergy? My vision of combining human expertise and technological precision for better client outcomes.",
             "link": "blog/2026/filosofie-ai-v-advokacii/filosofie-ai-v-advokacii-en"
+        }
+    },
+    {
+        "id": "podcast-dohody-pres-whatsapp",
+        "date": "2026-03-02",
+        "category": "podcast",
+        "image": "https://img.youtube.com/vi/wGoZnCDUu8Q/maxresdefault.jpg",
+        "cs": {
+            "title": "Podání ruky a dohody přes WhatsApp vás mohou stát statisíce (Podcast)",
+            "excerpt": "Ústní dohoda nebo pár zpráv na WhatsAppu může být právně závazná smlouva — a taky důkazní noční můra. Nová epizoda podcastu advokátní kanceláře IUSTORIA.",
+            "link": "blog/2026/podcast-dohody-pres-whatsapp/podcast-dohody-pres-whatsapp"
+        },
+        "en": {
+            "title": "A Handshake or a WhatsApp Deal Can Cost You Hundreds of Thousands (Podcast)",
+            "excerpt": "A verbal agreement or a few WhatsApp messages can be a legally binding contract — and an evidentiary nightmare. A new IUSTORIA podcast episode (in Czech).",
+            "link": "blog/2026/podcast-dohody-pres-whatsapp/podcast-dohody-pres-whatsapp-en"
         }
     },
     {
@@ -289,22 +289,6 @@
         }
     },
     {
-        "id": "podnikavci-kurim-rijen",
-        "date": "2025-10-17",
-        "category": "report",
-        "image": "assets/images/blog/2025/podnikavci-kurim-rijen/3.jpg",
-        "cs": {
-            "title": "Marketing pro Gen Z a Inovace v Povlečení: Reportáž z Klubu Podnikavců v Kuřimi",
-            "excerpt": "Ohlédnutí za říjnovým setkáním Klubu Podnikavců v Kuřimi, kde se řešil obsahový marketing pro mladou generaci a představil se inovativní projekt neshrnujícího se povlečení.",
-            "link": "blog/2025/podnikavci-kurim-rijen/podnikavci-kurim-rijen"
-        },
-        "en": {
-            "title": "Marketing for Gen Z and Innovation in Bed Linen: Report from the Entrepreneurs Club in Kuřim",
-            "excerpt": "A look back at the October meeting of the Entrepreneurs Club in Kuřim, where content marketing for the young generation was discussed and an innovative project of non-bunching bed linen was introduced.",
-            "link": "blog/2025/podnikavci-kurim-rijen/podnikavci-kurim-rijen-en"
-        }
-    },
-    {
         "id": "reportaz-workshop-rijen-2025",
         "date": "2025-10-24",
         "category": "report",
@@ -318,6 +302,22 @@
             "title": "Automation, NotebookLM & Custom AI Assistants: Report from the October Workshop",
             "excerpt": "A look back at the October workshop focused on Google Workspace automation, NotebookLM for secure corporate data processing, custom AI assistants (Gems), and generating videos from photos.",
             "link": "blog/2025/reportaz-workshop-rijen-2025/reportaz-workshop-rijen-2025"
+        }
+    },
+    {
+        "id": "podnikavci-kurim-rijen",
+        "date": "2025-10-17",
+        "category": "report",
+        "image": "assets/images/blog/2025/podnikavci-kurim-rijen/3.jpg",
+        "cs": {
+            "title": "Marketing pro Gen Z a Inovace v Povlečení: Reportáž z Klubu Podnikavců v Kuřimi",
+            "excerpt": "Ohlédnutí za říjnovým setkáním Klubu Podnikavců v Kuřimi, kde se řešil obsahový marketing pro mladou generaci a představil se inovativní projekt neshrnujícího se povlečení.",
+            "link": "blog/2025/podnikavci-kurim-rijen/podnikavci-kurim-rijen"
+        },
+        "en": {
+            "title": "Marketing for Gen Z and Innovation in Bed Linen: Report from the Entrepreneurs Club in Kuřim",
+            "excerpt": "A look back at the October meeting of the Entrepreneurs Club in Kuřim, where content marketing for the young generation was discussed and an innovative project of non-bunching bed linen was introduced.",
+            "link": "blog/2025/podnikavci-kurim-rijen/podnikavci-kurim-rijen-en"
         }
     },
     {

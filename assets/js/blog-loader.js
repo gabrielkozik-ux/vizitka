@@ -8,7 +8,56 @@ document.addEventListener('DOMContentLoaded', async () => {
     const articlesPerPage = 9;
     let currentPage = 1;
     let currentFilteredArticles = [];
+    let currentFilter = 'all';
     let isFirstLoad = true; // Declared at the top to avoid TDZ ReferenceError when displayPage runs
+
+    // --- Pamet stavu filtru a stranky (URL + sessionStorage) ---
+    // Stav se propisuje do URL (?filtr=...&strana=...), takze funguje tlacitko
+    // Zpet v prohlizeci i sdileni odkazu. Pri prichodu ze clanku pres staticky
+    // odkaz "Zpet na prehled" se stav obnovi ze sessionStorage.
+    const STATE_KEY = 'blogListState';
+
+    function saveState() {
+        try {
+            sessionStorage.setItem(STATE_KEY, JSON.stringify({ filter: currentFilter, page: currentPage }));
+        } catch (e) { /* soukromy rezim apod. */ }
+        const params = new URLSearchParams();
+        if (currentFilter !== 'all') params.set('filtr', currentFilter);
+        if (currentPage > 1) params.set('strana', currentPage);
+        const query = params.toString();
+        history.replaceState(null, '', window.location.pathname + (query ? '?' + query : ''));
+    }
+
+    function getInitialState() {
+        const params = new URLSearchParams(window.location.search);
+        if (params.has('filtr') || params.has('strana')) {
+            return {
+                filter: params.get('filtr') || 'all',
+                page: parseInt(params.get('strana'), 10) || 1
+            };
+        }
+        // Prichod ze clanku (staticky odkaz zpet) -> obnovit posledni stav
+        try {
+            const cameFromArticle = document.referrer &&
+                document.referrer.indexOf(window.location.host) !== -1 &&
+                document.referrer.indexOf('/blog/') !== -1;
+            if (cameFromArticle) {
+                const saved = JSON.parse(sessionStorage.getItem(STATE_KEY));
+                if (saved && saved.filter) return { filter: saved.filter, page: saved.page || 1 };
+            }
+        } catch (e) { /* ignorovat */ }
+        return { filter: 'all', page: 1 };
+    }
+
+    function applyFilter(filterValue) {
+        currentFilter = filterValue;
+        filterButtons.forEach(b => b.classList.toggle('active', b.getAttribute('data-filter') === filterValue));
+        if (filterValue === 'all' || filterValue === 'vsechny') {
+            currentFilteredArticles = allArticles;
+        } else {
+            currentFilteredArticles = allArticles.filter(article => article.category === filterValue);
+        }
+    }
 
     // Translations
     const translations = {
@@ -28,8 +77,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         allArticles = data.filter(article => article[lang]);
         currentFilteredArticles = allArticles;
 
+        // Obnoveni stavu (URL parametry / navrat ze clanku), jinak vychozi
+        const initial = getInitialState();
+        applyFilter(initial.filter);
+        const totalPages = Math.max(1, Math.ceil(currentFilteredArticles.length / articlesPerPage));
+        const startPage = Math.min(Math.max(1, initial.page), totalPages);
+
         // Initial render (do not scroll)
-        displayPage(1, currentFilteredArticles, false);
+        displayPage(startPage, currentFilteredArticles, false);
 
     } catch (error) {
         console.error('Error loading articles:', error);
@@ -39,18 +94,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Filter Logic
     filterButtons.forEach(btn => {
         btn.addEventListener('click', () => {
-            // Remove active class from all
-            filterButtons.forEach(b => b.classList.remove('active'));
-            // Add active to clicked
-            btn.classList.add('active');
-
-            const filterValue = btn.getAttribute('data-filter');
-
-            if (filterValue === 'all' || filterValue === 'vsechny') {
-                currentFilteredArticles = allArticles;
-            } else {
-                currentFilteredArticles = allArticles.filter(article => article.category === filterValue);
-            }
+            applyFilter(btn.getAttribute('data-filter'));
             // Do not scroll when switching filters as requested by user
             displayPage(1, currentFilteredArticles, false);
         });
@@ -64,6 +108,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         renderArticles(paginatedArticles);
         renderPagination(articles.length, page);
+        saveState();
 
         // Scroll to top of articles only if explicitly requested (e.g., pagination clicks)
         if (!isFirstLoad && shouldScroll) {

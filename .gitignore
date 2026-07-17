@@ -1,0 +1,8 @@
+# Originaly fotek a tezke pracovni soubory - nepatri do repa
+_pracovni/fotky-original/*
+!_pracovni/fotky-original/SEM-NAHRAT-FOTKY.md
+
+# Systemove soubory
+.DS_Store
+Thumbs.db
+desktop.ini

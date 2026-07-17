@@ -219,10 +219,10 @@ section:nth-child(2n) {
    4. HERO SECTION
    ========================================= */
 .hero {
-    /* Cesta upravena: ze složky css (..) do assets, pak do images */
-    background-image: linear-gradient(135deg, rgba(12, 35, 64, 0.85), rgba(12, 35, 64, 0.6)), url('assets/images/uvodni-obrazek.jpg');
+    /* Foto z CS-Tech Summitu — text vlevo v prazdnem prostoru u okna, Gabriel vpravo */
+    background-image: linear-gradient(90deg, rgba(12, 35, 64, 0.88), rgba(12, 35, 64, 0.55) 60%, rgba(12, 35, 64, 0.4)), url('assets/images/hero-cst-summit.jpg');
     background-size: cover;
-    background-position: center 140%;
+    background-position: center 22%;
     background-attachment: fixed;
     color: var(--white);
 
@@ -232,30 +232,37 @@ section:nth-child(2n) {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     padding: 0 20px;
-    text-align: center;
+    text-align: left;
     transition: background 0.5s ease-in-out;
 }
 
 .hero:hover {
-    background-image: linear-gradient(135deg, rgba(12, 35, 64, 0.9), rgba(12, 35, 64, 0.7)), url('assets/images/uvodni-obrazek.jpg');
+    background-image: linear-gradient(90deg, rgba(12, 35, 64, 0.92), rgba(12, 35, 64, 0.6) 60%, rgba(12, 35, 64, 0.45)), url('assets/images/hero-cst-summit.jpg');
+}
+
+.hero .container {
+    max-width: 680px;
+    margin-left: 0;
+    margin-right: auto;
 }
 
 .hero h1 {
     font-size: 3.8em;
     margin: 0 0 20px 0;
     color: var(--white);
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.45);
 }
 
 .hero p {
     font-size: 1.6em;
     font-weight: 300;
     max-width: 900px;
-    margin: 0 auto;
+    margin: 0;
     opacity: 0.95;
     line-height: 1.5;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
 }
 
 .page-header {
@@ -1684,8 +1691,8 @@ footer {
     display: block;
     width: 90px;
     height: 3px;
-    margin: 26px auto 0;
-    background: linear-gradient(90deg, transparent, #e3c98a, transparent);
+    margin: 26px 0 0;
+    background: linear-gradient(90deg, #e3c98a, transparent);
 }
 
 .hero .cta-button {

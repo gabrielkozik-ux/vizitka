@@ -590,5 +590,37 @@
             "excerpt": "Artificial intelligence is no longer sci-fi, but an everyday tool that helps companies innovate, automate, and grow. With great power comes great responsibility – and now, new rules.",
             "link": "blog/2025/ai-act-byznys/ai-act-byznys-en"
         }
+    },
+    {
+        "id": "podcast-jiri-urban-iustoria",
+        "date": "2025-03-07",
+        "category": "podcast",
+        "image": "https://img.youtube.com/vi/gFuxRNeA_w0/maxresdefault.jpg",
+        "cs": {
+            "title": "Spolupráce v byznysu umožňuje víc než samostatné úsilí (Podcast Jiřího Urbana #07)",
+            "excerpt": "S Gabrielem Kožíkem a Honzou Vytřísalem, majiteli advokátní kanceláře IUSTORIA, jsme si povídali o trestním právu, etice, ale taky o balancu mezi pracovním a osobním životem.",
+            "link": "blog/2025/podcast-jiri-urban-iustoria/podcast-jiri-urban-iustoria"
+        },
+        "en": {
+            "title": "Collaboration in Business Achieves More Than Solo Effort (Jiří Urban's Podcast #07)",
+            "excerpt": "Gabriel Kožík and Jan Vytřísal, owners of the IUSTORIA law firm, on criminal law, ethics and work-life balance. A guest appearance on Jiří Urban's podcast (in Czech).",
+            "link": "blog/2025/podcast-jiri-urban-iustoria/podcast-jiri-urban-iustoria-en"
+        }
+    },
+    {
+        "id": "podcast-smart-talk-jan-vytrisal",
+        "date": "2024-10-16",
+        "category": "podcast",
+        "image": "https://img.youtube.com/vi/39YOVh5lhU4/maxresdefault.jpg",
+        "cs": {
+            "title": "SMART TALK s Gabrielou Mrkvicovou: hostem Jan Vytřísal z IUSTORIA (Podcast)",
+            "excerpt": "Moderátor, a když zrovna nemoderuje, spolumajitel advokátní kanceláře. Honza Vytřísal v podcastu SMART TALK o založení IUSTORIA, obchodním právu i vzniku názvu kanceláře.",
+            "link": "blog/2024/podcast-smart-talk-jan-vytrisal/podcast-smart-talk-jan-vytrisal"
+        },
+        "en": {
+            "title": "SMART TALK with Gabriela Mrkvicová: Guest Jan Vytřísal of IUSTORIA (Podcast)",
+            "excerpt": "A host and moderator — and when not on stage, co-owner of a law firm. Jan Vytřísal on the SMART TALK podcast about founding IUSTORIA and commercial law (in Czech).",
+            "link": "blog/2024/podcast-smart-talk-jan-vytrisal/podcast-smart-talk-jan-vytrisal-en"
+        }
     }
 ]

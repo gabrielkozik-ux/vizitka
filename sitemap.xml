@@ -32,6 +32,36 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.cz/blog-en" />
   </url>
 
+  <!-- Podcasty (hostování) -->
+  <url>
+    <loc>https://www.gabrielkozik.cz/blog/2025/podcast-jiri-urban-iustoria/podcast-jiri-urban-iustoria</loc>
+    <lastmod>2025-03-07</lastmod>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.cz/blog/2025/podcast-jiri-urban-iustoria/podcast-jiri-urban-iustoria" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.cz/blog/2025/podcast-jiri-urban-iustoria/podcast-jiri-urban-iustoria-en" />
+  </url>
+  <url>
+    <loc>https://www.gabrielkozik.cz/blog/2025/podcast-jiri-urban-iustoria/podcast-jiri-urban-iustoria-en</loc>
+    <lastmod>2025-03-07</lastmod>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.cz/blog/2025/podcast-jiri-urban-iustoria/podcast-jiri-urban-iustoria" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.cz/blog/2025/podcast-jiri-urban-iustoria/podcast-jiri-urban-iustoria-en" />
+  </url>
+  <url>
+    <loc>https://www.gabrielkozik.cz/blog/2024/podcast-smart-talk-jan-vytrisal/podcast-smart-talk-jan-vytrisal</loc>
+    <lastmod>2024-10-16</lastmod>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.cz/blog/2024/podcast-smart-talk-jan-vytrisal/podcast-smart-talk-jan-vytrisal" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.cz/blog/2024/podcast-smart-talk-jan-vytrisal/podcast-smart-talk-jan-vytrisal-en" />
+  </url>
+  <url>
+    <loc>https://www.gabrielkozik.cz/blog/2024/podcast-smart-talk-jan-vytrisal/podcast-smart-talk-jan-vytrisal-en</loc>
+    <lastmod>2024-10-16</lastmod>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.cz/blog/2024/podcast-smart-talk-jan-vytrisal/podcast-smart-talk-jan-vytrisal" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.cz/blog/2024/podcast-smart-talk-jan-vytrisal/podcast-smart-talk-jan-vytrisal-en" />
+  </url>
+
   <!-- 2026 blog posts -->
   <url>
     <loc>https://www.gabrielkozik.cz/blog/2026/ai-slop-pred-nss/ai-slop-pred-nss</loc>

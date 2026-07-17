@@ -1904,6 +1904,24 @@ footer {
 }
 
 /* =========================================
+   FIX: socialni ikony uvnitr clanku
+   Obecne pravidlo .article-content img (width: 100%)
+   prebijelo velikost ikon - zde je vracime na 28 px.
+   ========================================= */
+.article-content .social-icon img {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.article-content .social-icons-container {
+    margin: 26px 0 10px;
+}
+
+/* =========================================
    FIX: mobilni navigace na strankach clanku
    Clanky nemaji hamburger ani .nav-links-container,
    takze obecne mobilni pravidlo .nav-links (sloupcova

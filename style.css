@@ -249,16 +249,18 @@ section:nth-child(2n) {
 }
 
 .hero h1 {
-    font-size: 3.8em;
-    margin: 0 0 20px 0;
+    font-size: clamp(2rem, 1.1rem + 3.5vw, 3.8rem) !important;
+    line-height: 1.18;
+    margin: 0 0 18px 0;
     color: var(--white);
     text-shadow: 0 2px 14px rgba(0, 0, 0, 0.45);
 }
 
 .hero p {
-    font-size: 1.6em;
+    font-size: clamp(1rem, 0.85rem + 1vw, 1.6rem);
+    line-height: 1.55;
     font-weight: 300;
-    max-width: 900px;
+    max-width: 620px;
     margin: 0;
     opacity: 0.95;
     line-height: 1.5;
@@ -1294,18 +1296,7 @@ footer {
     }
 
     .hero h1 {
-        font-size: 2.1em !important;
-        line-height: 1.2;
         margin-bottom: 14px;
-    }
-
-    .hero p {
-        font-size: 1em;
-        line-height: 1.6;
-    }
-
-    .hero-br {
-        display: none;
     }
 
     .hero-underline {

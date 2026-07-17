@@ -51,7 +51,7 @@
         "id": "jak-spravne-oznacovat-ai-obsah",
         "date": "2026-06-17",
         "category": "expert",
-        "image": "blog/2026/jak-spravne-oznacovat-ai-obsah/oznacovani-ai-obsahu.jpg",
+        "image": "blog/2026/jak-spravne-oznacovat-ai-obsah/header.jpg",
         "cs": {
             "title": "Jak správně označovat AI generovaný obsah? Nový kodex Evropské komise",
             "excerpt": "Evropská komise zveřejnila kodex správné praxe pro označování AI generovaného obsahu. Zjistěte, jak se mění pravidla a co hrozí za jejich nedodržení.",
@@ -83,7 +83,7 @@
         "id": "zakon-o-platformove-praci",
         "date": "2026-06-08",
         "category": "expert",
-        "image": "blog/2026/zakon-o-platformove-praci/zakon_o_platformove_praci.jpg",
+        "image": "blog/2026/zakon-o-platformove-praci/header.jpg",
         "cs": {
             "title": "Konec pokut pro lidi a nástup algoritmů: Jak nová legislativa změní platformovou práci a švarcsystém",
             "excerpt": "Česká republika bude od ledna 2027 regulovat využití algoritmického řízení a švarcsystém. Zjistěte, jaké nové povinnosti a rizika to přináší zaměstnavatelům.",
@@ -147,7 +147,7 @@
         "id": "filosofie-ai-v-advokacii",
         "date": "2026-03-12",
         "category": "expert",
-        "image": "https://placehold.co/800x400/0a2342/ffffff?text=Filosofie+AI+v+advokacii",
+        "image": "blog/2026/filosofie-ai-v-advokacii/header.jpg",
         "cs": {
             "title": "Filosofie AI v advokacii: Proč se nebát synergie",
             "excerpt": "Proč by advokacie a AI měly fungovat v synergii? Moje vize spojení lidské expertízy a technologické preciznosti pro lepší výsledky klientů.",
@@ -243,7 +243,7 @@
         "id": "ai-act-pro-zaneprazdnene",
         "date": "2026-01-15",
         "category": "expert",
-        "image": "blog/2026/ai-act-pro-zaneprazdnene/eu-ai-act.jpg",
+        "image": "blog/2026/ai-act-pro-zaneprazdnene/header.jpg",
         "cs": {
             "title": "AI akt pro zaneprázdněné: Co musíte vědět v 5 minutách",
             "excerpt": "Cíl: Rychlý a srozumitelný přehled pro manažery a majitele firem. Obsah: Co je AI akt, proč vznikl, koho se týká a jaký je jeho hlavní princip.",
@@ -259,8 +259,7 @@
         "id": "slovnik-pojmu-ai-act",
         "date": "2025-12-09",
         "category": "expert",
-        "image": "https://placehold.co/800x400/0a2342/ffffff?text=AI+Act+Slovník",
-        "image_en": "https://placehold.co/800x400/0a2342/ffffff?text=AI+Act+Glossary",
+        "image": "blog/2025/slovnik-pojmu-ai-act/header.jpg",
         "cs": {
             "title": "Slovník pojmů AI Actu: Mluvíte jazykem regulátorů?",
             "excerpt": "Klíčové pojmy AI Actu vysvětleny: Co je systém AI, poskytovatel, zavádějící subjekt či rizikové kategorie. Nezbytný slovník pro firmy a manažery.",
@@ -372,7 +371,7 @@
         "id": "novela-hlaseni-zamestnancu-2025",
         "date": "2025-10-06",
         "category": "expert",
-        "image": "assets/images/blog/2025/novela-hlaseni-zamestnancu-2025/hlaseni-zamestnancu-2025.jpg",
+        "image": "blog/2025/novela-hlaseni-zamestnancu-2025/header.jpg",
         "cs": {
             "title": "Konec tolerance: Novela zákona zpřísňuje zaměstnávání cizinců od 1. 10. 2025",
             "excerpt": "Dosavadní benevolence v hlášení cizinců končí. Novela zákona o zaměstnanosti ruší možnost zpětného hlášení a zavádí fikci „nelegální práce“ s likvidačními pokutami.",
@@ -404,7 +403,7 @@
         "id": "prevod-podilu-sro-nz",
         "date": "2025-10-01",
         "category": "expert",
-        "image": "assets/images/blog/2025/prevod-podilu-sro-nz/nz-podil.jpg",
+        "image": "blog/2025/prevod-podilu-sro-nz/header.jpg",
         "cs": {
             "title": "Převod podílu v s.r.o. a notářský zápis: Mýty a fakta",
             "excerpt": "Analýza, zda je pro souhlas valné hromady s převodem podílu nutný notářský zápis. Klíčová soudní rozhodnutí a praktické dopady pro s.r.o.",
@@ -420,8 +419,7 @@
         "id": "ai-agenti-nova-era-byznysu",
         "date": "2025-09-25",
         "category": "expert",
-        "image": "https://placehold.co/300x250/0a2342/ffffff?text=AI+Agenti",
-        "image_en": "https://placehold.co/300x250/0a2342/ffffff?text=AI+Agents",
+        "image": "blog/2025/ai-agenti-nova-era-byznysu/header.jpg",
         "cs": {
             "title": "AI Agenti: Hrozba, nebo největší byznysová příležitost od dob internetu?",
             "excerpt": "Analýza nástupu AI agentů. Zjistěte, jak transformují trh práce, jaké přinášejí příležitosti a jak se bránit kritickým bezpečnostním rizikům jako je Prompt Injection.",
@@ -453,7 +451,7 @@
         "id": "advokati-a-ai",
         "date": "2025-09-15",
         "category": "expert",
-        "image": "blog/2025/advokati-a-ai/uvodni-obrazek.jpg",
+        "image": "blog/2025/advokati-a-ai/header.jpg",
         "cs": {
             "title": "Advokacie na rozcestí: Hrozba, nebo příležitost?",
             "excerpt": "Analýza dopadu umělé inteligence na výkon advokacie v ČR. Je AI pro advokáty existenčním rizikem, nebo bezprecedentní šancí na transformaci a růst?",
@@ -565,7 +563,7 @@
         "id": "ai-v-byznysu-4-cesty",
         "date": "2025-05-01",
         "category": "expert",
-        "image": "assets/images/blog/2025/ai-v-byznysu-4-cesty/ai-v-byznysu-4-cesty.jpg",
+        "image": "blog/2025/ai-v-byznysu/header.jpg",
         "cs": {
             "title": "AI v byznysu: 4 cesty, kudy z vaší firmy nevědomky unikají data",
             "excerpt": "Používání AI nástrojů se stalo běžnou součástí firemní praxe. Mnozí si však neuvědomují rizika spojená s ochranou citlivých dat. Podívejme se na čtyři nejčastější scénáře, kde může dojít k úniku, a jak se jim bránit.",
@@ -581,7 +579,7 @@
         "id": "ai-act-byznys",
         "date": "2025-04-01",
         "category": "expert",
-        "image": "assets/images/blog/2025/ai-act-byznys/prezentace-ai.jpg",
+        "image": "blog/2025/ai-act-byznys/header.jpg",
         "cs": {
             "title": "Regulace AI v byznysu: Jste připraveni na AI Act?",
             "excerpt": "Umělá inteligence už není sci-fi, ale každodenní nástroj, který firmám pomáhá inovovat, automatizovat a růst. S velkou mocí ale přichází i velká zodpovědnost – a teď i nová pravidla.",

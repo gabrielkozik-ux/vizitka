@@ -1,5 +1,8 @@
 # Návod: publikace nového článku na gabrielkozik.cz
 
+> **Dohodnutý proces s Claude:** Před vytvořením jakéhokoliv souboru (HTML apod.)
+> Claude nejdřív navrhne obsah příspěvku v chatu. Soubory se tvoří až po odsouhlasení.
+
 Šablona: `_pracovni/sablona-clanku/sablona-clanku.html`
 
 ## Checklist (v tomto pořadí)

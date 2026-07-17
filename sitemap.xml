@@ -34,6 +34,20 @@
 
   <!-- 2026 blog posts -->
   <url>
+    <loc>https://www.gabrielkozik.cz/blog/2026/ai-slop-pred-nss/ai-slop-pred-nss</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.cz/blog/2026/ai-slop-pred-nss/ai-slop-pred-nss" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.cz/blog/2026/ai-slop-pred-nss/ai-slop-pred-nss-en" />
+  </url>
+  <url>
+    <loc>https://www.gabrielkozik.cz/blog/2026/ai-slop-pred-nss/ai-slop-pred-nss-en</loc>
+    <lastmod>2026-07-17</lastmod>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.cz/blog/2026/ai-slop-pred-nss/ai-slop-pred-nss" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.cz/blog/2026/ai-slop-pred-nss/ai-slop-pred-nss-en" />
+  </url>
+  <url>
     <loc>https://www.gabrielkozik.cz/blog/2026/podcast-dohody-pres-whatsapp/podcast-dohody-pres-whatsapp</loc>
     <lastmod>2026-03-02</lastmod>
     <priority>0.70</priority>

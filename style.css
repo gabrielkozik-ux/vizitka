@@ -1902,3 +1902,44 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* =========================================
+   FIX: mobilni navigace na strankach clanku
+   Clanky nemaji hamburger ani .nav-links-container,
+   takze obecne mobilni pravidlo .nav-links (sloupcova
+   roletka) u nich zustavalo trvale "rozbalene" pres obsah.
+   Zde ho pro primeho potomka .main-nav prebijeme
+   kompaktnim vodorovnym radkem.
+   ========================================= */
+@media (max-width: 768px) {
+    .main-nav {
+        flex-wrap: wrap;
+        row-gap: 6px;
+    }
+
+    .main-nav>.nav-links {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: auto;
+        background: none;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    .main-nav>.nav-links a {
+        display: inline-block;
+        width: auto;
+        padding: 8px 10px;
+        margin: 0;
+        border-bottom: none;
+        font-size: 0.9em;
+        text-align: center;
+    }
+
+    .main-nav>.lang-switcher {
+        margin: 0;
+    }
+}

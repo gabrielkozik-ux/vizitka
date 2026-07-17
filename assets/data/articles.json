@@ -1,5 +1,21 @@
 [
     {
+        "id": "ai-slop-pred-nss",
+        "date": "2026-07-17",
+        "category": "expert",
+        "image": "blog/2026/ai-slop-pred-nss/header.jpg",
+        "cs": {
+            "title": "„AI slop\" před Nejvyšším správním soudem: dvě lekce z jednoho rozsudku",
+            "excerpt": "NSS poprvé v odůvodnění použil výraz „AI slop\". Rozsudek 10 As 81/2026 dává dvě lekce: proč platí i rozhodnutí, které vám nikdo neposlal, a co hrozí za vymyšlenou judikaturu z AI.",
+            "link": "blog/2026/ai-slop-pred-nss/ai-slop-pred-nss"
+        },
+        "en": {
+            "title": "\"AI Slop\" Before the Czech Supreme Administrative Court: Two Lessons from One Judgment",
+            "excerpt": "The Czech Supreme Administrative Court used the term 'AI slop' in a judgment for the first time. Why a decision nobody mailed you still binds you — and what fabricated AI case law costs.",
+            "link": "blog/2026/ai-slop-pred-nss/ai-slop-pred-nss-en"
+        }
+    },
+    {
         "id": "ai-pred-soudem",
         "date": "2026-07-15",
         "category": "expert",

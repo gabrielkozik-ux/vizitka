@@ -2196,3 +2196,46 @@ footer {
         opacity: 1;
     }
 }
+
+/* =========================================
+   SDILECI TLACITKA (Facebook, LinkedIn) na clancich
+   ========================================= */
+.share-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 36px 0 30px;
+    padding-top: 24px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.share-label {
+    font-size: 0.88em;
+    color: #64748b;
+    font-weight: 600;
+    margin-right: 4px;
+}
+
+.share-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--light-gray);
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.share-btn img {
+    width: 18px;
+    height: 18px;
+    box-shadow: none;
+    border-radius: 0;
+    margin: 0;
+}
+
+.share-btn:hover {
+    background: var(--gold-soft);
+    transform: translateY(-2px);
+}

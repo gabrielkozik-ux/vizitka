@@ -2227,7 +2227,9 @@ footer {
     transition: background 0.2s ease, transform 0.2s ease;
 }
 
-.share-btn img {
+.share-btn img,
+.article-content .share-btn img {
+    display: inline-block;
     width: 18px;
     height: 18px;
     box-shadow: none;

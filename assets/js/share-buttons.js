@@ -17,17 +17,13 @@
 
         var pageUrl = encodeURIComponent(window.location.href.split('#')[0]);
         var iconBase = getIconBase();
-        var summary = getSummary();
 
-        // Facebook: parametr "quote" predvyplni citaci/shrnuti nad odkazem.
-        // Neni to oficialne dokumentovane API, ale dlouhodobe funkcni.
+        // Facebook ani LinkedIn dnes uz nedovoluji webu predvyplnit text
+        // uzivatelova prispevku (kdysi fungoval parametr "quote" u FB, ted
+        // uz ne) — obe platformy to zamerne blokuji kvuli spamu. Jde
+        // predat jen samotnou URL, nahled (titulek/popis/obrazek) se
+        // dotahuje automaticky z OG tagu stranky.
         var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + pageUrl;
-        if (summary) fbUrl += '&quote=' + encodeURIComponent(summary);
-
-        // LinkedIn: aktualni "share-offsite" endpoint uz zadny parametr pro
-        // predvyplneni textu prispevku nepodporuje (stary shareArticle s
-        // title/summary LinkedIn vyradil) — tělo prispevku zůstává prazdne,
-        // nahled (titulek/popis/obrazek) si LinkedIn dotahuje sam z OG tagu.
         var liUrl = 'https://www.linkedin.com/sharing/share-offsite/?url=' + pageUrl;
 
         var bar = document.createElement('div');
@@ -48,17 +44,6 @@
             article.appendChild(bar);
         }
     });
-
-    // Shrnuti clanku pro Facebook "quote" — bere se z existujiciho
-    // meta description (stejny text, ktery uz pouzivame pro og:description),
-    // takze neni potreba nic rucne psat ani upravovat 92 clankovych souboru.
-    function getSummary() {
-        var meta = document.querySelector('meta[name="description"]') ||
-                   document.querySelector('meta[property="og:description"]');
-        var text = meta ? (meta.getAttribute('content') || '').trim() : '';
-        if (text.length > 250) text = text.slice(0, 247) + '...';
-        return text;
-    }
 
     // Odvodi relativni cestu k assets/images z existujiciho odkazu na favicon,
     // takze skript funguje spravne bez ohledu na hloubku slozky stranky.

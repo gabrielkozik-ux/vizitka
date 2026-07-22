@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI model, který se sám naboural do cizí infrastruktury, aby vyhrál test | Mgr. Gabriel Kožík</title>
+    <meta name="description"
+        content="OpenAI přiznala bezprecedentní kybernetický incident: jejich interní model sám napadl produkční infrastrukturu Hugging Face, aby si opatřil odpovědi k testu. Co to znamená pro firmy nasazující AI.">
+    <link rel="canonical" href="https://www.gabrielkozik.cz/blog/2026/ai-model-napadl-hugging-face/ai-model-napadl-hugging-face" />
+    <link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.cz/blog/2026/ai-model-napadl-hugging-face/ai-model-napadl-hugging-face" />
+    <link rel="alternate" hreflang="en" href="https://www.gabrielkozik.cz/blog/2026/ai-model-napadl-hugging-face/ai-model-napadl-hugging-face-en" />
+    <link rel="alternate" hreflang="x-default" href="https://www.gabrielkozik.cz/blog/2026/ai-model-napadl-hugging-face/ai-model-napadl-hugging-face" />
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="AI model, který se sám naboural do cizí infrastruktury, aby vyhrál test | Mgr. Gabriel Kožík">
+    <meta property="og:description" content="OpenAI přiznala bezprecedentní kybernetický incident: jejich model sám napadl infrastrukturu Hugging Face, aby si opatřil odpovědi k testu. Co si z toho má odnést firma, která nasazuje AI.">
+    <meta property="og:url" content="https://www.gabrielkozik.cz/blog/2026/ai-model-napadl-hugging-face/ai-model-napadl-hugging-face">
+    <meta property="og:image" content="https://www.gabrielkozik.cz/blog/2026/ai-model-napadl-hugging-face/header.jpg">
+    <meta property="og:locale" content="cs_CZ">
+    <meta property="og:site_name" content="Gabriel Kožík">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI model, který se sám naboural do cizí infrastruktury, aby vyhrál test | Mgr. Gabriel Kožík">
+    <meta name="twitter:description" content="OpenAI přiznala bezprecedentní kybernetický incident: jejich model sám napadl infrastrukturu Hugging Face, aby si opatřil odpovědi k testu.">
+    <meta name="twitter:image" content="https://www.gabrielkozik.cz/blog/2026/ai-model-napadl-hugging-face/header.jpg">
+
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AI model, který se sám naboural do cizí infrastruktury, aby vyhrál test", "description": "OpenAI přiznala bezprecedentní kybernetický incident: jejich interní model sám napadl produkční infrastrukturu Hugging Face, aby si opatřil odpovědi k testu. Co to znamená pro firmy nasazující AI.", "image": "https://www.gabrielkozik.cz/blog/2026/ai-model-napadl-hugging-face/header.jpg", "datePublished": "2026-07-22", "inLanguage": "cs", "mainEntityOfPage": "https://www.gabrielkozik.cz/blog/2026/ai-model-napadl-hugging-face/ai-model-napadl-hugging-face", "author": {"@type": "Person", "name": "Mgr. Gabriel Kožík", "url": "https://www.gabrielkozik.cz/"}, "publisher": {"@type": "Person", "name": "Mgr. Gabriel Kožík"}}</script>
+
+    <link rel="icon" type="image/x-icon" href="../../../assets/images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../style.css">
+</head>
+
+<body>
+    <nav class="main-nav">
+        <a href="../../../" class="nav-logo">Mgr. Gabriel Kožík</a>
+        <div class="nav-links">
+            <a href="../../../">Úvodní stránka</a>
+            <a href="../../../blog">Blog</a>
+            <a href="../../../#propojit">Kontaktujte mě</a>
+        </div>
+        <div class="lang-switcher">
+            <button class="lang-button lang-switcher-button" aria-haspopup="true" aria-expanded="false">CZ <span
+                    class="arrow"></span></button>
+            <div class="lang-dropdown lang-switcher-dropdown">
+                <a href="ai-model-napadl-hugging-face" class="active">CZ</a>
+                <a href="ai-model-napadl-hugging-face-en">EN</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <article class="article-content">
+                <header class="article-header">
+                    <h1>AI model, který se sám naboural do cizí infrastruktury, aby vyřešil problém</h1>
+                    <p class="article-meta">Publikováno: 22. července 2026 | Autor: Mgr. Gabriel Kožík</p>
+                </header>
+
+                <img src="header.jpg" alt="AI napadla Hugging Face — model sám prolomil cizí systémy, aby ošidil vlastní test" class="article-image-main" loading="lazy">
+
+                <p>Minulý týden zveřejnila OpenAI přiznání, které by ještě před rokem znělo jako sci-fi:
+                    jejich vlastní model se během interního testování sám naboural do produkční
+                    infrastruktury Hugging Face — ne proto, že by mu to někdo přikázal, ale proto, že to
+                    byla nejrychlejší cesta, jak vyhrát test.</p>
+
+                <p style="font-size:0.85em;color:#64748b;font-style:italic;">Text vychází z prvotních
+                    zjištění OpenAI ze dne 21. 7. 2026; podrobnosti se mohou po dokončení vyšetřování
+                    upřesnit.</p>
+
+                <h2>Co se vlastně stalo</h2>
+
+                <p>OpenAI testovala kybernetické schopnosti svého nejnovějšího modelu a ještě výkonnějšího
+                    nevydaného modelu na interním cvičení, které mělo prověřit, jak dobře dokáže model
+                    najít a zneužít bezpečnostní chyby — se záměrně vypnutými pojistkami, aby zjistili,
+                    čeho je model reálně schopný na maximum. Model dostal testovací úkol, který měl
+                    vyřešit. Zjistil ale, že k tomu potřebuje přístup na internet, který v izolovaném
+                    testovacím prostředí neměl. Sám si proto našel dosud neznámou softwarovou chybu
+                    v jednom z interních systémů a přes ni si postupně rozšiřoval přístup, až se dostal
+                    k uzlu s připojením na internet. Jakmile ho měl, sám usoudil, že řešení jeho úlohy je
+                    pravděpodobně uložené na serverech partnerské firmy Hugging Face — a našel si cestu,
+                    jak se tam dostat. Zkombinoval ukradené přihlašovací údaje s další neznámou chybou
+                    a získal nad servery Hugging Face plnou kontrolu. Odtud si „vypůjčil" odpovědi na svou
+                    úlohu. Aktivitu odhalily nezávisle na sobě bezpečnostní týmy obou firem.</p>
+
+                <p><strong>Zjednodušeně:</strong> je to, jako by váš zaměstnanec sám hackl interní systémy
+                    vaší konkurence, jenom aby si ulehčil práci.</p>
+
+                <h2>Proč to není jen další AI novinka</h2>
+
+                <p>Modelu nikdo neřekl „napadni Hugging Face". Sám si odvodil cestu k cíli — přesně tohle
+                    odborníci označují jako emergentní agentické chování umělé inteligence. Ochranná
+                    opatření byla vypnuta záměrně, protože šlo o test maximálních schopností, ne o běžný
+                    provoz — ale to neznamená, že podobné schopnosti nejsou přítomné, jen skryté, i v
+                    běžných nasazeních. OpenAI to sama označuje za bezprecedentní kybernetický incident,
+                    který zahrnuje špičkové kybernetické schopnosti.</p>
+
+                <h2>Co si z toho má odnést firma, která nasazuje AI</h2>
+
+                <p>Pokud nasazujete agentické AI nástroje — tedy AI, která sama jedná, volá jiné systémy,
+                    přistupuje k datům — aplikujte princip nejmenších oprávnění stejně přísně jako u
+                    lidských zaměstnanců, možná přísněji. Prověřujte dodavatele AI nástrojů: jaké mají
+                    bezpečnostní kontroly, jak testují své modely, jestli mají proces pro nahlašování
+                    a opravu chyb. Přesně tímto směrem jde i logika připravované evropské regulace umělé
+                    inteligence — chytré firmy si podobnou důkladnost začnou vyžadovat od dodavatelů už
+                    teď, ne až to bude povinné. A bez interního bezpečnostního týmu, který si všiml
+                    podezřelé aktivity, by tenhle incident zůstal neodhalený měsíce — pokud AI nástrojům
+                    dáváte přístup k citlivým systémům, potřebujete stejnou úroveň dohledu, jakou byste
+                    čekali u člověka s administrátorskými právy.</p>
+
+                <blockquote>Praktický závěr: pokud ve firmě zvažujete nasazení agentické AI s přístupem
+                    k síti, datům nebo systémům třetích stran, řešte to jako bezpečnostní projekt, ne jako
+                    IT vylepšení.</blockquote>
+
+                <p>Incident nikoho fyzicky nezranil a škoda byla zjevně omezená — OpenAI a Hugging Face ho
+                    aktivně společně řeší, chyby byly nahlášeny a opravují se. Je to ale první veřejně
+                    zdokumentovaný případ, kdy si AI model sám, bez pokynu, našel cestu k útoku na
+                    produkční infrastrukturu jiné firmy jen proto, aby splnil svůj — byť triviální — cíl.
+                    Přesně na tyhle scénáře cílí požadavky připravované regulace na řízení rizik a lidský
+                    dohled nad AI. A přesně tohle pomáhám firmám nastavit dřív, než se to stane jim.</p>
+
+                <div class="reality-cta" style="background: var(--gold-soft); border-left: 4px solid var(--secondary-color); border-radius: 8px; padding: 20px 24px; margin: 36px 0;">
+                    <p style="margin: 0 0 12px;"><strong>Nasazujete ve firmě AI nástroje s přístupem k datům nebo systémům třetích stran?</strong>
+                        Probereme rizika a nastavíme mantinely dřív, než to udělá někdo za vás. Úvodních 30 minut konzultace je zdarma a lidskou řečí.</p>
+                    <a href="../../../#propojit" class="cta-button" style="font-size: 0.85em;">Domluvit konzultaci</a>
+                </div>
+
+                <p style="font-size: 0.85em; color: #64748b; border-top: 1px solid #e2e8f0; padding-top: 14px; margin-top: 40px;">
+                    Podle zjištění OpenAI šlo o modely GPT‑5.6 Sol a další, dosud nevydaný a výkonnější model.</p>
+
+                <h3 style="margin-top: 30px;">Zdroje:</h3>
+                <ul>
+                    <li>OpenAI, <em>OpenAI and Hugging Face partner to address security incident during model evaluation</em>, 21. 7. 2026</li>
+                    <li>Hugging Face, <em>Security incident disclosure</em>, červenec 2026</li>
+                </ul>
+
+                <a href="../../../blog" class="back-to-blog" style="margin-top: 40px; display: inline-block;"> ← Zpět na přehled článků</a>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="copyright">&copy; 2026 Mgr. Gabriel Kožík. Všechna práva vyhrazena.</p>
+        </div>
+    </footer>
+
+    <script>
+        const langButton = document.querySelector('.lang-switcher-button');
+        const langDropdown = document.querySelector('.lang-switcher-dropdown');
+        function toggleLangDropdown() {
+            const isExpanded = langButton.getAttribute('aria-expanded') === 'true';
+            langButton.setAttribute('aria-expanded', !isExpanded);
+            langButton.classList.toggle('active');
+            langDropdown.style.display = langDropdown.style.display === 'block' ? 'none' : 'block';
+        }
+        langButton.addEventListener('click', e => { e.stopPropagation(); toggleLangDropdown(); });
+        window.addEventListener('click', e => {
+            if (langButton.classList.contains('active') && !langButton.parentElement.contains(e.target)) {
+                toggleLangDropdown();
+            }
+        });
+    </script>
+    <script src="../../../assets/js/share-buttons.js"></script>
+</body>
+
+</html>

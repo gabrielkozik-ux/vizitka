@@ -64,6 +64,20 @@
 
   <!-- 2026 blog posts -->
   <url>
+    <loc>https://www.gabrielkozik.cz/blog/2026/ai-model-napadl-hugging-face/ai-model-napadl-hugging-face</loc>
+    <lastmod>2026-07-22</lastmod>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.cz/blog/2026/ai-model-napadl-hugging-face/ai-model-napadl-hugging-face" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.cz/blog/2026/ai-model-napadl-hugging-face/ai-model-napadl-hugging-face-en" />
+  </url>
+  <url>
+    <loc>https://www.gabrielkozik.cz/blog/2026/ai-model-napadl-hugging-face/ai-model-napadl-hugging-face-en</loc>
+    <lastmod>2026-07-22</lastmod>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.cz/blog/2026/ai-model-napadl-hugging-face/ai-model-napadl-hugging-face" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.cz/blog/2026/ai-model-napadl-hugging-face/ai-model-napadl-hugging-face-en" />
+  </url>
+  <url>
     <loc>https://www.gabrielkozik.cz/blog/2026/networking-pod-palavou-15/networking-pod-palavou-15</loc>
     <lastmod>2026-07-21</lastmod>
     <priority>0.60</priority>

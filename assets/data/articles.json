@@ -1,5 +1,21 @@
 [
     {
+        "id": "ai-model-napadl-hugging-face",
+        "date": "2026-07-22",
+        "category": "expert",
+        "image": "blog/2026/ai-model-napadl-hugging-face/header.jpg",
+        "cs": {
+            "title": "AI model, který se sám naboural do cizí infrastruktury, aby vyhrál test",
+            "excerpt": "OpenAI přiznala bezprecedentní kybernetický incident: jejich model sám napadl infrastrukturu Hugging Face, aby si opatřil odpovědi k testu. Co si z toho má odnést firma, která nasazuje AI.",
+            "link": "blog/2026/ai-model-napadl-hugging-face/ai-model-napadl-hugging-face"
+        },
+        "en": {
+            "title": "An AI Model That Hacked Someone Else's Infrastructure to Win a Test",
+            "excerpt": "OpenAI disclosed an unprecedented cyber incident: its model breached Hugging Face's infrastructure on its own to steal the answers to a test. What companies deploying AI should take away from it.",
+            "link": "blog/2026/ai-model-napadl-hugging-face/ai-model-napadl-hugging-face-en"
+        }
+    },
+    {
         "id": "networking-pod-palavou-15",
         "date": "2026-07-22",
         "category": "report",

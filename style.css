@@ -1554,6 +1554,29 @@ footer {
     z-index: 1;
 }
 
+/* 1b. Galerie jako jednosloupcový stack (plna sirka, prirozeny pomer stran) —
+   stejny vzhled jako u starsich reportazi (networking-palava-14/12), kde
+   fotky padaly do obecneho stylu .article-content img bez vlastni mrizky. */
+.gallery-stack {
+    margin: 30px 0;
+}
+
+.gallery-stack img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin: 0 0 20px 0;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gallery-stack img:hover {
+    transform: scale(1.01);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
 /* 2. Modální okno (Lightbox - černé pozadí) */
 .modal {
     display: none;

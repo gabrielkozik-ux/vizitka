@@ -1,5 +1,21 @@
 [
     {
+        "id": "networking-pod-palavou-15",
+        "date": "2026-07-21",
+        "category": "report",
+        "image": "assets/images/blog/2026/networking-pod-palavou-15/1.jpg",
+        "cs": {
+            "title": "Networking Pod Pálavou #15: Když ESG potkává empatii",
+            "excerpt": "Reportáž z 15. byznys setkání Pod Pálavou o zaměstnávání OZP, ESG odpovědnosti a práci s vysoce citlivými lidmi (HSP) v týmu. S fotografiemi od Jiřího Urbana.",
+            "link": "blog/2026/networking-pod-palavou-15/networking-pod-palavou-15"
+        },
+        "en": {
+            "title": "Networking Pod Pálavou #15: When ESG Meets Empathy",
+            "excerpt": "Report from the 15th Pod Pálavou business meeting on employing people with disabilities, ESG responsibility, and working with highly sensitive people (HSP) in teams. With photos by Jiří Urban.",
+            "link": "blog/2026/networking-pod-palavou-15/networking-pod-palavou-15-en"
+        }
+    },
+    {
         "id": "ai-slop-pred-nss",
         "date": "2026-07-17",
         "category": "expert",

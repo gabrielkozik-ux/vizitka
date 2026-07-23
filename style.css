@@ -846,10 +846,17 @@ section:nth-child(2n) {
     gap: 5px;
 }
 
-.event-details-new p::before {
+.event-details-new p:not(.event-theme)::before {
     content: "📍";
     font-size: 0.85em;
     flex-shrink: 0;
+}
+
+.event-details-new p.event-theme {
+    font-size: 0.85em;
+    font-style: italic;
+    color: #94a3b8;
+    margin: 0 0 6px;
 }
 
 .event-actions {

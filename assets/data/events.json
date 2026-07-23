@@ -45,14 +45,34 @@
     "date": "2026-08-18",
     "time": "09:00 - 11:30",
     "title": {
-      "cs": "Networking Pod Pálavou",
-      "en": "Networking Pod Pálavou",
-      "hu": "Networking Pod Pálavou",
-      "fr": "Réseautage Pod Pálavou"
+      "cs": "Byznys brunch Pod Pálavou #16",
+      "en": "Byznys brunch Pod Pálavou #16",
+      "hu": "Byznys brunch Pod Pálavou #16",
+      "fr": "Byznys brunch Pod Pálavou #16"
+    },
+    "theme": {
+      "cs": "Umění mluvit a rozumět",
+      "en": "The Art of Speaking and Understanding",
+      "hu": "A beszéd és a megértés művészete",
+      "fr": "L'art de parler et de comprendre"
     },
     "place": "Krčma a hotel U Císařské cesty, Branišovice",
     "link": "https://www.pod-palavou.cz/klubova-setkani",
-    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=Networking+Pod+P%C3%A1lavou&dates=20260818T070000Z/20260818T093000Z&details=V%C3%ADce+info%3A+https%3A%2F%2Fwww.pod-palavou.cz%2Fklubova-setkani&location=Kr%C4%8Dma+a+hotel+U+C%C3%ADsa%C5%99sk%C3%A9+cesty%2C+Brani%C5%A1ovice",
+    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=Byznys+brunch+Pod+P%C3%A1lavou+%2316%3A+Um%C4%9Bn%C3%AD+mluvit+a+rozum%C4%9Bt&dates=20260818T070000Z/20260818T093000Z&details=T%C3%A9ma%3A+Um%C4%9Bn%C3%AD+mluvit+a+rozum%C4%9Bt.+V%C3%ADce+info%3A+https%3A%2F%2Fwww.pod-palavou.cz%2Fklubova-setkani&location=Kr%C4%8Dma+a+hotel+U+C%C3%ADsa%C5%99sk%C3%A9+cesty%2C+Brani%C5%A1ovice",
+    "isSoldOut": false
+  },
+  {
+    "date": "2026-08-07",
+    "time": "16:00 - 20:00",
+    "title": {
+      "cs": "Networking BforB Na Svratce",
+      "en": "BforB Na Svratce Networking",
+      "hu": "BforB Na Svratce Networking",
+      "fr": "Réseautage BforB Na Svratce"
+    },
+    "place": "Zahrada pod Kavárnou u Kina, Mlýnská 152, Tišnov",
+    "link": "https://www.facebook.com/profile.php?id=61561146905712",
+    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=Networking+BforB+Na+Svratce&dates=20260807T140000Z/20260807T180000Z&details=Networkingov%C3%A1+akce+v+zahrad%C4%9B+pod+Kav%C3%A1rnou+u+Kina.&location=Zahrada+pod+Kav%C3%A1rnou+u+Kina%2C+Ml%C3%BDnsk%C3%A1+152%2C+Ti%C5%A1nov",
     "isSoldOut": false
   },
   {
@@ -67,6 +87,46 @@
     "place": "IUSTORIA, advokátní kancelář, Slovákova 279/11, Brno",
     "link": "https://cct.cz/",
     "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=CCT+mastermind+v+IUSTORIA%3A+AI+a+pr%C3%A1vn%C3%AD+rizika+podnik%C3%A1n%C3%AD&dates=20260827T150000Z/20260827T180000Z&details=P%C5%99edn%C3%A1%C5%A1ka+Gabriela+Ko%C5%BE%C3%ADka%3A+AI+a+pr%C3%A1vn%C3%AD+rizika+podnik%C3%A1n%C3%AD+%E2%80%94+%C5%A1est+m%C3%BDt%C5%AF%2C+kter%C3%A9+stoj%C3%AD+pen%C3%ADze.&location=IUSTORIA%2C+advok%C3%A1tn%C3%AD+kancel%C3%A1%C5%99%2C+Slov%C3%A1kova+279%2F11%2C+Brno",
+    "isSoldOut": false
+  },
+  {
+    "date": "2026-09-15",
+    "time": "09:00 - 11:30",
+    "title": {
+      "cs": "Byznys brunch Pod Pálavou #17",
+      "en": "Byznys brunch Pod Pálavou #17",
+      "hu": "Byznys brunch Pod Pálavou #17",
+      "fr": "Byznys brunch Pod Pálavou #17"
+    },
+    "theme": {
+      "cs": "Chytrý obchod a krytá záda",
+      "en": "Smart Business, Covered Back",
+      "hu": "Okos üzlet, fedezett hát",
+      "fr": "Affaires intelligentes, dos couvert"
+    },
+    "place": "Krčma a hotel U Císařské cesty, Branišovice",
+    "link": "https://www.pod-palavou.cz/klubova-setkani",
+    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=Byznys+brunch+Pod+P%C3%A1lavou+%2317%3A+Chytr%C3%BD+obchod+a+kryt%C3%A1+z%C3%A1da&dates=20260915T070000Z/20260915T093000Z&details=T%C3%A9ma%3A+Chytr%C3%BD+obchod+a+kryt%C3%A1+z%C3%A1da.+V%C3%ADce+info%3A+https%3A%2F%2Fwww.pod-palavou.cz%2Fklubova-setkani&location=Kr%C4%8Dma+a+hotel+U+C%C3%ADsa%C5%99sk%C3%A9+cesty%2C+Brani%C5%A1ovice",
+    "isSoldOut": false
+  },
+  {
+    "date": "2026-11-24",
+    "time": "09:00 - 11:30",
+    "title": {
+      "cs": "Byznys brunch Pod Pálavou #19",
+      "en": "Byznys brunch Pod Pálavou #19",
+      "hu": "Byznys brunch Pod Pálavou #19",
+      "fr": "Byznys brunch Pod Pálavou #19"
+    },
+    "theme": {
+      "cs": "Kudy vede cesta k sebe-vědomí",
+      "en": "The Road to Self-Confidence",
+      "hu": "Út az önbizalomhoz",
+      "fr": "Le chemin vers la confiance en soi"
+    },
+    "place": "Krčma a hotel U Císařské cesty, Branišovice",
+    "link": "https://www.pod-palavou.cz/klubova-setkani",
+    "calendarLink": "https://www.google.com/calendar/render?action=TEMPLATE&text=Byznys+brunch+Pod+P%C3%A1lavou+%2319%3A+Kudy+vede+cesta+k+sebe-v%C4%9Bdom%C3%AD&dates=20261124T080000Z/20261124T100000Z&details=T%C3%A9ma%3A+Kudy+vede+cesta+k+sebe-v%C4%9Bdom%C3%AD.+V%C3%ADce+info%3A+https%3A%2F%2Fwww.pod-palavou.cz%2Fklubova-setkani&location=Kr%C4%8Dma+a+hotel+U+C%C3%ADsa%C5%99sk%C3%A9+cesty%2C+Brani%C5%A1ovice",
     "isSoldOut": false
   },
   {

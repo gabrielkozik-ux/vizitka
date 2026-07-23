@@ -34,6 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Vybereme správný jazyk titulku, pokud neexistuje, použijeme CS
                 const title = event.title[currentLang] || event.title['cs'];
 
+                // Téma akce (volitelné, zobrazuje se menším písmem pod názvem)
+                const theme = event.theme ? (event.theme[currentLang] || event.theme['cs']) : '';
+
                 // HTML šablona jedné akce
                 const html = `
                     <li>
@@ -43,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                         <div class="event-details-new">
                             <h4>${title}</h4>
+                            ${theme ? `<p class="event-theme">${theme}</p>` : ''}
                             <p>${event.place}</p>
                         </div>
                         <div class="event-actions">

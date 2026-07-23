@@ -222,12 +222,13 @@ section:nth-child(2n) {
     /* Foto z networkingu Pod Palavou — text vlevo, Gabriel vpravo od stredu */
     background-image: linear-gradient(90deg, rgba(12, 35, 64, 0.88), rgba(12, 35, 64, 0.55) 60%, rgba(12, 35, 64, 0.4)), url('assets/images/hero-pod-palavou.jpg');
     background-size: cover;
-    background-position: center 22%;
+    /* Posunuto doprava a níž, aby byla vidět větší část postavy (ne jen obličej) */
+    background-position: 72% 38%;
     background-attachment: fixed;
     color: var(--white);
 
-    /* ZMĚNA: Výška snížena na 50% pro efekt užšího pásu */
-    min-height: 50vh;
+    /* Vyšší pás než dřívějších 50vh — méně agresivní ořez fotky */
+    min-height: 60vh;
 
     display: flex;
     flex-direction: column;

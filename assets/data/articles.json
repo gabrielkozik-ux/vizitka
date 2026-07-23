@@ -1,5 +1,21 @@
 [
     {
+        "id": "ponozky-v-sandalech-legislativni-proces",
+        "date": "2026-07-23",
+        "category": "expert",
+        "image": "https://img.youtube.com/vi/9k4F2jDKEXs/maxresdefault.jpg",
+        "cs": {
+            "title": "Ponožky v sandálech ze zákona? Co vás naučí český legislativní proces",
+            "excerpt": "Na absurdním příkladu z pořadu What the Fact? (ČT) rozebírám, jak v Česku vznikají zákony – a proč by to měl sledovat každý podnikatel, ne až když zaklepe kontrola.",
+            "link": "blog/2026/ponozky-v-sandalech-legislativni-proces/ponozky-v-sandalech-legislativni-proces"
+        },
+        "en": {
+            "title": "A Legal Sock Mandate? What Czech Lawmaking Can Teach Your Business",
+            "excerpt": "Using an absurd example from Czech TV's What the Fact?, I break down how laws actually get made in Czechia – and why every business owner should be watching, not just reacting once inspectors show up. (Czech only.)",
+            "link": "blog/2026/ponozky-v-sandalech-legislativni-proces/ponozky-v-sandalech-legislativni-proces"
+        }
+    },
+    {
         "id": "ai-model-napadl-hugging-face",
         "date": "2026-07-22",
         "category": "expert",

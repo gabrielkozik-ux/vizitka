@@ -24,6 +24,9 @@
     <meta name="twitter:image" content="https://img.youtube.com/vi/9k4F2jDKEXs/maxresdefault.jpg">
 
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Ponožky v sandálech ze zákona? Co vás naučí český legislativní proces", "description": "Na absurdním příkladu z pořadu What the Fact? (ČT) rozebírám, jak v Česku vznikají zákony – a proč by to měl sledovat každý podnikatel.", "image": "https://img.youtube.com/vi/9k4F2jDKEXs/maxresdefault.jpg", "datePublished": "2026-07-23", "inLanguage": "cs", "mainEntityOfPage": "https://www.gabrielkozik.cz/blog/2026/ponozky-v-sandalech-legislativni-proces/ponozky-v-sandalech-legislativni-proces", "author": {"@type": "Person", "name": "Mgr. Gabriel Kožík", "url": "https://www.gabrielkozik.cz/"}, "publisher": {"@type": "Person", "name": "Mgr. Gabriel Kožík"}}</script>
+    <link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.cz/blog/2026/ponozky-v-sandalech-legislativni-proces/ponozky-v-sandalech-legislativni-proces" />
+    <link rel="alternate" hreflang="en" href="https://www.gabrielkozik.cz/blog/2026/ponozky-v-sandalech-legislativni-proces/ponozky-v-sandalech-legislativni-proces-en" />
+    <link rel="alternate" hreflang="x-default" href="https://www.gabrielkozik.cz/blog/2026/ponozky-v-sandalech-legislativni-proces/ponozky-v-sandalech-legislativni-proces" />
     <link rel="icon" type="image/x-icon" href="../../../assets/images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,6 +41,14 @@
             <a href="../../../">Úvodní stránka</a>
             <a href="../../../blog">Blog</a>
             <a href="../../../#propojit">Kontaktujte mě</a>
+        </div>
+        <div class="lang-switcher">
+            <button class="lang-button lang-switcher-button" aria-haspopup="true" aria-expanded="false">CZ <span
+                    class="arrow"></span></button>
+            <div class="lang-dropdown lang-switcher-dropdown">
+                <a href="ponozky-v-sandalech-legislativni-proces" class="active">CZ</a>
+                <a href="ponozky-v-sandalech-legislativni-proces-en">EN</a>
+            </div>
         </div>
     </nav>
 
@@ -149,6 +160,22 @@
         </div>
     </footer>
 
+    <script>
+        const langButton = document.querySelector('.lang-switcher-button');
+        const langDropdown = document.querySelector('.lang-switcher-dropdown');
+        function toggleLangDropdown() {
+            const isExpanded = langButton.getAttribute('aria-expanded') === 'true';
+            langButton.setAttribute('aria-expanded', !isExpanded);
+            langButton.classList.toggle('active');
+            langDropdown.style.display = langDropdown.style.display === 'block' ? 'none' : 'block';
+        }
+        langButton.addEventListener('click', e => { e.stopPropagation(); toggleLangDropdown(); });
+        window.addEventListener('click', e => {
+            if (langButton.classList.contains('active') && !langButton.parentElement.contains(e.target)) {
+                toggleLangDropdown();
+            }
+        });
+    </script>
     <script src="../../../assets/js/share-buttons.js"></script>
 </body>
 

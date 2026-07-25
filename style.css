@@ -937,8 +937,12 @@ section {
     text-align: center;
 }
 
-/* Odkaz na konci karty se drzi dna, takze CTA jsou u vsech karet zarovnana */
-.service-card>p:last-child {
+/* CTA odkaz na konci karty se drzi dna, takze jsou u vsech karet zarovnane.
+   POZOR na selektor: .service-card ma dve podoby. V sekci Sluzby konci
+   odstavcem s odkazem (za <ul>), v sekci Jak pracuji je odstavec jediny
+   obsah karty. Puvodni p:last-child chytal oba — a v druhe podobe tlacil
+   text ke dnu karty. Proto vazba na predchazejici <ul>. */
+.service-card>ul+p:last-child {
     margin-top: auto;
     margin-bottom: 0;
     padding-top: var(--sp-16);
@@ -1916,17 +1920,8 @@ section {
     text-decoration: underline;
 }
 
-/* Socialni ikony v clanku: obecne .article-content img (width:100%)
-   by je nafouklo — zde je vracime na 28 px. */
-
-.article-content .social-icon img {
-    display: inline-block;
-    width: 28px;
-    height: 28px;
-    margin: 0;
-    box-shadow: none;
-    border-radius: 0;
-}
+/* Socialni ikony v clanku: obecne pravidlo .article-content img (width: 100%)
+   uz je neovlivnuje, protoze jsou to SVG. Zustava jen odsazeni kontejneru. */
 
 .article-content .social-icons-container {
     margin: var(--sp-24) 0 10px;
@@ -1958,21 +1953,21 @@ section {
     height: 38px;
     border-radius: 50%;
     background: var(--surface-tint);
-    transition: background 0.2s ease, transform 0.2s ease;
+    color: var(--ink-muted);
+    transition: background var(--dur-2) var(--ease), color var(--dur-2) var(--ease), transform var(--dur-2) var(--ease);
 }
 
-.share-btn img,
-.article-content .share-btn img {
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    box-shadow: none;
-    border-radius: 0;
-    margin: 0;
+/* Sdileci ikony jsou inline SVG (viz share-buttons.js) a dedi barvu */
+.share-btn svg {
+    width: 17px;
+    height: 17px;
+    fill: currentColor;
+    display: block;
 }
 
 .share-btn:hover {
     background: var(--bronze-50);
+    color: var(--bronze-600);
     transform: translateY(-2px);
 }
 
@@ -2156,22 +2151,38 @@ footer {
 .social-icons-container {
     margin-top: var(--sp-20);
     display: flex;
-    gap: 15px;
+    align-items: center;
+    gap: var(--sp-16);
 }
 
-/* Plnobarevna loga socialnich siti v patičce srazi cenu. brightness(0)
-   je zmeni na siluetu, invert(1) na bilou — funguje pro kazde PNG s alfou
-   a nevyzaduje zasah do HTML 13 souboru. Na hover se rozsviti. */
-.social-icon img {
-    width: 24px;
-    height: 24px;
-    filter: brightness(0) invert(1);
-    opacity: 0.65;
-    transition: opacity var(--dur-2) var(--ease);
+/* Ikony jsou inline SVG a dedi barvu z .social-icon pres currentColor.
+   Drive to byla plnobarevna PNG (Instagram 48 kB) a pokus je zmonochromatizovat
+   filtrem selhal — nejsou to siluety glyfu, ale plne dlazdice s vyseknutym
+   glyfem, takze brightness(0) invert(1) z nich udelal bily ctverec. */
+.social-icon {
+    display: inline-flex;
+    color: var(--ink-muted);
+    transition: color var(--dur-2) var(--ease);
 }
 
-.social-icon:hover img {
-    opacity: 1;
+.social-icon svg {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+    display: block;
+}
+
+.social-icon:hover {
+    color: var(--bronze-600);
+}
+
+/* V paticce jsou na navy, tam plati svetla dvojice */
+footer .social-icon {
+    color: var(--on-deep-muted);
+}
+
+footer .social-icon:hover {
+    color: var(--bronze-200);
 }
 
 .copyright {

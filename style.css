@@ -27,6 +27,13 @@
    - Breakpointy: 680 / 768 / 900 / 1024 px. Dalsi nezavadet.
    - Zadne !important. Kdyz ho potrebujes, je spatne napsany selektor.
    - Jeden selektor = jedno misto v souboru. Zadne "pozdejsi pravidlo to prebije".
+   - Barvy, stiny, zaobleni a velikosti pisma VZDY z tokenu, nikdy natvrdo.
+   - Prostor: layoutove hodnoty (>= 20px) z tokenu --sp-*. Hodnoty pod 20px
+     jsou opticke doladeni (odsazeni ikon, mezery v radku) a zustavaji jako
+     literal px — token by tam nic nevysvetlil.
+   - Bronz: --bronze-500 jen na dekoraci (linky, ramecky, ikony),
+     --bronze-600 na text na svetlem, --bronze-200 na text na tmavem.
+     Na tmavem pozadi pouzivej --on-deep / --on-deep-muted, ne --ink-*.
    ========================================================================== */
 
 /* ======================================================================
@@ -44,8 +51,6 @@
     /* tmave "kotvy" sekci a footer */
     --navy-800: #0c2340;
     /* zakladni brand navy, 15.8:1 */
-    --navy-700: #16345a;
-    /* hover a jemnejsi varianta */
 
     /* --- BARVY: bronz (teplo, akcent) ------------------------------- */
     --bronze-500: #b8873b;
@@ -58,8 +63,6 @@
     /* svetle pozadi badgu */
 
     /* --- BARVY: neutraly ------------------------------------------- */
-    --ink: #1f2937;
-    /* nejtmavsi text, 14.7:1 */
     --ink-body: #334155;
     /* bezny text, 10.4:1 */
     --ink-muted: #5b6b80;
@@ -80,21 +83,30 @@
     --surface-tint: #f7f8fa;
     --surface-deep: var(--navy-900);
 
-    /* --- PROSTOR: 8px base ------------------------------------------ */
-    --sp-1: 4px;
-    --sp-2: 8px;
-    --sp-3: 16px;
-    --sp-4: 24px;
-    --sp-5: 40px;
-    --sp-6: 64px;
-    --sp-7: 96px;
-    --sp-8: 128px;
+    /* --- PROSTOR: 4px mrizka, tokeny pojmenovane podle hodnoty ---------
+       8px zaklad nepokryl 12 a 20 px, ktere v souboru tvorily tretinu vsech
+       hodnot. Nazev = hodnota, takze neni co dohledavat.
+       Nove hodnoty ber odsud; nesnapnute zbytky jsou vypsane v reportu. */
+    --sp-4: 4px;
+    --sp-8: 8px;
+    --sp-12: 12px;
+    --sp-16: 16px;
+    --sp-20: 20px;
+    --sp-24: 24px;
+    --sp-28: 28px;
+    --sp-32: 32px;
+    --sp-36: 36px;
+    --sp-40: 40px;
+    --sp-48: 48px;
+    --sp-64: 64px;
+    --sp-80: 80px;
+    --sp-96: 96px;
+    --sp-128: 128px;
     --section-y: clamp(64px, 8vw, 128px);
     /* vertikalni rytmus sekci */
 
     /* --- TYPOGRAFIE: jedna stupnice, pomer ~1.25 -------------------- */
     --step--1: clamp(0.83rem, 0.80rem + 0.10vw, 0.89rem);
-    --step-0: clamp(1.00rem, 0.96rem + 0.15vw, 1.06rem);
     --step-1: clamp(1.20rem, 1.10rem + 0.40vw, 1.40rem);
     --step-2: clamp(1.45rem, 1.25rem + 0.80vw, 1.85rem);
     --step-3: clamp(1.75rem, 1.40rem + 1.50vw, 2.50rem);
@@ -106,6 +118,10 @@
     --r-md: 14px;
     --r-pill: 999px;
 
+    /* --- OBRYSY (ne elevace — proto mimo skalu stinu) ---------------- */
+    --ring-hairline: 0 0 0 1px rgba(12, 35, 64, 0.12);
+    --ring-focus: 0 0 0 3px rgba(12, 35, 64, 0.08);
+
     /* --- ELEVACE: ctyri urovne, vsechny v navy odstinu -------------
        Neutralne cerny stin dela weby "spinave". Tohle je ten rozdil,
        ktery nikdo nepojmenuje, ale kazdy vidi. */
@@ -116,7 +132,6 @@
 
     /* --- POHYB: jedna easing funkce pro cely web -------------------- */
     --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
-    --dur-1: 0.18s;
     --dur-2: 0.32s;
     --dur-3: 0.60s;
 
@@ -130,21 +145,6 @@
     /* --- LAYOUT ----------------------------------------------------- */
     --nav-h: 72px;
     --wrap: 1140px;
-    --measure: 68ch;
-    /* max. delka radku textu pro citelnost */
-
-    /* --- ALIASY PRO ZPETNOU KOMPATIBILITU --------------------------
-       Stara jmena promennych pouzivana napric souborem. Necham je zit,
-       aby nebylo nutne prepsat vsech 297 pravidel naraz. Pri dalsich
-       upravach pouzivej uz jen tokeny vyse. */
-    --primary-color: var(--navy-800);
-    --secondary-color: var(--bronze-500);
-    --accent-color: var(--bronze-600);
-    --gold-soft: var(--bronze-50);
-    --text-color: var(--ink-body);
-    --light-gray: var(--surface-tint);
-    --white: var(--surface);
-    --border-radius: var(--r-sm);
 }
 
 /* ======================================================================
@@ -166,8 +166,8 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.7;
-    color: var(--text-color);
-    background-color: var(--white);
+    color: var(--ink-body);
+    background-color: var(--surface);
     padding-top: var(--nav-h);
 }
 
@@ -225,13 +225,13 @@ figure {
 .container {
     max-width: var(--wrap);
     margin: 0 auto;
-    padding: var(--sp-3) var(--sp-4);
+    padding: var(--sp-16) var(--sp-24);
 }
 
 /* Vzdusnost je jediny "prémiovy" znak, ktery nejde nafejkovat.
    Drive 52px, coz byla polovina toho, co takova stranka potrebuje. */
 section {
-    padding: var(--section-y) var(--sp-4);
+    padding: var(--section-y) var(--sp-24);
     scroll-margin-top: var(--nav-h);
 }
 
@@ -277,7 +277,7 @@ section {
     backdrop-filter: saturate(180%) blur(16px);
     -webkit-backdrop-filter: saturate(180%) blur(16px);
     height: var(--nav-h);
-    padding: 0 var(--sp-5);
+    padding: 0 var(--sp-40);
     border-bottom: 1px solid rgba(12, 35, 64, 0.06);
     position: fixed;
     top: 0;
@@ -295,7 +295,7 @@ section {
     letter-spacing: -0.01em;
     display: flex;
     align-items: center;
-    gap: var(--sp-2);
+    gap: var(--sp-8);
 }
 
 .nav-photo {
@@ -304,7 +304,7 @@ section {
     border-radius: 50%;
     object-fit: cover;
     /* Sedy prstenec byl datovany — staci vlasova linka */
-    box-shadow: 0 0 0 1px rgba(12, 35, 64, 0.12);
+    box-shadow: var(--ring-hairline);
 }
 
 .nav-links-container {
@@ -317,7 +317,7 @@ section {
     font-weight: 500;
     font-size: 0.95rem;
     letter-spacing: 0.01em;
-    margin: 0 var(--sp-3);
+    margin: 0 var(--sp-16);
     position: relative;
 }
 
@@ -362,7 +362,7 @@ section {
 
 .lang-switcher {
     position: relative;
-    margin-left: 20px;
+    margin-left: var(--sp-20);
 }
 
 .lang-button {
@@ -372,17 +372,17 @@ section {
     font-weight: 700;
     font-size: 1.1em;
     cursor: pointer;
-    color: var(--primary-color);
+    color: var(--navy-800);
     display: flex;
     align-items: center;
 }
 
 .lang-button .arrow {
-    border: solid var(--primary-color);
+    border: solid var(--navy-800);
     border-width: 0 2px 2px 0;
     display: inline-block;
     padding: 3px;
-    margin-left: 8px;
+    margin-left: var(--sp-8);
     transform: rotate(45deg);
     transition: transform 0.3s;
 }
@@ -396,9 +396,9 @@ section {
     position: absolute;
     right: 0;
     top: 100%;
-    background: var(--white);
+    background: var(--surface);
     box-shadow: var(--sh-3);
-    border-radius: 8px;
+    border-radius: var(--r-sm);
     overflow: hidden;
     min-width: 100px;
     z-index: 1001;
@@ -406,20 +406,20 @@ section {
 }
 
 .lang-dropdown a {
-    padding: 10px 20px;
+    padding: 10px var(--sp-20);
     display: block;
-    color: var(--text-color);
+    color: var(--ink-body);
     font-weight: 600;
 }
 
 .lang-dropdown a:hover {
-    background-color: var(--light-gray);
+    background-color: var(--surface-tint);
     color: var(--bronze-600);
 }
 
 .lang-dropdown a.active {
     color: var(--bronze-600);
-    background-color: var(--gold-soft);
+    background-color: var(--bronze-50);
 }
 
 /* --- Navigace: mobil (roletka) --- */
@@ -436,7 +436,7 @@ section {
         left: 0;
         background-color: var(--surface);
         box-shadow: var(--sh-3);
-        padding: var(--sp-3) 0;
+        padding: var(--sp-16) 0;
         z-index: 999;
     }
 
@@ -453,7 +453,7 @@ section {
 
     .nav-links a {
         display: block;
-        padding: var(--sp-3);
+        padding: var(--sp-16);
         margin: 0;
         width: 100%;
         text-align: center;
@@ -466,7 +466,7 @@ section {
     }
 
     .lang-switcher {
-        margin: var(--sp-3) auto;
+        margin: var(--sp-16) auto;
     }
 
     .hamburger {
@@ -499,7 +499,7 @@ section {
     .main-nav>.nav-links a {
         display: inline-block;
         width: auto;
-        padding: 8px 10px;
+        padding: var(--sp-8) 10px;
         margin: 0;
         border-bottom: none;
         font-size: 0.9em;
@@ -542,7 +542,7 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 0 var(--sp-4);
+    padding: 0 var(--sp-24);
     text-align: left;
 }
 
@@ -555,7 +555,7 @@ section {
 .hero h1 {
     font-size: var(--step-5);
     line-height: 1.14;
-    margin: 0 0 var(--sp-3) 0;
+    margin: 0 0 var(--sp-16) 0;
     color: var(--surface);
 }
 
@@ -572,12 +572,12 @@ section {
     display: block;
     width: 90px;
     height: 2px;
-    margin: var(--sp-4) 0 0;
+    margin: var(--sp-24) 0 0;
     background: linear-gradient(90deg, var(--bronze-200), transparent);
 }
 
 .hero .cta-button {
-    margin-top: 34px;
+    margin-top: var(--sp-32);
 }
 
 /* --- Hero: mobil --- */
@@ -585,21 +585,21 @@ section {
 @media (max-width: 768px) {
     .hero {
         /* Na mobilu vysku nefixujeme, ale drzime dost prostoru */
-        padding: var(--sp-7) var(--sp-4) var(--sp-6);
+        padding: var(--sp-96) var(--sp-24) var(--sp-64);
         min-height: auto;
         background-position: 62% center;
     }
 
     .hero h1 {
-        margin-bottom: var(--sp-2);
+        margin-bottom: var(--sp-8);
     }
 
     .hero-underline {
-        margin-top: var(--sp-3);
+        margin-top: var(--sp-16);
     }
 
     .hero .cta-button {
-        margin-top: var(--sp-4);
+        margin-top: var(--sp-24);
     }
 }
 
@@ -614,9 +614,9 @@ section {
     background-image: linear-gradient(rgba(12, 35, 64, 0.8), rgba(12, 35, 64, 0.8)), url('assets/images/uvodni-obrazek.jpg');
     background-size: cover;
     background-position: center;
-    padding: 80px 20px;
+    padding: var(--sp-80) var(--sp-20);
     text-align: center;
-    color: var(--white);
+    color: var(--surface);
 }
 
 .page-header h1 {
@@ -627,7 +627,7 @@ section {
 }
 
 .page-header p {
-    color: var(--white);
+    color: var(--surface);
     font-size: 1.2em;
     opacity: 0.9;
 }
@@ -639,7 +639,7 @@ section {
 .trust-bar {
     background: var(--surface-deep);
     color: var(--on-deep);
-    padding: var(--sp-5) var(--sp-4);
+    padding: var(--sp-40) var(--sp-24);
 }
 
 .trust-bar-inner {
@@ -647,7 +647,7 @@ section {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: var(--sp-24);
     text-align: center;
 }
 
@@ -662,7 +662,7 @@ section {
 .trust-item .trust-label {
     font-size: var(--step--1);
     color: var(--on-deep-muted);
-    margin-top: var(--sp-1);
+    margin-top: var(--sp-4);
     letter-spacing: 0.01em;
 }
 
@@ -677,11 +677,11 @@ section {
     font-size: var(--step-3);
     line-height: 1.2;
     margin-top: 0;
-    margin-bottom: var(--sp-5);
+    margin-bottom: var(--sp-40);
     font-weight: 600;
     color: var(--navy-800);
     position: relative;
-    padding-bottom: var(--sp-3);
+    padding-bottom: var(--sp-16);
 }
 
 .section-title::after {
@@ -692,7 +692,7 @@ section {
     transform: translateX(-50%);
     width: 56px;
     height: 3px;
-    background: var(--secondary-color);
+    background: var(--bronze-500);
 }
 
 .section-subtitle {
@@ -701,20 +701,20 @@ section {
     line-height: 1.5;
     color: var(--ink-muted);
     max-width: 700px;
-    margin: calc(var(--sp-3) * -1) auto var(--sp-5);
+    margin: calc(var(--sp-16) * -1) auto var(--sp-40);
 }
 
 /* --- Tlacitka --- */
 
 .cta-button {
     display: inline-block;
-    background: var(--primary-color);
-    color: var(--white);
-    padding: 14px 34px;
+    background: var(--navy-800);
+    color: var(--surface);
+    padding: 14px var(--sp-32);
     text-decoration: none;
     font-weight: 600;
-    border-radius: 50px;
-    box-shadow: 0 2px 10px rgba(12, 35, 64, 0.18);
+    border-radius: var(--r-pill);
+    box-shadow: var(--sh-2);
     border: none;
     font-size: 1em;
     letter-spacing: 0.2px;
@@ -722,36 +722,38 @@ section {
     cursor: pointer;
 }
 
+/* Bila na --bronze-500 ma jen 3.2:1. Hover tlacitka proto na --bronze-600
+   (bila na nem ma 5.29:1). */
 .cta-button:hover {
-    background: var(--secondary-color);
+    background: var(--bronze-600);
     transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(184, 135, 59, 0.35);
-    color: var(--white);
+    box-shadow: var(--sh-3);
+    color: var(--surface);
 }
 
 .cta-button.secondary {
     background: transparent;
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
+    border: 2px solid var(--navy-800);
+    color: var(--navy-800);
     box-shadow: none;
 }
 
 .cta-button.secondary:hover {
-    background: var(--primary-color);
-    color: var(--white);
+    background: var(--navy-800);
+    color: var(--surface);
 }
 
 /* --- Kontaktni formular --- */
 
 .cta-container {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: var(--sp-48);
 }
 
 .booking-text {
     font-size: 1.1em;
-    color: var(--text-color);
-    margin: 20px 0 10px;
+    color: var(--ink-body);
+    margin: var(--sp-20) 0 10px;
     font-style: italic;
     opacity: 0.8;
 }
@@ -760,15 +762,15 @@ section {
     max-width: 600px;
     margin: 0 auto;
     text-align: left;
-    background: var(--white);
-    padding: 40px;
-    border-radius: 16px;
+    background: var(--surface);
+    padding: var(--sp-40);
+    border-radius: var(--r-md);
     box-shadow: var(--sh-3);
 }
 
 .form-container .section-subtitle {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: var(--sp-20);
 }
 
 .form-group {
@@ -776,22 +778,22 @@ section {
 }
 
 .form-group:last-of-type {
-    margin-bottom: 20px;
+    margin-bottom: var(--sp-20);
 }
 
 .form-label {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: var(--sp-8);
     font-weight: 600;
-    color: var(--primary-color);
+    color: var(--navy-800);
 }
 
 .form-input,
 .form-textarea {
     width: 100%;
-    padding: 12px 15px;
+    padding: var(--sp-12) 15px;
     border: 2px solid var(--hairline);
-    border-radius: var(--border-radius);
+    border-radius: var(--r-sm);
     font-family: 'Inter', sans-serif;
     font-size: 1em;
     transition: border-color 0.3s ease;
@@ -800,13 +802,13 @@ section {
 .form-input:focus,
 .form-textarea:focus {
     outline: none;
-    border-color: var(--secondary-color);
-    box-shadow: 0 0 0 3px rgba(12, 35, 64, 0.08);
+    border-color: var(--bronze-500);
+    box-shadow: var(--ring-focus);
 }
 
 .form-actions {
     text-align: center;
-    margin-top: 20px;
+    margin-top: var(--sp-20);
 }
 
 /* --- Animace: fade-in komponent --- */
@@ -864,16 +866,16 @@ section {
     max-width: 760px;
     margin: 0 auto;
     display: grid;
-    gap: 16px;
+    gap: var(--sp-16);
     padding: 0;
     list-style: none;
 }
 
 .pain-list li {
-    background: var(--white);
-    border-left: 4px solid var(--secondary-color);
-    border-radius: var(--border-radius);
-    padding: 18px 22px;
+    background: var(--surface);
+    border-left: 2px solid var(--bronze-500);
+    border-radius: var(--r-sm);
+    padding: var(--sp-16) var(--sp-24);
     box-shadow: var(--sh-1);
     font-size: 1.05em;
 }
@@ -881,10 +883,10 @@ section {
 .pain-resolution {
     text-align: center;
     max-width: 720px;
-    margin: 40px auto 0;
+    margin: var(--sp-40) auto 0;
     font-size: 1.25em;
     font-weight: 600;
-    color: var(--primary-color);
+    color: var(--navy-800);
 }
 
 /* --- 9.2 Sluzby --- */
@@ -892,14 +894,14 @@ section {
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 40px;
+    gap: var(--sp-40);
 }
 
 .service-card {
-    background: var(--white);
-    padding: 40px;
-    border-radius: 16px;
-    border: 1px solid rgba(226, 232, 240, 0.8);
+    background: var(--surface);
+    padding: var(--sp-40);
+    border-radius: var(--r-md);
+    border: 1px solid var(--hairline);
     box-shadow: var(--sh-2);
     transition: transform var(--dur-2) var(--ease), box-shadow var(--dur-2) var(--ease), border-color var(--dur-2) var(--ease);
     position: relative;
@@ -916,27 +918,34 @@ section {
     top: 0;
     left: 0;
     width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+    height: 2px;
+    background: var(--hairline);
 }
 
+/* Drive min-height: 4rem na h3 a 6rem na prvnim <p>. Melo to srovnat karty
+   vedle sebe, ale fungovalo jen na jednom rozliseni — a .service-card se
+   pouziva ve dvou podobach (6 deti ve Sluzbach, 2 v Jak pracuji), takze
+   pevna vyska jednu z nich vzdy deformovala.
+
+   Subgrid by radky srovnal skutecne, ale vyzaduje pevny pocet radku, cimz
+   by druha podoba karty prestala fungovat. Reseni: obsah tece prirozene
+   a spolecne dno drzi odkaz pres margin-top: auto. */
 .service-card h3 {
     font-size: var(--step-2);
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: var(--sp-16);
     text-align: center;
-    min-height: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-.service-card>p:first-of-type {
-    min-height: 6rem;
+/* Odkaz na konci karty se drzi dna, takze CTA jsou u vsech karet zarovnana */
+.service-card>p:last-child {
+    margin-top: auto;
+    margin-bottom: 0;
+    padding-top: var(--sp-16);
 }
 
 .service-card h4 {
-    color: var(--accent-color);
+    color: var(--bronze-600);
     font-size: 1.1em;
     margin-bottom: 15px;
     text-transform: uppercase;
@@ -948,12 +957,12 @@ section {
 .service-card ul {
     list-style: none;
     padding: 0;
-    margin-bottom: 20px;
+    margin-bottom: var(--sp-20);
 }
 
 .service-card li {
     padding-left: 1.8em;
-    margin-bottom: 12px;
+    margin-bottom: var(--sp-12);
     position: relative;
     color: var(--ink-body);
 }
@@ -972,8 +981,11 @@ section {
     mask: var(--icon-check) center / contain no-repeat;
 }
 
-.service-primary {
-    border-top: 4px solid var(--secondary-color);
+/* Hlavni sluzba se odlisuje bronzovym pruhem nahore. Drive mela navic
+   border-top: 4px, takze akcent byl dvojity (4px ramecek + 4px pruh). */
+.service-primary::before {
+    height: 3px;
+    background: linear-gradient(90deg, var(--bronze-500), var(--bronze-600));
 }
 
 .service-badge {
@@ -982,9 +994,9 @@ section {
     font-weight: 700;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    color: var(--accent-color);
-    background: var(--gold-soft);
-    border-radius: 50px;
+    color: var(--bronze-600);
+    background: var(--bronze-50);
+    border-radius: var(--r-pill);
     padding: 5px 14px;
     margin-bottom: 14px;
 }
@@ -1012,7 +1024,7 @@ section {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: var(--sp-8) var(--sp-4);
+    padding: var(--sp-128) var(--sp-24);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1032,12 +1044,12 @@ section {
     color: var(--surface);
     font-size: var(--step-3);
     line-height: 1.25;
-    margin: 0 0 var(--sp-5);
+    margin: 0 0 var(--sp-40);
 }
 
 @media (max-width: 768px) {
     .parallax-separator {
-        padding: var(--sp-6) var(--sp-4);
+        padding: var(--sp-64) var(--sp-24);
     }
 }
 
@@ -1046,14 +1058,14 @@ section {
 .cert-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: var(--sp-24);
     margin-top: 10px;
 }
 
 .cert-card {
-    background: var(--white);
+    background: var(--surface);
     border: 1px solid var(--hairline);
-    border-radius: 10px;
+    border-radius: var(--r-md);
     overflow: hidden;
     box-shadow: var(--sh-1);
     display: flex;
@@ -1081,7 +1093,7 @@ section {
 }
 
 .cert-info {
-    padding: 18px 20px 20px;
+    padding: 18px var(--sp-20) var(--sp-20);
     display: flex;
     flex-direction: column;
     gap: 7px;
@@ -1091,14 +1103,14 @@ section {
 .cert-info h3 {
     margin: 0;
     font-size: 1.02em;
-    color: var(--primary-color);
+    color: var(--navy-800);
     line-height: 1.35;
 }
 
 .cert-info p {
     margin: 0;
     font-size: 0.88em;
-    color: var(--text-color);
+    color: var(--ink-body);
     line-height: 1.55;
     flex: 1;
 }
@@ -1110,7 +1122,7 @@ section {
 
 .cert-verify {
     font-size: 0.85em;
-    color: var(--accent-color);
+    color: var(--bronze-600);
     font-weight: 600;
     text-decoration: none;
 }
@@ -1130,16 +1142,16 @@ section {
 .process-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: var(--sp-32);
     max-width: 1000px;
     margin: 0 auto;
 }
 
 .process-step {
     text-align: center;
-    padding: 30px 22px;
-    background: var(--white);
-    border-radius: var(--border-radius);
+    padding: var(--sp-32) var(--sp-24);
+    background: var(--surface);
+    border-radius: var(--r-sm);
     box-shadow: var(--sh-1);
     position: relative;
 }
@@ -1148,19 +1160,19 @@ section {
     font-family: 'Lora', Georgia, serif;
     font-size: 1.1em;
     font-weight: 700;
-    color: var(--white);
-    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    color: var(--surface);
+    background: linear-gradient(135deg, var(--bronze-500), var(--bronze-600));
     width: 46px;
     height: 46px;
     line-height: 46px;
     border-radius: 50%;
-    margin: 0 auto 16px;
+    margin: 0 auto var(--sp-16);
 }
 
 .process-step h3 {
     font-size: var(--step-1);
     color: var(--navy-800);
-    margin: 0 0 var(--sp-2);
+    margin: 0 0 var(--sp-8);
 }
 
 /* Trust bar (sekce 7) i proces: na mobilu do jednoho sloupce */
@@ -1182,10 +1194,10 @@ section {
     height: 220px;
     border-radius: 50%;
     object-fit: cover;
-    margin: 0 auto 30px;
+    margin: 0 auto var(--sp-32);
     display: block;
     box-shadow: var(--sh-3);
-    border: 4px solid var(--white);
+    border: 4px solid var(--surface);
 }
 
 .about-container {
@@ -1203,7 +1215,7 @@ section {
 .photostrip-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: var(--sp-20);
 }
 
 .photostrip-grid figure {
@@ -1214,7 +1226,7 @@ section {
     width: 100%;
     aspect-ratio: 16 / 10;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: var(--r-sm);
     display: block;
     box-shadow: var(--sh-1);
 }
@@ -1222,7 +1234,7 @@ section {
 .photostrip-grid figcaption {
     font-size: 0.82em;
     color: var(--ink-muted);
-    margin-top: 8px;
+    margin-top: var(--sp-8);
     text-align: center;
 }
 
@@ -1237,19 +1249,19 @@ section {
 
 #upcoming-events-wrapper,
 #archiv-sekce {
-    margin-bottom: 50px;
+    margin-bottom: var(--sp-48);
 }
 
 #upcoming-events-list,
 #archive-events-list {
-    margin-top: 25px;
+    margin-top: var(--sp-24);
 }
 
 #archiv-sekce summary {
     font-size: 1.5em;
     font-weight: 700;
-    color: var(--primary-color);
-    margin-bottom: 25px;
+    color: var(--navy-800);
+    margin-bottom: var(--sp-24);
     text-align: center;
     cursor: pointer;
     transition: color 0.3s ease;
@@ -1267,7 +1279,7 @@ section {
     list-style: none;
     padding: 0;
     max-width: 800px;
-    margin: 40px auto 0;
+    margin: var(--sp-40) auto 0;
     display: flex;
     flex-direction: column;
     gap: 14px;
@@ -1276,37 +1288,37 @@ section {
 .events-list li {
     display: flex;
     align-items: center;
-    padding: 22px 24px;
+    padding: var(--sp-24);
     border: 1px solid var(--hairline);
-    border-left: 4px solid var(--secondary-color);
-    border-radius: 12px;
-    background-color: var(--white);
-    gap: 20px;
+    border-left: 2px solid var(--bronze-500);
+    border-radius: var(--r-md);
+    background-color: var(--surface);
+    gap: var(--sp-20);
     transition: transform var(--dur-2) var(--ease), box-shadow var(--dur-2) var(--ease), border-color var(--dur-2) var(--ease);
     box-shadow: var(--sh-1);
 }
 
 .events-list li:hover {
     box-shadow: var(--sh-3);
-    border-left-color: var(--accent-color);
+    border-left-color: var(--bronze-600);
     transform: translateY(-2px);
 }
 
 #upcoming-events-list>li:first-child {
-    border-left-width: 5px;
-    border-left-color: var(--accent-color);
-    background: linear-gradient(135deg, rgba(184, 135, 59, 0.03), rgba(12, 35, 64, 0.03));
-    box-shadow: 0 4px 16px rgba(184, 135, 59, 0.08);
+    border-left-width: 3px;
+    border-left-color: var(--bronze-600);
+    background: linear-gradient(135deg, rgba(184, 135, 59, 0.04), rgba(12, 35, 64, 0.02));
+    box-shadow: var(--sh-2);
 }
 
 #upcoming-events-list>li:first-child:hover {
-    box-shadow: 0 8px 28px rgba(184, 135, 59, 0.15);
+    box-shadow: var(--sh-3);
 }
 
 .event-date-time {
     flex: 0 0 120px;
     border-right: 2px solid var(--hairline);
-    padding-right: 20px;
+    padding-right: var(--sp-20);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1314,7 +1326,7 @@ section {
 
 .event-date-time .date {
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--navy-800);
     font-size: 1.1em;
     font-family: 'Lora', Georgia, serif;
     line-height: 1.3;
@@ -1334,7 +1346,7 @@ section {
 .event-details-new h4 {
     margin: 0 0 6px;
     font-size: 1.15em;
-    color: var(--primary-color);
+    color: var(--navy-800);
     line-height: 1.4;
 }
 
@@ -1375,7 +1387,7 @@ section {
 
 .event-button {
     height: 40px;
-    padding: 0 22px;
+    padding: 0 var(--sp-24);
     font-size: 0.85em;
     display: inline-flex;
     align-items: center;
@@ -1392,7 +1404,7 @@ section {
     width: 40px;
     height: 40px;
     background-color: var(--surface-tint);
-    color: var(--primary-color);
+    color: var(--navy-800);
     border-radius: 50%;
     transition: background-color var(--dur-2) var(--ease), color var(--dur-2) var(--ease);
     flex-shrink: 0;
@@ -1413,13 +1425,13 @@ section {
     .events-list li {
         flex-direction: column;
         align-items: flex-start;
-        padding: 18px 18px 18px 20px;
+        padding: 18px 18px 18px var(--sp-20);
     }
 
     .event-date-time {
         border-right: none;
         border-bottom: 1px solid var(--hairline);
-        padding-bottom: 12px;
+        padding-bottom: var(--sp-12);
         padding-right: 0;
         width: 100%;
         flex: none;
@@ -1447,8 +1459,8 @@ section {
 }
 
 .faq-item {
-    background: var(--white);
-    border-radius: var(--border-radius);
+    background: var(--surface);
+    border-radius: var(--r-sm);
     box-shadow: var(--sh-1);
     margin-bottom: 14px;
     overflow: hidden;
@@ -1456,12 +1468,12 @@ section {
 
 .faq-item summary {
     cursor: pointer;
-    padding: 20px 24px;
+    padding: var(--sp-20) var(--sp-24);
     font-weight: 600;
-    color: var(--primary-color);
+    color: var(--navy-800);
     list-style: none;
     position: relative;
-    padding-right: 52px;
+    padding-right: var(--sp-48);
 }
 
 .faq-item summary::-webkit-details-marker {
@@ -1475,7 +1487,7 @@ section {
     top: 50%;
     transform: translateY(-50%);
     font-size: 1.5em;
-    color: var(--secondary-color);
+    color: var(--bronze-500);
     transition: transform 0.3s ease;
 }
 
@@ -1484,8 +1496,8 @@ section {
 }
 
 .faq-item .faq-body {
-    padding: 0 24px 20px;
-    color: var(--text-color);
+    padding: 0 var(--sp-24) var(--sp-20);
+    color: var(--ink-body);
     line-height: 1.65;
 }
 
@@ -1494,7 +1506,7 @@ section {
 .projects-grid {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: var(--sp-40);
     flex-wrap: wrap;
     text-align: center;
 }
@@ -1522,7 +1534,7 @@ section {
 
 .project-item.core {
     flex: 0 0 100%;
-    margin-bottom: 30px;
+    margin-bottom: var(--sp-32);
 }
 
 .project-item.core img {
@@ -1536,7 +1548,7 @@ section {
 
 .project-item.secondary-core {
     flex: 0 0 100%;
-    margin-bottom: 30px;
+    margin-bottom: var(--sp-32);
 }
 
 /* ======================================================================
@@ -1544,42 +1556,42 @@ section {
    ====================================================================== */
 
 .blog-list {
-    padding: 60px 20px;
+    padding: var(--sp-64) var(--sp-20);
 }
 
 .filter-container {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: var(--sp-48);
 }
 
 .filter-btn {
-    background-color: var(--white);
+    background-color: var(--surface);
     border: 1px solid var(--hairline);
-    padding: 10px 25px;
+    padding: 10px var(--sp-24);
     margin: 0 5px;
     cursor: pointer;
-    border-radius: 50px;
+    border-radius: var(--r-pill);
     font-weight: 600;
-    color: var(--text-color);
+    color: var(--ink-body);
     font-family: 'Inter', sans-serif;
     transition: border-color var(--dur-2) var(--ease), color var(--dur-2) var(--ease), background-color var(--dur-2) var(--ease);
 }
 
 .filter-btn:hover {
-    border-color: var(--secondary-color);
+    border-color: var(--bronze-500);
     color: var(--bronze-600);
 }
 
 .filter-btn.active {
-    background-color: var(--primary-color);
-    color: var(--white);
-    border-color: var(--primary-color);
+    background-color: var(--navy-800);
+    color: var(--surface);
+    border-color: var(--navy-800);
 }
 
 #articles-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
+    gap: var(--sp-28);
     align-items: stretch;
 }
 
@@ -1598,8 +1610,8 @@ section {
 .article-card {
     display: flex;
     flex-direction: column;
-    background: var(--white);
-    border-radius: 12px;
+    background: var(--surface);
+    border-radius: var(--r-md);
     overflow: hidden;
     box-shadow: var(--sh-2);
     transition: transform var(--dur-2) var(--ease), box-shadow var(--dur-2) var(--ease);
@@ -1618,7 +1630,7 @@ section {
     aspect-ratio: 16 / 9;
     position: relative;
     overflow: hidden;
-    background: var(--light-gray);
+    background: var(--surface-tint);
 }
 
 .article-image img {
@@ -1643,7 +1655,7 @@ section {
 }
 
 .article-card .article-content {
-    padding: 20px 24px 24px;
+    padding: var(--sp-20) var(--sp-24) var(--sp-24);
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -1659,7 +1671,7 @@ section {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    margin: 0 0 12px;
+    margin: 0 0 var(--sp-12);
 }
 
 .article-card .read-more-btn {
@@ -1699,27 +1711,27 @@ section {
 
 .pagination-container {
     text-align: center;
-    margin-top: 60px;
+    margin-top: var(--sp-64);
     border-top: 1px solid var(--hairline);
-    padding-top: 30px;
+    padding-top: var(--sp-32);
 }
 
 .pagination-container a {
     display: inline-block;
     padding: 10px 18px;
     margin: 0 5px;
-    border-radius: 8px;
+    border-radius: var(--r-sm);
     font-weight: 600;
-    color: var(--text-color);
-    background: var(--white);
+    color: var(--ink-body);
+    background: var(--surface);
     border: 1px solid var(--hairline);
 }
 
 .pagination-container a.active,
 .pagination-container a:hover:not(.disabled) {
-    background-color: var(--primary-color);
-    color: var(--white);
-    border-color: var(--primary-color);
+    background-color: var(--navy-800);
+    color: var(--surface);
+    border-color: var(--navy-800);
 }
 
 .pagination-container a.disabled {
@@ -1734,22 +1746,22 @@ section {
 .article-container {
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
-    background-color: var(--white);
+    padding: var(--sp-20);
+    background-color: var(--surface);
 }
 
 .article-header {
-    padding: 40px 20px;
+    padding: var(--sp-40) var(--sp-20);
     text-align: center;
-    border-bottom: 1px solid var(--light-gray);
-    margin-bottom: 30px;
+    border-bottom: 1px solid var(--hairline);
+    margin-bottom: var(--sp-40);
 }
 
 .article-header h1 {
     font-family: 'Lora', Georgia, serif;
     font-size: var(--step-4);
     color: var(--navy-800);
-    margin: 0 0 var(--sp-2) 0;
+    margin: 0 0 var(--sp-8) 0;
     line-height: 1.2;
 }
 
@@ -1764,9 +1776,9 @@ section {
 }
 
 .article-content {
-    padding: 20px 0;
+    padding: var(--sp-20) 0;
     font-family: 'Inter', sans-serif;
-    color: var(--text-color);
+    color: var(--ink-body);
 }
 
 .article-content p,
@@ -1780,16 +1792,16 @@ section {
     font-family: 'Lora', Georgia, serif;
     font-size: 1.8em;
     line-height: 1.3;
-    color: var(--primary-color);
-    margin-top: 40px;
-    margin-bottom: 20px;
-    border-bottom: 2px solid var(--secondary-color);
+    color: var(--navy-800);
+    margin-top: var(--sp-40);
+    margin-bottom: var(--sp-20);
+    border-bottom: 2px solid var(--bronze-500);
     padding-bottom: 5px;
     display: inline-block;
 }
 
 .article-content h2 a {
-    color: var(--primary-color);
+    color: var(--navy-800);
 }
 
 .article-content h2 a:hover {
@@ -1799,17 +1811,17 @@ section {
 .article-content h3 {
     font-family: 'Lora', Georgia, serif;
     font-size: 1.4em;
-    color: var(--primary-color);
-    margin-top: 30px;
+    color: var(--navy-800);
+    margin-top: var(--sp-32);
     margin-bottom: 15px;
 }
 
 .article-content .perex {
     font-size: 1.3em;
     font-weight: 600;
-    color: var(--primary-color);
+    color: var(--navy-800);
     line-height: 1.6;
-    margin-bottom: 30px;
+    margin-bottom: var(--sp-32);
 }
 
 /* Hlavni obrazek + pojistka pro ostatni obrazky v obsahu */
@@ -1819,8 +1831,8 @@ section {
     display: block;
     width: 100%;
     height: auto;
-    border-radius: var(--border-radius);
-    margin: 20px 0 30px 0;
+    border-radius: var(--r-sm);
+    margin: var(--sp-20) 0 var(--sp-32) 0;
     box-shadow: var(--sh-2);
     object-fit: cover;
 }
@@ -1833,8 +1845,8 @@ section {
     overflow: hidden;
     max-width: 100%;
     background: #000;
-    border-radius: var(--border-radius);
-    margin: 20px 0 30px 0;
+    border-radius: var(--r-sm);
+    margin: var(--sp-20) 0 var(--sp-32) 0;
     box-shadow: var(--sh-2);
 }
 
@@ -1847,29 +1859,34 @@ section {
     border: 0;
 }
 
+/* Citat — editorialni, ne "sedy box s kurzivou".
+   Kurziva v Inter se na delsim citatu cte spatne; Lora bez kurzivy drzi
+   vaznost a odlisi citat od bezneho textu sama. */
 .article-content blockquote {
-    border-left: 4px solid var(--secondary-color);
-    margin: 20px 0;
-    padding: 15px 20px;
-    font-style: italic;
-    font-size: 1.2em;
-    background-color: var(--light-gray);
-    border-radius: 0 5px 5px 0;
-    color: var(--ink-body);
+    margin: var(--sp-40) 0;
+    padding: 0 0 0 var(--sp-24);
+    border-left: 2px solid var(--bronze-500);
+    border-radius: 0;
+    background: none;
+    font-family: 'Lora', Georgia, serif;
+    font-size: var(--step-1);
+    font-style: normal;
+    line-height: 1.55;
+    color: var(--navy-800);
 }
 
 /* Zdroje, odkaz zpet */
 
 .sources-section {
-    margin-top: 50px;
-    padding-top: 20px;
-    border-top: 1px solid var(--light-gray);
+    margin-top: var(--sp-64);
+    padding-top: var(--sp-24);
+    border-top: 1px solid var(--hairline);
     font-size: 0.9em;
     color: var(--ink-muted);
 }
 
 .sources-section ol {
-    padding-left: 20px;
+    padding-left: var(--sp-20);
 }
 
 .sources-section li {
@@ -1889,7 +1906,7 @@ section {
 
 .back-link {
     display: inline-block;
-    margin-top: 40px;
+    margin-top: var(--sp-40);
     color: var(--bronze-600);
     font-weight: 700;
     text-decoration: none;
@@ -1912,7 +1929,7 @@ section {
 }
 
 .article-content .social-icons-container {
-    margin: 26px 0 10px;
+    margin: var(--sp-24) 0 10px;
 }
 
 /* --- Sdileci tlacitka --- */
@@ -1920,9 +1937,9 @@ section {
 .share-bar {
     display: flex;
     align-items: center;
-    gap: 12px;
-    margin: 36px 0 30px;
-    padding-top: 24px;
+    gap: var(--sp-12);
+    margin: var(--sp-36) 0 var(--sp-32);
+    padding-top: var(--sp-24);
     border-top: 1px solid var(--hairline);
 }
 
@@ -1930,7 +1947,7 @@ section {
     font-size: 0.88em;
     color: var(--ink-muted);
     font-weight: 600;
-    margin-right: 4px;
+    margin-right: var(--sp-4);
 }
 
 .share-btn {
@@ -1940,7 +1957,7 @@ section {
     width: 38px;
     height: 38px;
     border-radius: 50%;
-    background: var(--light-gray);
+    background: var(--surface-tint);
     transition: background 0.2s ease, transform 0.2s ease;
 }
 
@@ -1955,7 +1972,7 @@ section {
 }
 
 .share-btn:hover {
-    background: var(--gold-soft);
+    background: var(--bronze-50);
     transform: translateY(-2px);
 }
 
@@ -1968,7 +1985,7 @@ section {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     /* Responsivní sloupce */
     gap: 15px;
-    margin: 30px 0;
+    margin: var(--sp-32) 0;
 }
 
 .gallery-grid img {
@@ -1977,7 +1994,7 @@ section {
     /* Fixní výška pro sjednocení mřížky */
     object-fit: cover;
     /* Ořízne fotku, aby se nedeformovala */
-    border-radius: var(--border-radius);
+    border-radius: var(--r-sm);
     cursor: pointer;
     transition: box-shadow var(--dur-2) var(--ease);
     box-shadow: var(--sh-1);
@@ -1993,7 +2010,7 @@ section {
     /* Ve výchozím stavu skryté */
     position: fixed;
     z-index: 9999;
-    padding-top: 50px;
+    padding-top: var(--sp-48);
     left: 0;
     top: 0;
     width: 100%;
@@ -2011,8 +2028,8 @@ section {
     width: auto;
     max-width: 90%;
     max-height: 85vh;
-    border-radius: 4px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: var(--r-sm);
+    box-shadow: var(--sh-4);
     animation-name: zoom;
     animation-duration: 0.3s;
 }
@@ -2043,7 +2060,7 @@ section {
 
 .close:hover,
 .close:focus {
-    color: var(--secondary-color);
+    color: var(--bronze-500);
     text-decoration: none;
 }
 
@@ -2055,7 +2072,7 @@ section {
     position: absolute;
     top: 50%;
     width: auto;
-    padding: 16px;
+    padding: var(--sp-16);
     margin-top: -50px;
     color: white;
     font-weight: bold;
@@ -2103,24 +2120,24 @@ section {
 
 footer {
     background-color: var(--surface-deep);
-    color: var(--white);
-    padding: 80px 20px 40px;
-    margin-top: 100px;
+    color: var(--surface);
+    padding: var(--sp-80) var(--sp-20) var(--sp-40);
+    margin-top: var(--sp-96);
 }
 
 .footer-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 50px;
+    gap: var(--sp-48);
     max-width: 1100px;
     margin: 0 auto;
 }
 
 .footer-grid h4 {
-    color: var(--white);
-    margin-bottom: 20px;
+    color: var(--surface);
+    margin-bottom: var(--sp-20);
     font-size: 1.2em;
-    border-bottom: 2px solid var(--secondary-color);
+    border-bottom: 2px solid var(--bronze-500);
     display: inline-block;
     padding-bottom: 5px;
 }
@@ -2133,11 +2150,11 @@ footer {
 }
 
 .footer-grid a:hover {
-    color: var(--secondary-color);
+    color: var(--bronze-500);
 }
 
 .social-icons-container {
-    margin-top: 20px;
+    margin-top: var(--sp-20);
     display: flex;
     gap: 15px;
 }
@@ -2159,8 +2176,8 @@ footer {
 
 .copyright {
     text-align: center;
-    margin-top: 60px;
-    padding-top: 20px;
+    margin-top: var(--sp-64);
+    padding-top: var(--sp-20);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--on-deep-muted);
     font-size: 0.85em;

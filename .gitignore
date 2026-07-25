@@ -1,8 +1,26 @@
-# Originaly fotek a tezke pracovni soubory - nepatri do repa
+# ==========================================================================
+#  .gitignore — gabrielkozik.cz
+#  POZOR: Cloudflare Pages nasazuje vsechno, co je v repu. Co nema byt
+#  verejne citelne na www.gabrielkozik.cz, nesmi byt v gitu.
+# ==========================================================================
+
+# --- Originaly fotek a tezke pracovni soubory - nepatri do repa -----------
 _pracovni/fotky-original/*
 !_pracovni/fotky-original/SEM-NAHRAT-FOTKY.md
 
-# Systemove soubory
+# --- Privatni podklady ----------------------------------------------------
+# Strategie, redakcni plan a deployment checklist. Do 7/2026 byly v repu,
+# tedy verejne citelne na produkcni URL i na public GitHubu. Zustavaji u
+# tebe na disku, ale uz se neverzuji ani nenasazuji.
+# Aby to platilo i pro soubory, ktere uz git zna, je nutne jednou spustit:
+#   git rm -r --cached _pracovni/_privatni _pracovni/_archiv
+_pracovni/_privatni/
+
+# --- Archiv dokoncenych podkladu ------------------------------------------
+# Splnene checklisty a nahrazene reporty. Historie, ne provozni dokumenty.
+_pracovni/_archiv/
+
+# --- Systemove soubory ----------------------------------------------------
 .DS_Store
 Thumbs.db
 desktop.ini

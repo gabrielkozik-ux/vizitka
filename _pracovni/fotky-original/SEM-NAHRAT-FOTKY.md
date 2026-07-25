@@ -1,23 +1,37 @@
-# Sem nahraj originály fotek z akcí
+# Originály fotek
 
-Tato složka je v .gitignore — originály se NEBUDOU commitovat na GitHub
-(velké soubory nepatří do repa ani na web). Zpracované verze uložím
-do `assets/images/brand/` já.
+Tato složka je v `.gitignore` — originály se **necommitují** na GitHub ani
+nenasazují na web. Zpracované webové verze patří do `assets/images/brand/`.
 
-## Co nahrát (ideálně 15–25 kusů)
+Tenhle soubor je z `.gitignore` naopak vyjmutý (`!`), aby složka existovala
+i v čerstvě naklonovaném repu. Nemaž ho, jinak složka z repa zmizí.
 
-- **Šířkové záběry** (na hero a předěly): sál, workshop v akci, networking — min. 1920 px šířky
-- **Portréty tebe** (na O mně, /pravo): 2–3 různé, ideálně na výšku i na šířku
-- **Akce v detailu**: podání ruky, diskuse u stolu, prezentování, publikum
-- **Kancelář IUSTORIA**: exteriér/interiér, pokud máš
-- **Video smyčka** (volitelné): 5–15 s záběr z akce, bez zvuku, .mp4
+## Stav: fotky nahrané ✅
 
-Klidně nahraj originály v plné velikosti — ořezy, kompresi a výběr udělám já.
-Ideálně pojmenuj nebo řekni, co je co (která akce, kdo je na fotce kvůli popiskům).
+K 25. 7. 2026 je tu ~70 originálů — akce (Pod Pálavou, BforB, Podnikavci,
+CS-Tech, Alveno, Smart Network), portréty, certifikáty, kancelář, kontaktní
+listy. Původní verze tohoto souboru byla výzva „sem nahraj fotky"; to je
+splněné.
 
-## Postup
+## Co v zásobě chybí
 
-1. Nakopíruj fotky sem (GitHub Desktop je bude ignorovat)
-2. Napiš mi v Cowork: „fotky jsou nahrané" + případné poznámky
-3. Já vyberu, zpracuji do webových velikostí a navrhnu nasazení (hero, O mně, galerie)
-4. Ty schválíš → nasadím → push
+Podle plánu vlny 3 (viz `_privatni/`) na prémiový vizuál pořád nejsou:
+
+- **Hero záběr s prostorem vlevo pro text** — min. 2000 px šířky, pohled mimo
+  objektiv, hloubka ostrosti. Současné hero je fotka z networkingu 2200×779.
+- **Čistý portrét na neutrálním pozadí** — 3/4 profil, na výšku i na šířku.
+- **Detaily:** ruka nad smlouvou, plnicí pero, monitor s AI nástrojem
+  (zaslepený — žádný klientský obsah).
+- **Textury** (papír, dřevo, sklo, kůže) v paletě navy/bronz — jako pozadí
+  tmavých sekcí a citátů.
+- **Workshop u tabule** s rozostřenými obličeji účastníků (GDPR i estetika).
+
+## Postup, když přidáš nové
+
+1. Nakopíruj sem (GitHub Desktop je bude ignorovat).
+2. Napiš v Cowork „fotky jsou nahrané" + čí a jaká akce to je (kvůli popiskům).
+3. Vyberu, zpracuji do webových velikostí a navrhnu nasazení.
+4. Odsouhlasíš → nasadím → push.
+
+**Pozor na vlnu 3:** cílem je AVIF/WebP se `srcset`, ne jen zmenšené JPEG.
+Aktuálně má `profilova-fotka.jpg` 197 kB a zobrazuje se ve 36 px v navigaci.

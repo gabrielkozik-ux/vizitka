@@ -1,7 +1,37 @@
-/* =========================================
-   1. IMPORT FONTS & VARIABLES
-   ========================================= */
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@300;400;600&display=swap');
+/* ==========================================================================
+   gabrielkozik.cz — hlavni stylopis
+   --------------------------------------------------------------------------
+   Fonty (Lora + Inter) se nacitaji z <head> kazde stranky, ne @importem.
+
+   OBSAH
+    1. Tokeny (:root)              9. Sekce homepage
+    2. Reset a zakladni typografie    9.1 Bolest / #situace
+    3. Layout (container, section)    9.2 Sluzby
+    4. Navigace                      9.3 Parallax separator
+    5. Hero                          9.4 Certifikace
+    6. Page header (blog)            9.5 Proces spoluprace
+    7. Trust bar                     9.6 O mne
+    8. Spolecne komponenty           9.7 Foto pas z akci
+       (titulky, tlacitka, formular, 9.8 Akce a kalendar
+        animace, scroll-reveal)      9.9 FAQ
+                                     9.10 Loga projektu
+   10. Blog — vypis            13. Footer
+   11. Blog — detail clanku    14. Premium dekorativni vrstva
+   12. Galerie a lightbox      15. Utility
+                               16. prefers-reduced-motion
+
+   KONVENCE
+   - Kazda komponenta ma svou responsivitu hned pod sebou, ne na konci souboru.
+     Proto je v souboru vic @media bloku se stejnym breakpointem — je to zamer:
+     kdyz menis hero na mobilu, koukas do sekce 5, ne do monolitu na konci.
+   - Breakpointy: 680 / 768 / 900 / 1024 px. Dalsi nezavadet.
+   - Zadne !important. Kdyz ho potrebujes, je spatne napsany selektor.
+   - Jeden selektor = jedno misto v souboru. Zadne "pozdejsi pravidlo to prebije".
+   ========================================================================== */
+
+/* ======================================================================
+   1. TOKENY
+   ====================================================================== */
 
 :root {
     --primary-color: #0c2340;
@@ -18,9 +48,10 @@
     --border-radius: 8px;
 }
 
-/* =========================================
-   2. GLOBAL RESET & TYPOGRAPHY
-   ========================================= */
+/* ======================================================================
+   2. RESET A ZAKLADNI TYPOGRAFIE
+   ====================================================================== */
+
 *,
 *::before,
 *::after {
@@ -63,11 +94,14 @@ a:hover {
     color: var(--accent-color);
 }
 
-/* Reset pro figure, aby nedělal neplechu v blogu */
 figure {
     margin: 0;
     padding: 0;
 }
+
+/* ======================================================================
+   3. LAYOUT
+   ====================================================================== */
 
 .container {
     max-width: 1100px;
@@ -84,9 +118,22 @@ section:nth-child(2n) {
     background-color: var(--light-gray);
 }
 
-/* =========================================
-   3. NAVIGATION
-   ========================================= */
+#kde-se-potkat {
+    padding-bottom: 20px;
+    /* Původně 80px */
+}
+
+#kde-se-potkat+section {
+    padding-top: 20px;
+    /* Původně 80px */
+    background-color: var(--light-gray);
+    /* Pro jistotu, aby barva seděla */
+}
+
+/* ======================================================================
+   4. NAVIGACE
+   ====================================================================== */
+
 .main-nav {
     background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
@@ -108,7 +155,6 @@ section:nth-child(2n) {
     display: flex;
     align-items: center;
     gap: 12px;
-    color: var(--primary-color);
 }
 
 .nav-photo {
@@ -215,9 +261,92 @@ section:nth-child(2n) {
     background-color: var(--gold-soft);
 }
 
-/* =========================================
-   4. HERO SECTION
-   ========================================= */
+/* --- Navigace: mobil (roletka) --- */
+
+@media (max-width: 768px) {
+    .nav-links-container {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: var(--white);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        padding: 20px 0;
+        z-index: 999;
+    }
+
+    .nav-links-container.active {
+        display: flex;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 15px;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid var(--light-gray);
+    }
+
+    .lang-switcher {
+        margin: 20px auto;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* --- Navigace: mobil na strankach clanku ---
+   Clanky nemaji hamburger ani .nav-links-container, takze pravidlo vyse
+   by u nich nechalo roletku trvale rozbalenou. Zde kompaktni vodorovny radek. */
+
+@media (max-width: 768px) {
+    .main-nav {
+        flex-wrap: wrap;
+        row-gap: 6px;
+    }
+
+    .main-nav>.nav-links {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: auto;
+        background: none;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    .main-nav>.nav-links a {
+        display: inline-block;
+        width: auto;
+        padding: 8px 10px;
+        margin: 0;
+        border-bottom: none;
+        font-size: 0.9em;
+        text-align: center;
+    }
+
+    .main-nav>.lang-switcher {
+        margin: 0;
+    }
+}
+
+/* ======================================================================
+   5. HERO
+   ====================================================================== */
+
 .hero {
     /* Foto z networkingu Pod Palavou — text vlevo, Gabriel vpravo od stredu */
     background-image: linear-gradient(90deg, rgba(12, 35, 64, 0.88), rgba(12, 35, 64, 0.55) 60%, rgba(12, 35, 64, 0.4)), url('assets/images/hero-pod-palavou.jpg');
@@ -226,10 +355,8 @@ section:nth-child(2n) {
     background-position: 72% 38%;
     background-attachment: fixed;
     color: var(--white);
-
     /* Vyšší pás než dřívějších 50vh — méně agresivní ořez fotky */
     min-height: 80vh;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -250,7 +377,7 @@ section:nth-child(2n) {
 }
 
 .hero h1 {
-    font-size: clamp(2rem, 1.1rem + 3.5vw, 3.8rem) !important;
+    font-size: clamp(2rem, 1.1rem + 3.5vw, 3.8rem);
     line-height: 1.18;
     margin: 0 0 18px 0;
     color: var(--white);
@@ -267,6 +394,45 @@ section:nth-child(2n) {
     line-height: 1.5;
     text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
 }
+
+.hero-underline {
+    display: block;
+    width: 90px;
+    height: 3px;
+    margin: 26px 0 0;
+    background: linear-gradient(90deg, #e3c98a, transparent);
+}
+
+.hero .cta-button {
+    margin-top: 34px;
+}
+
+/* --- Hero: mobil --- */
+
+@media (max-width: 768px) {
+    .hero {
+        background-attachment: scroll;
+        padding: 70px 24px 40px;
+        min-height: auto;
+        /* Na mobilu výšku nefixujeme */
+    }
+
+    .hero h1 {
+        margin-bottom: 14px;
+    }
+
+    .hero-underline {
+        margin-top: 18px;
+    }
+
+    .hero .cta-button {
+        margin-top: 24px;
+    }
+}
+
+/* ======================================================================
+   6. PAGE HEADER (blog)
+   ====================================================================== */
 
 .page-header {
     background-image: linear-gradient(rgba(12, 35, 64, 0.8), rgba(12, 35, 64, 0.8)), url('assets/images/uvodni-obrazek.jpg');
@@ -290,9 +456,52 @@ section:nth-child(2n) {
     opacity: 0.9;
 }
 
-/* =========================================
-   5. COMMON COMPONENTS
-   ========================================= */
+/* Na mobilu drzime 2.5em — driv to resilo globalni h1 { !important }. */
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2.5em;
+    }
+}
+
+/* ======================================================================
+   7. TRUST BAR
+   ====================================================================== */
+
+.trust-bar {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 34px 20px;
+}
+
+.trust-bar-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    text-align: center;
+}
+
+.trust-item .trust-number {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 2.4em;
+    font-weight: 700;
+    color: #e3c98a;
+    line-height: 1.1;
+}
+
+.trust-item .trust-label {
+    font-size: 0.95em;
+    opacity: 0.85;
+    margin-top: 6px;
+}
+
+/* ======================================================================
+   8. SPOLECNE KOMPONENTY
+   ====================================================================== */
+
+/* --- Titulky sekci --- */
+
 .section-title {
     text-align: center;
     font-size: 2.6em;
@@ -322,6 +531,8 @@ section:nth-child(2n) {
     max-width: 700px;
     margin: -14px auto 36px;
 }
+
+/* --- Tlacitka --- */
 
 .cta-button {
     display: inline-block;
@@ -358,81 +569,29 @@ section:nth-child(2n) {
     color: var(--white);
 }
 
-/* --- ANIMATIONS --- */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
+/* --- Kontaktni formular --- */
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.service-card,
-.event-item,
-.article-card,
-.project-item {
-    animation: fadeIn 0.6s ease-out forwards;
-}
-
-/* --- MOVED FROM INLINE --- */
-#upcoming-events-wrapper,
-#archiv-sekce {
+.cta-container {
+    text-align: center;
     margin-bottom: 50px;
 }
 
-#upcoming-events-list,
-#archive-events-list {
-    margin-top: 25px;
-}
-
-#archiv-sekce summary {
-    font-size: 1.5em;
-    font-weight: 700;
-    color: var(--primary-color);
-    margin-bottom: 25px;
-    text-align: center;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-#archiv-sekce summary:hover {
-    color: var(--secondary-color);
-}
-
-#archive-events-list {
-    opacity: 0.7;
-}
-
-.workshop-section {
-    background-color: var(--light-gray);
-}
-
-.workshop-section .section-subtitle {
-    margin-top: -20px;
-    margin-bottom: 30px;
-}
-
-.workshop-link {
-    color: var(--secondary-color);
-    text-decoration: underline;
-}
-
-.workshop-container {
-    margin-top: 40px;
-}
-
-.cta-container {
-    margin-bottom: 40px;
+.booking-text {
+    font-size: 1.1em;
+    color: var(--text-color);
+    margin: 20px 0 10px;
+    font-style: italic;
+    opacity: 0.8;
 }
 
 .form-container {
     max-width: 600px;
-    margin: 40px auto 0;
+    margin: 0 auto;
     text-align: left;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
 }
 
 .form-container .section-subtitle {
@@ -450,20 +609,20 @@ section:nth-child(2n) {
 
 .form-label {
     display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+    margin-bottom: 8px;
+    font-weight: 600;
     color: var(--primary-color);
 }
 
 .form-input,
 .form-textarea {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
+    padding: 12px 15px;
+    border: 2px solid #e2e8f0;
     border-radius: var(--border-radius);
+    font-family: 'Inter', sans-serif;
     font-size: 1em;
-    font-family: inherit;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    transition: border-color 0.3s ease;
 }
 
 .form-input:focus,
@@ -473,57 +632,95 @@ section:nth-child(2n) {
     box-shadow: 0 0 0 3px rgba(12, 35, 64, 0.08);
 }
 
-/* =========================================
-   6. SECTIONS CONTENT
-   ========================================= */
-#mission blockquote {
-    font-size: 1.6em;
-    font-style: italic;
-    max-width: 900px;
+.form-actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* --- Animace: fade-in komponent --- */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.service-card,
+.article-card,
+.project-item {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* --- Scroll reveal --- */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: none;
+}
+
+.reveal-delay-1 {
+    transition-delay: 0.12s;
+}
+
+.reveal-delay-2 {
+    transition-delay: 0.24s;
+}
+
+.reveal-delay-3 {
+    transition-delay: 0.36s;
+}
+
+/* ======================================================================
+   9. SEKCE HOMEPAGE
+   ====================================================================== */
+
+/* --- 9.1 Bolest / #situace --- */
+
+.pain-list {
+    max-width: 760px;
     margin: 0 auto;
-    border-left: 5px solid var(--secondary-color);
-    padding: 20px 40px;
-    background: var(--light-gray);
-    border-radius: 0 10px 10px 0;
+    display: grid;
+    gap: 16px;
+    padding: 0;
+    list-style: none;
+}
+
+.pain-list li {
+    background: var(--white);
+    border-left: 4px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    padding: 18px 22px;
+    box-shadow: 0 2px 12px rgba(12, 35, 64, 0.06);
+    font-size: 1.05em;
+}
+
+.pain-resolution {
+    text-align: center;
+    max-width: 720px;
+    margin: 40px auto 0;
+    font-size: 1.25em;
+    font-weight: 600;
     color: var(--primary-color);
 }
 
-.about-photo-circle {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 0 auto 30px;
-    display: block;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    border: 4px solid var(--white);
-}
+/* --- 9.2 Sluzby --- */
 
-.about-container {
-    text-align: center;
-}
-
-.about-container p {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 1.1em;
-}
-
-/* --- SLUŽBY --- */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 40px;
-}
-
-.services-grid-3 {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
-@media (min-width: 992px) {
-    .services-grid-3 {
-        grid-template-columns: repeat(3, 1fr);
-    }
 }
 
 .service-card {
@@ -572,28 +769,8 @@ section:nth-child(2n) {
     margin-bottom: 15px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    /* margin-top: auto; Odstraněno pro sjednocení začátku textu */
-}
-
-/* --- FRENCH SPECIFIC --- */
-.service-card-fr {
-    background: var(--white);
-    padding: 40px;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(226, 232, 240, 0.8);
-    border-top: 4px solid #3355A0;
-    /* French blue */
-    position: relative;
-    margin-top: 40px;
-    animation: fadeIn 0.6s ease-out forwards;
-}
-
-.service-card-fr h3 {
-    color: #3355A0;
-    font-size: 1.8em;
-    margin-top: 0;
-    margin-bottom: 20px;
+    /* margin-top: auto;
+    Odstraněno pro sjednocení začátku textu */
 }
 
 .service-card ul {
@@ -617,6 +794,25 @@ section:nth-child(2n) {
     font-weight: 700;
 }
 
+.service-primary {
+    border-top: 4px solid var(--secondary-color);
+}
+
+.service-badge {
+    display: inline-block;
+    font-size: 0.75em;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    background: var(--gold-soft);
+    border-radius: 50px;
+    padding: 5px 14px;
+    margin-bottom: 14px;
+}
+
+/* Hover jen na zarizenich s hover — na mobilu by drzel po tapnuti */
+
 @media (min-width: 768px) {
     .service-card:hover {
         transform: translateY(-12px) scale(1.03);
@@ -626,7 +822,8 @@ section:nth-child(2n) {
     }
 }
 
-/* --- PARALLAX SEPARATOR --- */
+/* --- 9.3 Parallax separator --- */
+
 .parallax-separator {
     background-image: url('assets/images/uvodni-obrazek.jpg');
     background-size: cover;
@@ -665,102 +862,233 @@ section:nth-child(2n) {
     text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* --- PROJECTS & WORKSHOPS --- */
-.projects-grid {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    text-align: center;
+@media (max-width: 768px) {
+    .parallax-separator {
+        background-attachment: scroll;
+    }
 }
 
-.project-item {
-    flex: 0 1 200px;
-    transition: transform 0.3s ease;
+/* --- 9.4 Certifikace --- */
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 10px;
 }
 
-.project-item img {
-    max-width: 100%;
-    height: 80px;
-    object-fit: contain;
-    margin-bottom: 15px;
-    filter: grayscale(100%);
-    opacity: 0.7;
-    transition: all 0.3s ease;
-}
-
-.project-item:hover img {
-    filter: grayscale(0%);
-    opacity: 1;
-    transform: scale(1.1);
-}
-
-.project-item.core {
-    flex: 0 0 100%;
-    margin-bottom: 30px;
-}
-
-.project-item.core img {
-    height: 120px;
-}
-
-.project-item.core p {
-    font-size: 1.2em;
-    font-weight: 600;
-}
-
-.project-item.secondary-core {
-    flex: 0 0 100%;
-    margin-bottom: 30px;
-}
-
-.workshop-container {
-    text-align: center;
-    margin-top: 40px;
-}
-
-.workshop-container a {
-    display: inline-block;
-    border-radius: 12px;
+.cert-card {
+    background: var(--white);
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 2px 10px rgba(12, 35, 64, 0.06);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.workshop-container a:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+.cert-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 22px rgba(12, 35, 64, 0.12);
 }
 
-.workshop-container img {
-    max-width: 100%;
-    height: auto;
+.cert-card > a.cert-image-link {
+    display: block;
+    background: #f8fafc;
+    border-bottom: 1px solid #eef2f7;
+}
+
+.cert-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    object-position: center top;
     display: block;
 }
 
-/* --- EVENTS & SPACING FIX --- */
-/* ZMĚNA: Odstranění mezery mezi sekcemi */
-#kde-se-potkat {
-    padding-bottom: 20px;
-    /* Původně 80px */
+.cert-info {
+    padding: 18px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    flex: 1;
 }
 
-/* Cílíme na sekci, která následuje hned po #kde-se-potkat (což je Workshop) */
-#kde-se-potkat+section {
-    padding-top: 20px;
-    /* Původně 80px */
-    background-color: var(--light-gray);
-    /* Pro jistotu, aby barva seděla */
+.cert-info h3 {
+    margin: 0;
+    font-size: 1.02em;
+    color: var(--primary-color);
+    line-height: 1.35;
 }
 
-/* Archiv akcí - odstranění velkého marginu */
-#archiv-akci,
-#listopad-akce,
-#prosinec-akce {
-    margin-bottom: 20px !important;
+.cert-info p {
+    margin: 0;
+    font-size: 0.88em;
+    color: var(--text-color);
+    line-height: 1.55;
+    flex: 1;
 }
 
-/* Seznam událostí */
+.cert-meta {
+    font-size: 0.8em;
+    color: #64748b;
+}
+
+.cert-verify {
+    font-size: 0.85em;
+    color: var(--accent-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.cert-verify:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+    .cert-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- 9.5 Proces spoluprace --- */
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.process-step {
+    text-align: center;
+    padding: 30px 22px;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 14px rgba(12, 35, 64, 0.07);
+    position: relative;
+}
+
+.process-step .step-number {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 1.1em;
+    font-weight: 700;
+    color: var(--white);
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    width: 46px;
+    height: 46px;
+    line-height: 46px;
+    border-radius: 50%;
+    margin: 0 auto 16px;
+}
+
+.process-step h3 {
+    color: var(--primary-color);
+    margin: 0 0 10px;
+}
+
+/* Trust bar (sekce 7) i proces: na mobilu do jednoho sloupce */
+
+@media (max-width: 768px) {
+    .trust-bar-inner, .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trust-item .trust-number {
+        font-size: 2em;
+    }
+}
+
+/* --- 9.6 O mne --- */
+
+.about-photo-circle {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 30px;
+    display: block;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border: 4px solid var(--white);
+}
+
+.about-container {
+    text-align: center;
+}
+
+.about-container p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1em;
+}
+
+/* --- 9.7 Foto pas z akci --- */
+
+.photostrip-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.photostrip-grid figure {
+    margin: 0;
+}
+
+.photostrip-grid img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    box-shadow: 0 2px 10px rgba(12, 35, 64, 0.08);
+}
+
+.photostrip-grid figcaption {
+    font-size: 0.82em;
+    color: #64748b;
+    margin-top: 8px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .photostrip-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+}
+
+/* --- 9.8 Akce a kalendar --- */
+
+#upcoming-events-wrapper,
+#archiv-sekce {
+    margin-bottom: 50px;
+}
+
+#upcoming-events-list,
+#archive-events-list {
+    margin-top: 25px;
+}
+
+#archiv-sekce summary {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    text-align: center;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#archiv-sekce summary:hover {
+    color: var(--secondary-color);
+}
+
+#archive-events-list {
+    opacity: 0.7;
+}
+
 .events-list {
     list-style: none;
     padding: 0;
@@ -790,7 +1118,6 @@ section:nth-child(2n) {
     transform: translateY(-2px);
 }
 
-/* Zvýraznění nejbližší akce */
 #upcoming-events-list>li:first-child {
     border-left-width: 5px;
     border-left-color: var(--accent-color);
@@ -903,426 +1230,7 @@ section:nth-child(2n) {
     fill: currentColor;
 }
 
-/* --- BLOG --- */
-.blog-list {
-    padding: 60px 20px;
-}
-
-.filter-container {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.filter-btn {
-    background-color: var(--white);
-    border: 1px solid #e2e8f0;
-    padding: 10px 25px;
-    margin: 0 5px;
-    cursor: pointer;
-    border-radius: 50px;
-    font-weight: 600;
-    color: var(--text-color);
-    font-family: 'Inter', sans-serif;
-    transition: all 0.3s ease;
-}
-
-.filter-btn:hover {
-    border-color: var(--secondary-color);
-    color: var(--secondary-color);
-}
-
-.filter-btn.active {
-    background-color: var(--primary-color);
-    color: var(--white);
-    border-color: var(--primary-color);
-}
-
-#articles-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
-    align-items: stretch;
-}
-
-.article-card {
-    display: flex;
-    flex-direction: column;
-    background: var(--white);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #f1f5f9;
-    height: 100%;
-}
-
-.article-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 30px rgba(12, 35, 64, 0.12);
-}
-
-.article-image {
-    flex: none;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    position: relative;
-    overflow: hidden;
-    background: var(--light-gray);
-}
-
-.article-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.article-card:hover .article-image img {
-    transform: scale(1.05);
-}
-
-.article-content {
-    padding: 30px 40px 30px 10px;
-    /* Horní, pravý, dolní, levý */
-    ;
-    flex: 1;
-}
-
-/* Karta v gridu blogu ma vlastni, tesnejsi obsah */
-.article-card .article-content {
-    padding: 20px 24px 24px;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-.article-card .article-meta {
-    margin-bottom: 10px;
-    font-size: 0.78em;
-}
-
-.article-card .article-excerpt {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    margin: 0 0 12px;
-}
-
-.article-card .read-more-btn {
-    margin-top: auto;
-}
-
-.article-content h2 {
-    margin-top: 0;
-    font-size: 1.8em;
-    line-height: 1.3;
-}
-
-.article-card .article-content h2 {
-    font-size: 1.15em;
-    line-height: 1.4;
-    margin-bottom: 10px;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-.article-content h2 a {
-    color: var(--primary-color);
-}
-
-.article-content h2 a:hover {
-    color: var(--secondary-color);
-}
-
-.article-meta {
-    font-size: 0.9em;
-    color: #94a3b8;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 600;
-}
-
-.read-more-btn {
-    display: inline-block;
-    color: var(--secondary-color);
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 0.9em;
-    letter-spacing: 1px;
-    margin-top: 10px;
-    position: relative;
-}
-
-.read-more-btn::after {
-    content: '→';
-    margin-left: 5px;
-    transition: margin-left 0.3s ease;
-}
-
-.read-more-btn:hover::after {
-    margin-left: 10px;
-}
-
-.article-detail-content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    background: var(--white);
-}
-
-.article-detail-content p,
-.article-detail-content li {
-    font-size: 1.15em;
-    line-height: 1.8;
-    color: #334155;
-}
-
-.article-detail-content h2 {
-    font-size: 2em;
-    margin-top: 60px;
-    border-bottom: 2px solid var(--secondary-color);
-    padding-bottom: 10px;
-    display: inline-block;
-}
-
-.article-image-main {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    margin: 30px 0;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-}
-
-.pagination-container {
-    text-align: center;
-    margin-top: 60px;
-    border-top: 1px solid #e2e8f0;
-    padding-top: 30px;
-}
-
-.pagination-container a {
-    display: inline-block;
-    padding: 10px 18px;
-    margin: 0 5px;
-    border-radius: 8px;
-    font-weight: 600;
-    color: var(--text-color);
-    background: var(--white);
-    border: 1px solid #e2e8f0;
-}
-
-.pagination-container a.active,
-.pagination-container a:hover:not(.disabled) {
-    background-color: var(--primary-color);
-    color: var(--white);
-    border-color: var(--primary-color);
-}
-
-.pagination-container a.disabled {
-    color: #cbd5e1;
-    cursor: default;
-}
-
-/* =========================================
-   10. CONTACT FORM & FOOTER
-   ========================================= */
-.cta-container {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.booking-text {
-    font-size: 1.1em;
-    color: var(--text-color);
-    margin: 20px 0 10px;
-    font-style: italic;
-    opacity: 0.8;
-}
-
-.form-container {
-    background: var(--white);
-    padding: 40px;
-    border-radius: 16px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.form-container label {
-    font-weight: 600;
-    color: var(--primary-color);
-    display: block;
-    margin-bottom: 8px;
-}
-
-.form-container input,
-.form-container textarea {
-    width: 100%;
-    padding: 12px 15px;
-    border: 2px solid #e2e8f0;
-    border-radius: 8px;
-    font-family: 'Inter', sans-serif;
-    font-size: 1em;
-    transition: border-color 0.3s ease;
-}
-
-.form-container input:focus,
-.form-container textarea:focus {
-    outline: none;
-    border-color: var(--secondary-color);
-}
-
-footer {
-    background-color: var(--primary-color);
-    color: var(--white);
-    padding: 80px 20px 40px;
-    margin-top: 100px;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 50px;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.footer-grid h4 {
-    color: var(--white);
-    margin-bottom: 20px;
-    font-size: 1.2em;
-    border-bottom: 2px solid var(--secondary-color);
-    display: inline-block;
-    padding-bottom: 5px;
-}
-
-.footer-grid p,
-.footer-grid a {
-    color: #94a3b8;
-    font-size: 0.95em;
-    margin-bottom: 10px;
-}
-
-.footer-grid a:hover {
-    color: var(--secondary-color);
-}
-
-/* --- SOCIÁLNÍ SÍTĚ (Plné barvy) --- */
-.social-icons-container {
-    margin-top: 20px;
-    display: flex;
-    gap: 15px;
-}
-
-.social-icon img {
-    width: 28px;
-    height: 28px;
-    /* ZMĚNA: Žádný filtr, plná barva a viditelnost */
-    filter: none;
-    opacity: 1;
-    transition: transform 0.3s ease;
-}
-
-.social-icon:hover img {
-    transform: scale(1.2);
-}
-
-.copyright {
-    text-align: center;
-    margin-top: 60px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    color: #64748b;
-    font-size: 0.85em;
-}
-
-/* =========================================
-   11. RESPONSIVE
-   ========================================= */
 @media (max-width: 768px) {
-    .hero {
-        background-attachment: scroll;
-    }
-
-    .parallax-separator {
-        background-attachment: scroll;
-    }
-
-    .nav-links-container {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background-color: var(--white);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        padding: 20px 0;
-        z-index: 999;
-    }
-
-    .nav-links-container.active {
-        display: flex;
-    }
-
-    .nav-links {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-    }
-
-    .nav-links a {
-        display: block;
-        padding: 15px;
-        margin: 0;
-        width: 100%;
-        text-align: center;
-        border-bottom: 1px solid var(--light-gray);
-    }
-
-    .lang-switcher {
-        margin: 20px auto;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-
-    h1 {
-        font-size: 2.5em !important;
-    }
-
-    .hero {
-        padding: 70px 24px 40px;
-        min-height: auto;
-        /* Na mobilu výšku nefixujeme */
-    }
-
-    .hero h1 {
-        margin-bottom: 14px;
-    }
-
-    .hero-underline {
-        margin-top: 18px;
-    }
-
-    .hero .cta-button {
-        margin-top: 24px;
-    }
-
-    .article-card {
-        flex-direction: column;
-    }
-
-    .article-image {
-        aspect-ratio: 16 / 9;
-    }
-
     .events-list li {
         flex-direction: column;
         align-items: flex-start;
@@ -1350,509 +1258,10 @@ footer {
         flex: 1;
         max-width: 200px;
     }
-
-    .footer-grid {
-        text-align: center;
-    }
-
-    .social-icons-container {
-        justify-content: center;
-    }
 }
 
-/* =========================================
-   12. BLOG DETAIL STYLES (Podle tvého vzoru)
-   ========================================= */
+/* --- 9.9 FAQ --- */
 
-/* Wrapper pro celý článek (nahrazuje .container ve tvém příkladu) */
-.article-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: var(--white);
-}
-
-/* Hlavička článku (nadpis a meta) */
-.article-header {
-    padding: 40px 20px;
-    text-align: center;
-    border-bottom: 1px solid var(--light-gray);
-    margin-bottom: 30px;
-}
-
-.article-header h1 {
-    font-family: 'Lora', Georgia, serif;
-    font-size: 2.8em;
-    color: var(--primary-color);
-    margin: 0 0 10px 0;
-    line-height: 1.2;
-}
-
-.article-meta {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.9em;
-    color: #94a3b8;
-    /* Použití tvé šedé */
-}
-
-/* Obsah článku */
-.article-content {
-    padding: 20px 0;
-    font-family: 'Inter', sans-serif;
-    color: var(--text-color);
-}
-
-.article-content p,
-.article-content li {
-    font-size: 1.1em;
-    line-height: 1.7;
-    margin-bottom: 1.5em;
-}
-
-.article-content h2 {
-    font-family: 'Lora', Georgia, serif;
-    font-size: 1.8em;
-    color: var(--primary-color);
-    margin-top: 40px;
-    margin-bottom: 20px;
-    border-bottom: 2px solid var(--secondary-color);
-    padding-bottom: 5px;
-    display: inline-block;
-}
-
-.article-content h3 {
-    font-family: 'Lora', Georgia, serif;
-    font-size: 1.4em;
-    color: var(--primary-color);
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
-
-.article-content .perex {
-    font-size: 1.3em;
-    font-weight: 600;
-    color: var(--primary-color);
-    line-height: 1.6;
-    margin-bottom: 30px;
-}
-
-/* HLAVNÍ OBRÁZEK (a pojistka pro ostatní obrázky v obsahu) */
-.article-image-main,
-.article-content img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: var(--border-radius);
-    margin: 20px 0 30px 0;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    object-fit: cover;
-}
-
-/* RESPONZIVNÍ VIDEO PŘEHRÁVAČ (YOUTUBE EMBED) */
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%; /* Poměr stran 16:9 */
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    background: #000;
-    border-radius: var(--border-radius);
-    margin: 20px 0 30px 0;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-
-/* Citace */
-.article-content blockquote {
-    border-left: 4px solid var(--secondary-color);
-    margin: 20px 0;
-    padding: 15px 20px;
-    font-style: italic;
-    font-size: 1.2em;
-    background-color: var(--light-gray);
-    border-radius: 0 5px 5px 0;
-    color: #475569;
-}
-
-/* Sekce zdrojů */
-.sources-section {
-    margin-top: 50px;
-    padding-top: 20px;
-    border-top: 1px solid var(--light-gray);
-    font-size: 0.9em;
-    color: #64748b;
-}
-
-.sources-section ol {
-    padding-left: 20px;
-}
-
-.sources-section li {
-    margin-bottom: 10px;
-}
-
-.sources-section a {
-    color: var(--secondary-color);
-    word-break: break-all;
-}
-
-.sources-section sup {
-    font-size: 0.75em;
-    vertical-align: super;
-    margin-left: 2px;
-}
-
-/* Odkaz zpět */
-.back-link {
-    display: inline-block;
-    margin-top: 40px;
-    color: var(--secondary-color);
-    font-weight: 700;
-    text-decoration: none;
-}
-
-.back-link:hover {
-    text-decoration: underline;
-}
-
-/* Responzivita pro článek */
-@media (max-width: 768px) {
-    .article-header h1 {
-        font-size: 2.2em !important;
-    }
-}
-
-/* =========================================
-   REPORTÁŽNÍ GALERIE & LIGHTBOX (Globální)
-   ========================================= */
-
-/* 1. Mřížka galerie (Grid) */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    /* Responsivní sloupce */
-    gap: 15px;
-    margin: 30px 0;
-}
-
-.gallery-grid img {
-    width: 100%;
-    height: 220px;
-    /* Fixní výška pro sjednocení mřížky */
-    object-fit: cover;
-    /* Ořízne fotku, aby se nedeformovala */
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.gallery-grid img:hover {
-    transform: scale(1.03);
-    /* Jemné zvětšení při najetí */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-/* 1b. Galerie jako jednosloupcový stack (plna sirka, prirozeny pomer stran) —
-   stejny vzhled jako u starsich reportazi (networking-palava-14/12), kde
-   fotky padaly do obecneho stylu .article-content img bez vlastni mrizky. */
-.gallery-stack {
-    margin: 30px 0;
-}
-
-.gallery-stack img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: var(--border-radius);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    margin: 0 0 20px 0;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.gallery-stack img:hover {
-    transform: scale(1.01);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-}
-
-/* 2. Modální okno (Lightbox - černé pozadí) */
-.modal {
-    display: none;
-    /* Ve výchozím stavu skryté */
-    position: fixed;
-    z-index: 9999;
-    padding-top: 50px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.92);
-    /* Tmavé pozadí */
-    backdrop-filter: blur(5px);
-    /* Moderní efekt rozostření pozadí */
-}
-
-/* Obrázek uvnitř modalu */
-.modal-content {
-    margin: auto;
-    display: block;
-    width: auto;
-    max-width: 90%;
-    max-height: 85vh;
-    border-radius: 4px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    animation-name: zoom;
-    animation-duration: 0.3s;
-}
-
-/* Animace přiblížení */
-@keyframes zoom {
-    from {
-        transform: scale(0.8);
-        opacity: 0
-    }
-
-    to {
-        transform: scale(1);
-        opacity: 1
-    }
-}
-
-/* Tlačítko zavřít (X) */
-.close {
-    position: absolute;
-    top: 20px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-    cursor: pointer;
-    z-index: 10000;
-}
-
-.close:hover,
-.close:focus {
-    color: var(--secondary-color);
-    text-decoration: none;
-}
-
-/* Šipky pro posouvání */
-.prev,
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: white;
-    font-weight: bold;
-    font-size: 24px;
-    transition: 0.3s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    background-color: rgba(0, 0, 0, 0.1);
-}
-
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-.prev:hover,
-.next:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-/* Responsivita pro mobily */
-@media only screen and (max-width: 700px) {
-    .modal-content {
-        width: 100%;
-    }
-
-    .gallery-grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        gap: 10px;
-    }
-
-    .gallery-grid img {
-        height: 150px;
-        /* Menší náhledy na mobilu */
-    }
-}
-
-/* --- UTILITIES --- */
-.form-actions {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.active-link {
-    color: var(--secondary-color) !important;
-}
-
-.hidden-svg {
-    position: absolute;
-    width: 0;
-    height: 0;
-}
-/* =========================================
-   14. RESTART BRANDU 2026 - nove komponenty
-   ========================================= */
-
-/* --- Hero doplnky --- */
-.hero-kicker {
-    display: inline-block;
-    font-family: 'Lora', Georgia, serif;
-    font-size: 0.95em;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #e3c98a;
-    border: 1px solid rgba(227, 201, 138, 0.45);
-    border-radius: 50px;
-    padding: 8px 22px;
-    margin-bottom: 26px;
-    backdrop-filter: blur(4px);
-    background: rgba(12, 35, 64, 0.35);
-}
-
-.hero-underline {
-    display: block;
-    width: 90px;
-    height: 3px;
-    margin: 26px 0 0;
-    background: linear-gradient(90deg, #e3c98a, transparent);
-}
-
-.hero .cta-button {
-    margin-top: 34px;
-}
-
-/* --- Trust bar / statistiky --- */
-.trust-bar {
-    background: var(--primary-color);
-    color: var(--white);
-    padding: 34px 20px;
-}
-
-.trust-bar-inner {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    text-align: center;
-}
-
-.trust-item .trust-number {
-    font-family: 'Lora', Georgia, serif;
-    font-size: 2.4em;
-    font-weight: 700;
-    color: #e3c98a;
-    line-height: 1.1;
-}
-
-.trust-item .trust-label {
-    font-size: 0.95em;
-    opacity: 0.85;
-    margin-top: 6px;
-}
-
-/* --- Empaticka sekce "Rozumim vasi situaci" --- */
-.pain-list {
-    max-width: 760px;
-    margin: 0 auto;
-    display: grid;
-    gap: 16px;
-    padding: 0;
-    list-style: none;
-}
-
-.pain-list li {
-    background: var(--white);
-    border-left: 4px solid var(--secondary-color);
-    border-radius: var(--border-radius);
-    padding: 18px 22px;
-    box-shadow: 0 2px 12px rgba(12, 35, 64, 0.06);
-    font-size: 1.05em;
-}
-
-.pain-resolution {
-    text-align: center;
-    max-width: 720px;
-    margin: 40px auto 0;
-    font-size: 1.25em;
-    font-weight: 600;
-    color: var(--primary-color);
-}
-
-/* --- Hlavni sluzba (pravo) vs. sekundarni (skoleni) --- */
-.service-primary {
-    border-top: 4px solid var(--secondary-color);
-}
-
-.service-badge {
-    display: inline-block;
-    font-size: 0.75em;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: var(--accent-color);
-    background: var(--gold-soft);
-    border-radius: 50px;
-    padding: 5px 14px;
-    margin-bottom: 14px;
-}
-
-/* --- Proces spoluprace (3 kroky) --- */
-.process-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.process-step {
-    text-align: center;
-    padding: 30px 22px;
-    background: var(--white);
-    border-radius: var(--border-radius);
-    box-shadow: 0 2px 14px rgba(12, 35, 64, 0.07);
-    position: relative;
-}
-
-.process-step .step-number {
-    font-family: 'Lora', Georgia, serif;
-    font-size: 1.1em;
-    font-weight: 700;
-    color: var(--white);
-    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
-    width: 46px;
-    height: 46px;
-    line-height: 46px;
-    border-radius: 50%;
-    margin: 0 auto 16px;
-}
-
-.process-step h3 {
-    color: var(--primary-color);
-    margin: 0 0 10px;
-}
-
-/* --- FAQ accordion --- */
 .faq-wrap {
     max-width: 780px;
     margin: 0 auto;
@@ -1901,44 +1310,100 @@ footer {
     line-height: 1.65;
 }
 
-/* --- Scroll reveal animace --- */
-.reveal {
-    opacity: 0;
-    transform: translateY(28px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
+/* --- 9.10 Loga projektu --- */
+
+.projects-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    text-align: center;
 }
 
-.reveal.visible {
+.project-item {
+    flex: 0 1 200px;
+    transition: transform 0.3s ease;
+}
+
+.project-item img {
+    max-width: 100%;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.project-item:hover img {
+    filter: grayscale(0%);
     opacity: 1;
-    transform: none;
+    transform: scale(1.1);
 }
 
-.reveal-delay-1 { transition-delay: 0.12s; }
-.reveal-delay-2 { transition-delay: 0.24s; }
-.reveal-delay-3 { transition-delay: 0.36s; }
-
-@media (prefers-reduced-motion: reduce) {
-    .reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-    html { scroll-behavior: auto; }
+.project-item.core {
+    flex: 0 0 100%;
+    margin-bottom: 30px;
 }
 
-/* --- Responsivita novych komponent --- */
-@media (max-width: 768px) {
-    .trust-bar-inner,
-    .process-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .trust-item .trust-number {
-        font-size: 2em;
-    }
+.project-item.core img {
+    height: 120px;
 }
 
-/* --- Blog grid: responsivni sloupce --- */
+.project-item.core p {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.project-item.secondary-core {
+    flex: 0 0 100%;
+    margin-bottom: 30px;
+}
+
+/* ======================================================================
+   10. BLOG — VYPIS
+   ====================================================================== */
+
+.blog-list {
+    padding: 60px 20px;
+}
+
+.filter-container {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.filter-btn {
+    background-color: var(--white);
+    border: 1px solid #e2e8f0;
+    padding: 10px 25px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 50px;
+    font-weight: 600;
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+
+#articles-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    align-items: stretch;
+}
+
 @media (max-width: 1024px) {
     #articles-container {
         grid-template-columns: repeat(2, 1fr);
@@ -1951,11 +1416,320 @@ footer {
     }
 }
 
-/* =========================================
-   FIX: socialni ikony uvnitr clanku
-   Obecne pravidlo .article-content img (width: 100%)
-   prebijelo velikost ikon - zde je vracime na 28 px.
-   ========================================= */
+.article-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #f1f5f9;
+    height: 100%;
+}
+
+.article-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(12, 35, 64, 0.12);
+}
+
+.article-image {
+    flex: none;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    position: relative;
+    overflow: hidden;
+    background: var(--light-gray);
+}
+
+.article-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.article-card:hover .article-image img {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .article-card {
+        flex-direction: column;
+    }
+
+    .article-image {
+        aspect-ratio: 16 / 9;
+    }
+}
+
+.article-card .article-content {
+    padding: 20px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.article-card .article-meta {
+    margin-bottom: 10px;
+    font-size: 0.78em;
+}
+
+.article-card .article-excerpt {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 0 0 12px;
+}
+
+.article-card .read-more-btn {
+    margin-top: auto;
+}
+
+.article-card .article-content h2 {
+    font-size: 1.15em;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.read-more-btn {
+    display: inline-block;
+    color: var(--secondary-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.read-more-btn::after {
+    content: '→';
+    margin-left: 5px;
+    transition: margin-left 0.3s ease;
+}
+
+.read-more-btn:hover::after {
+    margin-left: 10px;
+}
+
+.pagination-container {
+    text-align: center;
+    margin-top: 60px;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 30px;
+}
+
+.pagination-container a {
+    display: inline-block;
+    padding: 10px 18px;
+    margin: 0 5px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: var(--text-color);
+    background: var(--white);
+    border: 1px solid #e2e8f0;
+}
+
+.pagination-container a.active,
+.pagination-container a:hover:not(.disabled) {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+
+.pagination-container a.disabled {
+    color: #cbd5e1;
+    cursor: default;
+}
+
+/* ======================================================================
+   11. BLOG — DETAIL CLANKU
+   ====================================================================== */
+
+.article-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--white);
+}
+
+.article-header {
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--light-gray);
+    margin-bottom: 30px;
+}
+
+.article-header h1 {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 2.8em;
+    color: var(--primary-color);
+    margin: 0 0 10px 0;
+    line-height: 1.2;
+}
+
+/* Na mobilu 2.2em — driv resil globalni h1 { !important } */
+@media (max-width: 768px) {
+    .article-header h1 {
+        font-size: 2.2em;
+    }
+}
+
+.article-meta {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9em;
+    color: #94a3b8;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.article-content {
+    padding: 20px 0;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+}
+
+.article-content p,
+.article-content li {
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin-bottom: 1.5em;
+}
+
+.article-content h2 {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 1.8em;
+    line-height: 1.3;
+    color: var(--primary-color);
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.article-content h2 a {
+    color: var(--primary-color);
+}
+
+.article-content h2 a:hover {
+    color: var(--secondary-color);
+}
+
+.article-content h3 {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 1.4em;
+    color: var(--primary-color);
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.article-content .perex {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: var(--primary-color);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Hlavni obrazek + pojistka pro ostatni obrazky v obsahu */
+
+.article-image-main,
+.article-content img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    margin: 20px 0 30px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    object-fit: cover;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* Poměr stran 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    border-radius: var(--border-radius);
+    margin: 20px 0 30px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.article-content blockquote {
+    border-left: 4px solid var(--secondary-color);
+    margin: 20px 0;
+    padding: 15px 20px;
+    font-style: italic;
+    font-size: 1.2em;
+    background-color: var(--light-gray);
+    border-radius: 0 5px 5px 0;
+    color: #475569;
+}
+
+/* Zdroje, odkaz zpet */
+
+.sources-section {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid var(--light-gray);
+    font-size: 0.9em;
+    color: #64748b;
+}
+
+.sources-section ol {
+    padding-left: 20px;
+}
+
+.sources-section li {
+    margin-bottom: 10px;
+}
+
+.sources-section a {
+    color: var(--secondary-color);
+    word-break: break-all;
+}
+
+.sources-section sup {
+    font-size: 0.75em;
+    vertical-align: super;
+    margin-left: 2px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 40px;
+    color: var(--secondary-color);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Socialni ikony v clanku: obecne .article-content img (width:100%)
+   by je nafouklo — zde je vracime na 28 px. */
+
 .article-content .social-icon img {
     display: inline-block;
     width: 28px;
@@ -1969,184 +1743,298 @@ footer {
     margin: 26px 0 10px;
 }
 
-/* =========================================
-   FIX: mobilni navigace na strankach clanku
-   Clanky nemaji hamburger ani .nav-links-container,
-   takze obecne mobilni pravidlo .nav-links (sloupcova
-   roletka) u nich zustavalo trvale "rozbalene" pres obsah.
-   Zde ho pro primeho potomka .main-nav prebijeme
-   kompaktnim vodorovnym radkem.
-   ========================================= */
-@media (max-width: 768px) {
-    .main-nav {
-        flex-wrap: wrap;
-        row-gap: 6px;
-    }
+/* --- Sdileci tlacitka --- */
 
-    .main-nav>.nav-links {
-        position: static;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: auto;
-        background: none;
-        box-shadow: none;
-        padding: 0;
-    }
-
-    .main-nav>.nav-links a {
-        display: inline-block;
-        width: auto;
-        padding: 8px 10px;
-        margin: 0;
-        border-bottom: none;
-        font-size: 0.9em;
-        text-align: center;
-    }
-
-    .main-nav>.lang-switcher {
-        margin: 0;
-    }
-}
-
-/* =========================================
-   CERTIFIKACE (homepage)
-   ========================================= */
-.cert-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    margin-top: 10px;
-}
-
-.cert-card {
-    background: var(--white);
-    border: 1px solid #e2e8f0;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 10px rgba(12, 35, 64, 0.06);
+.share-bar {
     display: flex;
-    flex-direction: column;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    align-items: center;
+    gap: 12px;
+    margin: 36px 0 30px;
+    padding-top: 24px;
+    border-top: 1px solid #e2e8f0;
 }
 
-.cert-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 22px rgba(12, 35, 64, 0.12);
-}
-
-.cert-card > a.cert-image-link {
-    display: block;
-    background: #f8fafc;
-    border-bottom: 1px solid #eef2f7;
-}
-
-.cert-card img {
-    width: 100%;
-    height: 190px;
-    object-fit: cover;
-    object-position: center top;
-    display: block;
-}
-
-.cert-info {
-    padding: 18px 20px 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-    flex: 1;
-}
-
-.cert-info h3 {
-    margin: 0;
-    font-size: 1.02em;
-    color: var(--primary-color);
-    line-height: 1.35;
-}
-
-.cert-info p {
-    margin: 0;
+.share-label {
     font-size: 0.88em;
-    color: var(--text-color);
-    line-height: 1.55;
-    flex: 1;
-}
-
-.cert-meta {
-    font-size: 0.8em;
     color: #64748b;
+    font-weight: 600;
+    margin-right: 4px;
 }
 
-.cert-verify {
-    font-size: 0.85em;
-    color: var(--accent-color);
-    font-weight: 600;
+.share-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--light-gray);
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.share-btn img,
+.article-content .share-btn img {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    box-shadow: none;
+    border-radius: 0;
+    margin: 0;
+}
+
+.share-btn:hover {
+    background: var(--gold-soft);
+    transform: translateY(-2px);
+}
+
+/* ======================================================================
+   12. GALERIE A LIGHTBOX
+   ====================================================================== */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    /* Responsivní sloupce */
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 220px;
+    /* Fixní výška pro sjednocení mřížky */
+    object-fit: cover;
+    /* Ořízne fotku, aby se nedeformovala */
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03);
+    /* Jemné zvětšení při najetí */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.modal {
+    display: none;
+    /* Ve výchozím stavu skryté */
+    position: fixed;
+    z-index: 9999;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.92);
+    /* Tmavé pozadí */
+    backdrop-filter: blur(5px);
+    /* Moderní efekt rozostření pozadí */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: auto;
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    animation-name: zoom;
+    animation-duration: 0.3s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0.8);
+        opacity: 0
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1
+    }
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--secondary-color);
     text-decoration: none;
 }
 
-.cert-verify:hover {
-    text-decoration: underline;
+/* Sipky: .prev a .next se lisi jen zaoblenim — driv to bylo
+   resene prepisem v poradi, ted explicitne. */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.3s ease;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
-@media (max-width: 900px) {
-    .cert-grid {
-        grid-template-columns: 1fr;
+.prev {
+    border-radius: 0 3px 3px 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Breakpoint sjednocen ze 700 px na 768 px (viz poznamka v reportu) */
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 100%;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px;
+    }
+
+    .gallery-grid img {
+        height: 150px;
+        /* Menší náhledy na mobilu */
     }
 }
 
-/* =========================================
-   FOTO PAS Z AKCI (homepage)
-   ========================================= */
-.photostrip-grid {
+/* ======================================================================
+   13. FOOTER
+   ====================================================================== */
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 80px 20px 40px;
+    margin-top: 100px;
+}
+
+.footer-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-.photostrip-grid figure {
-    margin: 0;
+.footer-grid h4 {
+    color: var(--white);
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    border-bottom: 2px solid var(--secondary-color);
+    display: inline-block;
+    padding-bottom: 5px;
 }
 
-.photostrip-grid img {
-    width: 100%;
-    aspect-ratio: 16 / 10;
-    object-fit: cover;
-    border-radius: 8px;
-    display: block;
-    box-shadow: 0 2px 10px rgba(12, 35, 64, 0.08);
+.footer-grid p,
+.footer-grid a {
+    color: #94a3b8;
+    font-size: 0.95em;
+    margin-bottom: 10px;
 }
 
-.photostrip-grid figcaption {
-    font-size: 0.82em;
-    color: #64748b;
-    margin-top: 8px;
+.footer-grid a:hover {
+    color: var(--secondary-color);
+}
+
+.social-icons-container {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon img {
+    width: 28px;
+    height: 28px;
+    /* ZMĚNA: Žádný filtr, plná barva a viditelnost */
+    filter: none;
+    opacity: 1;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover img {
+    transform: scale(1.2);
+}
+
+.copyright {
     text-align: center;
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #64748b;
+    font-size: 0.85em;
 }
 
 @media (max-width: 768px) {
-    .photostrip-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 14px;
+    .footer-grid {
+        text-align: center;
+    }
+
+    .social-icons-container {
+        justify-content: center;
     }
 }
 
-/* =========================================
-   PREMIUM DEKORATIVNI VRSTVA
-   Jemny, pomalu se pohybujici gradient na pozadi
-   vybranych sekci — evokuje preciznost (pravo) +
-   modernost (AI), bez "AI generated" klise.
-   ========================================= */
+/* ======================================================================
+   14. PREMIUM DEKORATIVNI VRSTVA
+   Jemny pomaly gradient na pozadi vybranych sekci.
+   ====================================================================== */
+
 @keyframes premiumDrift {
-    0%   { transform: translate(0, 0) scale(1); }
-    50%  { transform: translate(-4%, 3%) scale(1.06); }
-    100% { transform: translate(0, 0) scale(1); }
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(-4%, 3%) scale(1.06);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
 }
 
 @keyframes premiumDriftReverse {
-    0%   { transform: translate(0, 0) scale(1); }
-    50%  { transform: translate(4%, -3%) scale(1.08); }
-    100% { transform: translate(0, 0) scale(1); }
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(4%, -3%) scale(1.08);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
 }
 
 .premium-decor {
@@ -2188,7 +2076,6 @@ footer {
     z-index: 1;
 }
 
-/* Varianta pro sekci Certifikace — jemny § vodoznak jako odkaz na pravo */
 .premium-decor--law::before {
     content: "§";
     font-family: 'Lora', Georgia, serif;
@@ -2208,16 +2095,8 @@ footer {
     z-index: 0;
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .premium-decor::before,
-    .premium-decor::after {
-        animation: none;
-    }
-}
-
 @media (max-width: 768px) {
-    .premium-decor::before,
-    .premium-decor::after {
+    .premium-decor::before, .premium-decor::after {
         display: none;
     }
 
@@ -2228,47 +2107,33 @@ footer {
     }
 }
 
-/* =========================================
-   SDILECI TLACITKA (Facebook, LinkedIn) na clancich
-   ========================================= */
-.share-bar {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin: 36px 0 30px;
-    padding-top: 24px;
-    border-top: 1px solid #e2e8f0;
+/* ======================================================================
+   15. UTILITY
+   ====================================================================== */
+
+/* Aktivni odkaz v navigaci (driv resene !important) */
+.nav-links a.active-link {
+    color: var(--secondary-color);
 }
 
-.share-label {
-    font-size: 0.88em;
-    color: #64748b;
-    font-weight: 600;
-    margin-right: 4px;
-}
+/* ======================================================================
+   16. PREFERS-REDUCED-MOTION
+   Jedno misto pro cely soubor.
+   ====================================================================== */
 
-.share-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    background: var(--light-gray);
-    transition: background 0.2s ease, transform 0.2s ease;
-}
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
 
-.share-btn img,
-.article-content .share-btn img {
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    box-shadow: none;
-    border-radius: 0;
-    margin: 0;
-}
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
 
-.share-btn:hover {
-    background: var(--gold-soft);
-    transform: translateY(-2px);
+    .premium-decor::before,
+    .premium-decor::after {
+        animation: none;
+    }
 }

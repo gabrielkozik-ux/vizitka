@@ -1,117 +1,131 @@
+/* ==========================================================================
+   main.js — nacita se na kazde strance
+   --------------------------------------------------------------------------
+   1. Mobilni navigace (hamburger)
+   2. Prepinac jazyka
+   3. Scroll reveal (.reveal -> .visible)
+   4. Animovane countery v trust baru (.trust-number[data-count])
+
+   Vsechno v jednom DOMContentLoaded. Kazdy blok si sam overi, ze jeho
+   prvky na strance existuji — clanky treba hamburger nemaji.
+   ========================================================================== */
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Mobile navigation toggle
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    /* --- 1. Mobilni navigace ------------------------------------------- */
     const hamburger = document.querySelector('.hamburger');
     const navLinksContainer = document.querySelector('.nav-links-container');
 
+    const closeMenu = () => {
+        if (!navLinksContainer || !hamburger) return;
+        navLinksContainer.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+    };
+
     if (hamburger && navLinksContainer) {
-        function toggleMenu() {
-            const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
-            hamburger.setAttribute('aria-expanded', !isExpanded);
+        const toggleMenu = () => {
+            const isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+            hamburger.setAttribute('aria-expanded', String(!isOpen));
             navLinksContainer.classList.toggle('active');
-        }
+        };
 
         hamburger.addEventListener('click', toggleMenu);
         hamburger.addEventListener('keydown', e => {
-            if (e.key === 'Enter') { toggleMenu(); }
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleMenu();
+            }
         });
 
-        // Close menu when a link is clicked (mobile)
+        // Zavrit po kliku na odkaz (mobil)
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
-                if (window.innerWidth <= 768 && navLinksContainer.classList.contains('active')) {
-                    navLinksContainer.classList.remove('active');
-                    hamburger.setAttribute('aria-expanded', 'false');
-                }
+                if (window.innerWidth <= 768) closeMenu();
             });
         });
     }
 
-    // Language switcher
+    /* --- 2. Prepinac jazyka -------------------------------------------- */
     const langButton = document.querySelector('.lang-switcher-button');
     const langDropdown = document.querySelector('.lang-switcher-dropdown');
 
     if (langButton && langDropdown) {
-        function toggleLangDropdown() {
-            const isExpanded = langButton.getAttribute('aria-expanded') === 'true';
-            langButton.setAttribute('aria-expanded', !isExpanded);
+        const toggleLang = () => {
+            const isOpen = langButton.getAttribute('aria-expanded') === 'true';
+            langButton.setAttribute('aria-expanded', String(!isOpen));
             langButton.classList.toggle('active');
-            langDropdown.style.display = langDropdown.style.display === 'block' ? 'none' : 'block';
-        }
+            langDropdown.style.display = isOpen ? 'none' : 'block';
+        };
 
         langButton.addEventListener('click', e => {
             e.stopPropagation();
-            toggleLangDropdown();
+            toggleLang();
         });
 
-        // Close dropdowns when clicking outside
         window.addEventListener('click', e => {
-            if (navLinksContainer && navLinksContainer.classList.contains('active') &&
-                !navLinksContainer.contains(e.target) && !hamburger.contains(e.target)) {
-                navLinksContainer.classList.remove('active');
-                hamburger.setAttribute('aria-expanded', 'false');
-            }
-            if (langButton.classList.contains('active') && !langButton.parentElement.contains(e.target)) {
-                toggleLangDropdown();
+            if (langButton.classList.contains('active') &&
+                !langButton.parentElement.contains(e.target)) {
+                toggleLang();
             }
         });
     }
 
-    // Vercel Analytics stub
-    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    // Klik mimo menu ho zavre
+    window.addEventListener('click', e => {
+        if (!navLinksContainer || !hamburger) return;
+        if (navLinksContainer.classList.contains('active') &&
+            !navLinksContainer.contains(e.target) &&
+            !hamburger.contains(e.target)) {
+            closeMenu();
+        }
+    });
 
-    // Smsticket widget loader
-    (function () {
-        var po = document.createElement('script');
-        po.async = true;
-        po.src = 'https://www.smsticket.cz/static/scripts/widgets/SaleAnchorMini.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(po, s);
-    })();
-});
-
-// =========================================
-// RESTART BRANDU 2026: scroll-reveal + animovane statistiky
-// =========================================
-document.addEventListener('DOMContentLoaded', () => {
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    // Scroll reveal
+    /* --- 3. Scroll reveal ---------------------------------------------- */
     const revealEls = document.querySelectorAll('.reveal');
-    if (revealEls.length && 'IntersectionObserver' in window && !prefersReduced) {
-        const io = new IntersectionObserver((entries) => {
-            entries.forEach(e => {
-                if (e.isIntersecting) {
-                    e.target.classList.add('visible');
-                    io.unobserve(e.target);
-                }
-            });
-        }, { threshold: 0.15 });
-        revealEls.forEach(el => io.observe(el));
-    } else {
-        revealEls.forEach(el => el.classList.add('visible'));
+
+    if (revealEls.length) {
+        if (prefersReduced || !('IntersectionObserver' in window)) {
+            revealEls.forEach(el => el.classList.add('visible'));
+        } else {
+            const io = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    entry.target.classList.add('visible');
+                    io.unobserve(entry.target);
+                });
+            }, { threshold: 0.15 });
+            revealEls.forEach(el => io.observe(el));
+        }
     }
 
-    // Animovane countery v trust baru
+    /* --- 4. Countery v trust baru -------------------------------------- */
     const counters = document.querySelectorAll('.trust-number[data-count]');
-    if (counters.length && 'IntersectionObserver' in window && !prefersReduced) {
-        const cio = new IntersectionObserver((entries) => {
-            entries.forEach(e => {
-                if (!e.isIntersecting) return;
-                const el = e.target;
-                const target = parseInt(el.dataset.count, 10);
-                const suffix = el.dataset.suffix || '';
-                const duration = 1200;
-                const start = performance.now();
-                const tick = (now) => {
-                    const p = Math.min((now - start) / duration, 1);
-                    const eased = 1 - Math.pow(1 - p, 3);
-                    el.textContent = Math.round(eased * target) + suffix;
-                    if (p < 1) requestAnimationFrame(tick);
-                };
-                requestAnimationFrame(tick);
-                cio.unobserve(el);
+
+    if (counters.length && !prefersReduced && 'IntersectionObserver' in window) {
+        const countUp = el => {
+            const target = parseInt(el.dataset.count, 10);
+            const suffix = el.dataset.suffix || '';
+            const duration = 1200;
+            const start = performance.now();
+
+            const tick = now => {
+                const p = Math.min((now - start) / duration, 1);
+                const eased = 1 - Math.pow(1 - p, 3);
+                el.textContent = Math.round(eased * target) + suffix;
+                if (p < 1) requestAnimationFrame(tick);
+            };
+            requestAnimationFrame(tick);
+        };
+
+        const cio = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                countUp(entry.target);
+                cio.unobserve(entry.target);
             });
         }, { threshold: 0.6 });
+
         counters.forEach(el => cio.observe(el));
     }
 });

@@ -1879,6 +1879,96 @@ section {
     color: var(--navy-800);
 }
 
+/* Tabulka v odbornem clanku.
+   Obal .article-table resi scroll na uzkych displejich — tabulku nelamat
+   do bloku, u srovnavacich tabulek se tim ztraci vztah radek/sloupec.
+   Zebrikove pozadi zamerne neni: hairline linky staci a drzi klid stranky. */
+.article-content .article-table {
+    overflow-x: auto;
+    margin: var(--sp-32) 0 var(--sp-40);
+    border-top: 2px solid var(--bronze-500);
+    border-bottom: 1px solid var(--hairline);
+}
+
+.article-content .article-table table {
+    width: 100%;
+    min-width: 560px;
+    border-collapse: collapse;
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+.article-content .article-table th {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 0.82em;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-align: left;
+    color: var(--ink-muted);
+    padding: var(--sp-16) var(--sp-16) var(--sp-12) 0;
+    border-bottom: 1px solid var(--hairline);
+    vertical-align: bottom;
+}
+
+.article-content .article-table td {
+    padding: var(--sp-16) var(--sp-16) var(--sp-16) 0;
+    border-bottom: 1px solid var(--hairline);
+    vertical-align: top;
+    font-size: 1em;
+    margin: 0;
+}
+
+.article-content .article-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.article-content .article-table td:first-child {
+    font-weight: 600;
+    color: var(--navy-800);
+    padding-right: var(--sp-24);
+}
+
+/* Stavovy stitek v tabulce (vhodne / nevhodne). Barva jde pres currentColor,
+   aby ramecek vzdy sedel k textu a nemusel se definovat dvakrat. */
+.article-content .table-flag {
+    display: inline-block;
+    font-size: 0.78em;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding: 2px var(--sp-8);
+    border: 1px solid currentColor;
+    border-radius: var(--r-sm);
+}
+
+.article-content .table-flag--no {
+    color: #9a3412;
+}
+
+.article-content .table-flag--yes {
+    color: var(--bronze-600);
+}
+
+/* Zacerneny udaj — ukazka anonymizace primo v textu. */
+.article-content .redacted {
+    background: var(--navy-800);
+    color: transparent;
+    border-radius: 2px;
+    padding: 0 var(--sp-4);
+    user-select: none;
+}
+
+@media (max-width: 680px) {
+    .article-content .article-table {
+        margin-left: calc(-1 * var(--sp-16));
+        margin-right: calc(-1 * var(--sp-16));
+        padding-left: var(--sp-16);
+        padding-right: var(--sp-16);
+    }
+}
+
 /* Zdroje, odkaz zpet */
 
 .sources-section {

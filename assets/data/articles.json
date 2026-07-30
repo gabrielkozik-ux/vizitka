@@ -1,5 +1,21 @@
 [
     {
+        "id": "claude-gemini-chatgpt-srovnani",
+        "date": "2026-07-30",
+        "category": "expert",
+        "image": "blog/2026/claude-gemini-chatgpt-srovnani/header.jpg",
+        "cs": {
+            "title": "Claude vs. Gemini vs. ChatGPT: který AI nástroj zvolit jako freelancer nebo malá firma?",
+            "excerpt": "Srovnání tří AI asistentů pro podnikatele a malé týmy — ceny, silné a slabé stránky, a hlavně: kam smíte nahrát firemní a klientská data.",
+            "link": "blog/2026/claude-gemini-chatgpt-srovnani/claude-gemini-chatgpt-srovnani"
+        },
+        "en": {
+            "title": "Claude vs. Gemini vs. ChatGPT: Which AI Tool Should a Freelancer or Small Business Choose?",
+            "excerpt": "A comparison of three AI assistants for entrepreneurs and small teams — pricing, strengths and weaknesses, and above all: where you are actually allowed to upload company and client data.",
+            "link": "blog/2026/claude-gemini-chatgpt-srovnani/claude-gemini-chatgpt-srovnani-en"
+        }
+    },
+    {
         "id": "ponozky-v-sandalech-legislativni-proces",
         "date": "2026-07-23",
         "category": "expert",

@@ -3,7 +3,7 @@
 (function () {
     'use strict';
 
-    var ENDPOINT = '';
+    var ENDPOINT = 'https://script.google.com/macros/s/AKfycbwTK_oLtYEF2ZG-P-YT4r2m4TdSmAV2dL6k9LXaICbVOdPIe1d9g-xWCgBJr3qE1QY/exec';
 
     var form = document.getElementById('contact-form');
     if (!form) return;

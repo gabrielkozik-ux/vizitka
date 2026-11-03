@@ -1,0 +1,39 @@
+# Mgr. Gabriel Kožík – advokát pro novou dobu s AI
+
+> Samostatný advokát (ČAK, ev. č. 19320) se sídlem v Brně, působící v Brně
+> a na Tišnovsku. Pomáhá majitelům malých a středních firem s obchodním
+> a korporátním právem, ochranou dat (GDPR), AI compliance (AI Act)
+> a bezpečným zaváděním AI do firem. Vede praktická AI školení pro firmy.
+
+Komunikace v češtině, anglická verze webu je k dispozici.
+Kontakt: info@gabrielkozik.cz, +420 720 265 713. Úvodní konzultace 30 minut zdarma.
+
+## Služby a kontakt
+- [Právní služby a AI školení](https://www.gabrielkozik.cz/#sluzby): obchodní a korporátní právo, AI Act, GDPR, e-commerce, pracovní právo
+- [Jak pracuji s AI](https://www.gabrielkozik.cz/#jak-pracuji): transparentní a bezpečné využití AI v advokátní praxi
+- [Kontakt a rezervace konzultace](https://www.gabrielkozik.cz/#propojit)
+
+## Odborné články
+- [Claude vs. Gemini vs. ChatGPT: který AI nástroj zvolit jako freelancer nebo malá firma?](https://www.gabrielkozik.cz/blog/2026/claude-gemini-chatgpt-srovnani/claude-gemini-chatgpt-srovnani): Srovnání tří AI asistentů pro podnikatele a malé týmy — ceny, silné a slabé stránky, a hlavně: kam smíte nahrát firemní a klientská data.
+- [Ponožky v sandálech ze zákona? Co vás naučí český legislativní proces](https://www.gabrielkozik.cz/blog/2026/ponozky-v-sandalech-legislativni-proces/ponozky-v-sandalech-legislativni-proces): Na absurdním příkladu z pořadu What the Fact? (ČT) rozebírám, jak v Česku vznikají zákony – a proč by to měl sledovat každý podnikatel, ne až když zaklepe kontrola.
+- [AI model, který se sám naboural do cizí infrastruktury, aby vyhrál test](https://www.gabrielkozik.cz/blog/2026/ai-model-napadl-hugging-face/ai-model-napadl-hugging-face): OpenAI přiznala bezprecedentní kybernetický incident: jejich model sám napadl infrastrukturu Hugging Face, aby si opatřil odpovědi k testu. Co si z toho má odnést firma, která nasazuje AI.
+- [„AI slop" před Nejvyšším správním soudem: dvě lekce z jednoho rozsudku](https://www.gabrielkozik.cz/blog/2026/ai-slop-pred-nss/ai-slop-pred-nss): NSS poprvé v odůvodnění použil výraz „AI slop". Rozsudek 10 As 81/2026 dává dvě lekce: proč platí i rozhodnutí, které vám nikdo neposlal, a co hrozí za vymyšlenou judikaturu z AI.
+- [AI před soudem: Pět rozhodnutí, která by měl znát každý majitel firmy](https://www.gabrielkozik.cz/blog/2026/ai-pred-soudem/ai-pred-soudem): Chatbot slíbil zákazníkovi slevu, AI vymyslela judikaturu, firma přišla o ochranu svých vizuálů. Přehled skutečné rozhodovací praxe v oblasti AI a poučení pro české firmy.
+- [Jak správně označovat AI generovaný obsah? Nový kodex Evropské komise](https://www.gabrielkozik.cz/blog/2026/jak-spravne-oznacovat-ai-obsah/jak-spravne-oznacovat-ai-obsah): Evropská komise zveřejnila kodex správné praxe pro označování AI generovaného obsahu. Zjistěte, jak se mění pravidla a co hrozí za jejich nedodržení.
+- [Když AI udělá chybu, účet jde za vámi](https://www.gabrielkozik.cz/blog/2026/odpovednost-za-chyby-ai/odpovednost-za-chyby-ai): Kdo nese právní odpovědnost za chyby, nefunkční kód nebo chybné kalkulace vytvořené umělou inteligencí? Analýza podle českého práva.
+- [Konec pokut pro lidi a nástup algoritmů: Jak nová legislativa změní platformovou práci a švarcsystém](https://www.gabrielkozik.cz/blog/2026/zakon-o-platformove-praci/zakon-o-platformove-praci): Česká republika bude od ledna 2027 regulovat využití algoritmického řízení a švarcsystém. Zjistěte, jaké nové povinnosti a rizika to přináší zaměstnavatelům.
+- [Jak si jednoduše personifikovat Gemini?](https://www.gabrielkozik.cz/blog/2026/jak-si-jednoduse-personifikovat-gemini/jak-si-jednoduse-personifikovat-gemini): Velký průvodce možnostmi přizpůsobení a personifikace Google Gemini. Jak nastavit paměť, propojit aplikace přes rozšíření a importovat data z ChatGPT či Claude.
+- [Filosofie AI v advokacii: Proč se nebát synergie](https://www.gabrielkozik.cz/blog/2026/filosofie-ai-v-advokacii/filosofie-ai-v-advokacii): Proč by advokacie a AI měly fungovat v synergii? Moje vize spojení lidské expertízy a technologické preciznosti pro lepší výsledky klientů.
+- [AI akt pro zaneprázdněné: Co musíte vědět v 5 minutách](https://www.gabrielkozik.cz/blog/2026/ai-act-pro-zaneprazdnene/ai-act-pro-zaneprazdnene): Cíl: Rychlý a srozumitelný přehled pro manažery a majitele firem. Obsah: Co je AI akt, proč vznikl, koho se týká a jaký je jeho hlavní princip.
+- [Slovník pojmů AI Actu: Mluvíte jazykem regulátorů?](https://www.gabrielkozik.cz/blog/2025/slovnik-pojmu-ai-act/slovnik-pojmu-ai-act): Klíčové pojmy AI Actu vysvětleny: Co je systém AI, poskytovatel, zavádějící subjekt či rizikové kategorie. Nezbytný slovník pro firmy a manažery.
+- [Konec tolerance: Novela zákona zpřísňuje zaměstnávání cizinců od 1. 10. 2025](https://www.gabrielkozik.cz/blog/2025/novela-hlaseni-zamestnancu-2025/novela-hlaseni-zamestnancu-2025): Dosavadní benevolence v hlášení cizinců končí. Novela zákona o zaměstnanosti ruší možnost zpětného hlášení a zavádí fikci „nelegální práce“ s likvidačními pokutami.
+- [Převod podílu v s.r.o. a notářský zápis: Mýty a fakta](https://www.gabrielkozik.cz/blog/2025/prevod-podilu-sro-nz/prevod-podilu-sro-nz): Analýza, zda je pro souhlas valné hromady s převodem podílu nutný notářský zápis. Klíčová soudní rozhodnutí a praktické dopady pro s.r.o.
+- [AI Agenti: Hrozba, nebo největší byznysová příležitost od dob internetu?](https://www.gabrielkozik.cz/blog/2025/ai-agenti-nova-era-byznysu/ai-agenti-nova-era-byznysu): Analýza nástupu AI agentů. Zjistěte, jak transformují trh práce, jaké přinášejí příležitosti a jak se bránit kritickým bezpečnostním rizikům jako je Prompt Injection.
+- [Advokacie na rozcestí: Hrozba, nebo příležitost?](https://www.gabrielkozik.cz/blog/2025/advokati-a-ai/advokati-a-ai): Analýza dopadu umělé inteligence na výkon advokacie v ČR. Je AI pro advokáty existenčním rizikem, nebo bezprecedentní šancí na transformaci a růst?
+- [AI v byznysu: 4 cesty, kudy z vaší firmy nevědomky unikají data](https://www.gabrielkozik.cz/blog/2025/ai-v-byznysu/ai-v-byznysu-4-cesty): Používání AI nástrojů se stalo běžnou součástí firemní praxe. Mnozí si však neuvědomují rizika spojená s ochranou citlivých dat. Podívejme se na čtyři nejčastější scénáře, kde může dojít k úniku, a jak se jim bránit.
+- [Regulace AI v byznysu: Jste připraveni na AI Act?](https://www.gabrielkozik.cz/blog/2025/ai-act-byznys/ai-act-byznys): Umělá inteligence už není sci-fi, ale každodenní nástroj, který firmám pomáhá inovovat, automatizovat a růst. S velkou mocí ale přichází i velká zodpovědnost – a teď i nová pravidla.
+
+## Optional
+- [Podcasty a reportáže z akcí](https://www.gabrielkozik.cz/blog)
+- [English version](https://www.gabrielkozik.cz/index-en)
+- [Ochrana osobních údajů](https://www.gabrielkozik.cz/ochrana-osobnich-udaju)

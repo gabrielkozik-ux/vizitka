@@ -69,6 +69,8 @@
     /* meta, popisky, 5.44:1 (drive #94a3b8 = 2.6:1, propadalo) */
     --hairline: #e6eaf0;
     /* 1px linky a ramecky */
+    --danger-600: #b42318;
+    /* chybove hlasky (formular), 6.5:1 na bile */
 
     /* --- BARVY: text na tmavem pozadi -------------------------------
        Svetle sedé z palety neutralu na navy NEFUNGUJI: --ink-muted ma
@@ -809,6 +811,62 @@ section {
 .form-actions {
     text-align: center;
     margin-top: var(--sp-20);
+}
+
+.form-actions .cta-button:disabled {
+    opacity: 0.7;
+    cursor: wait;
+}
+
+/* Past na roboty: pole je mimo obrazovku, clovek ho nevidi ani nevyplni. */
+.form-hp {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.form-note {
+    margin-top: var(--sp-20);
+    font-size: 0.85em;
+    line-height: 1.5;
+    color: var(--ink-muted);
+    text-align: center;
+}
+
+.form-note a {
+    color: var(--bronze-600);
+}
+
+.form-status {
+    margin-top: var(--sp-20);
+    padding: var(--sp-16) var(--sp-20);
+    border-radius: var(--r-sm);
+    line-height: 1.5;
+}
+
+.form-status a {
+    color: inherit;
+    font-weight: 600;
+}
+
+.form-status.is-success {
+    background: var(--bronze-50);
+    color: var(--navy-900);
+    text-align: center;
+}
+
+.form-status.is-error {
+    border: 2px solid var(--danger-600);
+    color: var(--danger-600);
+}
+
+/* Po odeslani zustane jen podekovani. */
+.contact-form.is-sent .form-group,
+.contact-form.is-sent .form-actions,
+.contact-form.is-sent .form-note {
+    display: none;
 }
 
 /* --- Animace: fade-in komponent --- */
@@ -2282,6 +2340,15 @@ footer .social-icon:hover {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--on-deep-muted);
     font-size: 0.85em;
+}
+
+.copyright a {
+    color: var(--on-deep-muted);
+    text-decoration: underline;
+}
+
+.copyright a:hover {
+    color: var(--bronze-200);
 }
 
 @media (max-width: 768px) {

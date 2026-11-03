@@ -33,7 +33,7 @@
   </url>
   <url>
     <loc>https://www.gabrielkozik.cz/</loc>
-    <lastmod>2026-03-12</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <priority>1.00</priority>
     <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.cz/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.cz/index-en" />
@@ -41,7 +41,7 @@
   </url>
   <url>
     <loc>https://www.gabrielkozik.cz/index-en</loc>
-    <lastmod>2026-03-12</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <priority>0.90</priority>
     <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.cz/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.cz/index-en" />
@@ -611,5 +611,21 @@
     <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.cz/blog/2025/ai-act-byznys/ai-act-byznys" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.cz/blog/2025/ai-act-byznys/ai-act-byznys-en" />
+  </url>
+  <url>
+    <loc>https://www.gabrielkozik.cz/ochrana-osobnich-udaju</loc>
+    <lastmod>2026-11-03</lastmod>
+    <priority>0.30</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.cz/ochrana-osobnich-udaju" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.cz/ochrana-osobnich-udaju-en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gabrielkozik.cz/ochrana-osobnich-udaju" />
+  </url>
+  <url>
+    <loc>https://www.gabrielkozik.cz/ochrana-osobnich-udaju-en</loc>
+    <lastmod>2026-11-03</lastmod>
+    <priority>0.30</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.cz/ochrana-osobnich-udaju" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.cz/ochrana-osobnich-udaju-en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gabrielkozik.cz/ochrana-osobnich-udaju" />
   </url>
 </urlset>

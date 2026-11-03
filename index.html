@@ -29,9 +29,7 @@
 
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Mgr. Gabriel Kožík","jobTitle":"Advokát","description":"Advokát pro novou dobu s AI. Právní služby a AI compliance pro firmy.","url":"https://www.gabrielkozik.cz/","image":"https://www.gabrielkozik.cz/assets/images/profilova-fotka.jpg","email":"mailto:info@gabrielkozik.cz","telephone":"+420720265713","address":{"@type":"PostalAddress","streetAddress":"Slovákova 279/11","addressLocality":"Brno","postalCode":"602 00","addressCountry":"CZ"},"sameAs":["https://www.linkedin.com/in/gabriel-kozik/","https://www.facebook.com/somslovak","https://www.instagram.com/kozik_gabriel/","https://www.youtube.com/@gabriel-kozik"],"knowsAbout":["Obchodní právo","Korporátní právo","AI Act","GDPR","Umělá inteligence","Smluvní právo"]}</script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/fonts/fonts.css">
 
     <!-- EXTERNÍ CSS -->
     <link rel="stylesheet" href="style.css">
@@ -422,22 +420,33 @@
 
                 <div class="form-container">
                     <p class="section-subtitle"><strong>nebo mi zanechte rychlou zprávu</strong></p>
-                    <form action="https://formspree.io/f/xblzwqjn" method="POST">
+                    <form id="contact-form" class="contact-form" method="POST" novalidate>
                         <div class="form-group">
                             <label for="name" class="form-label">Jméno</label>
-                            <input type="text" id="name" name="name" required class="form-input">
+                            <input type="text" id="name" name="name" required maxlength="200" autocomplete="name" class="form-input">
                         </div>
                         <div class="form-group">
                             <label for="email" class="form-label">E-mail</label>
-                            <input type="email" id="email" name="email" required class="form-input">
+                            <input type="email" id="email" name="email" required maxlength="254" autocomplete="email" class="form-input">
                         </div>
                         <div class="form-group">
                             <label for="message" class="form-label">Vaše zpráva</label>
-                            <textarea id="message" name="message" rows="5" required class="form-textarea"></textarea>
+                            <textarea id="message" name="message" rows="5" required maxlength="5000" class="form-textarea"
+                                placeholder="Stručně popište, s čím potřebujete pomoct. Citlivé detaily probereme osobně."></textarea>
                         </div>
+                        <div class="form-hp" aria-hidden="true">
+                            <label for="website">Nevyplňujte</label>
+                            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                        </div>
+                        <input type="hidden" name="lang" value="">
+                        <input type="hidden" name="page" value="">
+                        <input type="hidden" name="ts" value="">
                         <div class="form-actions">
                             <button type="submit" class="cta-button">Odeslat zprávu</button>
                         </div>
+                        <div class="form-status" role="status" aria-live="polite" tabindex="-1" hidden></div>
+                        <p class="form-note">Údaje z formuláře použiji jen k tomu, abych vám odpověděl. Vše, co mi napíšete, beru jako důvěrné a vztahuje se na to advokátní mlčenlivost. Podrobnosti najdete v <a href="ochrana-osobnich-udaju">Ochraně osobních údajů</a>.</p>
+                        <noscript><p class="form-note">Formulář potřebuje zapnutý JavaScript. Napište mi prosím přímo na <a href="mailto:info@gabrielkozik.cz">info@gabrielkozik.cz</a>.</p></noscript>
                     </form>
                 </div>
             </div>
@@ -479,11 +488,12 @@
             </div>
         </div>
         <div class="copyright">
-            <p>&copy; 2026 Mgr. Gabriel Kožík. Všechna práva vyhrazena.</p>
+            <p>&copy; 2026 Mgr. Gabriel Kožík. Všechna práva vyhrazena. · <a href="ochrana-osobnich-udaju">Ochrana osobních údajů</a></p>
         </div>
     </footer>
 
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/contact-form.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,21 @@
 [
     {
+        "id": "tlacitko-chatbot-dve-eura",
+        "date": "2026-11-03",
+        "category": "expert",
+        "image": "blog/2026/tlacitko-chatbot-dve-eura/header.jpg",
+        "cs": {
+            "title": "Tlačítko, chatbot a dvě eura za položku: co se mění pro podnikatele do roku 2028",
+            "excerpt": "Tlačítko pro odstoupení od 1. 1. 2027, poplatek 2 € za položku a ochrana OSVČ u úvěrů. A pravidlo, podle kterého má spotřebitel právo na vysvětlení člověkem, když mu finanční službu vysvětlil jen chatbot.",
+            "link": "blog/2026/tlacitko-chatbot-dve-eura/tlacitko-chatbot-dve-eura"
+        },
+        "en": {
+            "title": "Button, Chatbot and Two Euros per Item: What Changes for Czech Businesses by 2028",
+            "excerpt": "A withdrawal button from 1 January 2027, a €2 fee per item and loan protection for sole traders. Plus a rule giving consumers the right to a human explanation when only a chatbot explained a financial service.",
+            "link": "blog/2026/tlacitko-chatbot-dve-eura/tlacitko-chatbot-dve-eura-en"
+        }
+    },
+    {
         "id": "claude-gemini-chatgpt-srovnani",
         "date": "2026-07-30",
         "category": "expert",

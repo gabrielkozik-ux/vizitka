@@ -534,7 +534,7 @@ section {
             rgba(8, 26, 46, 0.95) 0%,
             rgba(8, 26, 46, 0.78) 42%,
             rgba(8, 26, 46, 0.32) 100%),
-        url('assets/images/hero-pod-palavou.jpg');
+        url('assets/images/hero-pod-palavou.webp');
     background-size: cover;
     background-position: 70% 42%;
     background-repeat: no-repeat;
@@ -546,6 +546,17 @@ section {
     align-items: flex-start;
     padding: 0 var(--sp-24);
     text-align: left;
+}
+
+/* Na mobilu staci mensi varianta fotky (preload v <head> pouziva stejny breakpoint). */
+@media (max-width: 768px) {
+    .hero {
+        background-image: linear-gradient(95deg,
+                rgba(8, 26, 46, 0.95) 0%,
+                rgba(8, 26, 46, 0.78) 42%,
+                rgba(8, 26, 46, 0.32) 100%),
+            url('assets/images/hero-pod-palavou-900.webp');
+    }
 }
 
 .hero .container {
@@ -613,12 +624,18 @@ section {
    potreba zadne mobilni @media prepisy ani globalni h1 s !important. */
 
 .page-header {
-    background-image: linear-gradient(rgba(12, 35, 64, 0.8), rgba(12, 35, 64, 0.8)), url('assets/images/uvodni-obrazek.jpg');
+    background-image: linear-gradient(rgba(12, 35, 64, 0.8), rgba(12, 35, 64, 0.8)), url('assets/images/uvodni-obrazek.webp');
     background-size: cover;
     background-position: center;
     padding: var(--sp-80) var(--sp-20);
     text-align: center;
     color: var(--surface);
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        background-image: linear-gradient(rgba(12, 35, 64, 0.8), rgba(12, 35, 64, 0.8)), url('assets/images/uvodni-obrazek-900.webp');
+    }
 }
 
 .page-header h1 {
@@ -837,6 +854,7 @@ section {
 
 .form-note a {
     color: var(--bronze-600);
+    text-decoration: underline;
 }
 
 .form-status {
@@ -1082,7 +1100,7 @@ section {
 
 .parallax-separator {
     background-image: linear-gradient(rgba(8, 26, 46, 0.82), rgba(8, 26, 46, 0.82)),
-        url('assets/images/uvodni-obrazek.jpg');
+        url('assets/images/uvodni-obrazek.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1092,6 +1110,13 @@ section {
     justify-content: center;
     position: relative;
     margin: 0;
+}
+
+@media (max-width: 768px) {
+    .parallax-separator {
+        background-image: linear-gradient(rgba(8, 26, 46, 0.82), rgba(8, 26, 46, 0.82)),
+            url('assets/images/uvodni-obrazek-900.webp');
+    }
 }
 
 .parallax-content {
@@ -1286,6 +1311,7 @@ section {
 
 .photostrip-grid img {
     width: 100%;
+    height: auto;
     aspect-ratio: 16 / 10;
     object-fit: cover;
     border-radius: var(--r-sm);
@@ -1405,9 +1431,10 @@ section {
     min-width: 0;
 }
 
-.event-details-new h4 {
+.event-details-new h3 {
     margin: 0 0 6px;
     font-size: 1.15em;
+    letter-spacing: 0;
     color: var(--navy-800);
     line-height: 1.4;
 }
@@ -1579,6 +1606,7 @@ section {
 }
 
 .project-item img {
+    width: auto;
     max-width: 100%;
     height: 80px;
     object-fit: contain;
@@ -2276,8 +2304,14 @@ footer {
     margin: 0 auto;
 }
 
-.footer-grid h4 {
+/* Nadpisy sloupcu v paticce nejsou nadpisy obsahu (h4 preskakoval uroven
+   v osnove stranky), proto <p class="footer-heading"> se vzhledem puvodniho h4. */
+.footer-grid .footer-heading {
+    font-family: 'Lora', Georgia, serif;
+    font-weight: 700;
+    letter-spacing: 0;
     color: var(--surface);
+    margin-top: 1.33em;
     margin-bottom: var(--sp-20);
     font-size: 1.2em;
     border-bottom: 2px solid var(--bronze-500);

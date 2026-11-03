@@ -56,6 +56,7 @@
                 form.reset();
                 form.classList.add('is-sent');
                 showStatus('success', t.success);
+                if (window.gkTrack) window.gkTrack('generate_lead', { method: 'contact_form' });
                 status.focus();
             })
             .catch(function () {

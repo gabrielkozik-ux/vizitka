@@ -5,10 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Texty pro tlačítka podle jazyka
     const translations = {
-        cs: { moreInfo: "Více info", soldOut: "Vyprodáno" },
-        en: { moreInfo: "More Info", soldOut: "Sold Out" },
-        hu: { moreInfo: "Több infó", soldOut: "Eladva" },
-        fr: { moreInfo: "Plus d'info", soldOut: "Complet" }
+        cs: { moreInfo: "Více info", soldOut: "Vyprodáno", addToCalendar: "Přidat do kalendáře" },
+        en: { moreInfo: "More Info", soldOut: "Sold Out", addToCalendar: "Add to calendar" },
+        hu: { moreInfo: "Több infó", soldOut: "Eladva", addToCalendar: "Hozzáadás a naptárhoz" },
+        fr: { moreInfo: "Plus d'info", soldOut: "Complet", addToCalendar: "Ajouter au calendrier" }
     };
 
     const t = translations[currentLang] || translations['cs'];
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <span class="time">${event.time}</span>
                         </div>
                         <div class="event-details-new">
-                            <h4>${title}</h4>
+                            <h3>${title}</h3>
                             ${theme ? `<p class="event-theme">${theme}</p>` : ''}
                             <p>${event.place}</p>
                         </div>
@@ -57,8 +57,9 @@ document.addEventListener('DOMContentLoaded', () => {
                             : `<a href="${event.link}" target="_blank" rel="noopener noreferrer" class="cta-button event-button">${t.moreInfo}</a>`
                     }
                             ${event.calendarLink && !event.isSoldOut ? `
-                                <a href="${event.calendarLink}" target="_blank" class="calendar-button">
-                                    <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
+                                <a href="${event.calendarLink}" target="_blank" rel="noopener noreferrer" class="calendar-button"
+                                    aria-label="${t.addToCalendar}: ${title}" title="${t.addToCalendar}">
+                                    <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
                                 </a>` : ''
                     }
                         </div>

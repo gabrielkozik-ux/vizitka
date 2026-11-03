@@ -887,6 +887,81 @@ section {
     display: none;
 }
 
+/* --- Cookie lista (assets/js/consent.js) ---
+   Obe tlacitka zamerne stejne vyrazna: odmitnuti nesmi byt schovane. */
+.cookie-banner {
+    position: fixed;
+    left: var(--sp-16);
+    right: var(--sp-16);
+    bottom: var(--sp-16);
+    z-index: 1000;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: var(--sp-20) var(--sp-24);
+    background: var(--surface);
+    color: var(--ink-body);
+    border-radius: var(--r-md);
+    box-shadow: var(--sh-4);
+    display: flex;
+    align-items: center;
+    gap: var(--sp-20);
+}
+
+.cookie-banner[hidden] {
+    display: none;
+}
+
+.cookie-banner-text {
+    margin: 0;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.cookie-banner-text a {
+    color: var(--bronze-600);
+    text-decoration: underline;
+}
+
+.cookie-banner-actions {
+    display: flex;
+    gap: var(--sp-12);
+    flex-shrink: 0;
+}
+
+.cookie-btn {
+    font: inherit;
+    font-weight: 600;
+    font-size: 0.9em;
+    padding: 10px var(--sp-20);
+    border-radius: var(--r-pill);
+    border: 2px solid var(--navy-800);
+    background: var(--navy-800);
+    color: var(--surface);
+    cursor: pointer;
+}
+
+.cookie-btn:hover {
+    background: var(--navy-900);
+    border-color: var(--navy-900);
+}
+
+.cookie-btn:focus-visible {
+    outline: none;
+    box-shadow: var(--ring-focus);
+}
+
+@media (max-width: 680px) {
+    .cookie-banner {
+        flex-direction: column;
+        align-items: stretch;
+        padding: var(--sp-16);
+    }
+
+    .cookie-banner-actions .cookie-btn {
+        flex: 1;
+    }
+}
+
 /* --- Animace: fade-in komponent --- */
 
 @keyframes fadeIn {

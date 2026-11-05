@@ -1,5 +1,21 @@
 [
     {
+        "id": "maiday-2026-ajtak-a-soudce",
+        "date": "2026-11-06",
+        "category": "expert",
+        "image": "blog/2026/maiday-2026-ajtak-a-soudce/header.jpg",
+        "cs": {
+            "title": "Ajťák a soudce na jednom pódiu: co jsem si odnesl z Maiday 2026",
+            "excerpt": "Firma, kde Honza dostal licenci bez školení, a soudci, kteří převzali rozsudek od AI. Dvě přednášky z Maiday 2026 a jedna společná lekce o lidském dohledu.",
+            "link": "blog/2026/maiday-2026-ajtak-a-soudce/maiday-2026-ajtak-a-soudce"
+        },
+        "en": {
+            "title": "An AI Engineer and a Judge on One Stage: What I Took Away from Maiday 2026",
+            "excerpt": "A company where Honza got an AI licence without training, and judges who adopted an AI-drafted judgment. Two talks from Maiday 2026 and one shared lesson about human oversight.",
+            "link": "blog/2026/maiday-2026-ajtak-a-soudce/maiday-2026-ajtak-a-soudce-en"
+        }
+    },
+    {
         "id": "tlacitko-chatbot-dve-eura",
         "date": "2026-11-03",
         "category": "expert",

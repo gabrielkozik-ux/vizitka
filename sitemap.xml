@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.gabrielkozik.cz/blog/2026/maiday-2026-ajtak-a-soudce/maiday-2026-ajtak-a-soudce</loc>
+    <lastmod>2026-11-06</lastmod>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.cz/blog/2026/maiday-2026-ajtak-a-soudce/maiday-2026-ajtak-a-soudce" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.cz/blog/2026/maiday-2026-ajtak-a-soudce/maiday-2026-ajtak-a-soudce-en" />
+  </url>
+  <url>
+    <loc>https://www.gabrielkozik.cz/blog/2026/maiday-2026-ajtak-a-soudce/maiday-2026-ajtak-a-soudce-en</loc>
+    <lastmod>2026-11-06</lastmod>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.cz/blog/2026/maiday-2026-ajtak-a-soudce/maiday-2026-ajtak-a-soudce" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.cz/blog/2026/maiday-2026-ajtak-a-soudce/maiday-2026-ajtak-a-soudce-en" />
+  </url>
+  <url>
     <loc>https://www.gabrielkozik.cz/blog/2026/tlacitko-chatbot-dve-eura/tlacitko-chatbot-dve-eura</loc>
     <lastmod>2026-11-03</lastmod>
     <priority>0.70</priority>

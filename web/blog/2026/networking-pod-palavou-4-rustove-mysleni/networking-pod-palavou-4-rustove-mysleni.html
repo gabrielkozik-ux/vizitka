@@ -22,7 +22,7 @@
     <meta name="twitter:description" content="Reportáž z akce Networking Pod Pálavou #4: Růstové myšlení, která se konala 2026-02-17. Přečtěte si více a prohlédněte si fotogalerii.">
     <meta name="twitter:image" content="https://www.gabrielkozik.cz/assets/images/blog/2026/networking-pod-palavou-4-rustove-mysleni/1.jpg">
 
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Reportáž: Networking Pod Pálavou #4: Růstové myšlení", "description": "Reportáž ze 4. networkingu Pod Pálavou o růstovém myšlení, o tom, proč je důvěra nejtvrdší měna v byznysu a proč se nebát transformace po vzoru Estonska. S fotografiemi od Jiřího Urbana.", "image": "https://www.gabrielkozik.cz/assets/images/blog/2026/networking-pod-palavou-4-rustove-mysleni/1.jpg", "datePublished": "2026-02-17", "inLanguage": "cs", "mainEntityOfPage": "https://www.gabrielkozik.cz/blog/2026/networking-pod-palavou-4-rustove-mysleni/networking-pod-palavou-4-rustove-mysleni", "author": {"@type": "Person", "name": "Mgr. Gabriel Kožík", "url": "https://www.gabrielkozik.cz/"}, "publisher": {"@type": "Person", "name": "Mgr. Gabriel Kožík"}}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Reportáž: Networking Pod Pálavou #4: Růstové myšlení", "description": "Reportáž ze 4. networkingu Pod Pálavou o růstovém myšlení, o tom, proč je důvěra nejtvrdší měna v byznysu a proč se nebát transformace po vzoru Estonska. S fotografiemi od Jiřího Urbana.", "image": "https://www.gabrielkozik.cz/assets/images/blog/2026/networking-pod-palavou-4-rustove-mysleni/1.jpg", "datePublished": "2026-02-17", "dateModified": "2026-02-17", "inLanguage": "cs", "mainEntityOfPage": "https://www.gabrielkozik.cz/blog/2026/networking-pod-palavou-4-rustove-mysleni/networking-pod-palavou-4-rustove-mysleni", "author": {"@type": "Person", "name": "Mgr. Gabriel Kožík", "url": "https://www.gabrielkozik.cz/"}, "publisher": {"@type": "Person", "name": "Mgr. Gabriel Kožík"}}</script>
     <link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.cz/blog/2026/networking-pod-palavou-4-rustove-mysleni/networking-pod-palavou-4-rustove-mysleni" />
     <link rel="alternate" hreflang="en" href="https://www.gabrielkozik.cz/blog/2026/networking-pod-palavou-4-rustove-mysleni/networking-pod-palavou-4-rustove-mysleni-en" />
     <link rel="alternate" hreflang="x-default" href="https://www.gabrielkozik.cz/blog/2026/networking-pod-palavou-4-rustove-mysleni/networking-pod-palavou-4-rustove-mysleni" />
@@ -34,18 +34,27 @@
 
 <body>
     <nav class="main-nav">
-        <a href="../../../" class="nav-logo">Mgr. Gabriel Kožík</a>
-        <div class="nav-links">
-            <a href="../../../">Úvodní stránka</a>
-            <a href="../../../blog">Blog</a>
-            <a href="../../../#propojit">Kontaktujte mě</a>
+        <a href="../../../" class="nav-logo">
+            <img src="../../../assets/images/profilova-fotka-nav.webp" width="96" height="96" alt="" class="nav-photo">
+            <span>Mgr. Gabriel Kožík</span>
+        </a>
+        <div class="hamburger" tabindex="0" role="button" aria-label="Otevřít menu" aria-expanded="false" aria-controls="hlavni-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
         </div>
-        <div class="lang-switcher">
-            <button class="lang-button lang-switcher-button" aria-haspopup="true" aria-expanded="false">CZ <span
-                    class="arrow"></span></button>
-            <div class="lang-dropdown lang-switcher-dropdown">
-                <a href="networking-pod-palavou-4-rustove-mysleni" class="active">CZ</a>
-                <a href="networking-pod-palavou-4-rustove-mysleni-en">EN</a>
+        <div class="nav-links-container" id="hlavni-menu">
+            <div class="nav-links">
+                <a href="../../../">Úvodní stránka</a>
+                <a href="../../../blog" class="active-link">Blog</a>
+                <a href="../../../#propojit">Kontaktujte mě</a>
+            </div>
+            <div class="lang-switcher">
+                <button class="lang-button lang-switcher-button" aria-haspopup="true" aria-expanded="false">CZ <span class="arrow"></span></button>
+                <div class="lang-dropdown lang-switcher-dropdown">
+                    <a href="networking-pod-palavou-4-rustove-mysleni" class="active">CZ</a>
+                    <a href="networking-pod-palavou-4-rustove-mysleni-en">EN</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -93,8 +102,8 @@
                 <p>Dne 17. 2. 2026 jsme se sešli v <strong>Krčma a hotel U Císařské cesty, Branišovice</strong>.</p>
 
                 <!-- 
-                <img src="../../../assets/images/blog/2026/networking-pod-palavou-4-rustove-mysleni/1.jpg"
-                    alt="Hlavní fotka z akce" class="article-image-main" loading="lazy">
+                <img src="../../../assets/images/blog/2026/networking-pod-palavou-4-rustove-mysleni/1.jpg" fetchpriority="high" width="1200" height="963"
+                    alt="Hlavní fotka z akce" class="article-image-main">
                 -->
 
                 <h2>Fotogalerie</h2>
@@ -131,24 +140,8 @@
         </div>
     </footer>
 
+    <script src="../../../assets/js/main.js"></script>
     <script src="../../../assets/js/gallery.js"></script>
-    <script>
-        // Shrnutí pro Lang Switcher (stejný jako v šabloně)
-        const langButton = document.querySelector('.lang-switcher-button');
-        const langDropdown = document.querySelector('.lang-switcher-dropdown');
-        function toggleLangDropdown() {
-            const isExpanded = langButton.getAttribute('aria-expanded') === 'true';
-            langButton.setAttribute('aria-expanded', !isExpanded);
-            langButton.classList.toggle('active');
-            langDropdown.style.display = langDropdown.style.display === 'block' ? 'none' : 'block';
-        }
-        langButton.addEventListener('click', e => { e.stopPropagation(); toggleLangDropdown(); });
-        window.addEventListener('click', e => {
-            if (langButton.classList.contains('active') && !langButton.parentElement.contains(e.target)) {
-                toggleLangDropdown();
-            }
-        });
-    </script>
 
     <script src="../../../assets/js/share-buttons.js"></script>
     <script src="/assets/js/consent.js" defer></script>

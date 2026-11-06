@@ -476,43 +476,6 @@ section {
     }
 }
 
-/* --- Navigace: mobil na strankach clanku ---
-   Clanky nemaji hamburger ani .nav-links-container, takze pravidlo vyse
-   by u nich nechalo roletku trvale rozbalenou. Zde kompaktni vodorovny radek. */
-
-@media (max-width: 768px) {
-    .main-nav {
-        flex-wrap: wrap;
-        row-gap: 6px;
-    }
-
-    .main-nav>.nav-links {
-        position: static;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: auto;
-        background: none;
-        box-shadow: none;
-        padding: 0;
-    }
-
-    .main-nav>.nav-links a {
-        display: inline-block;
-        width: auto;
-        padding: var(--sp-8) 10px;
-        margin: 0;
-        border-bottom: none;
-        font-size: 0.9em;
-        text-align: center;
-    }
-
-    .main-nav>.lang-switcher {
-        margin: 0;
-    }
-}
-
 /* ======================================================================
    5. HERO
    ====================================================================== */

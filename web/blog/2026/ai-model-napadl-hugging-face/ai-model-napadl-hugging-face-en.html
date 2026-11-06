@@ -25,7 +25,7 @@
     <meta name="twitter:description" content="OpenAI disclosed an unprecedented cyber incident: its model breached Hugging Face's infrastructure on its own to steal the answers to a test.">
     <meta name="twitter:image" content="https://www.gabrielkozik.cz/blog/2026/ai-model-napadl-hugging-face/header.jpg">
 
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "An AI Model That Hacked Someone Else's Infrastructure to Win a Test", "description": "OpenAI disclosed an unprecedented cyber incident: its internal model breached Hugging Face's production infrastructure on its own to steal the answers to a test. What it means for companies deploying AI.", "image": "https://www.gabrielkozik.cz/blog/2026/ai-model-napadl-hugging-face/header.jpg", "datePublished": "2026-07-22", "inLanguage": "en", "mainEntityOfPage": "https://www.gabrielkozik.cz/blog/2026/ai-model-napadl-hugging-face/ai-model-napadl-hugging-face-en", "author": {"@type": "Person", "name": "Mgr. Gabriel Kožík", "url": "https://www.gabrielkozik.cz/"}, "publisher": {"@type": "Person", "name": "Mgr. Gabriel Kožík"}}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "An AI Model That Hacked Someone Else's Infrastructure to Win a Test", "description": "OpenAI disclosed an unprecedented cyber incident: its internal model breached Hugging Face's production infrastructure on its own to steal the answers to a test. What it means for companies deploying AI.", "image": "https://www.gabrielkozik.cz/blog/2026/ai-model-napadl-hugging-face/header.jpg", "datePublished": "2026-07-22", "dateModified": "2026-07-22", "inLanguage": "en", "mainEntityOfPage": "https://www.gabrielkozik.cz/blog/2026/ai-model-napadl-hugging-face/ai-model-napadl-hugging-face-en", "author": {"@type": "Person", "name": "Mgr. Gabriel Kožík", "url": "https://www.gabrielkozik.cz/"}, "publisher": {"@type": "Person", "name": "Mgr. Gabriel Kožík"}}</script>
 
     <link rel="icon" type="image/x-icon" href="../../../assets/images/favicon.ico">
     <link rel="stylesheet" href="/assets/fonts/fonts.css">
@@ -34,18 +34,27 @@
 
 <body>
     <nav class="main-nav">
-        <a href="../../../index-en" class="nav-logo">Mgr. Gabriel Kožík</a>
-        <div class="nav-links">
-            <a href="../../../index-en">Home</a>
-            <a href="../../../blog-en">Blog</a>
-            <a href="../../../index-en#propojit">Contact me</a>
+        <a href="../../../index-en" class="nav-logo">
+            <img src="../../../assets/images/profilova-fotka-nav.webp" width="96" height="96" alt="" class="nav-photo">
+            <span>Mgr. Gabriel Kožík</span>
+        </a>
+        <div class="hamburger" tabindex="0" role="button" aria-label="Open menu" aria-expanded="false" aria-controls="hlavni-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
         </div>
-        <div class="lang-switcher">
-            <button class="lang-button lang-switcher-button" aria-haspopup="true" aria-expanded="false">EN <span
-                    class="arrow"></span></button>
-            <div class="lang-dropdown lang-switcher-dropdown">
-                <a href="ai-model-napadl-hugging-face">CZ</a>
-                <a href="ai-model-napadl-hugging-face-en" class="active">EN</a>
+        <div class="nav-links-container" id="hlavni-menu">
+            <div class="nav-links">
+                <a href="../../../index-en">Home</a>
+                <a href="../../../blog-en" class="active-link">Blog</a>
+                <a href="../../../index-en#propojit">Contact Me</a>
+            </div>
+            <div class="lang-switcher">
+                <button class="lang-button lang-switcher-button" aria-haspopup="true" aria-expanded="false">EN <span class="arrow"></span></button>
+                <div class="lang-dropdown lang-switcher-dropdown">
+                    <a href="ai-model-napadl-hugging-face">CZ</a>
+                    <a href="ai-model-napadl-hugging-face-en" class="active">EN</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -58,7 +67,7 @@
                     <p class="article-meta">Published: July 22, 2026 | Author: Mgr. Gabriel Kožík</p>
                 </header>
 
-                <img src="header.jpg" alt="AI breached Hugging Face — the model breached other companies' systems on its own to cheat its own test" class="article-image-main" loading="lazy">
+                <img src="header.jpg" fetchpriority="high" width="1200" height="630" alt="AI breached Hugging Face — the model breached other companies' systems on its own to cheat its own test" class="article-image-main">
 
                 <p>Yesterday OpenAI published an admission that would have sounded like science fiction a
                     year ago: during an internal evaluation, its own model broke into Hugging Face's
@@ -150,22 +159,7 @@
         </div>
     </footer>
 
-    <script>
-        const langButton = document.querySelector('.lang-switcher-button');
-        const langDropdown = document.querySelector('.lang-switcher-dropdown');
-        function toggleLangDropdown() {
-            const isExpanded = langButton.getAttribute('aria-expanded') === 'true';
-            langButton.setAttribute('aria-expanded', !isExpanded);
-            langButton.classList.toggle('active');
-            langDropdown.style.display = langDropdown.style.display === 'block' ? 'none' : 'block';
-        }
-        langButton.addEventListener('click', e => { e.stopPropagation(); toggleLangDropdown(); });
-        window.addEventListener('click', e => {
-            if (langButton.classList.contains('active') && !langButton.parentElement.contains(e.target)) {
-                toggleLangDropdown();
-            }
-        });
-    </script>
+    <script src="../../../assets/js/main.js"></script>
     <script src="../../../assets/js/share-buttons.js"></script>
     <script src="/assets/js/consent.js" defer></script>
 </body>

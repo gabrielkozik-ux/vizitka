@@ -20,7 +20,7 @@
     <meta name="twitter:description" content="A look back at my presentation on AI regulation in the Czech Republic, which took place as part of the Czech-Slovak Technology Summit at Mikulov Castle.">
     <meta name="twitter:image" content="https://www.gabrielkozik.cz/assets/images/blog/2025/cs-tech-summit-2025/1.jpg">
 
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Law and Technology in the Heart of Moravia: A Report from the CS-Tech Summit", "description": "A look back at my presentation on \"AI Regulation in the CR\" at the Czech-Slovak Technology Summit at Mikulov Castle and the inspiring atmosphere of the entire event.", "image": "https://www.gabrielkozik.cz/assets/images/blog/2025/cs-tech-summit-2025/1.jpg", "datePublished": "2025-06-05", "inLanguage": "en", "mainEntityOfPage": "https://www.gabrielkozik.cz/blog/2025/cs-tech-summit-2025/cs-tech-summit-2025-en", "author": {"@type": "Person", "name": "Mgr. Gabriel Kožík", "url": "https://www.gabrielkozik.cz/"}, "publisher": {"@type": "Person", "name": "Mgr. Gabriel Kožík"}}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Law and Technology in the Heart of Moravia: A Report from the CS-Tech Summit", "description": "A look back at my presentation on \"AI Regulation in the CR\" at the Czech-Slovak Technology Summit at Mikulov Castle and the inspiring atmosphere of the entire event.", "image": "https://www.gabrielkozik.cz/assets/images/blog/2025/cs-tech-summit-2025/1.jpg", "datePublished": "2025-06-05", "dateModified": "2025-06-05", "inLanguage": "en", "mainEntityOfPage": "https://www.gabrielkozik.cz/blog/2025/cs-tech-summit-2025/cs-tech-summit-2025-en", "author": {"@type": "Person", "name": "Mgr. Gabriel Kožík", "url": "https://www.gabrielkozik.cz/"}, "publisher": {"@type": "Person", "name": "Mgr. Gabriel Kožík"}}</script>
     <link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.cz/blog/2025/cs-tech-summit-2025/cs-tech-summit-2025" />
     <link rel="alternate" hreflang="en" href="https://www.gabrielkozik.cz/blog/2025/cs-tech-summit-2025/cs-tech-summit-2025-en" />
     <link rel="alternate" hreflang="x-default" href="https://www.gabrielkozik.cz/blog/2025/cs-tech-summit-2025/cs-tech-summit-2025" />
@@ -79,15 +79,51 @@
             transform: scale(1.03);
             box-shadow: 0 8px 25px rgba(0,0,0,0.15);
         }
+        /* Navigace sjednocena se zbytkem webu (hamburger na mobilu). Tyto 4 stranky nepouzivaji style.css. */
+        .nav-logo { display: flex; align-items: center; gap: 8px; text-decoration: none; color: var(--primary-color); font-weight: 700; }
+        .nav-photo { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; }
+        .nav-links-container { display: flex; align-items: center; }
+        .lang-switcher { position: relative; margin-left: 20px; }
+        .lang-button { background: transparent; border: none; font: inherit; font-weight: 700; cursor: pointer; color: var(--primary-color); display: flex; align-items: center; }
+        .lang-button .arrow { border: solid currentColor; border-width: 0 2px 2px 0; display: inline-block; padding: 3px; margin-left: 8px; transform: rotate(45deg); }
+        .lang-dropdown { display: none; position: absolute; right: 0; top: 100%; background: #fff; box-shadow: 0 8px 24px rgba(12, 35, 64, .12); border-radius: 6px; overflow: hidden; min-width: 100px; z-index: 1001; margin-top: 10px; }
+        .lang-dropdown a { padding: 10px 20px; display: block; color: var(--primary-color); font-weight: 600; text-decoration: none; }
+        .lang-dropdown a.active { color: var(--secondary-color); }
+        .hamburger .bar { width: 25px; height: 3px; background: var(--primary-color); border-radius: 2px; }
+        @media (max-width: 768px) {
+            .hamburger { display: flex; flex-direction: column; gap: 5px; padding: 5px; cursor: pointer; }
+            .nav-links-container { display: none; flex-direction: column; width: 100%; position: absolute; top: 100%; left: 0; background: #fff; box-shadow: 0 8px 24px rgba(12, 35, 64, .12); padding: 16px 0; z-index: 999; }
+            .nav-links-container.active { display: flex; }
+            .nav-links { flex-direction: column; width: 100%; }
+            .nav-links a { display: block; padding: 16px; margin: 0; width: 100%; text-align: center; border-bottom: 1px solid #eee; box-sizing: border-box; }
+            .lang-switcher { margin: 16px auto; }
+        }
     </style>
 </head>
 <body>
     <nav class="main-nav">
-        <a href="../../../index-en.html" class="nav-logo">Mgr. Gabriel Kožík</a>
-        <div class="nav-links">
-            <a href="../../../index-en.html">Home</a>
-            <a href="../../../blog-en.html">Blog</a>
-            <a href="../../../index-en.html#connect">Contact Me</a>
+        <a href="../../../index-en" class="nav-logo">
+            <img src="../../../assets/images/profilova-fotka-nav.webp" width="96" height="96" alt="" class="nav-photo">
+            <span>Mgr. Gabriel Kožík</span>
+        </a>
+        <div class="hamburger" tabindex="0" role="button" aria-label="Open menu" aria-expanded="false" aria-controls="hlavni-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="nav-links-container" id="hlavni-menu">
+            <div class="nav-links">
+                <a href="../../../index-en">Home</a>
+                <a href="../../../blog-en" class="active-link">Blog</a>
+                <a href="../../../index-en#propojit">Contact Me</a>
+            </div>
+            <div class="lang-switcher">
+                <button class="lang-button lang-switcher-button" aria-haspopup="true" aria-expanded="false">EN <span class="arrow"></span></button>
+                <div class="lang-dropdown lang-switcher-dropdown">
+                    <a href="cs-tech-summit-2025">CZ</a>
+                    <a href="cs-tech-summit-2025-en" class="active">EN</a>
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -103,10 +139,10 @@
 
                 <div class="photo-gallery">
                     <div class="gallery-item">
-                        <img src="../../../assets/images/blog/2025/cs-tech-summit-2025/1.jpg" alt="View of the stage during the presentation on AI regulation" loading="lazy">
+                        <img src="../../../assets/images/blog/2025/cs-tech-summit-2025/1.jpg" width="1024" height="768" alt="View of the stage during the presentation on AI regulation" loading="lazy">
                     </div>
                     <div class="gallery-item">
-                        <img src="../../../assets/images/blog/2025/cs-tech-summit-2025/3.jpg" alt="Close-up of the speaker, Gabriel Kožík" loading="lazy">
+                        <img src="../../../assets/images/blog/2025/cs-tech-summit-2025/3.jpg" width="1024" height="683" alt="Close-up of the speaker, Gabriel Kožík" loading="lazy">
                     </div>
                 </div>
 
@@ -126,10 +162,10 @@
                 
                 <div class="photo-gallery">
                     <div class="gallery-item">
-                         <img src="/assets/images/blog/2025/cs-tech-summit-2025/4.jpg" alt="Gabriel Kožík in discussion with summit attendees" loading="lazy">
+                         <img src="/assets/images/blog/2025/cs-tech-summit-2025/4.jpg" width="1024" height="683" alt="Gabriel Kožík in discussion with summit attendees" loading="lazy">
                     </div>
                     <div class="gallery-item">
-                        <img src="/assets/images/blog/2025/cs-tech-summit-2025/2.jpg" alt="The IUSTORIA law firm's booth at the summit" loading="lazy">
+                        <img src="/assets/images/blog/2025/cs-tech-summit-2025/2.jpg" width="1024" height="683" alt="The IUSTORIA law firm's booth at the summit" loading="lazy">
                     </div>
                 </div>
 
@@ -146,6 +182,7 @@
             <p class="copyright">&copy; 2025 Mgr. Gabriel Kožík. All rights reserved. · <a href="/ochrana-osobnich-udaju-en">Privacy Policy</a> · <a href="#" data-cookie-settings>Cookie settings</a></p>
         </div>
     </footer>
+    <script src="../../../assets/js/main.js"></script>
     <script src="../../../assets/js/share-buttons.js"></script>
     <script src="/assets/js/consent.js" defer></script>
 </body>

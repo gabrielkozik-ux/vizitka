@@ -22,7 +22,7 @@
     <meta name="twitter:description" content="Who bears legal liability for errors, broken code, or faulty calculations created by artificial intelligence? Analysis under Czech law.">
     <meta name="twitter:image" content="https://www.gabrielkozik.cz/blog/2026/odpovednost-za-chyby-ai/header.jpg">
 
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "When AI Makes a Mistake, the Bill Goes to You", "description": "Who bears legal liability for errors, broken code, or faulty calculations created by artificial intelligence? Analysis under Czech law.", "image": "https://www.gabrielkozik.cz/blog/2026/odpovednost-za-chyby-ai/header.jpg", "datePublished": "2026-06-10", "inLanguage": "en", "mainEntityOfPage": "https://www.gabrielkozik.cz/blog/2026/odpovednost-za-chyby-ai/odpovednost-za-chyby-ai-en", "author": {"@type": "Person", "name": "Mgr. Gabriel Kožík", "url": "https://www.gabrielkozik.cz/"}, "publisher": {"@type": "Person", "name": "Mgr. Gabriel Kožík"}}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "When AI Makes a Mistake, the Bill Goes to You", "description": "Who bears legal liability for errors, broken code, or faulty calculations created by artificial intelligence? Analysis under Czech law.", "image": "https://www.gabrielkozik.cz/blog/2026/odpovednost-za-chyby-ai/header.jpg", "datePublished": "2026-06-10", "dateModified": "2026-06-10", "inLanguage": "en", "mainEntityOfPage": "https://www.gabrielkozik.cz/blog/2026/odpovednost-za-chyby-ai/odpovednost-za-chyby-ai-en", "author": {"@type": "Person", "name": "Mgr. Gabriel Kožík", "url": "https://www.gabrielkozik.cz/"}, "publisher": {"@type": "Person", "name": "Mgr. Gabriel Kožík"}}</script>
     <link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.cz/blog/2026/odpovednost-za-chyby-ai/odpovednost-za-chyby-ai" />
     <link rel="alternate" hreflang="en" href="https://www.gabrielkozik.cz/blog/2026/odpovednost-za-chyby-ai/odpovednost-za-chyby-ai-en" />
     <link rel="alternate" hreflang="x-default" href="https://www.gabrielkozik.cz/blog/2026/odpovednost-za-chyby-ai/odpovednost-za-chyby-ai" />
@@ -33,18 +33,27 @@
 
 <body>
     <nav class="main-nav">
-        <a href="../../../" class="nav-logo">Mgr. Gabriel Kožík</a>
-        <div class="nav-links">
-            <a href="../../../index-en">Home</a>
-            <a href="../../../blog-en">Blog</a>
-            <a href="../../../index-en#propojit">Contact me</a>
+        <a href="../../../index-en" class="nav-logo">
+            <img src="../../../assets/images/profilova-fotka-nav.webp" width="96" height="96" alt="" class="nav-photo">
+            <span>Mgr. Gabriel Kožík</span>
+        </a>
+        <div class="hamburger" tabindex="0" role="button" aria-label="Open menu" aria-expanded="false" aria-controls="hlavni-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
         </div>
-        <div class="lang-switcher">
-            <button class="lang-button lang-switcher-button" aria-haspopup="true" aria-expanded="false">EN <span
-                    class="arrow"></span></button>
-            <div class="lang-dropdown lang-switcher-dropdown">
-                <a href="odpovednost-za-chyby-ai">CZ</a>
-                <a href="odpovednost-za-chyby-ai-en" class="active">EN</a>
+        <div class="nav-links-container" id="hlavni-menu">
+            <div class="nav-links">
+                <a href="../../../index-en">Home</a>
+                <a href="../../../blog-en" class="active-link">Blog</a>
+                <a href="../../../index-en#propojit">Contact Me</a>
+            </div>
+            <div class="lang-switcher">
+                <button class="lang-button lang-switcher-button" aria-haspopup="true" aria-expanded="false">EN <span class="arrow"></span></button>
+                <div class="lang-dropdown lang-switcher-dropdown">
+                    <a href="odpovednost-za-chyby-ai">CZ</a>
+                    <a href="odpovednost-za-chyby-ai-en" class="active">EN</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -57,8 +66,8 @@
                     <p class="article-meta">Published: June 10, 2026 | Author: Mgr. Gabriel Kožík</p>
                 </header>
 
-                <img src="header.jpg"
-                    alt="AI liability errors and gavel" class="article-image-main" loading="lazy">
+                <img src="header.jpg" fetchpriority="high" width="1200" height="630"
+                    alt="AI liability errors and gavel" class="article-image-main">
 
                 <p>Imagine that your development company uses GitHub Copilot to write code for a client. Everything runs smoothly until a hidden bug appears after deploying to production. The client's e-shop crashes, and the damage goes into the millions.</p>
 
@@ -99,7 +108,7 @@
 
                 <p style="text-align: center; margin: 25px 0;">
                     <a href="https://openai.com/cs-CZ/policies/row-terms-of-use/" target="_blank" rel="noopener noreferrer">
-                        <img src="openai_tos_limitation.png" alt="Example of limitation of liability clause from OpenAI Terms of Use" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" loading="lazy">
+                        <img src="openai_tos_limitation.png" width="908" height="438" alt="Example of limitation of liability clause from OpenAI Terms of Use" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" loading="lazy">
                     </a>
                 </p>
 
@@ -155,22 +164,7 @@
         </div>
     </footer>
 
-    <script>
-        const langButton = document.querySelector('.lang-switcher-button');
-        const langDropdown = document.querySelector('.lang-switcher-dropdown');
-        function toggleLangDropdown() {
-            const isExpanded = langButton.getAttribute('aria-expanded') === 'true';
-            langButton.setAttribute('aria-expanded', !isExpanded);
-            langButton.classList.toggle('active');
-            langDropdown.style.display = langDropdown.style.display === 'block' ? 'none' : 'block';
-        }
-        langButton.addEventListener('click', e => { e.stopPropagation(); toggleLangDropdown(); });
-        window.addEventListener('click', e => {
-            if (langButton.classList.contains('active') && !langButton.parentElement.contains(e.target)) {
-                toggleLangDropdown();
-            }
-        });
-    </script>
+    <script src="../../../assets/js/main.js"></script>
     <script src="../../../assets/js/share-buttons.js"></script>
     <script src="/assets/js/consent.js" defer></script>
 </body>

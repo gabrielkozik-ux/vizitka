@@ -23,7 +23,7 @@
     <meta name="twitter:description" content="Proč by advokacie a AI měly fungovat v synergii? Moje vize spojení lidské expertízy a technologické preciznosti pro lepší výsledky klientů.">
     <meta name="twitter:image" content="https://www.gabrielkozik.cz/blog/2026/filosofie-ai-v-advokacii/header.jpg">
 
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Filosofie AI v advokacii: Proč se nebát synergie", "description": "Proč by advokacie a AI měly fungovat v synergii? Moje vize spojení lidské expertízy a technologické preciznosti pro lepší výsledky klientů.", "image": "https://www.gabrielkozik.cz/blog/2026/filosofie-ai-v-advokacii/header.jpg", "datePublished": "2026-03-12", "inLanguage": "cs", "mainEntityOfPage": "https://www.gabrielkozik.cz/blog/2026/filosofie-ai-v-advokacii/filosofie-ai-v-advokacii", "author": {"@type": "Person", "name": "Mgr. Gabriel Kožík", "url": "https://www.gabrielkozik.cz/"}, "publisher": {"@type": "Person", "name": "Mgr. Gabriel Kožík"}}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Filosofie AI v advokacii: Proč se nebát synergie", "description": "Proč by advokacie a AI měly fungovat v synergii? Moje vize spojení lidské expertízy a technologické preciznosti pro lepší výsledky klientů.", "image": "https://www.gabrielkozik.cz/blog/2026/filosofie-ai-v-advokacii/header.jpg", "datePublished": "2026-03-12", "dateModified": "2026-03-12", "inLanguage": "cs", "mainEntityOfPage": "https://www.gabrielkozik.cz/blog/2026/filosofie-ai-v-advokacii/filosofie-ai-v-advokacii", "author": {"@type": "Person", "name": "Mgr. Gabriel Kožík", "url": "https://www.gabrielkozik.cz/"}, "publisher": {"@type": "Person", "name": "Mgr. Gabriel Kožík"}}</script>
     <link rel="alternate" hreflang="cs"
         href="https://www.gabrielkozik.cz/blog/2026/filosofie-ai-v-advokacii/filosofie-ai-v-advokacii" />
     <link rel="alternate" hreflang="en"
@@ -37,18 +37,20 @@
 
 <body>
     <nav class="main-nav">
-        <a href="../../../" class="nav-logo">Mgr. Gabriel Kožík</a>
-        <div class="nav-links">
-            <a href="../../../">Úvodní stránka</a>
-            <a href="../../../blog">Blog</a>
-            <a href="../../../#connect">Kontaktujte mě</a>
+        <a href="../../../" class="nav-logo">
+            <img src="../../../assets/images/profilova-fotka-nav.webp" width="96" height="96" alt="" class="nav-photo">
+            <span>Mgr. Gabriel Kožík</span>
+        </a>
+        <div class="hamburger" tabindex="0" role="button" aria-label="Otevřít menu" aria-expanded="false" aria-controls="hlavni-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
         </div>
-        <div class="lang-switcher">
-            <button class="lang-button lang-switcher-button" aria-haspopup="true" aria-expanded="false">CZ <span
-                    class="arrow"></span></button>
-            <div class="lang-dropdown lang-switcher-dropdown">
-                <a href="filosofie-ai-v-advokacii" class="active">CZ</a>
-                <a href="filosofie-ai-v-advokacii-en">EN</a>
+        <div class="nav-links-container" id="hlavni-menu">
+            <div class="nav-links">
+                <a href="../../../">Úvodní stránka</a>
+                <a href="../../../blog" class="active-link">Blog</a>
+                <a href="../../../#propojit">Kontaktujte mě</a>
             </div>
         </div>
     </nav>
@@ -61,7 +63,7 @@
                     <p class="article-meta">Publikováno: 12. března 2026 | Autor: Mgr. Gabriel Kožík</p>
                 </header>
 
-                <img src="header.jpg" alt="Filosofie AI v advokacii" class="article-image-main" loading="lazy">
+                <img src="header.jpg" fetchpriority="high" width="1200" height="630" alt="Filosofie AI v advokacii" class="article-image-main">
 
                 <p>Často se mě lidé ptají, jestli se nebojím, že mě jako advokáta jednou nahradí algoritmus. Odpovídám, že ne. Stroje totiž nemají empatii ani strategické myšlení, které jsou pro řešení složitých právních sporů klíčové. Od chvíle, kdy jsem v prosinci 2022 začal experimentovat s prvními chatboty a později (od února 2024) začal denně využívat Google AI Studio a Gemini, se moje práce od základu změnila. Nepracuji méně – pracuji jinak a s mnohem větší hloubkou.</p>
 
@@ -87,22 +89,7 @@
         </div>
     </footer>
 
-    <script>
-        const langButton = document.querySelector('.lang-switcher-button');
-        const langDropdown = document.querySelector('.lang-switcher-dropdown');
-        function toggleLangDropdown() {
-            const isExpanded = langButton.getAttribute('aria-expanded') === 'true';
-            langButton.setAttribute('aria-expanded', !isExpanded);
-            langButton.classList.toggle('active');
-            langDropdown.style.display = langDropdown.style.display === 'block' ? 'none' : 'block';
-        }
-        langButton.addEventListener('click', e => { e.stopPropagation(); toggleLangDropdown(); });
-        window.addEventListener('click', e => {
-            if (langButton.classList.contains('active') && !langButton.parentElement.contains(e.target)) {
-                toggleLangDropdown();
-            }
-        });
-    </script>
+    <script src="../../../assets/js/main.js"></script>
     <script src="../../../assets/js/share-buttons.js"></script>
     <script src="/assets/js/consent.js" defer></script>
 </body>

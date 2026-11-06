@@ -23,7 +23,7 @@
     <meta name="twitter:description" content="Ohlédnutí za říjnovým AI workshopem zaměřeným na automatizaci administrativy, NotebookLM, tvorbu Gems a generování videí.">
     <meta name="twitter:image" content="https://www.gabrielkozik.cz/assets/images/blog/2025/reportaz-workshop-rijen-2025/workshop-rijen.jpg">
 
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Automation, NotebookLM & Custom AI Assistants: Report from the October Workshop", "description": "A look back at the October workshop focused on Google Workspace automation, NotebookLM for secure corporate data processing, custom AI assistants (Gems), and generating videos from photos.", "image": "https://www.gabrielkozik.cz/assets/images/blog/2025/reportaz-workshop-rijen-2025/workshop-rijen.jpg", "datePublished": "2025-10-24", "inLanguage": "cs", "mainEntityOfPage": "https://www.gabrielkozik.cz/blog/2025/reportaz-workshop-rijen-2025/reportaz-workshop-rijen-2025", "author": {"@type": "Person", "name": "Mgr. Gabriel Kožík", "url": "https://www.gabrielkozik.cz/"}, "publisher": {"@type": "Person", "name": "Mgr. Gabriel Kožík"}}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Automation, NotebookLM & Custom AI Assistants: Report from the October Workshop", "description": "A look back at the October workshop focused on Google Workspace automation, NotebookLM for secure corporate data processing, custom AI assistants (Gems), and generating videos from photos.", "image": "https://www.gabrielkozik.cz/assets/images/blog/2025/reportaz-workshop-rijen-2025/workshop-rijen.jpg", "datePublished": "2025-10-24", "dateModified": "2025-10-24", "inLanguage": "cs", "mainEntityOfPage": "https://www.gabrielkozik.cz/blog/2025/reportaz-workshop-rijen-2025/reportaz-workshop-rijen-2025", "author": {"@type": "Person", "name": "Mgr. Gabriel Kožík", "url": "https://www.gabrielkozik.cz/"}, "publisher": {"@type": "Person", "name": "Mgr. Gabriel Kožík"}}</script>
     <link rel="icon" type="image/x-icon" href="../../../assets/images/favicon.ico">
     <link rel="stylesheet" href="/assets/fonts/fonts.css">
     <link rel="stylesheet" href="../../../style.css">
@@ -31,11 +31,21 @@
 
 <body>
     <nav class="main-nav">
-        <a href="../../../" class="nav-logo">Mgr. Gabriel Kožík</a>
-        <div class="nav-links">
-            <a href="../../../">Úvodní stránka</a>
-            <a href="../../../blog">Blog</a>
-            <a href="../../../#propojit">Kontaktujte mě</a>
+        <a href="../../../" class="nav-logo">
+            <img src="../../../assets/images/profilova-fotka-nav.webp" width="96" height="96" alt="" class="nav-photo">
+            <span>Mgr. Gabriel Kožík</span>
+        </a>
+        <div class="hamburger" tabindex="0" role="button" aria-label="Otevřít menu" aria-expanded="false" aria-controls="hlavni-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="nav-links-container" id="hlavni-menu">
+            <div class="nav-links">
+                <a href="../../../">Úvodní stránka</a>
+                <a href="../../../blog" class="active-link">Blog</a>
+                <a href="../../../#propojit">Kontaktujte mě</a>
+            </div>
         </div>
     </nav>
 
@@ -55,9 +65,8 @@
                 </p>
 
                 <figure>
-                    <img src="/assets/images/blog/2025/reportaz-workshop-rijen-2025/workshop-rijen.jpg"
-                        alt="Říjnový AI workshop – automatizace a zpracování dat" class="article-image-main"
-                        loading="lazy">
+                    <img src="/assets/images/blog/2025/reportaz-workshop-rijen-2025/workshop-rijen.jpg" fetchpriority="high" width="640" height="640"
+                        alt="Říjnový AI workshop – automatizace a zpracování dat" class="article-image-main">
                     <figcaption
                         style="font-size: 0.85em; color: #94a3b8; text-align: center; margin-top: 8px; font-style: italic;">
                         Ilustrační obrázek vygenerovaný pomocí AI</figcaption>
@@ -127,6 +136,7 @@
         </div>
     </footer>
 
+    <script src="../../../assets/js/main.js"></script>
     <script src="../../../assets/js/share-buttons.js"></script>
     <script src="/assets/js/consent.js" defer></script>
 </body>

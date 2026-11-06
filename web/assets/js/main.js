@@ -7,7 +7,7 @@
    4. Animovane countery v trust baru (.trust-number[data-count])
 
    Vsechno v jednom DOMContentLoaded. Kazdy blok si sam overi, ze jeho
-   prvky na strance existuji — clanky treba hamburger nemaji.
+   prvky na strance existuji (napr. countery jsou jen na homepage).
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {

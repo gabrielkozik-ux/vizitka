@@ -23,7 +23,7 @@
     <meta name="twitter:description" content="Ohlédnutí za lednovým AI workshopem zaměřeným na marketing, tvorbu webů, generování hudby a techniku ďáblova advokáta.">
     <meta name="twitter:image" content="https://www.gabrielkozik.cz/assets/images/blog/2026/reportaz-workshop-leden-2026/workshop-leden.jpg">
 
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Marketing, Websites & Devil's Advocate: Report from the January AI Workshop", "description": "A look back at the January workshop focused on AI marketing, creating free web pages via GitHub and Vercel, generating music with Suno, and the devil's advocate technique for objective business idea evaluation.", "image": "https://www.gabrielkozik.cz/assets/images/blog/2026/reportaz-workshop-leden-2026/workshop-leden.jpg", "datePublished": "2026-01-16", "inLanguage": "cs", "mainEntityOfPage": "https://www.gabrielkozik.cz/blog/2026/reportaz-workshop-leden-2026/reportaz-workshop-leden-2026", "author": {"@type": "Person", "name": "Mgr. Gabriel Kožík", "url": "https://www.gabrielkozik.cz/"}, "publisher": {"@type": "Person", "name": "Mgr. Gabriel Kožík"}}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Marketing, Websites & Devil's Advocate: Report from the January AI Workshop", "description": "A look back at the January workshop focused on AI marketing, creating free web pages via GitHub and Vercel, generating music with Suno, and the devil's advocate technique for objective business idea evaluation.", "image": "https://www.gabrielkozik.cz/assets/images/blog/2026/reportaz-workshop-leden-2026/workshop-leden.jpg", "datePublished": "2026-01-16", "dateModified": "2026-01-16", "inLanguage": "cs", "mainEntityOfPage": "https://www.gabrielkozik.cz/blog/2026/reportaz-workshop-leden-2026/reportaz-workshop-leden-2026", "author": {"@type": "Person", "name": "Mgr. Gabriel Kožík", "url": "https://www.gabrielkozik.cz/"}, "publisher": {"@type": "Person", "name": "Mgr. Gabriel Kožík"}}</script>
     <link rel="icon" type="image/x-icon" href="../../../assets/images/favicon.ico">
     <link rel="stylesheet" href="/assets/fonts/fonts.css">
     <link rel="stylesheet" href="../../../style.css">
@@ -31,11 +31,21 @@
 
 <body>
     <nav class="main-nav">
-        <a href="../../../" class="nav-logo">Mgr. Gabriel Kožík</a>
-        <div class="nav-links">
-            <a href="../../../">Úvodní stránka</a>
-            <a href="../../../blog">Blog</a>
-            <a href="../../../#propojit">Kontaktujte mě</a>
+        <a href="../../../" class="nav-logo">
+            <img src="../../../assets/images/profilova-fotka-nav.webp" width="96" height="96" alt="" class="nav-photo">
+            <span>Mgr. Gabriel Kožík</span>
+        </a>
+        <div class="hamburger" tabindex="0" role="button" aria-label="Otevřít menu" aria-expanded="false" aria-controls="hlavni-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="nav-links-container" id="hlavni-menu">
+            <div class="nav-links">
+                <a href="../../../">Úvodní stránka</a>
+                <a href="../../../blog" class="active-link">Blog</a>
+                <a href="../../../#propojit">Kontaktujte mě</a>
+            </div>
         </div>
     </nav>
 
@@ -54,9 +64,8 @@
                     umělé inteligence. A jak se ukázalo, AI umí v této oblasti opravdu hodně.</p>
 
                 <figure>
-                    <img src="/assets/images/blog/2026/reportaz-workshop-leden-2026/workshop-leden.jpg"
-                        alt="Lednový AI workshop – marketing, weby a kreativní tvorba" class="article-image-main"
-                        loading="lazy">
+                    <img src="/assets/images/blog/2026/reportaz-workshop-leden-2026/workshop-leden.jpg" fetchpriority="high" width="640" height="640"
+                        alt="Lednový AI workshop – marketing, weby a kreativní tvorba" class="article-image-main">
                     <figcaption
                         style="font-size: 0.85em; color: #94a3b8; text-align: center; margin-top: 8px; font-style: italic;">
                         Ilustrační obrázek vygenerovaný pomocí AI</figcaption>
@@ -140,6 +149,7 @@
         </div>
     </footer>
 
+    <script src="../../../assets/js/main.js"></script>
     <script src="../../../assets/js/share-buttons.js"></script>
     <script src="/assets/js/consent.js" defer></script>
 </body>

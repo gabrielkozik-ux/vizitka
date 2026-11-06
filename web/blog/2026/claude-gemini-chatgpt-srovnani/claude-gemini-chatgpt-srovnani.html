@@ -22,7 +22,7 @@
     <meta name="twitter:description" content="Srovnání tří AI asistentů pro podnikatele a malé týmy — ceny, silné a slabé stránky, a hlavně: jak na práci s citlivými daty.">
     <meta name="twitter:image" content="https://www.gabrielkozik.cz/blog/2026/claude-gemini-chatgpt-srovnani/header.jpg">
 
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Claude vs. Gemini vs. ChatGPT: který AI nástroj zvolit jako freelancer nebo malá firma?", "description": "Srovnání tří AI asistentů pro podnikatele a malé týmy — ceny, silné a slabé stránky, a hlavně: jak na práci s citlivými daty.", "image": "https://www.gabrielkozik.cz/blog/2026/claude-gemini-chatgpt-srovnani/header.jpg", "datePublished": "2026-07-30", "inLanguage": "cs", "mainEntityOfPage": "https://www.gabrielkozik.cz/blog/2026/claude-gemini-chatgpt-srovnani/claude-gemini-chatgpt-srovnani", "author": {"@type": "Person", "name": "Mgr. Gabriel Kožík", "url": "https://www.gabrielkozik.cz/"}, "publisher": {"@type": "Person", "name": "Mgr. Gabriel Kožík"}}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Claude vs. Gemini vs. ChatGPT: který AI nástroj zvolit jako freelancer nebo malá firma?", "description": "Srovnání tří AI asistentů pro podnikatele a malé týmy — ceny, silné a slabé stránky, a hlavně: jak na práci s citlivými daty.", "image": "https://www.gabrielkozik.cz/blog/2026/claude-gemini-chatgpt-srovnani/header.jpg", "datePublished": "2026-07-30", "dateModified": "2026-07-30", "inLanguage": "cs", "mainEntityOfPage": "https://www.gabrielkozik.cz/blog/2026/claude-gemini-chatgpt-srovnani/claude-gemini-chatgpt-srovnani", "author": {"@type": "Person", "name": "Mgr. Gabriel Kožík", "url": "https://www.gabrielkozik.cz/"}, "publisher": {"@type": "Person", "name": "Mgr. Gabriel Kožík"}}</script>
     <link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.cz/blog/2026/claude-gemini-chatgpt-srovnani/claude-gemini-chatgpt-srovnani" />
     <link rel="alternate" hreflang="en" href="https://www.gabrielkozik.cz/blog/2026/claude-gemini-chatgpt-srovnani/claude-gemini-chatgpt-srovnani-en" />
     <link rel="alternate" hreflang="x-default" href="https://www.gabrielkozik.cz/blog/2026/claude-gemini-chatgpt-srovnani/claude-gemini-chatgpt-srovnani" />
@@ -33,18 +33,27 @@
 
 <body>
     <nav class="main-nav">
-        <a href="../../../" class="nav-logo">Mgr. Gabriel Kožík</a>
-        <div class="nav-links">
-            <a href="../../../">Úvodní stránka</a>
-            <a href="../../../blog">Blog</a>
-            <a href="../../../#propojit">Kontaktujte mě</a>
+        <a href="../../../" class="nav-logo">
+            <img src="../../../assets/images/profilova-fotka-nav.webp" width="96" height="96" alt="" class="nav-photo">
+            <span>Mgr. Gabriel Kožík</span>
+        </a>
+        <div class="hamburger" tabindex="0" role="button" aria-label="Otevřít menu" aria-expanded="false" aria-controls="hlavni-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
         </div>
-        <div class="lang-switcher">
-            <button class="lang-button lang-switcher-button" aria-haspopup="true" aria-expanded="false">CZ <span
-                    class="arrow"></span></button>
-            <div class="lang-dropdown lang-switcher-dropdown">
-                <a href="claude-gemini-chatgpt-srovnani" class="active">CZ</a>
-                <a href="claude-gemini-chatgpt-srovnani-en">EN</a>
+        <div class="nav-links-container" id="hlavni-menu">
+            <div class="nav-links">
+                <a href="../../../">Úvodní stránka</a>
+                <a href="../../../blog" class="active-link">Blog</a>
+                <a href="../../../#propojit">Kontaktujte mě</a>
+            </div>
+            <div class="lang-switcher">
+                <button class="lang-button lang-switcher-button" aria-haspopup="true" aria-expanded="false">CZ <span class="arrow"></span></button>
+                <div class="lang-dropdown lang-switcher-dropdown">
+                    <a href="claude-gemini-chatgpt-srovnani" class="active">CZ</a>
+                    <a href="claude-gemini-chatgpt-srovnani-en">EN</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -57,9 +66,9 @@
                     <p class="article-meta">Publikováno: 30. července 2026 | Autor: Mgr. Gabriel Kožík</p>
                 </header>
 
-                <img src="header.jpg"
+                <img src="header.jpg" fetchpriority="high" width="1200" height="630"
                     alt="Claude, Gemini, ChatGPT — srovnání AI nástrojů pro freelancery a malé firmy"
-                    class="article-image-main" loading="lazy">
+                    class="article-image-main">
 
                 <p class="perex">Srovnání tří AI asistentů z pohledu člověka, který je používá ve své praxi a který zároveň řeší, jak AI pracuje s vašimi daty.</p>
 
@@ -263,22 +272,7 @@
         </div>
     </footer>
 
-    <script>
-        const langButton = document.querySelector('.lang-switcher-button');
-        const langDropdown = document.querySelector('.lang-switcher-dropdown');
-        function toggleLangDropdown() {
-            const isExpanded = langButton.getAttribute('aria-expanded') === 'true';
-            langButton.setAttribute('aria-expanded', !isExpanded);
-            langButton.classList.toggle('active');
-            langDropdown.style.display = langDropdown.style.display === 'block' ? 'none' : 'block';
-        }
-        langButton.addEventListener('click', e => { e.stopPropagation(); toggleLangDropdown(); });
-        window.addEventListener('click', e => {
-            if (langButton.classList.contains('active') && !langButton.parentElement.contains(e.target)) {
-                toggleLangDropdown();
-            }
-        });
-    </script>
+    <script src="../../../assets/js/main.js"></script>
     <script src="../../../assets/js/share-buttons.js"></script>
     <script src="/assets/js/consent.js" defer></script>
 </body>

@@ -31,6 +31,8 @@ Pravidlo: **na web patří jen to, co leží ve `web/`.** Pracovní a zdrojové 
 5. Odborný článek: spusť z kořene repa `python nastroje/generuj-llms-txt.py` (přegeneruje `web/llms.txt`).
 6. Commit + push v GitHub Desktop → Cloudflare web nasadí do pár minut.
 
+**Aktualizace článku:** při věcné změně obsahu přepiš v JSON-LD článku `dateModified` na datum úpravy (`datePublished` nech).
+
 ## Fotky
 
 Originály dávej do `_privatni/fotky-original/` (mimo git). Do webu patří jen zmenšené webové verze (WebP/JPG) ve `web/assets/images/`.

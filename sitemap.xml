@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.gabrielkozik.cz/blog/2026/maiday-2026-ajtak-a-soudce/maiday-2026-ajtak-a-soudce</loc>
+    <lastmod>2026-11-06</lastmod>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.cz/blog/2026/maiday-2026-ajtak-a-soudce/maiday-2026-ajtak-a-soudce" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.cz/blog/2026/maiday-2026-ajtak-a-soudce/maiday-2026-ajtak-a-soudce-en" />
+  </url>
+  <url>
+    <loc>https://www.gabrielkozik.cz/blog/2026/maiday-2026-ajtak-a-soudce/maiday-2026-ajtak-a-soudce-en</loc>
+    <lastmod>2026-11-06</lastmod>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.cz/blog/2026/maiday-2026-ajtak-a-soudce/maiday-2026-ajtak-a-soudce" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.cz/blog/2026/maiday-2026-ajtak-a-soudce/maiday-2026-ajtak-a-soudce-en" />
+  </url>
+  <url>
+    <loc>https://www.gabrielkozik.cz/blog/2026/tlacitko-chatbot-dve-eura/tlacitko-chatbot-dve-eura</loc>
+    <lastmod>2026-11-03</lastmod>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.cz/blog/2026/tlacitko-chatbot-dve-eura/tlacitko-chatbot-dve-eura" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.cz/blog/2026/tlacitko-chatbot-dve-eura/tlacitko-chatbot-dve-eura-en" />
+  </url>
+  <url>
+    <loc>https://www.gabrielkozik.cz/blog/2026/tlacitko-chatbot-dve-eura/tlacitko-chatbot-dve-eura-en</loc>
+    <lastmod>2026-11-03</lastmod>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.cz/blog/2026/tlacitko-chatbot-dve-eura/tlacitko-chatbot-dve-eura" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.cz/blog/2026/tlacitko-chatbot-dve-eura/tlacitko-chatbot-dve-eura-en" />
+  </url>
+  <url>
     <loc>https://www.gabrielkozik.cz/blog/2026/claude-gemini-chatgpt-srovnani/claude-gemini-chatgpt-srovnani</loc>
     <lastmod>2026-07-30</lastmod>
     <priority>0.70</priority>
@@ -33,7 +61,7 @@
   </url>
   <url>
     <loc>https://www.gabrielkozik.cz/</loc>
-    <lastmod>2026-03-12</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <priority>1.00</priority>
     <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.cz/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.cz/index-en" />
@@ -41,7 +69,7 @@
   </url>
   <url>
     <loc>https://www.gabrielkozik.cz/index-en</loc>
-    <lastmod>2026-03-12</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <priority>0.90</priority>
     <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.cz/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.cz/index-en" />
@@ -611,5 +639,21 @@
     <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.cz/blog/2025/ai-act-byznys/ai-act-byznys" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.cz/blog/2025/ai-act-byznys/ai-act-byznys-en" />
+  </url>
+  <url>
+    <loc>https://www.gabrielkozik.cz/ochrana-osobnich-udaju</loc>
+    <lastmod>2026-11-03</lastmod>
+    <priority>0.30</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.cz/ochrana-osobnich-udaju" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.cz/ochrana-osobnich-udaju-en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gabrielkozik.cz/ochrana-osobnich-udaju" />
+  </url>
+  <url>
+    <loc>https://www.gabrielkozik.cz/ochrana-osobnich-udaju-en</loc>
+    <lastmod>2026-11-03</lastmod>
+    <priority>0.30</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.cz/ochrana-osobnich-udaju" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gabrielkozik.cz/ochrana-osobnich-udaju-en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gabrielkozik.cz/ochrana-osobnich-udaju" />
   </url>
 </urlset>

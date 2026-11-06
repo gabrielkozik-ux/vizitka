@@ -27,10 +27,12 @@
     <link rel="alternate" hreflang="x-default" href="https://www.gabrielkozik.cz/blog" />
 
     <!-- EXTERNAL CSS -->
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/inter-latin-400-normal.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/lora-latin-600-normal.woff2" crossorigin>
+    <link rel="stylesheet" href="/assets/fonts/fonts.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="assets/images/uvodni-obrazek-900.webp" media="(max-width: 768px)" fetchpriority="high">
+    <link rel="preload" as="image" href="assets/images/uvodni-obrazek.webp" media="(min-width: 769px)" fetchpriority="high">
 
 </head>
 
@@ -39,7 +41,7 @@
     <!-- NAVIGATION -->
     <nav class="main-nav">
         <a href="index-en" class="nav-logo">
-            <img src="assets/images/profilova-fotka.jpg" alt="Profile photo Gabriel Kožík" class="nav-photo">
+            <img src="assets/images/profilova-fotka-nav.webp" width="96" height="96" alt="Profile photo Gabriel Kožík" class="nav-photo">
             <span>Mgr. Gabriel Kožík</span>
         </a>
         <div class="hamburger" tabindex="0" role="button" aria-label="Open menu">
@@ -96,7 +98,7 @@
     <footer>
         <div class="footer-grid">
             <div>
-                <h4>Mgr. Gabriel Kožík</h4>
+                <p class="footer-heading">Mgr. Gabriel Kožík</p>
                 <p>Attorney for the New Era with AI</p>
                 <div class="social-icons-container">
                     <a href="https://www.linkedin.com/in/gabriel-kozik/" target="_blank" class="social-icon"
@@ -110,32 +112,32 @@
                 </div>
             </div>
             <div>
-                <h4>Contact</h4>
-                <p>Email: <a href="mailto:kozik@iustoria.cz">kozik@iustoria.cz</a></p>
+                <p class="footer-heading">Contact</p>
+                <p>Email: <a href="mailto:info@gabrielkozik.cz">info@gabrielkozik.cz</a></p>
                 <p>Phone: <a href="tel:+420720265713">+420 720 265 713</a></p>
                 <p>Data Box: eygwp2c</p>
             </div>
             <div>
-                <h4>Office</h4>
-                <p>IUSTORIA, law firm, s.r.o.</p>
-                <p>Slovákova 279/11, 602 00 Brno</p>
-                <p><a href="http://www.iustoria.cz" target="_blank">www.iustoria.cz</a></p>
+                <p class="footer-heading">Registered office</p>
+                <p>Slovákova 279/11, 602 00 Brno, Czech Republic</p>
             </div>
             <div>
-                <h4>Bar Association Registration</h4>
+                <p class="footer-heading">Bar Association Registration</p>
                 <p>Reg. No.: 19320</p>
-                <p>ID (natural person): 05187559</p>
-                <p>partner of s.r.o.</p>
+                <p>Company ID: 05187559</p>
+                <p>independent attorney</p>
+                <p><a href="https://www.cak.cz" target="_blank" rel="noopener noreferrer">Czech Bar Association</a></p>
             </div>
         </div>
         <div class="copyright">
-            <p>&copy; 2026 Mgr. Gabriel Kožík. All rights reserved.</p>
+            <p>&copy; 2026 Mgr. Gabriel Kožík. All rights reserved. · <a href="ochrana-osobnich-udaju-en">Privacy Policy</a> · <a href="#" data-cookie-settings>Cookie settings</a></p>
         </div>
     </footer>
 
     <script src="assets/js/main.js"></script>
     <script src="assets/js/blog-loader.js"></script>
 
+    <script src="/assets/js/consent.js" defer></script>
 </body>
 
 </html>

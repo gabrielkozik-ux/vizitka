@@ -27,24 +27,24 @@
     <meta name="twitter:description" content="Advokát pro majitele firem, kteří chtějí využívat moderní technologie bezpečně.">
     <meta name="twitter:image" content="https://www.gabrielkozik.cz/assets/images/og-homepage.jpg">
 
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Mgr. Gabriel Kožík","jobTitle":"Advokát","description":"Advokát pro novou dobu s AI. Právní služby a AI compliance pro firmy.","url":"https://www.gabrielkozik.cz/","image":"https://www.gabrielkozik.cz/assets/images/profilova-fotka.jpg","email":"mailto:kozik@iustoria.cz","telephone":"+420720265713","worksFor":{"@type":"LegalService","name":"IUSTORIA, advokátní kancelář, s.r.o.","url":"https://www.iustoria.cz","address":{"@type":"PostalAddress","streetAddress":"Slovákova 279/11","addressLocality":"Brno","postalCode":"602 00","addressCountry":"CZ"}},"sameAs":["https://www.linkedin.com/in/gabriel-kozik/","https://www.facebook.com/somslovak","https://www.instagram.com/kozik_gabriel/","https://www.youtube.com/@gabriel-kozik"],"knowsAbout":["Obchodní právo","Korporátní právo","AI Act","GDPR","Umělá inteligence","Smluvní právo"]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Mgr. Gabriel Kožík","jobTitle":"Advokát","description":"Advokát pro novou dobu s AI. Právní služby a AI compliance pro firmy.","url":"https://www.gabrielkozik.cz/","image":"https://www.gabrielkozik.cz/assets/images/profilova-fotka.jpg","email":"mailto:info@gabrielkozik.cz","telephone":"+420720265713","address":{"@type":"PostalAddress","streetAddress":"Slovákova 279/11","addressLocality":"Brno","postalCode":"602 00","addressCountry":"CZ"},"sameAs":["https://www.linkedin.com/in/gabriel-kozik/","https://www.facebook.com/somslovak","https://www.instagram.com/kozik_gabriel/","https://www.youtube.com/@gabriel-kozik"],"knowsAbout":["Obchodní právo","Korporátní právo","AI Act","GDPR","Umělá inteligence","Smluvní právo"]}</script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <!-- EXTERNÍ CSS -->
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/inter-latin-400-normal.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/lora-latin-600-normal.woff2" crossorigin>
+    <link rel="stylesheet" href="/assets/fonts/fonts.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="preload" as="image" href="assets/images/hero-pod-palavou-900.webp" media="(max-width: 768px)" fetchpriority="high">
+    <link rel="preload" as="image" href="assets/images/hero-pod-palavou.webp" media="(min-width: 769px)" fetchpriority="high">
 
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 </head>
 
 <body>
 
     <nav class="main-nav">
         <a href="#" class="nav-logo">
-            <img src="assets/images/profilova-fotka.jpg" alt="Profilová fotka Gabriel Kožík" class="nav-photo">
+            <img src="assets/images/profilova-fotka-nav.webp" width="96" height="96" alt="Profilová fotka Gabriel Kožík" class="nav-photo">
             <span>Mgr. Gabriel Kožík</span>
         </a>
         <div class="hamburger" tabindex="0" role="button" aria-label="Otevřít menu">
@@ -199,7 +199,7 @@
                 <div class="cert-grid">
                     <div class="cert-card reveal">
                         <a href="assets/images/brand/cert-ai-manazeri.jpg" target="_blank" rel="noopener noreferrer" class="cert-image-link">
-                            <img src="assets/images/brand/cert-ai-manazeri.jpg" alt="Certifikát Umělá inteligence pro manažery" loading="lazy">
+                            <img src="assets/images/brand/cert-ai-manazeri.webp" width="640" height="476" alt="Certifikát Umělá inteligence pro manažery" loading="lazy">
                         </a>
                         <div class="cert-info">
                             <h3>Umělá inteligence pro manažery — strategie a implementace AI</h3>
@@ -209,7 +209,7 @@
                     </div>
                     <div class="cert-card reveal reveal-delay-1">
                         <a href="assets/images/brand/cert-notebooklm.jpg" target="_blank" rel="noopener noreferrer" class="cert-image-link">
-                            <img src="assets/images/brand/cert-notebooklm.jpg" alt="Certifikát Google Digitální garáž — NotebookLM" loading="lazy">
+                            <img src="assets/images/brand/cert-notebooklm.webp" width="640" height="360" alt="Certifikát Google Digitální garáž — NotebookLM" loading="lazy">
                         </a>
                         <div class="cert-info">
                             <h3>Google Digitální garáž: NotebookLM</h3>
@@ -219,7 +219,7 @@
                     </div>
                     <div class="cert-card reveal reveal-delay-2">
                         <a href="assets/images/brand/cert-elements-of-ai.jpg" target="_blank" rel="noopener noreferrer" class="cert-image-link">
-                            <img src="assets/images/brand/cert-elements-of-ai.jpg" alt="Certifikát Elements of AI" loading="lazy">
+                            <img src="assets/images/brand/cert-elements-of-ai.webp" width="640" height="452" alt="Certifikát Elements of AI" loading="lazy">
                         </a>
                         <div class="cert-info">
                             <h3>Elements of AI</h3>
@@ -230,7 +230,7 @@
                     </div>
                     <div class="cert-card reveal reveal-delay-3">
                         <a href="assets/images/brand/cert-nukib-zaklady-kyberbezpecnosti.jpg" target="_blank" rel="noopener noreferrer" class="cert-image-link">
-                            <img src="assets/images/brand/cert-nukib-zaklady-kyberbezpecnosti.jpg" alt="Certifikát NÚKIB — Základy kybernetické bezpečnosti" loading="lazy">
+                            <img src="assets/images/brand/cert-nukib-zaklady-kyberbezpecnosti.webp" width="800" height="566" alt="Certifikát NÚKIB — Základy kybernetické bezpečnosti" loading="lazy">
                         </a>
                         <div class="cert-info">
                             <h3>Základy kybernetické bezpečnosti</h3>
@@ -270,11 +270,11 @@
 
         <section id="about" class="surface-tint">
             <div class="container about-container">
-                <img src="assets/images/brand/portret-gabriel.jpg" alt="Portrét Mgr. Gabriela Kožíka"
+                <img src="assets/images/brand/portret-gabriel.webp" width="440" height="440" alt="Portrét Mgr. Gabriela Kožíka"
                     class="about-photo-circle reveal" loading="lazy">
                 <h2 class="section-title reveal">O mně</h2>
                 <p class="reveal">Jsem advokát s více než desetiletou praxí v obchodním a korporátním právu
-                    a zakládající partner advokátní kanceláře <strong>IUSTORIA</strong>. Od začátku kariéry stojím
+                    a advokacii vykonávám samostatně — se mnou jednáte vždy napřímo. Od začátku kariéry stojím
                     na straně podnikatelů a firem — a protože technologiím rozumím do hloubky a denně s nimi
                     pracuji, dokážu své klienty bezpečně provést i digitální transformací. Nejsem školitel, který
                     zná zákony. Jsem <strong>advokát, který rozumí digitálnímu světu</strong> — a věřím, že dobrá
@@ -288,27 +288,27 @@
                 <p class="section-subtitle">Školení a networking nejsou marketingová věta — takhle to vypadá v praxi.</p>
                 <div class="photostrip-grid">
                     <figure class="reveal">
-                        <img src="assets/images/brand/akce-tyden-inovaci.jpg" alt="Přednáška AI Act v praxi na Týdnu inovací" loading="lazy">
+                        <img src="assets/images/brand/akce-tyden-inovaci.webp" width="800" height="500" alt="Přednáška AI Act v praxi na Týdnu inovací" loading="lazy">
                         <figcaption>Týden inovací — AI Act v praxi</figcaption>
                     </figure>
                     <figure class="reveal reveal-delay-1">
-                        <img src="assets/images/brand/akce-cstech-summit.jpg" alt="Přednáška na CS-Tech Summitu" loading="lazy">
+                        <img src="assets/images/brand/akce-cstech-summit.webp" width="800" height="500" alt="Přednáška na CS-Tech Summitu" loading="lazy">
                         <figcaption>CS-Tech Summit — AI a právo</figcaption>
                     </figure>
                     <figure class="reveal reveal-delay-2">
-                        <img src="assets/images/brand/akce-pod-palavou.jpg" alt="Networking Pod Pálavou" loading="lazy">
+                        <img src="assets/images/brand/akce-pod-palavou.webp" width="800" height="500" alt="Networking Pod Pálavou" loading="lazy">
                         <figcaption>Networking Pod Pálavou</figcaption>
                     </figure>
                     <figure class="reveal">
-                        <img src="assets/images/brand/akce-bforb-tisnov.jpg" alt="Prezentace na Business for Breakfast Tišnov" loading="lazy">
+                        <img src="assets/images/brand/akce-bforb-tisnov.webp" width="800" height="500" alt="Prezentace na Business for Breakfast Tišnov" loading="lazy">
                         <figcaption>Business for Breakfast Tišnov</figcaption>
                     </figure>
                     <figure class="reveal reveal-delay-1">
-                        <img src="assets/images/brand/akce-gemini-beseda.jpg" alt="Beseda se studenty SŠ Gemini o advokátní profesi" loading="lazy">
+                        <img src="assets/images/brand/akce-gemini-beseda.webp" width="800" height="500" alt="Beseda se studenty SŠ Gemini o advokátní profesi" loading="lazy">
                         <figcaption>Beseda se studenty SŠ Gemini</figcaption>
                     </figure>
                     <figure class="reveal reveal-delay-2">
-                        <img src="assets/images/brand/akce-podnikavci-kurim.jpg" alt="Klub podnikavců Kuřim" loading="lazy">
+                        <img src="assets/images/brand/akce-podnikavci-kurim.webp" width="800" height="500" alt="Klub podnikavců Kuřim" loading="lazy">
                         <figcaption>Klub podnikavců Kuřim</figcaption>
                     </figure>
                 </div>
@@ -336,34 +336,29 @@
 
                 <div class="projects-layout" style="margin-top: 50px;">
                     <div class="projects-grid">
-                        <div class="project-item core"><a href="http://www.iustoria.cz" target="_blank"
-                                rel="noopener noreferrer"><img src="assets/images/logos/logo-iustoria_white.png"
-                                    alt="Logo IUSTORIA, advokátní kancelář" loading="lazy"></a>
-                            <p>Zakládající partner advokátní kanceláře</p>
-                        </div>
                         <div class="project-item secondary-core"><a href="https://www.pod-palavou.cz/klubova-setkani" target="_blank"
-                                rel="noopener noreferrer"><img src="assets/images/logos/logo-palava-horizons.png"
+                                rel="noopener noreferrer"><img src="assets/images/logos/logo-palava-horizons.webp" width="480" height="214"
                                     alt="Logo Pálava Horizons" loading="lazy"></a>
                             <p>Zakládající společník Pálava Horizons</p>
                         </div>
                         <div class="project-item"><a href="https://www.facebook.com/profile.php?id=61561146905712"
                                 target="_blank" rel="noopener noreferrer"><img
-                                    src="assets/images/logos/logo-bforb-tisnov.jpg" alt="Logo BforB Tišnov"
+                                    src="assets/images/logos/logo-bforb-tisnov.webp" width="338" height="193" alt="Logo BforB Tišnov"
                                     loading="lazy"></a>
                             <p>Člen BforB Na Svratce</p>
                         </div>
                         <div class="project-item"><a href="https://klubpodnikavcu.cz/srazy-podnikavcu" target="_blank"
-                                rel="noopener noreferrer"><img src="assets/images/logos/logo-podnikavci.png"
+                                rel="noopener noreferrer"><img src="assets/images/logos/logo-podnikavci.webp" width="480" height="182"
                                     alt="Logo Klub Podnikavců" loading="lazy"></a>
                             <p>Člen Klubu podnikavců Tišnov</p>
                         </div>
                         <div class="project-item"><a href="https://www.smart-network.cz/" target="_blank"
-                                rel="noopener noreferrer"><img src="assets/images/logos/logo-smart-network.png"
+                                rel="noopener noreferrer"><img src="assets/images/logos/logo-smart-network.webp" width="279" height="60"
                                     alt="Logo Smart Network" loading="lazy"></a>
                             <p>Člen Smart Network</p>
                         </div>
                         <div class="project-item"><a href="https://cct.cz/" target="_blank"
-                                rel="noopener noreferrer"><img src="assets/images/logos/cct.svg"
+                                rel="noopener noreferrer"><img src="assets/images/logos/cct.svg" width="95" height="94"
                                     alt="Logo Czech Cool Trade" loading="lazy"></a>
                             <p>Člen Czech Cool Trade</p>
                         </div>
@@ -419,33 +414,43 @@
 
                 <div class="cta-container">
                     <div class="cta-buttons">
-                        <a href="mailto:kozik@iustoria.cz" class="cta-button">Napište mi e-mail</a>
+                        <a href="mailto:info@gabrielkozik.cz" class="cta-button">Napište mi e-mail</a>
                         <a href="tel:+420720265713" class="cta-button secondary">+420 720 265 713</a>
                     </div>
                     <p class="booking-text">rezervujte si online call</p>
-                    <a href="#"
-                        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/kozik-iustoria/30min', text: 'Naplánovat online schůzku', color: '#b8873b', textColor: '#ffffff', branding: true});return false;"
-                        class="cta-button">Naplánovat schůzku - Calendly</a>
+                    <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1EOhosa3thnjELkDWGjdiafXMM3i4AxCennpDUUY8cJyrcsgYSyKrKh5006gSw25NEpbJxF-EY" target="_blank" rel="noopener noreferrer"
+                        class="cta-button">Vybrat termín online schůzky</a>
                 </div>
 
                 <div class="form-container">
                     <p class="section-subtitle"><strong>nebo mi zanechte rychlou zprávu</strong></p>
-                    <form action="https://formspree.io/f/xblzwqjn" method="POST">
+                    <form id="contact-form" class="contact-form" method="POST" novalidate>
                         <div class="form-group">
                             <label for="name" class="form-label">Jméno</label>
-                            <input type="text" id="name" name="name" required class="form-input">
+                            <input type="text" id="name" name="name" required maxlength="200" autocomplete="name" class="form-input">
                         </div>
                         <div class="form-group">
                             <label for="email" class="form-label">E-mail</label>
-                            <input type="email" id="email" name="email" required class="form-input">
+                            <input type="email" id="email" name="email" required maxlength="254" autocomplete="email" class="form-input">
                         </div>
                         <div class="form-group">
                             <label for="message" class="form-label">Vaše zpráva</label>
-                            <textarea id="message" name="message" rows="5" required class="form-textarea"></textarea>
+                            <textarea id="message" name="message" rows="5" required maxlength="5000" class="form-textarea"
+                                placeholder="Stručně popište, s čím potřebujete pomoct. Citlivé detaily probereme osobně."></textarea>
                         </div>
+                        <div class="form-hp" aria-hidden="true">
+                            <label for="website">Nevyplňujte</label>
+                            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                        </div>
+                        <input type="hidden" name="lang" value="">
+                        <input type="hidden" name="page" value="">
+                        <input type="hidden" name="ts" value="">
                         <div class="form-actions">
                             <button type="submit" class="cta-button">Odeslat zprávu</button>
                         </div>
+                        <div class="form-status" role="status" aria-live="polite" tabindex="-1" hidden></div>
+                        <p class="form-note">Údaje z formuláře použiji jen k tomu, abych vám odpověděl. Vše, co mi napíšete, beru jako důvěrné a vztahuje se na to advokátní mlčenlivost. Podrobnosti najdete v <a href="ochrana-osobnich-udaju">Ochraně osobních údajů</a>.</p>
+                        <noscript><p class="form-note">Formulář potřebuje zapnutý JavaScript. Napište mi prosím přímo na <a href="mailto:info@gabrielkozik.cz">info@gabrielkozik.cz</a>.</p></noscript>
                     </form>
                 </div>
             </div>
@@ -455,7 +460,7 @@
     <footer>
         <div class="footer-grid">
             <div>
-                <h4>Mgr. Gabriel Kožík</h4>
+                <p class="footer-heading">Mgr. Gabriel Kožík</p>
                 <p>Advokát pro novou dobu s AI</p>
                 <div class="social-icons-container">
                     <a href="https://www.linkedin.com/in/gabriel-kozik/" target="_blank" class="social-icon"
@@ -469,30 +474,31 @@
                 </div>
             </div>
             <div>
-                <h4>Kontakt</h4>
-                <p>E-mail: <a href="mailto:kozik@iustoria.cz">kozik@iustoria.cz</a></p>
+                <p class="footer-heading">Kontakt</p>
+                <p>E-mail: <a href="mailto:info@gabrielkozik.cz">info@gabrielkozik.cz</a></p>
                 <p>Telefon: <a href="tel:+420720265713">+420 720 265 713</a></p>
                 <p>Datová schránka: eygwp2c</p>
             </div>
             <div>
-                <h4>Kancelář</h4>
-                <p>IUSTORIA, advokátní kancelář, s.r.o.</p>
+                <p class="footer-heading">Sídlo advokáta</p>
                 <p>Slovákova 279/11, 602 00 Brno</p>
-                <p><a href="http://www.iustoria.cz" target="_blank">www.iustoria.cz</a></p>
             </div>
             <div>
-                <h4>Zápis v ČAK</h4>
+                <p class="footer-heading">Zápis v ČAK</p>
                 <p>ev. č.: 19320</p>
-                <p>IČO (fyzická osoba): 05187559</p>
-                <p>společník s.r.o.</p>
+                <p>IČO: 05187559</p>
+                <p>samostatný advokát</p>
+                <p><a href="https://www.cak.cz" target="_blank" rel="noopener noreferrer">Česká advokátní komora</a></p>
             </div>
         </div>
         <div class="copyright">
-            <p>&copy; 2026 Mgr. Gabriel Kožík. Všechna práva vyhrazena.</p>
+            <p>&copy; 2026 Mgr. Gabriel Kožík. Všechna práva vyhrazena. · <a href="ochrana-osobnich-udaju">Ochrana osobních údajů</a> · <a href="#" data-cookie-settings>Nastavení cookies</a></p>
         </div>
     </footer>
 
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/contact-form.js"></script>
+    <script src="/assets/js/consent.js" defer></script>
 </body>
 
 </html>

@@ -1,83 +1,72 @@
 <!DOCTYPE html>
 <html lang="cs">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog | Mgr. Gabriel Kožík</title>
     <meta name="description" content="Články a postřehy o právu, umělé inteligenci a růstu podnikání.">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #0a2342;
-            --secondary-color: #2ca58d;
-            --text-color: #333;
-            --light-gray: #f4f4f4;
-            --white: #ffffff;
-        }
-        html { scroll-behavior: smooth; }
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--white);
-            padding-top: 70px;
-        }
-        .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
-        .main-nav { background-color: var(--white); padding: 15px 20px; border-bottom: 1px solid var(--light-gray); position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; box-sizing: border-box; display: flex; justify-content: space-between; align-items: center; }
-        .nav-logo { font-weight: bold; color: var(--primary-color); text-decoration: none; font-size: 1.2em; }
-        .nav-links { display: flex; align-items: center; }
-        .nav-links a { color: var(--primary-color); text-decoration: none; font-weight: bold; margin: 0 15px; font-size: 1.1em; transition: color 0.3s ease; }
-        .nav-links a:hover { color: var(--secondary-color); }
-        .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
-        .hamburger .bar { width: 25px; height: 3px; background-color: var(--primary-color); }
-        .page-header { background-color: var(--light-gray); padding: 50px 20px; text-align: center; }
-        .page-header h1 { font-size: 3em; color: var(--primary-color); margin: 0; }
-        .blog-list { padding: 60px 20px; }
-        .article-card {
-            display: flex;
-            gap: 30px;
-            margin-bottom: 40px;
-            background: var(--white);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border-radius: 8px;
-            overflow: hidden;
-            transition: box-shadow 0.3s ease;
-        }
-        .article-card:hover { box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
-        .article-image { flex: 0 0 300px; }
-        .article-image img { width: 100%; height: 100%; object-fit: cover; }
-        .article-content { padding: 30px; }
-        .article-content h2 { margin-top: 0; font-size: 1.8em; }
-        .article-content h2 a { text-decoration: none; color: var(--primary-color); }
-        .article-content h2 a:hover { color: var(--secondary-color); }
-        .article-meta { font-size: 0.9em; color: #777; margin-bottom: 15px; }
-        .article-excerpt { margin-bottom: 20px; }
-        .read-more-btn { display: inline-block; background-color: var(--secondary-color); color: var(--white); padding: 10px 20px; text-decoration: none; font-weight: bold; border-radius: 5px; transition: background-color 0.3s ease; }
-        .read-more-btn:hover { background-color: #238c76; }
-        footer { background-color: var(--primary-color); color: var(--white); padding: 40px 20px; text-align: center; }
-        .copyright { margin-top: 20px; font-size: 0.8em; }
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hamburger { display: flex; }
-            .article-card { flex-direction: column; }
-            .article-image { flex-basis: auto; height: 200px; }
-        }
-    </style>
+
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="canonical" href="https://www.gabrielkozik.cz/blog" />
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Blog | Mgr. Gabriel Kožík">
+    <meta property="og:description" content="Články a postřehy o právu, umělé inteligenci a růstu podnikání.">
+    <meta property="og:url" content="https://www.gabrielkozik.cz/blog">
+    <meta property="og:image" content="https://www.gabrielkozik.cz/assets/images/profilova-fotka.jpg">
+    <meta property="og:locale" content="cs_CZ">
+    <meta property="og:site_name" content="Gabriel Kožík">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog | Mgr. Gabriel Kožík">
+    <meta name="twitter:description" content="Články a postřehy o právu, umělé inteligenci a růstu podnikání.">
+    <meta name="twitter:image" content="https://www.gabrielkozik.cz/assets/images/profilova-fotka.jpg">
+    <link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.cz/blog" />
+    <link rel="alternate" hreflang="en" href="https://www.gabrielkozik.cz/blog-en" />
+    <link rel="alternate" hreflang="x-default" href="https://www.gabrielkozik.cz/blog" />
+
+    <!-- EXTERNÍ CSS -->
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/inter-latin-400-normal.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/lora-latin-600-normal.woff2" crossorigin>
+    <link rel="stylesheet" href="/assets/fonts/fonts.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preload" as="image" href="assets/images/uvodni-obrazek-900.webp" media="(max-width: 768px)" fetchpriority="high">
+    <link rel="preload" as="image" href="assets/images/uvodni-obrazek.webp" media="(min-width: 769px)" fetchpriority="high">
+
 </head>
+
 <body>
+
+    <!-- NAVIGACE (Stejná jako index.html) -->
     <nav class="main-nav">
-        <a href="index.html" class="nav-logo">Mgr. Gabriel Kožík</a>
-         <div class="nav-links">
-            <a href="index.html#about">O mně</a>
-            <a href="index.html#services">Jak vám mohu pomoci</a>
-            <a href="index.html#aktivity">Projekty</a>
-            <a href="blog.html">Blog</a>
-            <a href="index.html#propojit">Kontaktujte mě</a>
+        <a href="./" class="nav-logo">
+            <img src="assets/images/profilova-fotka-nav.webp" width="96" height="96" alt="Profilová fotka Gabriel Kožík" class="nav-photo">
+            <span>Mgr. Gabriel Kožík</span>
+        </a>
+        <div class="hamburger" tabindex="0" role="button" aria-label="Otevřít menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="nav-links-container">
+            <div class="nav-links">
+                <a href="./">Úvodní stránka</a>
+                <a href="blog" class="active-link">Blog</a>
+                <a href="./#propojit">Kontaktujte mě</a>
+            </div>
+            <div class="lang-switcher">
+                <button class="lang-button lang-switcher-button" aria-haspopup="true" aria-expanded="false">CZ <span
+                        class="arrow"></span></button>
+                <div class="lang-dropdown lang-switcher-dropdown">
+                    <a href="blog" class="active">CZ</a>
+                    <a href="blog-en">EN</a>
+                </div>
+            </div>
         </div>
     </nav>
 
+    <!-- HERO SEKCE PRO BLOG -->
     <header class="page-header">
         <div class="container">
             <h1>Můj blog</h1>
@@ -87,29 +76,68 @@
 
     <main class="blog-list">
         <div class="container">
-            <article class="article-card">
-                <div class="article-image">
-                    <img src="assets/images/blog/ai-v-byznysu-4-cesty/ai-v-byznysu-4-cesty.jpg" alt="Abstraktní vizualizace dat a umělé inteligence">
-                </div>
-                <div class="article-content">
-                    <p class="article-meta">Publikováno: 16. srpna 2025</p>
-                    <h2><a href="blog/ai-v-byznysu/ai-v-byznysu-4-cesty.html">AI v byznysu: 4 cesty, kudy nevědomky unikají vaše firemní data</a></h2>
-                    <p class="article-excerpt">Využívání AI nástrojů se stalo běžnou součástí firemní praxe. Mnozí si však neuvědomují rizika spojená s ochranou citlivých dat. Pojďme se podívat na čtyři nejčastější scénáře, jak může docházet k únikům, a jak jim předejít.</p>
-                    <a href="clanek-ai-v-byznysu.html" class="read-more-btn">Přečíst celý článek</a>
-                </div>
-            </article>
-
+            <!-- FILTRY -->
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">Všechny</button>
+                <button class="filter-btn" data-filter="expert">Odborné články</button>
+                <button class="filter-btn" data-filter="podcast">Podcasty</button>
+                <button class="filter-btn" data-filter="report">Reportáže z akcí</button>
             </div>
+
+            <!-- SEZNAM ČLÁNKŮ -->
+            <div id="articles-container">
+                <!-- Články se načítají dynamicky pomocí assets/js/blog-loader.js -->
+                <div class="loader">Načítám články...</div>
+            </div>
+
+            <div class="pagination-container"></div>
+        </div>
     </main>
 
+    <!-- PATIČKA (Stejná jako index.html) -->
     <footer>
-        <div class="container">
-            <p class="copyright">&copy; 2025 Mgr. Gabriel Kožík. Všechna práva vyhrazena.</p>
+        <div class="footer-grid">
+            <div>
+                <p class="footer-heading">Mgr. Gabriel Kožík</p>
+                <p>Advokát pro novou dobu s AI</p>
+                <div class="social-icons-container">
+                    <a href="https://www.linkedin.com/in/gabriel-kozik/" target="_blank" class="social-icon"
+                        aria-label="LinkedIn profil"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                    <a href="https://www.facebook.com/somslovak" target="_blank" class="social-icon"
+                        aria-label="Facebook profil"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+                    <a href="https://www.instagram.com/kozik_gabriel/" target="_blank" class="social-icon"
+                        aria-label="Instagram profil"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.336 3.608 1.311.975.975 1.249 2.242 1.311 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.336 2.633-1.311 3.608-.975.975-2.242 1.249-3.608 1.311-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.336-3.608-1.311-.975-.975-1.249-2.242-1.311-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.336-2.633 1.311-3.608.975-.975 2.242-1.249 3.608-1.311 1.266-.058 1.646-.07 4.85-.07zm0 5.675a4.162 4.162 0 1 0 0 8.324 4.162 4.162 0 0 0 0-8.324zm0 6.864a2.702 2.702 0 1 1 0-5.404 2.702 2.702 0 0 1 0 5.404zm5.338-7.207a.972.972 0 1 1-1.944 0 .972.972 0 0 1 1.944 0z"/></svg></a>
+                    <a href="https://www.youtube.com/@gabriel-kozik" target="_blank" class="social-icon"
+                        aria-label="YouTube kanál"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+                </div>
+            </div>
+            <div>
+                <p class="footer-heading">Kontakt</p>
+                <p>E-mail: <a href="mailto:info@gabrielkozik.cz">info@gabrielkozik.cz</a></p>
+                <p>Telefon: <a href="tel:+420720265713">+420 720 265 713</a></p>
+                <p>Datová schránka: eygwp2c</p>
+            </div>
+            <div>
+                <p class="footer-heading">Sídlo advokáta</p>
+                <p>Slovákova 279/11, 602 00 Brno</p>
+            </div>
+            <div>
+                <p class="footer-heading">Zápis v ČAK</p>
+                <p>ev. č.: 19320</p>
+                <p>IČO: 05187559</p>
+                <p>samostatný advokát</p>
+                <p><a href="https://www.cak.cz" target="_blank" rel="noopener noreferrer">Česká advokátní komora</a></p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Mgr. Gabriel Kožík. Všechna práva vyhrazena. · <a href="ochrana-osobnich-udaju">Ochrana osobních údajů</a> · <a href="#" data-cookie-settings>Nastavení cookies</a></p>
         </div>
     </footer>
-<script defer src="/_vercel/analytics/script.js"></script>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/blog-loader.js"></script>
+
+    <script src="/assets/js/consent.js" defer></script>
 </body>
 
 </html>
-
-

@@ -1,0 +1,2605 @@
+/* ==========================================================================
+   gabrielkozik.cz — hlavni stylopis
+   --------------------------------------------------------------------------
+   Fonty (Lora + Inter) se nacitaji z <head> kazde stranky, ne @importem.
+
+   OBSAH
+    1. Tokeny (:root)              9. Sekce homepage
+    2. Reset a zakladni typografie    9.1 Bolest / #situace
+    3. Layout (container, section)    9.2 Sluzby
+    4. Navigace                      9.3 Parallax separator
+    5. Hero                          9.4 Certifikace
+    6. Page header (blog)            9.5 Proces spoluprace
+    7. Trust bar                     9.6 O mne
+    8. Spolecne komponenty           9.7 Foto pas z akci
+       (titulky, tlacitka, formular, 9.8 Akce a kalendar
+        animace, scroll-reveal)      9.9 FAQ
+                                     9.10 Loga projektu
+   10. Blog — vypis            13. Footer
+   11. Blog — detail clanku    14. Premium dekorativni vrstva
+   12. Galerie a lightbox      15. Utility
+                               16. prefers-reduced-motion
+
+   KONVENCE
+   - Kazda komponenta ma svou responsivitu hned pod sebou, ne na konci souboru.
+     Proto je v souboru vic @media bloku se stejnym breakpointem — je to zamer:
+     kdyz menis hero na mobilu, koukas do sekce 5, ne do monolitu na konci.
+   - Breakpointy: 680 / 768 / 900 / 1024 px. Dalsi nezavadet.
+   - Zadne !important. Kdyz ho potrebujes, je spatne napsany selektor.
+   - Jeden selektor = jedno misto v souboru. Zadne "pozdejsi pravidlo to prebije".
+   - Barvy, stiny, zaobleni a velikosti pisma VZDY z tokenu, nikdy natvrdo.
+   - Prostor: layoutove hodnoty (>= 20px) z tokenu --sp-*. Hodnoty pod 20px
+     jsou opticke doladeni (odsazeni ikon, mezery v radku) a zustavaji jako
+     literal px — token by tam nic nevysvetlil.
+   - Bronz: --bronze-500 jen na dekoraci (linky, ramecky, ikony),
+     --bronze-600 na text na svetlem, --bronze-200 na text na tmavem.
+     Na tmavem pozadi pouzivej --on-deep / --on-deep-muted, ne --ink-*.
+   ========================================================================== */
+
+/* ======================================================================
+   1. TOKENY
+   ====================================================================== */
+
+/* Jediny zdroj pravdy pro barvy, prostor, typografii, zaobleni, stiny a pohyb.
+   Nikde v souboru uz nema byt "natvrdo" napsana hodnota, ktera sem patri.
+   Kontrastni pomery jsou spocitane proti bile (#fff) resp. proti --navy-900. */
+
+:root {
+
+    /* --- BARVY: navy (gravitas) ------------------------------------- */
+    --navy-900: #081a2e;
+    /* tmave "kotvy" sekci a footer */
+    --navy-800: #0c2340;
+    /* zakladni brand navy, 15.8:1 */
+
+    /* --- BARVY: bronz (teplo, akcent) ------------------------------- */
+    --bronze-500: #b8873b;
+    /* POUZE dekorace: linky, ramecky, ikony. Na text ne (3.2:1). */
+    --bronze-600: #8a6528;
+    /* bronz pro TEXT na svetlem, 5.29:1 */
+    --bronze-200: #e3c98a;
+    /* bronz pro text na tmavem, 10.9:1 */
+    --bronze-50: #f5eddd;
+    /* svetle pozadi badgu */
+
+    /* --- BARVY: neutraly ------------------------------------------- */
+    --ink-body: #334155;
+    /* bezny text, 10.4:1 */
+    --ink-muted: #5b6b80;
+    /* meta, popisky, 5.44:1 (drive #94a3b8 = 2.6:1, propadalo) */
+    --hairline: #e6eaf0;
+    /* 1px linky a ramecky */
+    --danger-600: #b42318;
+    /* chybove hlasky (formular), 6.5:1 na bile */
+
+    /* --- BARVY: text na tmavem pozadi -------------------------------
+       Svetle sedé z palety neutralu na navy NEFUNGUJI: --ink-muted ma
+       na navy jen 2.9:1. Pro tmava pozadi proto vlastni dvojice. */
+    --on-deep: #dbe3ee;
+    /* text na navy, 12.2:1 */
+    --on-deep-muted: #aab8c9;
+    /* meta na navy, 7.8:1 */
+
+    /* --- POVRCHY ---------------------------------------------------- */
+    --surface: #ffffff;
+    --surface-tint: #f7f8fa;
+    --surface-deep: var(--navy-900);
+
+    /* --- PROSTOR: 4px mrizka, tokeny pojmenovane podle hodnoty ---------
+       8px zaklad nepokryl 12 a 20 px, ktere v souboru tvorily tretinu vsech
+       hodnot. Nazev = hodnota, takze neni co dohledavat.
+       Nove hodnoty ber odsud; nesnapnute zbytky jsou vypsane v reportu. */
+    --sp-4: 4px;
+    --sp-8: 8px;
+    --sp-12: 12px;
+    --sp-16: 16px;
+    --sp-20: 20px;
+    --sp-24: 24px;
+    --sp-28: 28px;
+    --sp-32: 32px;
+    --sp-36: 36px;
+    --sp-40: 40px;
+    --sp-48: 48px;
+    --sp-64: 64px;
+    --sp-80: 80px;
+    --sp-96: 96px;
+    --sp-128: 128px;
+    --section-y: clamp(64px, 8vw, 128px);
+    /* vertikalni rytmus sekci */
+
+    /* --- TYPOGRAFIE: jedna stupnice, pomer ~1.25 -------------------- */
+    --step--1: clamp(0.83rem, 0.80rem + 0.10vw, 0.89rem);
+    --step-1: clamp(1.20rem, 1.10rem + 0.40vw, 1.40rem);
+    --step-2: clamp(1.45rem, 1.25rem + 0.80vw, 1.85rem);
+    --step-3: clamp(1.75rem, 1.40rem + 1.50vw, 2.50rem);
+    --step-4: clamp(2.10rem, 1.50rem + 2.60vw, 3.40rem);
+    --step-5: clamp(2.40rem, 1.40rem + 4.00vw, 4.20rem);
+
+    /* --- ZAOBLENI: tri hodnoty, ne pet ----------------------------- */
+    --r-sm: 6px;
+    --r-md: 14px;
+    --r-pill: 999px;
+
+    /* --- OBRYSY (ne elevace — proto mimo skalu stinu) ---------------- */
+    --ring-hairline: 0 0 0 1px rgba(12, 35, 64, 0.12);
+    --ring-focus: 0 0 0 3px rgba(12, 35, 64, 0.08);
+
+    /* --- ELEVACE: ctyri urovne, vsechny v navy odstinu -------------
+       Neutralne cerny stin dela weby "spinave". Tohle je ten rozdil,
+       ktery nikdo nepojmenuje, ale kazdy vidi. */
+    --sh-1: 0 1px 2px rgba(12, 35, 64, 0.05);
+    --sh-2: 0 4px 12px -2px rgba(12, 35, 64, 0.08);
+    --sh-3: 0 12px 32px -8px rgba(12, 35, 64, 0.12);
+    --sh-4: 0 28px 60px -20px rgba(12, 35, 64, 0.22);
+
+    /* --- POHYB: jedna easing funkce pro cely web -------------------- */
+    --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+    --dur-2: 0.32s;
+    --dur-3: 0.60s;
+
+    /* --- IKONY jako SVG masky ---------------------------------------
+       Pouzivaji se pres mask + background-color: currentColor, takze
+       dedi barvu textu. Nahrazuji emoji a textove glyfy, ktere se v
+       kazdem systemu vykreslovaly jinak. */
+    --icon-pin: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z'/%3E%3C/svg%3E");
+    --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9.55 17.6 4 12.05l1.4-1.4 4.15 4.15L18.6 5.6 20 7z'/%3E%3C/svg%3E");
+
+    /* --- LAYOUT ----------------------------------------------------- */
+    --nav-h: 72px;
+    --wrap: 1140px;
+}
+
+/* ======================================================================
+   2. RESET A ZAKLADNI TYPOGRAFIE
+   ====================================================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+    color: var(--ink-body);
+    background-color: var(--surface);
+    padding-top: var(--nav-h);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.nav-logo {
+    font-family: 'Lora', Georgia, serif;
+    color: var(--navy-800);
+}
+
+/* Prostrkani se skaluje s velikosti. Zaporny tracking patri jen na display
+   velikosti — na h4/h5 (~1.1em) skodil citelnosti. */
+h1,
+h2 {
+    letter-spacing: -0.025em;
+}
+
+h3 {
+    letter-spacing: -0.015em;
+}
+
+h4,
+h5,
+h6 {
+    letter-spacing: 0;
+}
+
+/* Bronz na textu ma na bile jen 3.2:1 — propada AA. Pro text tedy
+   --bronze-600 (5.29:1), --bronze-500 zustava jen na dekoraci. */
+a {
+    color: var(--bronze-600);
+    text-decoration: none;
+    transition: color var(--dur-2) var(--ease);
+}
+
+a:hover {
+    color: var(--navy-800);
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+/* ======================================================================
+   3. LAYOUT
+   ====================================================================== */
+
+/* Pozn.: vertikalni padding zustava — clanky vkladaji .container primo do
+   <main> bez <section>, takze bez nej by obsah lezel na navigaci. */
+.container {
+    max-width: var(--wrap);
+    margin: 0 auto;
+    padding: var(--sp-16) var(--sp-24);
+}
+
+/* Vzdusnost je jediny "prémiovy" znak, ktery nejde nafejkovat.
+   Drive 52px, coz byla polovina toho, co takova stranka potrebuje. */
+section {
+    padding: var(--section-y) var(--sp-24);
+    scroll-margin-top: var(--nav-h);
+}
+
+/* --- Povrchy sekci ------------------------------------------------------
+   Drive to resilo section:nth-child(2n), tedy automaticke stridani
+   bila/seda. To je nejvetsi "template" signal na webu: rika, ze autor
+   nevedel, jak sekce oddelit, tak je obarvil. Oddeleni resi prostor;
+   povrch se prirazuje zamerne, v HTML, tridou. */
+
+.surface-tint {
+    background-color: var(--surface-tint);
+}
+
+.surface-deep {
+    background-color: var(--surface-deep);
+    color: var(--on-deep);
+}
+
+.surface-deep .section-title,
+.surface-deep h2,
+.surface-deep h3,
+.surface-deep h4 {
+    color: var(--surface);
+}
+
+.surface-deep .section-subtitle {
+    color: var(--on-deep-muted);
+}
+
+.surface-deep a {
+    color: var(--bronze-200);
+}
+
+/* ======================================================================
+   4. NAVIGACE
+   ====================================================================== */
+
+/* Premiova navigace je ticha. Drive: odkazy 1.15em/weight 700 + logo 1.3em
+   — nejhlasitejsi prvek na prvni obrazovce. Ted mensi, lehci, s vic vzduchem. */
+
+.main-nav {
+    background-color: rgba(255, 255, 255, 0.78);
+    backdrop-filter: saturate(180%) blur(16px);
+    -webkit-backdrop-filter: saturate(180%) blur(16px);
+    height: var(--nav-h);
+    padding: 0 var(--sp-40);
+    border-bottom: 1px solid rgba(12, 35, 64, 0.06);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-weight: 600;
+    font-size: 1.05rem;
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: center;
+    gap: var(--sp-8);
+}
+
+.nav-photo {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    /* Sedy prstenec byl datovany — staci vlasova linka */
+    box-shadow: var(--ring-hairline);
+}
+
+.nav-links-container {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--navy-800);
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.01em;
+    margin: 0 var(--sp-16);
+    position: relative;
+}
+
+/* Podtrzeni misto zmeny barvy — jedina animace, kterou v navigaci chceme */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 1px;
+    background: var(--bronze-500);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--dur-2) var(--ease);
+}
+
+.nav-links a:hover {
+    color: var(--navy-800);
+}
+
+.nav-links a:hover::after,
+.nav-links a:focus-visible::after {
+    transform: scaleX(1);
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--navy-800);
+    transition: transform var(--dur-2) var(--ease), opacity var(--dur-2) var(--ease);
+    border-radius: 2px;
+}
+
+.lang-switcher {
+    position: relative;
+    margin-left: var(--sp-20);
+}
+
+.lang-button {
+    background: transparent;
+    border: none;
+    font-family: 'Lora', Georgia, serif;
+    font-weight: 700;
+    font-size: 1.1em;
+    cursor: pointer;
+    color: var(--navy-800);
+    display: flex;
+    align-items: center;
+}
+
+.lang-button .arrow {
+    border: solid var(--navy-800);
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-left: var(--sp-8);
+    transform: rotate(45deg);
+    transition: transform 0.3s;
+}
+
+.lang-button.active .arrow {
+    transform: rotate(-135deg);
+}
+
+.lang-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: var(--surface);
+    box-shadow: var(--sh-3);
+    border-radius: var(--r-sm);
+    overflow: hidden;
+    min-width: 100px;
+    z-index: 1001;
+    margin-top: 10px;
+}
+
+.lang-dropdown a {
+    padding: 10px var(--sp-20);
+    display: block;
+    color: var(--ink-body);
+    font-weight: 600;
+}
+
+.lang-dropdown a:hover {
+    background-color: var(--surface-tint);
+    color: var(--bronze-600);
+}
+
+.lang-dropdown a.active {
+    color: var(--bronze-600);
+    background-color: var(--bronze-50);
+}
+
+/* --- Navigace: mobil (roletka) --- */
+
+@media (max-width: 768px) {
+    .nav-links-container {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        /* Drive natvrdo 60px — nesedelo s vyskou navigace a roletka
+           "plavala". Ted z tokenu, takze to zustane synchronni. */
+        top: var(--nav-h);
+        left: 0;
+        background-color: var(--surface);
+        box-shadow: var(--sh-3);
+        padding: var(--sp-16) 0;
+        z-index: 999;
+    }
+
+    .nav-links-container.active {
+        display: flex;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: var(--sp-16);
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid var(--hairline);
+    }
+
+    /* V roletce by podtrzeni na hover kolidovalo s border-bottom */
+    .nav-links a::after {
+        display: none;
+    }
+
+    .lang-switcher {
+        margin: var(--sp-16) auto;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* --- Navigace: mobil na strankach clanku ---
+   Clanky nemaji hamburger ani .nav-links-container, takze pravidlo vyse
+   by u nich nechalo roletku trvale rozbalenou. Zde kompaktni vodorovny radek. */
+
+@media (max-width: 768px) {
+    .main-nav {
+        flex-wrap: wrap;
+        row-gap: 6px;
+    }
+
+    .main-nav>.nav-links {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: auto;
+        background: none;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    .main-nav>.nav-links a {
+        display: inline-block;
+        width: auto;
+        padding: var(--sp-8) 10px;
+        margin: 0;
+        border-bottom: none;
+        font-size: 0.9em;
+        text-align: center;
+    }
+
+    .main-nav>.lang-switcher {
+        margin: 0;
+    }
+}
+
+/* ======================================================================
+   5. HERO
+   ====================================================================== */
+
+/* Foto z networkingu Pod Palavou — text vlevo, Gabriel vpravo od stredu.
+
+   Tri zmeny proti puvodnimu stavu:
+   1. background-attachment: fixed ZRUSENO. U fixed se "cover" pocita proti
+      viewportu, ne proti elementu — background-position byla loterie napric
+      rozlisenimi a na scrollu to sekalo.
+   2. .hero:hover ODSTRANEN. Menil background-image, coz je vlastnost, ktera
+      neinterpoluje — misto plynuleho prechodu to jen probliklo. Na dotyku
+      nefungoval vubec.
+   3. text-shadow ODSTRANEN. Kdyz musis pod text davat stin, je scrim slaby.
+      Scrim je proto silnejsi a stiny jsou zbytecne. */
+
+.hero {
+    background-image: linear-gradient(95deg,
+            rgba(8, 26, 46, 0.95) 0%,
+            rgba(8, 26, 46, 0.78) 42%,
+            rgba(8, 26, 46, 0.32) 100%),
+        url('assets/images/hero-pod-palavou.webp');
+    background-size: cover;
+    background-position: 70% 42%;
+    background-repeat: no-repeat;
+    color: var(--surface);
+    min-height: min(88vh, 840px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 var(--sp-24);
+    text-align: left;
+}
+
+/* Na mobilu staci mensi varianta fotky (preload v <head> pouziva stejny breakpoint). */
+@media (max-width: 768px) {
+    .hero {
+        background-image: linear-gradient(95deg,
+                rgba(8, 26, 46, 0.95) 0%,
+                rgba(8, 26, 46, 0.78) 42%,
+                rgba(8, 26, 46, 0.32) 100%),
+            url('assets/images/hero-pod-palavou-900.webp');
+    }
+}
+
+.hero .container {
+    max-width: 680px;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.hero h1 {
+    font-size: var(--step-5);
+    line-height: 1.14;
+    margin: 0 0 var(--sp-16) 0;
+    color: var(--surface);
+}
+
+.hero p {
+    font-size: var(--step-1);
+    line-height: 1.5;
+    font-weight: 300;
+    max-width: 620px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.hero-underline {
+    display: block;
+    width: 90px;
+    height: 2px;
+    margin: var(--sp-24) 0 0;
+    background: linear-gradient(90deg, var(--bronze-200), transparent);
+}
+
+.hero .cta-button {
+    margin-top: var(--sp-32);
+}
+
+/* --- Hero: mobil --- */
+
+@media (max-width: 768px) {
+    .hero {
+        /* Na mobilu vysku nefixujeme, ale drzime dost prostoru */
+        padding: var(--sp-96) var(--sp-24) var(--sp-64);
+        min-height: auto;
+        background-position: 62% center;
+    }
+
+    .hero h1 {
+        margin-bottom: var(--sp-8);
+    }
+
+    .hero-underline {
+        margin-top: var(--sp-16);
+    }
+
+    .hero .cta-button {
+        margin-top: var(--sp-24);
+    }
+}
+
+/* ======================================================================
+   6. PAGE HEADER (blog)
+   ====================================================================== */
+
+/* Velikosti nadpisu resi fluidni stupnice --step-* (clamp), takze uz nejsou
+   potreba zadne mobilni @media prepisy ani globalni h1 s !important. */
+
+.page-header {
+    background-image: linear-gradient(rgba(12, 35, 64, 0.8), rgba(12, 35, 64, 0.8)), url('assets/images/uvodni-obrazek.webp');
+    background-size: cover;
+    background-position: center;
+    padding: var(--sp-80) var(--sp-20);
+    text-align: center;
+    color: var(--surface);
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        background-image: linear-gradient(rgba(12, 35, 64, 0.8), rgba(12, 35, 64, 0.8)), url('assets/images/uvodni-obrazek-900.webp');
+    }
+}
+
+.page-header h1 {
+    font-size: var(--step-4);
+    line-height: 1.15;
+    color: var(--surface);
+    margin: 0;
+}
+
+.page-header p {
+    color: var(--surface);
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+/* ======================================================================
+   7. TRUST BAR
+   ====================================================================== */
+
+.trust-bar {
+    background: var(--surface-deep);
+    color: var(--on-deep);
+    padding: var(--sp-40) var(--sp-24);
+}
+
+.trust-bar-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--sp-24);
+    text-align: center;
+}
+
+.trust-item .trust-number {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 2.4em;
+    font-weight: 700;
+    color: var(--bronze-200);
+    line-height: 1.1;
+}
+
+.trust-item .trust-label {
+    font-size: var(--step--1);
+    color: var(--on-deep-muted);
+    margin-top: var(--sp-4);
+    letter-spacing: 0.01em;
+}
+
+/* ======================================================================
+   8. SPOLECNE KOMPONENTY
+   ====================================================================== */
+
+/* --- Titulky sekci --- */
+
+.section-title {
+    text-align: center;
+    font-size: var(--step-3);
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: var(--sp-40);
+    font-weight: 600;
+    color: var(--navy-800);
+    position: relative;
+    padding-bottom: var(--sp-16);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 56px;
+    height: 3px;
+    background: var(--bronze-500);
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: var(--step-1);
+    line-height: 1.5;
+    color: var(--ink-muted);
+    max-width: 700px;
+    margin: calc(var(--sp-16) * -1) auto var(--sp-40);
+}
+
+/* --- Tlacitka --- */
+
+.cta-button {
+    display: inline-block;
+    background: var(--navy-800);
+    color: var(--surface);
+    padding: 14px var(--sp-32);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: var(--r-pill);
+    box-shadow: var(--sh-2);
+    border: none;
+    font-size: 1em;
+    letter-spacing: 0.2px;
+    transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+}
+
+/* Bila na --bronze-500 ma jen 3.2:1. Hover tlacitka proto na --bronze-600
+   (bila na nem ma 5.29:1). */
+.cta-button:hover {
+    background: var(--bronze-600);
+    transform: translateY(-2px);
+    box-shadow: var(--sh-3);
+    color: var(--surface);
+}
+
+.cta-button.secondary {
+    background: transparent;
+    border: 2px solid var(--navy-800);
+    color: var(--navy-800);
+    box-shadow: none;
+}
+
+.cta-button.secondary:hover {
+    background: var(--navy-800);
+    color: var(--surface);
+}
+
+/* --- Kontaktni formular --- */
+
+.cta-container {
+    text-align: center;
+    margin-bottom: var(--sp-48);
+}
+
+.booking-text {
+    font-size: 1.1em;
+    color: var(--ink-body);
+    margin: var(--sp-20) 0 10px;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    background: var(--surface);
+    padding: var(--sp-40);
+    border-radius: var(--r-md);
+    box-shadow: var(--sh-3);
+}
+
+.form-container .section-subtitle {
+    text-align: center;
+    margin-bottom: var(--sp-20);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group:last-of-type {
+    margin-bottom: var(--sp-20);
+}
+
+.form-label {
+    display: block;
+    margin-bottom: var(--sp-8);
+    font-weight: 600;
+    color: var(--navy-800);
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: var(--sp-12) 15px;
+    border: 2px solid var(--hairline);
+    border-radius: var(--r-sm);
+    font-family: 'Inter', sans-serif;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--bronze-500);
+    box-shadow: var(--ring-focus);
+}
+
+.form-actions {
+    text-align: center;
+    margin-top: var(--sp-20);
+}
+
+.form-actions .cta-button:disabled {
+    opacity: 0.7;
+    cursor: wait;
+}
+
+/* Past na roboty: pole je mimo obrazovku, clovek ho nevidi ani nevyplni. */
+.form-hp {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.form-note {
+    margin-top: var(--sp-20);
+    font-size: 0.85em;
+    line-height: 1.5;
+    color: var(--ink-muted);
+    text-align: center;
+}
+
+.form-note a {
+    color: var(--bronze-600);
+    text-decoration: underline;
+}
+
+.form-status {
+    margin-top: var(--sp-20);
+    padding: var(--sp-16) var(--sp-20);
+    border-radius: var(--r-sm);
+    line-height: 1.5;
+}
+
+.form-status a {
+    color: inherit;
+    font-weight: 600;
+}
+
+.form-status.is-success {
+    background: var(--bronze-50);
+    color: var(--navy-900);
+    text-align: center;
+}
+
+.form-status.is-error {
+    border: 2px solid var(--danger-600);
+    color: var(--danger-600);
+}
+
+/* Po odeslani zustane jen podekovani. */
+.contact-form.is-sent .form-group,
+.contact-form.is-sent .form-actions,
+.contact-form.is-sent .form-note {
+    display: none;
+}
+
+/* --- Cookie lista (assets/js/consent.js) ---
+   Obe tlacitka zamerne stejne vyrazna: odmitnuti nesmi byt schovane. */
+.cookie-banner {
+    position: fixed;
+    left: var(--sp-16);
+    right: var(--sp-16);
+    bottom: var(--sp-16);
+    z-index: 1000;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: var(--sp-20) var(--sp-24);
+    background: var(--surface);
+    color: var(--ink-body);
+    border-radius: var(--r-md);
+    box-shadow: var(--sh-4);
+    display: flex;
+    align-items: center;
+    gap: var(--sp-20);
+}
+
+.cookie-banner[hidden] {
+    display: none;
+}
+
+.cookie-banner-text {
+    margin: 0;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.cookie-banner-text a {
+    color: var(--bronze-600);
+    text-decoration: underline;
+}
+
+.cookie-banner-actions {
+    display: flex;
+    gap: var(--sp-12);
+    flex-shrink: 0;
+}
+
+.cookie-btn {
+    font: inherit;
+    font-weight: 600;
+    font-size: 0.9em;
+    padding: 10px var(--sp-20);
+    border-radius: var(--r-pill);
+    border: 2px solid var(--navy-800);
+    background: var(--navy-800);
+    color: var(--surface);
+    cursor: pointer;
+}
+
+.cookie-btn:hover {
+    background: var(--navy-900);
+    border-color: var(--navy-900);
+}
+
+.cookie-btn:focus-visible {
+    outline: none;
+    box-shadow: var(--ring-focus);
+}
+
+@media (max-width: 680px) {
+    .cookie-banner {
+        flex-direction: column;
+        align-items: stretch;
+        padding: var(--sp-16);
+    }
+
+    .cookie-banner-actions .cookie-btn {
+        flex: 1;
+    }
+}
+
+/* --- Animace: fade-in komponent --- */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.service-card,
+.article-card,
+.project-item {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* --- Scroll reveal --- */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: none;
+}
+
+.reveal-delay-1 {
+    transition-delay: 0.12s;
+}
+
+.reveal-delay-2 {
+    transition-delay: 0.24s;
+}
+
+.reveal-delay-3 {
+    transition-delay: 0.36s;
+}
+
+/* ======================================================================
+   9. SEKCE HOMEPAGE
+   ====================================================================== */
+
+/* --- 9.1 Bolest / #situace --- */
+
+.pain-list {
+    max-width: 760px;
+    margin: 0 auto;
+    display: grid;
+    gap: var(--sp-16);
+    padding: 0;
+    list-style: none;
+}
+
+.pain-list li {
+    background: var(--surface);
+    border-left: 2px solid var(--bronze-500);
+    border-radius: var(--r-sm);
+    padding: var(--sp-16) var(--sp-24);
+    box-shadow: var(--sh-1);
+    font-size: 1.05em;
+}
+
+.pain-resolution {
+    text-align: center;
+    max-width: 720px;
+    margin: var(--sp-40) auto 0;
+    font-size: 1.25em;
+    font-weight: 600;
+    color: var(--navy-800);
+}
+
+/* --- 9.2 Sluzby --- */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--sp-40);
+}
+
+.service-card {
+    background: var(--surface);
+    padding: var(--sp-40);
+    border-radius: var(--r-md);
+    border: 1px solid var(--hairline);
+    box-shadow: var(--sh-2);
+    transition: transform var(--dur-2) var(--ease), box-shadow var(--dur-2) var(--ease), border-color var(--dur-2) var(--ease);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--hairline);
+}
+
+/* Drive min-height: 4rem na h3 a 6rem na prvnim <p>. Melo to srovnat karty
+   vedle sebe, ale fungovalo jen na jednom rozliseni — a .service-card se
+   pouziva ve dvou podobach (6 deti ve Sluzbach, 2 v Jak pracuji), takze
+   pevna vyska jednu z nich vzdy deformovala.
+
+   Subgrid by radky srovnal skutecne, ale vyzaduje pevny pocet radku, cimz
+   by druha podoba karty prestala fungovat. Reseni: obsah tece prirozene
+   a spolecne dno drzi odkaz pres margin-top: auto. */
+.service-card h3 {
+    font-size: var(--step-2);
+    margin-top: 0;
+    margin-bottom: var(--sp-16);
+    text-align: center;
+}
+
+/* CTA odkaz na konci karty se drzi dna, takze jsou u vsech karet zarovnane.
+   POZOR na selektor: .service-card ma dve podoby. V sekci Sluzby konci
+   odstavcem s odkazem (za <ul>), v sekci Jak pracuji je odstavec jediny
+   obsah karty. Puvodni p:last-child chytal oba — a v druhe podobe tlacil
+   text ke dnu karty. Proto vazba na predchazejici <ul>. */
+.service-card>ul+p:last-child {
+    margin-top: auto;
+    margin-bottom: 0;
+    padding-top: var(--sp-16);
+}
+
+.service-card h4 {
+    color: var(--bronze-600);
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    /* margin-top: auto;
+    Odstraněno pro sjednocení začátku textu */
+}
+
+.service-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: var(--sp-20);
+}
+
+.service-card li {
+    padding-left: 1.8em;
+    margin-bottom: var(--sp-12);
+    position: relative;
+    color: var(--ink-body);
+}
+
+/* Drive textovy glyf "✓" — zavisel na fontu a opticky poskakoval.
+   SVG maska drzi stejny tvar i vahu vsude. */
+.service-card li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.5em;
+    width: 13px;
+    height: 13px;
+    background-color: var(--bronze-500);
+    -webkit-mask: var(--icon-check) center / contain no-repeat;
+    mask: var(--icon-check) center / contain no-repeat;
+}
+
+/* Hlavni sluzba se odlisuje bronzovym pruhem nahore. Drive mela navic
+   border-top: 4px, takze akcent byl dvojity (4px ramecek + 4px pruh). */
+.service-primary::before {
+    height: 3px;
+    background: linear-gradient(90deg, var(--bronze-500), var(--bronze-600));
+}
+
+.service-badge {
+    display: inline-block;
+    font-size: 0.75em;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--bronze-600);
+    background: var(--bronze-50);
+    border-radius: var(--r-pill);
+    padding: 5px 14px;
+    margin-bottom: 14px;
+}
+
+/* Hover jen na zarizenich s hover — na mobilu by drzel po tapnuti */
+
+@media (min-width: 768px) {
+    .service-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--sh-3);
+        border-color: rgba(184, 135, 59, 0.4);
+        z-index: 2;
+    }
+}
+
+/* --- 9.3 Parallax separator --- */
+
+/* Tmava "kotva" stranky. background-attachment: fixed zruseno (viz hero),
+   fixni vyska 400px nahrazena paddingem — text uz se nemuze orizavat.
+   Scrim je hlubsi, takze text-shadow neni potreba. */
+
+.parallax-separator {
+    background-image: linear-gradient(rgba(8, 26, 46, 0.82), rgba(8, 26, 46, 0.82)),
+        url('assets/images/uvodni-obrazek.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: var(--sp-128) var(--sp-24);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .parallax-separator {
+        background-image: linear-gradient(rgba(8, 26, 46, 0.82), rgba(8, 26, 46, 0.82)),
+            url('assets/images/uvodni-obrazek-900.webp');
+    }
+}
+
+.parallax-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--surface);
+    max-width: 820px;
+}
+
+.parallax-content h2 {
+    color: var(--surface);
+    font-size: var(--step-3);
+    line-height: 1.25;
+    margin: 0 0 var(--sp-40);
+}
+
+@media (max-width: 768px) {
+    .parallax-separator {
+        padding: var(--sp-64) var(--sp-24);
+    }
+}
+
+/* --- 9.4 Certifikace --- */
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--sp-24);
+    margin-top: 10px;
+}
+
+.cert-card {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: var(--r-md);
+    overflow: hidden;
+    box-shadow: var(--sh-1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cert-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sh-3);
+}
+
+.cert-card > a.cert-image-link {
+    display: block;
+    background: var(--surface-tint);
+    border-bottom: 1px solid var(--hairline);
+}
+
+.cert-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+.cert-info {
+    padding: 18px var(--sp-20) var(--sp-20);
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    flex: 1;
+}
+
+.cert-info h3 {
+    margin: 0;
+    font-size: 1.02em;
+    color: var(--navy-800);
+    line-height: 1.35;
+}
+
+.cert-info p {
+    margin: 0;
+    font-size: 0.88em;
+    color: var(--ink-body);
+    line-height: 1.55;
+    flex: 1;
+}
+
+.cert-meta {
+    font-size: 0.8em;
+    color: var(--ink-muted);
+}
+
+.cert-verify {
+    font-size: 0.85em;
+    color: var(--bronze-600);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.cert-verify:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+    .cert-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- 9.5 Proces spoluprace --- */
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--sp-32);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.process-step {
+    text-align: center;
+    padding: var(--sp-32) var(--sp-24);
+    background: var(--surface);
+    border-radius: var(--r-sm);
+    box-shadow: var(--sh-1);
+    position: relative;
+}
+
+.process-step .step-number {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 1.1em;
+    font-weight: 700;
+    color: var(--surface);
+    background: linear-gradient(135deg, var(--bronze-500), var(--bronze-600));
+    width: 46px;
+    height: 46px;
+    line-height: 46px;
+    border-radius: 50%;
+    margin: 0 auto var(--sp-16);
+}
+
+.process-step h3 {
+    font-size: var(--step-1);
+    color: var(--navy-800);
+    margin: 0 0 var(--sp-8);
+}
+
+/* Trust bar (sekce 7) i proces: na mobilu do jednoho sloupce */
+
+@media (max-width: 768px) {
+    .trust-bar-inner, .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trust-item .trust-number {
+        font-size: 2em;
+    }
+}
+
+/* --- 9.6 O mne --- */
+
+.about-photo-circle {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto var(--sp-32);
+    display: block;
+    box-shadow: var(--sh-3);
+    border: 4px solid var(--surface);
+}
+
+.about-container {
+    text-align: center;
+}
+
+.about-container p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1em;
+}
+
+/* --- 9.7 Foto pas z akci --- */
+
+.photostrip-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--sp-20);
+}
+
+.photostrip-grid figure {
+    margin: 0;
+}
+
+.photostrip-grid img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: var(--r-sm);
+    display: block;
+    box-shadow: var(--sh-1);
+}
+
+.photostrip-grid figcaption {
+    font-size: 0.82em;
+    color: var(--ink-muted);
+    margin-top: var(--sp-8);
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .photostrip-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+}
+
+/* --- 9.8 Akce a kalendar --- */
+
+#upcoming-events-wrapper,
+#archiv-sekce {
+    margin-bottom: var(--sp-48);
+}
+
+#upcoming-events-list,
+#archive-events-list {
+    margin-top: var(--sp-24);
+}
+
+#archiv-sekce summary {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--navy-800);
+    margin-bottom: var(--sp-24);
+    text-align: center;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#archiv-sekce summary:hover {
+    color: var(--bronze-600);
+}
+
+#archive-events-list {
+    opacity: 0.7;
+}
+
+.events-list {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: var(--sp-40) auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.events-list li {
+    display: flex;
+    align-items: center;
+    padding: var(--sp-24);
+    border: 1px solid var(--hairline);
+    border-left: 2px solid var(--bronze-500);
+    border-radius: var(--r-md);
+    background-color: var(--surface);
+    gap: var(--sp-20);
+    transition: transform var(--dur-2) var(--ease), box-shadow var(--dur-2) var(--ease), border-color var(--dur-2) var(--ease);
+    box-shadow: var(--sh-1);
+}
+
+.events-list li:hover {
+    box-shadow: var(--sh-3);
+    border-left-color: var(--bronze-600);
+    transform: translateY(-2px);
+}
+
+#upcoming-events-list>li:first-child {
+    border-left-width: 3px;
+    border-left-color: var(--bronze-600);
+    background: linear-gradient(135deg, rgba(184, 135, 59, 0.04), rgba(12, 35, 64, 0.02));
+    box-shadow: var(--sh-2);
+}
+
+#upcoming-events-list>li:first-child:hover {
+    box-shadow: var(--sh-3);
+}
+
+.event-date-time {
+    flex: 0 0 120px;
+    border-right: 2px solid var(--hairline);
+    padding-right: var(--sp-20);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.event-date-time .date {
+    font-weight: 700;
+    color: var(--navy-800);
+    font-size: 1.1em;
+    font-family: 'Lora', Georgia, serif;
+    line-height: 1.3;
+}
+
+.event-date-time .time {
+    font-size: 0.85em;
+    color: var(--ink-muted);
+    margin-top: 2px;
+}
+
+.event-details-new {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.event-details-new h3 {
+    margin: 0 0 6px;
+    font-size: 1.15em;
+    letter-spacing: 0;
+    color: var(--navy-800);
+    line-height: 1.4;
+}
+
+.event-details-new p {
+    margin: 0;
+    color: var(--ink-muted);
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Drive emoji "📍" — vykreslovalo se v kazdem systemu jinak (a barevne)
+   a srazelo to dojem. Ted SVG maska, ktera dedi barvu textu. */
+.event-details-new p:not(.event-theme)::before {
+    content: "";
+    width: 13px;
+    height: 13px;
+    flex-shrink: 0;
+    background-color: currentColor;
+    -webkit-mask: var(--icon-pin) center / contain no-repeat;
+    mask: var(--icon-pin) center / contain no-repeat;
+}
+
+.event-details-new p.event-theme {
+    font-size: 0.85em;
+    font-style: italic;
+    color: var(--ink-muted);
+    margin: 0 0 6px;
+}
+
+.event-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.event-button {
+    height: 40px;
+    padding: 0 var(--sp-24);
+    font-size: 0.85em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    min-width: 110px;
+    letter-spacing: 0.5px;
+}
+
+.calendar-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--surface-tint);
+    color: var(--navy-800);
+    border-radius: 50%;
+    transition: background-color var(--dur-2) var(--ease), color var(--dur-2) var(--ease);
+    flex-shrink: 0;
+}
+
+.calendar-button:hover {
+    background-color: var(--navy-800);
+    color: var(--surface);
+}
+
+.calendar-button svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+@media (max-width: 768px) {
+    .events-list li {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 18px 18px 18px var(--sp-20);
+    }
+
+    .event-date-time {
+        border-right: none;
+        border-bottom: 1px solid var(--hairline);
+        padding-bottom: var(--sp-12);
+        padding-right: 0;
+        width: 100%;
+        flex: none;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .event-actions {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .event-actions .event-button {
+        flex: 1;
+        max-width: 200px;
+    }
+}
+
+/* --- 9.9 FAQ --- */
+
+.faq-wrap {
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--surface);
+    border-radius: var(--r-sm);
+    box-shadow: var(--sh-1);
+    margin-bottom: 14px;
+    overflow: hidden;
+}
+
+.faq-item summary {
+    cursor: pointer;
+    padding: var(--sp-20) var(--sp-24);
+    font-weight: 600;
+    color: var(--navy-800);
+    list-style: none;
+    position: relative;
+    padding-right: var(--sp-48);
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: '+';
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+    color: var(--bronze-500);
+    transition: transform 0.3s ease;
+}
+
+.faq-item[open] summary::after {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.faq-item .faq-body {
+    padding: 0 var(--sp-24) var(--sp-20);
+    color: var(--ink-body);
+    line-height: 1.65;
+}
+
+/* --- 9.10 Loga projektu --- */
+
+.projects-grid {
+    display: flex;
+    justify-content: center;
+    gap: var(--sp-40);
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.project-item {
+    flex: 0 1 200px;
+    transition: transform 0.3s ease;
+}
+
+.project-item img {
+    width: auto;
+    max-width: 100%;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: filter var(--dur-3) var(--ease), opacity var(--dur-3) var(--ease);
+}
+
+.project-item:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.project-item.core {
+    flex: 0 0 100%;
+    margin-bottom: var(--sp-32);
+}
+
+.project-item.core img {
+    height: 120px;
+}
+
+.project-item.core p {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.project-item.secondary-core {
+    flex: 0 0 100%;
+    margin-bottom: var(--sp-32);
+}
+
+/* ======================================================================
+   10. BLOG — VYPIS
+   ====================================================================== */
+
+.blog-list {
+    padding: var(--sp-64) var(--sp-20);
+}
+
+.filter-container {
+    text-align: center;
+    margin-bottom: var(--sp-48);
+}
+
+.filter-btn {
+    background-color: var(--surface);
+    border: 1px solid var(--hairline);
+    padding: 10px var(--sp-24);
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: var(--r-pill);
+    font-weight: 600;
+    color: var(--ink-body);
+    font-family: 'Inter', sans-serif;
+    transition: border-color var(--dur-2) var(--ease), color var(--dur-2) var(--ease), background-color var(--dur-2) var(--ease);
+}
+
+.filter-btn:hover {
+    border-color: var(--bronze-500);
+    color: var(--bronze-600);
+}
+
+.filter-btn.active {
+    background-color: var(--navy-800);
+    color: var(--surface);
+    border-color: var(--navy-800);
+}
+
+#articles-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--sp-28);
+    align-items: stretch;
+}
+
+@media (max-width: 1024px) {
+    #articles-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 680px) {
+    #articles-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.article-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--surface);
+    border-radius: var(--r-md);
+    overflow: hidden;
+    box-shadow: var(--sh-2);
+    transition: transform var(--dur-2) var(--ease), box-shadow var(--dur-2) var(--ease);
+    border: 1px solid var(--hairline);
+    height: 100%;
+}
+
+.article-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sh-3);
+}
+
+.article-image {
+    flex: none;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    position: relative;
+    overflow: hidden;
+    background: var(--surface-tint);
+}
+
+.article-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--dur-3) var(--ease);
+}
+
+.article-card:hover .article-image img {
+    transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+    .article-card {
+        flex-direction: column;
+    }
+
+    .article-image {
+        aspect-ratio: 16 / 9;
+    }
+}
+
+.article-card .article-content {
+    padding: var(--sp-20) var(--sp-24) var(--sp-24);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.article-card .article-meta {
+    margin-bottom: 10px;
+    font-size: 0.78em;
+}
+
+.article-card .article-excerpt {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 0 0 var(--sp-12);
+}
+
+.article-card .read-more-btn {
+    margin-top: auto;
+}
+
+.article-card .article-content h2 {
+    font-size: 1.15em;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.read-more-btn {
+    display: inline-block;
+    color: var(--bronze-600);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.read-more-btn::after {
+    content: '→';
+    margin-left: 5px;
+    transition: margin-left 0.3s ease;
+}
+
+.read-more-btn:hover::after {
+    margin-left: 10px;
+}
+
+.pagination-container {
+    text-align: center;
+    margin-top: var(--sp-64);
+    border-top: 1px solid var(--hairline);
+    padding-top: var(--sp-32);
+}
+
+.pagination-container a {
+    display: inline-block;
+    padding: 10px 18px;
+    margin: 0 5px;
+    border-radius: var(--r-sm);
+    font-weight: 600;
+    color: var(--ink-body);
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+}
+
+.pagination-container a.active,
+.pagination-container a:hover:not(.disabled) {
+    background-color: var(--navy-800);
+    color: var(--surface);
+    border-color: var(--navy-800);
+}
+
+.pagination-container a.disabled {
+    color: var(--ink-muted);
+    cursor: default;
+}
+
+/* ======================================================================
+   11. BLOG — DETAIL CLANKU
+   ====================================================================== */
+
+.article-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--sp-20);
+    background-color: var(--surface);
+}
+
+.article-header {
+    padding: var(--sp-40) var(--sp-20);
+    text-align: center;
+    border-bottom: 1px solid var(--hairline);
+    margin-bottom: var(--sp-40);
+}
+
+.article-header h1 {
+    font-family: 'Lora', Georgia, serif;
+    font-size: var(--step-4);
+    color: var(--navy-800);
+    margin: 0 0 var(--sp-8) 0;
+    line-height: 1.2;
+}
+
+.article-meta {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9em;
+    color: var(--ink-muted);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.article-content {
+    padding: var(--sp-20) 0;
+    font-family: 'Inter', sans-serif;
+    color: var(--ink-body);
+}
+
+.article-content p,
+.article-content li {
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin-bottom: 1.5em;
+}
+
+.article-content h2 {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 1.8em;
+    line-height: 1.3;
+    color: var(--navy-800);
+    margin-top: var(--sp-40);
+    margin-bottom: var(--sp-20);
+    border-bottom: 2px solid var(--bronze-500);
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.article-content h2 a {
+    color: var(--navy-800);
+}
+
+.article-content h2 a:hover {
+    color: var(--bronze-600);
+}
+
+.article-content h3 {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 1.4em;
+    color: var(--navy-800);
+    margin-top: var(--sp-32);
+    margin-bottom: 15px;
+}
+
+.article-content .perex {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: var(--navy-800);
+    line-height: 1.6;
+    margin-bottom: var(--sp-32);
+}
+
+/* Hlavni obrazek + pojistka pro ostatni obrazky v obsahu */
+
+.article-image-main,
+.article-content img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--r-sm);
+    margin: var(--sp-20) 0 var(--sp-32) 0;
+    box-shadow: var(--sh-2);
+    object-fit: cover;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* Poměr stran 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    border-radius: var(--r-sm);
+    margin: var(--sp-20) 0 var(--sp-32) 0;
+    box-shadow: var(--sh-2);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Citat — editorialni, ne "sedy box s kurzivou".
+   Kurziva v Inter se na delsim citatu cte spatne; Lora bez kurzivy drzi
+   vaznost a odlisi citat od bezneho textu sama. */
+.article-content blockquote {
+    margin: var(--sp-40) 0;
+    padding: 0 0 0 var(--sp-24);
+    border-left: 2px solid var(--bronze-500);
+    border-radius: 0;
+    background: none;
+    font-family: 'Lora', Georgia, serif;
+    font-size: var(--step-1);
+    font-style: normal;
+    line-height: 1.55;
+    color: var(--navy-800);
+}
+
+/* Tabulka v odbornem clanku.
+   Obal .article-table resi scroll na uzkych displejich — tabulku nelamat
+   do bloku, u srovnavacich tabulek se tim ztraci vztah radek/sloupec.
+   Zebrikove pozadi zamerne neni: hairline linky staci a drzi klid stranky. */
+.article-content .article-table {
+    overflow-x: auto;
+    margin: var(--sp-32) 0 var(--sp-40);
+    border-top: 2px solid var(--bronze-500);
+    border-bottom: 1px solid var(--hairline);
+}
+
+.article-content .article-table table {
+    width: 100%;
+    min-width: 560px;
+    border-collapse: collapse;
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+.article-content .article-table th {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 0.82em;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-align: left;
+    color: var(--ink-muted);
+    padding: var(--sp-16) var(--sp-16) var(--sp-12) 0;
+    border-bottom: 1px solid var(--hairline);
+    vertical-align: bottom;
+}
+
+.article-content .article-table td {
+    padding: var(--sp-16) var(--sp-16) var(--sp-16) 0;
+    border-bottom: 1px solid var(--hairline);
+    vertical-align: top;
+    font-size: 1em;
+    margin: 0;
+}
+
+.article-content .article-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.article-content .article-table td:first-child {
+    font-weight: 600;
+    color: var(--navy-800);
+    padding-right: var(--sp-24);
+}
+
+/* Stavovy stitek v tabulce (vhodne / nevhodne). Barva jde pres currentColor,
+   aby ramecek vzdy sedel k textu a nemusel se definovat dvakrat. */
+.article-content .table-flag {
+    display: inline-block;
+    font-size: 0.78em;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding: 2px var(--sp-8);
+    border: 1px solid currentColor;
+    border-radius: var(--r-sm);
+}
+
+.article-content .table-flag--no {
+    color: #9a3412;
+}
+
+.article-content .table-flag--yes {
+    color: var(--bronze-600);
+}
+
+/* Zacerneny udaj — ukazka anonymizace primo v textu. */
+.article-content .redacted {
+    background: var(--navy-800);
+    color: transparent;
+    border-radius: 2px;
+    padding: 0 var(--sp-4);
+    user-select: none;
+}
+
+@media (max-width: 680px) {
+    .article-content .article-table {
+        margin-left: calc(-1 * var(--sp-16));
+        margin-right: calc(-1 * var(--sp-16));
+        padding-left: var(--sp-16);
+        padding-right: var(--sp-16);
+    }
+}
+
+/* Zdroje, odkaz zpet */
+
+.sources-section {
+    margin-top: var(--sp-64);
+    padding-top: var(--sp-24);
+    border-top: 1px solid var(--hairline);
+    font-size: 0.9em;
+    color: var(--ink-muted);
+}
+
+.sources-section ol {
+    padding-left: var(--sp-20);
+}
+
+.sources-section li {
+    margin-bottom: 10px;
+}
+
+.sources-section a {
+    color: var(--bronze-600);
+    word-break: break-all;
+}
+
+.sources-section sup {
+    font-size: 0.75em;
+    vertical-align: super;
+    margin-left: 2px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: var(--sp-40);
+    color: var(--bronze-600);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Socialni ikony v clanku: obecne pravidlo .article-content img (width: 100%)
+   uz je neovlivnuje, protoze jsou to SVG. Zustava jen odsazeni kontejneru. */
+
+.article-content .social-icons-container {
+    margin: var(--sp-24) 0 10px;
+}
+
+/* --- Sdileci tlacitka --- */
+
+.share-bar {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-12);
+    margin: var(--sp-36) 0 var(--sp-32);
+    padding-top: var(--sp-24);
+    border-top: 1px solid var(--hairline);
+}
+
+.share-label {
+    font-size: 0.88em;
+    color: var(--ink-muted);
+    font-weight: 600;
+    margin-right: var(--sp-4);
+}
+
+.share-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--surface-tint);
+    color: var(--ink-muted);
+    transition: background var(--dur-2) var(--ease), color var(--dur-2) var(--ease), transform var(--dur-2) var(--ease);
+}
+
+/* Sdileci ikony jsou inline SVG (viz share-buttons.js) a dedi barvu */
+.share-btn svg {
+    width: 17px;
+    height: 17px;
+    fill: currentColor;
+    display: block;
+}
+
+.share-btn:hover {
+    background: var(--bronze-50);
+    color: var(--bronze-600);
+    transform: translateY(-2px);
+}
+
+/* ======================================================================
+   12. GALERIE A LIGHTBOX
+   ====================================================================== */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    /* Responsivní sloupce */
+    gap: 15px;
+    margin: var(--sp-32) 0;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 220px;
+    /* Fixní výška pro sjednocení mřížky */
+    object-fit: cover;
+    /* Ořízne fotku, aby se nedeformovala */
+    border-radius: var(--r-sm);
+    cursor: pointer;
+    transition: box-shadow var(--dur-2) var(--ease);
+    box-shadow: var(--sh-1);
+}
+
+.gallery-grid img:hover {
+    box-shadow: var(--sh-3);
+    z-index: 1;
+}
+
+.modal {
+    display: none;
+    /* Ve výchozím stavu skryté */
+    position: fixed;
+    z-index: 9999;
+    padding-top: var(--sp-48);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.92);
+    /* Tmavé pozadí */
+    backdrop-filter: blur(5px);
+    /* Moderní efekt rozostření pozadí */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: auto;
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: var(--r-sm);
+    box-shadow: var(--sh-4);
+    animation-name: zoom;
+    animation-duration: 0.3s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0.8);
+        opacity: 0
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1
+    }
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--bronze-500);
+    text-decoration: none;
+}
+
+/* Sipky: .prev a .next se lisi jen zaoblenim — driv to bylo
+   resene prepisem v poradi, ted explicitne. */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: var(--sp-16);
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.3s ease;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.prev {
+    border-radius: 0 3px 3px 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Breakpoint sjednocen ze 700 px na 768 px (viz poznamka v reportu) */
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 100%;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px;
+    }
+
+    .gallery-grid img {
+        height: 150px;
+        /* Menší náhledy na mobilu */
+    }
+}
+
+/* ======================================================================
+   13. FOOTER
+   ====================================================================== */
+
+footer {
+    background-color: var(--surface-deep);
+    color: var(--surface);
+    padding: var(--sp-80) var(--sp-20) var(--sp-40);
+    margin-top: var(--sp-96);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--sp-48);
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Nadpisy sloupcu v paticce nejsou nadpisy obsahu (h4 preskakoval uroven
+   v osnove stranky), proto <p class="footer-heading"> se vzhledem puvodniho h4. */
+.footer-grid .footer-heading {
+    font-family: 'Lora', Georgia, serif;
+    font-weight: 700;
+    letter-spacing: 0;
+    color: var(--surface);
+    margin-top: 1.33em;
+    margin-bottom: var(--sp-20);
+    font-size: 1.2em;
+    border-bottom: 2px solid var(--bronze-500);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer-grid p,
+.footer-grid a {
+    color: var(--on-deep-muted);
+    font-size: 0.95em;
+    margin-bottom: 10px;
+}
+
+.footer-grid a:hover {
+    color: var(--bronze-500);
+}
+
+.social-icons-container {
+    margin-top: var(--sp-20);
+    display: flex;
+    align-items: center;
+    gap: var(--sp-16);
+}
+
+/* Ikony jsou inline SVG a dedi barvu z .social-icon pres currentColor.
+   Drive to byla plnobarevna PNG (Instagram 48 kB) a pokus je zmonochromatizovat
+   filtrem selhal — nejsou to siluety glyfu, ale plne dlazdice s vyseknutym
+   glyfem, takze brightness(0) invert(1) z nich udelal bily ctverec. */
+.social-icon {
+    display: inline-flex;
+    color: var(--ink-muted);
+    transition: color var(--dur-2) var(--ease);
+}
+
+.social-icon svg {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+    display: block;
+}
+
+.social-icon:hover {
+    color: var(--bronze-600);
+}
+
+/* V paticce jsou na navy, tam plati svetla dvojice */
+footer .social-icon {
+    color: var(--on-deep-muted);
+}
+
+footer .social-icon:hover {
+    color: var(--bronze-200);
+}
+
+.copyright {
+    text-align: center;
+    margin-top: var(--sp-64);
+    padding-top: var(--sp-20);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--on-deep-muted);
+    font-size: 0.85em;
+}
+
+.copyright a {
+    color: var(--on-deep-muted);
+    text-decoration: underline;
+}
+
+.copyright a:hover {
+    color: var(--bronze-200);
+}
+
+@media (max-width: 768px) {
+    .footer-grid {
+        text-align: center;
+    }
+
+    .social-icons-container {
+        justify-content: center;
+    }
+}
+
+/* ======================================================================
+   14. PREMIUM DEKORATIVNI VRSTVA
+   Jemny pomaly gradient na pozadi vybranych sekci.
+   ====================================================================== */
+
+@keyframes premiumDrift {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(-4%, 3%) scale(1.06);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+@keyframes premiumDriftReverse {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(4%, -3%) scale(1.08);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+.premium-decor {
+    position: relative;
+    overflow: hidden;
+}
+
+.premium-decor::before,
+.premium-decor::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(70px);
+    pointer-events: none;
+    z-index: 0;
+    will-change: transform;
+}
+
+.premium-decor::before {
+    width: 440px;
+    height: 440px;
+    top: -160px;
+    right: -120px;
+    background: radial-gradient(circle, rgba(184, 135, 59, 0.11), transparent 70%);
+    animation: premiumDrift 24s ease-in-out infinite;
+}
+
+.premium-decor::after {
+    width: 400px;
+    height: 400px;
+    bottom: -170px;
+    left: -120px;
+    background: radial-gradient(circle, rgba(12, 35, 64, 0.07), transparent 70%);
+    animation: premiumDriftReverse 28s ease-in-out infinite;
+}
+
+.premium-decor > .container {
+    position: relative;
+    z-index: 1;
+}
+
+.premium-decor--law::before {
+    content: "§";
+    font-family: 'Lora', Georgia, serif;
+    font-weight: 700;
+    font-size: 22em;
+    line-height: 1;
+    color: rgba(12, 35, 64, 0.035);
+    background: none;
+    filter: none;
+    top: -0.15em;
+    right: -0.08em;
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    animation: none;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@media (max-width: 768px) {
+    .premium-decor::before, .premium-decor::after {
+        display: none;
+    }
+
+    .premium-decor--law::before {
+        display: block;
+        font-size: 12em;
+        opacity: 1;
+    }
+}
+
+/* ======================================================================
+   15. UTILITY
+   ====================================================================== */
+
+/* Aktivni odkaz v navigaci (driv resene !important) */
+.nav-links a.active-link {
+    color: var(--bronze-600);
+}
+
+/* ======================================================================
+   16. PREFERS-REDUCED-MOTION
+   Jedno misto pro cely soubor.
+   ====================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .premium-decor::before,
+    .premium-decor::after {
+        animation: none;
+    }
+}

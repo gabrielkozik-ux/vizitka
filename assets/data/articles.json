@@ -1,0 +1,722 @@
+[
+    {
+        "id": "maiday-2026-ajtak-a-soudce",
+        "date": "2026-11-06",
+        "category": "expert",
+        "image": "blog/2026/maiday-2026-ajtak-a-soudce/header.jpg",
+        "cs": {
+            "title": "Ajťák a soudce na jednom pódiu: co jsem si odnesl z Maiday 2026",
+            "excerpt": "Firma, kde Honza dostal licenci bez školení, a soudci, kteří převzali rozsudek od AI. Dvě přednášky z Maiday 2026 a jedna společná lekce o lidském dohledu.",
+            "link": "blog/2026/maiday-2026-ajtak-a-soudce/maiday-2026-ajtak-a-soudce"
+        },
+        "en": {
+            "title": "An AI Engineer and a Judge on One Stage: What I Took Away from Maiday 2026",
+            "excerpt": "A company where Honza got an AI licence without training, and judges who adopted an AI-drafted judgment. Two talks from Maiday 2026 and one shared lesson about human oversight.",
+            "link": "blog/2026/maiday-2026-ajtak-a-soudce/maiday-2026-ajtak-a-soudce-en"
+        }
+    },
+    {
+        "id": "tlacitko-chatbot-dve-eura",
+        "date": "2026-11-03",
+        "category": "expert",
+        "image": "blog/2026/tlacitko-chatbot-dve-eura/header.jpg",
+        "cs": {
+            "title": "Tlačítko, chatbot a dvě eura za položku: co se mění pro podnikatele do roku 2028",
+            "excerpt": "Tlačítko pro odstoupení od 1. 1. 2027, poplatek 2 € za položku a ochrana OSVČ u úvěrů. A pravidlo, podle kterého má spotřebitel právo na vysvětlení člověkem, když mu finanční službu vysvětlil jen chatbot.",
+            "link": "blog/2026/tlacitko-chatbot-dve-eura/tlacitko-chatbot-dve-eura"
+        },
+        "en": {
+            "title": "Button, Chatbot and Two Euros per Item: What Changes for Czech Businesses by 2028",
+            "excerpt": "A withdrawal button from 1 January 2027, a €2 fee per item and loan protection for sole traders. Plus a rule giving consumers the right to a human explanation when only a chatbot explained a financial service.",
+            "link": "blog/2026/tlacitko-chatbot-dve-eura/tlacitko-chatbot-dve-eura-en"
+        }
+    },
+    {
+        "id": "claude-gemini-chatgpt-srovnani",
+        "date": "2026-07-30",
+        "category": "expert",
+        "image": "blog/2026/claude-gemini-chatgpt-srovnani/header.jpg",
+        "cs": {
+            "title": "Claude vs. Gemini vs. ChatGPT: který AI nástroj zvolit jako freelancer nebo malá firma?",
+            "excerpt": "Srovnání tří AI asistentů pro podnikatele a malé týmy — ceny, silné a slabé stránky, a hlavně: kam smíte nahrát firemní a klientská data.",
+            "link": "blog/2026/claude-gemini-chatgpt-srovnani/claude-gemini-chatgpt-srovnani"
+        },
+        "en": {
+            "title": "Claude vs. Gemini vs. ChatGPT: Which AI Tool Should a Freelancer or Small Business Choose?",
+            "excerpt": "A comparison of three AI assistants for entrepreneurs and small teams — pricing, strengths and weaknesses, and above all: where you are actually allowed to upload company and client data.",
+            "link": "blog/2026/claude-gemini-chatgpt-srovnani/claude-gemini-chatgpt-srovnani-en"
+        }
+    },
+    {
+        "id": "ponozky-v-sandalech-legislativni-proces",
+        "date": "2026-07-23",
+        "category": "expert",
+        "image": "https://img.youtube.com/vi/9k4F2jDKEXs/maxresdefault.jpg",
+        "cs": {
+            "title": "Ponožky v sandálech ze zákona? Co vás naučí český legislativní proces",
+            "excerpt": "Na absurdním příkladu z pořadu What the Fact? (ČT) rozebírám, jak v Česku vznikají zákony – a proč by to měl sledovat každý podnikatel, ne až když zaklepe kontrola.",
+            "link": "blog/2026/ponozky-v-sandalech-legislativni-proces/ponozky-v-sandalech-legislativni-proces"
+        },
+        "en": {
+            "title": "A Legal Sock Mandate? What Czech Lawmaking Can Teach Your Business",
+            "excerpt": "Using an absurd example from Czech TV's What the Fact?, I break down how laws actually get made in Czechia – and why every business owner should be watching, not just reacting once inspectors show up.",
+            "link": "blog/2026/ponozky-v-sandalech-legislativni-proces/ponozky-v-sandalech-legislativni-proces-en"
+        }
+    },
+    {
+        "id": "ai-model-napadl-hugging-face",
+        "date": "2026-07-22",
+        "category": "expert",
+        "image": "blog/2026/ai-model-napadl-hugging-face/header.jpg",
+        "cs": {
+            "title": "AI model, který se sám naboural do cizí infrastruktury, aby vyhrál test",
+            "excerpt": "OpenAI přiznala bezprecedentní kybernetický incident: jejich model sám napadl infrastrukturu Hugging Face, aby si opatřil odpovědi k testu. Co si z toho má odnést firma, která nasazuje AI.",
+            "link": "blog/2026/ai-model-napadl-hugging-face/ai-model-napadl-hugging-face"
+        },
+        "en": {
+            "title": "An AI Model That Hacked Someone Else's Infrastructure to Win a Test",
+            "excerpt": "OpenAI disclosed an unprecedented cyber incident: its model breached Hugging Face's infrastructure on its own to steal the answers to a test. What companies deploying AI should take away from it.",
+            "link": "blog/2026/ai-model-napadl-hugging-face/ai-model-napadl-hugging-face-en"
+        }
+    },
+    {
+        "id": "networking-pod-palavou-15",
+        "date": "2026-07-22",
+        "category": "report",
+        "image": "assets/images/blog/2026/networking-pod-palavou-15/1.jpg",
+        "cs": {
+            "title": "Networking Pod Pálavou #15: Když ESG potkává empatii",
+            "excerpt": "Reportáž z 15. byznys setkání Pod Pálavou o zaměstnávání OZP, ESG odpovědnosti a práci s vysoce citlivými lidmi (HSP) v týmu. S fotografiemi od Jiřího Urbana.",
+            "link": "blog/2026/networking-pod-palavou-15/networking-pod-palavou-15"
+        },
+        "en": {
+            "title": "Networking Pod Pálavou #15: When ESG Meets Empathy",
+            "excerpt": "Report from the 15th Pod Pálavou business meeting on employing people with disabilities, ESG responsibility, and working with highly sensitive people (HSP) in teams. With photos by Jiří Urban.",
+            "link": "blog/2026/networking-pod-palavou-15/networking-pod-palavou-15-en"
+        }
+    },
+    {
+        "id": "ai-slop-pred-nss",
+        "date": "2026-07-17",
+        "category": "expert",
+        "image": "blog/2026/ai-slop-pred-nss/header.jpg",
+        "cs": {
+            "title": "„AI slop\" před Nejvyšším správním soudem: dvě lekce z jednoho rozsudku",
+            "excerpt": "NSS poprvé v odůvodnění použil výraz „AI slop\". Rozsudek 10 As 81/2026 dává dvě lekce: proč platí i rozhodnutí, které vám nikdo neposlal, a co hrozí za vymyšlenou judikaturu z AI.",
+            "link": "blog/2026/ai-slop-pred-nss/ai-slop-pred-nss"
+        },
+        "en": {
+            "title": "\"AI Slop\" Before the Czech Supreme Administrative Court: Two Lessons from One Judgment",
+            "excerpt": "The Czech Supreme Administrative Court used the term 'AI slop' in a judgment for the first time. Why a decision nobody mailed you still binds you — and what fabricated AI case law costs.",
+            "link": "blog/2026/ai-slop-pred-nss/ai-slop-pred-nss-en"
+        }
+    },
+    {
+        "id": "ai-pred-soudem",
+        "date": "2026-07-15",
+        "category": "expert",
+        "image": "blog/2026/ai-pred-soudem/header.jpg",
+        "cs": {
+            "title": "AI před soudem: Pět rozhodnutí, která by měl znát každý majitel firmy",
+            "excerpt": "Chatbot slíbil zákazníkovi slevu, AI vymyslela judikaturu, firma přišla o ochranu svých vizuálů. Přehled skutečné rozhodovací praxe v oblasti AI a poučení pro české firmy.",
+            "link": "blog/2026/ai-pred-soudem/ai-pred-soudem"
+        },
+        "en": {
+            "title": "AI in Court: Five Rulings Every Business Owner Should Know",
+            "excerpt": "A chatbot promised a discount, AI invented case law, a company lost protection of its visuals. A review of real AI rulings and the lessons for businesses.",
+            "link": "blog/2026/ai-pred-soudem/ai-pred-soudem-en"
+        }
+    },
+    {
+        "id": "podcast-pravni-rizika-poradci-remeslnici-eshopy",
+        "date": "2026-07-07",
+        "category": "podcast",
+        "image": "https://img.youtube.com/vi/SgfZSYZlxUk/maxresdefault.jpg",
+        "cs": {
+            "title": "Právní rizika pro poradce, řemeslníky a e-shopy: Jak nastavit smlouvy a reklamace (Podcast)",
+            "excerpt": "Tři typické profese, tři sady právních rizik. Jak si poradce, řemeslník a e-shop správně nastaví smlouvy, obchodní podmínky a reklamace. Podcast IUSTORIA.",
+            "link": "blog/2026/podcast-pravni-rizika-poradci-remeslnici-eshopy/podcast-pravni-rizika-poradci-remeslnici-eshopy"
+        },
+        "en": {
+            "title": "Legal Risks for Consultants, Tradesmen and E-shops: Contracts and Complaints Done Right (Podcast)",
+            "excerpt": "Three typical professions, three sets of legal risks. How consultants, tradesmen and e-shops should set up contracts, terms and complaints. IUSTORIA podcast (in Czech).",
+            "link": "blog/2026/podcast-pravni-rizika-poradci-remeslnici-eshopy/podcast-pravni-rizika-poradci-remeslnici-eshopy-en"
+        }
+    },
+    {
+        "id": "jak-spravne-oznacovat-ai-obsah",
+        "date": "2026-06-17",
+        "category": "expert",
+        "image": "blog/2026/jak-spravne-oznacovat-ai-obsah/header.jpg",
+        "cs": {
+            "title": "Jak správně označovat AI generovaný obsah? Nový kodex Evropské komise",
+            "excerpt": "Evropská komise zveřejnila kodex správné praxe pro označování AI generovaného obsahu. Zjistěte, jak se mění pravidla a co hrozí za jejich nedodržení.",
+            "link": "blog/2026/jak-spravne-oznacovat-ai-obsah/jak-spravne-oznacovat-ai-obsah"
+        },
+        "en": {
+            "title": "How to Properly Label AI-Generated Content? The New EU Code of Practice",
+            "excerpt": "The European Commission published the final Code of Practice on labeling AI-generated content. Learn about the new recommendations and reputational risks.",
+            "link": "blog/2026/jak-spravne-oznacovat-ai-obsah/jak-spravne-oznacovat-ai-obsah-en"
+        }
+    },
+    {
+        "id": "odpovednost-za-chyby-ai",
+        "date": "2026-06-10",
+        "category": "expert",
+        "image": "blog/2026/odpovednost-za-chyby-ai/header.jpg",
+        "cs": {
+            "title": "Když AI udělá chybu, účet jde za vámi",
+            "excerpt": "Kdo nese právní odpovědnost za chyby, nefunkční kód nebo chybné kalkulace vytvořené umělou inteligencí? Analýza podle českého práva.",
+            "link": "blog/2026/odpovednost-za-chyby-ai/odpovednost-za-chyby-ai"
+        },
+        "en": {
+            "title": "When AI Makes a Mistake, the Bill Goes to You",
+            "excerpt": "Who bears legal liability for errors, broken code, or faulty calculations created by artificial intelligence? Analysis under Czech law.",
+            "link": "blog/2026/odpovednost-za-chyby-ai/odpovednost-za-chyby-ai-en"
+        }
+    },
+    {
+        "id": "zakon-o-platformove-praci",
+        "date": "2026-06-08",
+        "category": "expert",
+        "image": "blog/2026/zakon-o-platformove-praci/header.jpg",
+        "cs": {
+            "title": "Konec pokut pro lidi a nástup algoritmů: Jak nová legislativa změní platformovou práci a švarcsystém",
+            "excerpt": "Česká republika bude od ledna 2027 regulovat využití algoritmického řízení a švarcsystém. Zjistěte, jaké nové povinnosti a rizika to přináší zaměstnavatelům.",
+            "link": "blog/2026/zakon-o-platformove-praci/zakon-o-platformove-praci"
+        },
+        "en": {
+            "title": "The End of Fines for People and the Rise of Algorithms: How the New Law Will Change Platform Work and the Schwarz-system",
+            "excerpt": "From January 2027, the Czech Republic will regulate the use of algorithmic management and disguised employment. Find out what new obligations and risks this brings to employers.",
+            "link": "blog/2026/zakon-o-platformove-praci/zakon-o-platformove-praci-en"
+        }
+    },
+    {
+        "id": "podcast-lzete-svemu-advokatovi",
+        "date": "2026-06-04",
+        "category": "podcast",
+        "image": "https://img.youtube.com/vi/E_Qko2kVfa8/maxresdefault.jpg",
+        "cs": {
+            "title": "Lžete svému advokátovi? Proč vás u soudu nezachrání ani ten nejlepší právník (Podcast)",
+            "excerpt": "Advokát je vázán mlčenlivostí — přesto mu klienti zamlčují klíčová fakta. Proč to u soudu vždy vyplave a jak to ničí procesní strategii. Podcast IUSTORIA.",
+            "link": "blog/2026/podcast-lzete-svemu-advokatovi/podcast-lzete-svemu-advokatovi"
+        },
+        "en": {
+            "title": "Lying to Your Lawyer? Why Even the Best Attorney Can't Save You in Court (Podcast)",
+            "excerpt": "Attorneys are bound by confidentiality — yet clients still withhold key facts. Why it always surfaces in court and how it destroys your strategy. IUSTORIA podcast (in Czech).",
+            "link": "blog/2026/podcast-lzete-svemu-advokatovi/podcast-lzete-svemu-advokatovi-en"
+        }
+    },
+    {
+        "id": "jak-bezpecne-ovladnout-ai-v-podnikani",
+        "date": "2026-06-03",
+        "category": "podcast",
+        "image": "https://img.youtube.com/vi/8eWPsQ4rbao/maxresdefault.jpg",
+        "cs": {
+            "title": "Jak bezpečně ovládnout AI v podnikání (Podcast)",
+            "excerpt": "Jak integrovat umělou inteligenci do firmy bezpečně, legálně a bez rizika úniku dat? Sledujte novou epizodu podcastu advokátní kanceláře IUSTORIA.",
+            "link": "blog/2026/jak-bezpecne-ovladnout-ai-v-podnikani/jak-bezpecne-ovladnout-ai-v-podnikani"
+        },
+        "en": {
+            "title": "How to Safely Master AI in Business (Podcast)",
+            "excerpt": "How to integrate AI into your business safely, legally, and without data leaks? Watch the new podcast episode from law firm IUSTORIA (with English summary).",
+            "link": "blog/2026/jak-bezpecne-ovladnout-ai-v-podnikani/jak-bezpecne-ovladnout-ai-v-podnikani-en"
+        }
+    },
+    {
+        "id": "jak-si-jednoduse-personifikovat-gemini",
+        "date": "2026-05-22",
+        "category": "expert",
+        "image": "blog/2026/jak-si-jednoduse-personifikovat-gemini/header.jpg",
+        "cs": {
+            "title": "Jak si jednoduše personifikovat Gemini?",
+            "excerpt": "Velký průvodce možnostmi přizpůsobení a personifikace Google Gemini. Jak nastavit paměť, propojit aplikace přes rozšíření a importovat data z ChatGPT či Claude.",
+            "link": "blog/2026/jak-si-jednoduse-personifikovat-gemini/jak-si-jednoduse-personifikovat-gemini"
+        },
+        "en": {
+            "title": "How to Easily Personalize Gemini?",
+            "excerpt": "A comprehensive guide on customizing Google Gemini. Learn how to manage memory, connect Google extensions, and import your context from ChatGPT or Claude.",
+            "link": "blog/2026/jak-si-jednoduse-personifikovat-gemini/jak-si-jednoduse-personifikovat-gemini-en"
+        }
+    },
+    {
+        "id": "filosofie-ai-v-advokacii",
+        "date": "2026-03-12",
+        "category": "expert",
+        "image": "blog/2026/filosofie-ai-v-advokacii/header.jpg",
+        "cs": {
+            "title": "Filosofie AI v advokacii: Proč se nebát synergie",
+            "excerpt": "Proč by advokacie a AI měly fungovat v synergii? Moje vize spojení lidské expertízy a technologické preciznosti pro lepší výsledky klientů.",
+            "link": "blog/2026/filosofie-ai-v-advokacii/filosofie-ai-v-advokacii"
+        },
+        "en": {
+            "title": "AI Philosophy in Law: Why Not to Fear Synergy",
+            "excerpt": "Why should the legal profession and AI work in synergy? My vision of combining human expertise and technological precision for better client outcomes.",
+            "link": "blog/2026/filosofie-ai-v-advokacii/filosofie-ai-v-advokacii-en"
+        }
+    },
+    {
+        "id": "podcast-dohody-pres-whatsapp",
+        "date": "2026-03-02",
+        "category": "podcast",
+        "image": "https://img.youtube.com/vi/wGoZnCDUu8Q/maxresdefault.jpg",
+        "cs": {
+            "title": "Podání ruky a dohody přes WhatsApp vás mohou stát statisíce (Podcast)",
+            "excerpt": "Ústní dohoda nebo pár zpráv na WhatsAppu může být právně závazná smlouva — a taky důkazní noční můra. Nová epizoda podcastu advokátní kanceláře IUSTORIA.",
+            "link": "blog/2026/podcast-dohody-pres-whatsapp/podcast-dohody-pres-whatsapp"
+        },
+        "en": {
+            "title": "A Handshake or a WhatsApp Deal Can Cost You Hundreds of Thousands (Podcast)",
+            "excerpt": "A verbal agreement or a few WhatsApp messages can be a legally binding contract — and an evidentiary nightmare. A new IUSTORIA podcast episode (in Czech).",
+            "link": "blog/2026/podcast-dohody-pres-whatsapp/podcast-dohody-pres-whatsapp-en"
+        }
+    },
+    {
+        "id": "networking-pod-palavou-4-rustove-mysleni",
+        "date": "2026-02-17",
+        "category": "report",
+        "image": "assets/images/blog/2026/networking-pod-palavou-4-rustove-mysleni/1.jpg",
+        "cs": {
+            "title": "Reportáž: Networking Pod Pálavou #4: Růstové myšlení",
+            "excerpt": "Reportáž ze 4. networkingu Pod Pálavou o růstovém myšlení, o tom, proč je důvěra nejtvrdší měna v byznysu a proč se nebát transformace po vzoru Estonska. S fotografiemi od Jiřího Urbana.",
+            "link": "blog/2026/networking-pod-palavou-4-rustove-mysleni/networking-pod-palavou-4-rustove-mysleni"
+        },
+        "en": {
+            "title": "Report: Networking Pod Pálavou #4: Growth Mindset",
+            "excerpt": "Report from the 4th Networking Pod Pálavou meeting about growth mindset, why trust is the hardest currency in business, and why we shouldn't fear transformation, following Estonia's example. With photos by Jiří Urban.",
+            "link": "blog/2026/networking-pod-palavou-4-rustove-mysleni/networking-pod-palavou-4-rustove-mysleni-en"
+        }
+    },
+    {
+        "id": "bforb-setkani-v-tisnove",
+        "date": "2026-02-05",
+        "category": "report",
+        "image": "assets/images/blog/2026/bforb-setkani-v-tisnove/1.jpg",
+        "cs": {
+            "title": "Reportáž: BforB setkání v Tišnově",
+            "excerpt": "Tvá nejdražší investice v podnikání nejsou programy ani marketing. Jsou to chyby, které jsi nemusel udělat. Reportáž a podnikatelské příběhy Petra Grünwalda a Stanislava Dejla.",
+            "link": "blog/2026/bforb-setkani-v-tisnove/bforb-setkani-v-tisnove"
+        },
+        "en": {
+            "title": "Report: BforB Meeting Tišnov",
+            "excerpt": "Your most expensive business investment is not software or marketing. It's the mistakes you didn't have to make. Report and stories from Petr Grünwald and Stanislav Dejl.",
+            "link": "blog/2026/bforb-setkani-v-tisnove/bforb-setkani-v-tisnove-en"
+        }
+    },
+    {
+        "id": "networking-pod-palavou-3-podnikani-napric-generacemi",
+        "date": "2026-02-03",
+        "category": "report",
+        "image": "assets/images/blog/2026/networking-pod-palavou-3-podnikani-napric-generacemi/1.jpg",
+        "cs": {
+            "title": "Reportáž: Networking Pod Pálavou #3: Podnikání napříč generacemi",
+            "excerpt": "Reportáž ze 3. networkingu Pod Pálavou o propojování světů Generace X a Z, islandském mindsetu „Þetta reddast“ a o tom, že networking je i pro poctivé řemeslo. S fotografiemi od Jiřího Urbana.",
+            "link": "blog/2026/networking-pod-palavou-3-podnikani-napric-generacemi/networking-pod-palavou-3-podnikani-napric-generacemi"
+        },
+        "en": {
+            "title": "Report: Networking Pod Pálavou #3: Business Across Generations",
+            "excerpt": "Report from the 3rd Networking Pod Pálavou meeting on connecting the worlds of Gen X and Z, the Icelandic mindset 'Þetta reddast', and how networking is for honest craftsmanship too. With photos by Jiří Urban.",
+            "link": "blog/2026/networking-pod-palavou-3-podnikani-napric-generacemi/networking-pod-palavou-3-podnikani-napric-generacemi-en"
+        }
+    },
+    {
+        "id": "reportaz-workshop-leden-2026",
+        "date": "2026-01-16",
+        "category": "report",
+        "image": "assets/images/blog/2026/reportaz-workshop-leden-2026/workshop-leden.jpg",
+        "cs": {
+            "title": "Marketing, weby a ďáblův advokát: Reportáž z lednového AI workshopu",
+            "excerpt": "Ohlédnutí za lednovým workshopem zaměřeným na AI marketing, tvorbu webových vizitek přes GitHub a Vercel, generování hudby v Suno a techniku ďáblova advokáta pro objektivní hodnocení podnikatelských nápadů.",
+            "link": "blog/2026/reportaz-workshop-leden-2026/reportaz-workshop-leden-2026"
+        },
+        "en": {
+            "title": "Marketing, Websites & Devil's Advocate: Report from the January AI Workshop",
+            "excerpt": "A look back at the January workshop focused on AI marketing, creating free web pages via GitHub and Vercel, generating music with Suno, and the devil's advocate technique for objective business idea evaluation.",
+            "link": "blog/2026/reportaz-workshop-leden-2026/reportaz-workshop-leden-2026"
+        }
+    },
+    {
+        "id": "ai-act-pro-zaneprazdnene",
+        "date": "2026-01-15",
+        "category": "expert",
+        "image": "blog/2026/ai-act-pro-zaneprazdnene/header.jpg",
+        "cs": {
+            "title": "AI akt pro zaneprázdněné: Co musíte vědět v 5 minutách",
+            "excerpt": "Cíl: Rychlý a srozumitelný přehled pro manažery a majitele firem. Obsah: Co je AI akt, proč vznikl, koho se týká a jaký je jeho hlavní princip.",
+            "link": "blog/2026/ai-act-pro-zaneprazdnene/ai-act-pro-zaneprazdnene"
+        },
+        "en": {
+            "title": "AI Act for Busy People: What You Need to Know in 5 Minutes",
+            "excerpt": "A quick and understandable overview of the AI Act for managers and business owners. What it is, who it applies to, and its main risk-based principle.",
+            "link": "blog/2026/ai-act-pro-zaneprazdnene/ai-act-pro-zaneprazdnene-en"
+        }
+    },
+    {
+        "id": "slovnik-pojmu-ai-act",
+        "date": "2025-12-09",
+        "category": "expert",
+        "image": "blog/2025/slovnik-pojmu-ai-act/header.jpg",
+        "cs": {
+            "title": "Slovník pojmů AI Actu: Mluvíte jazykem regulátorů?",
+            "excerpt": "Klíčové pojmy AI Actu vysvětleny: Co je systém AI, poskytovatel, zavádějící subjekt či rizikové kategorie. Nezbytný slovník pro firmy a manažery.",
+            "link": "blog/2025/slovnik-pojmu-ai-act/slovnik-pojmu-ai-act"
+        },
+        "en": {
+            "title": "AI Act Glossary: Do You Speak the Regulator's Language?",
+            "excerpt": "Key AI Act terms explained: What is an AI system, provider, deployer, or risk category. An essential glossary for companies and managers.",
+            "link": "blog/2025/slovnik-pojmu-ai-act/slovnik-pojmu-ai-act-en"
+        }
+    },
+    {
+        "id": "reportaz-workshop-listopad-2025",
+        "date": "2025-11-21",
+        "category": "report",
+        "image": "assets/images/blog/2025/reportaz-workshop-listopad-2025/workshop-listopad.jpg",
+        "cs": {
+            "title": "Bezpečnost, prompt engineering a granty: Reportáž z listopadového AI workshopu",
+            "excerpt": "Ohlédnutí za listopadovým workshopem zaměřeným na kybernetickou bezpečnost AI, pokročilý prompt engineering s tvorbou super-asistenta a případovou studii dotačního průzkumu pro neziskovou organizaci.",
+            "link": "blog/2025/reportaz-workshop-listopad-2025/reportaz-workshop-listopad-2025"
+        },
+        "en": {
+            "title": "Security, Prompt Engineering & Grants: Report from the November AI Workshop",
+            "excerpt": "A look back at the November workshop focused on AI cybersecurity, advanced prompt engineering with a super-assistant, and a grant research case study for a non-profit organization.",
+            "link": "blog/2025/reportaz-workshop-listopad-2025/reportaz-workshop-listopad-2025"
+        }
+    },
+    {
+        "id": "bforb-listopad-2025",
+        "date": "2025-11-07",
+        "category": "report",
+        "image": "assets/images/blog/2025/bforb-listopad-2025/3.jpg",
+        "cs": {
+            "title": "Káva, vize a skvělé jídlo: Reportáž z BforB setkání v Laskala Café Tišnov",
+            "excerpt": "Ohlédnutí za listopadovou snídaní BforB Tišnov v nově otevřené kavárně Laskala. Skvělá atmosféra, 7 hostů a plány na propojení podnikatelů a města.",
+            "link": "blog/2025/bforb-listopad-2025/bforb-listopad-2025"
+        },
+        "en": {
+            "title": "Coffee, Visions, and Great Food: Report from the BforB Meeting at Laskala Café Tišnov",
+            "excerpt": "A look back at the November BforB Tišnov breakfast at the newly reopened Laskala Café. Great atmosphere, 7 guests, and plans to connect entrepreneurs and the city.",
+            "link": "blog/2025/bforb-listopad-2025/bforb-listopad-2025-en"
+        }
+    },
+    {
+        "id": "reportaz-workshop-rijen-2025",
+        "date": "2025-10-24",
+        "category": "report",
+        "image": "assets/images/blog/2025/reportaz-workshop-rijen-2025/workshop-rijen.jpg",
+        "cs": {
+            "title": "Automatizace, NotebookLM a vlastní AI asistenti: Reportáž z říjnového workshopu",
+            "excerpt": "Ohlédnutí za říjnovým workshopem zaměřeným na automatizaci administrativy v Google Workspace, nástroj NotebookLM pro bezpečnou práci s firemními daty, tvorbu vlastních AI asistentů Gems a generování videí z fotografií.",
+            "link": "blog/2025/reportaz-workshop-rijen-2025/reportaz-workshop-rijen-2025"
+        },
+        "en": {
+            "title": "Automation, NotebookLM & Custom AI Assistants: Report from the October Workshop",
+            "excerpt": "A look back at the October workshop focused on Google Workspace automation, NotebookLM for secure corporate data processing, custom AI assistants (Gems), and generating videos from photos.",
+            "link": "blog/2025/reportaz-workshop-rijen-2025/reportaz-workshop-rijen-2025"
+        }
+    },
+    {
+        "id": "podnikavci-kurim-rijen",
+        "date": "2025-10-17",
+        "category": "report",
+        "image": "assets/images/blog/2025/podnikavci-kurim-rijen/3.jpg",
+        "cs": {
+            "title": "Marketing pro Gen Z a Inovace v Povlečení: Reportáž z Klubu Podnikavců v Kuřimi",
+            "excerpt": "Ohlédnutí za říjnovým setkáním Klubu Podnikavců v Kuřimi, kde se řešil obsahový marketing pro mladou generaci a představil se inovativní projekt neshrnujícího se povlečení.",
+            "link": "blog/2025/podnikavci-kurim-rijen/podnikavci-kurim-rijen"
+        },
+        "en": {
+            "title": "Marketing for Gen Z and Innovation in Bed Linen: Report from the Entrepreneurs Club in Kuřim",
+            "excerpt": "A look back at the October meeting of the Entrepreneurs Club in Kuřim, where content marketing for the young generation was discussed and an innovative project of non-bunching bed linen was introduced.",
+            "link": "blog/2025/podnikavci-kurim-rijen/podnikavci-kurim-rijen"
+        }
+    },
+    {
+        "id": "tyden-inovaci-2025",
+        "date": "2025-10-15",
+        "category": "report",
+        "image": "assets/images/blog/2025/tyden-inovaci-2025/1.jpg",
+        "cs": {
+            "title": "AI Act v praxi: Ohlédnutí za Týdnem inovací 2025",
+            "excerpt": "Minulý týden se Praha opět stala epicentrem technologického dění. Podívejte se na ohlédnutí za mou přednáškou o AI Actu a postřehy z největší inovační akce ve střední Evropě.",
+            "link": "blog/2025/tyden-inovaci-2025/tyden-inovaci-2025"
+        },
+        "en": {
+            "title": "AI Act in Practice: A Look Back at Innovation Week 2025",
+            "excerpt": "Last week, Prague once again became the epicenter of the tech scene. Take a look back at my talk on the AI Act and insights from the largest innovation event in Central Europe.",
+            "link": "blog/2025/tyden-inovaci-2025/tyden-inovaci-2025-en"
+        }
+    },
+    {
+        "id": "networking-palava-14",
+        "date": "2025-10-08",
+        "category": "report",
+        "image": "assets/images/blog/2025/networking-palava-14/7.jpg",
+        "cs": {
+            "title": "Otestujte své smysly na maximum! Reportáž ze 14. setkání Klubu Pod Pálavou",
+            "excerpt": "Ohlédnutí za 14. setkáním Klubu Pod Pálavou, kde jsme testovali naše smysly na maximum a zkoušeli si kooperativní židličkovanou.",
+            "link": "blog/2025/networking-palava-14/networking-palava-14"
+        },
+        "en": {
+            "title": "Test Your Senses to the Max! Report from the 14th Meeting of the Pod Pálavou Club",
+            "excerpt": "A look back at the 14th meeting of the Pod Pálavou Club, where we tested our senses to the max and tried cooperative musical chairs.",
+            "link": "blog/2025/networking-palava-14/networking-palava-14-en"
+        }
+    },
+    {
+        "id": "novela-hlaseni-zamestnancu-2025",
+        "date": "2025-10-06",
+        "category": "expert",
+        "image": "blog/2025/novela-hlaseni-zamestnancu-2025/header.jpg",
+        "cs": {
+            "title": "Konec tolerance: Novela zákona zpřísňuje zaměstnávání cizinců od 1. 10. 2025",
+            "excerpt": "Dosavadní benevolence v hlášení cizinců končí. Novela zákona o zaměstnanosti ruší možnost zpětného hlášení a zavádí fikci „nelegální práce“ s likvidačními pokutami.",
+            "link": "blog/2025/novela-hlaseni-zamestnancu-2025/novela-hlaseni-zamestnancu-2025"
+        },
+        "en": {
+            "title": "End of Tolerance: New Law Tightens Rules for Employing Foreigners from Oct 1, 2025",
+            "excerpt": "The previously lenient rules for reporting foreign nationals are ending. The amendment to the Employment Act abolishes retroactive reporting and introduces 'undeclared work,' with crippling fines for non-compliance.",
+            "link": "blog/2025/novela-hlaseni-zamestnancu-2025/novela-hlaseni-zamestnancu-2025-en"
+        }
+    },
+    {
+        "id": "reportaz-bforb-tisnov-rijen-2025",
+        "date": "2025-10-03",
+        "category": "report",
+        "image": "assets/images/blog/2025/reportaz-bforb-tisnov-rijen-2025/tisnov-02-10.jpg",
+        "cs": {
+            "title": "Méně vizitek, více upřímnosti: Klub BforB Tišnov naskočil na novou vlnu",
+            "excerpt": "Reportáž z netradičního setkání členů BforB Tišnov v penzionu Laskala, kde se místo vizitek sdílely vize, očekávání a upřímnost.",
+            "link": "blog/2025/reportaz-bforb-tisnov-rijen-2025/reportaz-bforb-tisnov-rijen-2025"
+        },
+        "en": {
+            "title": "Fewer Business Cards, More Sincerity: The BforB Tišnov Club Ignites a New Era",
+            "excerpt": "A look back at an unconventional meeting of the BforB Tišnov members at the Laskala pension, where visions, expectations, and sincerity were shared instead of business cards.",
+            "link": "blog/2025/reportaz-bforb-tisnov-rijen-2025/reportaz-bforb-tisnov-rijen-2025-en"
+        }
+    },
+    {
+        "id": "prevod-podilu-sro-nz",
+        "date": "2025-10-01",
+        "category": "expert",
+        "image": "blog/2025/prevod-podilu-sro-nz/header.jpg",
+        "cs": {
+            "title": "Převod podílu v s.r.o. a notářský zápis: Mýty a fakta",
+            "excerpt": "Analýza, zda je pro souhlas valné hromady s převodem podílu nutný notářský zápis. Klíčová soudní rozhodnutí a praktické dopady pro s.r.o.",
+            "link": "blog/2025/prevod-podilu-sro-nz/prevod-podilu-sro-nz"
+        },
+        "en": {
+            "title": "Transfer of a Share in an LLC and a Notarial Deed: Myths and Facts",
+            "excerpt": "An analysis of whether a notarial deed is necessary for the general meeting's consent to the transfer of a share. Key court decisions and practical implications for LLCs.",
+            "link": "blog/2025/prevod-podilu-sro-nz/prevod-podilu-sro-nz-en"
+        }
+    },
+    {
+        "id": "ai-agenti-nova-era-byznysu",
+        "date": "2025-09-25",
+        "category": "expert",
+        "image": "blog/2025/ai-agenti-nova-era-byznysu/header.jpg",
+        "cs": {
+            "title": "AI Agenti: Hrozba, nebo největší byznysová příležitost od dob internetu?",
+            "excerpt": "Analýza nástupu AI agentů. Zjistěte, jak transformují trh práce, jaké přinášejí příležitosti a jak se bránit kritickým bezpečnostním rizikům jako je Prompt Injection.",
+            "link": "blog/2025/ai-agenti-nova-era-byznysu/ai-agenti-nova-era-byznysu"
+        },
+        "en": {
+            "title": "AI Agents: A Threat, or the Biggest Business Opportunity Since the Internet?",
+            "excerpt": "An analysis of the rise of AI agents. Find out how they are transforming the job market, what opportunities they bring, and how to defend against critical security risks like Prompt Injection.",
+            "link": "blog/2025/ai-agenti-nova-era-byznysu/ai-agenti-nova-era-byznysu-en"
+        }
+    },
+    {
+        "id": "reportaz-workshop-zari-2025",
+        "date": "2025-09-20",
+        "category": "report",
+        "image": "assets/images/blog/2025/reportaz-workshop-zari-2025/workshop19-9.jpg",
+        "cs": {
+            "title": "Ponor do hlubin AI: Reportáž ze zářijového workshopu",
+            "excerpt": "Ohlédnutí za workshopem 19.9., kde jsme se ponořili do pokročilejších technik s Gemini, NotebookLM a Google AI Studio. Skvělá ryze dámská skupina a spousta praktických ukázek.",
+            "link": "blog/2025/reportaz-workshop-zari-2025/reportaz-workshop-zari-2025"
+        },
+        "en": {
+            "title": "A Deep Dive into AI: Report from the September Workshop",
+            "excerpt": "A look back at the workshop on September 19, where we delved into advanced techniques with Gemini, NotebookLM, and Google AI Studio. A great all-female group and lots of practical demonstrations.",
+            "link": "blog/2025/reportaz-workshop-zari-2025/reportaz-workshop-zari-2025-en"
+        }
+    },
+    {
+        "id": "advokati-a-ai",
+        "date": "2025-09-15",
+        "category": "expert",
+        "image": "blog/2025/advokati-a-ai/header.jpg",
+        "cs": {
+            "title": "Advokacie na rozcestí: Hrozba, nebo příležitost?",
+            "excerpt": "Analýza dopadu umělé inteligence na výkon advokacie v ČR. Je AI pro advokáty existenčním rizikem, nebo bezprecedentní šancí na transformaci a růst?",
+            "link": "blog/2025/advokati-a-ai/advokati-a-ai"
+        },
+        "en": {
+            "title": "The Legal Profession at a Crossroads: Threat or Opportunity?",
+            "excerpt": "An analysis of the impact of artificial intelligence on the legal profession in the Czech Republic. Does AI pose an existential threat to lawyers, or an unprecedented opportunity for transformation and growth?",
+            "link": "blog/2025/advokati-a-ai/advokati-a-ai-en"
+        }
+    },
+    {
+        "id": "firemni-kultura-alveno-reportaz",
+        "date": "2025-09-12",
+        "category": "report",
+        "image": "assets/images/blog/2025/firemni-kultura-alveno-reportaz/2.jpg",
+        "cs": {
+            "title": "Když se potkají výjimeční lidé: Reportáž z večera s Alvenem",
+            "excerpt": "Ohlédnutí za naší první B2B akcí „Firemní kultura: Večer s Alvenem“, která propojila desítky inspirativních osobností a otevřela klíčová témata dnešní doby.",
+            "link": "blog/2025/firemni-kultura-alveno-reportaz/firemni-kultura-alveno-reportaz"
+        },
+        "en": {
+            "title": "When Exceptional People Come Together: A Report from the Evening with Alveno",
+            "excerpt": "A look back at our first B2B event 'Corporate Culture: An Evening with Alveno', which connected dozens of inspiring personalities and opened up key topics of our time.",
+            "link": "blog/2025/firemni-kultura-alveno-reportaz/firemni-kultura-alveno-reportaz-en"
+        }
+    },
+    {
+        "id": "networking-palava-12",
+        "date": "2025-09-03",
+        "category": "report",
+        "image": "assets/images/blog/2025/networking-palava-12/2.jpg",
+        "cs": {
+            "title": "Ohlédnutí za 12. setkáním Klubu Pod Pálavou",
+            "excerpt": "Reportáž z 12. networkingového setkání klubu Pod Pálavou. Skvělá atmosféra, inspirativní myšlenky a praktický workshop využití AI v byznysu. Podívejte se, jaké to bylo a kdy se můžete přidat příště.",
+            "link": "blog/2025/networking-palava-12/networking-palava-12"
+        },
+        "en": {
+            "title": "A Look Back at the 12th Meeting of the Pod Pálavou Club",
+            "excerpt": "Report from the 12th networking meeting of the Pod Pálavou club. Great atmosphere, inspiring ideas, and a practical workshop on using AI in business. See what it was like and when you can join next time.",
+            "link": "blog/2025/networking-palava-12/networking-palava-12-en"
+        }
+    },
+    {
+        "id": "firemni-kultura-alveno",
+        "date": "2025-08-23",
+        "category": "report",
+        "image": "assets/images/blog/2025/firemni-kultura-alveno/firemni-kultura-alveno.jpg",
+        "cs": {
+            "title": "Firemní kultura: Večer s Alvenem",
+            "excerpt": "Zveme vás na exkluzivní akci pro majitele firem, C-level management a zavedené podnikatele zaměřenou na budování firemní kultury jako strategické výhody. Čeká vás panelová diskuze, workshopy a networking na nejvyšší úrovni.",
+            "link": "blog/2025/firemni-kultura-alveno/firemni-kultura-alveno"
+        },
+        "en": {
+            "title": "Corporate Culture: An Evening with Alveno",
+            "excerpt": "We invite you to an exclusive event for business owners, C-level executives, and established entrepreneurs focused on building corporate culture as a strategic advantage. Panel discussions, workshops, and top-level networking await you.",
+            "link": "blog/2025/firemni-kultura-alveno/firemni-kultura-alveno-en"
+        }
+    },
+    {
+        "id": "reportaz-workshop-srpen-2025",
+        "date": "2025-08-22",
+        "category": "report",
+        "image": "assets/images/blog/2025/reportaz-workshop-srpen-2025/workshop22-8.jpg",
+        "cs": {
+            "title": "Další AI workshop je za námi! Podívejte se, co jsme probrali",
+            "excerpt": "Ohlédnutí za vydařeným workshopem zaměřeným na praktické využití AI nástrojů. Skvělá atmosféra, spousta aha momentů a praktické ukázky toho, jak může umělá inteligence reálně šetřit čas a posouvat kreativitu.",
+            "link": "blog/2025/reportaz-workshop-srpen-2025/reportaz-workshop-srpen-2025"
+        },
+        "en": {
+            "title": "Another AI Workshop is a Wrap! See What We Covered",
+            "excerpt": "A look back at a successful workshop focused on the practical use of AI tools. Great atmosphere, lots of \"aha\" moments, and practical demonstrations of how artificial intelligence can genuinely save time and boost creativity.",
+            "link": "blog/2025/reportaz-workshop-srpen-2025/reportaz-workshop-srpen-2025-en"
+        }
+    },
+    {
+        "id": "reportaz-workshop-cervenec-2025",
+        "date": "2025-07-19",
+        "category": "report",
+        "image": "assets/images/blog/2025/reportaz-workshop-cervenec-2025/workshop18-7.jpg",
+        "cs": {
+            "title": "První AI workshop odstartoval! Skvělá parta a spousta objevů",
+            "excerpt": "Ohlédnutí za úplně prvním workshopem zaměřeným na praktické využití AI nástrojů. Skvělá atmosféra, demystifikace AI a první kroky s Gemini a NotebookLM.",
+            "link": "blog/2025/reportaz-workshop-cervenec-2025/reportaz-workshop-cervenec-2025"
+        },
+        "en": {
+            "title": "The First AI Workshop Kicked Off! A Great Group and Lots of Discoveries",
+            "excerpt": "A look back at the very first workshop focused on the practical use of AI tools. Great atmosphere, demystifying AI, and first steps with Gemini and NotebookLM.",
+            "link": "blog/2025/reportaz-workshop-cervenec-2025/reportaz-workshop-cervenec-2025-en"
+        }
+    },
+    {
+        "id": "cs-tech-summit-2025",
+        "date": "2025-06-05",
+        "category": "report",
+        "image": "assets/images/blog/2025/cs-tech-summit-2025/1.jpg",
+        "cs": {
+            "title": "Právo a technologie v srdci Moravy: Reportáž z CS-Tech Summitu",
+            "excerpt": "Ohlédnutí za mou přednáškou na téma \"Regulace AI v ČR\" na česko-slovenském technologickém summitu na zámku v Mikulově a inspirativní atmosféře celé akce.",
+            "link": "blog/2025/cs-tech-summit-2025/cs-tech-summit-2025"
+        },
+        "en": {
+            "title": "Law and Technology in the Heart of Moravia: A Report from the CS-Tech Summit",
+            "excerpt": "A look back at my presentation on \"AI Regulation in the CR\" at the Czech-Slovak Technology Summit at Mikulov Castle and the inspiring atmosphere of the entire event.",
+            "link": "blog/2025/cs-tech-summit-2025/cs-tech-summit-2025-en"
+        }
+    },
+    {
+        "id": "ai-v-byznysu-4-cesty",
+        "date": "2025-05-01",
+        "category": "expert",
+        "image": "blog/2025/ai-v-byznysu/header.jpg",
+        "cs": {
+            "title": "AI v byznysu: 4 cesty, kudy z vaší firmy nevědomky unikají data",
+            "excerpt": "Používání AI nástrojů se stalo běžnou součástí firemní praxe. Mnozí si však neuvědomují rizika spojená s ochranou citlivých dat. Podívejme se na čtyři nejčastější scénáře, kde může dojít k úniku, a jak se jim bránit.",
+            "link": "blog/2025/ai-v-byznysu/ai-v-byznysu-4-cesty"
+        },
+        "en": {
+            "title": "AI in Business: 4 Ways Your Company Data Is Leaking Unknowingly",
+            "excerpt": "Using AI tools has become a common part of business practice. However, many are unaware of the risks associated with protecting sensitive data. Let's look at the four most common scenarios where leaks can occur and how to prevent them.",
+            "link": "blog/2025/ai-v-byznysu/ai-v-byznysu-4-cesty-en"
+        }
+    },
+    {
+        "id": "ai-act-byznys",
+        "date": "2025-04-01",
+        "category": "expert",
+        "image": "blog/2025/ai-act-byznys/header.jpg",
+        "cs": {
+            "title": "Regulace AI v byznysu: Jste připraveni na AI Act?",
+            "excerpt": "Umělá inteligence už není sci-fi, ale každodenní nástroj, který firmám pomáhá inovovat, automatizovat a růst. S velkou mocí ale přichází i velká zodpovědnost – a teď i nová pravidla.",
+            "link": "blog/2025/ai-act-byznys/ai-act-byznys"
+        },
+        "en": {
+            "title": "AI Regulation in Business: Are You Ready for the AI Act?",
+            "excerpt": "Artificial intelligence is no longer sci-fi, but an everyday tool that helps companies innovate, automate, and grow. With great power comes great responsibility – and now, new rules.",
+            "link": "blog/2025/ai-act-byznys/ai-act-byznys-en"
+        }
+    },
+    {
+        "id": "podcast-jiri-urban-iustoria",
+        "date": "2025-03-07",
+        "category": "podcast",
+        "image": "https://img.youtube.com/vi/gFuxRNeA_w0/maxresdefault.jpg",
+        "cs": {
+            "title": "Spolupráce v byznysu umožňuje víc než samostatné úsilí (Podcast Jiřího Urbana #07)",
+            "excerpt": "S Gabrielem Kožíkem a Honzou Vytřísalem, majiteli advokátní kanceláře IUSTORIA, jsme si povídali o trestním právu, etice, ale taky o balancu mezi pracovním a osobním životem.",
+            "link": "blog/2025/podcast-jiri-urban-iustoria/podcast-jiri-urban-iustoria"
+        },
+        "en": {
+            "title": "Collaboration in Business Achieves More Than Solo Effort (Jiří Urban's Podcast #07)",
+            "excerpt": "Gabriel Kožík and Jan Vytřísal, owners of the IUSTORIA law firm, on criminal law, ethics and work-life balance. A guest appearance on Jiří Urban's podcast (in Czech).",
+            "link": "blog/2025/podcast-jiri-urban-iustoria/podcast-jiri-urban-iustoria-en"
+        }
+    },
+    {
+        "id": "podcast-smart-talk-jan-vytrisal",
+        "date": "2024-10-16",
+        "category": "podcast",
+        "image": "https://img.youtube.com/vi/39YOVh5lhU4/maxresdefault.jpg",
+        "cs": {
+            "title": "SMART TALK s Gabrielou Mrkvicovou: hostem Jan Vytřísal z IUSTORIA (Podcast)",
+            "excerpt": "Moderátor, a když zrovna nemoderuje, spolumajitel advokátní kanceláře. Honza Vytřísal v podcastu SMART TALK o založení IUSTORIA, obchodním právu i vzniku názvu kanceláře.",
+            "link": "blog/2024/podcast-smart-talk-jan-vytrisal/podcast-smart-talk-jan-vytrisal"
+        },
+        "en": {
+            "title": "SMART TALK with Gabriela Mrkvicová: Guest Jan Vytřísal of IUSTORIA (Podcast)",
+            "excerpt": "A host and moderator — and when not on stage, co-owner of a law firm. Jan Vytřísal on the SMART TALK podcast about founding IUSTORIA and commercial law (in Czech).",
+            "link": "blog/2024/podcast-smart-talk-jan-vytrisal/podcast-smart-talk-jan-vytrisal-en"
+        }
+    }
+]

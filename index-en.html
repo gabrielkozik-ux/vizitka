@@ -1,435 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lawyer & AI Strategist for Business Growth | Mgr. Gabriel Kožík</title>
-    <meta name="description" content="I am a lawyer and AI strategist. I help entrepreneurs and companies innovate more safely and grow faster through the effective use of AI and a solid legal background.">
-    
-    <!-- Language version links for SEO -->
-    <link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.com/index.html" />
-    <link rel="alternate" hreflang="en" href="https://www.gabrielkozik.com/index-en.html" />
-    <link rel="alternate" hreflang="hu" href="https://www.gabrielkozik.com/index-hu.html" />
-    <link rel="alternate" hreflang="x-default" href="https://www.gabrielkozik.com/index.html" />
+    <title>Attorney for the New Era with AI | Mgr. Gabriel Kožík</title>
+    <meta name="description"
+        content="Attorney for business owners who want to use modern technology safely. Clear contracts, AI compliance and AI training led by a lawyer. Brno, Tišnov and the surrounding region.">
 
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="canonical" href="https://www.gabrielkozik.cz/index-en" />
+    <link rel="alternate" hreflang="cs" href="https://www.gabrielkozik.cz/" />
+    <link rel="alternate" hreflang="en" href="https://www.gabrielkozik.cz/index-en" />
+    <link rel="alternate" hreflang="x-default" href="https://www.gabrielkozik.cz/" />
 
-        :root {
-            --primary-color: #0a2342;
-            --secondary-color: #2ca58d;
-            --text-color: #333;
-            --light-gray: #f4f4f4;
-            --white: #ffffff;
-        }
-        
-        html {
-            scroll-behavior: smooth;
-        }
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Attorney for the New Era with AI | Mgr. Gabriel Kožík">
+    <meta property="og:description" content="Attorney for business owners who want to use modern technology safely. Clear contracts, AI compliance and AI training led by a lawyer.">
+    <meta property="og:url" content="https://www.gabrielkozik.cz/index-en">
+    <meta property="og:image" content="https://www.gabrielkozik.cz/assets/images/og-homepage.jpg">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Gabriel Kožík">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Attorney for the New Era with AI | Mgr. Gabriel Kožík">
+    <meta name="twitter:description" content="Attorney for business owners who want to use modern technology safely.">
+    <meta name="twitter:image" content="https://www.gabrielkozik.cz/assets/images/og-homepage.jpg">
 
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--white);
-            padding-top: 70px;
-        }
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Mgr. Gabriel Kožík","jobTitle":"Attorney at Law","description":"Attorney for the new era with AI. Legal services and AI compliance for businesses.","url":"https://www.gabrielkozik.cz/","image":"https://www.gabrielkozik.cz/assets/images/profilova-fotka.jpg","email":"mailto:info@gabrielkozik.cz","telephone":"+420720265713","address":{"@type":"PostalAddress","streetAddress":"Slovákova 279/11","addressLocality":"Brno","postalCode":"602 00","addressCountry":"CZ"},"sameAs":["https://www.linkedin.com/in/gabriel-kozik/","https://www.facebook.com/somslovak","https://www.instagram.com/kozik_gabriel/","https://www.youtube.com/@gabriel-kozik"],"knowsAbout":["Commercial Law","Corporate Law","AI Act","GDPR","Artificial Intelligence","Contract Law"]}</script>
 
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 20px;
-        }
 
-        .main-nav {
-            background-color: var(--white);
-            padding: 15px 20px;
-            border-bottom: 1px solid var(--light-gray);
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            box-sizing: border-box;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .nav-logo {
-             font-weight: bold;
-             color: var(--primary-color);
-             text-decoration: none;
-             font-size: 1.2em;
-        }
+    <!-- EXTERNAL CSS -->
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/inter-latin-400-normal.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/lora-latin-600-normal.woff2" crossorigin>
+    <link rel="stylesheet" href="/assets/fonts/fonts.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preload" as="image" href="assets/images/hero-pod-palavou-900.webp" media="(max-width: 768px)" fetchpriority="high">
+    <link rel="preload" as="image" href="assets/images/hero-pod-palavou.webp" media="(min-width: 769px)" fetchpriority="high">
 
-        .nav-links-container {
-            display: flex;
-            align-items: center;
-        }
-        
-        .nav-links {
-            display: flex;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: bold;
-            margin: 0 15px;
-            font-size: 1.1em;
-            transition: color 0.3s ease;
-            border-radius: 3px;
-        }
-
-        .nav-links a:hover {
-            color: var(--secondary-color);
-        }
-        
-        .lang-switcher {
-            position: relative;
-            margin-left: 20px;
-        }
-
-        .lang-button {
-            background-color: transparent;
-            border: none;
-            color: var(--text-color);
-            font-weight: bold;
-            font-size: 1em;
-            cursor: pointer;
-            padding: 5px;
-            display: flex;
-            align-items: center;
-            line-height: 1;
-        }
-
-        .lang-button .arrow {
-            border: solid var(--text-color);
-            border-width: 0 2px 2px 0;
-            display: inline-block;
-            padding: 2px;
-            transform: rotate(45deg);
-            margin-left: 8px;
-            transition: transform 0.3s ease;
-        }
-        
-        .lang-button.active .arrow {
-             transform: rotate(-135deg);
-        }
-
-        .lang-dropdown {
-            display: none;
-            position: absolute;
-            right: 0;
-            top: 100%;
-            background-color: var(--white);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            border-radius: 5px;
-            overflow: hidden;
-            min-width: 100px;
-            z-index: 1001;
-        }
-
-        .lang-dropdown a {
-            color: var(--text-color);
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-            font-weight: bold;
-        }
-
-        .lang-dropdown a:hover {
-            background-color: var(--light-gray);
-        }
-        
-        .lang-dropdown a.active {
-            color: var(--secondary-color);
-            background-color: #e8f6f3;
-        }
-
-        a:focus, .cta-button:focus, .social-icon:focus, .lang-button:focus {
-            outline: 3px solid var(--secondary-color);
-            outline-offset: 2px;
-        }
-
-        .hamburger {
-            display: none;
-            cursor: pointer;
-            flex-direction: column;
-            gap: 5px;
-            padding: 5px;
-            border-radius: 3px;
-        }
-        
-        .hamburger:focus {
-             outline: 3px solid var(--secondary-color);
-             outline-offset: 2px;
-        }
-
-        .hamburger .bar {
-            width: 25px;
-            height: 3px;
-            background-color: var(--primary-color);
-            transition: all 0.3s ease-in-out;
-        }
-
-        .hero {
-            background-image: linear-gradient(rgba(10, 35, 66, 0.6), rgba(10, 35, 66, 0.6)), url('assets/images/uvodni-obrazek.jpg');
-            background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
-            color: var(--white);
-            padding: 100px 20px;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3.5em; 
-            margin: 0;
-            font-weight: 700;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-        }
-
-        .hero p {
-            font-size: 1.5em;
-            font-weight: 300;
-            margin-top: 10px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
-        }
-
-        section { padding: 60px 20px; scroll-margin-top: 70px; }
-        section:nth-child(even) { background-color: var(--light-gray); }
-        .section-title { text-align: center; font-size: 2.5em; margin-bottom: 40px; color: var(--primary-color); }
-        .section-subtitle { text-align: center; font-size: 1.2em; font-weight: 300; max-width: 700px; margin: -20px auto 40px auto; }
-        
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border-width: 0;
-        }
-        
-        #mission { text-align: center; }
-        #mission blockquote { font-size: 1.5em; font-style: italic; max-width: 800px; margin: 0 auto; border-left: 5px solid var(--secondary-color); padding-left: 20px; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
-        .service-card { background: var(--white); padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid var(--secondary-color); }
-        .service-card h3 { font-size: 1.8em; color: var(--primary-color); margin-top: 0; }
-        .service-card h4 { color: var(--secondary-color); font-size: 1.1em; margin-bottom: 15px; }
-        .service-card ul { list-style: none; padding: 0; }
-        .service-card li { padding-left: 1.5em; margin-bottom: 10px; position: relative; }
-        .service-card li::before { content: '✓'; color: var(--secondary-color); position: absolute; left: 0; font-weight: bold; }
-        #about p { max-width: 800px; margin: 0 auto; text-align: center; }
-        .about-container { text-align: center; }
-        .about-photo-circle { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; margin: 0 auto 30px auto; display: block; }
-        
-        #activities { background-color: var(--light-gray); }
-        .projects-layout { display: flex; flex-direction: column; align-items: center; gap: 30px; }
-        .projects-grid { display: flex; justify-content: center; align-items: flex-start; gap: 50px; flex-wrap: wrap; text-align: center; }
-        .project-item { flex-basis: 250px; }
-        .project-item img { max-width: 100%; height: 100px; object-fit: contain; margin-bottom: 15px; transition: transform 0.3s ease; }
-        .project-item a:hover img { transform: scale(1.05); }
-        .project-item p { font-size: 1em; color: var(--text-color); margin-top: 0; }
-        
-        #workshop { padding-top: 20px; background-color: var(--light-gray); }
-        .workshop-container { text-align: center; }
-        .workshop-container a { display: inline-block; transition: transform 0.3s ease, box-shadow 0.3s ease; border-radius: 8px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
-        .workshop-container a:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.12); }
-        .workshop-container img { max-width: 100%; height: auto; display: block; }
-        
-        #connect { text-align: center; }
-        .cta-container { display: flex; flex-direction: column; align-items: center; gap: 20px; }
-        .cta-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-        .cta-button { display: inline-block; background-color: var(--secondary-color); color: var(--white); padding: 15px 30px; text-decoration: none; font-size: 1.1em; font-weight: bold; border-radius: 5px; transition: background-color 0.3s ease, transform 0.2s ease; }
-        .cta-button:hover { background-color: #238c76; transform: translateY(-2px); }
-        .cta-button.secondary { background-color: transparent; color: var(--primary-color); border: 2px solid var(--primary-color); }
-        .cta-button.secondary:hover { background-color: var(--primary-color); color: var(--white); }
-        .booking-text { font-size: 1.1em; color: var(--text-color); margin: 0; }
-        
-        footer { background-color: var(--primary-color); color: var(--white); padding: 40px 20px; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1100px; margin: 0 auto; }
-        .footer-grid h4 { color: var(--secondary-color); margin-bottom: 10px; }
-        .footer-grid p, .footer-grid a { margin: 0; color: var(--white); text-decoration: none; font-size: 0.9em; }
-        .footer-grid a:hover { text-decoration: underline; }
-        .copyright { text-align: center; margin-top: 40px; font-size: 0.8em; color: rgba(255,255,255,0.7); }
-        
-        .social-icons-container { display: flex; justify-content: flex-start; gap: 15px; margin-top: 15px; }
-        .social-icon { color: var(--white); text-decoration: none; transition: color 0.3s ease, transform 0.2s ease; display: inline-block; }
-        .social-icon svg { width: 30px; height: 30px; }
-        .social-icon:hover { color: var(--secondary-color); transform: translateY(-3px); }
-
-        .events-list {
-            list-style: none;
-            padding: 0;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .events-list li {
-            display: flex;
-            align-items: flex-start;
-            padding: 20px 0;
-            border-bottom: 1px solid #ddd;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .events-list li:last-child {
-            border-bottom: none;
-        }
-
-        .event-date {
-            font-weight: bold;
-            color: var(--secondary-color);
-            font-size: 1.1em;
-            flex-shrink: 0;
-            width: 100px;
-            padding-top: 2px;
-        }
-
-        .event-details {
-            flex-grow: 1;
-        }
-
-        .event-details h4 {
-            margin: 0 0 5px 0;
-            font-size: 1.2em;
-            color: var(--primary-color);
-        }
-
-        .event-details p {
-            margin: 0;
-            color: var(--text-color);
-            font-size: 0.95em;
-        }
-
-        .event-button {
-            padding: 8px 18px;
-            font-size: 0.9em;
-            flex-shrink: 0;
-            margin-left: auto; 
-        }
-
-        @media (max-width: 768px) {
-            .nav-links-container {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-                position: absolute;
-                top: 70px;
-                left: 0;
-                background-color: white;
-                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            }
-            
-            .nav-links-container.active {
-                display: flex;
-            }
-
-            .nav-links {
-                flex-direction: column;
-                width: 100%;
-            }
-            
-            .nav-links a {
-                padding: 15px;
-                text-align: center;
-                width: 100%;
-                border-bottom: 1px solid var(--light-gray);
-            }
-            
-             .lang-switcher {
-                 padding: 15px;
-                 text-align: center;
-                 width: 100%;
-                 margin-left: 0;
-                 position: static;
-            }
-
-            .lang-dropdown {
-                position: static;
-                box-shadow: none;
-                border-top: 1px solid var(--light-gray);
-                display: block;
-                background-color: var(--light-gray);
-            }
-
-            .lang-button {
-                justify-content: center;
-                width: 100%;
-            }
-            
-            .hamburger {
-                display: flex;
-            }
-
-            .hero {
-                padding: 60px 20px;
-            }
-            .hero h1 {
-                font-size: 2.2em;
-            }
-            .hero p {
-                font-size: 1.1em;
-            }
-            .section-title {
-                font-size: 2em;
-            }
-            .footer-grid { text-align: center; }
-            .social-icons-container { justify-content: center; }
-        }
-
-        @media (max-width: 600px) {
-            .events-list li {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 10px;
-            }
-            .event-date {
-                width: auto;
-                background-color: var(--light-gray);
-                padding: 5px 10px;
-                border-radius: 4px;
-                font-size: 1em;
-            }
-            .event-button {
-                width: 100%;
-                text-align: center;
-                margin-left: 0;
-            }
-        }
-    </style>
 </head>
+
 <body>
 
-    <svg width="0" height="0" style="position:absolute">
-      <symbol id="icon-linkedin" viewBox="0 0 24 24">
-        <path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11H9.3v9.09h3.58v-4.54c0-.77.25-1.21 1.25-1.21.97 0 1.25.44 1.25 1.21v4.54h3.57zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68zm1.78 9.94V9.6h-3.57v9.09h3.57z"/>
-      </symbol>
-      <symbol id="icon-facebook" viewBox="0 0 24 24">
-        <path fill="currentColor" d="M12 2.04c-5.5 0-10 4.49-10 10.02 0 5 3.66 9.15 8.44 9.9v-7.02h-2.54v-2.89h2.54V9.84c0-2.51 1.49-3.9 3.8-3.9 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.89h-2.33v7.02c4.78-.75 8.44-4.9 8.44-9.9C22 6.53 17.5 2.04 12 2.04z"/>
-      </symbol>
-      <symbol id="icon-youtube" viewBox="0 0 24 24">
-        <path fill="currentColor" d="M10 15l5.2-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 5.1-.27 1.3-.9 2.05-1.88 2.32-.47.13-1.1.22-1.9.28-.8.07-1.49.1-2.09.1L15 20c-2.19 0-3.8-.16-5.1-.44-1.3-.27-2.05-.9-2.32-1.88-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L7 12c0-2.19.16-3.8.44-5.1.27-1.3.9-2.05 1.88-2.32.47-.13 1.1.22-1.9-.28.8-.07 1.49-.1 2.09-.1L12 4c2.19 0 3.8.16 5.1.44 1.3.27 2.05.9 2.32 1.88.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09l.69.83z"/>
-      </symbol>
-    </svg>
-
     <nav class="main-nav">
-        <a href="#" class="nav-logo">Mgr. Gabriel Kožík</a>
+        <a href="#" class="nav-logo">
+            <img src="assets/images/profilova-fotka-nav.webp" width="96" height="96" alt="Profile photo of Gabriel Kožík" class="nav-photo">
+            <span>Mgr. Gabriel Kožík</span>
+        </a>
         <div class="hamburger" tabindex="0" role="button" aria-label="Open menu">
             <div class="bar"></div>
             <div class="bar"></div>
@@ -437,21 +54,18 @@
         </div>
         <div class="nav-links-container">
             <div class="nav-links">
-                <a href="#about">About Me</a>
-                <a href="#services">How I Can Help</a>
-                <a href="#activities">Projects</a>
-                <a href="blog-en.html">Blog</a>
-                <a href="#connect">Contact Me</a>
+                <a href="#sluzby">How I Help</a>
+                <a href="#jak-pracuji">How I Work</a>
+                <a href="#kde-se-potkat">Meet Me</a>
+                <a href="blog-en">Blog</a>
+                <a href="#propojit">Contact</a>
             </div>
             <div class="lang-switcher">
-                <button class="lang-button" aria-haspopup="true" aria-expanded="false">
-                    EN
-                    <span class="arrow"></span>
-                </button>
-                <div class="lang-dropdown">
-                    <a href="index.html">CZ</a>
-                    <a href="index-en.html" class="active">EN</a>
-                    <a href="index-hu.html">HU</a>
+                <button class="lang-button lang-switcher-button" aria-haspopup="true" aria-expanded="false">EN <span
+                        class="arrow"></span></button>
+                <div class="lang-dropdown lang-switcher-dropdown">
+                    <a href="./">CZ</a>
+                    <a href="index-en" class="active">EN</a>
                 </div>
             </div>
         </div>
@@ -459,181 +73,386 @@
 
     <header class="hero">
         <div class="container">
-            <h1>Law for the Future. Growth through AI.</h1>
-            <p>I am a lawyer and AI strategist.<br>I help companies with AI compliance in accordance with EU Regulation No. 2024/1689.<br>I help entrepreneurs innovate faster and more safely.</p>
+            <h1>Attorney for the New Era with&nbsp;AI</h1>
+            <p>I help business owners run their companies without legal chaos. Clearly,
+                without thirty pages of legalese — and with the certainty that your data
+                and know-how stay safe.</p>
+            <span class="hero-underline"></span>
+            <a href="#propojit" class="cta-button">Free Initial Consultation</a>
         </div>
     </header>
 
+    <div class="trust-bar">
+        <div class="trust-bar-inner">
+            <div class="trust-item reveal">
+                <div class="trust-number" data-count="10" data-suffix="+">10+</div>
+                <div class="trust-label">years of legal practice</div>
+            </div>
+            <div class="trust-item reveal reveal-delay-1">
+                <div class="trust-number" data-count="30" data-suffix="+">30+</div>
+                <div class="trust-label">expert articles on law and AI</div>
+            </div>
+            <div class="trust-item reveal reveal-delay-2">
+                <div class="trust-number" data-count="5" data-suffix="">5</div>
+                <div class="trust-label">business communities in the region</div>
+            </div>
+        </div>
+    </div>
+
     <main>
-        <section id="mission">
+        <section id="situace" class="surface-tint">
             <div class="container">
-                <h2 class="section-title">My Mission</h2>
-                <blockquote>My mission is to transform AI compliance from a regulatory hurdle into a strategic advantage that enables companies to innovate safely and effectively.</blockquote>
-            </div>
-        </section>
-
-        <section id="services">
-            <div class="container">
-                <h2 class="section-title">How I Can Help You</h2>
-                <div class="services-grid">
-                    
-                    <div class="service-card">
-                        <h3>Pillar 1: AI Compliance & Governance</h3>
-                        <p>I help companies implement AI safely and in compliance with European legislation (AI Act). My goal is to turn regulatory obligations into your competitive advantage.</p>
-                        <h4>Strategy & Implementation</h4>
-                        <ul>
-                            <li>Fundamental Rights Impact Assessment (FRIA)</li>
-                            <li>Setting up internal processes and policies</li>
-                            <li>Training for employees and management</li>
-                        </ul>
-                        <h4>Legal & Technical Certainty</h4>
-                        <ul>
-                            <li>Preparation for certification under the AI Act</li>
-                            <li>Ensuring compliance with GDPR and other regulations</li>
-                            <li>Monitoring and reporting obligations</li>
-                        </ul>
-                    </div>
-
-                    <div class="service-card">
-                        <h3>Pillar 2: Legal Services for B2B</h3>
-                        <p>I provide specialized legal advice that protects your innovations and supports healthy growth.</p>
-                        <h4>Specialization</h4>
-                        <ul>
-                            <li><strong>E-commerce:</strong> Legal certainty for your online business.</li>
-                            <li><strong>Intellectual Property:</strong> Protection of your brand, software, and creative works.</li>
-                            <li><strong>Commercial Law:</strong> Clear contracts that minimize risks.</li>
-                            <li><strong>Corporate Law:</strong> Company formation and corporate agenda, M&A.</li>
-                            <li><strong>Competition Law:</strong> Protection and enforcement of rights in a competitive environment.</li>
-                            <li><strong>Labor Law:</strong> Setting rules for the use of AI in the workplace.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section id="about">
-            <div class="container about-container">
-                <img src="assets/images/profilova-fotka.jpg" alt="Portrait of Mgr. Gabriel Kožík" class="about-photo-circle" loading="lazy">
-                <h2 class="section-title">About Me: A Union of Two Worlds</h2>
-                <p>
-                    My professional journey is a logical connection of two passions: the precise world of law and the dynamic world of technology. As a lawyer specializing in commercial and technology law, I have always stood on the side of innovators. Gradually, I realized that a real competitive advantage comes not only from legal protection but from the active use of technology. That's why I delved into the field of artificial intelligence to offer my clients not just certainty, but also a catalyst for their growth.
-                </p>
-            </div>
-        </section>
-        
-        <section id="activities">
-            <div class="container">
-                <h2 class="section-title">My Projects and Activities</h2>
-                <div class="projects-layout">
-                    <div class="projects-grid">
-                        <div class="project-item">
-                            <a href="http://www.iustoria.cz" target="_blank" rel="noopener noreferrer">
-                                <img src="assets/images/logos/logo-iustoria_white.png" alt="Logo IUSTORIA, law firm" loading="lazy">
-                            </a>
-                            <p>Founding partner of a law firm</p>
-                        </div>
-                        <div class="project-item">
-                            <a href="https://www.pod-palavou.cz/klubova-setkani" target="_blank" rel="noopener noreferrer">
-                                <img src="assets/images/logos/logo-palava-horizons.png" alt="Logo Pálava Horizons" loading="lazy">
-                            </a>
-                            <p>Founding partner of Pálava Horizons</p>
-                        </div>
-                        <div class="project-item">
-                            <a href="https://www.facebook.com/profile.php?id=61561146905712" target="_blank" rel="noopener noreferrer">
-                                <img src="assets/images/logos/logo-bforb-tisnov.jpg" alt="Logo BforB Tišnov" loading="lazy">
-                            </a>
-                            <p>Moderator of a networking club</p>
-                        </div>
-                        <div class="project-item">
-                            <a href="https://klubpodnikavcu.cz/srazy-podnikavcu" target="_blank" rel="noopener noreferrer">
-                                <img src="assets/images/logos/logo-podnikavci.png" alt="Logo Klub Podnikavců" loading="lazy" style="filter: invert(1);">
-                            </a>
-                            <p>Member of the Entrepreneurs Club Tišnov</p>
-                        </div>
-                        <div class="project-item">
-                            <a href="https://www.smart-network.cz/" target="_blank" rel="noopener noreferrer">
-                                <img src="assets/images/logos/logo-smart-network.png" alt="Logo Smart Network" loading="lazy">
-                            </a>
-                            <p>Member of the Smart Network club</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="container" style="padding-top: 40px; border-top: 1px solid #e0e0e0; margin-top: 60px;">
-                <h3 class="section-subtitle" style="font-size: 1.8em; font-weight: 700; color: var(--primary-color); margin-bottom: 15px;">Where We Can Meet</h3>
-                <ul class="events-list">
-                    <li>
-                        <div class="event-date">Sep 2, 2025</div>
-                        <div class="event-details">
-                            <h4>Networking breakfast Pod Pálavou - AI Workshop</h4>
-                            <p>Krčma a hotel U Císařské cesty, Branišovice</p>
-                        </div>
-                        <a href="https://www.happenee.com/events/networking-pod-palavou-12" target="_blank" rel="noopener noreferrer" class="cta-button event-button">More info</a>
-                    </li>
-                    <li>
-                        <div class="event-date">Sep 4, 2025</div>
-                        <div class="event-details">
-                            <h4>Networking barbecue BforB Tišnov</h4>
-                            <p>Café u Palce, Tišnov</p>
-                        </div>
-                        <a href="https://www.facebook.com/profile.php?id=61561146905712" target="_blank" rel="noopener noreferrer" class="cta-button event-button">More info</a>
-                    </li>
-                    <li>
-                        <div class="event-date">Sep 16, 2025</div>
-                        <div class="event-details">
-                            <h4>Networking meeting of the Entrepreneurs Club Tišnov</h4>
-                            <p>Café u Palce, Tišnov</p>
-                        </div>
-                        <a href="https://klubpodnikavcu.cz/akce/sraz-podnikavcu-tisnov-25" target="_blank" rel="noopener noreferrer" class="cta-button event-button">More info</a>
-                    </li>
-                     <li>
-                        <div class="event-date">Oct 9, 2025</div>
-                        <div class="event-details">
-                            <h4>Innovation Week - seminar on AI compliance for B2B</h4>
-                            <p>ČSOB Campus Prague</p>
-                        </div>
-                        <a href="https://www.innovationweek.ai/en" target="_blank" rel="noopener noreferrer" class="cta-button event-button">More info</a>
-                    </li>
+                <h2 class="section-title reveal">Does This Sound Familiar?</h2>
+                <ul class="pain-list">
+                    <li class="reveal">Everyone keeps telling you that companies without AI won't survive. But nobody
+                        tells you what that means for your contracts, data and liability.</li>
+                    <li class="reveal reveal-delay-1">You worry your employees will upload company know-how into a
+                        public chatbot — and you'll find out when it's too late.</li>
+                    <li class="reveal reveal-delay-2">Lawyers bury you in thirty-page documents written in jargon you
+                        don't understand. You pay and hope it's all right.</li>
                 </ul>
-                    <div style="margin-top: 40px; padding-top: 30px; border-top: 1px dashed #ccc;">
-                    <h3 class="section-subtitle" style="font-size: 1.8em; font-weight: 700; color: var(--primary-color); margin-bottom: 15px;">Coming Soon</h3>
-                    <ul class="events-list">
-                         <li style="border-bottom: none;">
-                            <div class="event-date">Sep 19, 2025</div>
-                            <div class="event-details">
-                                <h4>Workshop on AI tools from Google</h4>
-                                <p>IUSTORIA, Slovákova 279, Brno</p>
-                            </div>
-                            <span class="cta-button event-button" style="background-color: #aaa; cursor: not-allowed;">Coming soon</span>
-                        </li>
+                <p class="pain-resolution reveal">You don't need to understand legalese or technology.<br>
+                    You need a partner who translates both — and stands behind the result.</p>
+            </div>
+        </section>
+
+        <section id="sluzby" class="premium-decor">
+            <div class="container">
+                <h2 class="section-title reveal">How I Can Help</h2>
+                <div class="services-grid">
+                    <div class="service-card service-primary reveal">
+                        <span class="service-badge">Legal Services</span>
+                        <h3>Law for Your Business</h3>
+                        <p>A partner, not a paragraph vendor. I handle law in the context of your business — clearly,
+                            with focus on what actually protects you.</p>
+                        <h4>My Focus Areas</h4>
+                        <ul>
+                            <li><strong>Commercial law:</strong> contracts you understand that minimise your risks.</li>
+                            <li><strong>Corporate law:</strong> company formation, share transfers, acquisitions.</li>
+                            <li><strong>AI compliance &amp; AI Act:</strong> legally sound AI adoption in your company.</li>
+                            <li><strong>Data &amp; know-how protection:</strong> GDPR, trade secrets, internal policies.</li>
+                            <li><strong>E-commerce and IT:</strong> legal certainty for your online business.</li>
+                            <li><strong>Employment law:</strong> rules for AI and technology in the workplace.</li>
+                        </ul>
+                        <p><a href="#propojit" class="service-link">Book a consultation →</a></p>
+                    </div>
+                    <div class="service-card reveal reveal-delay-1" id="skoleni">
+                        <span class="service-badge">Training</span>
+                        <h3>AI Training Led by a Lawyer</h3>
+                        <p>Hands-on training in Gemini, NotebookLM and other tools for companies and their teams.
+                            In a market full of AI promises, mine is led by an attorney — so you'll learn not only
+                            what to do with AI, but above all <strong>what never to put into it</strong>.</p>
+                        <h4>What Your Team Takes Away</h4>
+                        <ul>
+                            <li>Real workflows for admin, sales and management — no theory.</li>
+                            <li>Rules on what data to keep out of AI to protect compliance and know-how.</li>
+                            <li>A secure company environment for working with AI.</li>
+                        </ul>
+                        <p><a href="https://ai-workshop.cz" target="_blank" rel="noopener noreferrer"
+                                class="service-link">Dates and programme →</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PARALLAX SEPARATOR -->
+        <div class="parallax-separator">
+            <div class="parallax-content">
+                <h2>Between AI hype and fear runs a golden middle path. I'll guide you along it.</h2>
+                <a href="#propojit" class="cta-button">Let's Talk</a>
+            </div>
+        </div>
+
+        <section id="jak-pracuji">
+            <div class="container">
+                <h2 class="section-title reveal">How I Use AI Myself</h2>
+                <p class="section-subtitle">Honestly and transparently — the same way I teach companies.</p>
+                <div class="services-grid">
+                    <div class="service-card reveal">
+                        <h3>I Create Contracts with AI — Openly</h3>
+                        <p>Using the right tools, I map your situation, the typical pain points of your industry
+                            and the impact on everyone involved — and build a strategic concept for a contract
+                            designed to deliver more than you expect. AI reads thousands of pages of case law for
+                            me along the way. But no output ever leaves without my review — the full professional
+                            and reputational responsibility always rests with me.</p>
+                    </div>
+                    <div class="service-card reveal reveal-delay-1">
+                        <h3>Your Time Goes Into Strategy</h3>
+                        <p>Where traditional approaches mean hours of leafing through papers, I automate the routine.
+                            Your time and money go into what matters: a well-thought-out legal strategy for your
+                            business. You get a more complete service in less time.</p>
+                    </div>
+                    <div class="service-card reveal reveal-delay-2">
+                        <h3>Your Data Never Leaves the Office</h3>
+                        <p>Uploading sensitive data into public AI tools is a gamble — that's the first thing I teach
+                            companies. I work exclusively in a separated, secured environment where your trade
+                            secrets stay where they belong: in my office.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifikace" class="surface-tint premium-decor premium-decor--law">
+            <div class="container">
+                <h2 class="section-title reveal">AI and Cybersecurity Certifications</h2>
+                <p class="section-subtitle">I don't teach AI or cybersecurity from practice alone — my education in them is documented.</p>
+                <div class="cert-grid">
+                    <div class="cert-card reveal">
+                        <a href="assets/images/brand/cert-ai-manazeri.jpg" target="_blank" rel="noopener noreferrer" class="cert-image-link">
+                            <img src="assets/images/brand/cert-ai-manazeri.webp" width="640" height="476" alt="Certificate: Artificial Intelligence for Managers" loading="lazy">
+                        </a>
+                        <div class="cert-info">
+                            <h3>Artificial Intelligence for Managers — AI Strategy and Implementation</h3>
+                            <p>Accredited 16-hour course under the Czech National Recovery Plan (Ministry of Labour), led by a Google Developer Expert.</p>
+                            <span class="cert-meta">2025</span>
+                        </div>
+                    </div>
+                    <div class="cert-card reveal reveal-delay-1">
+                        <a href="assets/images/brand/cert-notebooklm.jpg" target="_blank" rel="noopener noreferrer" class="cert-image-link">
+                            <img src="assets/images/brand/cert-notebooklm.webp" width="640" height="360" alt="Certificate: Google Digital Garage — NotebookLM" loading="lazy">
+                        </a>
+                        <div class="cert-info">
+                            <h3>Google Digital Garage: NotebookLM</h3>
+                            <p>Certificate directly from Google for NotebookLM — one of the tools I use in my practice every day.</p>
+                            <span class="cert-meta">2025</span>
+                        </div>
+                    </div>
+                    <div class="cert-card reveal reveal-delay-2">
+                        <a href="assets/images/brand/cert-elements-of-ai.jpg" target="_blank" rel="noopener noreferrer" class="cert-image-link">
+                            <img src="assets/images/brand/cert-elements-of-ai.webp" width="640" height="452" alt="Certificate: Elements of AI" loading="lazy">
+                        </a>
+                        <div class="cert-info">
+                            <h3>Elements of AI</h3>
+                            <p>University of Helsinki course, run in the Czech Republic in cooperation with prg.ai, Charles University and CTU.</p>
+                            <span class="cert-meta">2025</span>
+                            <a href="https://certificates.mooc.fi/validate/qc710abc1in" target="_blank" rel="noopener noreferrer" class="cert-verify">Verify certificate online →</a>
+                        </div>
+                    </div>
+                    <div class="cert-card reveal reveal-delay-3">
+                        <a href="assets/images/brand/cert-nukib-zaklady-kyberbezpecnosti.jpg" target="_blank" rel="noopener noreferrer" class="cert-image-link">
+                            <img src="assets/images/brand/cert-nukib-zaklady-kyberbezpecnosti.webp" width="800" height="566" alt="Certificate: NÚKIB — Cybersecurity Fundamentals" loading="lazy">
+                        </a>
+                        <div class="cert-info">
+                            <h3>Cybersecurity Fundamentals</h3>
+                            <p>Certificate from the Czech National Cyber and Information Security Agency (NÚKIB), valid until 18 July 2028.</p>
+                            <span class="cert-meta">2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="spoluprace" class="premium-decor">
+            <div class="container">
+                <h2 class="section-title reveal">How We'll Work Together</h2>
+                <div class="process-grid">
+                    <div class="process-step reveal">
+                        <div class="step-number">1</div>
+                        <h3>We Meet</h3>
+                        <p>Free initial consultation — 30 minutes, in plain language. You describe your situation,
+                            I tell you what's worth solving and what isn't.</p>
+                    </div>
+                    <div class="process-step reveal reveal-delay-1">
+                        <div class="step-number">2</div>
+                        <h3>I Translate and Propose</h3>
+                        <p>I translate the tangled world of law and technology into business language. You get a
+                            clear proposal — you know exactly what, why and for how much.</p>
+                    </div>
+                    <div class="process-step reveal reveal-delay-2">
+                        <div class="step-number">3</div>
+                        <h3>I Guide the Rollout</h3>
+                        <p>I don't set something up and disappear. I stay at your side until the changes actually
+                            work — including making sure your team can handle them.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="surface-tint">
+            <div class="container about-container">
+                <img src="assets/images/brand/portret-gabriel.webp" width="440" height="440" alt="Portrait of Mgr. Gabriel Kožík"
+                    class="about-photo-circle reveal" loading="lazy">
+                <h2 class="section-title reveal">About Me</h2>
+                <p class="reveal">I am an attorney with more than ten years of practice in commercial and corporate
+                    law, and I practise as an independent attorney — you always deal with me directly. From the start of my career
+                    I have stood on the side of entrepreneurs and companies — and because I understand technology
+                    in depth and work with it daily, I can safely guide my clients through digital transformation
+                    as well. I'm not a trainer who knows the law. I am <strong>an attorney who understands the
+                    digital world</strong> — and I believe good legal service is one the client understands and
+                    can sleep well with.</p>
+            </div>
+        </section>
+
+        <section id="z-akci">
+            <div class="container">
+                <h2 class="section-title reveal">From Talks and Events</h2>
+                <p class="section-subtitle">Training and networking aren't marketing phrases — this is what they look like in practice.</p>
+                <div class="photostrip-grid">
+                    <figure class="reveal">
+                        <img src="assets/images/brand/akce-tyden-inovaci.webp" width="800" height="500" alt="AI Act in Practice talk at Innovation Week" loading="lazy">
+                        <figcaption>Innovation Week — AI Act in Practice</figcaption>
+                    </figure>
+                    <figure class="reveal reveal-delay-1">
+                        <img src="assets/images/brand/akce-cstech-summit.webp" width="800" height="500" alt="Talk at CS-Tech Summit" loading="lazy">
+                        <figcaption>CS-Tech Summit — AI and Law</figcaption>
+                    </figure>
+                    <figure class="reveal reveal-delay-2">
+                        <img src="assets/images/brand/akce-pod-palavou.webp" width="800" height="500" alt="Pod Pálavou networking" loading="lazy">
+                        <figcaption>Pod Pálavou Networking</figcaption>
+                    </figure>
+                    <figure class="reveal">
+                        <img src="assets/images/brand/akce-bforb-tisnov.webp" width="800" height="500" alt="Presentation at Business for Breakfast Tišnov" loading="lazy">
+                        <figcaption>Business for Breakfast Tišnov</figcaption>
+                    </figure>
+                    <figure class="reveal reveal-delay-1">
+                        <img src="assets/images/brand/akce-gemini-beseda.webp" width="800" height="500" alt="Talk with students of SŠ Gemini high school about the legal profession" loading="lazy">
+                        <figcaption>Talk with SŠ Gemini Students</figcaption>
+                    </figure>
+                    <figure class="reveal reveal-delay-2">
+                        <img src="assets/images/brand/akce-podnikavci-kurim.webp" width="800" height="500" alt="Entrepreneurs' Club Kuřim" loading="lazy">
+                        <figcaption>Entrepreneurs' Club Kuřim</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section id="kde-se-potkat">
+            <div class="container">
+                <h2 class="section-title reveal">Where to Meet Me in Person</h2>
+                <p class="section-subtitle">I'm not an anonymous law office. You'll find me at business events in
+                    Brno, Tišnov and the surrounding region — come say hello before we talk business.</p>
+                <div id="upcoming-events-wrapper">
+                    <ul id="upcoming-events-list" class="events-list">
                     </ul>
                 </div>
-            </div>
-            </section>
 
-        <section id="workshop">
-            <div class="container">
-                <h2 class="section-title">Current Workshop</h2>
-                <div class="workshop-container">
-                    <a href="https://www.smsticket.cz/vstupenky/58981-gemini-a-dalsi-nastroje-od-google-prakticky-efektivne-advokatni-kancelar-iustoria-brno" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/images/workshop-ai-google.jpg" alt="Invitation to the workshop Gemini | NotebookLM | Google AI Studio" loading="lazy">
-                    </a>
+                <div id="archiv-sekce">
+                    <details>
+                        <summary>
+                            Archive of past events </summary>
+                        <ul id="archive-events-list" class="events-list">
+                        </ul>
+                    </details>
+                </div>
+
+                <div class="projects-layout" style="margin-top: 50px;">
+                    <div class="projects-grid">
+                        <div class="project-item secondary-core"><a href="https://www.pod-palavou.cz/klubova-setkani" target="_blank"
+                                rel="noopener noreferrer"><img src="assets/images/logos/logo-palava-horizons.webp" width="480" height="214"
+                                    alt="Logo of Pálava Horizons" loading="lazy"></a>
+                            <p>Founding partner of Pálava Horizons</p>
+                        </div>
+                        <div class="project-item"><a href="https://www.facebook.com/profile.php?id=61561146905712"
+                                target="_blank" rel="noopener noreferrer"><img
+                                    src="assets/images/logos/logo-bforb-tisnov.webp" width="338" height="193" alt="Logo of BforB Tišnov"
+                                    loading="lazy"></a>
+                            <p>Member of BforB Na Svratce</p>
+                        </div>
+                        <div class="project-item"><a href="https://klubpodnikavcu.cz/srazy-podnikavcu" target="_blank"
+                                rel="noopener noreferrer"><img src="assets/images/logos/logo-podnikavci.webp" width="480" height="182"
+                                    alt="Logo of Klub Podnikavců" loading="lazy"></a>
+                            <p>Member of Entrepreneurs Club Tišnov</p>
+                        </div>
+                        <div class="project-item"><a href="https://www.smart-network.cz/" target="_blank"
+                                rel="noopener noreferrer"><img src="assets/images/logos/logo-smart-network.webp" width="279" height="60"
+                                    alt="Logo of Smart Network" loading="lazy"></a>
+                            <p>Member of Smart Network</p>
+                        </div>
+                        <div class="project-item"><a href="https://cct.cz/" target="_blank"
+                                rel="noopener noreferrer"><img src="assets/images/logos/cct.svg" width="95" height="94"
+                                    alt="Logo of Czech Cool Trade" loading="lazy"></a>
+                            <p>Member of Czech Cool Trade</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        
-        <section id="connect">
+
+        <script src="assets/js/events-loader.js"></script>
+
+        <section id="faq" class="surface-tint">
             <div class="container">
-                <h2 class="section-title">Let's Connect</h2>
-                <p class="section-subtitle">Whether you need to solve a complex legal problem or want to discover the potential of AI for your business, I am here for you.</p>
+                <h2 class="section-title reveal">What Business Owners Ask Me</h2>
+                <div class="faq-wrap">
+                    <details class="faq-item reveal">
+                        <summary>Does AI write your contracts?</summary>
+                        <div class="faq-body">I do create contracts with AI — and I'm open about how. Using the
+                            right tools, I first map your situation, the typical pain points of your kind of
+                            business and the impact on everyone involved. I brainstorm what you'll need tomorrow,
+                            not just today. The result is a strategic concept for a contract designed to deliver
+                            beyond your expectations. But no output ever leaves without my review and a check
+                            against the law and case law — the full professional and reputational responsibility
+                            for every contract always rests with me.</div>
+                    </details>
+                    <details class="faq-item reveal">
+                        <summary>Is my company data safe with you?</summary>
+                        <div class="faq-body">Yes — it's the foundation of my practice. I work exclusively in a
+                            closed, secured environment; no client data ever passes through public AI tools. And
+                            I'll teach you how to set up the same protection in your own company.</div>
+                    </details>
+                    <details class="faq-item reveal">
+                        <summary>Do I need to understand technology for us to work together?</summary>
+                        <div class="faq-body">Not at all. My role is that of a translator: I turn the complicated
+                            world of law and technology into clear business language. You understand your
+                            business — I'll take care of the rest.</div>
+                    </details>
+                    <details class="faq-item reveal">
+                        <summary>What if we're not dealing with AI at all yet?</summary>
+                        <div class="faq-body">That's fine — possibly even an advantage. Most problems I solve come
+                            from rushed adoption without rules. We'll start with what your company actually needs:
+                            from contracts and data protection to the first safe steps with AI, when the time
+                            comes.</div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section id="propojit">
+            <div class="container">
+                <h2 class="section-title reveal">Let's Connect</h2>
+                <p class="section-subtitle">Whether you're dealing with contracts, data protection or your first
+                    steps with AI — the first 30 minutes are free and in plain language.</p>
+
                 <div class="cta-container">
                     <div class="cta-buttons">
-                        <a href="mailto:kozik@iustoria.cz" class="cta-button">Email Me</a>
-                        <a href="tel:+420720265713" class="cta-button secondary">Call Me</a>
+                        <a href="mailto:info@gabrielkozik.cz" class="cta-button">Send Me an E-mail</a>
+                        <a href="tel:+420720265713" class="cta-button secondary">+420 720 265 713</a>
                     </div>
-                    <p class="booking-text">or book an online call</p>
-                    <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/kozik-iustoria/30min', text: 'Schedule Online Meeting', color: '#2ca58d', textColor: '#ffffff', branding: true});return false;" class="cta-button">Schedule Meeting - Calendly</a>
+                    <p class="booking-text">book an online call</p>
+                    <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1EOhosa3thnjELkDWGjdiafXMM3i4AxCennpDUUY8cJyrcsgYSyKrKh5006gSw25NEpbJxF-EY" target="_blank" rel="noopener noreferrer"
+                        class="cta-button">Pick a time for an online meeting</a>
+                </div>
+
+                <div class="form-container">
+                    <p class="section-subtitle"><strong>or leave me a quick message</strong></p>
+                    <form id="contact-form" class="contact-form" method="POST" novalidate>
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" id="name" name="name" required maxlength="200" autocomplete="name" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">E-mail</label>
+                            <input type="email" id="email" name="email" required maxlength="254" autocomplete="email" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea id="message" name="message" rows="5" required maxlength="5000" class="form-textarea"
+                                placeholder="Briefly describe what you need help with. We will discuss sensitive details in person."></textarea>
+                        </div>
+                        <div class="form-hp" aria-hidden="true">
+                            <label for="website">Leave empty</label>
+                            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                        </div>
+                        <input type="hidden" name="lang" value="">
+                        <input type="hidden" name="page" value="">
+                        <input type="hidden" name="ts" value="">
+                        <div class="form-actions">
+                            <button type="submit" class="cta-button">Send Message</button>
+                        </div>
+                        <div class="form-status" role="status" aria-live="polite" tabindex="-1" hidden></div>
+                        <p class="form-note">I will use the details from this form only to reply to you. I treat everything you write as confidential, and my duty of confidentiality as an attorney applies. Details are in the <a href="ochrana-osobnich-udaju-en">Privacy Policy</a>.</p>
+                        <noscript><p class="form-note">The form needs JavaScript. Please email me directly at <a href="mailto:info@gabrielkozik.cz">info@gabrielkozik.cz</a>.</p></noscript>
+                    </form>
                 </div>
             </div>
         </section>
@@ -642,94 +461,45 @@
     <footer>
         <div class="footer-grid">
             <div>
-                <h4>Mgr. Gabriel Kožík</h4>
-                <p>Lawyer & AI Strategist</p>
+                <p class="footer-heading">Mgr. Gabriel Kožík</p>
+                <p>Attorney for the New Era with AI</p>
                 <div class="social-icons-container">
-                    <a href="https://www.linkedin.com/in/gabriel-kozik/" target="_blank" class="social-icon" aria-label="LinkedIn profile">
-                        <svg><use xlink:href="#icon-linkedin"></use></svg>
-                    </a>
-                    <a href="https://www.facebook.com/somslovak" target="_blank" class="social-icon" aria-label="Facebook profile">
-                        <svg><use xlink:href="#icon-facebook"></use></svg>
-                    </a>
-                    <a href="https://www.youtube.com/@gabriel-kozik" target="_blank" class="social-icon" aria-label="YouTube channel">
-                        <svg><use xlink:href="#icon-youtube"></use></svg>
-                    </a>
+                    <a href="https://www.linkedin.com/in/gabriel-kozik/" target="_blank" class="social-icon"
+                        aria-label="LinkedIn profile"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                    <a href="https://www.facebook.com/somslovak" target="_blank" class="social-icon"
+                        aria-label="Facebook profile"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+                    <a href="https://www.instagram.com/kozik_gabriel/" target="_blank" class="social-icon"
+                        aria-label="Instagram profile"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.336 3.608 1.311.975.975 1.249 2.242 1.311 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.336 2.633-1.311 3.608-.975.975-2.242 1.249-3.608 1.311-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.336-3.608-1.311-.975-.975-1.249-2.242-1.311-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.336-2.633 1.311-3.608.975-.975 2.242-1.249 3.608-1.311 1.266-.058 1.646-.07 4.85-.07zm0 5.675a4.162 4.162 0 1 0 0 8.324 4.162 4.162 0 0 0 0-8.324zm0 6.864a2.702 2.702 0 1 1 0-5.404 2.702 2.702 0 0 1 0 5.404zm5.338-7.207a.972.972 0 1 1-1.944 0 .972.972 0 0 1 1.944 0z"/></svg></a>
+                    <a href="https://www.youtube.com/@gabriel-kozik" target="_blank" class="social-icon"
+                        aria-label="YouTube channel"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
                 </div>
             </div>
             <div>
-                <h4>Contact</h4>
-                <p>Email: <a href="mailto:kozik@iustoria.cz">kozik@iustoria.cz</a></p>
+                <p class="footer-heading">Contact</p>
+                <p>E-mail: <a href="mailto:info@gabrielkozik.cz">info@gabrielkozik.cz</a></p>
                 <p>Phone: <a href="tel:+420720265713">+420 720 265 713</a></p>
-                <p>Data Box: eygwp2c</p>
+                <p>Data box: eygwp2c</p>
             </div>
             <div>
-                <h4>Office</h4>
-                <p>IUSTORIA, law firm, s.r.o.</p>
-                <p>Slovákova 279/11, 602 00 Brno</p>
-                <p><a href="http://www.iustoria.cz" target="_blank">www.iustoria.cz</a></p>
+                <p class="footer-heading">Registered office</p>
+                <p>Slovákova 279/11, 602 00 Brno, Czech Republic</p>
             </div>
             <div>
-                <h4>Bar Association Registration</h4>
+                <p class="footer-heading">Czech Bar Association</p>
                 <p>Reg. No.: 19320</p>
-                <p>ID (natural person): 05187559</p>
-                <p>partner of s.r.o.</p>
+                <p>Company ID: 05187559</p>
+                <p>independent attorney</p>
+                <p><a href="https://www.cak.cz" target="_blank" rel="noopener noreferrer">Czech Bar Association</a></p>
             </div>
         </div>
         <div class="copyright">
-            <p>&copy; 2025 Mgr. Gabriel Kožík. All rights reserved.</p>
+            <p>&copy; 2026 Mgr. Gabriel Kožík. All rights reserved. · <a href="ochrana-osobnich-udaju-en">Privacy Policy</a> · <a href="#" data-cookie-settings>Cookie settings</a></p>
         </div>
     </footer>
-    
-    <script>
-        // --- Hamburger Menu ---
-        const hamburger = document.querySelector('.hamburger');
-        const navLinksContainer = document.querySelector('.nav-links-container');
 
-        function toggleMenu() {
-            const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
-            hamburger.setAttribute('aria-expanded', !isExpanded);
-            navLinksContainer.classList.toggle('active');
-        }
-
-        hamburger.addEventListener('click', toggleMenu);
-        hamburger.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter') {
-                toggleMenu();
-            }
-        });
-
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (navLinksContainer.classList.contains('active')) {
-                    navLinksContainer.classList.remove('active');
-                    hamburger.setAttribute('aria-expanded', 'false');
-                }
-            });
-        });
-
-        // --- Language Switcher Dropdown ---
-        const langButton = document.querySelector('.lang-button');
-        const langDropdown = document.querySelector('.lang-dropdown');
-
-        function toggleLangDropdown() {
-             const isExpanded = langButton.getAttribute('aria-expanded') === 'true';
-             langButton.setAttribute('aria-expanded', !isExpanded);
-             langButton.classList.toggle('active');
-             langDropdown.style.display = langDropdown.style.display === 'block' ? 'none' : 'block';
-        }
-
-        langButton.addEventListener('click', (e) => {
-            e.stopPropagation();
-            toggleLangDropdown();
-        });
-
-        window.addEventListener('click', (e) => {
-            if (!langButton.contains(e.target) && langDropdown.style.display === 'block') {
-                toggleLangDropdown();
-            }
-        });
-
-    </script>
-    <script defer src="/_vercel/analytics/script.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/contact-form.js"></script>
+    <script src="/assets/js/consent.js" defer></script>
 </body>
+
 </html>

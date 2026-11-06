@@ -41,3 +41,7 @@ https://gabrielkozik.cz/* https://www.gabrielkozik.cz/:splat 301
 
 # Oprava historickeho EN slugu
 /blog/2025/ai-agenti-nova-era-byznysu/ai-agents-new-business-era /blog/2025/ai-agenti-nova-era-byznysu/ai-agenti-nova-era-byznysu-en 301
+
+# Opravene chybne odkazy z vypisu blogu
+/blog/2025/novela-hlaseni-zamestnancu-2025/hlaseni-zamestnancu-2025 /blog/2025/novela-hlaseni-zamestnancu-2025/novela-hlaseni-zamestnancu-2025 301
+/blog/2025/podnikavci-kurim-rijen/podnikavci-kurim-rijen-en /blog/2025/podnikavci-kurim-rijen/podnikavci-kurim-rijen 302

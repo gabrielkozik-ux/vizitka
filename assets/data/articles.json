@@ -1,5 +1,37 @@
 [
     {
+        "id": "maiday-2026-ajtak-a-soudce",
+        "date": "2026-11-06",
+        "category": "expert",
+        "image": "blog/2026/maiday-2026-ajtak-a-soudce/header.jpg",
+        "cs": {
+            "title": "Ajťák a soudce na jednom pódiu: co jsem si odnesl z Maiday 2026",
+            "excerpt": "Firma, kde Honza dostal licenci bez školení, a soudci, kteří převzali rozsudek od AI. Dvě přednášky z Maiday 2026 a jedna společná lekce o lidském dohledu.",
+            "link": "blog/2026/maiday-2026-ajtak-a-soudce/maiday-2026-ajtak-a-soudce"
+        },
+        "en": {
+            "title": "An AI Engineer and a Judge on One Stage: What I Took Away from Maiday 2026",
+            "excerpt": "A company where Honza got an AI licence without training, and judges who adopted an AI-drafted judgment. Two talks from Maiday 2026 and one shared lesson about human oversight.",
+            "link": "blog/2026/maiday-2026-ajtak-a-soudce/maiday-2026-ajtak-a-soudce-en"
+        }
+    },
+    {
+        "id": "tlacitko-chatbot-dve-eura",
+        "date": "2026-11-03",
+        "category": "expert",
+        "image": "blog/2026/tlacitko-chatbot-dve-eura/header.jpg",
+        "cs": {
+            "title": "Tlačítko, chatbot a dvě eura za položku: co se mění pro podnikatele do roku 2028",
+            "excerpt": "Tlačítko pro odstoupení od 1. 1. 2027, poplatek 2 € za položku a ochrana OSVČ u úvěrů. A pravidlo, podle kterého má spotřebitel právo na vysvětlení člověkem, když mu finanční službu vysvětlil jen chatbot.",
+            "link": "blog/2026/tlacitko-chatbot-dve-eura/tlacitko-chatbot-dve-eura"
+        },
+        "en": {
+            "title": "Button, Chatbot and Two Euros per Item: What Changes for Czech Businesses by 2028",
+            "excerpt": "A withdrawal button from 1 January 2027, a €2 fee per item and loan protection for sole traders. Plus a rule giving consumers the right to a human explanation when only a chatbot explained a financial service.",
+            "link": "blog/2026/tlacitko-chatbot-dve-eura/tlacitko-chatbot-dve-eura-en"
+        }
+    },
+    {
         "id": "claude-gemini-chatgpt-srovnani",
         "date": "2026-07-30",
         "category": "expert",
@@ -396,7 +428,7 @@
         "en": {
             "title": "Marketing for Gen Z and Innovation in Bed Linen: Report from the Entrepreneurs Club in Kuřim",
             "excerpt": "A look back at the October meeting of the Entrepreneurs Club in Kuřim, where content marketing for the young generation was discussed and an innovative project of non-bunching bed linen was introduced.",
-            "link": "blog/2025/podnikavci-kurim-rijen/podnikavci-kurim-rijen-en"
+            "link": "blog/2025/podnikavci-kurim-rijen/podnikavci-kurim-rijen"
         }
     },
     {
@@ -439,7 +471,7 @@
         "cs": {
             "title": "Konec tolerance: Novela zákona zpřísňuje zaměstnávání cizinců od 1. 10. 2025",
             "excerpt": "Dosavadní benevolence v hlášení cizinců končí. Novela zákona o zaměstnanosti ruší možnost zpětného hlášení a zavádí fikci „nelegální práce“ s likvidačními pokutami.",
-            "link": "blog/2025/novela-hlaseni-zamestnancu-2025/hlaseni-zamestnancu-2025"
+            "link": "blog/2025/novela-hlaseni-zamestnancu-2025/novela-hlaseni-zamestnancu-2025"
         },
         "en": {
             "title": "End of Tolerance: New Law Tightens Rules for Employing Foreigners from Oct 1, 2025",

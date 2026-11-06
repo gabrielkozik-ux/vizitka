@@ -69,6 +69,8 @@
     /* meta, popisky, 5.44:1 (drive #94a3b8 = 2.6:1, propadalo) */
     --hairline: #e6eaf0;
     /* 1px linky a ramecky */
+    --danger-600: #b42318;
+    /* chybove hlasky (formular), 6.5:1 na bile */
 
     /* --- BARVY: text na tmavem pozadi -------------------------------
        Svetle sedé z palety neutralu na navy NEFUNGUJI: --ink-muted ma
@@ -532,7 +534,7 @@ section {
             rgba(8, 26, 46, 0.95) 0%,
             rgba(8, 26, 46, 0.78) 42%,
             rgba(8, 26, 46, 0.32) 100%),
-        url('assets/images/hero-pod-palavou.jpg');
+        url('assets/images/hero-pod-palavou.webp');
     background-size: cover;
     background-position: 70% 42%;
     background-repeat: no-repeat;
@@ -544,6 +546,17 @@ section {
     align-items: flex-start;
     padding: 0 var(--sp-24);
     text-align: left;
+}
+
+/* Na mobilu staci mensi varianta fotky (preload v <head> pouziva stejny breakpoint). */
+@media (max-width: 768px) {
+    .hero {
+        background-image: linear-gradient(95deg,
+                rgba(8, 26, 46, 0.95) 0%,
+                rgba(8, 26, 46, 0.78) 42%,
+                rgba(8, 26, 46, 0.32) 100%),
+            url('assets/images/hero-pod-palavou-900.webp');
+    }
 }
 
 .hero .container {
@@ -611,12 +624,18 @@ section {
    potreba zadne mobilni @media prepisy ani globalni h1 s !important. */
 
 .page-header {
-    background-image: linear-gradient(rgba(12, 35, 64, 0.8), rgba(12, 35, 64, 0.8)), url('assets/images/uvodni-obrazek.jpg');
+    background-image: linear-gradient(rgba(12, 35, 64, 0.8), rgba(12, 35, 64, 0.8)), url('assets/images/uvodni-obrazek.webp');
     background-size: cover;
     background-position: center;
     padding: var(--sp-80) var(--sp-20);
     text-align: center;
     color: var(--surface);
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        background-image: linear-gradient(rgba(12, 35, 64, 0.8), rgba(12, 35, 64, 0.8)), url('assets/images/uvodni-obrazek-900.webp');
+    }
 }
 
 .page-header h1 {
@@ -809,6 +828,138 @@ section {
 .form-actions {
     text-align: center;
     margin-top: var(--sp-20);
+}
+
+.form-actions .cta-button:disabled {
+    opacity: 0.7;
+    cursor: wait;
+}
+
+/* Past na roboty: pole je mimo obrazovku, clovek ho nevidi ani nevyplni. */
+.form-hp {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.form-note {
+    margin-top: var(--sp-20);
+    font-size: 0.85em;
+    line-height: 1.5;
+    color: var(--ink-muted);
+    text-align: center;
+}
+
+.form-note a {
+    color: var(--bronze-600);
+    text-decoration: underline;
+}
+
+.form-status {
+    margin-top: var(--sp-20);
+    padding: var(--sp-16) var(--sp-20);
+    border-radius: var(--r-sm);
+    line-height: 1.5;
+}
+
+.form-status a {
+    color: inherit;
+    font-weight: 600;
+}
+
+.form-status.is-success {
+    background: var(--bronze-50);
+    color: var(--navy-900);
+    text-align: center;
+}
+
+.form-status.is-error {
+    border: 2px solid var(--danger-600);
+    color: var(--danger-600);
+}
+
+/* Po odeslani zustane jen podekovani. */
+.contact-form.is-sent .form-group,
+.contact-form.is-sent .form-actions,
+.contact-form.is-sent .form-note {
+    display: none;
+}
+
+/* --- Cookie lista (assets/js/consent.js) ---
+   Obe tlacitka zamerne stejne vyrazna: odmitnuti nesmi byt schovane. */
+.cookie-banner {
+    position: fixed;
+    left: var(--sp-16);
+    right: var(--sp-16);
+    bottom: var(--sp-16);
+    z-index: 1000;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: var(--sp-20) var(--sp-24);
+    background: var(--surface);
+    color: var(--ink-body);
+    border-radius: var(--r-md);
+    box-shadow: var(--sh-4);
+    display: flex;
+    align-items: center;
+    gap: var(--sp-20);
+}
+
+.cookie-banner[hidden] {
+    display: none;
+}
+
+.cookie-banner-text {
+    margin: 0;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.cookie-banner-text a {
+    color: var(--bronze-600);
+    text-decoration: underline;
+}
+
+.cookie-banner-actions {
+    display: flex;
+    gap: var(--sp-12);
+    flex-shrink: 0;
+}
+
+.cookie-btn {
+    font: inherit;
+    font-weight: 600;
+    font-size: 0.9em;
+    padding: 10px var(--sp-20);
+    border-radius: var(--r-pill);
+    border: 2px solid var(--navy-800);
+    background: var(--navy-800);
+    color: var(--surface);
+    cursor: pointer;
+}
+
+.cookie-btn:hover {
+    background: var(--navy-900);
+    border-color: var(--navy-900);
+}
+
+.cookie-btn:focus-visible {
+    outline: none;
+    box-shadow: var(--ring-focus);
+}
+
+@media (max-width: 680px) {
+    .cookie-banner {
+        flex-direction: column;
+        align-items: stretch;
+        padding: var(--sp-16);
+    }
+
+    .cookie-banner-actions .cookie-btn {
+        flex: 1;
+    }
 }
 
 /* --- Animace: fade-in komponent --- */
@@ -1024,7 +1175,7 @@ section {
 
 .parallax-separator {
     background-image: linear-gradient(rgba(8, 26, 46, 0.82), rgba(8, 26, 46, 0.82)),
-        url('assets/images/uvodni-obrazek.jpg');
+        url('assets/images/uvodni-obrazek.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1034,6 +1185,13 @@ section {
     justify-content: center;
     position: relative;
     margin: 0;
+}
+
+@media (max-width: 768px) {
+    .parallax-separator {
+        background-image: linear-gradient(rgba(8, 26, 46, 0.82), rgba(8, 26, 46, 0.82)),
+            url('assets/images/uvodni-obrazek-900.webp');
+    }
 }
 
 .parallax-content {
@@ -1228,6 +1386,7 @@ section {
 
 .photostrip-grid img {
     width: 100%;
+    height: auto;
     aspect-ratio: 16 / 10;
     object-fit: cover;
     border-radius: var(--r-sm);
@@ -1347,9 +1506,10 @@ section {
     min-width: 0;
 }
 
-.event-details-new h4 {
+.event-details-new h3 {
     margin: 0 0 6px;
     font-size: 1.15em;
+    letter-spacing: 0;
     color: var(--navy-800);
     line-height: 1.4;
 }
@@ -1521,6 +1681,7 @@ section {
 }
 
 .project-item img {
+    width: auto;
     max-width: 100%;
     height: 80px;
     object-fit: contain;
@@ -2218,8 +2379,14 @@ footer {
     margin: 0 auto;
 }
 
-.footer-grid h4 {
+/* Nadpisy sloupcu v paticce nejsou nadpisy obsahu (h4 preskakoval uroven
+   v osnove stranky), proto <p class="footer-heading"> se vzhledem puvodniho h4. */
+.footer-grid .footer-heading {
+    font-family: 'Lora', Georgia, serif;
+    font-weight: 700;
+    letter-spacing: 0;
     color: var(--surface);
+    margin-top: 1.33em;
     margin-bottom: var(--sp-20);
     font-size: 1.2em;
     border-bottom: 2px solid var(--bronze-500);
@@ -2282,6 +2449,15 @@ footer .social-icon:hover {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--on-deep-muted);
     font-size: 0.85em;
+}
+
+.copyright a {
+    color: var(--on-deep-muted);
+    text-decoration: underline;
+}
+
+.copyright a:hover {
+    color: var(--bronze-200);
 }
 
 @media (max-width: 768px) {

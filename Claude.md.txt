@@ -1,0 +1,8 @@
+# Pravidla práce (závazná)
+1. Než cokoli změníš, přečti si repozitář a zjisti stack, build proces a strukturu obsahu.
+2. NEMĚŇ texty článků ani obsah stránek bez mého schválení. Textové úpravy navrhni
+   do reportu jako „před → po“, já rozhodnu.
+3. Nepřidávej nové závislosti, frameworky ani externí služby (analytika, fonty z CDN,
+   chatboty) bez schválení. Preferuj řešení bez JavaScriptu, kde to jde.
+4. Neměň doménu, URL strukturu ani přesměrování bez schválení (riziko ztráty indexace).
+5. Když si nejsi jistý, zeptej se. Nehádej.

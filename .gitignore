@@ -24,3 +24,10 @@ _pracovni/_archiv/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# --- Interni podklady k optimalizaci webu (nesmi na produkci) -------------
+# Audit, changelog optimalizace a pravidla pro AI asistenta. Zustavaji
+# na disku, ale neverzuji se a Cloudflare Pages je nenasadi.
+AUDIT.md
+CHANGELOG-optimalizace.md
+Claude.md.txt

@@ -14,6 +14,7 @@ Kontakt: info@gabrielkozik.cz, +420 720 265 713. Úvodní konzultace 30 minut zd
 - [Kontakt a rezervace konzultace](https://www.gabrielkozik.cz/#propojit)
 
 ## Odborné články
+- [Elektronický podpis v roce 2026: co stačí, co ne a kde se firmy nejčastěji spálí](https://www.gabrielkozik.cz/blog/2026/elektronicky-podpis/elektronicky-podpis): Klik, Bank iD, DocuSign, nebo kvalifikovaný certifikát? Jaký podpis stačí na smlouvu, převod podílu nebo výpověď, kolik stojí a jak ho prokázat, když ho protistrana zpochybní.
 - [Ajťák a soudce na jednom pódiu: co jsem si odnesl z Maiday 2026](https://www.gabrielkozik.cz/blog/2026/maiday-2026-ajtak-a-soudce/maiday-2026-ajtak-a-soudce): Firma, kde Honza dostal licenci bez školení, a soudci, kteří převzali rozsudek od AI. Dvě přednášky z Maiday 2026 a jedna společná lekce o lidském dohledu.
 - [Tlačítko, chatbot a dvě eura za položku: co se mění pro podnikatele do roku 2028](https://www.gabrielkozik.cz/blog/2026/tlacitko-chatbot-dve-eura/tlacitko-chatbot-dve-eura): Tlačítko pro odstoupení od 1. 1. 2027, poplatek 2 € za položku a ochrana OSVČ u úvěrů. A pravidlo, podle kterého má spotřebitel právo na vysvětlení člověkem, když mu finanční službu vysvětlil jen chatbot.
 - [Claude vs. Gemini vs. ChatGPT: který AI nástroj zvolit jako freelancer nebo malá firma?](https://www.gabrielkozik.cz/blog/2026/claude-gemini-chatgpt-srovnani/claude-gemini-chatgpt-srovnani): Srovnání tří AI asistentů pro podnikatele a malé týmy — ceny, silné a slabé stránky, a hlavně: kam smíte nahrát firemní a klientská data.

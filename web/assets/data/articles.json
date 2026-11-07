@@ -1,5 +1,22 @@
 [
     {
+        "id": "elektronicky-podpis",
+        "date": "2026-11-07",
+        "category": "expert",
+        "image": "blog/2026/elektronicky-podpis/header.jpg",
+        "image_en": "blog/2026/elektronicky-podpis/header-en.jpg",
+        "cs": {
+            "title": "Elektronický podpis v roce 2026: co stačí, co ne a kde se firmy nejčastěji spálí",
+            "excerpt": "Klik, Bank iD, DocuSign, nebo kvalifikovaný certifikát? Jaký podpis stačí na smlouvu, převod podílu nebo výpověď, kolik stojí a jak ho prokázat, když ho protistrana zpochybní.",
+            "link": "blog/2026/elektronicky-podpis/elektronicky-podpis"
+        },
+        "en": {
+            "title": "Electronic Signatures in 2026: What Is Enough, What Isn’t and Where Companies Get Burned",
+            "excerpt": "A click, Bank iD, DocuSign or a qualified certificate? Which signature is enough for a contract, a share transfer or an employee notice under Czech law, what it costs and how to prove it if the other party disputes it.",
+            "link": "blog/2026/elektronicky-podpis/elektronicky-podpis-en"
+        }
+    },
+    {
         "id": "maiday-2026-ajtak-a-soudce",
         "date": "2026-11-06",
         "category": "expert",

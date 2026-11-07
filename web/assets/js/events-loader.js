@@ -17,6 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
             // Seřadíme akce podle data (od nejbližší po nejvzdálenější)
             events.sort((a, b) => new Date(a.date) - new Date(b.date));
 
+            // Staticky vypis z HTML (nastroje/generuj-vypisy.py) nahradime aktualnim podle dnesniho data
+            eventsContainer.innerHTML = '';
+            archiveContainer.innerHTML = '';
+
             const today = new Date();
             today.setHours(0, 0, 0, 0); // Ignorujeme čas, porovnáváme dny
 

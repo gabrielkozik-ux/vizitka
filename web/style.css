@@ -149,6 +149,14 @@
     --wrap: 1140px;
 }
 
+/* Zpetna kompatibilita: CTA box ve 24 clancich ma inline styl se starymi nazvy
+   promennych (--gold-soft, --secondary-color). Bez techto aliasu byl box bez
+   pozadi a ramecku. */
+:root {
+    --gold-soft: var(--bronze-50);
+    --secondary-color: var(--bronze-500);
+}
+
 /* ======================================================================
    2. RESET A ZAKLADNI TYPOGRAFIE
    ====================================================================== */
@@ -983,6 +991,14 @@ section {
     transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
+/* Bez JavaScriptu (vypnuty JS, crawlery s renderem) nesmi zustat obsah neviditelny */
+@media (scripting: none) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
+
 .reveal.visible {
     opacity: 1;
     transform: none;
@@ -1746,6 +1762,12 @@ section {
     border-color: var(--navy-800);
 }
 
+/* Staticky vypis clanku: s JS ukazat jen 1. stranku, nez ji blog-loader.js prekresli.
+   Bez JS (crawlery, vypnuty JS) jsou videt vsechny karty. */
+.js .article-card--dalsi {
+    display: none;
+}
+
 #articles-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1931,6 +1953,20 @@ section {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 600;
+}
+
+/* Kontextova poznamka pod hlavickou clanku (napr. obsah z doby IUSTORIA) */
+.article-context-note {
+    max-width: 640px;
+    margin: var(--sp-16) auto 0;
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--ink-body);
+    background: var(--surface-tint);
+    border-left: 3px solid var(--bronze-500);
+    border-radius: var(--r-sm);
+    text-align: left;
 }
 
 .article-content {

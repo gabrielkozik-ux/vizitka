@@ -15,13 +15,13 @@ HLAVICKA = """# Mgr. Gabriel Kožík – advokát pro novou dobu s AI
 > Samostatný advokát (ČAK, ev. č. 19320) se sídlem v Brně, působící v Brně
 > a na Tišnovsku. Pomáhá majitelům malých a středních firem s obchodním
 > a korporátním právem, ochranou dat (GDPR), AI compliance (AI Act)
-> a bezpečným zaváděním AI do firem. Vede praktická AI školení pro firmy.
+> a bezpečným zaváděním AI do firem, včetně školení na míru pro firemní týmy.
 
 Komunikace v češtině, anglická verze webu je k dispozici.
 Kontakt: info@gabrielkozik.cz, +420 720 265 713. Úvodní konzultace 30 minut zdarma.
 
 ## Služby a kontakt
-- [Právní služby a AI školení](https://www.gabrielkozik.cz/#sluzby): obchodní a korporátní právo, AI Act, GDPR, e-commerce, pracovní právo
+- [Právní služby a AI compliance](https://www.gabrielkozik.cz/#sluzby): obchodní a korporátní právo, AI Act, GDPR, e-commerce, pracovní právo, školení na míru
 - [Jak pracuji s AI](https://www.gabrielkozik.cz/#jak-pracuji): transparentní a bezpečné využití AI v advokátní praxi
 - [Kontakt a rezervace konzultace](https://www.gabrielkozik.cz/#propojit)
 

@@ -1,3 +1,5 @@
+// Seznam clanku je v HTML staticky (nastroje/generuj-vypisy.py, viditelny i bez JS).
+// Tento skript ho po nacteni articles.json prekresli a pridava filtry a strankovani.
 document.addEventListener('DOMContentLoaded', async () => {
     const articlesContainer = document.getElementById('articles-container');
     const paginationContainer = document.querySelector('.pagination-container');
@@ -66,6 +68,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     };
     const t = translations[lang] || translations.en;
 
+    // Texty z JSON vkladame do HTML -> escapovat (uvozovky v titulku by rozbily atribut alt)
+    const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
     try {
         const response = await fetch('assets/data/articles.json');
         if (!response.ok) throw new Error('Failed to load articles');
@@ -86,7 +91,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     } catch (error) {
         console.error('Error loading articles:', error);
-        articlesContainer.innerHTML = '<p>Error loading articles. Please try again later.</p>';
+        // Staticky vypis z HTML (nastroje/generuj-vypisy.py) zustane, jen zobrazime vsechny karty
+        document.documentElement.classList.remove('js');
+        if (!articlesContainer.querySelector('.article-card')) {
+            articlesContainer.innerHTML = '<p>Error loading articles. Please try again later.</p>';
+        }
     }
 
     // Filter Logic
@@ -143,13 +152,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             card.innerHTML = `
                 <div class="article-image">
-                    <img src="${imageSrc}" alt="${data.title}" loading="lazy">
+                    <img src="${esc(imageSrc)}" alt="${esc(data.title)}" loading="lazy">
                 </div>
                 <div class="article-content">
                     <p class="article-meta">${t.published}: ${dateStr}</p>
-                    <h2><a href="${data.link}">${data.title}</a></h2>
-                    <p class="article-excerpt">${data.excerpt}</p>
-                    <a href="${data.link}" class="read-more-btn">${t.readMore}</a>
+                    <h2><a href="${esc(data.link)}">${esc(data.title)}</a></h2>
+                    <p class="article-excerpt">${esc(data.excerpt)}</p>
+                    <a href="${esc(data.link)}" class="read-more-btn">${t.readMore}</a>
                 </div>
             `;
             articlesContainer.appendChild(card);

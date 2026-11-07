@@ -3,13 +3,13 @@
 > Samostatný advokát (ČAK, ev. č. 19320) se sídlem v Brně, působící v Brně
 > a na Tišnovsku. Pomáhá majitelům malých a středních firem s obchodním
 > a korporátním právem, ochranou dat (GDPR), AI compliance (AI Act)
-> a bezpečným zaváděním AI do firem. Vede praktická AI školení pro firmy.
+> a bezpečným zaváděním AI do firem, včetně školení na míru pro firemní týmy.
 
 Komunikace v češtině, anglická verze webu je k dispozici.
 Kontakt: info@gabrielkozik.cz, +420 720 265 713. Úvodní konzultace 30 minut zdarma.
 
 ## Služby a kontakt
-- [Právní služby a AI školení](https://www.gabrielkozik.cz/#sluzby): obchodní a korporátní právo, AI Act, GDPR, e-commerce, pracovní právo
+- [Právní služby a AI compliance](https://www.gabrielkozik.cz/#sluzby): obchodní a korporátní právo, AI Act, GDPR, e-commerce, pracovní právo, školení na míru
 - [Jak pracuji s AI](https://www.gabrielkozik.cz/#jak-pracuji): transparentní a bezpečné využití AI v advokátní praxi
 - [Kontakt a rezervace konzultace](https://www.gabrielkozik.cz/#propojit)
 
@@ -26,7 +26,7 @@ Kontakt: info@gabrielkozik.cz, +420 720 265 713. Úvodní konzultace 30 minut zd
 - [Konec pokut pro lidi a nástup algoritmů: Jak nová legislativa změní platformovou práci a švarcsystém](https://www.gabrielkozik.cz/blog/2026/zakon-o-platformove-praci/zakon-o-platformove-praci): Česká republika bude od ledna 2027 regulovat využití algoritmického řízení a švarcsystém. Zjistěte, jaké nové povinnosti a rizika to přináší zaměstnavatelům.
 - [Jak si jednoduše personifikovat Gemini?](https://www.gabrielkozik.cz/blog/2026/jak-si-jednoduse-personifikovat-gemini/jak-si-jednoduse-personifikovat-gemini): Velký průvodce možnostmi přizpůsobení a personifikace Google Gemini. Jak nastavit paměť, propojit aplikace přes rozšíření a importovat data z ChatGPT či Claude.
 - [Filosofie AI v advokacii: Proč se nebát synergie](https://www.gabrielkozik.cz/blog/2026/filosofie-ai-v-advokacii/filosofie-ai-v-advokacii): Proč by advokacie a AI měly fungovat v synergii? Moje vize spojení lidské expertízy a technologické preciznosti pro lepší výsledky klientů.
-- [AI akt pro zaneprázdněné: Co musíte vědět v 5 minutách](https://www.gabrielkozik.cz/blog/2026/ai-act-pro-zaneprazdnene/ai-act-pro-zaneprazdnene): Cíl: Rychlý a srozumitelný přehled pro manažery a majitele firem. Obsah: Co je AI akt, proč vznikl, koho se týká a jaký je jeho hlavní princip.
+- [AI akt pro zaneprázdněné: Co musíte vědět v 5 minutách](https://www.gabrielkozik.cz/blog/2026/ai-act-pro-zaneprazdnene/ai-act-pro-zaneprazdnene): Rychlý a srozumitelný přehled AI aktu pro manažery a majitele firem: co to je, proč vznikl, koho se týká a na jakém principu stojí.
 - [Slovník pojmů AI Actu: Mluvíte jazykem regulátorů?](https://www.gabrielkozik.cz/blog/2025/slovnik-pojmu-ai-act/slovnik-pojmu-ai-act): Klíčové pojmy AI Actu vysvětleny: Co je systém AI, poskytovatel, zavádějící subjekt či rizikové kategorie. Nezbytný slovník pro firmy a manažery.
 - [Konec tolerance: Novela zákona zpřísňuje zaměstnávání cizinců od 1. 10. 2025](https://www.gabrielkozik.cz/blog/2025/novela-hlaseni-zamestnancu-2025/novela-hlaseni-zamestnancu-2025): Dosavadní benevolence v hlášení cizinců končí. Novela zákona o zaměstnanosti ruší možnost zpětného hlášení a zavádí fikci „nelegální práce“ s likvidačními pokutami.
 - [Převod podílu v s.r.o. a notářský zápis: Mýty a fakta](https://www.gabrielkozik.cz/blog/2025/prevod-podilu-sro-nz/prevod-podilu-sro-nz): Analýza, zda je pro souhlas valné hromady s převodem podílu nutný notářský zápis. Klíčová soudní rozhodnutí a praktické dopady pro s.r.o.

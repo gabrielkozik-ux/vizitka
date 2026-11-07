@@ -218,6 +218,15 @@
         .social-icon { display: inline-flex; color: #aab8c9; }
         .social-icon svg { width: 22px; height: 22px; fill: currentColor; display: block; }
         footer .copyright a { color: #aab8c9; }
+        /* Autor box pod clankem (stejny jako ve zbytku webu) */
+        .author-box { display: flex; gap: 20px; align-items: flex-start; margin: 48px 0 24px; padding: 24px; background: #f7f8fa; border: 1px solid #e6eaf0; border-radius: 6px; text-align: left; }
+        .author-box-photo { flex: none; width: 72px; height: 72px; border-radius: 50%; object-fit: cover; }
+        .author-box-name { margin: 0 0 6px; font-weight: 700; font-size: 1.1rem; color: #0c2340; }
+        .author-box-text { margin: 0; font-size: .95rem; line-height: 1.6; color: #334155; }
+        .author-box-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+        .author-box-actions .cta-button { padding: 10px 20px; border-radius: 999px; background: #0c2340; color: #fff; text-decoration: none; font-weight: 600; }
+        .author-box-actions .cta-button.secondary { background: transparent; color: #0c2340; border: 2px solid #0c2340; }
+        @media (max-width: 600px) { .author-box { flex-direction: column; } }
     </style>
 </head>
 
@@ -320,6 +329,17 @@
                     smysl a potenciál. Děkuji organizátorům za skvěle připravenou akci a všem účastníkům za podnětné
                     rozhovory. Už teď se těším na další ročník!</p>
 
+                <aside class="author-box" aria-label="O autorovi">
+                    <img src="../../../assets/images/profilova-fotka-nav.webp" width="96" height="96" alt="Mgr. Gabriel Kožík" class="author-box-photo" loading="lazy">
+                    <div class="author-box-body">
+                        <p class="author-box-name">Mgr. Gabriel Kožík</p>
+                        <p class="author-box-text">Advokát (ev. č. ČAK 19320) se zaměřením na obchodní a korporátní právo, smlouvy a AI compliance. Pomáhám malým a středním firmám v Brně, na Tišnovsku i online.</p>
+                        <div class="author-box-actions">
+                            <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1EOhosa3thnjELkDWGjdiafXMM3i4AxCennpDUUY8cJyrcsgYSyKrKh5006gSw25NEpbJxF-EY" class="cta-button" target="_blank" rel="noopener noreferrer">Rezervovat 30 min zdarma</a>
+                            <a href="tel:+420720265713" class="cta-button secondary">Zavolat</a>
+                        </div>
+                    </div>
+                </aside>
                 <a href="../../../blog" class="back-to-blog">← Zpět na přehled článků</a>
             </article>
         </div>

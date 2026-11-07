@@ -2053,6 +2053,127 @@ section {
     border: 0;
 }
 
+/* YouTube az po kliknuti (assets/js/yt-facade.js): do kliknuti zadny pozadavek na Google */
+.yt-facade {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--sp-12);
+    padding: var(--sp-20);
+    background: var(--surface-deep);
+    color: var(--surface);
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.yt-facade:hover,
+.yt-facade:focus-visible {
+    color: var(--surface);
+}
+
+.yt-facade-play {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--bronze-500);
+    transition: transform var(--dur-2) var(--ease);
+}
+
+.yt-facade-play::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 54%;
+    transform: translate(-50%, -50%);
+    border-style: solid;
+    border-width: 11px 0 11px 18px;
+    border-color: transparent transparent transparent var(--surface);
+}
+
+.yt-facade:hover .yt-facade-play,
+.yt-facade:focus-visible .yt-facade-play {
+    transform: scale(1.08);
+}
+
+.yt-facade-label {
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.yt-facade-note {
+    max-width: 440px;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: var(--on-deep-muted);
+}
+
+@media (max-width: 480px) {
+    .yt-facade { gap: 6px; padding: var(--sp-12); }
+    .yt-facade-play { width: 48px; height: 48px; }
+    .yt-facade-play::after { border-width: 8px 0 8px 14px; }
+    .yt-facade-note { font-size: 0.72rem; }
+}
+
+/* Autor box pod clankem */
+.author-box {
+    display: flex;
+    gap: var(--sp-20);
+    align-items: flex-start;
+    margin: var(--sp-48) 0 var(--sp-24);
+    padding: var(--sp-24);
+    background: var(--surface-tint);
+    border: 1px solid var(--hairline);
+    border-radius: var(--r-sm);
+    text-align: left;
+}
+
+.article-content .author-box-photo,
+.author-box-photo {
+    flex: none;
+    width: 72px;
+    height: 72px;
+    margin: 0;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: var(--ring-hairline);
+}
+
+.author-box-name {
+    margin: 0 0 6px;
+    font-family: 'Lora', Georgia, serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--navy-800);
+}
+
+.author-box-text {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--ink-body);
+}
+
+.author-box-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-12);
+    margin-top: var(--sp-16);
+}
+
+.author-box-actions .cta-button {
+    padding: 10px var(--sp-20);
+    font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+    .author-box { flex-direction: column; }
+}
+
 /* Citat — editorialni, ne "sedy box s kurzivou".
    Kurziva v Inter se na delsim citatu cte spatne; Lora bez kurzivy drzi
    vaznost a odlisi citat od bezneho textu sama. */

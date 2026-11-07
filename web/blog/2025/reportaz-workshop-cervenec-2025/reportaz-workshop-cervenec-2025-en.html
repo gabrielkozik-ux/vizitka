@@ -95,9 +95,12 @@
                 </ul>
 
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/e1234567890" title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <a class="yt-facade" href="https://www.youtube.com/watch?v=e1234567890" target="_blank" rel="noopener noreferrer"
+                        data-yt-id="e1234567890" data-yt-title="The First AI Workshop Kicked Off! A Great Group and Lots of Discoveries" aria-label="Play video: The First AI Workshop Kicked Off! A Great Group and Lots of Discoveries">
+                        <span class="yt-facade-play" aria-hidden="true"></span>
+                        <span class="yt-facade-label">Play video</span>
+                        <span class="yt-facade-note">The video loads from YouTube only after you click. Only then does your browser connect to Google's servers.</span>
+                    </a>
                 </div>
 
                 <blockquote>What made me happiest was when participants realized that AI isn't just for "IT guys."
@@ -113,6 +116,17 @@
                 <a href="../reportaz-workshop-srpen-2025/reportaz-workshop-srpen-2025-en.html" class="cta-button">Check
                     out the next workshop</a>
 
+                <aside class="author-box" aria-label="About the author">
+                    <img src="../../../assets/images/profilova-fotka-nav.webp" width="96" height="96" alt="Mgr. Gabriel Kožík" class="author-box-photo" loading="lazy">
+                    <div class="author-box-body">
+                        <p class="author-box-name">Mgr. Gabriel Kožík</p>
+                        <p class="author-box-text">Attorney (Czech Bar Association reg. no. 19320) focusing on commercial and corporate law, contracts and AI compliance. I help small and medium-sized businesses in Brno, the Tišnov region and online.</p>
+                        <div class="author-box-actions">
+                            <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1EOhosa3thnjELkDWGjdiafXMM3i4AxCennpDUUY8cJyrcsgYSyKrKh5006gSw25NEpbJxF-EY" class="cta-button" target="_blank" rel="noopener noreferrer">Book 30 Minutes Free</a>
+                            <a href="tel:+420720265713" class="cta-button secondary">Call Me</a>
+                        </div>
+                    </div>
+                </aside>
                 <a href="../../../blog-en.html" class="back-to-blog">← Back to all articles</a>
             </article>
         </div>
@@ -159,6 +173,7 @@
 
     <script src="../../../assets/js/main.js"></script>
     <script src="../../../assets/js/share-buttons.js"></script>
+    <script src="../../../assets/js/yt-facade.js" defer></script>
     <script src="/assets/js/consent.js" defer></script>
 </body>
 

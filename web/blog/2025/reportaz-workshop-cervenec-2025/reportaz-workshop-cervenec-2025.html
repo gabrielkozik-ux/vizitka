@@ -83,11 +83,12 @@
 
                 <div class="layout-wrapper">
                     <div class="video-container">
-                        <iframe width="560" height="315"
-                            src="https://www.youtube.com/embed/SflUISqo59Q?si=jjVstktvr_za-cDw"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <a class="yt-facade" href="https://www.youtube.com/watch?v=SflUISqo59Q" target="_blank" rel="noopener noreferrer"
+                            data-yt-id="SflUISqo59Q" data-yt-title="První AI workshop odstartoval! Skvělá parta a spousta objevů" aria-label="Přehrát video: První AI workshop odstartoval! Skvělá parta a spousta objevů">
+                            <span class="yt-facade-play" aria-hidden="true"></span>
+                            <span class="yt-facade-label">Přehrát video</span>
+                            <span class="yt-facade-note">Video se načte z YouTube až po kliknutí. Teprve potom se váš prohlížeč spojí se servery Googlu.</span>
+                        </a>
                     </div>
                     <div class="text-content">
                         <ul>
@@ -122,6 +123,17 @@
                 <a href="../reportaz-workshop-srpen-2025/reportaz-workshop-srpen-2025.html" class="cta-button">Chci se
                     podívat na další workshop</a>
 
+                <aside class="author-box" aria-label="O autorovi">
+                    <img src="../../../assets/images/profilova-fotka-nav.webp" width="96" height="96" alt="Mgr. Gabriel Kožík" class="author-box-photo" loading="lazy">
+                    <div class="author-box-body">
+                        <p class="author-box-name">Mgr. Gabriel Kožík</p>
+                        <p class="author-box-text">Advokát (ev. č. ČAK 19320) se zaměřením na obchodní a korporátní právo, smlouvy a AI compliance. Pomáhám malým a středním firmám v Brně, na Tišnovsku i online.</p>
+                        <div class="author-box-actions">
+                            <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1EOhosa3thnjELkDWGjdiafXMM3i4AxCennpDUUY8cJyrcsgYSyKrKh5006gSw25NEpbJxF-EY" class="cta-button" target="_blank" rel="noopener noreferrer">Rezervovat 30 min zdarma</a>
+                            <a href="tel:+420720265713" class="cta-button secondary">Zavolat</a>
+                        </div>
+                    </div>
+                </aside>
                 <a href="../../../blog" class="back-to-blog">← Zpět na přehled článků</a>
             </article>
         </div>
@@ -168,6 +180,7 @@
 
     <script src="../../../assets/js/main.js"></script>
     <script src="../../../assets/js/share-buttons.js"></script>
+    <script src="../../../assets/js/yt-facade.js" defer></script>
     <script src="/assets/js/consent.js" defer></script>
 </body>
 

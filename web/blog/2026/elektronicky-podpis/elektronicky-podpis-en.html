@@ -24,7 +24,7 @@
     <meta name="twitter:description" content="Which e-signature for a contract, share transfer or employee notice under Czech law? Simple vs. qualified, Bank iD, prices and proving a signature in court.">
     <meta name="twitter:image" content="https://www.gabrielkozik.cz/blog/2026/elektronicky-podpis/header-en.jpg">
 
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Electronic Signatures in 2026: What Is Enough, What Isn’t and Where Companies Get Burned", "description": "Which e-signature for a contract, share transfer or employee notice under Czech law? Simple vs. qualified, Bank iD, prices and proving a signature in court.", "image": "https://www.gabrielkozik.cz/blog/2026/elektronicky-podpis/header-en.jpg", "datePublished": "2026-11-07", "dateModified": "2026-11-07", "inLanguage": "en", "mainEntityOfPage": "https://www.gabrielkozik.cz/blog/2026/elektronicky-podpis/elektronicky-podpis-en", "author": {"@type": "Person", "@id": "https://www.gabrielkozik.cz/#gabriel", "name": "Mgr. Gabriel Kožík", "url": "https://www.gabrielkozik.cz/"}, "publisher": {"@type": "Person", "@id": "https://www.gabrielkozik.cz/#gabriel", "name": "Mgr. Gabriel Kožík", "url": "https://www.gabrielkozik.cz/"}, "isPartOf": {"@id": "https://www.gabrielkozik.cz/#web"}}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Electronic Signatures in 2026: What Is Enough, What Isn’t and Where Companies Get Burned", "description": "Which e-signature for a contract, share transfer or employee notice under Czech law? Simple vs. qualified, Bank iD, prices and proving a signature in court.", "image": "https://www.gabrielkozik.cz/blog/2026/elektronicky-podpis/header-en.jpg", "datePublished": "2026-11-07", "dateModified": "2026-11-08", "inLanguage": "en", "mainEntityOfPage": "https://www.gabrielkozik.cz/blog/2026/elektronicky-podpis/elektronicky-podpis-en", "author": {"@type": "Person", "@id": "https://www.gabrielkozik.cz/#gabriel", "name": "Mgr. Gabriel Kožík", "url": "https://www.gabrielkozik.cz/"}, "publisher": {"@type": "Person", "@id": "https://www.gabrielkozik.cz/#gabriel", "name": "Mgr. Gabriel Kožík", "url": "https://www.gabrielkozik.cz/"}, "isPartOf": {"@id": "https://www.gabrielkozik.cz/#web"}}</script>
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.gabrielkozik.cz/index-en"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.gabrielkozik.cz/blog-en"}, {"@type": "ListItem", "position": 3, "name": "Electronic Signatures in 2026: What Is Enough, What Isn’t and Where Companies Get Burned", "item": "https://www.gabrielkozik.cz/blog/2026/elektronicky-podpis/elektronicky-podpis-en"}]}</script>
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do both parties have to sign with the same type of signature?", "acceptedAnswer": {"@type": "Answer", "text": "No. Each party may use a different type, as long as both meet what the law or the contract requires. Ideally, though, sign one and the same electronic file."}}, {"@type": "Question", "name": "Is a DocuSign signature valid in court?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The court must accept it as evidence, and the Municipal Court in Prague also recognised it as a valid signature of a contract. If the other party disputes the signature, you will support it with the audit trail and other evidence."}}, {"@type": "Question", "name": "Can I, as an executive director, sign for the company via Bank iD?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. A signature via Bank iD is your personal signature as a natural person. The fact that you are acting for the company follows from your position in the Commercial Register. If the register requires two executive directors to sign, both must sign."}}, {"@type": "Question", "name": "Is a scan of a signed contract sent by email valid?", "acceptedAnswer": {"@type": "Answer", "text": "As evidence, yes; as an electronic signature, only the weakest kind. For contracts where more is at stake, exchange originals or sign electronically through a platform."}}, {"@type": "Question", "name": "Do I need a qualified certificate as a sole trader or small company?", "acceptedAnswer": {"@type": "Answer", "text": "Not for ordinary contracts. It is useful, however, for electronic filings with authorities without a data box, for delivering notices of termination by email, and as a substitute for an officially certified signature. It costs a few hundred crowns a year."}}, {"@type": "Question", "name": "I’m signing with a foreign company. What should I use?", "acceptedAnswer": {"@type": "Answer", "text": "Within the EU, a qualified signature is the safest, because all Member States recognise it. Outside the EU, agree in the contract on the form in which it is concluded and which law governs it."}}]}</script>
 
@@ -48,6 +48,11 @@
         .article-content .checklist li::before { content: ""; position: absolute; left: 0; top: 0.3em; width: 14px; height: 14px; border: 2px solid var(--bronze-500); border-radius: 3px; }
         .article-content .faq-wrap { max-width: none; margin: var(--sp-24) 0 var(--sp-40); }
         .article-content .faq-item { border: 1px solid var(--hairline); }
+        .article-content .steps-box { margin: var(--sp-20) 0 var(--sp-32); border: 1px solid var(--hairline); border-radius: var(--r-sm); background: var(--surface-tint); }
+        .article-content .steps-box summary { cursor: pointer; padding: var(--sp-16) var(--sp-20); font-weight: 600; color: var(--navy-800); }
+        .article-content .steps-box > ol, .article-content .steps-box > p { margin-left: var(--sp-20); margin-right: var(--sp-20); }
+        .article-content .steps-box > p { margin-bottom: var(--sp-16); }
+        .article-content .steps-box li { margin-bottom: var(--sp-8); }
         /* Na mobilu se tabulky v tomto clanku skladaji do karet (radek = polozka), aby nebyl skryty pravy sloupec. */
         @media (max-width: 600px) {
             .article-content .table-stack table { min-width: 0; }
@@ -182,11 +187,26 @@
                     </table>
                 </div>
 
+                <p>Think of an advanced signature as a sealed envelope: you can tell who sealed it, and any attempt to open it shows.</p>
+
                 <p>The “recognised” signature (<em>uznávaný podpis</em>) is a Czech peculiarity (Section 6(2) of Act No. 297/2016 Coll.). Nobody abroad knows it, so with a foreign partner talk only about simple, advanced and qualified signatures.</p>
+
+                <p>What is the difference between a recognised and a qualified signature? A qualified signature is always also a recognised one, but not the other way round. Both are based on a qualified certificate from a qualified trust service provider (such as Czech Post or I.CA). They differ in where the signing key is kept. For a qualified signature, it must sit in a certified device from which it cannot be copied: a smart card, a token, the chip of a Czech ID card, or with the provider in the case of remote signing. For a recognised signature, the certificate can also be installed directly on your computer. Both are sufficient for authorities. Only a qualified signature has the effect of a handwritten signature across the EU.</p>
 
                 <p>Besides signatures there is also the <strong>electronic seal</strong>. It is the equivalent of a company stamp: it proves that a document comes from your company and that nobody has altered it. It suits invoices or bulk-generated documents. It does not, however, replace the executive director’s signature on a contract.</p>
 
-                <p>And what about the Czech ID card with a chip? The chip can serve as secure storage for a qualified signature, but you have to buy the certificate from a certification authority and load it onto the chip (<a href="https://info.identita.gov.cz/eop/Podepisovani.aspx" target="_blank" rel="noopener noreferrer">guide at identita.gov.cz</a>, in Czech). A free state-issued qualified signature does not exist yet.</p>
+                <p>And what about the Czech ID card with a chip? A Czech ID card with a chip issued from 1 July 2018 is a qualified signature creation device. When you receive it, though, it is an empty safe: there is no certificate on it. You save on a token, but you still pay for the certificate. A free state-issued qualified signature does not exist yet.</p>
+
+                <details class="steps-box">
+                    <summary>Signing with your ID card, step by step</summary>
+                    <ol>
+                        <li>In the eObčanka app, you set your PIN and QPIN.</li>
+                        <li>You create a request for a qualified certificate. The key is generated directly in the chip and cannot be copied out of it.</li>
+                        <li>The certification authority verifies your identity and issues the certificate. The procedure and price differ between authorities.</li>
+                        <li>You load the certificate onto the chip.</li>
+                    </ol>
+                    <p>To sign, you then need a card reader, the eObčanka software and the program you sign in (<a href="https://info.identita.gov.cz/eop/Podepisovani.aspx" target="_blank" rel="noopener noreferrer">guide at identita.gov.cz</a>, in Czech).</p>
+                </details>
 
                 <h2 id="bankid">“Signed via Bank iD.” What does that actually mean?</h2>
                 <p>This is where most misunderstandings arise. The Czech bank identity (Bank iD) label covers three different things with different legal consequences.</p>
@@ -236,6 +256,8 @@
                 </ol>
 
                 <p>What platforms add on top, and what is often overlooked: they usually attach their own technical signature or seal to the document and keep a record of when who opened and signed it. In a dispute, that is the evidence, not the image of a signature on the last page.</p>
+
+                <p>One more thing about the SMS code. It proves that the signer had that phone in hand and access to the email at that moment. It does not prove that it was really them. That is why, for higher amounts and new partners, I recommend verification via Bank iD, where the bank has verified the person’s identity in advance.</p>
 
                 <h3>What it costs</h3>
                 <p>Indicative prices from official price lists as of 7 November 2026. Make sure you only compare the same signature levels and the same billing method.</p>
@@ -420,6 +442,8 @@
                 <p><strong>“A name under an email is a signature, so I can conclude anything by email.”</strong> Even the courts disagree on this. The Municipal Court in Prague listed a name at the end of an email among examples of a simple signature, while the High Court in Prague said in 2023 that a mere name in the text of an email cannot be considered an electronic signature (case no. 4 Cmo 52/2023, according to <a href="https://epravo.cz/top/clanky/elektronizace-hr-po-novele-opravdu-je-to-tak-snadne-117537.html" target="_blank" rel="noopener noreferrer">an article on epravo.cz</a>, in Czech). For small orders it is usually enough; for anything involving money or the written form, it is not.</p>
 
                 <p><strong>“DocuSign is always a qualified signature.”</strong> It is not. A standard signature in DocuSign and similar platforms is simple. It is qualified only where you expressly choose and pay for it.</p>
+
+                <p><strong>“Signing with an SMS code is an advanced signature.”</strong> It is not. A link in an email plus an SMS code is a simple signature, exactly the kind the Municipal Court in Prague assessed. Nor does it change anything that the platform then seals the document. The seal protects the document against changes, but it does not turn your signature into an advanced one (Article 26 eIDAS).</p>
 
                 <p><strong>“Bank iD SIGN is a qualified signature.”</strong> It is not; it is an advanced signature. A qualified signature via bank identity is offered by the QSIGN service.</p>
 
